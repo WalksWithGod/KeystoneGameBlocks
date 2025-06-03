@@ -1,4 +1,0 @@
-This is the unmodified ICSharpCode.TextEditor sub project from the SharpDevelop_3.2.1.6466_Source.
-
-This was the last of the SharpDevelop TextEditor's to use WinForms.  The 3.2 branch is now dead and they are using a 4.x branch that uses WPF and .NET 4.0.
-
