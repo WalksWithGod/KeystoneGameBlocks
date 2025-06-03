@@ -1,0 +1,10 @@
+MHull build "error spawning cmd.exe"
+
+
+go to VS.NET Tools\Options\Projects and Solutions\VC++ Directories and add
+
+$(SystemRoot)\System32
+
+that one line should do it... if for some reason no, try also adding
+$(SystemRoot)
+$(SystemRoot)\System32\wbem
