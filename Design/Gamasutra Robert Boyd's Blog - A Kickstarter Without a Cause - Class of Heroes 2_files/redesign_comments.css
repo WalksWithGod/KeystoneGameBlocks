@@ -1,0 +1,57 @@
+.all_comments {
+	TEXT-ALIGN: left; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11px
+}
+.comment_submit {
+	BORDER-BOTTOM: #000 0px solid; BORDER-LEFT: #000 0px solid; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #363; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FLOAT: right; COLOR: #fff; FONT-SIZE: 10px; BORDER-TOP: #000 0px solid; FONT-WEIGHT: bold; BORDER-RIGHT: #000 0px solid; PADDING-TOP: 2px
+}
+.comment_submit A:link {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.comment_submit A:visited {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.comment_login A:link {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.comment_login A:visited {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.td_comment_name {
+	PADDING-BOTTOM: 5px
+}
+.td_comment_anonymous {
+	TEXT-ALIGN: right
+}
+.input_comment_checkbox {
+	BORDER-BOTTOM: rgb(200,200,200) 0px solid; BORDER-LEFT: rgb(200,200,200) 0px solid; BORDER-TOP: rgb(200,200,200) 0px solid; BORDER-RIGHT: rgb(200,200,200) 0px solid
+}
+.td_blank_comment_website {
+	PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; COLOR: green
+}
+.td_comment_website {
+	PADDING-BOTTOM: 5px
+}
+.comment_textarea {
+	BORDER-BOTTOM: rgb(180,200,180) 1px solid; BORDER-LEFT: rgb(180,200,180) 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Verdana; FONT-SIZE: 11px; BORDER-TOP: rgb(180,200,180) 1px solid; BORDER-RIGHT: rgb(180,200,180) 1px solid; PADDING-TOP: 2px
+}
+P.comment_heading {
+	FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.hr_comment {
+	MARGIN-BOTTOM: 10px; COLOR: rgb(150,150,150)
+}
+.date_comment {
+	TEXT-ALIGN: right; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: rgb(220,235,220); PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FLOAT: right; MARGIN-LEFT: 4px; FONT-SIZE: 10px; PADDING-TOP: 2px
+}
+.single_comment {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 10px
+}
+.reply_link {
+	MARGIN-TOP: 0px; DISPLAY: inline; MARGIN-BOTTOM: 0px
+}
+.anonymous_comment_yes {
+	BORDER-BOTTOM: rgb(200,200,200) 1px solid; BORDER-LEFT: rgb(200,200,200) 1px solid; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: rgb(240,240,240); PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Verdana; FONT-SIZE: 11px; BORDER-TOP: rgb(200,200,200) 1px solid; BORDER-RIGHT: rgb(200,200,200) 1px solid; PADDING-TOP: 2px
+}
+.anonymous_comment_no {
+	BORDER-BOTTOM: rgb(180,200,180) 1px solid; BORDER-LEFT: rgb(180,200,180) 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Verdana; FONT-SIZE: 11px; BORDER-TOP: rgb(180,200,180) 1px solid; BORDER-RIGHT: rgb(180,200,180) 1px solid; PADDING-TOP: 2px
+}

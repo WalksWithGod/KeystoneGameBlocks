@@ -1,0 +1,10 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\bin\Release\Gibbed.IO.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\bin\Release\Gibbed.IO.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\obj\Release\Gibbed.IO.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\obj\Release\Gibbed.IO.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\obj\Release\Gibbed.IO.pdb
+D:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\bin\Release\Gibbed.IO.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\bin\Release\Gibbed.IO.pdb
+D:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\obj\Release\Gibbed.IO.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\obj\Release\Gibbed.IO.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\Gibbed.IO\obj\Release\Gibbed.IO.pdb

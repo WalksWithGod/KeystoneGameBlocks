@@ -1,0 +1,27 @@
+E:\dev\c#\keystone\Settings\bin\Debug\Settings.dll
+E:\dev\c#\keystone\Settings\bin\Debug\Settings.pdb
+E:\dev\c#\keystone\Settings\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\Settings\obj\Debug\Settings.dll
+E:\dev\c#\keystone\Settings\obj\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Settings\bin\Debug\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Settings\bin\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\Settings\bin\x86\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\Settings\bin\x86\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\Settings\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\Settings\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Settings\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Settings\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Settings\obj\Debug\Settings.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Settings\obj\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Settings\obj\Debug\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\Settings\bin\Debug\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\Settings\bin\Debug\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug\Settings.pdb

@@ -1,0 +1,115 @@
+Average Altitude [sea - land] determines how much land vs water the map is made of. 65-80 percent is a good value for earth areas.
+
+Altitude range [flat - steep]  Influences both the max height of mountains and the shapes of mountains.  50 percent is good if you want rolling hills but you will want to combine this with ~30% Nose Strength so you dont get too many of them.  Keeping the number of features low and distinct are important if you want terrain that is better suited for games (as opposed to photorealistic mountain ranges).  High altitude + low scale of features + lowish noise strength + high noise shape results in a terrain with lots of flat land with intermittent tall peaks throughout.
+
+Scale of features [tiny - vast] Doesn't change the quantity of hills and mountains but changes how big they are.  Obviously the bigger they are, the more they will tend to blend together.  Small scale features will be more distinct where you have flat areas with consistant altitudes leading to hills and mountains and then back to flat areas.  Vast features result in fewer low lands because the sides of the mountains and hills are merging with one another.
+
+*Noise Strength/fractal roughness [none - high] determines how jagged and sharp the terrain is.  This is the single most important slider to determine if you have jagged terrain or smooth terrain.   Smooth terrain is what gives you a rolling hills look as opposed to rocky volcanic mountainous region.
+
+*Noise shape/peak roughness overlays [rolling - fractal]  Important to remember this directly works with the Noise Strength setting above.  It determines how distinct or seperate one hill or mountain is from another.  If Noise Strength is low-ish then this Noise Shape should be very high if you want a compact rolling hills terrain.  But if you want hills that seem to merge into one another to form really vast rambling plains, then set Noise shape to low-ish.   
+
+Cliffs and terraces [none - many]  If you want your typical "triangle" type of mountain with sloped sides, then set Cliffs and terraces to very very low or 0.  If you want Grand Canyon style mountains where it looks like a tapered layer cake (mesas) due to prehistoric lake and river errosion, then set Cliffs and terraces to high.
+
+Erosion [none - strong] The gouges grooves you see rolling down hills and moutains
+
+Lakes [few - many] Self explanatory.
+
+Default climate - Spring GreenWorld (FA) 
+
+* These two are the primary settings you want to experiment with to go between smooth mounds, hills, rambling prairies, and rocky treacherous jagged terrain. 
+
+Well it seems to me with 10pixel resolution, you probably cant get
+the closeness of features you want.  So im trying exact same settings only wth
+1 pixel resolution instead.  As it turns out, if you want rolling hills plus the occasional 
+mountain or volcano, you simply have to place the mountain/volcano after the fact
+in the design map after the design map is generated. You can also 
+fix up the design map to not have water and such..
+
+  <?xml version="1.0" encoding="utf-8" ?> 
+- <varlist name="Settings">
+- <varlist name="DM">
+  <string name="Algorithm">PeakDM</string> 
+  <int name="nx">16</int> 
+  <int name="ny">16</int> 
+  <byte name="SeaLand">75</byte> 
+  <byte name="FlatSteep">50</byte> 
+  <byte name="FeatureScale">30</byte> 
+  <byte name="FracRough">32</byte> 
+  <byte name="PeakRough">100</byte> 
+  <byte name="Cliffs">20</byte> 
+  <byte name="Erosion">2</byte> 
+  <byte name="Lakes">11</byte> 
+  <string name="Climate">Temperate</string> 
+  </varlist>
+- <varlist name="HF">
+  <string name="Algorithm">InflateDM64</string> 
+  <float name="HorizScale">10.000000</float> 
+  <bool name="MosaicFlag">false</bool> 
+  <int name="MosaicSize">512</int> 
+  </varlist>
+  <bool name="WrapFlag">false</bool> 
+- <varlist name="Ops">
+  <bool name="GenDM">true</bool> 
+  <bool name="GenHF">true</bool> 
+  <bool name="GenTN">true</bool> 
+  <bool name="WaterTable">true</bool> 
+  <bool name="FloodAll">true</bool> 
+  <bool name="GenAM">true</bool> 
+  <bool name="GenLM">true</bool> 
+  <bool name="GenTX">true</bool> 
+  </varlist>
+- <varlist name="WM">
+- <varlist name="FloodAll">
+  <bool name="ClearFlag">false</bool> 
+  <bool name="WplaneFlag">true</bool> 
+  <float name="WplaneLevel">0</float> 
+  <int name="WplaneType">30</int> 
+  <bool name="SeaFlag">false</bool> 
+  <bool name="LakesFlag">false</bool> 
+  <bool name="WtableFlag">true</bool> 
+  </varlist>
+- <varlist name="Wtable">
+  <int name="nIter">3</int> 
+  <bool name="ClearWtableBeforeCalc">false</bool> 
+- <varlist name="Wtable">
+  <float name="MaxDepth">100.000000</float> 
+  <float name="RiseParam">0.800000</float> 
+  <float name="FallParam">0.960000</float> 
+  <float name="LossParam">5.000000</float> 
+  <float name="Tolerance">0.010000</float> 
+  </varlist>
+- <varlist name="Salin">
+  <bool name="EnableFlag">true</bool> 
+  <float name="LossParam">5.000000</float> 
+  <float name="GradExpon">0.050000</float> 
+  <float name="LakeLoss">0</float> 
+  <float name="Tolerance">5.000000e-004</float> 
+  </varlist>
+  </varlist>
+  </varlist>
+- <varlist name="LM">
+  <colour name="Sun">255, 240, 210</colour> 
+  <colour name="Amb">230, 245, 255</colour> 
+  <float name="Azim">0</float> 
+  <float name="Elev">30.000000</float> 
+  <float name="Brightness">1.000000</float> 
+  <float name="SunAmbRatio">0.750000</float> 
+  <bool name="UseWM">true</bool> 
+  <bool name="ShadowFlag">true</bool> 
+  <bool name="BumpMapping">false</bool> 
+  <bool name="MosaicFlag">false</bool> 
+  <int name="LM_in_HF">1</int> 
+  <vector3f name="AbsRGB">20.000000, 50.000000, 100.000000</vector3f> 
+  <bool name="DoFresnel">true</bool> 
+  <float name="DefaultTx">1.000000</float> 
+  </varlist>
+- <varlist name="TX">
+  <bool name="UseLM">true</bool> 
+  <bool name="UseTX">true</bool> 
+  <bool name="UseStrata">true</bool> 
+  <int name="TX_in_HF">1</int> 
+  <bool name="MosaicFlag">false</bool> 
+  <int name="MosaicSize">512</int> 
+  <bool name="ProcLT">false</bool> 
+  </varlist>
+  </varlist>

@@ -1,0 +1,32 @@
+<Configuration>
+  <CompletionStatisticsManager />
+  <EditorManager>
+    <RecentFiles>
+      <File id="85ED5AF9-8D50-4E40-95C0-9AECC3559A94/d:UnknownPath/f:wavefront.cpp" caret="0" visual-x="0" visual-y="0" />
+      <File id="UNDEFINED_UNIQUE_NAME_Miscellaneous Files/d:UnknownPath/f:stanhull.cpp" caret="109" visual-x="0" visual-y="0" />
+      <File id="1B3130DA-8FBE-45B7-AA9D-389E01DA102C/f:ReadMe.txt" caret="0" visual-x="0" visual-y="0" />
+      <File id="85ED5AF9-8D50-4E40-95C0-9AECC3559A94/d:UnknownPath/f:hull.h" caret="1763" visual-x="0" visual-y="0" />
+      <File id="85ED5AF9-8D50-4E40-95C0-9AECC3559A94/d:UnknownPath/f:hull.cpp" caret="124" visual-x="0" visual-y="0" />
+      <File id="1B3130DA-8FBE-45B7-AA9D-389E01DA102C/f:MHull.h" caret="60" visual-x="0" visual-y="0" />
+    </RecentFiles>
+  </EditorManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <ReFormatCode>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+    <DecorateModifiers>False</DecorateModifiers>
+  </ReFormatCode>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+</Configuration>

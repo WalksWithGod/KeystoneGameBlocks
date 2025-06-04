@@ -1,0 +1,19 @@
+
+
+after a user designs the outer hull shape, they can lay bulk heads
+
+- there are several types of bulk heads
+	- complete walled bulk heads that have no hatches
+	- complete walled bulk heads that have hatches/doors
+	- half bulkheads that are like window openings.  The bulkhead is not as strong as a full, but is a bit ligher
+          and allows to create bigger open spaces that are still strong
+	- frame bulk heads, these are like hte sketchup enterprise room bulkheads where you see these pillar type frames against the walls
+          like a diamond ring setting's braces.. these strengthen the walls and allow for the most open space as well as provide some strength
+          for supporting the floors above and below.
+
+	The partial frame bulk heads are a key because they allow us what we need to create open visual space between floors!  like an opening for an reactor that expands two decks... well the decks above have frame style bulkheads so there is still a floor and wlals, just with openings.  This is genius!  And a big part of what we were missing in our design philosphy.
+
+	- also not needing doors or hatches doesnt impede movement throughout the ship as much...
+
+
+http://www.shorelineareanews.com/search/label/police

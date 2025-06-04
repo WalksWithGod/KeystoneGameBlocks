@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6C7BBA7F-03F4-4D7D-B1D3-CF8D14E2B939}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KeyCommon</RootNamespace>
+    <AssemblyName>KeyCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|AnyCPU' ">
+    <OutputPath>bin\Debug_x86\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|x86' ">
+    <OutputPath>bin\x86\Debug_x86\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\DotNetZipLib-DevKit-v1.9\DotNetZip-v1.9\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.8.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Npgsql2.0.8-bin-ms.net3.5sp1\bin\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseEntities\GameObject.cs" />
+    <Compile Include="Data\UserData.cs" />
+    <Compile Include="Data\UserData2.cs" />
+    <Compile Include="Data\UserDataStore.cs" />
+    <Compile Include="Flags\EntityFlags.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="IO\ArchiveIOHelper.cs" />
+    <Compile Include="IO\ResourceDescriptor.cs" />
+    <Compile Include="Messages\AddSkyBoxTV.cs" />
+    <Compile Include="Messages\Archive_AddFiles.cs" />
+    <Compile Include="Messages\Archive_AddFolder.cs" />
+    <Compile Include="Messages\Archive_AddGeometry.cs" />
+    <Compile Include="Messages\Archive_DeleteEntry.cs" />
+    <Compile Include="Messages\CelledRegion_PaintLink.cs" />
+    <Compile Include="Messages\CelledRegion_PlaceWall.cs" />
+    <Compile Include="Messages\CelledRegion_UpdateConnectivity.cs" />
+    <Compile Include="Messages\ChatMessage.cs" />
+    <Compile Include="Messages\CommandFail.cs" />
+    <Compile Include="Messages\CommandSuccess.cs" />
+    <Compile Include="Commands\CreateTable.cs" />
+    <Compile Include="Commands\DestroyEntity.cs" />
+    <Compile Include="Commands\EntityList.cs" />
+    <Compile Include="Messages\Entity_ChangeCustomPropertyValue.cs" />
+    <Compile Include="Messages\Entity_ChangeFlag.cs" />
+    <Compile Include="Messages\Entity_GetCustomProperties.cs" />
+    <Compile Include="Messages\Entity_Move.cs" />
+    <Compile Include="Messages\Floorplan_New.cs" />
+    <Compile Include="Messages\GameObject_ChangeProperties.cs" />
+    <Compile Include="Messages\GameObject_Create.cs" />
+    <Compile Include="Messages\GameObject_Create_Request.cs" />
+    <Compile Include="Messages\GameSummaryList.cs" />
+    <Compile Include="Commands\IProgress.cs" />
+    <Compile Include="Messages\Geometry_ChangeGroupProperty.cs" />
+    <Compile Include="Messages\Geometry_CreateGroup.cs" />
+    <Compile Include="Messages\Geometry_Add.cs" />
+    <Compile Include="Messages\Geometry_RemoveGroup.cs" />
+    <Compile Include="Messages\Geometry_ResetTransform.cs" />
+    <Compile Include="Messages\Geometry_Save.cs" />
+    <Compile Include="Messages\ImportJigLibPhysicsDemo.cs" />
+    <Compile Include="Messages\ImportPhysicsDemo.cs" />
+    <Compile Include="Messages\JoinGame.cs" />
+    <Compile Include="Messages\LeaveTable.cs" />
+    <Compile Include="Commands\RegisterGame.cs" />
+    <Compile Include="Messages\MissionResult.cs" />
+    <Compile Include="Messages\NewVehicle.cs" />
+    <Compile Include="Messages\Node_ChangeParent.cs" />
+    <Compile Include="Messages\Node_ChangeProperty.cs" />
+    <Compile Include="Messages\Node_Copy.cs" />
+    <Compile Include="Messages\Node_Create_Request.cs" />
+    <Compile Include="Messages\Node_GetChildren.cs" />
+    <Compile Include="Messages\Node_GetProperty.cs" />
+    <Compile Include="Messages\Node_InsertedUnderNew_Request.cs" />
+    <Compile Include="Messages\Node_InsertUnderNew.cs" />
+    <Compile Include="Messages\Node_MoveChildOrder.cs" />
+    <Compile Include="Messages\Node_Paste.cs" />
+    <Compile Include="Messages\Node_Remove.cs" />
+    <Compile Include="Messages\Node_RenameResource.cs" />
+    <Compile Include="Messages\Node_ReplaceResource.cs" />
+    <Compile Include="Messages\NotifyPlugin_NodeSelected.cs" />
+    <Compile Include="Messages\NotifyPlugin_ProcessEventQueue.cs" />
+    <Compile Include="Messages\Prefab_Insert_Into_Interior.cs" />
+    <Compile Include="Messages\Prefab_Insert_Into_Structure.cs" />
+    <Compile Include="Messages\Prefab_Load.cs" />
+    <Compile Include="Messages\Prefab_Save.cs" />
+    <Compile Include="Messages\RegionPageComplete.cs" />
+    <Compile Include="Messages\RequestGamesList.cs" />
+    <Compile Include="Commands\RequestTicket.cs" />
+    <Compile Include="Commands\Login.cs" />
+    <Compile Include="Commands\ReadyStatusChanged.cs" />
+    <Compile Include="DatabaseEntities\GamesSummary.cs" />
+    <Compile Include="Commands\SpawnEntity.cs" />
+    <Compile Include="Commands\TableList.cs" />
+    <Compile Include="Commands\TicketRequestReply.cs" />
+    <Compile Include="Messages\Scene_Load.cs" />
+    <Compile Include="Messages\Scene_LoadLight.cs" />
+    <Compile Include="Messages\Scene_New.cs" />
+    <Compile Include="Messages\Scene_NewTerrain.cs" />
+    <Compile Include="Messages\Scene_NewUniverse.cs" />
+    <Compile Include="Messages\Shader_ChangeParameterValue.cs" />
+    <Compile Include="Messages\Simulation_GenerateCharacters.cs" />
+    <Compile Include="Messages\Simulation_Join.cs" />
+    <Compile Include="Messages\Simulation_Leave.cs" />
+    <Compile Include="Messages\Simulation_Spawn.cs" />
+    <Compile Include="Messages\Simulation_Spawn_Prefab.cs" />
+    <Compile Include="Messages\Spawn.cs" />
+    <Compile Include="Messages\Terrain_Paint.cs" />
+    <Compile Include="Messages\Transfer_Entity_File.cs" />
+    <Compile Include="Messages\Transfer_File_Request.cs" />
+    <Compile Include="Messages\Transfer_Stream.cs" />
+    <Compile Include="Messages\Transfer_Stream_Request.cs" />
+    <Compile Include="Messages\UserList.cs" />
+    <Compile Include="Messages\UserStatusChanged.cs" />
+    <Compile Include="DatabaseEntities\Game.cs" />
+    <Compile Include="DatabaseEntities\GameServerInfo.cs" />
+    <Compile Include="DatabaseEntities\Host.cs" />
+    <Compile Include="DatabaseEntities\Player.cs" />
+    <Compile Include="DatabaseEntities\User.cs" />
+    <Compile Include="Enumerations.cs" />
+    <Compile Include="Messages\AuthenticationLogin.cs" />
+    <Compile Include="Messages\MessageBase.cs" />
+    <Compile Include="Messages\RegisterGame.cs" />
+    <Compile Include="Messages\RequestTicket.cs" />
+    <Compile Include="Messages\ServiceLogin.cs" />
+    <Compile Include="Messages\TicketRequestReply.cs" />
+    <Compile Include="Persistence\StorageContext.cs" />
+    <Compile Include="Simulation\Gravitation.cs" />
+    <Compile Include="Traversal\BehaviorContext.cs" />
+    <Compile Include="Traversal\BehaviorResult.cs" />
+    <Compile Include="Traversal\CullParameters.cs" />
+    <Compile Include="Traversal\PickDetails.cs" />
+    <Compile Include="Simulation\DistributionType.cs" />
+    <Compile Include="Simulation\Consumption.cs" />
+    <Compile Include="Simulation\EnergySim.cs" />
+    <Compile Include="Simulation\Information.cs" />
+    <Compile Include="Simulation\Machine.cs" />
+    <Compile Include="Simulation\Production.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Simulation\Transmission.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
+      <Project>{427CC8D0-5448-4816-A2ED-59F821D98CFA}</Project>
+      <Name>KeyStandardLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\mlabs-pl-stp-7b123d9\SmartThreadPool\SmartThreadPool.csproj">
+      <Project>{74D4C33F-7CC8-4B2A-A7DF-D8B6E63B6EBD}</Project>
+      <Name>SmartThreadPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{BA202214-F6F8-4853-BCC9-CA4F13C5F479}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings\Settings.csproj">
+      <Project>{EF75621B-EF64-4EA7-8451-BA53BA9408A9}</Project>
+      <Name>Settings</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.TXT" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

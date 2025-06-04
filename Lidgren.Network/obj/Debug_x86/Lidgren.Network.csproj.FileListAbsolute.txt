@@ -1,0 +1,14 @@
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\SmartThreadPool.dll
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\SmartThreadPool.pdb
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Debug_x86\Lidgren.Network.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Debug_x86\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Debug_x86\Lidgren.Network.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\Lidgren.Network.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\Lidgren.Network.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\SmartThreadPool.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Lidgren.Network\bin\x86\Debug_x86\SmartThreadPool.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Lidgren.Network\obj\Debug_x86\Lidgren.Network.csprojResolveAssemblyReference.cache
+C:\Users\Michael\projects\KeystoneGameBlocks\Lidgren.Network\obj\Debug_x86\Lidgren.Network.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Lidgren.Network\obj\Debug_x86\Lidgren.Network.pdb

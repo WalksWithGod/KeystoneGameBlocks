@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/12797//LibNoise/Modfiers
+END
+ClampOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/12967//LibNoise/Modfiers/ClampOutput.cs
+END
+TranslateInput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/12967//LibNoise/Modfiers/TranslateInput.cs
+END
+RotateInput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/12967//LibNoise/Modfiers/RotateInput.cs
+END
+Multiply.cs
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/12967//LibNoise/Modfiers/Multiply.cs
+END
+Select.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/13254//LibNoise/Modfiers/Select.cs
+END
+SmallerOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/12967//LibNoise/Modfiers/SmallerOutput.cs
+END
+Blend.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/13254//LibNoise/Modfiers/Blend.cs
+END
+Terrace.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/13254//LibNoise/Modfiers/Terrace.cs
+END
+InvertInput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/12967//LibNoise/Modfiers/InvertInput.cs
+END
+InvertOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/12967//LibNoise/Modfiers/InvertOutput.cs
+END
+Add.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/12967//LibNoise/Modfiers/Add.cs
+END
+Power.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/12967//LibNoise/Modfiers/Power.cs
+END
+LargerOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/12967//LibNoise/Modfiers/LargerOutput.cs
+END
+BiasOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/12967//LibNoise/Modfiers/BiasOutput.cs
+END
+AbsoluteOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/12967//LibNoise/Modfiers/AbsoluteOutput.cs
+END
+DisplaceInput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/12967//LibNoise/Modfiers/DisplaceInput.cs
+END
+CurveOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/13254//LibNoise/Modfiers/CurveOutput.cs
+END
+ScaleInput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/12967//LibNoise/Modfiers/ScaleInput.cs
+END
+ScaleBiasOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/12967//LibNoise/Modfiers/ScaleBiasOutput.cs
+END
+ExponentialOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/12967//LibNoise/Modfiers/ExponentialOutput.cs
+END
+ScaleOutput.cs
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/12967//LibNoise/Modfiers/ScaleOutput.cs
+END

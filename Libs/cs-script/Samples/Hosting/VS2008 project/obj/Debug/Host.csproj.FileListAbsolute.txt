@@ -1,0 +1,6 @@
+C:\cs-script\Samples\Hosting\VS2008 project\bin\Debug\Host.exe
+C:\cs-script\Samples\Hosting\VS2008 project\bin\Debug\Host.pdb
+C:\cs-script\Samples\Hosting\VS2008 project\bin\Debug\CSScriptLibrary.dll
+C:\cs-script\Samples\Hosting\VS2008 project\obj\Debug\ResolveAssemblyReference.cache
+C:\cs-script\Samples\Hosting\VS2008 project\obj\Debug\Host.exe
+C:\cs-script\Samples\Hosting\VS2008 project\obj\Debug\Host.pdb

@@ -1,0 +1,15 @@
+E:\dev\c#\keystone\SmartThreadPool\SmartThreadPool\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\keystone\SmartThreadPool\SmartThreadPool\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\keystone\SmartThreadPool\SmartThreadPool\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\SmartThreadPool\SmartThreadPool\obj\Debug\SmartThreadPool.dll
+E:\dev\c#\keystone\SmartThreadPool\SmartThreadPool\obj\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\obj\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\obj\Debug\SmartThreadPool.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\bin\Debug\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\bin\Debug\SmartThreadPool.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\obj\Debug\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\SmartThreadPool\SmartThreadPool\obj\Debug\SmartThreadPool.pdb

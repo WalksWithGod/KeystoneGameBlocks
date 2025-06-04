@@ -1,0 +1,8 @@
+bin\Debug\UsageControl.dll
+bin\Debug\UsageControl.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\UsageControl.UsageControl.resources
+obj\Debug\UsageControl.UsageHistoryControl.resources
+obj\Debug\UsageControl.csproj.GenerateResource.Cache
+obj\Debug\UsageControl.dll
+obj\Debug\UsageControl.pdb

@@ -1,0 +1,5 @@
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\bin\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\bin\Debug\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\x86\Debug\AtlasTextureTools.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\x86\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\x86\Debug\AtlasTextureTools.pdb

@@ -1,0 +1,10 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginAppearanceEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginAppearanceEdit\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginAppearanceEdit\obj\Debug\KeyPluginAppearanceEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginAppearanceEdit\obj\Debug\KeyPluginAppearanceEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginAppearanceEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginAppearanceEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginAppearanceEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginAppearanceEdit\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginAppearanceEdit\obj\Debug\KeyPluginAppearanceEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginAppearanceEdit\obj\Debug\KeyPluginAppearanceEdit.pdb

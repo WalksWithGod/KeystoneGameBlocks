@@ -1,0 +1,10 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLightEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLightEdit\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLightEdit\obj\Debug\KeyPluginLightEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLightEdit\obj\Debug\KeyPluginLightEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLightEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLightEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLightEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginLightEdit\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginLightEdit\obj\Debug\KeyPluginLightEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginLightEdit\obj\Debug\KeyPluginLightEdit.pdb

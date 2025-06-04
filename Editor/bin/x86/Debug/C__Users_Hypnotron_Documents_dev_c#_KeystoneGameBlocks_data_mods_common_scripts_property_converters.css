@@ -1,0 +1,147 @@
+using System;
+using System.ComponentModel;
+
+
+
+/// PropertySpecConverters help us create our custom entity properties to and from
+/// their (usually) string representation when stored in a PropertySpec to a value
+/// used by the underlying Entity object scripts.  These Converters also can provide a
+/// range of values for things like combo boxes which the user can select from.
+
+public class CraftsmanshipConverter : StringConverter
+{
+	public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+	{
+		//true means show a combobox
+		return true;
+	}
+
+	public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+	{
+		//true will limit to list. false will show the list, 
+		//but allow free-form entry
+		return true;
+	}
+
+	public override System.ComponentModel.TypeConverter.StandardValuesCollection
+		   GetStandardValues(ITypeDescriptorContext context)
+	{
+		return new StandardValuesCollection(UserConstants.Craftsmanship);
+	}
+}
+
+public class FrameStrengthConverter : StringConverter
+{
+	public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+	{
+		//true means show a combobox
+		return true;
+	}
+
+	public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+	{
+		//true will limit to list. false will show the list, 
+		//but allow free-form entry
+		return true;
+	}
+
+	public override System.ComponentModel.TypeConverter.StandardValuesCollection
+		   GetStandardValues(ITypeDescriptorContext context)
+	{
+		return new StandardValuesCollection(UserConstants.FrameStrength);
+	}
+}
+
+public class MaterialQualityConverter : StringConverter
+{
+	public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+	{
+		//true means show a combobox
+		return true;
+	}
+
+	public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+	{
+		//true will limit to list. false will show the list, 
+		//but allow free-form entry
+		return true;
+	}
+
+	public override System.ComponentModel.TypeConverter.StandardValuesCollection
+		   GetStandardValues(ITypeDescriptorContext context)
+	{
+		return new StandardValuesCollection(UserConstants.MaterialsQuality);
+	}
+}
+
+// A Tech Level is not defined as a date or some specific amount of time having passed.  It is
+// only defined by having reached various milestones in technological achievement and scientific understanding.
+// We use a 100 point tech level system that is 10 tech levels with 10 milestones for 100 discrete tech levels.
+// Tech Level 9.9 represents the last of conceivable understandable knowledge with 10 being perfect knowledge of
+// everything.  By definitition, an imperfect mind will be incapable of achieving TL 10.
+public class TechLevelConverter : StringConverter
+{
+	public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+	{
+		//true means show a combobox
+		return true;
+	}
+
+	public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+	{
+		//true will limit to list. false will show the list, 
+		//but allow free-form entry
+		return true;
+	}
+
+	public override System.ComponentModel.TypeConverter.StandardValuesCollection
+		   GetStandardValues(ITypeDescriptorContext context)
+	{
+		return new StandardValuesCollection(UserConstants.TechLevels);
+	}
+}
+
+// FissionRocketFuelTypeConverter
+public class FissionRocketFuelTypeConverter : StringConverter
+{
+	public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+	{
+		//true means show a combobox
+		return true;
+	}
+
+	public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+	{
+		//true will limit to list. false will show the list, 
+		//but allow free-form entry
+		return true;
+	}
+
+	public override System.ComponentModel.TypeConverter.StandardValuesCollection
+		   GetStandardValues(ITypeDescriptorContext context)
+	{
+		return new StandardValuesCollection(UserConstants.FissionRocketFuels);
+	}
+}
+
+public class TestConverter : StringConverter
+{
+	public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+	{
+		//true means show a combobox
+		return true;
+	}
+
+	public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+	{
+		//true will limit to list. false will show the list, 
+		//but allow free-form entry
+		return true;
+	}
+
+	public override System.ComponentModel.TypeConverter.StandardValuesCollection
+		   GetStandardValues(ITypeDescriptorContext context)
+	{
+		return new StandardValuesCollection(new string[] {"One", "Two", "Three"});
+	}
+}

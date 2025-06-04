@@ -1,0 +1,18 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\KeyServerCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\KeyServerCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\obj\Debug\KeyServerCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServerCommon\obj\Debug\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\obj\Debug\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServerCommon\obj\Debug\KeyServerCommon.pdb

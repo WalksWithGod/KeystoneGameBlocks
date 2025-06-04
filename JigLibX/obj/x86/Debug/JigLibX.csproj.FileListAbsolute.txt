@@ -1,0 +1,24 @@
+E:\dev\c#\keystone\JigLibX\bin\x86\Debug\JigLibX.dll
+E:\dev\c#\keystone\JigLibX\bin\x86\Debug\JigLibX.pdb
+E:\dev\c#\keystone\JigLibX\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\JigLibX\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\dev\c#\keystone\JigLibX\obj\x86\Debug\JigLibX.dll
+E:\dev\c#\keystone\JigLibX\obj\x86\Debug\JigLibX.pdb
+E:\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug\JigLibX.dll
+E:\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug\JigLibX.pdb
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\JigLibX.dll
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\JigLibX.pdb
+J:\Backups\KeystoneGameBlocks\JigLibX\bin\x86\Debug\JigLibX.dll
+J:\Backups\KeystoneGameBlocks\JigLibX\bin\x86\Debug\JigLibX.pdb
+J:\Backups\KeystoneGameBlocks\JigLibX\obj\x86\Debug\ResolveAssemblyReference.cache
+J:\Backups\KeystoneGameBlocks\JigLibX\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+J:\Backups\KeystoneGameBlocks\JigLibX\obj\x86\Debug\JigLibX.dll
+J:\Backups\KeystoneGameBlocks\JigLibX\obj\x86\Debug\JigLibX.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug\JigLibX.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug\JigLibX.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\JigLibX.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug\JigLibX.pdb

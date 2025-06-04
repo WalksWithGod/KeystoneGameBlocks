@@ -1,0 +1,8 @@
+D:\dev\c#\KeystoneGameBlocks\Authenticate\bin\x86\Debug_x86\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Authenticate\bin\x86\Debug_x86\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug_x86\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug_x86\Authentication.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Authenticate\bin\x86\Debug_x86\Authentication.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Authenticate\bin\x86\Debug_x86\Authentication.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Authenticate\obj\Debug_x86\Authentication.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Authenticate\obj\Debug_x86\Authentication.pdb

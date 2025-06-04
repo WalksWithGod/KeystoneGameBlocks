@@ -1,0 +1,16 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\bin\Release\TargaImage.xml
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\bin\Release\TargaImage.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\bin\Release\TargaImage.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.Resource1.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\bin\Release\TargaImage.xml
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\bin\Release\TargaImage.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\bin\Release\TargaImage.pdb
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.Resource1.resources
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.csproj.GenerateResource.Cache
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\NET_TargaImage_Reader\obj\Release\TargaImage.pdb

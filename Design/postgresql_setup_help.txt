@@ -1,0 +1,12 @@
+postgres setup help
+
+
+
+in windows firewall you need to add an exception on port 5432 for postgres
+
+in 
+
+D:\PostgreSQL\8.2\data\pb_hga.conf  you need to add the exact ip forsome reason i cant get wildcards to work, for the connecting pc 
+eg. 192.168.1.65
+
+

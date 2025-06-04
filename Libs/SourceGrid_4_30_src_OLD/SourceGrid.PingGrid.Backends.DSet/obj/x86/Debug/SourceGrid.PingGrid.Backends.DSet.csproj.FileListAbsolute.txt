@@ -1,0 +1,8 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.PingGrid.Backends.DSet.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.PingGrid.Backends.DSet.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.xml
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\obj\x86\Debug\SourceGrid.PingGrid.Backends.DSet.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backends.DSet\obj\x86\Debug\SourceGrid.PingGrid.Backends.DSet.pdb

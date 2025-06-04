@@ -1,0 +1,13 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\keymath.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\KeyMath.csprojResolveAssemblyReference.cache

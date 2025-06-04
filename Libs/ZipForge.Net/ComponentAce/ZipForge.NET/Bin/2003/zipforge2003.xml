@@ -1,0 +1,2617 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZipForge2003</name>
+    </assembly>
+    <members>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.Identity(System.Int64)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.Identity(System.UInt64)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.Identity(System.Single)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.Identity(System.Double)">
+            <summary>
+            This method returns the literal value received
+            </summary>
+            <param name="literal">The literal to return</param>
+            <returns>The received value</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.URShift(System.Int32,System.Int32)">
+            <summary>
+            Performs an unsigned bitwise right shift with the specified number
+            </summary>
+            <param name="number">Number to operate on</param>
+            <param name="bits">Ammount of bits to shift</param>
+            <returns>The resulting number from the shift operation</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.URShift(System.Int32,System.Int64)">
+            <summary>
+            Performs an unsigned bitwise right shift with the specified number
+            </summary>
+            <param name="number">Number to operate on</param>
+            <param name="bits">Ammount of bits to shift</param>
+            <returns>The resulting number from the shift operation</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.URShift(System.Int64,System.Int32)">
+            <summary>
+            Performs an unsigned bitwise right shift with the specified number
+            </summary>
+            <param name="number">Number to operate on</param>
+            <param name="bits">Ammount of bits to shift</param>
+            <returns>The resulting number from the shift operation</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.URShift(System.Int64,System.Int64)">
+            <summary>
+            Performs an unsigned bitwise right shift with the specified number
+            </summary>
+            <param name="number">Number to operate on</param>
+            <param name="bits">Ammount of bits to shift</param>
+            <returns>The resulting number from the shift operation</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.ReadInput(System.IO.Stream,System.Byte[],System.Int32,System.Int32)">
+            <summary>Reads a number of characters from the current source Stream and writes the data to the target array at the specified index.</summary>
+            <param name="sourceStream">The source Stream to read from.</param>
+            <param name="target">Contains the array of characteres read from the source Stream.</param>
+            <param name="start">The starting index of the target array.</param>
+            <param name="count">The maximum number of characters to read from the source Stream.</param>
+            <returns>The number of characters read. The number will be less than or equal to count depending on the data available in the source Stream. Returns -1 if the end of the stream is reached.</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.ReadInput(System.IO.TextReader,System.Byte[],System.Int32,System.Int32)">
+            <summary>Reads a number of characters from the current source TextReader and writes the data to the target array at the specified index.</summary>
+            <param name="sourceTextReader">The source TextReader to read from</param>
+            <param name="target">Contains the array of characteres read from the source TextReader.</param>
+            <param name="start">The starting index of the target array.</param>
+            <param name="count">The maximum number of characters to read from the source TextReader.</param>
+            <returns>The number of characters read. The number will be less than or equal to count depending on the data available in the source TextReader. Returns -1 if the end of the stream is reached.</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.ToByteArray(System.String)">
+            <summary>
+            Converts a string to an array of bytes
+            </summary>
+            <param name="sourceString">The string to be converted</param>
+            <returns>The new array of bytes</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.ToCharArray(System.Byte[])">
+            <summary>
+            Converts an array of bytes to an array of chars
+            </summary>
+            <param name="byteArray">The array of bytes to convert</param>
+            <returns>The new array of chars</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.Serialize(System.IO.Stream,System.Object)">
+            <summary>
+            Writes an object to the specified Stream
+            </summary>
+            <param name="stream">The target Stream</param>
+            <param name="objectToSend">The object to be sent</param>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.Serialize(System.IO.BinaryWriter,System.Object)">
+            <summary>
+            Writes an object to the specified BinaryWriter
+            </summary>
+            <param name="binaryWriter">The target BinaryWriter</param>
+            <param name="objectToSend">The object to be sent</param>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.Deserialize(System.IO.BinaryReader)">
+            <summary>
+            Deserializes an object, or an entire graph of connected objects, and returns the object intance
+            </summary>
+            <param name="binaryReader">Reader instance used to read the object</param>
+            <returns>The object instance</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Libs.zlib.SupportClass.WriteStackTrace(System.Exception,System.IO.TextWriter)">
+            <summary>
+            Writes the exception stack trace to the received stream
+            </summary>
+            <param name="throwable">Exception to obtain information from</param>
+            <param name="stream">Output sream used to write to</param>
+        </member>
+        <member name="P:ComponentAce.Compression.Libs.zlib.ZInputStream.TotalIn">
+            <summary> Returns the total number of bytes input so far.</summary>
+        </member>
+        <member name="P:ComponentAce.Compression.Libs.zlib.ZInputStream.TotalOut">
+            <summary> Returns the total number of bytes output so far.</summary>
+        </member>
+        <member name="P:ComponentAce.Compression.Libs.zlib.ZOutputStream.TotalIn">
+            <summary> Returns the total number of bytes input so far.</summary>
+        </member>
+        <member name="P:ComponentAce.Compression.Libs.zlib.ZOutputStream.TotalOut">
+            <summary> Returns the total number of bytes output so far.</summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver">
+            <summary>
+            Abstract base class for ZipForge and FlexCompress
+            </summary>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">
+             <overloads>
+             Opens or creates an archive file.
+             </overloads>
+             <summary>
+             Opens or creates an archive file.
+             </summary>
+             <example> The following example shows how to add files to archive and extract them:
+             <code>
+             [C#]
+              zipForge1.FileName ="C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Set path to folder with the files to archive
+              zipForge1.BaseDir = "\\Source";
+              // Add all files and directories from the source folder to the archive
+              zipForge1.AddFiles("*.*");
+              // Set path to the destination folder
+              zipForge1.BaseDir = "\\Dest";
+              // extract all files in archive
+              zipForge1.ExtractFiles("*.*");
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              ' Set archive file name
+              ZipForge1.FileName = "C:\TEST\test.zip"
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Set path to folder with the files to archive
+              ZipForge1.BaseDir = DemoFolder + "\\Source"
+              ' Add all files and directories from the source folder to the archive
+              ZipForge1.AddFiles("*.*")
+              ' Set path to the destination folder
+              ZipForge1.BaseDir = DemoFolder + "\\Dest"
+              ' extract all files in archive
+              ZipForge1.ExtractFiles("*.*")
+              ' Close archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+             <remarks>
+             Call OpenArchive to open or create an archive file. If file specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property does not exists, create parameter is set to True or <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InMemory"/> property is set to True then OpenArchive will create and open it. OpenArchive sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Active"/> to True.
+             <para>Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CloseArchive"/> to close the archive file.</para>
+             </remarks>				
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive(System.IO.FileMode)">
+            <param name="fileMode">Specifies open mode constant like in TFileStream.Create or FileOpen function.</param>
+            <remarks>
+            Call OpenArchive to open or create an archive file. If file specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property does not exists, create parameter is set to True or <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InMemory"/> property is set to True then OpenArchive will create and open it. OpenArchive sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Active"/> to True.
+            <para>Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CloseArchive"/> to close the archive file.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive(System.IO.FileMode,System.IO.FileAccess)">
+            <summary>
+            Opens or creates an archive file.
+            </summary>
+            <param name="fileMode">Specifies open mode constant like in TFileStream.Create or FileOpen function.</param>
+            <param name="fileAccess">Specifies file access mode.</param>
+            <remarks>
+            Call OpenArchive to open or create an archive file. If file specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property does not exists, create parameter is set to True or <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InMemory"/> property is set to True then OpenArchive will create and open it. OpenArchive sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Active"/> to True.
+            <para>Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CloseArchive"/> to close the archive file.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive(System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+            <summary>
+            Opens or creates an archive file.
+            </summary>
+            <param name="fileMode">Specifies open mode constant like in TFileStream.Create or FileOpen function.</param>
+            <param name="fileAccess">Specifies file access mode.</param>
+            <param name="fileShare">Specifies file share mode.</param>
+            <remarks>
+            Call OpenArchive to open or create an archive file. If file specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property does not exists, create parameter is set to True or <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InMemory"/> property is set to True then OpenArchive will create and open it. OpenArchive sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Active"/> to True.
+            <para>Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CloseArchive"/> to close the archive file.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive(System.IO.Stream,System.Boolean)">
+            <summary>
+            Opens or creates an archive within a stream.
+            </summary>
+            <param name="stream">Specifies Stream descendant object with the archive contents.</param>
+            <param name="create">Determines if file should be created.</param>
+            <remarks>
+            Call OpenArchive to open or create an archive file. If file specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property does not exists, create parameter is set to True or <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InMemory"/> property is set to True then OpenArchive will create and open it. OpenArchive sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Active"/> to True.
+            <para>Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CloseArchive"/> to close the archive file.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.CloseArchive">
+             <summary>
+             Closes current archive file.
+             </summary>
+             <example> The following example shows how to add files to archive and extract them:
+             <code>
+             [C#]
+              zipForge1.FileName ="C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Set path to folder with the files to archive
+              zipForge1.BaseDir = "\\Source";
+              // Add all files and directories from the source folder to the archive
+              zipForge1.AddFiles("*.*");
+              // Set path to the destination folder
+              zipForge1.BaseDir = "\\Dest";
+              // extract all files in archive
+              zipForge1.ExtractFiles("*.*");
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              ' Set archive file name
+              ZipForge1.FileName = "C:\TEST\test.zip"
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Set path to folder with the files to archive
+              ZipForge1.BaseDir = DemoFolder + "\\Source"
+              ' Add all files and directories from the source folder to the archive
+              ZipForge1.AddFiles("*.*")
+              ' Set path to the destination folder
+              ZipForge1.BaseDir = DemoFolder + "\\Dest"
+              ' extract all files in archive
+              ZipForge1.ExtractFiles("*.*")
+              ' Close archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+            <remarks>
+             Call CloseArchive to close current archive file. CloseArchive automatically finishes current transaction started by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.BeginUpdate"/> method and sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Active"/> to False.
+             <para>Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive"/> to create or open archive file.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.BeginUpdate">
+            <summary>
+            Begins a transaction for open archive.
+            </summary>
+            <example> The following example shows how to use transaction system
+            <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              // Create a new archive file            
+              zipForge1.OpenArchive(System.IO.FileMode.Create);
+              // Start a transaction
+              zipForge1.BeginUpdate();
+              // Set path to folder with some HTML files to BaseDir
+              zipForge1.BaseDir = DemoPath + "Source";
+              // Add all files from Source folder to the archive
+              try
+              {
+                zipForge1.AddFiles("*.*");
+              }
+              catch
+              {
+                // If errors occurs rollback transaction. All modifications will be cancelled.            
+                zipForge1.CancelUpdate();
+                // Close archive and exit current procedure                
+                zipForge1.CloseArchive();
+                MessageBox.Show("Error adding all files");
+                return;
+              }
+              // Set path to folder with some HTML files to BaseDir            
+              zipForge1.BaseDir = DemoPath + "Source1\\";
+              // Add all HTML files from Source1 folder to the archive
+              try
+              {
+                zipForge1.AddFiles("*.htm*");
+              }
+              catch
+              {
+                // If errors occurs rollback transaction. All modifications will be cancelled.                
+                zipForge1.CancelUpdate();
+                // Close archive and exit current procedure                
+                zipForge1.CloseArchive();
+                MessageBox.Show("Error adding html files");
+                return;
+              }
+              // Commit a transaction. All modifications will be saved.            
+              zipForge1.EndUpdate();
+              // Set path to destination folder            
+              zipForge1.BaseDir = DemoPath + "Dest";
+              // Extract all files            
+              zipForge1.ExtractFiles("*.*");
+              // Close the archive            
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              ' Create a new archive file            
+              zipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Start a transaction
+              zipForge1.BeginUpdate()
+              ' Set path to folder with some HTML files to BaseDir
+              zipForge1.BaseDir = DemoPath + "Source"
+              ' Add all files from Source folder to the archive
+              Try
+                zipForge1.AddFiles("*.*")
+              Catch
+                ' If errors occurs rollback transaction. All modifications will be cancelled.            
+                zipForge1.CancelUpdate()
+                ' Close archive and exit current procedure                
+                zipForge1.CloseArchive()
+                MessageBox.Show("Error adding all files")
+                Return
+              End Try
+              ' Set path to folder with some HTML files to BaseDir            
+              zipForge1.BaseDir = DemoPath + "Source1\\"
+              ' Add all HTML files from Source1 folder to the archive
+              Try
+                zipForge1.AddFiles("*.htm*")
+              Catch
+                ' If errors occurs rollback transaction. All modifications will be cancelled.                
+                zipForge1.CancelUpdate()
+                ' Close archive and exit current procedure                
+                zipForge1.CloseArchive()
+                MessageBox.Show("Error adding html files")
+                Return
+              End Try
+              ' Commit a transaction. All modifications will be saved.            
+              zipForge1.EndUpdate()
+              ' Set path to destination folder            
+              zipForge1.BaseDir = DemoPath + "Dest"
+              ' Extract all files            
+              zipForge1.ExtractFiles("*.*")
+              ' Close the archive            
+              zipForge1.CloseArchive
+            </code>
+            </example>
+            <remarks>
+            Call BeginUpdate to start a group of operations called a transaction. All changes made by operations within single transaction can be saved by calling <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.EndUpdate"/> or cancelled by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CancelUpdate"/>. BeginUpdate sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InUpdate"/> property to True.
+            <para>ZipForge.NET transaction system provides archive integrity like reliable database systems.</para>
+            <para>Any transaction must be finished before <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles">extracting</see> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles">testing</see> files. Otherwise exception will be raised.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.EndUpdate">
+            <summary>
+            Finishes a transaction for open archive.
+            </summary>
+            <example> The following example shows how to use transaction system
+            <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              // Create a new archive file            
+              zipForge1.OpenArchive(System.IO.FileMode.Create);
+              // Start a transaction
+              zipForge1.BeginUpdate();
+              // Set path to folder with some HTML files to BaseDir
+              zipForge1.BaseDir = DemoPath + "Source";
+              // Add all files from Source folder to the archive
+              try
+              {
+                zipForge1.AddFiles("*.*");
+              }
+              catch
+              {
+                // If errors occurs rollback transaction. All modifications will be cancelled.            
+                zipForge1.CancelUpdate();
+                // Close archive and exit current procedure                
+                zipForge1.CloseArchive();
+                MessageBox.Show("Error adding all files");
+                return;
+              }
+              // Set path to folder with some HTML files to BaseDir            
+              zipForge1.BaseDir = DemoPath + "Source1\\";
+              // Add all HTML files from Source1 folder to the archive
+              try
+              {
+                zipForge1.AddFiles("*.htm*");
+              }
+              catch
+              {
+                // If errors occurs rollback transaction. All modifications will be cancelled.                
+                zipForge1.CancelUpdate();
+                // Close archive and exit current procedure                
+                zipForge1.CloseArchive();
+                MessageBox.Show("Error adding html files");
+                return;
+              }
+              // Commit a transaction. All modifications will be saved.            
+              zipForge1.EndUpdate();
+              // Set path to destination folder            
+              zipForge1.BaseDir = DemoPath + "Dest";
+              // Extract all files            
+              zipForge1.ExtractFiles("*.*");
+              // Close the archive            
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              ' Create a new archive file            
+              zipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Start a transaction
+              zipForge1.BeginUpdate()
+              ' Set path to folder with some HTML files to BaseDir
+              zipForge1.BaseDir = DemoPath + "Source"
+              ' Add all files from Source folder to the archive
+              Try
+                zipForge1.AddFiles("*.*")
+              Catch
+                ' If errors occurs rollback transaction. All modifications will be cancelled.            
+                zipForge1.CancelUpdate()
+                ' Close archive and exit current procedure                
+                zipForge1.CloseArchive()
+                MessageBox.Show("Error adding all files")
+                Return
+              End Try
+              ' Set path to folder with some HTML files to BaseDir            
+              zipForge1.BaseDir = DemoPath + "Source1\\"
+              ' Add all HTML files from Source1 folder to the archive
+              Try
+                zipForge1.AddFiles("*.htm*")
+              Catch
+                ' If errors occurs rollback transaction. All modifications will be cancelled.                
+                zipForge1.CancelUpdate()
+                ' Close archive and exit current procedure                
+                zipForge1.CloseArchive()
+                MessageBox.Show("Error adding html files")
+                Return
+              End Try
+              ' Commit a transaction. All modifications will be saved.            
+              zipForge1.EndUpdate()
+              ' Set path to destination folder            
+              zipForge1.BaseDir = DemoPath + "Dest"
+              ' Extract all files            
+              zipForge1.ExtractFiles("*.*")
+              ' Close the archive            
+              zipForge1.CloseArchive
+            </code>
+            </example>
+            <remarks>
+            EndUpdate saves all archive modifications made after calling <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.BeginUpdate"/> and finishes current transaction. EndUpdate sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InUpdate"/> property to False. 
+            <para>Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CancelUpdate"/> to cancel archive modifications.</para>
+            </remarks> 
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.CancelUpdate">
+            <summary>
+            Cancels all archive operations made after calling BeginUpdate.
+            </summary>
+            <example> The following example shows how to use transaction system
+            <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              // Create a new archive file            
+              zipForge1.OpenArchive(System.IO.FileMode.Create);
+              // Start a transaction
+              zipForge1.BeginUpdate();
+              // Set path to folder with some HTML files to BaseDir
+              zipForge1.BaseDir = DemoPath + "Source";
+              // Add all files from Source folder to the archive
+              try
+              {
+                zipForge1.AddFiles("*.*");
+              }
+              catch
+              {
+                // If errors occurs rollback transaction. All modifications will be cancelled.            
+                zipForge1.CancelUpdate();
+                // Close archive and exit current procedure                
+                zipForge1.CloseArchive();
+                MessageBox.Show("Error adding all files");
+                return;
+              }
+              // Set path to folder with some HTML files to BaseDir            
+              zipForge1.BaseDir = DemoPath + "Source1\\";
+              // Add all HTML files from Source1 folder to the archive
+              try
+              {
+                zipForge1.AddFiles("*.htm*");
+              }
+              catch
+              {
+                // If errors occurs rollback transaction. All modifications will be cancelled.                
+                zipForge1.CancelUpdate();
+                // Close archive and exit current procedure                
+                zipForge1.CloseArchive();
+                MessageBox.Show("Error adding html files");
+                return;
+              }
+              // Commit a transaction. All modifications will be saved.            
+              zipForge1.EndUpdate();
+              // Set path to destination folder            
+              zipForge1.BaseDir = DemoPath + "Dest";
+              // Extract all files            
+              zipForge1.ExtractFiles("*.*");
+              // Close the archive            
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              ' Create a new archive file            
+              zipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Start a transaction
+              zipForge1.BeginUpdate()
+              ' Set path to folder with some HTML files to BaseDir
+              zipForge1.BaseDir = DemoPath + "Source"
+              ' Add all files from Source folder to the archive
+              Try
+                zipForge1.AddFiles("*.*")
+              Catch
+                ' If errors occurs rollback transaction. All modifications will be cancelled.            
+                zipForge1.CancelUpdate()
+                ' Close archive and exit current procedure                
+                zipForge1.CloseArchive()
+                MessageBox.Show("Error adding all files")
+                Return
+              End Try
+              ' Set path to folder with some HTML files to BaseDir            
+              zipForge1.BaseDir = DemoPath + "Source1\\"
+              ' Add all HTML files from Source1 folder to the archive
+              Try
+                zipForge1.AddFiles("*.htm*")
+              Catch
+                ' If errors occurs rollback transaction. All modifications will be cancelled.                
+                zipForge1.CancelUpdate()
+                ' Close archive and exit current procedure                
+                zipForge1.CloseArchive()
+                MessageBox.Show("Error adding html files")
+                Return
+              End Try
+              ' Commit a transaction. All modifications will be saved.            
+              zipForge1.EndUpdate()
+              ' Set path to destination folder            
+              zipForge1.BaseDir = DemoPath + "Dest"
+              ' Extract all files            
+              zipForge1.ExtractFiles("*.*")
+              ' Close the archive            
+              zipForge1.CloseArchive
+            </code>
+            </example>
+            <remarks>
+            Use CancelUpdate to rollback current transaction started by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.BeginUpdate"/>. CancelUpdate clears all archive modifications made after calling BeginUpdate. CancelUpdate sets <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.InUpdate"/> property to False.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFromStream(System.String,System.IO.Stream)">
+            <overloads>
+            Adds data stored in a stream to the archive.
+            </overloads>
+            <summary>
+            Adds data stored in a stream to the archive.
+            </summary>
+            <remarks>
+            Use AddFromStream to compress data stored in the Stream descendant object like FileStream, MemoryStream or BlobStream to the file inside the archive.
+            <para>The position determines starting position in stream for adding data to the archive.</para>
+            <para>Count specifies size of the data in stream for adding to the archive. If count = 0 size of the data will be stream.Size - position. If count > 0 then AddFromStream copies stream data to the internal memory stream before processing.</para>
+            <para>By default all Stream contents will be added to the archive.</para>
+            <para>The attr parameter specifies file attributes which will be assigned to the stored file.</para>
+            <para>While using multiple AddFromStream calls within a single transaction, keep in mind that you may get an error if a stream object is destroyed before the call to the EndUpdate method. Please note that you should use separate stream objects for each AddFromStream call if you don't pass count > 0 parameter.</para>
+            </remarks>		
+            <param name="fileName">Specifies file name that will be used to store data from the Stream descendant object.</param>
+            <param name="stream">Stream to add data from.</param>
+            <remarks>
+            Use AddFromStream to compress data stored in the Stream descendant object like FileStream, MemoryStream or BlobStream to the file inside the archive.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFromStream(System.String,System.IO.Stream,System.Int32)">
+            <summary>
+            Adds data stored within a stream to the archive.
+            </summary>
+            <param name="fileName">Specifies file name that will be used to store data from the Stream descendant object.</param>
+            <param name="stream">Stream to add data from.</param>
+            <param name="position">Determines starting position in stream for adding data to the archive.</param>
+            <remarks>
+            Use AddFromStream to compress data stored in the Stream descendant object like FileStream, MemoryStream or BlobStream to the file inside the archive. 
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFromStream(System.String,System.IO.Stream,System.Int32,System.Int32)">
+            <summary>
+            Adds data stored in a stream to the archive.
+            </summary>
+            <param name="fileName">Specifies file name that will be used to store data from the Stream descendant object.</param>
+            <param name="stream">Stream to add data from.</param>
+            <param name="position">Determines starting position in stream for adding data to the archive.</param>
+            <param name="count">Count specifies size of the data in stream for adding to the archive.</param>
+            <remarks>
+            Use AddFromStream to compress data stored in the Stream descendant object like FileStream, MemoryStream or BlobStream to the file inside the archive. 
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFromBuffer(System.String,System.Byte[],System.Int32)">
+            <summary>
+            Adds data stored in a memory buffer to the archive.
+            </summary>
+            <param name="fileName">Specifies file name that will be used to store data from the memory buffer.</param>
+            <param name="buffer">Buffer to add data from.</param>
+            <param name="count">Specifies size in bytes of the buffer.</param>
+            <remarks >
+            Use AddFromBuffer to compress data stored in the memory buffer to the file inside the archive. 
+            <para>If some errors occurs an exception will be raised.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFromString(System.String,System.String)">
+            <summary>
+            Adds string to the archive.
+            </summary>
+            <param name="fileName">Specifies file name that will be used to store string.</param>
+            <param name="text">String to add data from.</param>
+            <remarks>
+            Use AddFromString to compress string to the file inside the archive. 
+            <para>If some errors occurs an exception will be raised.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractToStream(System.String,System.IO.Stream)">
+            <summary>
+            Extracts data stored in the file inside the archive to a TStream descendant object.
+            </summary>
+            <param name="fileName">File name being extracted.</param>
+            <param name="stream">Stream to extract data to.</param>
+            <remarks>
+            Use ExtractToStream to decompress data stored in the file inside the archive to a Stream descendant object like FileStream, MemoryStream or BlobStream. 
+            <para>Any transaction must be finished before calling ExtractToStream. Otherwise an exception will be raised. Also if some other errors occurs an exception will be raised.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractToBuffer(System.String,System.Byte[],System.Int32)">
+            <summary>
+            Extracts data stored in the file inside the archive to a memory buffer.
+            </summary>
+            <param name="fileName">Specifies file name being extracted.</param>
+            <param name="buffer">Buffer is an existing memory buffer. Buffer size should be greater or equal number of bytes specified by Count parameter</param>
+            <param name="count">Count specifies size in bytes of the data being extracted from the archive.</param>
+            <remarks >
+            Use ExtractToBuffer to decompress count bytes of data stored in the file inside the archive to memory buffer. 
+            <para>Any transaction must be finished before calling ExtractToBuffer. Otherwise an exception will be raised. Also if some other errors occurs an exception will be raised.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractToString(System.String,System.String@)">
+            <summary>
+            Extracts a file stored withing the archive into a string.
+            </summary>
+            <param name="fileName">Specifies file name being extracted.</param>
+            <param name="text">String to extract data to.</param>
+            <remarks>Use ExtractToString to decompress string from the file inside the archive. 
+            <para>Any transaction must be finished before calling ExtractToString. Otherwise an exception will be raised. Also if some other errors occurs an exception will be raised.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.MakeSFX(System.String)">
+             <summary>
+             Create self-extracting (SFX) archive.
+             </summary>
+             <example>The following example shows how to create self-extracting (SFX) archive:
+             <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              zipForge1.SFXStub = "SFXStub\sfxstub.exe";
+              zipForge1.MakeSFX("Temp\test.exe");
+            
+            [VB.NET]
+              ZipForge1.FileName =  "C:\TEST\test.zip";
+              ZipForge1.SFXStub = "SFXStub\sfxstub.exe"
+              ZipForge1.MakeSFX("Temp\test.exe")
+             </code>
+             </example>
+             <param name="SFXFileName">Specifies SFX archive name.</param>
+             <remarks>
+             Call MakeSFX to create SFX archive from the current archive specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property.
+             Set <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.SFXStub"/> property to the executable stub name before calling MakeSFX.
+             <para>Look at MakeSFX demo from Demos folder to learn more about creating SFX archives.</para>
+             </remarks> 
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.FindFirst(ComponentAce.Compression.Archiver.ArchiveItem@)">
+             <overloads>
+             Finds files stored within the archive.
+             </overloads>
+             <summary>
+             Finds files stored within the archive using FileMasks and ExcusionMaskes propertes.
+             </summary>
+             <example> The following example shows how to search files stored within the archive:
+             <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              zipForge1.OpenArchive();
+              ComponentAce.Compression.ZipForge.ArchiveItem archiveItem = new ComponentAce.Compression.ZipForge.ArchiveItem();
+              if (zipForge1.FindFirst("*.*", ref archiveItem))
+              {
+                do
+                {
+                  ListViewItem listItem = new ListViewItem();
+                  listItem.Text = archiveItem.FileName;
+                  ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem(listItem, 
+            	     archiveItem.LastWriteTime.ToShortDateString() + " " + archiveItem.LastWriteTime.ToShortTimeString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.UncompressedSize.ToString());
+                  listItem.SubItems.Add(subItem);                    
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.CompressedSize.ToString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.CompressionRate.ToString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, ((uint)archiveItem.CRC).ToString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.StoredPath);
+                  listItem.SubItems.Add(subItem);                    
+                  listView1.Items.Add(listItem);
+                }
+                while (zipForge1.FindNext(ref archiveItem));
+              }
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              zipForge1.OpenArchive()
+              Dim archiveItem As ComponentAce.Compression.ZipForge.ArchiveItem = New ComponentAce.Compression.ZipForge.ArchiveItem()
+              If ZipForge1.FindFirst("*.*", archiveItem) Then
+                Do                
+                  Dim listItem As ListViewItem = New ListViewItem()
+                  listItem.Text = archiveItem.FileName
+                  Dim subItem As ListViewItem.ListViewSubItem = New ListViewItem.ListViewSubItem(listItem,
+                  archiveItem.LastWriteTime.ToShortDateString() + " " + archiveItem.LastWriteTime.ToShortTimeString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.UncompressedSize.ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.CompressedSize.ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.CompressionRate.ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, (CType(archiveItem.CRC, System.UInt32)).ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.StoredPath)
+                  listItem.SubItems.Add(subItem)
+                  listView1.Items.Add(listItem)
+                Loop While ZipForge1.FindNext(archiveItem)
+              End If
+              zipForge1.CloseArchive()
+             </code>
+             </example> 
+             <remarks>
+             Use FindFirst and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindNext(ComponentAce.Compression.Archiver.ArchiveItem@)"/> to find files stored inside the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">open</see> archive file. FindFirst return True if at least one file meets search conditions, otherwise it returns False. Use FindNext to find other files that meets search conditions.
+             <para>After calling FindFirst f parameter will contain parameters of the first found file.</para>
+             <para>FindFirst variant with single parameter uses FileMasks, ExclusionMasks and Options.SearchAttr to specify search conditions and to exclude files from delete operation.</para>
+             <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "TEST\\*.*" specifies all files in the TEST directory stored within the archive file. First file that meets FileMask and SearchAttr will be found.</para>
+             <para>The searchAttr parameter specifies the special files to include in addition to all normal files</para>
+             <para>The exclusionMask specifies files to be excluded from delete operation.</para>
+             </remarks>		
+             <param name="f">ArchiveItem class.</param>
+             <returns>True if specified file was successfully found, otherwise it returns False.</returns> 
+             <remarks>
+             Use FindFirst and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindNext(ComponentAce.Compression.Archiver.ArchiveItem@)"/> to find files stored inside the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">open</see> archive file. FindFirst return True if at least one file meets search conditions, otherwise it returns False. Use FindNext to find other files that meets search conditions.
+             <para>After calling FindFirst f parameter will contain parameters of the first found file.</para>
+             <para>FindFirst variant with single parameter uses FileMasks, ExclusionMasks and Options.SearchAttr to specify search conditions and to exclude files from delete operation.</para>
+             </remarks> 
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.FindFirst(System.String,ComponentAce.Compression.Archiver.ArchiveItem@)">
+            <summary>
+            Finds files stored within the archive using fileMask parameter.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="f">ArchiveItem class.</param>
+            <returns>True if specified file was successfully found, otherwise it returns False.</returns> 
+            <remarks>
+            Use FindFirst and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindNext(ComponentAce.Compression.Archiver.ArchiveItem@)"/> to find files stored inside the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">open</see> archive file. FindFirst return True if at least one file meets search conditions, otherwise it returns False. Use FindNext to find other files that meets search conditions.
+            <para>After calling FindFirst f parameter will contain parameters of the first found file.</para>
+            </remarks> 
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.FindFirst(System.String,ComponentAce.Compression.Archiver.ArchiveItem@,System.IO.FileAttributes)">
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="f">ArchiveItem class.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <returns>True if specified file was successfully found, otherwise it returns False.</returns> 
+            <remarks>
+            Use FindFirst and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindNext(ComponentAce.Compression.Archiver.ArchiveItem@)"/> to find files stored inside the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">open</see> archive file. FindFirst return True if at least one file meets search conditions, otherwise it returns False. Use FindNext to find other files that meets search conditions.
+            <para>After calling FindFirst f parameter will contain parameters of the first found file.</para>
+            </remarks> 
+            <summary>
+            Finds files stored within the archive using fileMask and searchAttr parameters.
+            </summary>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.FindFirst(System.String,ComponentAce.Compression.Archiver.ArchiveItem@,System.IO.FileAttributes,System.String)">
+            <summary>
+            Finds files stored within the archive using fileMask, searchAttr and exlusionMask parameters.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="f">ArchiveItem class.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <param name="exclusionMask">Specifies files to be excluded from search operation.</param>
+            <returns>True if specified file was successfully found, otherwise it returns False.</returns> 
+            <remarks>
+            Use FindFirst and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindNext(ComponentAce.Compression.Archiver.ArchiveItem@)"/> to find files stored inside the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">open</see> archive file. FindFirst return True if at least one file meets search conditions, otherwise it returns False. Use FindNext to find other files that meets search conditions.
+            <para>After calling FindFirst f parameter will contain parameters of the first found file.</para>
+            </remarks> 
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.FindNext(ComponentAce.Compression.Archiver.ArchiveItem@)">
+             <summary>
+             Finds files stored within the archive.
+             </summary>
+             <example> The following example shows how to search files stored within the archive:
+             <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              zipForge1.OpenArchive();
+              ComponentAce.Compression.ZipForge.ArchiveItem archiveItem = new ComponentAce.Compression.ZipForge.ArchiveItem();
+              if (zipForge1.FindFirst("*.*", ref archiveItem))
+              {
+                do
+                {
+                  ListViewItem listItem = new ListViewItem();
+                  listItem.Text = archiveItem.FileName;
+                  ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem(listItem, 
+            	     archiveItem.LastWriteTime.ToShortDateString() + " " + archiveItem.LastWriteTime.ToShortTimeString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.UncompressedSize.ToString());
+                  listItem.SubItems.Add(subItem);                    
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.CompressedSize.ToString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.CompressionRate.ToString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, ((uint)archiveItem.CRC).ToString());
+                  listItem.SubItems.Add(subItem);
+                  subItem = new ListViewItem.ListViewSubItem(listItem, archiveItem.StoredPath);
+                  listItem.SubItems.Add(subItem);                    
+                  listView1.Items.Add(listItem);
+                }
+                while (zipForge1.FindNext(ref archiveItem));
+              }
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              zipForge1.OpenArchive()
+              Dim archiveItem As ComponentAce.Compression.ZipForge.ArchiveItem = New ComponentAce.Compression.ZipForge.ArchiveItem()
+              If ZipForge1.FindFirst("*.*", archiveItem) Then
+                Do                
+                  Dim listItem As ListViewItem = New ListViewItem()
+                  listItem.Text = archiveItem.FileName
+                  Dim subItem As ListViewItem.ListViewSubItem = New ListViewItem.ListViewSubItem(listItem,
+                  archiveItem.LastWriteTime.ToShortDateString() + " " + archiveItem.LastWriteTime.ToShortTimeString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.UncompressedSize.ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.CompressedSize.ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.CompressionRate.ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, (CType(archiveItem.CRC, System.UInt32)).ToString())
+                  listItem.SubItems.Add(subItem)
+                  subItem = New ListViewItem.ListViewSubItem(listItem, archiveItem.StoredPath)
+                  listItem.SubItems.Add(subItem)
+                  listView1.Items.Add(listItem)
+                Loop While ZipForge1.FindNext(archiveItem)
+              End If
+              zipForge1.CloseArchive()
+             </code>
+             </example> 
+             <param name="f">ArchiveItem class.</param>
+            <remarks>
+             Use FindNext to find files stored inside the open archive file. FindNext return True if there is at least one file meets search conditions, otherwise it returns False. Use FindNext after calling <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindFirst(ComponentAce.Compression.Archiver.ArchiveItem@)"/> only.
+             <para>Pass ArchiveItem class found by previous calling of FindFirst or FindNext to the FindNext.
+             After calling FindNext f parameter will contain parameters of the next found file.
+             </para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.RenameFile(System.String,System.String)">
+            <summary>
+            Renames file stored within the current archive file.
+            </summary>
+            <param name="oldName">Specifies file to be renamed.</param>
+            <param name="newName">Specifies new name for the file.</param>
+            <returns>True if file was successfully renamed, otherwise it returns False.</returns>
+            <remarks>
+            Call RenameFile to rename file stored in the open archive.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ChangeFilesAttr(System.String,System.IO.FileAttributes)">
+            <summary>
+            Changes file attributes for files stored within the current archive file.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="newAttr">Specifies new file attributes.</param>
+            <remarks>
+            Call ChangeFilesAttr to change file attributes for files stored within the current archive file.
+            <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "TEST\\*.*" specifies all files in the TEST directory stored within the archive file. All files that meets fileMask  will be processed.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ChangeFilesComment(System.String,System.String)">
+            <summary>
+            Changes file comment for files stored within the current archive file.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="newComment">Specifies new file comment.</param>
+            <remarks>
+            Call ChangeFilesComment to change file attributes for files stored within the current archive file.
+            <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "TEST\\*.*" specifies all files in the TEST directory stored within the archive file. All files that meets fileMask will be processed.</para>
+            <para>To change the comment of the whole archive file use the Comment property.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.IsFilePasswordValid(System.String,System.String)">
+            <summary>
+            Indicates whether the password is valid for specified encrypted file in archive.
+            </summary>
+            <param name="fileName">Specifies file name being tested.</param>
+            <param name="password">The password parameter is a password to check.</param>
+            <returns>True if the password is valid.</returns>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles">
+             <overloads>
+             Adds files to the archive.
+             </overloads>
+             <summary>
+             Adds files to the archive using FileMasks and ExlusionMasks properies.
+             </summary>
+             <example> The following example shows how to add files to archive and extract them:
+             <code>
+             [C#]
+              zipForge1.FileName ="C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Set path to folder with the files to archive
+              zipForge1.BaseDir = "\\Source";
+              // Add all files and directories from the source folder to the archive
+              zipForge1.AddFiles("*.*");
+              // Set path to the destination folder
+              zipForge1.BaseDir = "\\Dest";
+              // extract all files in archive
+              zipForge1.ExtractFiles("*.*");
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              ' Set archive file name
+              ZipForge1.FileName = "C:\TEST\test.zip"
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Set path to folder with the files to archive
+              ZipForge1.BaseDir = DemoFolder + "\\Source"
+              ' Add all files and directories from the source folder to the archive
+              ZipForge1.AddFiles("*.*")
+              ' Set path to the destination folder
+              ZipForge1.BaseDir = DemoFolder + "\\Dest"
+              ' extract all files in archive
+              ZipForge1.ExtractFiles("*.*")
+              ' Close archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+             <remarks>
+             Use AddFiles to add files to the open archive file. If you need to delete source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/> instead of AddFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, AddFiles will search files recursively.
+             <para>AddFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr properties to specify search conditions and to exclude files from add operation.</para>
+             <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "C:\TEST\*.*" specifies all files in the C:\TEST directory. All files that meets fileMask and searchAttr will be added to the archive.</para>
+             <para>The searchAttr parameter specifies the special files to include in addition to all normal files.</para>
+             <para>The exclusionMask specifies files to be excluded from add operation.</para>
+             <para>If you need to add certain files without compression set <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.NoCompressionMasks"/> property. If some errors occurs an exception will be raised. Write an <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event handler to perform your own error handling.</para>
+             <para>If you need to change the name of the added file, use <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnStoreFile"/> event handler.</para>
+             </remarks>		
+             <remarks>
+             Use AddFiles to add files to the open archive file. If you need to delete source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/> instead of AddFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, AddFiles will search files recursively.
+             <para>AddFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr properties to specify search conditions and to exclude files from add operation.</para>
+             </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles(System.String)">
+            <summary>
+            Adds files specified by fileMask parameter to archive.
+            </summary>		
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <remarks>
+            Use AddFiles to add files to the open archive file. If you need to delete source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/> instead of AddFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, AddFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles(System.String,System.IO.FileAttributes)">
+            <summary>
+            Adds files specified by fileMask and seachAttr parameters to archive.
+            </summary>		
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <remarks>
+            Use AddFiles to add files to the open archive file. If you need to delete source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/> instead of AddFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, AddFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles(System.String,System.IO.FileAttributes,System.String)">
+            <summary>
+            Adds files specified by fileMask, seachAttr and exlusionMask parameters to archive.
+            </summary>		
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <param name="exclusionMask">Specifies files to be excluded from add operation.</param>
+            <remarks>
+            Use AddFiles to add files to the open archive file. If you need to delete source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/> instead of AddFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, AddFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles">
+             <overloads>
+             Adds files to the archive and deletes original files.
+             </overloads>
+             <summary>
+             Moves files to the archive using FileMasks and ExclusionMasks properties.
+             </summary>
+             <example> The following example shows how to handle the archive file:
+             <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Let's encrypt all files
+              zipForge1.Password = "The password";
+              // Set path to folder with some text files to BaseDir
+              zipForge1.BaseDir = "Source";
+              // Do not compress MPEG3 files
+              zipForge1.NoCompressionMasks.Add("*.mp3");
+              // Add all files and directories from Source excluding text files to the archive
+              zipForge1.AddFiles("*.*", FileAttributes.Archive| 
+              FileAttributes.Normal | FileAttributes.Directory, "*.txt");// Set path to destination folder            
+              zipForge1.BaseDir = "Dest";
+              // Extract all files and directories from the archive to BaseDir
+              // After extracting directory Dest should contain all files from folder
+              // Source excluding *.txt files
+              zipForge1.ExtractFiles("*.*");
+              // Use full path
+              zipForge1.Options.StorePath = StorePathMode.FullPath;
+              // Set path to destination folder
+              zipForge1.BaseDir = "Source1";
+              // Move all text files from Source1 to the archive
+              // After moving directory Source1 should not contain any text files
+              zipForge1.MoveFiles("*.txt", FileAttributes.Normal | FileAttributes.Archive);
+              // Set path to current drive
+              zipForge1.BaseDir = Directory.GetDirectoryRoot(Directory.GetCurrentDirectory());
+              // Overwrite all files
+              zipForge1.Options.Overwrite = OverwriteMode.Always;
+              // Update all files excluding 1???.t* from Source1
+              zipForge1.UpdateFiles(DemoFolder + "\\Source1\\*.*", FileAttributes.Archive | FileAttributes.Normal,	"2???.t*");
+              // Set temporary directory
+              zipForge1.TempDir = "Temp";
+              // Test all files and directories in the archive
+              try
+              {
+                zipForge1.TestFiles("*.*");
+              }
+              catch
+              {
+                MessageBox.Show("Archive is corrupted");
+              }
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Let's encrypt all files
+              ZipForge1.Password = "The password"
+              ' Set path to folder with some text files to BaseDir
+              ZipForge1.BaseDir = "Source"
+              ' Do not compress MPEG3 files
+              ZipForge1.NoCompressionMasks.Add("*.mp3")
+              ' Add all files and directories from Source excluding text files to the archive
+              ZipForge1.AddFiles("*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Directory, "*.txt")
+              ' Set path to destination folder            
+              ZipForge1.BaseDir = "Dest"
+              ' Extract all files and directories from the archive to BaseDir
+              ' After extracting directory Dest should contain all files from folder
+              ' Source excluding *.txt files
+              ZipForge1.ExtractFiles("*.*")
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.FullPath
+              ' Set path to destination folder
+              ZipForge1.BaseDir = "Source1"
+              ' Move all text files from Source1 to the archive
+              ' After moving directory Source1 should not contain any text files
+              ZipForge1.MoveFiles("*.txt", System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Archive)
+              ' Set path to current drive
+              ZipForge1.BaseDir = System.IO.Directory.GetDirectoryRoot(System.IO.Directory.GetCurrentDirectory())
+              ' Overwrite all files
+              ZipForge1.Options.Overwrite = ComponentAce.Compression.ZipForge.OverwriteMode.Always
+              ' Update all files excluding 1???.t* from Source1
+              ZipForge1.UpdateFiles(DemoFolder + "\Source1\*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal, "2???.t*")
+              ' Set temporary directory
+              ZipForge1.TempDir = DemoFolder + "Temp"
+              ' Test all files and directories in the archive
+              Try
+                ZipForge1.TestFiles("*.*")
+              Catch
+                MessageBox.Show("Archive is corrupted")
+              End Try
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.RelativePath
+              ZipForge1.BaseDir = "Dest1"
+              ' Extract all files to Dest1
+              ZipForge1.ExtractFiles("*.*")
+              ' Close the archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+             <remarks>
+             Use MoveFiles to move files to the open archive file. MoveFiles deletes all files after they will be added to the archive. If you need to add files to the archive without deleting source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/> instead of MoveFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, MoveFiles will search files recursively.
+             <para>MoveFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr to specify search conditions and to exclude files from move operation.</para>
+             <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, 'C:\TEST\*.*' specifies all files in the C:\TEST directory. All files that meets FileMask and SearchAttr will be moved to the archive.</para>
+             <para>The searchAttr parameter specifies the special files to include in addition to all normal files.</para>
+             <para>The exclusionMask specifies files to be excluded from move operation.</para>
+             <para>If you need to move certain files without compression set <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.NoCompressionMasks"/> property. If some errors occurs an exception will be raised. Write an <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event handler to perform your own error handling.</para>
+             </remarks>		
+             <remarks>
+             Use MoveFiles to move files to the open archive file. MoveFiles deletes all files after they are added to the archive. If you need to add files to the archive without deleting source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/> instead of MoveFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, MoveFiles will search files recursively.
+             <para>MoveFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr to specify search conditions and to exclude files from move operation.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles(System.String)">
+             <summary>
+             Moves files to archive using fileMask parameter.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <remarks>
+             Use MoveFiles to move files to the open archive file. MoveFiles deletes all files after they will be added to the archive. If you need to add files to the archive without deleting source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/> instead of MoveFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, MoveFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles(System.String,System.IO.FileAttributes)">
+             <summary>
+             Moves files to archive using fileMask and searchAttr parameters.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+             <remarks>
+             Use MoveFiles to move files to the open archive file. MoveFiles deletes all files after they will be added to the archive. If you need to add files to the archive without deleting source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/> instead of MoveFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, MoveFiles will search files recursively.
+            </remarks>		
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles(System.String,System.IO.FileAttributes,System.String)">
+             <summary>
+             Moves files to archive using fileMask, searchAttr and exclusionMask parameters.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+             <param name="exclusionMask">Specifies files to be excluded from move operation.</param>
+             <remarks>
+             Use MoveFiles to move files to the open archive file. MoveFiles deletes all files after they will be added to the archive. If you need to add files to the archive without deleting source files, use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/> instead of MoveFiles. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, MoveFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles">
+             <overloads>
+             Deletes files stored within the archive.
+             </overloads>
+             <summary>
+             Deletes files stored within the archive.
+             </summary>
+             <example> The following example shows how to handle the archive file:
+             <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Let's encrypt all files
+              zipForge1.Password = "The password";
+              // Set path to folder with some text files to BaseDir
+              zipForge1.BaseDir = "Source";
+              // Do not compress MPEG3 files
+              zipForge1.NoCompressionMasks.Add("*.mp3");
+              // Add all files and directories from Source excluding text files to the archive
+              zipForge1.AddFiles("*.*", FileAttributes.Archive| 
+              FileAttributes.Normal | FileAttributes.Directory, "*.txt");// Set path to destination folder            
+              zipForge1.BaseDir = "Dest";
+              // Extract all files and directories from the archive to BaseDir
+              // After extracting directory Dest should contain all files from folder
+              // Source excluding *.txt files
+              zipForge1.ExtractFiles("*.*");
+              // Use full path
+              zipForge1.Options.StorePath = StorePathMode.FullPath;
+              // Set path to destination folder
+              zipForge1.BaseDir = "Source1";
+              // Move all text files from Source1 to the archive
+              // After moving directory Source1 should not contain any text files
+              zipForge1.MoveFiles("*.txt", FileAttributes.Normal | FileAttributes.Archive);
+              // Set path to current drive
+              zipForge1.BaseDir = Directory.GetDirectoryRoot(Directory.GetCurrentDirectory());
+              // Overwrite all files
+              zipForge1.Options.Overwrite = OverwriteMode.Always;
+              // Update all files excluding 1???.t* from Source1
+              zipForge1.UpdateFiles(DemoFolder + "\\Source1\\*.*", FileAttributes.Archive | FileAttributes.Normal,	"2???.t*");
+              // Set temporary directory
+              zipForge1.TempDir = "Temp";
+              // Test all files and directories in the archive
+              try
+              {
+                zipForge1.TestFiles("*.*");
+              }
+              catch
+              {
+                MessageBox.Show("Archive is corrupted");
+              }
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Let's encrypt all files
+              ZipForge1.Password = "The password"
+              ' Set path to folder with some text files to BaseDir
+              ZipForge1.BaseDir = "Source"
+              ' Do not compress MPEG3 files
+              ZipForge1.NoCompressionMasks.Add("*.mp3")
+              ' Add all files and directories from Source excluding text files to the archive
+              ZipForge1.AddFiles("*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Directory, "*.txt")
+              ' Set path to destination folder            
+              ZipForge1.BaseDir = "Dest"
+              ' Extract all files and directories from the archive to BaseDir
+              ' After extracting directory Dest should contain all files from folder
+              ' Source excluding *.txt files
+              ZipForge1.ExtractFiles("*.*")
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.FullPath
+              ' Set path to destination folder
+              ZipForge1.BaseDir = "Source1"
+              ' Move all text files from Source1 to the archive
+              ' After moving directory Source1 should not contain any text files
+              ZipForge1.MoveFiles("*.txt", System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Archive)
+              ' Set path to current drive
+              ZipForge1.BaseDir = System.IO.Directory.GetDirectoryRoot(System.IO.Directory.GetCurrentDirectory())
+              ' Overwrite all files
+              ZipForge1.Options.Overwrite = ComponentAce.Compression.ZipForge.OverwriteMode.Always
+              ' Update all files excluding 1???.t* from Source1
+              ZipForge1.UpdateFiles(DemoFolder + "\Source1\*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal, "2???.t*")
+              ' Set temporary directory
+              ZipForge1.TempDir = DemoFolder + "Temp"
+              ' Test all files and directories in the archive
+              Try
+                ZipForge1.TestFiles("*.*")
+              Catch
+                MessageBox.Show("Archive is corrupted")
+              End Try
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.RelativePath
+              ZipForge1.BaseDir = "Dest1"
+              ' Extract all files to Dest1
+              ZipForge1.ExtractFiles("*.*")
+              ' Close the archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+             <remarks>
+             Use DeleteFiles to delete files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, DeleteFiles will search files recursively.
+             <para>DeleteFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr to specify search conditions and to exclude files from delete operation.</para>
+             <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "TEST\\*.*" specifies all files in the TEST directory stored within the archive file. All files that meets FileMask and SearchAttr will be deleted.</para>
+             <para>The searchAttr parameter specifies the special files to include in addition to all normal files.</para>
+             <para>The exclusionMask specifies files to be excluded from delete operation.</para>
+             <para> If some errors occurs an exception will be raised. Write an <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event handler to perform your own error handling.</para>
+             </remarks>		
+             <remarks>
+             Use DeleteFiles to delete files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, DeleteFiles will search files recursively.
+             <para>DeleteFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr to specify search conditions and to exclude files from delete operation.</para>
+             </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles(System.String)">
+             <summary>
+             Deletes files stored within the archive.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <remarks>
+             Use DeleteFiles to delete files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, DeleteFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles(System.String,System.IO.FileAttributes)">
+             <summary>
+             Deletes files stored within the archive.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+             <remarks>
+             Use DeleteFiles to delete files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, DeleteFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles(System.String,System.IO.FileAttributes,System.String)">
+             <summary>
+             Deletes files stored within the archive.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+             <param name="exclusionMask">Specifies files to be excluded from delete operation.</param>
+             <remarks>
+             Use DeleteFiles to delete files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, DeleteFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles">
+             <overloads>
+             Updates files stored within the archive.
+             </overloads>
+             <summary>
+             Updates files stored within the archive using FileMasks and ExclusioMasks properties.
+             </summary>
+             <example> The following example shows how to handle the archive file:
+             <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Let's encrypt all files
+              zipForge1.Password = "The password";
+              // Set path to folder with some text files to BaseDir
+              zipForge1.BaseDir = "Source";
+              // Do not compress MPEG3 files
+              zipForge1.NoCompressionMasks.Add("*.mp3");
+              // Add all files and directories from Source excluding text files to the archive
+              zipForge1.AddFiles("*.*", FileAttributes.Archive| 
+              FileAttributes.Normal | FileAttributes.Directory, "*.txt");// Set path to destination folder            
+              zipForge1.BaseDir = "Dest";
+              // Extract all files and directories from the archive to BaseDir
+              // After extracting directory Dest should contain all files from folder
+              // Source excluding *.txt files
+              zipForge1.ExtractFiles("*.*");
+              // Use full path
+              zipForge1.Options.StorePath = StorePathMode.FullPath;
+              // Set path to destination folder
+              zipForge1.BaseDir = "Source1";
+              // Move all text files from Source1 to the archive
+              // After moving directory Source1 should not contain any text files
+              zipForge1.MoveFiles("*.txt", FileAttributes.Normal | FileAttributes.Archive);
+              // Set path to current drive
+              zipForge1.BaseDir = Directory.GetDirectoryRoot(Directory.GetCurrentDirectory());
+              // Overwrite all files
+              zipForge1.Options.Overwrite = OverwriteMode.Always;
+              // Update all files excluding 1???.t* from Source1
+              zipForge1.UpdateFiles(DemoFolder + "\\Source1\\*.*", FileAttributes.Archive | FileAttributes.Normal,	"2???.t*");
+              // Set temporary directory
+              zipForge1.TempDir = "Temp";
+              // Test all files and directories in the archive
+              try
+              {
+                zipForge1.TestFiles("*.*");
+              }
+              catch
+              {
+                MessageBox.Show("Archive is corrupted");
+              }
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Let's encrypt all files
+              ZipForge1.Password = "The password"
+              ' Set path to folder with some text files to BaseDir
+              ZipForge1.BaseDir = "Source"
+              ' Do not compress MPEG3 files
+              ZipForge1.NoCompressionMasks.Add("*.mp3")
+              ' Add all files and directories from Source excluding text files to the archive
+              ZipForge1.AddFiles("*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Directory, "*.txt")
+              ' Set path to destination folder            
+              ZipForge1.BaseDir = "Dest"
+              ' Extract all files and directories from the archive to BaseDir
+              ' After extracting directory Dest should contain all files from folder
+              ' Source excluding *.txt files
+              ZipForge1.ExtractFiles("*.*")
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.FullPath
+              ' Set path to destination folder
+              ZipForge1.BaseDir = "Source1"
+              ' Move all text files from Source1 to the archive
+              ' After moving directory Source1 should not contain any text files
+              ZipForge1.MoveFiles("*.txt", System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Archive)
+              ' Set path to current drive
+              ZipForge1.BaseDir = System.IO.Directory.GetDirectoryRoot(System.IO.Directory.GetCurrentDirectory())
+              ' Overwrite all files
+              ZipForge1.Options.Overwrite = ComponentAce.Compression.ZipForge.OverwriteMode.Always
+              ' Update all files excluding 1???.t* from Source1
+              ZipForge1.UpdateFiles(DemoFolder + "\Source1\*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal, "2???.t*")
+              ' Set temporary directory
+              ZipForge1.TempDir = DemoFolder + "Temp"
+              ' Test all files and directories in the archive
+              Try
+                ZipForge1.TestFiles("*.*")
+              Catch
+                MessageBox.Show("Archive is corrupted")
+              End Try
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.RelativePath
+              ZipForge1.BaseDir = "Dest1"
+              ' Extract all files to Dest1
+              ZipForge1.ExtractFiles("*.*")
+              ' Close the archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+             <remarks>
+             Use UpdateFiles to update files stored within the open archive file. UpdateFiles searches for extrenal files specified by FileMask,SearchAttr and ExclusionMask parameters and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.BaseDir"/> property and synchronizes them with files stored within the archive. UpdateFiles uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.OverwriteMode to determine how to overwrite existing files inside the archive with external files from BaseDir. If Options.Recurse is set to True, UpdateFiles will search files recursively.
+             <para>UpdateFiles variant without parameters uses FileMasks, ExclusionMasks and Options.SearchAttr to specify search conditions and to exclude files from update operation.</para>
+             <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "TEST\\*.*" specifies all files in the TEST directory stored within the archive file. All files that meets FileMask and SearchAttr will be updated.</para>
+             <para>The searchAttr parameter specifies the special files to include in addition to all normal files.</para>
+             <para>The exclusionMask specifies files to be excluded from update operation.</para>
+             <para>If you need to update certain files without compression set <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.NoCompressionMasks"/> property. If some errors occurs an exception will be raised. Write an <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event handler to perform your own error handling. </para>
+             </remarks>		
+             <remarks>
+             Use UpdateFiles to update files stored within the open archive file. UpdateFiles searches for extrenal files specified by FileMask,SearchAttr and ExclusionMask parameters and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.BaseDir"/> property and synchronizes them with files stored within the archive. UpdateFiles uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.OverwriteMode to determine how to overwrite existing files inside the archive with external files from BaseDir. If Options.Recurse is set to True, UpdateFiles will search files recursively.
+             <para>UpdateFiles variant without parameters uses FileMasks, ExclusionMasks and Options.SearchAttr to specify search conditions and to exclude files from update operation.</para>
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles(System.String)">
+             <summary>
+             Updates files stored within the archive using fileMasks parameter.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <remarks>
+             Use UpdateFiles to update files stored within the open archive file. UpdateFiles searches for extrenal files specified by FileMask,SearchAttr and ExclusionMask parameters and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.BaseDir"/> property and synchronizes them with files stored within the archive. UpdateFiles uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.OverwriteMode to determine how to overwrite existing files inside the archive with external files from BaseDir. If Options.Recurse is set to True, UpdateFiles will search files recursively.
+            </remarks>		
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles(System.String,System.IO.FileAttributes)">
+             <summary>
+             Updates files stored within the archive using fileMasks and searchAttr parameters.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+             <remarks>
+             Use UpdateFiles to update files stored within the open archive file. UpdateFiles searches for extrenal files specified by FileMask,SearchAttr and ExclusionMask parameters and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.BaseDir"/> property and synchronizes them with files stored within the archive. UpdateFiles uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.OverwriteMode to determine how to overwrite existing files inside the archive with external files from BaseDir. If Options.Recurse is set to True, UpdateFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles(System.String,System.IO.FileAttributes,System.String)">
+             <summary>
+             Updates files stored within the archive using fileMasks, searchAttr and exclusionMasl parameters.
+             </summary>
+             <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+             <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+             <param name="exclusionMask">Specifies files to be excluded from move operation.</param>
+             <remarks>
+             Use UpdateFiles to update files stored within the open archive file. UpdateFiles searches for extrenal files specified by FileMask,SearchAttr and ExclusionMask parameters and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.BaseDir"/> property and synchronizes them with files stored within the archive. UpdateFiles uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.OverwriteMode to determine how to overwrite existing files inside the archive with external files from BaseDir. If Options.Recurse is set to True, UpdateFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles">
+             <overloads>
+             Tests files stored within the archive. 
+             </overloads>
+             <summary>
+             Tests files stored within the archive using FileMasks and ExclusionMasks properties.
+             </summary>
+             <example> The following example shows how to handle the archive file:
+             <code>
+            [C#]
+              zipForge1.FileName = "C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Let's encrypt all files
+              zipForge1.Password = "The password";
+              // Set path to folder with some text files to BaseDir
+              zipForge1.BaseDir = "Source";
+              // Do not compress MPEG3 files
+              zipForge1.NoCompressionMasks.Add("*.mp3");
+              // Add all files and directories from Source excluding text files to the archive
+              zipForge1.AddFiles("*.*", FileAttributes.Archive| 
+              FileAttributes.Normal | FileAttributes.Directory, "*.txt");// Set path to destination folder            
+              zipForge1.BaseDir = "Dest";
+              // Extract all files and directories from the archive to BaseDir
+              // After extracting directory Dest should contain all files from folder
+              // Source excluding *.txt files
+              zipForge1.ExtractFiles("*.*");
+              // Use full path
+              zipForge1.Options.StorePath = StorePathMode.FullPath;
+              // Set path to destination folder
+              zipForge1.BaseDir = "Source1";
+              // Move all text files from Source1 to the archive
+              // After moving directory Source1 should not contain any text files
+              zipForge1.MoveFiles("*.txt", FileAttributes.Normal | FileAttributes.Archive);
+              // Set path to current drive
+              zipForge1.BaseDir = Directory.GetDirectoryRoot(Directory.GetCurrentDirectory());
+              // Overwrite all files
+              zipForge1.Options.Overwrite = OverwriteMode.Always;
+              // Update all files excluding 1???.t* from Source1
+              zipForge1.UpdateFiles(DemoFolder + "\\Source1\\*.*", FileAttributes.Archive | FileAttributes.Normal,	"2???.t*");
+              // Set temporary directory
+              zipForge1.TempDir = "Temp";
+              // Test all files and directories in the archive
+              try
+              {
+                zipForge1.TestFiles("*.*");
+              }
+              catch
+              {
+                MessageBox.Show("Archive is corrupted");
+              }
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              zipForge1.FileName = "C:\TEST\test.zip";
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Let's encrypt all files
+              ZipForge1.Password = "The password"
+              ' Set path to folder with some text files to BaseDir
+              ZipForge1.BaseDir = "Source"
+              ' Do not compress MPEG3 files
+              ZipForge1.NoCompressionMasks.Add("*.mp3")
+              ' Add all files and directories from Source excluding text files to the archive
+              ZipForge1.AddFiles("*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Directory, "*.txt")
+              ' Set path to destination folder            
+              ZipForge1.BaseDir = "Dest"
+              ' Extract all files and directories from the archive to BaseDir
+              ' After extracting directory Dest should contain all files from folder
+              ' Source excluding *.txt files
+              ZipForge1.ExtractFiles("*.*")
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.FullPath
+              ' Set path to destination folder
+              ZipForge1.BaseDir = "Source1"
+              ' Move all text files from Source1 to the archive
+              ' After moving directory Source1 should not contain any text files
+              ZipForge1.MoveFiles("*.txt", System.IO.FileAttributes.Normal Or System.IO.FileAttributes.Archive)
+              ' Set path to current drive
+              ZipForge1.BaseDir = System.IO.Directory.GetDirectoryRoot(System.IO.Directory.GetCurrentDirectory())
+              ' Overwrite all files
+              ZipForge1.Options.Overwrite = ComponentAce.Compression.ZipForge.OverwriteMode.Always
+              ' Update all files excluding 1???.t* from Source1
+              ZipForge1.UpdateFiles(DemoFolder + "\Source1\*.*", System.IO.FileAttributes.Archive Or System.IO.FileAttributes.Normal, "2???.t*")
+              ' Set temporary directory
+              ZipForge1.TempDir = DemoFolder + "Temp"
+              ' Test all files and directories in the archive
+              Try
+                ZipForge1.TestFiles("*.*")
+              Catch
+                MessageBox.Show("Archive is corrupted")
+              End Try
+              ' Use full path
+              ZipForge1.Options.StorePath = ComponentAce.Compression.ZipForge.StorePathMode.RelativePath
+              ZipForge1.BaseDir = "Dest1"
+              ' Extract all files to Dest1
+              ZipForge1.ExtractFiles("*.*")
+              ' Close the archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+             <remarks>
+             Use TestFiles to test files stored within the open archive file. Selected files will be extracted to temporary directory specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.TempDir"/> property. TestFiles will delete these temporary files after testing. If errors occurs during test operation <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event will be triggered. If there is no event handler available then exception will be raised. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, TestFiles will search files recursively.
+             <para>TestFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr to specify search conditions and to exclude files from test operation.</para>
+             <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "TEST\\*.*" specifies all files in the TEST directory stored within the archive file. All files that meets FileMask and SearchAttr will be tested.</para>
+             <para>The searchAttr parameter specifies the special files to include in addition to all normal files.</para>
+             <para>The exclusionMask specifies files to be excluded from test operation.</para>
+             <para>Any transaction must be finished before calling TestFiles. Otherwise an exception will be raised. Also if some other errors occurs an exception will be raised. Write an <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event handler to perform your own error handling.</para>
+             </remarks>		
+             <remarks>
+             Use TestFiles to test files stored within the open archive file. Selected files will be extracted to temporary directory specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.TempDir"/> property. TestFiles will delete these temporary files after testing. If errors occurs during test operation <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event will be triggered. If there is no event handler available then exception will be raised. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, TestFiles will search files recursively.
+             <para>TestFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.SearchAttr to specify search conditions and to exclude files from test operation.</para>
+             </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles(System.String)">
+            <summary>
+            Tests files stored within the archive using fileMask parameter.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <remarks>
+            Use TestFiles to test files stored within the open archive file. Selected files will be extracted to temporary directory specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.TempDir"/> property. TestFiles will delete these temporary files after testing. If errors occurs during test operation <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event will be triggered. If there is no event handler available then exception will be raised. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, TestFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles(System.String,System.IO.FileAttributes)">
+            <summary>
+            Tests files stored within the archive using fileMask and searchAttr parameters.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <remarks>
+            Use TestFiles to test files stored within the open archive file. Selected files will be extracted to temporary directory specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.TempDir"/> property. TestFiles will delete these temporary files after testing. If errors occurs during test operation <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event will be triggered. If there is no event handler available then exception will be raised. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, TestFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles(System.String,System.IO.FileAttributes,System.String)">
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <param name="exclusionMask">Specifies files to be excluded from test operation.</param>
+            <remarks>
+            Use TestFiles to test files stored within the open archive file. Selected files will be extracted to temporary directory specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.TempDir"/> property. TestFiles will delete these temporary files after testing. If errors occurs during test operation <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event will be triggered. If there is no event handler available then exception will be raised. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, TestFiles will search files recursively.
+            </remarks>
+            <summary>
+            Tests files stored within the archive using fileMask, searchAttr and exclusionMask parameters.
+            </summary>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.RepairArchive">
+            <overloads>
+            Repairs the current archive file.
+            </overloads>
+            <summary>
+            Repairs the current archive file.
+            </summary>
+            <remarks>
+            Call RepairArchive to repair damaged archive file. 
+            <para>OutputFileName parameter specifies the file name to write the repaired file to.</para>
+            <para>By default OutputFileName is blank and original archive file is replaced by repaired one.</para>
+            </remarks>		
+            <remarks>
+            Call RepairArchive to repair damaged archive file. 
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.RepairArchive(System.String)">
+            <summary>
+            Saves repaired archve to file specified by outputFileName parameter.
+            </summary>
+            <param name="outputFileName">Specifies the file name to write the repaired file to.</param>
+            <remarks>
+            Call RepairArchive to repair damaged archive file. 
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles">
+             <overloads>
+             Extracts files from the archive.
+             </overloads>
+             <summary>
+             Extracts files specified by FileMasks and ExclusionMasks properties from the archive.
+             </summary>
+             <example> The following example shows how to add files to archive and extract them:
+             <code>
+             [C#]
+              zipForge1.FileName ="C:\\TEST\\test.zip";
+              // Create a new archive file
+              zipForge1.OpenArchive(FileMode.Create);
+              // Set path to folder with the files to archive
+              zipForge1.BaseDir = "\\Source";
+              // Add all files and directories from the source folder to the archive
+              zipForge1.AddFiles("*.*");
+              // Set path to the destination folder
+              zipForge1.BaseDir = "\\Dest";
+              // extract all files in archive
+              zipForge1.ExtractFiles("*.*");
+              // Close archive
+              zipForge1.CloseArchive();
+            
+            [VB.NET]
+              ' Set archive file name
+              ZipForge1.FileName = "C:\TEST\test.zip"
+              ' Create a new archive file
+              ZipForge1.OpenArchive(System.IO.FileMode.Create)
+              ' Set path to folder with the files to archive
+              ZipForge1.BaseDir = DemoFolder + "\\Source"
+              ' Add all files and directories from the source folder to the archive
+              ZipForge1.AddFiles("*.*")
+              ' Set path to the destination folder
+              ZipForge1.BaseDir = DemoFolder + "\\Dest"
+              ' extract all files in archive
+              ZipForge1.ExtractFiles("*.*")
+              ' Close archive
+              ZipForge1.CloseArchive()
+             </code>
+             </example>
+             <remarks>
+             Use ExtractFiles to extract files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, ExtractFiles will search files recursively.
+             <para>
+             ExtractFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and Options.SearchAttr properties to specify search conditions and to exclude files from add operation.
+             ExtractFiles variant with parameters uses procedure parameters and ignores FileMasks, ExclusionMasks and Options.SearchAttr properties.
+             </para>
+             <para>The fileMask parameter is the directory and file name mask, including wildcard characters. For example, "TEST\\*.*" specifies all files in the TEST directory stored within the archive file. All files that meets FileMask and SearchAttr will be extracted from the archive.If FileMask is a blank string, no files will be extracted.</para>
+             <para>The searchAttr parameter specifies the special files to include in addition to all normal files.</para>
+             <para>The exclusionMask specifies files to be excluded from extract operation.</para>
+             <para>Any transaction must be finished before calling ExtractFiles. Otherwise an exception will be raised. Also if some other errors occurs an exception will be raised. Write an <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure"/> event handler to perform your own error handling.</para>
+             <para>Use <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExtractCorruptedFiles"/> property to specify whether extracting of corrupted files is allowed.</para>
+             <para>If you need to change the name of the extracted file, use <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnExtractFile"/> event handler.</para>
+             </remarks>		
+             <remarks>
+             Use ExtractFiles to extract files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, ExtractFiles will search files recursively.
+             <para>ExtractFiles variant without parameters uses <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/>, <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/> and Options.SearchAttr properties to specify search conditions and to exclude files from add operation.</para>
+             </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles(System.String)">
+            <summary>
+            Extracts files specified by fileMask parameter.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <remarks>
+            Use ExtractFiles to extract files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, ExtractFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles(System.String,System.IO.FileAttributes)">
+            <summary>
+            Extracts files specified by fileMask and searchAttr parameters.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <remarks>
+            Use ExtractFiles to extract files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, ExtractFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles(System.String,System.IO.FileAttributes,System.String)">
+            <summary>
+            Extracts files specified by fileMask, searchAttr and exlusionMask parameters.
+            </summary>
+            <param name="fileMask">The directory and file name mask, including wildcard characters.</param>
+            <param name="searchAttr">Specifies the special files to include in addition to all normal files.</param>
+            <param name="exclusionMask">Specifies files to be excluded from extract operation.</param>
+            <remarks>
+            Use ExtractFiles to extract files from the open archive file. If <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.Recurse is set to True, ExtractFiles will search files recursively.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.BaseArchiver.IsValidArchiveFile">
+            <summary>
+            Indicates whether the archive is valid. 
+            </summary>
+            <remarks>
+            Use IsValidArchiveFile to determine whether the file has valid format before opening the archive. 
+            <para>The FileName property is used to specify the file name of the file being checked.</para> 
+            <para>Note: Call to this method when archive is open will raise an exception.</para> 
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnOverallProgress">
+            <summary>
+            Occurs when archive operation with a group of files updates a progress indication value.
+            </summary>
+            <remarks>
+            Write an OnOverallProgress event handler to display progress of the operation on a group of files or to cancel it. OnOverallProgress event is triggered by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/> when current archive operation on a group of files updates a progress indication value.
+            </remarks> 
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnFileProgress">
+            <summary>
+            Occurs when archive operation with a file updates a progress indication value.
+            </summary>
+            <remarks>
+            Write an OnFileProgress event handler to display progress of the current operation or to cancel it. OnFileProgress event is triggered by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/> when current archive operation with a file updates a progress indication value.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnConfirmOverwrite">
+            <summary>
+            Occurs before application will overwrite existing file.
+            </summary>
+            <remarks>
+            Write a OnConfirmOverwrite event handler to perform some specific actions before overwriting file or to cancel it. OnConfirmOverwrite event can be triggered by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/> before overwriting existing file if <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.Options"/>.OverwriteMode = omPrompt.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnConfirmProcessFile">
+            <summary>
+            Occurs before archive group operations.
+            </summary>
+            <remarks>
+            Write an OnConfirmProcessFile event handler to perform some specific actions before executing archive operation or to cancel it. OnConfirmProcessFile event can be triggered by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/> before executing operation on the current file.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnAfterOpen">
+            <summary>
+            Occurs after an application completes opening the archive file.
+            </summary>
+            <remarks>
+            Write an AfterOpen event handler to take specific action immediately after an application <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">opens</see> the archive file.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnPassword">
+            <summary>
+            Occurs when application needs password for the encrypted file.
+            </summary>
+            <remarks>
+            Write an OnPassword event handler to perform query password for the encrypted file being <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles">extracted</see> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles">tested</see>.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailure">
+            <summary>
+            Occurs in case of failure of the current operation.
+            </summary>
+            <remarks>
+            Write an OnProcessFileFailure event handler to perform some specific actions when archive operation failes. OnProcessFileFailure event is triggered by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/> if any file error occurs in the listed methods. If you will not specify event handler for OnProcessFileFailure any error will raise an exception.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestBlankVolume">
+            <summary>
+            Occurs when next volume should be inserted while writing a multi-volume archive.
+            </summary>
+            <remarks>
+            Write an OnRequestBlankVolume event handler to perform asking the user for inserting a blank volume. Also you can override default file name for the new volume. Use cancel parameter to abort current operation.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestFirstVolume">
+            <summary>
+            Occurs when first volume should be inserted while extracting or testing a multi-volume archive.
+            </summary>
+            <remarks>
+            Write an OnRequestFirstVolume event handler to perform asking the user for inserting a first volume of the multi-volume archive. 
+            See also <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestLastVolume"/> and <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestMiddleVolume"/> events. 
+            Also you can override default file name for this volume. Use Cancel to abort current operation.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestLastVolume">
+            <summary>
+            Occurs when last volume should be inserted while extracting or testing a multi-volume archive
+            </summary>
+            <remarks>
+            Write an OnRequestLastVolume event handler to perform asking the user for inserting a last volume of the multi-volume archive. 
+            See also <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestFirstVolume"/> and <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestMiddleVolume"/> events.
+            Also you can override default file name for this volume. Use cancel parameter to abort current operation.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestMiddleVolume">
+            <summary>
+            Occurs when middle volume should be inserted while extracting or testing a multi-volume archive.
+            </summary>
+            <remarks>
+            Write an OnRequestMiddleVolume event handler to perform asking the user for inserting a middle volume of the multi-volume archive. 
+            See also <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestFirstVolume"/> and <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestLastVolume"/> events.
+            VolumeNumber specifies a number of the volume that should be inserted. 
+            Also you can override default file name for this volume. Use cancel parameter  to abort current operation. 
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnDiskFull">
+            <summary>
+            Occurs when current volume for multi-disk spanned archive is full.
+            </summary>
+            <remarks>
+            Write an OnDiskFull event handler to ask user to insert disk with sufficient free space for writing a multi-disk spanned archive.
+            Also you can override default file name for this volume using VolumeFileName. Use cancel parameter to abort current operation. 
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessVolumeFailure">
+            <summary>
+            Occurs in case of failure of the current operation.
+            </summary>
+            <remarks>
+            Write an OnProcessVolumeFailure event handler to perform some specific actions when archive operation failes. OnProcessVolumeFailure event is triggered by <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/> if any file error occurs in the listed methods. If you will not specify event handler for OnProcessVolumeFailure any error will raise an exception.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnStoreFile">
+            <summary>
+            Occurs when file is being stored into the archive.
+            </summary>
+            <remarks>
+            Write an OnStoreFile event handler to override default file name or change its attributes before storing this file into the archive. The event is fired when AddFiles is called.
+            </remarks>
+        </member>
+        <member name="E:ComponentAce.Compression.Archiver.BaseArchiver.OnExtractFile">
+            <summary>
+            Occurs when file is being extracted from archive.
+            </summary>
+            <remarks>
+            Write an OnExtractFile event handler to override default file name or change its attributes before extracting.
+            The event is fired when ExtractFiles is called.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.Size">
+            <summary>
+            Indicates the size in bytes of current archive file.
+            </summary>
+            <remarks>
+            Read Size at runtime to determine size of current archive file. The archive file must be opened before you can use this property. If the archive does not exist, create it using the OpenArchive method. Archive file is specified by FileName property.
+            <para> This property is read-only.</para>
+            </remarks> 
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.FileCount">
+            <summary>
+            Indicates the number of files in the archive file.
+            </summary>
+            <remarks>
+            Read FileCount at runtime to determine number of files within an archive file. The archive file must be opened before you can use this property. If the archive does not exist, create it using the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive"/> method. Archive file is specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property.
+            <para>This property is read-only.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.Exists">
+            <summary>
+            Indicates whether the archive file exists.
+            </summary>
+            <remarks>
+            Read Exists at runtime to determine whether an archive file exists. If the archive does not exist, create it using the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive"/> method. Archive file is specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property.
+            <Para>This property is read-only.</Para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.InUpdate">
+            <summary>
+            Indicates if an archive file is being updated.
+            </summary>
+            <remarks>
+            Use InUpdate property to determine if the archive file is being updated. Call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.EndUpdate"/> if you need to force transaction system to complete current operation immediately.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.Active">
+             <summary>
+             Specifies whether or not an archive file is open.
+             </summary>
+             <remarks>Use Active to determine if archive file is opened or to open it. When Active is False, the archive is closed. When Active is True, archive file management is available.
+             <para>Setting Active to True: </para>
+             <list type=" bullet">
+             <item>
+             <description> Opens archive specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property.</description>
+             </item>
+             <item>
+             <description>Triggers the AfterOpen event handler if one is defined for this component.</description>
+             </item> 
+             </list>
+             <para>If an error occurs while opening the archive exception will be raised and archive file will be closed.</para>
+             <para>An application must set Active to False before creating new archive by calling <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive"/> with fmCreate mode.</para>
+             <para>Calling the OpenArchive method sets Active to True; calling the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.CloseArchive"/> method sets Active to False.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.Comment">
+            <summary>
+            Specifies the comment of archive file.
+            </summary>
+            <remarks>Use this property to set or get the comment of archive file.
+            <para>To set comment for each file in archive use <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ChangeFilesComment(System.String,System.String)"/> method.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.OpenCorruptedArchives">
+            <summary>
+            Specifies whether the corrupted archives can be opened.
+            </summary>
+            <remarks>
+            OpenCorruptedArchives spefies whether to allow opening corrupted archives.
+            <para>When this property is False, an <see cref="E:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestLastVolume"/> event will be triggered when corrupted archive is being opened, otherwise the corrupted archive is opened.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.ExtractCorruptedFiles">
+            <summary>
+            Specifies whether the partially corrupted files can be extracted from damaged archive. 
+            </summary>
+            <remarks>
+            ExtractCorruptedFiles spefies whether to allow extracting partially corrupted files from damaged archive file.	When this property is False, an exception is raised when corrupted file is being extracted, otherwise the file is extracted without error messages. 
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.CompressionLevel">
+            <summary>
+            Specifies the compression level used for archive updating (from 0 to 9).
+            </summary>
+            <remarks>
+            This property determines compression level for adding, moving or updating files. If you need only to store files, set CompressionLevel to None. 
+            <para>Set CompressionLevel to desired value before adding, moving or updating files.</para>
+            <para> The CompressionLevel and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.CompressionMode"/> properties influence each other. Setting one automatically determines value for the other.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.CompressionMode">
+            <summary>
+            Specifies the compression level used for archive updating.
+            </summary>
+            <remarks>
+            This property determines compression level for <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles">adding</see>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles">moving</see> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles">updating</see> files. The correct values are integer numbers in range 0-9. Maximum value of CompressionMode corresponds to slow compression and best compression rate. The zero value means that files will not be compressed. If you need only to store files, set CompressionMode to 0. 
+            <para>Set CompressionMode to desired value before adding, moving or updating files.</para>
+            <para>The CompressionMode and <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.CompressionLevel"/> properties influence each other. Setting one automatically determines value for the other.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.Password">
+            <summary>
+            Specifies the password for files stored within the archive.
+            </summary>
+            <remarks>
+            Set this property before <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles">adding</see>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles">moving</see>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles">updating</see>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles">extracting</see> or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles">testing</see> encrypted files.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName">
+            <summary>
+            Specifies the archive file name.
+            </summary>
+            <remarks>
+            Use FileName to specify the archive file before calling <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive"/> procedure.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.BaseDir">
+            <summary>
+            Specifies default path for archive operations.
+            </summary>
+            <remarks>
+            When files are extracted from archive with <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/> all files and directories will be extracted to path specified by BaseDir. Also <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/> and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/> will use BaseDir as a default path to external files.
+            <para>When files are being tested <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.TempDir"/> is used to temporarily extract files.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.TempDir">
+            <summary>
+            Specifies a temporary directory to use during archive operations.
+            </summary>
+            <remarks>
+            TempDir is used by ZipForge to store temporary files created by archive updating operations or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/> method.
+            <para>If this property is the empty string, the system's temporary directory will be used.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.SpanningMode">
+            <summary>
+            Describes how the archive file will be stored on disk.
+            </summary>
+            <remarks>
+            SpanningMode determines how the archive file will be stored on disk: as a single file, as multiple files or it will be stored on  removable disks. <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.SpanningOptions"/> property determines how the archive file will be splitted or spanned.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.SpanningOptions">
+            <summary>
+            Specifies how the archive file will be splitted or spanned.
+            </summary>
+            <remarks>
+            SpanningOptions property determines how the archive file will be splitted or spanned.
+            </remarks>		
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.SFXStub">
+            <summary>
+            Specifies the file name of the executable stub.
+            </summary>
+            <remarks>
+            Use SFXStub to specify the executable stub before creating self-extracting (SFX) archive by OpenArchive(FileMode.Create) or by calling <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MakeSFX(System.String)"/>. If SFXStub is not set or set to not existing file when the <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MakeSFX(System.String)"/> method is called, then an exception will be raised.
+            <para>If you need to create multi-disk spanned or splitted self-extractable archive you should set SFXStub and call <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive"/> with Create mode. Do not use MakeSFX for spanned or splitted archives.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.Options">
+            <summary>
+            Specifies the options for archiving operations.
+            </summary>
+            <remarks>
+            Specify neccessary <see cref="T:ComponentAce.Compression.Archiver.ArchiverOptions">Options</see> for archiving operations.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks">
+            <summary>
+            Specifies files or wildcards for archiver operations.
+            </summary>
+            <remarks>
+            FileMasks are used for overloaded versions without parameters of <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindFirst(ComponentAce.Compression.Archiver.ArchiveItem@)"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/> and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/> methods to select certain files for these operations. This property should contain list of directories and file names including wildcard characters. For example, "C:\\TEST\\*.*" specifies all files in the C:\TEST directory.
+            <para>FileMasks property specifiec files that should be included into the operation, excluding files specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/>. If you need to store certain files without compression use <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.NoCompressionMasks"/> property.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks">
+            <summary>
+            Specifies files to be excluded from archive operations.
+            </summary>
+            <remarks>
+            ExclusionMasks are used for overloaded versions without parameters of <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.FindFirst(ComponentAce.Compression.Archiver.ArchiveItem@)"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/> and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/> methods to exclude certain files for these operations. This property should contain list of excluded directories and file names including wildcard characters. For example, 'C:\TEST\*.*' specifies all files in the C:\TEST directory.
+            <para>Three types of exclusion masks can be specified:
+            <list type="number">
+            <item>
+            <description>A mask for the whole BaseDir and all its sub-folders.</description>
+            </item>
+            <item>
+            <description>A mask for the BaseDir only.</description>
+            </item>
+            <item>
+            <description>A mask for an exact full path.</description>
+            </item>
+            </list>
+            </para>
+            <para>For example:
+            <list type="number">
+            <item>
+            <description>*.txt  - exclude *.txt in the BaseDir and its sub-folders</description>
+            </item>
+            <item>
+            <description>\*.txt - exclude *.txt files in the BaseDir only</description>
+            </item>
+            <item>
+            <description>C:\The\Full\Path\*.txt - exclude the *.txt files only in the C:\The\Full\Path folder.</description>
+            </item>
+            </list>
+            </para>
+            <para><see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/> property specifies files that should be included into the operation, excluding files specified by ExclusionMasks. If you need to store certain files without compression use <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.NoCompressionMasks"/> property.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.NoCompressionMasks">
+            <summary>
+            Specifies masks for files that will be stored without compression.
+            </summary>
+            <remarks>
+            NoCompressionMasks are used for overloaded versions without parameters of <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.AddFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.ExtractFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.TestFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.MoveFiles"/>, <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.UpdateFiles"/> and <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.DeleteFiles"/> methods to store certain files without compression. This property should contain list of excluded directories and file names including wildcard characters. For example, "C:\\TEST\\*.*" specifies all files in the 'C:\TEST' directory.
+            <para><see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileMasks"/> property specifiec files that should be included into the operation, excluding files specified by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.ExclusionMasks"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.BaseArchiver.InMemory">
+            <summary>
+            Indicates if an archive file is stored in memory.
+            </summary>
+            <remarks>
+            Indicates whether the current archive file is stored in memory (RAM).
+            Set this property to True when you want to <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">create</see> a new or <see cref="M:ComponentAce.Compression.Archiver.BaseArchiver.OpenArchive">open</see> an existing archive file in memory. If you set it to False file will be opened or created on disk, with the name defined by <see cref="P:ComponentAce.Compression.Archiver.BaseArchiver.FileName"/> property.
+            Setting InMemory to False when archive file is opened will cause writing the content of the archive file to disk. Set this property to True when you need to load content of the archvie file into memory.
+            <para> It is not recommended to set InMemory to True with large archive files. ZipForge.NET includes transaction system that optimizes the speed of archives updating.</para>
+            </remarks>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnOverallProgressDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="progress">Indicates progress for the current group operation in percents.</param>
+            <param name="operation">Indicates current archive operation.</param>
+            <param name="progressPhase">Indicates the progress <see cref="T:ComponentAce.Compression.Archiver.ProgressPhase">phase</see> of the operation.</param>
+            <param name="cancel">Cancel determines if current group operation should be cancelled. Set Cancel to True if you want to cancel executing of the current group operation. Default value for Cancel is False.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnFileProgressDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="fileName">Indicates current file name.</param>
+            <param name="progress">Indicates progress for the current group operation in percents.</param>
+            <param name="operation">Indicates current archive operation.</param>
+            <param name="progressPhase">Indicates the progress <see cref="T:ComponentAce.Compression.Archiver.ProgressPhase">phase</see> of the operation.</param>
+            <param name="cancel">Cancel determines if current operation on the current file should be cancelled. Set cancel parameter to True if you want to cancel executing of the current operation on the file. Default value for Cancel is False.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnConfirmOverwriteDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="sourceFileName">Indicates the name of the file that will overwrite existing file.</param>
+            <param name="destFileName">Indicates the name of the file being overwritten. Set destFileName if you want to save this file with different name instead of overwriting existing file.</param>
+            <param name="confirm">Confirm determines if file will be overwritten. Set confirm to False if you want to cancel overwriting existing file. Default value for confirm is True.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnConfirmProcessFileDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="fileName">Indicates current file name.</param>
+            <param name="operation">Indicates current archive operation.</param>
+            <param name="confirm">Confirm determines if current operation on the current file will be executed. Set Confirm to False if you want to cancel executing of the current operation on the file. Default value for Confirm is True.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnAfterOpenDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="fileName">Indicates current file name.</param>
+            <param name="operation">Indicates current archive operation.</param>
+            <param name="confirm">Confirm determines if current operation on the current file will be executed. Set Confirm to False if you want to cancel executing of the current operation on the file. Default value for Confirm is True.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnPasswordDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="fileName">Indicates current file name.</param>
+            <param name="newPassword">NewPassword determines new password that will be used for extracting or testing of the encrypted file.</param>
+            <param name="skipFile">SkipFile determines if file will be skipped. Set SkipFile to True if you want to skip this file. Default value for SkipFile is False.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessFileFailureDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="fileName">Indicates current file name.</param>
+            <param name="operation">Indicates current archive operation.</param>
+            <param name="nativeError">Indicates internal error code that is unique for each error handled by ZipForge. If OnProcessFileFailure triggers due to unknown internal error, please report about your problem to support@componentace.com.</param>
+            <param name="errorCode"> Indicates common type of the error. You can find error codes list at ZFConst unit supplied with product.</param>
+            <param name="errorMessage"> Indicates error message text.</param>
+            <param name="action">Specifies whether the operation with the file should be retried, aborted or the error is to be ignored to process the next file.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestBlankVolumeDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="volumeNumber">Specifies a number of the volume that should be inserted.</param>
+            <param name="volumeFileName">Specifies default file name for this volume. You can override default file name.</param>
+            <param name="cancel">Use cancel parameter to abort current operation.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestFirstVolumeDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="volumeFileName">Specifies default file name for this volume. You can override default file name.</param>
+            <param name="cancel">Use cancel parameter to abort current operation.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestLastVolumeDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="volumeFileName">Specifies default file name for this volume. You can override default file name.</param>
+            <param name="cancel">Use cancel parameter to abort current operation.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnRequestMiddleVolumeDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="volumeNumber">Specifies a number of the volume that should be inserted.</param>
+            <param name="volumeFileName">Specifies default file name for this volume. You can override default file name.</param>
+            <param name="cancel">Use cancel parameter to abort current operation.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnDiskFullDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="volumeNumber">Specifies a number of the volume.</param>
+            <param name="volumeFileName">Specifies default file name for this volume. You can override default file name.</param>
+            <param name="cancel">Use cancel parameter to abort current operation.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnProcessVolumeFailureDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="operation">Indicates current archive operation.</param>
+            <param name="volumeNumber">Specifies a number of the volume.</param>
+            <param name="volumeFileName">Specifies default file name for this volume. You can override default file name.</param>
+            <param name="cancel">Use cancel parameter to abort current operation.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnStoreFileDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="fileName">Specifies the stored name of the file being added to archive (for ex. 'folder1\test.txt').</param>
+            <param name="fileAttr">Specifies file attributes.</param>
+            <param name="comment">Specifies the file comment to be stored.</param>
+            <param name="originalFileName">Specifies the source file name of the file being stored (for ex. "c:\folder1\test.txt").</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.BaseArchiver.OnExtractFileDelegate">
+            <param name="sender">The Sender is the object whose event handler is called.</param>
+            <param name="fileName">Specifies the name of the file being extracted.</param>
+            <param name="fileAttr">Specifies extracted file attributes.</param>
+            <param name="comment">Indicates extracted file comment.</param>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.Compression">
+            <summary>
+            Compression Class
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.CompressionLevel">
+            <summary>
+            Specifies the compression level used for archive updating.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.CompressionLevel.None">
+            <summary>
+            There is no compression.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.CompressionLevel.Fastest">
+            <summary>
+            The fastest compression level and low compression rate.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.CompressionLevel.Normal">
+            <summary>
+            Normal compression level. Slower compression and better compression rate than Fastest.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.CompressionLevel.Max">
+            <summary>
+            Slow compression and maximum compression rate.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.ProgressPhase">
+            <summary>
+            Describes a phase of current archive operation.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ProgressPhase.Start">
+            <summary>
+            This value corresponds to the end phase of the operation.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ProgressPhase.Process">
+            <summary>
+            This value corresponds to the middle phase of the operation.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ProgressPhase.End">
+            <summary>
+            This value corresponds to the start phase of the operation.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.OverwriteMode">
+            <summary>
+            Describes how extracted files will overwrite existing files.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.OverwriteMode.Prompt">
+            <summary>
+            <see cref="!:OnConfirmOverwrite"></see> event will be triggered each time before overwriting existing file.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.OverwriteMode.Always">
+            <summary>
+            All existing files will be replaced with extracted files.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.OverwriteMode.Never">
+            <summary>
+            Files will not be replaced.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.OverwriteMode.IfNewer">
+            <summary>
+            Older versions of files will be replaced with extracted newer files.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.OverwriteMode.IfOlder">
+            <summary>
+            Newer versions of files will be replaced with extracted older files.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.ArchiveItem">
+            <summary>
+            Describes parameters of the file stored within the archive file.
+            </summary>
+            <remarks>
+            ArchiveItem value indicates parameters of the file found by <see cref="!:FindFirst"/> or <see cref="!:FindNext"/>.
+            <para>Do not modify Handle field of this record. It is used by <see cref="!:FindFirst"/> and <see cref="!:FindNext"/> methods.</para>
+            </remarks>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.FileName">
+            <summary>
+            Name of the file stored within the archive.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.StoredPath">
+            <summary>
+            Path to this file inside the archive. 
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.CompressedSize">
+            <summary>
+            Size in bytes of the compressed file.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.UncompressedSize">
+            <summary>
+            Size in bytes of the uncompressed file.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.CompressionRate">
+            <summary>
+            Indicate compression rate for this file. 
+            </summary>
+            <remarks>
+            CompressionRate = (1 - CompressedSize / UncompressedSize) * 100.0
+            </remarks>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.Encrypted">
+            <summary>
+            Indicates if file is encrypted with <see cref="!:Password"/>.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.CRC">
+            <summary>
+            CRC32 check sum of the compressed file.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.ExternalFileAttributes">
+            <summary>
+            Indicates extermal file attributes. 
+            </summary>
+            <remarks>
+            This value can be any combination of faReadOnly, faHidden, faSysFile, faVolumeID, faDirectory, faArchive constants defined in SysUtils. If Options.SetAttributes is set to True then ExtractFiles will set these attributes to the extracted file.
+            </remarks>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.ArchiveItem.Comment">
+            <summary>
+            Comment of the file stored in the archive.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.StorePathMode">
+             <summary>
+             Describes how path infromation will be stored for the file or directory within the archive file.
+             </summary>
+            <remarks>
+             StorePathMode value defines how path information will be stored for the file or directory within the archive file. If you need to store all files and directories without path you should use NoPath value. For example, AddFiles("C:\TEST\test.txt") adds file test.txt to the archive. If you will extract it by ExtractFiles("*.*") and BaseDir will be "C:\", file test.txt will be extracted to "C\":, not to "C:\TEST". 
+             <para>If you need to store path relative to certain directory you should set BaseDir before adding file to archive and set Options.StorePath to Relative. In this case if you will set BaseDir to "C:\" and call AddFiles("C:\TEST\test.txt") the file test.txt will be stored as "TEST\test.txt" within the archive. If you will extract it by ExtractFiles("*.*") it will be extracted to "C:\TEST\test.txt", not to "C:\" as in previous example.</para>
+             <para>If you need to store full path you should set Options.StorePath to FullPath. Previous example will store test.txt within the archive file as "\TEST\test.txt" and file will be extracted to disk specified by BaseDir.</para>
+             <para>If you need to store absolute path with drive you should set Options.StorePath to FullPathWithDrive. Previous AddFiles example will store test.txt within the archive file as "C:\TEST\test.txt" and the file will be extracted to disk using stored absolute path regardless of BaseDir.</para>
+             </remarks>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.StorePathMode.NoPath">
+            <summary>
+            No path information stored.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.StorePathMode.RelativePath">
+            <summary>
+            Path information stored relatively BaseDir.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.StorePathMode.FullPath">
+            <summary>
+            Path information stored relatively disk specified by BaseDir.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.StorePathMode.FullPathWithDrive">
+            <summary>
+            Absolute path with drive letter stored. Non-standard extension of PKZip format.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.Zip64Mode">
+             <summary>
+             Specifies a zip file format. 
+             </summary>
+             <remarks>
+             Use Zip64Mode for creating Zip64 archives. Thus you can create archive files > 4Gb and add files > 4 Gb to the archive. 
+             Set Zip64Mode to zmAlways to add files in Zip64 format. Use zmAuto for auto-detection of the archive format depending on sizes of the files being added. zmDisabled is a default value for creating archives in normal Zip format, compatible with most of archivers.
+            <para>Zip64 format is not supported by some archivers. ZipForge uses the same foramt as PKZip. Nethertheless we do not guarantee that it is compatible with other programs.</para>
+            </remarks>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.Zip64Mode.Disabled">
+            <summary>
+            A default value for creating archives in normal Zip format.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.Zip64Mode.Auto">
+            <summary>
+            Auto-detection of the archive format depending on sizes of the files being added.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.Zip64Mode.Always">
+            <summary>
+            Always create archives in Zip64 format.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.SpanningMode">
+            <summary>
+            Describes how the archive file will be stored on disk.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.SpanningMode.None">
+            <summary>
+            The archive will be stored as a single OS file.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.SpanningMode.Spanning">
+            <summary>
+            The archive file will be stored on removable disks.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.SpanningMode.Splitting">
+            <summary>
+            The archive will be stored as multiple OS files.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.VolumeSize">
+            <summary>
+            Specifies the size of the multi-spanning archive volumes.
+            </summary>
+            <remarks>
+            VolumeSize value specifies the size of each multi-disk archive volume. Set <see cref="T:ComponentAce.Compression.Archiver.SpanningOptions"/>.VolumeSize to vsAutoDetect for automatic detection of the volume size (default value). You can also use vsCustom value and specify the volume size by setting SpanningOptions.CustomVolumeSize.
+            </remarks>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.AutoDetect">
+            <summary>
+            Autodetect of the volume size.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Custom">
+            <summary>
+            Custom volume size.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Disk1_44MB">
+            <summary>
+            Volume size is 1.44 Mb (3.5" floppy disk).
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Disk100MB">
+            <summary>
+            Volume size is 100 Mb (IOMEGA disk).
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Disk200MB">
+            <summary>
+            Volume size is 200 Mb (MO disk).
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Disk600MB">
+            <summary>
+            Volume size is 600 Mb (MO disk).
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Disk650MB">
+            <summary>
+            Volume size is 650 Mb (74 Min. compact disk).
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Disk700MB">
+            <summary>
+            Volume size is 700 Mb (80 Min. compact disk).
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.VolumeSize.Disk4700MB">
+            <summary>
+            Volume size is 4700 Mb (DVD disk). 
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.SpanningOptions">
+            <summary>
+            Describes how the archive file will be splitted or spanned.
+            </summary>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.SpanningOptions.AdvancedNaming">
+            <summary>
+            Determines how the archive volumes will be named. 
+            </summary>
+            <remarks>
+            If AdvancedNaming is set to True then archive volumes will be named like archive_001.zip, archive_002.zip, ... ,archive_999.zip. 
+            <para>If AdvancedNaming is set to False and SpanningMode is set to smSpanning then archive volumes will be named like archive.zip on each removable disk.</para>
+            <para>If AdvancedNaming is set to False and SpanningMode is set to smSplitting then archive volumes will be named like archive.z01, archive.z02, ... , archive.z99.</para>
+            <para>You can also specify custom name for each volume using <see cref="!:OnRequestBlankVolume"/> event handler.</para>
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.SpanningOptions.FirstVolumeSize">
+            <summary>
+            Specifies the size of first volume in bytes.
+            </summary>
+            <remarks>
+            The FirstVolumeSize specifies the size of first volume, minimum size is 64 Kb. If the FirstVolumeSize is set to 0 the size of the first volume will be the same as other volumes and will be defined by VolumeSize value.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.SpanningOptions.VolumeSize">
+            <summary>
+            Specifies the size of the volumes for archive splitting or spanning. 
+            </summary>
+            <remarks>
+            The VolumeSize specifies the size of the volumes for archive splitting or spanning. If the VolumeSize is set to vsCustom, then CustomVolumeSize will be used.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.SpanningOptions.CustomVolumeSize">
+            <summary>
+            Specifies the custom size of the volumes for archive splitting or spanning.
+            </summary>
+            <remarks>
+            The CustomVolumeSize specifies the custom size of the volumes for archive splitting or spanning. This parameter can be used only when VolumeSize is set to vsCustom.
+            </remarks>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.ArchiverOptions">
+            <summary>
+            Specifies the ZipForge options.
+            </summary>
+            <remarks>
+            Specify neccessary Options for ZipForge operations.
+            </remarks>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.ArchiverOptions.#ctor">
+            <summary>
+            Specifies whether the file names are encoded in OEM encoding (according to ZIP standard)
+            of in unicode encoding (not supported by most of ZIP archivers)
+            </summary>				
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.Recurse">
+            <summary>
+            Specifies if archive operation will search files recursively.
+            </summary>
+            <remarks>
+            Recurse specifies if <see cref="!:FindFirst"/>, <see cref="!:AddFiles"/>, <see cref="!:ExtractFiles"/>, <see cref="!:TestFiles"/>, <see cref="!:MoveFiles"/>, <see cref="!:UpdateFiles"/> and <see cref="!:DeleteFiles"/> methods will search files recursively. This means that if some folder meets search conditions then all files and directories within this folder will be scanned. For example, if you set Recurse to true and call AddFiles("C:\\*.*",FileAttributes.Nornal) all files and folders located on disk C: will be added to the archive.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.StorePath">
+            <summary>
+            Defines how path infromation will be stored for the file or directory within the archive file.
+            </summary>
+            <remarks>
+            StorePath defines how path infromation will be stored for the file or directory within the archive file. This option applies to <see cref="!:AddFiles"/>, <see cref="!:MoveFiles"/>, <see cref="!:UpdateFiles"/> methods.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.ShareMode">
+            <summary>
+            Specifies how the files being added to the archive will be opened for simulatenous access.
+            </summary>
+            <remarks>
+            ShareMode specifies how the files being added to the archive will be opened for simulatenous access. Set this option before calling <see cref="!:AddFiles"/>, <see cref="!:MoveFiles"/> or <see cref="!:UpdateFiles"/>.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.Overwrite">
+            <summary>
+            Specifies whether extracted files will overwrite existing files.
+            </summary>
+            <remarks>
+            OverwriteMode specifies whether extracted files will overwrite existing files. Set this option before calling <see cref="!:ExtractFiles"/>, <see cref="!:AddFiles"/>, <see cref="!:MoveFiles"/> or <see cref="!:UpdateFiles"/>.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.CreateDirs">
+            <summary>
+            Specifies whether to create folders when extracing an archive.
+            </summary>
+            <remarks>
+            Set CreateDirs to True if you need to extract files with creating all neccessary folders.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.ReplaceReadOnly">
+            <summary>
+            Specifies whether to replace read only files when extracting files from archive.
+            </summary>
+            <remarks>
+            If ReplaceReadOnly set to True it means that all existing read only files will be replaced with the files being extracted by <see cref="!:ExtractFiles"/>.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.SetAttributes">
+            <summary>
+            Determines whether attributes stored within the archive will be applied to extracted files.
+            </summary>
+            <remarks>
+            SetAttributes determines whether attributes stored within the archive will be applied to files being extracted by <see cref="!:ExtractFiles"/>.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.SearchAttr">
+            <summary>
+            Specifies the special files to include in addition to all normal files.
+            </summary>
+            <remarks>
+            SearchAttr specifies the special files to include in addition to all normal files for <see cref="!:FindFirst"/>, <see cref="!:AddFiles"/>, <see cref="!:ExtractFiles"/>, <see cref="!:TestFiles"/>, <see cref="!:MoveFiles"/>, <see cref="!:UpdateFiles"/> and <see cref="!:DeleteFiles"/> methods variant without parameters.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.Archiver.ArchiverOptions.FlushBuffers">
+            <summary>
+            Specifies whether the file buffers are flushed after archive file modification and after extracting files from archive.
+            </summary>
+            <remarks>
+            FlushBuffers specifies whether the file buffers are flushed after archive file modification and after extracting files from archive.
+            </remarks>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.ArchiverException">
+            <summary>
+            ArchiverException Class
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.Archiver.InputPasswordForm">
+            <summary>
+            Summary description for InputPasswordForm.
+            </summary>
+        </member>
+        <member name="F:ComponentAce.Compression.Archiver.InputPasswordForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.InputPasswordForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:ComponentAce.Compression.Archiver.InputPasswordForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ComponentAce.Compression.ZipForge.ZipForge">
+            <summary>
+            Manages ZIP archives.
+            </summary>
+            <remarks>
+            Use ZipForge to create, open, close or update ZIP archives. 
+            This component provides all neccessary properties,methods and events for handling ZIP files.
+            </remarks>
+        </member>
+        <member name="P:ComponentAce.Compression.ZipForge.ZipForge.Zip64Mode">
+            <summary>
+            Specifies whether to use Zip64 format to create archives over 4GB. 
+            </summary>
+            <remarks>
+            Use Zip64Mode for creating Zip64 archives. Thus you can create archive files > 4Gb and add files > 4 Gb to the archive. Set Zip64Mode to zmAlways to add files in Zip64 format. Use zmAuto for auto-detection of the archive format depending on sizes of the files being added. zmDisabled is a default value for creating archives in normal Zip format, compatible with most of archivers.
+            <para>Zip64 format is not supported by some archivers. ZipForge uses the same foramt as PKZip. Nethertheless we do not guarantee that it is compatible with other programs.</para> 
+            </remarks> 
+        </member>
+        <member name="P:ComponentAce.Compression.ZipForge.ZipForge.UnicodeFilenames">
+            <summary>
+            Specifies whether unicode file names are saved in addition to filenames in standard OEM encoding.
+            </summary>	    	    
+        </member>
+    </members>
+</doc>

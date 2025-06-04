@@ -1,0 +1,88 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServices.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Mono.Security.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\de\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\es\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\fi\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\fr\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\ja\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\zh-CN\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.exe
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Mono.Security.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.xml
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.xml
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\de\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\es\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\fi\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\fr\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\ja\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.exe
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServerCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.exe.config
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.exe.config
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.exe
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyAuthenticator.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServerCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServices.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Mono.Security.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyServerCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\Npgsql.xml
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\de\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\es\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\fi\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\fr\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\ja\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Release\zh-CN\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.exe
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Release\KeyAuthenticator.pdb

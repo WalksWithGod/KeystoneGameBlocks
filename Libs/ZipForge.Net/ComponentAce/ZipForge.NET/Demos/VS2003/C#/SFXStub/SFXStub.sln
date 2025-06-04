@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SFXStub", "SFXStub.csproj", "{6E40823F-D256-4247-9D24-BF945F820613}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6E40823F-D256-4247-9D24-BF945F820613}.Debug.ActiveCfg = Debug|.NET
+		{6E40823F-D256-4247-9D24-BF945F820613}.Debug.Build.0 = Debug|.NET
+		{6E40823F-D256-4247-9D24-BF945F820613}.Release.ActiveCfg = Release|.NET
+		{6E40823F-D256-4247-9D24-BF945F820613}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

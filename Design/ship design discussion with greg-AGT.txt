@@ -1,0 +1,545 @@
+  Never give out your password or credit card number in an instant message conversation.
+  
+Greg says:
+hey!
+Greg says:
+now I am too
+Greg says:
+ 
+Hypnotron says:
+what's shakin?
+  
+  Greg would like to send you the file "Fighter_Exterior.zip" (5511 Kb). Transfer time is less than 46 minutes with a 28.8 modem. Do you want to Accept (Alt+T) or Decline (Alt+D) the invitation?
+  
+  Transfer of file "Fighter_Exterior.zip" from Greg has been accepted. Starting transfer...
+  
+Greg says:
+check it out
+Hypnotron says:
+kk
+Greg says:
+I've taken care of the material
+Greg says:
+the shading is best if you don't change the material and not compute it's normals
+Hypnotron says:
+k
+Greg says:
+so everything's ok?
+Hypnotron says:
+yeah.   same old same old  
+Greg says:
+nice
+Hypnotron says:
+i could use a vacation to someplace exotic... like Brazil
+Hypnotron says:
+and just camp on the beach all day
+Greg says:
+yeah, I woudn't mind staying there for a couple of weeks as well
+Greg says:
+well, the good thing, where I leave is that all the islands are near by, so I could go whenever I want, but it's not the same as Brazil
+  
+  You have successfully received C:\Documents and Settings\Hypnotron\My Documents\My Received Files\Fighter_Exterior.zip from Greg. Before opening this file, you may want to scan it with a virus-scanning program.
+  
+Greg says:
+btw it's optimized for tangentspace lighting
+Hypnotron says:
+can you remind me which slot the NM goes in?
+Hypnotron says:
+i thought it was stage 2
+Hypnotron says:
+im loading it in modelview
+Greg says:
+if you load the TVM it's there with the mesh
+Hypnotron says:
+they actually didnt load automatically
+Hypnotron says:
+hrm
+Greg says:
+well, I don't remember the slot, but it sais it in modelview
+Greg says:
+oh, it's stage 1
+Greg says:
+and 0 is the texture
+Greg says:
+btw don't compute it's normals
+Greg says:
+nor change it's material
+Greg says:
+I almost forgot
+Greg says:
+there's a diagram as well
+Hypnotron says:
+bummer.  i might have to load it up into my app because modelview wont properly render it with NM and material
+Hypnotron says:
+dunno why it didnt autoload everything
+Hypnotron says:
+its all in the same dir
+Hypnotron says:
+and when i turn on tangent bump map it disappears
+Hypnotron says:
+maybe i need a light
+Hypnotron says:
+ah, yep
+Hypnotron says:
+a light
+Hypnotron says:
+fixed it
+Greg says:
+make sure it's white light  
+Greg says:
+the material is optimised for "space" lighting
+Greg says:
+if there's no atmosphere then light acts different
+Hypnotron says:
+what are the .blend files?
+Greg says:
+blender scene. I made it in Blender
+Hypnotron says:
+ah
+Greg says:
+I included them so you can edit it is you want
+Hypnotron says:
+well in general, its very close to what im looking for in a design.  Can i give some feedback?
+Greg says:
+sure
+Hypnotron says:
+ok      well i think these comments might help solidify some things about my intentions
+Hypnotron says:
+starting with the engines, consider that in a fighter that is very small...
+Hypnotron says:
+relatively speaking
+Hypnotron says:
+engines must be accessed for maintenance via the exterior.   Now i suppose in this one's case, they can be pulled out and worked on then pushed back in
+Greg says:
+yeah
+Hypnotron says:
+but typically to decrease maintenance time/costs, they'd be more accessible via removable panel shrouds...
+Hypnotron says:
+im somewhat thinking of those spaceshuttle shrouds
+Hypnotron says:
+on the back
+Hypnotron says:
+second, since the engines are recessed somewhat, vector thrust gimbal limits might be kinda small
+Greg says:
+well the engine is also uncovered
+Hypnotron says:
+the nozzels, yeah
+Greg says:
+in the most part
+Greg says:
+look at the bottom
+Hypnotron says:
+right.  kinda unsafe  
+Hypnotron says:
+haha
+Greg says:
+technitians could repair it, withought even pulling it out
+Greg says:
+yeah indeed
+Hypnotron says:
+but i can imagine a hatch there with some access stickers and hazard stickers like "HOT" "DANGER"
+Greg says:
+haha yeah
+Hypnotron says:
+the other thing is the guns...
+Hypnotron says:
+which seem fixed
+Greg says:
+yeah they are basic meshes
+Greg says:
+I thought you might have seperate guns
+Hypnotron says:
+and ideally, id like guns to be able to swivel a bit.. for the guns to maybe be attached for low LOD versions, but to be turretable somewhat like the auto turret on apache helicopters
+Hypnotron says:
+http://www.army-technology.com/projects/apache/apache3.html
+Greg says:
+yeah I know those systems
+Hypnotron says:
+but basically... i like the overall frame
+Hypnotron says:
+and im sort of imaging being able to attach things to it more and perhaps for those things that get attached to have shrouds
+Hypnotron says:
+that conform with the hull
+Hypnotron says:
+like for the 2 sets of guns on the nose and top, it seems close but you'd probably have just one on top and bottom since they'd swivel
+Greg says:
+this is what I thought
+Hypnotron says:
+or if the barrels were closer together it'd look like a double barrel system that could swivel
+Hypnotron says:
+instead of two independant ones
+Greg says:
+that you may want to attach those things via code
+Greg says:
+ok I'll fix that
+Hypnotron says:
+it would be like maybe 60 degrees of swivel in 2 axis
+Greg says:
+but this will increase the polycount
+Hypnotron says:
+yeah.  thats why im thinking for low LOD its nice to also just have a version where everything is just fixed into a single mesh with single group
+Greg says:
+btw, have you seen the specs?
+Hypnotron says:
+1224 triangles w/ 2530 verts, yup.  seems about right
+Hypnotron says:
+for this class of vehicle
+Greg says:
+no I mean the image in the zip
+Greg says:
+Fighter_Exterior_Specs
+  
+  Greg would like to send you the file "Fighter_Exterior_Specs.jpg" (384 Kb). Transfer time is less than 4 minutes with a 28.8 modem. Do you want to Accept (Alt+T) or Decline (Alt+D) the invitation?
+  
+Greg says:
+this one
+Hypnotron says:
+ah.  yeah i have that... i thought maybe they were specular maps  
+
+  
+  Greg has canceled the file transfer.
+  
+Hypnotron says:
+ok, cool.  those are thrust nosels
+Greg says:
+yeah, for turning, stoping stc
+Hypnotron says:
+definetly need those too.  can animate little plumes
+Hypnotron says:
+from them
+Hypnotron says:
+particles
+Greg says:
+the specular map is in the normalmap's alpha
+Greg says:
+channel
+Hypnotron says:
+one thing that could help is having the x,y,z locations for those
+Greg says:
+I have a beeter solution
+Greg says:
+I could place transparent cubes over them
+Greg says:
+then you simply attach the particle to them
+Hypnotron says:
+hrm... well actually i dont plan on using AttachTo at all for anything
+Hypnotron says:
+i do all the hierarchal position stuff myself in code
+Hypnotron says:
+including attaching stuff to bones for actors
+Greg says:
+is attachto and setparent slow?
+Hypnotron says:
+no, but it conflicts somewhat with my scene structure which more closely resembles a scene graph
+Hypnotron says:
+and the way it operates
+Hypnotron says:
+with traversals
+Greg says:
+oh ok
+Hypnotron says:
+i know it seems crazy to not just use tv's built in stuff for that but
+Hypnotron says:
+im not a fan of all the way tv does things
+Hypnotron says:
+i mostly just use tv for rendering and shaders and such
+Greg says:
+well some TV's computations could speed up things thought
+Hypnotron says:
+and i do my own culling
+Hypnotron says:
+my culling is better
+Greg says:
+cool
+Hypnotron says:
+i use octree, portals and occlusion
+Greg says:
+how come and you don't use a pure rendering SDK then? like OGRE
+Hypnotron says:
+cause im not a fan of C++
+Greg says:
+ah yes
+Hypnotron says:
+but basically, some point down the line i can swap out tv3d fairly easily
+Hypnotron says:
+i wont do that for any near term game though
+Hypnotron says:
+since i wrap all of tv's classes with my own
+Greg says:
+well,managed  XNA also has lots of potencial, if you want to do these stuff on your own. I'm thinking to give it a try
+Hypnotron says:
+yeah.  i might look at that too after my first game is done.  
+Hypnotron says:
+does this fighter carry missiles?
+Greg says:
+here's how it works
+Greg says:
+I thought that you might want to attach weapons via code. So the player can do some customization on the ships. So basically the weapon slots are just slots, and can carry any weapon
+Greg says:
+but there are no missles on the mesh right now
+Greg says:
+do you want to put some?
+Hypnotron says:
+right.  i was thinking maybe missile door attachmenets can be added on stealthy(shrouded) weapon bays in some variants that attach to the sides of the hull sort of below the top gun barrels and then also maybe a bay on the bottom
+Hypnotron says:
+but i think the size of the hull might need to change somewhat... make it somewhat deeper in the middle part of the underside
+Hypnotron says:
+but i mean, as a simple / cheap fighter variant, this one is good
+Hypnotron says:
+and others would be less stealthy, but have more firepower
+Hypnotron says:
+are there skids for landing?
+Hypnotron says:
+you could have a jammer variant that has a big radar/jammer thing on the nose, or maybe on top in place of some of the guns
+Greg says:
+well the idea on this fighter is to be a seriously solid hull, without too many trapdoors and exterior parts that could brake and most importadly a flexible one
+Greg says:
+that's why it seems so simple
+Greg says:
+I've seen many fighter aircraft designs and this one is inspired from them
+Hypnotron says:
+yeah.  that's totally cool.  i really like the direction and you seem to be thinking about it the way i am.  
+Greg says:
+for exaple, did you know that a F-16's targeting system antena is about as small as a human's hand
+Greg says:
+just like in this fighter
+Hypnotron says:
+wow, that's small
+Greg says:
+yeah indeed, imagine how much smaller it would be in the near future
+Greg says:
+ofcourse I could make any cahnges you want thought
+Greg says:
+in the designs
+Hypnotron says:
+im just reinforcing some points about the visuals matching the functional expectations and the pseudo real world / operability reqts that will really make it seem like something that could really exist 
+Hypnotron says:
+like i can imagine the dorsal mount / shroud and nose mount /shroud area could look different depending on what was mounted there right?
+Greg says:
+right
+Hypnotron says:
+what about landing?  
+Greg says:
+I din't give that much thought really. So I just pushed the bottom nozzles inwards to be able to take off vertically. How would this work?
+Greg says:
+any suggestions?
+Hypnotron says:
+maybe just small stubby tricycle skids.   you could show some rectactable panels on the bottom.  one just forward of the fore thrust nozzels and one each just fore of the aft bottom thrust nozzels
+Hypnotron says:
+hrm... and for retract down, you'd just have a seperate mesh that would be placed in position on the bottom and the texture where they meet the hull would cover up the panels
+Hypnotron says:
+and make it look like they were open
+Hypnotron says:
+nothing fancy
+Hypnotron says:
+for such a small craft
+Hypnotron says:
+so the 3 skids would all be one mesh in down position 
+Hypnotron says:
+actually the skids when retracted would just be flush with the hull
+Hypnotron says:
+so you'd just need to modify the texturing in those areas
+Hypnotron says:
+i.e. you dont need "doors" 
+Greg says:
+so they won't be attached to the mesh?
+Greg says:
+and they won't puul up?
+Hypnotron says:
+right
+Greg says:
+ok  
+Hypnotron says:
+i could fake an animation by just lowering the triccyle mesh slowly
+Greg says:
+how about making them look hydrolic?
+Hypnotron says:
+i leave it up to you      but they can just be smallish / stubby skids...   since the craft can lift/land vertically, im not sure if they need to be able to withstand much horizontal forces, but maybe if some of the bottom thrusters fail it'll have to come in hot
+Hypnotron says:
+like the skids on those vipers in the new galactica i think are pretty small
+Greg says:
+yeah I know what you mean
+Greg says:
+btw
+Greg says:
+I worked a bit with the carrier too
+  
+  Greg would like to send you the file "carrier_1.jpg" (114 Kb). Transfer time is less than 1 minute with a 28.8 modem. Do you want to Accept (Alt+T) or Decline (Alt+D) the invitation?
+  
+  Greg would like to send you the file "carrier_2.jpg" (145 Kb). Transfer time is less than 2 minutes with a 28.8 modem. Do you want to Accept (Alt+T) or Decline (Alt+D) the invitation?
+  
+  Transfer of file "carrier_1.jpg" from Greg has been accepted. Starting transfer...
+  
+  You have successfully received C:\Documents and Settings\Hypnotron\My Documents\My Received Files\carrier_1.jpg from Greg. Before opening this file, you may want to scan it with a virus-scanning program.
+  
+Greg says:
+it's not finished yet
+  
+  Transfer of file "carrier_2.jpg" from Greg has been accepted. Starting transfer...
+  
+  You have successfully received C:\Documents and Settings\Hypnotron\My Documents\My Received Files\carrier_2.jpg from Greg. Before opening this file, you may want to scan it with a virus-scanning program.
+  
+Greg says:
+how does it seem so far?
+Hypnotron says:
+that's pretty slick    
+Greg says:
+ 
+Greg says:
+I thought to compine hydrolics and hi teck on this one
+Hypnotron says:
+i would say,  the hydraulic things would be thicker to house the internal stuff for making all those work
+Hypnotron says:
+at least along the very center of it
+Greg says:
+indded
+Hypnotron says:
+and since it coudl be very massive depending on what's in the containers, you might need some bigger than normal thrusters matched to the front
+Hypnotron says:
+and i presume the engine pods on the back could swivel to assist landing down
+Hypnotron says:
+straight down
+Greg says:
+yes
+Greg says:
+front engines are not an option I afraid though
+Greg says:
+becouse
+Greg says:
+this one is designed to be able to attach to the back of another ship of the same class
+Greg says:
+it would also damage the goods  
+Hypnotron says:
+and hopefully the clamps are robust enough?  is there support on the bottom?  otherwise they look somewhat spindly.  like maybe if there were a third set of arms to grab it and/or the non hydraulic rods that extend from the center to the big arms were thicker
+Hypnotron says:
+but the basic style and concept is great
+Hypnotron says:
+but you know me by now i guess    emphasizing the feasibility and practical challenges/realities that would make it really work
+Greg says:
+and this is what I'm looking for  
+  
+  Greg would like to send you the file "carrier_3.jpg" (102 Kb). Transfer time is less than 1 minute with a 28.8 modem. Do you want to Accept (Alt+T) or Decline (Alt+D) the invitation?
+  
+  Transfer of file "carrier_3.jpg" from Greg has been accepted. Starting transfer...
+  
+Greg says:
+the bottom
+  
+  You have successfully received C:\Documents and Settings\Hypnotron\My Documents\My Received Files\carrier_3.jpg from Greg. Before opening this file, you may want to scan it with a virus-scanning program.
+  
+Hypnotron says:
+how are the containers removed when the ship is landed?
+Hypnotron says:
+you might have to wheel stuff under it because when you release the clamps, they fall off
+Hypnotron says:
+no support underneath
+Hypnotron says:
+a crane has no eay way to lift it from the top
+Greg says:
+yeah, I thought of clarks would do that job
+Hypnotron says:
+clarks?  is that like a fork lift?
+Greg says:
+they are used in warehouses and ports to lift containers
+Hypnotron says:
+oh.  yeah but they grab from the top
+Hypnotron says:
+they'd need to be  moved outward first
+Hypnotron says:
+away from under the clamp mechanism
+Greg says:
+well I'll think of something to make it work
+  
+  Greg would like to send you the file "carrier_4.jpg" (86 Kb). Transfer time is less than 1 minute with a 28.8 modem. Do you want to Accept (Alt+T) or Decline (Alt+D) the invitation?
+  
+  Greg would like to send you the file "carrier_5.jpg" (83 Kb). Transfer time is less than 1 minute with a 28.8 modem. Do you want to Accept (Alt+T) or Decline (Alt+D) the invitation?
+  
+  Transfer of file "carrier_4.jpg" from Greg has been accepted. Starting transfer...
+  
+  You have successfully received C:\Documents and Settings\Hypnotron\My Documents\My Received Files\carrier_4.jpg from Greg. Before opening this file, you may want to scan it with a virus-scanning program.
+  
+Greg says:
+this is how they're attached
+  
+  Transfer of file "carrier_5.jpg" from Greg has been accepted. Starting transfer...
+  
+  You have successfully received C:\Documents and Settings\Hypnotron\My Documents\My Received Files\carrier_5.jpg from Greg. Before opening this file, you may want to scan it with a virus-scanning program.
+  
+Greg says:
+the ship at the back lowers it's engines
+Greg says:
+so they won't be damaged from the engines in front
+Hypnotron says:
+i like that, that's exactly the type of functional / feasibility minded design im talking about!  
+Greg says:
+cool  
+Greg says:
+I'm gland you like it
+Hypnotron says:
+so the fuel is stored in the forward part?
+Hypnotron says:
+and is routed through along the dorsal line?
+Hypnotron says:
+right through the hydraulic?
+Hypnotron says:
+ 
+Hypnotron says:
+what's the range of these craft do you think?
+Greg says:
+I thought of making a fuel tank at the back, bettween the condainers, so the crew would have more space at the frond
+Hypnotron says:
+are they more like ferry transports?
+Hypnotron says:
+not deep space transports?
+Greg says:
+well, I'd say that since one fleet can be moved by only one ship since they can attached, they could definately go into deep space too
+Greg says:
+one ship can support another
+Hypnotron says:
+so they'd need some long range considerations for the crew... small hamock style cabins and enough storage space for food/water
+Hypnotron says:
+im not talking about interior design of the model, but it's hard to see the scale of the cabin and how big it is
+Hypnotron says:
+the windows seem big enough that its like a smallish craft
+Hypnotron says:
+like a truck equivalent
+Greg says:
+exactly
+Greg says:
+that's what it is
+Hypnotron says:
+maybe some variants could have some ducts that can route into special containers to provide heat/life support?
+Hypnotron says:
+for say livestock
+Hypnotron says:
+but you'd need eitehr to route that from the cabine or a special life support unit somewhere
+Hypnotron says:
+or maybe that could be built into the cabin
+Hypnotron says:
+err conainers
+Hypnotron says:
+containers
+Greg says:
+the containers are seperate meshes, so we could attach anything that fits there
+Hypnotron says:
+but i think trucks usually like refrigerated trucks have a special refrigerator 
+Hypnotron says:
+thats true
+Greg says:
+well usually the support is in the containers, it less costly that way
+Hypnotron says:
+have you been taking notes?  copy paste our chat?
+Hypnotron says:
+ 
+Greg says:
+no, I'll do now
+Hypnotron says:
+ 
+Greg says:
+man I just learned this. Will is sugested to relocate to US for everyone in the team wants. And he says that there's no free healthcare in US  . Is that true?
+Hypnotron says:
+that's true
+Greg says:
+oh that's bad, to depent on money all the time
+Hypnotron says:
+you can get cheap-ish insurance (not sure how it works though for foreigners) for ~80-120 a month depending 

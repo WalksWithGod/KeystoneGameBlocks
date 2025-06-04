@@ -1,0 +1,12 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\bin\Debug\Open.Diagramming.Examples.Forms.exe
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\bin\Debug\Open.Diagramming.Examples.Forms.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\bin\Debug\Open.Diagramming.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\bin\Debug\Open.Diagramming.Forms.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\bin\Debug\Open.Diagramming.Forms.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\bin\Debug\Open.Diagramming.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\obj\Debug\Open.Diagramming.Examples.Forms.frmClassDiagram.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\obj\Debug\Open.Diagramming.Examples.Forms.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\obj\Debug\Open.Diagramming.Examples.Forms.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\obj\Debug\Open.Diagramming.Examples.Forms.exe
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Examples.Forms\obj\Debug\Open.Diagramming.Examples.Forms.pdb

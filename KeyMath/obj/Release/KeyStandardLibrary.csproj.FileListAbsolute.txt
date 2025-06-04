@@ -1,0 +1,8 @@
+D:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\KeyMath\bin\Release\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\KeyStandardLibrary.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyMath\obj\Release\KeyStandardLibrary.pdb

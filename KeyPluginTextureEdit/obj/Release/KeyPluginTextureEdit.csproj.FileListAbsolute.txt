@@ -1,0 +1,18 @@
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPluginTextureEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPluginTextureEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPlugins.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPlugins.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.TextureEditCtl.resources
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPluginTextureEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPluginTextureEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPlugins.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\bin\Release\KeyPlugins.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.TextureEditCtl.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.csproj.GenerateResource.Cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginTextureEdit\obj\Release\KeyPluginTextureEdit.pdb

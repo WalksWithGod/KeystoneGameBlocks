@@ -1,0 +1,4 @@
+
+Prior to .net 3.5 this was a no brainer.  The previous thread pools were just poor performers and did not allow you to configure the number of threads in the pool.  3.5 has changed both of these issues.
+
+However, you still cannot easily abort/cancel a threadpool work item using 3.5's threadpool.  You also can't configure the threadpool to use timeouts for help in determining when to abort a thread.  

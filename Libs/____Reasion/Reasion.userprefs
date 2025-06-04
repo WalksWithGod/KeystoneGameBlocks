@@ -1,0 +1,31 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Reasion/Modules/GrayScottRD.cs" ctype="Workbench">
+    <Files>
+      <File FileName="Reasion/Modules/GrayScottRD.cs" Line="75" Column="54" />
+      <File FileName="Reasion/Reasion.cs" Line="226" Column="1" />
+      <File FileName="Reasion/Modules/TuringRD.cs" Line="78" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Reasion" expanded="True">
+            <Node name="Modules" expanded="True">
+              <Node name="GrayScottRD.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True">
+          <Node name="Reasion" expanded="True">
+            <Node name="Reasion" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+</Properties>

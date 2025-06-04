@@ -1,0 +1,5 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\DevIL1.8.7\DevILNet\bin\x64\Debug\DevILNet.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\DevIL1.8.7\DevILNet\bin\x64\Debug\DevILNet.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\DevIL1.8.7\DevILNet\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\DevIL1.8.7\DevILNet\obj\Debug\DevILNet.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\DevIL1.8.7\DevILNet\obj\Debug\DevILNet.pdb

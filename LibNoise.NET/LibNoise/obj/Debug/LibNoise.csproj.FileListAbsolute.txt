@@ -1,0 +1,31 @@
+E:\dev\c#\keystone\LibNoise.NET\LibNoise\bin\Debug\LibNoise.dll
+E:\dev\c#\keystone\LibNoise.NET\LibNoise\bin\Debug\LibNoise.pdb
+E:\dev\c#\keystone\LibNoise.NET\LibNoise\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\LibNoise.NET\LibNoise\obj\Debug\LibNoise.dll
+E:\dev\c#\keystone\LibNoise.NET\LibNoise\obj\Debug\LibNoise.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.XML
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\LibNoise.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\x86\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\x86\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\x86\Debug\LibNoise.XML
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.XML
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\LibNoise.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\LibNoise.NET\LibNoise\bin\Debug\LibNoise.XML
+E:\dev\c#\KeystoneGameBlocks.bak\LibNoise.NET\LibNoise\bin\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks.bak\LibNoise.NET\LibNoise\bin\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\LibNoise.NET\LibNoise\obj\Debug\LibNoise.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\LibNoise.NET\LibNoise\obj\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks.bak\LibNoise.NET\LibNoise\obj\Debug\LibNoise.pdb
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.XML
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.dll
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\Debug\LibNoise.pdb
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\LibNoise.dll
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug\LibNoise.pdb

@@ -1,0 +1,21 @@
+E:\dev\c#\keystone\Scripting\bin\Debug\Scripting.dll
+E:\dev\c#\keystone\Scripting\bin\Debug\Scripting.pdb
+E:\dev\c#\keystone\Scripting\bin\Debug\MTV3D65.dll
+E:\dev\c#\keystone\Scripting\bin\Debug\MTV3D65.xml
+E:\dev\c#\keystone\Scripting\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\Scripting\obj\Debug\Scripting.dll
+E:\dev\c#\keystone\Scripting\obj\Debug\Scripting.pdb
+E:\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\Scripting.dll
+E:\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\Scripting.pdb
+E:\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\Scripting.dll
+E:\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\Scripting.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\Scripting.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\Scripting.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\MTV3D65.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\MTV3D65.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\Scripting.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\Scripting.pdb

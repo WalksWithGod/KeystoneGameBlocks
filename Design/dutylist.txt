@@ -1,0 +1,304 @@
+USS Galaxy Active Duty Roster - last updated stardate 50204.10
+==========================================================================
+
+COMMAND DUTY:
+ 
+Alpha - (09:00 - 15:30)
+  -  Captain Lee Price [Commanding Officer]
+
+Beta - (15:00 - 21:30)
+  -  Commander Kent Peterson [Executive Officer]
+
+Gamma - (21:00 - 03:30) "midnight watch" lights dim at 23:00
+  -  Lt.Commander James Mitchell [Chief Science Officer]
+  -  Lt.Commander T'Zaq [Chief Engineer]
+  -  Lt.Commander Ragnald Gustavson [Chief Flight Control Officer]
+
+Delta - (03:00 - 09:30) "sunrise watch" light brighten at 06:00
+  -  Lt.Commander Elaithin Jii [Chief Security Officer]
+  -  Lt.Commander Lysander Hawksley [Chief Tactical Officer]
+  -  Commander Karyn Elizabeth Dallas [Chief Counselor]
+  -  Lt. James Lionel Corgan [Chief Operations Manager]
+
+Note: Gamma and Delta shifts are considered command training shifts.
+The noted officers serve that shift on a rotating basis in addition
+to their regular duty shift assignment.  Some officers like command
+duty, others complain about having to serve double shifts.
+
+==========================================================================
+
+Tactical Department:
+
+Alpha - (09:00 - 15:30)
+Main Bridge: - Lt. Cmdr. Lysander VanderPuls-Hawksley
+Battle Bridge: -(NPC)Lt. GLLL'rrrrbish, (NPC)Lt. j/g Alexa Zarides
+
+Beta - (15:00 - 21:30)
+Main Bridge: - Lieutenant j/g Vailen Daitaal
+Battle Bridge: - (NPC)Lt. j/g Bosco, (NPC)Ens. Brian McCune,
+                (NPC)Ens. Nick Knight
+
+Gamma - (21:00 - 03:30) "midnight watch" lights dim at 23:00
+Main Bridge: - Lieutenant j/g Donovan Black
+Battle Bridge: - (NPC)Ens. Supra Sendi, (NPC)Ens. Susan Deipen,
+                (NPC)Ens. Slisik
+
+Delta - (03:00 - 09:30) "sunrise watch" light brighten at 06:00
+Main Bridge: - (NPC)Lt. j/g Bosco
+Battle Bridge: - (NPC)Ens. Bradley Cornell, (NPC)Ens. Nosmaj
+
+
+Red Alert Duty Stations(as assigned for non-ALPHA shift crew):
+Main Bridge Tactical Arch
+Battle Bridge Auxilliary Tactical Nexus.
+Battle Bridge Defensive subsystems station
+Photon Torpedo Launchers 1-3, Torpedo Magazines 1-6
+Battle Bridge Threat Analysis substation
+Tactical Analysis Center, Deck 11
+Phaser Gunnery Control Centers 1 and 2
+ (Saucer and Engineering Hull strips)
+Damage Control Party 42 (as assigned by OPS)
+
+==========================================================================
+
+FLIGHT CONTROL SCHEDULE - USS GALAXY
+
+Alpha (0900h - 1530h)
+-- Lt.Commander Ragnald Gustavson, Chief Flight Control Officer
+    Ensign Emilia Kolrami (NPC)
+
+Beta (1500h - 2130h)
+-- Lt. Heather Grant-Wellington
+    Ensign Matt Taggart (NPC)
+
+Gamma (2100h - 0330h)
+-- Lt. Mikala (Mike) Pailaka
+    Ensign Todd Loomis (NPC)
+
+Delta (0300h - 0930h)
+-- Ensign Edward Thomas Derecktor
+    Ensign Grubb'r Frunchmic (NPC)
+
+==========================================================================
+
+Science
+
+Alpha - (09:00 - 15:30)
+Science Station One: Lt. Commander James Mitchell
+Science Station Two (if needed): Lt. Commander Rose Isis MacAllen
+Science Laboratories Supervisor: Lt. Wilhelm Quevvenson
+Stellar Cartography: Ensign Asako Takahashi
+
+Beta - (15:00 - 21:30)
+Science Station One: Lt. Commander Rose Isis MacAllen
+Science Station Two (if needed): Ensign Numa Taurean
+Backup Science Labs Supervisor: Ensign Manden
+Stellar Cartography: Ensign Tilo T'ilis
+
+Gamma - (21:00 - 03:30) "Midnight watch" lights dim at 23:00
+Science Station One: Ensign Cutter Kara'nin
+Science Station Two (if needed): Ensign Lorraine Jennifer Ronald
+Science Laboratories Supervisor: Petty Officer Darain Elik
+Stellar Cartography: Ensign Sendi Soleri
+
+Delta - (03:00 - 09:30) "Sunrise watch" light brighten at 06:00
+Science Station One: Ensign Kareel Raen
+Science Station Two (if needed): Ensign Jayne Brooks
+Science Laboratories Supervisor: Ensign James Talbot
+Stellar Cartography: Ensign T'Shonra
+
+==========================================================================
+ 
+Operations Duty Shift Roster
+
+Alpha Shift (9h00- 15h30)
+Main Bridge: Lieutenant James Lionel Corgan
+Ensign Indiana Radison Brisbane
+Battle Bridge: Lieutenant Mohammed Uhura
+Shuttle Bay: Lieutenant Kimi Okuda
+
+Beta Shift (15h00-21h30)
+Main Bridge: Lieutenant Sheree Sardar
+Battle Bridge: Lieutenant Masheera Hengas
+Shuttle Bay: Ensign U'Brafe
+
+Gamma Shift (21h00-3h30)
+Main Bridge: Lieutenant Norman Freeman
+Battle Bridge: Ensign Tesaria Kay Polarasi
+Shuttle Bay: Ensign Marsheera Hengas
+
+Delta Shift (3h00-9h30)
+Main Bridge: Ensign Elisa Dickerson
+Battle Bridge:Ensign Boaz Trinker
+Shuttle Bay: Ensign S’ren
+
+==========================================================================
+ 
+Engineering
+
+Alpha - (09:00 - 15:30)
+Lt.Commander T'Zaq [Chief Engineer]
+Lt Carter  (NPC)
+Lt Jackson  (NPC)
+Lt.jg Curtis Geluf [Engineer]
+Ensign Brooke Aguilar [Engineer]
+Ensign Murdoc (NPC)
+Chief PO Thomas Jenson (NPC)
+Petty Officer Alabama (NPC)
+Petty Officer Goodyear (NPC)
+Yeoman Neri (NPC)
+
+Beta - (15:00 - 21:30)
+Lt O'Neil  (NPC)
+Lt jg. Kia  (NPC)
+Lt. jg. Knight (NPC)
+Ensign Presley (NPC)
+Ensign Sota (NPC)
+Ensign Davis (NPC)
+Specialist Sang (NPC)
+Petty Officer Cia (NPC)
+Petty Officer Monroe (NPC)
+Yeoman Kevinson  (NPC)
+
+Gamma - (21:00 - 03:30) "midnight watch" lights dim at 23:00
+Ensign Robin Calvin (NPC)
+Ensign Flummux (NPC)
+Ensign de la Salle (NPC)
+Chief Warrant Officer Josh Crandle (NPC)
+Specialist Kartain (NPC)
+Yeoman Lia (NPC)
+
+Delta - (03:00 - 09:30) "sunrise watch" light brighten at 06:00
+Lt. Angela Dana (NPC)
+Lt jg. Lewis  (NPC)
+Ensign Garcia (NPC)
+Ensign Sun (NPC)
+Petty Officer Jules (NPC)
+
+=========================================================================
+ 
+Sickbay
+ 
+Main Sickbay
+
+Alpha Shift (9h00- 15h30)
+=======================
+
+Autumn Quevvenson (Doctor), Dr. Ellie Hernandez (doctor),
+Jenna D McKenzie (Med-Tech), Dr. Martin (EMH2) Paycee Oakley (Doctor),
+Walter Cooper, (Department Yeoman), Loba (ear and eye doctor),
+Lenari Vestrad (Dentist)
+
+Paediatrics: Dr Tayra (EMH), Dr Elise (EMH), Carrie McCanna (Doctor),
+Susan Hayden (Nurse)
+
+Beta Shift (15h00-21h30)
+=======================
+
+Vladimir Malgin (Doctor), Torsag (Doctor) Dr. Martin (EMH2),
+Kristen Opel (Nurse), Christina Taggart (Nurse), Talon (Doctor),
+Roman O'Neil (Doctor), Dr. Sara McPherson (Doctor), Isaac Phoenix (Doctor)
+
+Paediatrics: Dr Tayra (EMH), Dr Elise (EMH), Kalissa Macintosh (Doctor),
+Helena Darra (Nurse)
+
+Gamma Shift (21h00-3h30)
+=======================
+
+Lancelot Grogan (Doctor), Lemur (Doctor), Geoffrey Harper (Doctor),
+Dr. Martin (EMH2), Grr'Iss (Paediatric Doctor), Manon Harris (Doctor),
+Jadia Daltonei (Nurse), Qiturah (Nurse) Sabah (lab technician)
+
+Paediatrics: Dr Tayra (EMH), Dr Elise (EMH), Gaia Fallon (doctor),
+Hana Indelica (Nurse)
+
+Delta Shift (3h00-9h30)
+=======================
+
+Jacques Larkin (Doctor), Dr. Martin (EMH2), Eira Adaire (Doctor),
+Fawn Balaklawa (Nurse), Ilsa Cambralise (Nurse), Mace Delancey (Doctor),
+Sudrok (Nurse), Sela (Technician), Leyasu Kurita(medic)
+
+Paediatrics: Dr Tayra (EMH), Dr Elise (EMH) Jayla Naaku (Doctor),
+Kelby Jaden (Nurse) Zola Telari (Nurse)
+
+=======================
+*Note* In emergencies the Paediatric Team will assist in Sickbay.
+The EMH - "Doctor Grinch" is available 24 hours a day in an emergency
+
+==========================================================================
+
+Security
+
+Alpha Shift:
+Shift Supervisor: Lt Commander Elaithin Jii
+Brig Supervisor: Lieutnant Brightspot to-Sallansre
+Armory Officer: Lieutenant Alia Drakely
+Duty Officer: Master Chief William Dansen
+
+Beta Shift:
+Shift Supervisor: Lt. Commander Rayna Lamar-O'Grady
+Brig Supervisor: Lieutenant JG Seth Zonheib
+Armory Officer: Ensign K'emlyr
+Duty Officer: Lieutenant Astrid Salt
+
+Gamma Shift:
+Shift Supervisor: Lieutenant Raven Darkstar
+Brig Supervisor: Lieutenant JG Arel Smith
+Armory Officer: Ensign Kevin Smith
+Duty Officer: Lieutenant Parstran
+
+Delta shift:
+Shift Supervisor: Lt Commander Heather Sanchez
+Brig Supervisor: Lieutenant Lexana Ral
+Armory Officer: Ensign Dante Hicks
+Duty Officer: Ensign Randall Boggs
+
+==========================================================================
+
+
+Counseling Department Duty Roster
+
+Note: The shift and department listings indicate who is available to handle
+walk-ins from a particular department (people who have minor problems that
+don't necessarily need to see a counselor on a regular basis, i.e. new crew
+psych evals).  In addition, all crewmembers requiring long-term counseling
+are assigned to a counselor who must make him or herself available at all
+times.  This roster is a guideline only.  All counselors are oncall unless
+given permission by his or her Shift Supervisor and/or Commander Dallas.
+
+Alpha Shift:
+
+Commander Karyn Dallas, RN, CCNS -  Command and Medical crew* (Shift Supervisor)
+Ensign Bruce Zrama - Science and Flight Control crew
+Lt. (jg) Emma Marshall - Security and Tactical crew
+Lt. (jg) Ambria Trenton - Engineering, Operations and Civilian crew
+
+Beta Shift:
+
+Lt. Commander Maxwell-Navarre Shinta, ACCNS - Command and Medical crew (Shift Supervisor)
+Lt. Commander Michael S. O'Grady - Science and Flight Control crew
+Ensign Angelica Garcia - Security and Tactical crew
+Lt. (jg) Ambria Trenton - Engineering, Operations and Civilian crew
+
+Gamma Shift:
+
+Lt. Commander Michael S. O'Grady - Command and Medical crew (Shift Supervisor)
+Lt. Adrian An'quinsos - Science and Flight Control crew
+Lt. Ardra MacGrath - Security and Tactical crew
+Ensign Lance Garcia - Engineering, Operations and Civilian crew
+
+Delta Shift:
+
+Lt. Brian Elessidil - Command and Medical crew (Shift Supervisor)
+Lt. Ardra MacGrath - Science and Flight Control crew
+Lt.(jg) Emma Marshall - Security and Tactical crew
+Ensign Lance Garcia - Engineering, Operations and Civilian crew
+
+*Commander Dallas also supervises the Educational Program on board.
+
+In emergency situations, all junior counselors should report to sickbay to
+aid the wounded, unless otherwise noted.
+
+==========================================================================
+

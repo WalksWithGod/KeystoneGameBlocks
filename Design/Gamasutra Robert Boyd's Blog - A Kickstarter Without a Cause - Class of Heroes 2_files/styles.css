@@ -1,0 +1,36 @@
+TABLE.blogentry {
+	BORDER-BOTTOM: white 1px; BORDER-LEFT: white 1px; BACKGROUND-COLOR: white; BORDER-SPACING: 2px; WIDTH: 97%; BORDER-COLLAPSE: collapse; BORDER-TOP: white 1px; BORDER-RIGHT: white 1px
+}
+TABLE.blogentry TH {
+	BORDER-BOTTOM: white 1px inset; BORDER-LEFT: white 1px inset; PADDING-BOTTOM: 1px; BACKGROUND-COLOR: #999999; PADDING-LEFT: 10px; PADDING-RIGHT: 1px; COLOR: black; FONT-SIZE: 15px; BORDER-TOP: white 1px inset; FONT-WEIGHT: bold; BORDER-RIGHT: white 1px inset; PADDING-TOP: 1px; -moz-border-radius: 0px 0px 0px 0px
+}
+A.blogentry:link {
+	COLOR: black
+}
+A.blogentry:hover {
+	COLOR: black
+}
+A.blogentry:visited {
+	COLOR: black
+}
+A.blogentry:active {
+	COLOR: black
+}
+TD.blogtext {
+	BORDER-BOTTOM: white 1px inset; BORDER-LEFT: white 1px inset; PADDING-BOTTOM: 7px; BACKGROUND-COLOR: #cccccc; PADDING-LEFT: 10px; PADDING-RIGHT: 1px; FONT-SIZE: 11px; BORDER-TOP: white 1px inset; BORDER-RIGHT: white 1px inset; PADDING-TOP: 7px; -moz-border-radius: 0px 0px 0px 0px
+}
+TD.blogdata {
+	BORDER-BOTTOM: white 1px inset; BORDER-LEFT: white 1px inset; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #cccccc; PADDING-LEFT: 10px; PADDING-RIGHT: 1px; FONT-SIZE: 11px; BORDER-TOP: white 1px inset; BORDER-RIGHT: white 1px inset; PADDING-TOP: 2px; -moz-border-radius: 0px 0px 0px 0px
+}
+DIV.profile {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; PADDING-RIGHT: 15px; FONT-SIZE: 12px; PADDING-TOP: 0px; -moz-border-radius: 0px 0px 0px 0px
+}
+P.blogtype {
+	COLOR: #303030; MARGIN-LEFT: 10px; FONT-SIZE: 17px; FONT-WEIGHT: bold
+}
+IMG.portrait {
+	PADDING-BOTTOM: 6px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; PADDING-TOP: 0px
+}
+IMG.thumb {
+	BACKGROUND-COLOR: #cccccc; pading: 0 1px, 1px, 1px
+}

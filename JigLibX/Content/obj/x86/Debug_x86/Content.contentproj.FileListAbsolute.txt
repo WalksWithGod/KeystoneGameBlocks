@@ -1,0 +1,2 @@
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\JigLibX\Content\obj\x86\Debug_x86\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\JigLibX\Content\obj\x86\Debug_x86\ResolveAssemblyReference.cache

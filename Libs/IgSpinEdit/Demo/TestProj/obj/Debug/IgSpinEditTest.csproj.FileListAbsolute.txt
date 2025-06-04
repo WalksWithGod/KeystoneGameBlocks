@@ -1,0 +1,10 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\bin\Debug\IgSpinEditTest.exe
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\bin\Debug\IgSpinEditTest.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\bin\Debug\IgSpinEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\bin\Debug\IgSpinEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\obj\Debug\IgSpinEditTest.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\obj\Debug\IgSpinEditTest.TestForm.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\obj\Debug\IgSpinEditTest.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\obj\Debug\IgSpinEditTest.exe
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\TestProj\obj\Debug\IgSpinEditTest.pdb

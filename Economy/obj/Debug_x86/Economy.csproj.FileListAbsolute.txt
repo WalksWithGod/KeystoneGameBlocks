@@ -1,0 +1,4 @@
+C:\Users\Michael\projects\KeystoneGameBlocks\Economy\bin\x86\Debug_x86\Economy.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Economy\bin\x86\Debug_x86\Economy.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Economy\obj\Debug_x86\Economy.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Economy\obj\Debug_x86\Economy.pdb

@@ -1,0 +1,78 @@
+E:\dev\c#\keystone\WindowsService\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.KeyAdminService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.KeyChildServiceBase.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.KeyGameService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.KeyLobbyService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.KeyLoginService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.KeyServiceBase.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.csproj.GenerateResource.Cache
+E:\dev\c#\keystone\WindowsService\bin\Debug\KeyServices.dll
+E:\dev\c#\keystone\WindowsService\bin\Debug\KeyServices.pdb
+E:\dev\c#\keystone\WindowsService\bin\Debug\SpadesServer.xml
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.dll
+E:\dev\c#\keystone\WindowsService\obj\Debug\KeyServices.pdb
+E:\dev\c#\keystone\KeyServices\bin\Debug\KeyServices.dll
+E:\dev\c#\keystone\KeyServices\bin\Debug\KeyServices.pdb
+E:\dev\c#\keystone\KeyServices\bin\Debug\KeyServices.xml
+E:\dev\c#\keystone\KeyServices\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.KeyAdminService.resources
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.KeyChildServiceBase.resources
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.KeyGameService.resources
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.KeyLobbyService.resources
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.KeyLoginService.resources
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.KeyServiceBase.resources
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.csproj.GenerateResource.Cache
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.dll
+E:\dev\c#\keystone\KeyServices\obj\Debug\KeyServices.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyAdminService.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyChildServiceBase.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyGameService.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyLobbyService.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyLoginService.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyServiceBase.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.csproj.GenerateResource.Cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.xml
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyAdminService.resources
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyChildServiceBase.resources
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyGameService.resources
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyLobbyService.resources
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyLoginService.resources
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyServiceBase.resources
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\bin\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\bin\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\bin\Debug\KeyServices.xml
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.KeyAdminService.resources
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.KeyChildServiceBase.resources
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.KeyGameService.resources
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.KeyLobbyService.resources
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.KeyLoginService.resources
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.KeyServiceBase.resources
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyServices\obj\Debug\KeyServices.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServices\bin\Debug\KeyServices.xml
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyAdminService.resources
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyChildServiceBase.resources
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyGameService.resources
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyLobbyService.resources
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyLoginService.resources
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.KeyServiceBase.resources
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.csproj.GenerateResource.Cache
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServices\obj\Debug\KeyServices.pdb

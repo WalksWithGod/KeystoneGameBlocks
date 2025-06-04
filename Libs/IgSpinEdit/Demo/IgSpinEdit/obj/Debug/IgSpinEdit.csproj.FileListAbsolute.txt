@@ -1,0 +1,7 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\IgSpinEdit\bin\Debug\IgSpinEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\IgSpinEdit\bin\Debug\IgSpinEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\IgSpinEdit\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\IgSpinEdit\obj\Debug\IgNS.Controls.IgSpinEdit.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\IgSpinEdit\obj\Debug\IgSpinEdit.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\IgSpinEdit\obj\Debug\IgSpinEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\IgSpinEdit\Demo\IgSpinEdit\obj\Debug\IgSpinEdit.pdb

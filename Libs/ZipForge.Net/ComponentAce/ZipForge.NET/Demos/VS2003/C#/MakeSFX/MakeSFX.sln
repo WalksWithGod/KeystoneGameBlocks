@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MakeSFX", "MakeSFX.csproj", "{E8A2CB54-A235-498C-B5BE-3B928EF245CB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E8A2CB54-A235-498C-B5BE-3B928EF245CB}.Debug.ActiveCfg = Debug|.NET
+		{E8A2CB54-A235-498C-B5BE-3B928EF245CB}.Debug.Build.0 = Debug|.NET
+		{E8A2CB54-A235-498C-B5BE-3B928EF245CB}.Release.ActiveCfg = Release|.NET
+		{E8A2CB54-A235-498C-B5BE-3B928EF245CB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,156 @@
+http://developer.valvesoftware.com/wiki/Material_surface_properties
+
+Material surface properties
+From Valve Developer Community
+Jump to: navigation, search
+
+<Half-Life 2> This is the list of material types that VMTs can recognize. The material type's name should be placed in quotation marks after $surfaceprop. Each material setting has its own unique properties, which affect the gibs they produce (if breakable) and the sound of impacts or footsteps.
+
+Models also use $surfaceprop to define what they will sound like and decal like.
+
+The surface properties are defined in scripts/surfaceproperties.txt and scripts/surfaceproperties_hl2.txt and are referenced by scripts/surfaceproperties_manifest.txt.
+
+All materials and models that do not define their surfaceprop go to default.
+
+
+Contents
+[hide]
+
+    * 1 List
+          o 1.1 Concrete & Rock
+          o 1.2 Liquid
+          o 1.3 Metal
+          o 1.4 Miscellaneous
+          o 1.5 Organic
+          o 1.6 Snow
+          o 1.7 Terrain
+          o 1.8 Wood
+    * 2 See also
+
+List
+Concrete & Rock
+
+    * baserock
+    * boulder
+    * brick
+    * concrete
+    * concrete_block
+    * gravel
+    * rock 
+
+
+Liquid
+
+    * slime
+    * water
+    * wade 
+
+
+Metal
+
+    * canister
+    * chain
+    * chainlink
+    * combine_metal
+    * crowbar
+    * floating_metal_barrel
+    * grenade
+    * gunship
+    * metal
+    * metal_barrel
+    * metal_bouncy
+    * Metal_Box
+    * metal_seafloorcar
+    * metalgrate
+    * metalpanel
+    * metalvent
+    * metalvehicle
+    * paintcan
+    * popcan
+    * roller
+    * slipperymetal
+    * solidmetal
+    * strider
+    * weapon 
+
+
+Miscellaneous
+
+    * brakingrubbertire
+    * cardboard
+    * carpet
+    * ceiling_tile
+    * combine_glass
+    * computer
+    * default
+    * default_silent
+    * floatingstandable
+    * glass
+    * glassbottle
+    * item
+    * jeeptire
+    * ladder
+    * no_decal
+    * paper
+    * papercup
+    * plaster
+    * plastic_barrel
+    * plastic_barrel_buoyant
+    * Plastic_Box
+    * plastic
+    * player
+    * player_control_clip
+    * pottery
+    * rubber
+    * rubbertire
+    * slidingrubbertire
+    * slidingrubbertire_front
+    * slidingrubbertire_rear 
+
+
+Organic
+
+    * alienflesh
+    * antlion
+    * armorflesh
+    * bloodyflesh
+    * flesh
+    * foliage
+    * watermelon
+    * zombieflesh 
+
+
+Snow
+
+    * ice
+    * snow 
+
+
+Terrain
+
+    * antlionsand
+    * dirt
+    * grass
+    * gravel
+    * mud
+    * quicksand
+    * sand
+    * slipperyslime
+    * tile 
+
+
+Wood
+
+    * wood
+    * Wood_Box
+    * Wood_Crate
+    * Wood_Furniture
+    * Wood_lowdensity
+    * Wood_Plank
+    * Wood_Panel
+    * Wood_Solid 
+
+
+See also
+
+    * Material Creation 

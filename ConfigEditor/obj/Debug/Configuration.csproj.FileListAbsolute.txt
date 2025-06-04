@@ -1,0 +1,9 @@
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\bin\Debug\DotBits.Configuration.exe.config
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\bin\Debug\DotBits.Configuration.exe
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\bin\Debug\DotBits.Configuration.pdb
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\obj\Debug\DotBits.Configuration.ConfigEditor.resources
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\obj\Debug\DotBits.Configuration.CustomClass.resources
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\obj\Debug\Configuration.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\obj\Debug\DotBits.Configuration.exe
+E:\dev\c#\KeystoneGameBlocks\ConfigEditor\obj\Debug\DotBits.Configuration.pdb

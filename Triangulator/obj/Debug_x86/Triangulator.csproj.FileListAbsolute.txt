@@ -1,0 +1,9 @@
+D:\dev\c#\KeystoneGameBlocks\Triangulator\bin\x86\Debug_x86\Triangulator.dll
+D:\dev\c#\KeystoneGameBlocks\Triangulator\bin\x86\Debug_x86\Triangulator.pdb
+D:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Debug_x86\Triangulator.dll
+D:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Debug_x86\Triangulator.pdb
+D:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Debug_x86\Triangulator.csprojResolveAssemblyReference.cache
+C:\Users\Michael\projects\KeystoneGameBlocks\Triangulator\bin\x86\Debug_x86\Triangulator.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Triangulator\bin\x86\Debug_x86\Triangulator.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Triangulator\obj\Debug_x86\Triangulator.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Triangulator\obj\Debug_x86\Triangulator.pdb

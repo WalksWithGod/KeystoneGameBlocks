@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+								Spacebase DF-9
+			 : Future development plans		</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:title" content="Spacebase DF-9, a Space Station Simulator from Double Fine" />
+		<meta property="og:description" content="Spacebase DF-9 is a simulation game in development at Double Fine Productions. The in-progress alpha version is available right now for Windows, Mac OSX, and Linux. Follow updates, join the community, and give feedback as the game progresses!" />
+		<meta property="og:url" content="http://www.spacebasedf9.com/" />
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<!-- CSS HERE -->
+					<link href='http://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800' rel='stylesheet' type='text/css' />
+			<link media="all" type="text/css" rel="stylesheet" href="http://www.spacebasedf9.com/css/reset.css">
+			<link media="all" type="text/css" rel="stylesheet" href="http://www.spacebasedf9.com/css/spacebase.css">
+			<link media="all" type="text/css" rel="stylesheet" href="http://www.spacebasedf9.com/css/prettyPhoto.css">
+			<!--[if lte IE 8]>
+			<style>
+				.skewcontrols {
+					display: none;
+				}
+			</style>
+			<![endif]-->
+		
+		<!-- SCRIPTS HERE -->
+		<script src="http://www.spacebasedf9.com/js/jquery-1.9.1.min.js"></script>
+		<script src="http://www.spacebasedf9.com/js/jquery.cookie.js"></script>
+		<script src="http://www.spacebasedf9.com/js/jquery.prettyPhoto.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=0;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37701771-10', 'spacebasedf9.com');
+  ga('send', 'pageview');
+
+</script>
+	</head>
+	
+	<body class="ghostin" data-speed="-50">
+		<div id="bgcontain" class="ghostin" data-speed="75">
+			<div id="bgright"></div>
+		</div>
+
+		<!-- Container -->
+		<div class="maincontain">
+			
+			<!-- Header content -->
+							<div class="header">
+					<div class="strapline">
+																					A Sci-Fi Building Simulation from 																												<a class="dfbanner" href="http://www.doublefine.com/">Double Fine</a>
+																												 Productions																		</div>
+					<a href="/" class="homelink">Spacebase DF-9</a>
+					<a href="/buy" class="navlink buy skew">
+						Buy Now						<span class="sublink">Early Alpha Access</span>
+					</a>
+					<!-- <div class="skewcontrols">
+						<span class="unskewme">Unskew Me!</span>
+						<span class="skewme">Skew Me!</span>
+					</div> -->
+				</div>
+			
+			<div class="mainpage">
+
+				<!-- Hero content (e.g. video on front page) -->
+				
+				<!-- Main content -->
+				<div class="content">
+					<div class="posts">
+	<div class="post">
+		<div class="details">
+			<img class="posticon" src="/img/pageicons/icon_construct.png" />
+		</div>
+		<div class="content text textcontent">
+			<h1>Future development plans</h1>
+			
+				<p>For a list of known issues with the current build, see our <a href="http://spacebasedf9.com/knownissues">Known Issues page</a>.</p>
+<p>Spacebase DF-9 is a detailed simulation game, and we&#8217;re constantly improving and adding to it. Because <em>space contains everything</em>, there&#8217;s an almost infinite number of things we could add to the game! Because we have limited time and resources, we have to make hard choices about what&#8217;s important. Below is a giant list of all the things we <em>might possibly do</em> at some point.</p>
+<p>Nothing on this list is carved in stone, and we can&#8217;t promise any date for when it might go into the game. We may decide something isn&#8217;t worth it, or an idea may mutate into another thing entirely. We&#8217;re sharing this with you because we want to give an idea of where the game is headed!</p>
+<p><em>Last update: 2013-10-16&#160;19:32 PST</em></p>
+<pre>FOOD
+* citizens have hunger need and must eat food to satisfy it
+* food replicator object that can be built in any zone
+* citizens can use food replicator to fulfill hunger need, but it's like vending machine food, adequate but not great
+* small matter cost (1-2) each time someone uses a food replicator
+** 0 matter = replicators stop working
+** improperly maintained food replicators produce bad food that makes people sick?
+* replicator food comes in wrappers, produces waste (litter carryable) (if/when carryable object concept is added)
+* garden zones where plants, ie "real food", is grown in hydroponic trays by citizens with botanist duty
+* plants in gardens produce small amounts of extra oxygen
+* citizens who spend time in garden zones have happy thoughts, increasing morale
+* plants grow from seedlings to full-sized plants ready for harvest
+* plants have a "health", if it reaches zero the plant dies
+* citizens on botanist duty "maintain" plant health, much as techs maintain machines
+* botanists harvest fully grown plants and deliver them to pub fridges for preparation
+* bartenders at pubs cook food into meals, which nourish citizens more and make them happy
+* concept of different dishes?
+** how do bartenders/patrons decide which dish is cooked?
+** immigrants bring recipes for new dishes?
+* citizens sit at a pub table and eat
+* citizens have food preferences
+** eating a preferred food makes them very happy, eating a strongly disliked food makes them a bit unhappy
+
+CARRYABLE OBJECTS
+* citizens visibly carry around arbitrary sprite/3D objects
+* containers can hold other things
+* citizens can stash stuff in an inventory, shown in a new inspector tab
+* when people arrive, they have a suitcase (container with their stuff in it)
+* players build shelves for people to put their stuff on
+* a single item of stuff can have multiple tags describing it, eg purple, terran, fuzzy, punk rock, etc.  citizens have affinities for these tags
+* citizens trade stuff with each other, trying to get stuff they like more
+* roaming traders will visit the base to trade new stuff with people
+* "litter" objects that citizens with low neatness personality throw away
+* janitors / people with high neatness pick up litter
+* janitors clean up bloodstains and other cosmetic damage
+* people gibbed by monsters turn into bits, which janitors must clean up
+
+POWER SYSTEM
+* "reactor zone" with fusion reactor object that produces power
+* rooms must be adjacent to a room with a working reactor to be powered
+* unpowered rooms go dark (emergency lighting) and objects in them don't function
+* reactors only produce X power, then you have to build another
+* factor new need for reactors into starting matter allotment
+* maybe make the Base Seed object serves as a low-output reactor to help players get started
+
+MINIMAP
+* minimap display of base in lower right corner
+* separate viz mode toggles for minimap vs main view
+
+BASE HISTORY SCREEN
+* a permanent timestamped list of important base events: citizen joined, citizen died, ship docked, first zone of each type created
+* in-game screenshot key that pops up a "write a caption for this screenshot" box, screenshot + caption is added to the timestamped list
+* base history is stored locally in save dir as HTML + linked images, each base has its own dir
+* base history is also mirrored on a hosted server somewhere, players can easily link their base histories
+
+BASE STATS SCREEN
+* auto-show stats screen after base fails, ie everyone dies, "game over" state
+stats to show:
+* Matter spent
+* Derelicts
+* Hostile docking
+* Total docks
+* Non-hostile docks
+* Docking requests denied, accepted, forced
+* Room temp
+* Raiders killed
+* Monsters killed
+
+MULTI-LEVEL BASE CONSTRUCTION
+* UI for navigating multiple levels
+* rendering tech for showing multiple levels
+* build gravshafts to allow citizens to travel between levels
+* ability to build railings for safety?
+
+TAG SYSTEM FOR LOGS
+* a log message can have any number of tags, citizens select an especially appropriate one (but avoid repeating themselves)
+
+ASSIGN PEOPLE TO ROOMS
+* depending on their duty and/or zone type, this can mean different things:
+** assign a security-duty citizen to a room to have them guard it
+** assign any citizen to a residence to have them use it as their quarters
+* normally, a citizen will "claim" an unused bed and the area around it
+** citizens decorate their living space with their stuff (see "stuff" above)
+* people protect their spaces / become annoyed when strangers or unfriendly people intrude
+
+"LEARN TO PLAY"
+* option in front/pause menu
+* loads Box.sav as starting map, as opposed to normal DeepSpace.sav
+* "only display once" hint flag for tutorialish / first time messages
+
+TELEPORTERS
+* build at least two "teleport pad" objects to create a functioning teleporter
+* UI for selecting which teleporter goes where (dynamically changeable)
+* teleporter accidents: poorly maintained teleporters could hurt/kill people, scramble their brains (personality change), turn them evil (goatee Spock)
+
+METEOR STRIKES
+* meteors strike bases, punching holes in the hull, depressurizing rooms, damaging people and things
+** not as harsh as in the Amnesia Fortnight 2012 version, promise :]
+* shield generators generate shielding to repel meteor strikes (gives technicians stuff to do in space)
+
+MISC UI
+* confirm + cancel for roster screen
+* custom viz for Construct mode - desaturate colors except for amber building color?
+* shift-space = max speed
+* up/down arrows in room centers showing whether room O2 is rising or lowering
+* "object condition" viz mode: color-code objects by condition, highlight technicians?  do same when a technician is selected?
+* allow zoom in beyond min_zoom, spring back to normal min_zoom after a few seconds
+* make ability to rename citizens "once only"
+* "no power" icon over unpowered rooms (once power system exists)
+* little lines showing where someone is pathing to
+* cutaway mode should work on asteroids
+* support Mac trackpad gestures
+
+EMERGENCY DISTRESS SIGNAL
+* (very expensive?) object you can build that calls for rescue people / immigrants to show up and save your base
+
+BASE NAMING
+* when your first oxygenated room comes online, base is considered "established" and prompts you for a name
+
+STEAM WORKSHOP
+* built in savegame sharing!
+* mod support!
+** "mods" subdir where user-created scripts patch base game lua files at runtime
+** provide uncompiled lua source for gameplay-relevant classes, eg Character.lua, to support modders
+** allow PNG sprite sheets - lower performance than tex format in exchange for easy moddability
+
+BARTENDERS
+* pub customers get their orders from bartender
+* bartenders serve food (once food exists)
+* skilled bartenders make people they serve happier
+* citizen drunkenness - increased by X every drink they have, dwindles to zero slowly (ie "blood alcohol")
+* drunk citizens more likely to make mistakes while doing duty
+
+CITIZEN FIGHTING
+* citizens who dislike each other enough will fight
+* low risk of actual death, but injury and deepening mutual hatred
+* security can stun violent people to calm them down, knocking them unconscious for a bit
+* drunk citizens more likely to fight
+* low morale citizens far more likely to fight
+
+SPACE MADNESS
+* when morale is critically low, space madness takes a form depending on personality type:
+** sit in bed moping (how to recover?)
+** become violent, grabbing a rifle if available, attacking random people
+
+DOCTORS
+* doctor duty and infirmary zone
+* doctors unassigned to an infirmary (see "assining people to rooms") patrol the base looking for hurt/sick people
+* citizens seek out an infirmary/doctor when hurt or sick (parasite infestation)
+* doctors use tricorder-like first aid prop to heal people
+** better doctors heal people faster / more fully, bad doctors have a chance to hurt them
+* revivabed object for infirmary: only way to detect parasite infestation or cure some diseases
+
+CONSTRUCTION TOOLS
+* "flood fill with floor" tool, works on areas enclosed by walls or asteroid
+* "build circular room" tool - drag out a circular area instead of a square
+* filled (with floor) vs unfilled (without floor) toggle for box and circle room tools
+
+MISC LIFE SIM
+* "skill point distribution" algo for generating skill set on citizen spawn - nobody will be terrible at everything, if someone is really good at something they'll likely be bad at everything else
+* over time, citizens get nicknames, eg Bob "Sparky" Schmidt
+* ability to flag any citizens as hostile / suspicious (security will keep an eye on them)
+* citizens have to reach a locker before they can change duty
+* citizens become annoyed if their environment is noisy (people passing through or doing stuff) while sleeping or relaxing - incentivize building residences that are low-traffic
+* "watch video" activity tied to monitors
+* sportsball matches viewable on monitors / in pubs
+* high morale = skills go up more quickly
+* citizens put on duty-outfit when they go to do duty, remove it when starting certain other tasks (sleeping) or if it's been long enough since they last did duty
+
+SOCIALIZATION / AFFINITY AI
+* people prefer to chat with friends, unless they have high gregarious personality in which case they actively enjoy chatting with strangers (low familiarity)
+* people have +/- affinities for objects and rooms with certain qualities, eg red, dark, fluffy
+* people have +/- affinities for people with certain qualities (xenophobia/philia, sexual preference, fashion sense)
+* people spread gossip about people they dislike, biasing affinity map changes against them
+* trends: popular (high aggregate affinity) people influence the affinities of less popular people
+* fashion accessories signify social affiliation, eg cliques wear the same kind of thing
+* new concepts (topics) are gradually introduced by immigrants and trade, eg a new fasion craze starts when a trader visits the base with slap bracelets
+
+PERSONALITY TRAITS
+* introverted/extroverted = how much people enjoy solitary vs group activities
+* gregarious/shy = how much people enjoy chatting with strangers vs friends
+* vindictive/forgiving = how long people hold grudges and whether they act on them
+* angry/peaceful = whether people become violent or depressed when morale is low
+* neat/messy = whether people pick up litter and spare objects vs throw junk on the floor
+* religious preference = whether people prefer to be recycled on death or given a "spock funeral"
+
+AFFINITY/CONVERSATION TOPICS
+* games
+* pubs
+* tv shows
+* films
+* sports
+* sports teams
+* music albums
+* songs
+
+TECHNOLOGY
+* scientist job
+* research lab zone
+* blueprints - you can only build what you have blueprints for
+** scientists can construct blueprints by doing research in labs
+** players choose research topics?
+** blueprints can also be discovered aboard derelicts or brought by special immigrants
+* starting conditions determine what technologies you have access to
+* take dead hostiles to research labs to study them and learn to better deal with them
+** eventually, how to deactivate killbots and reform them into friendly (still scary lookin') bots
+
+"VISIT A FRIEND'S BASE"
+* hangar bay zone where shuttles can dock
+** (post "stuff" update, traders show up here)
+* load citizens onto a shuttle and give it a destination friend's base
+* shuttle leaves, your friend gets a visit request
+* if accepted, your citizens disembark inside their base, walk around and have adventures
+* eventually, they return to the shuttle and return to your base
+* travelers preserve any stuff, gained experience, technology etc that they accrue while visiting another base
+
+BASE DEFENSE
+* more types of attackers show up in derelicts, docking ships, etc:
+** killbots
+** murderslugs
+* invaders breach base walls and invade from the outside
+* exterior base defenses - defensive gun batteries, shielding
+* build traps to capture or kill invaders:
+** tripwires that can be scripted to doors, other traps, depressurize room, etc
+** laser grids
+** auto-turrets
+** stun nets
+* brig zone for storing captured hostiles or violent citizens
+** monster domestication/breeding?!?
+* greater variety of weapons for citizens to wield
+** flamethrower
+** gravity gun (flings things/people around)
+** plasma cannon (cuts through anything)
+
+FUNERALS
+* when they die, depending on religious(?) preference each citizen will either be recycled at the matter recycler, or given a "spock funeral" ie placed in a spacecoffin and sent out an airlock
+* either way, a small service may be held with the citizen's friends
+** attending this service raises their morale, ie if there is no time for a proper ceremony then survivors will have a harder time grieving
+
+ROBOTS
+* robots join your base as citizens
+* states for robots:
+** normal - subservient to organic life, perform the duty they're assigned without question, don't have a personality
+** rampant - gained self-awareness but hate all organic life, they rampage and band together with / produce more killbots
+** enlightened sentient - after a long enough life, they become sentient, develop personalities, change their names, live normal lives
+
+LAWS
+* ability to pass ordinances: forbid/penalize certain actions, punish or praise people
+
+COMPUTER TERMINALS
+* write Lua to script control of environment objects, robots, etc
+
+PLANETFALL
+* teleport down to the surface of planet(s) you're orbiting
+* discover abandoned bases, alien life, friendly or hostile sentients
+
+HOLODECKS
+* build vast zones that can reconfigure their geometry to provide different entertainment/educational scenarios
+* citizen costumes for holodeck scenarios
+* holodeck malfunctions:
+** glitches that partially reconfigure the geometry of your base, eg "half your base is now a medieval castle"
+** holo-actors can break free and wreak havok in your base, eg "cavemen and cowboys are attacking everyone"
+
+"HISTORICAL SCENARIO" ADDON PACKS
+* props, tiles, costumes for sandbox storytelling in famous sci fi settings: alien, star wars, 2001, etc
+
+TIME TRAVEL
+* events deemed timeline-critical by the IGTTC Armistice of 7978 cannot be changed without serious consequences.  however, we are pretty sure time travel armistices are for babies.
+
+</pre>			
+		</div>
+	</div>
+</div>
+
+				</div>
+
+				<!-- Navigation bar -->
+									<div class="rightcolumn">
+						<ul class="nav navlink rows skew">
+								<li class="blog"><a href="/page/1">Blog</a></li>
+							
+															<li class="about"><a href="/about">About the Game</a></li>
+															<li class="devplans"><a href="/devplans">Dev Plan</a></li>
+															<li class="screenshots"><a href="/screenshots">Screenshots</a></li>
+															<li class="http://www.spacebasedf9.com/ask"><a href="http://www.spacebasedf9.com/ask">Ask the Team</a></li>
+															<li class="http://spacebasedf9.gamepedia.com"><a href="http://spacebasedf9.gamepedia.com">Wiki</a></li>
+															<li class="http://www.spacebasedf9.com/post/63790977431/learn-to-play-spacebase-df-9-alpha-1-with-jp"><a href="http://www.spacebasedf9.com/post/63790977431/learn-to-play-spacebase-df-9-alpha-1-with-jp">Learn to Play</a></li>
+															<li class="http://www.doublefine.com/forums/viewcategory/55/"><a href="http://www.doublefine.com/forums/viewcategory/55/">Forums</a></li>
+													</ul>
+						<ul class="navlink icons skew">
+							<li class="social-skew unskewme" style="display:inline-block;"><a title="Unskew Me!">Unskew Me!</a></li>
+							<li class="social-skew skewme" style="display:none;"><a title="Skew Me!">Skew Me!</a></li>
+							<li class="social-twitter"><a href="http://www.twitter.com/spacebasedf9" title="Follow @SpacebaseDF9 on Twitter">@SpacebaseDF9 Twitter</a></li>
+							<li class="social-tumblr"><a href="https://www.tumblr.com/register/follow/spacebasedf9" title="Follow Spacebase DF-9 on Tumblr">Follow Spacebase DF-9 on Tumblr</a></li>
+							<li class="social-rss"><a href="http://spacebasedf9.tumblr.com/rss" title="Subscribe via RSS">RSS</a></li>
+						</ul>
+					</div>
+				
+				<!-- Pagination -->
+				
+			</div>
+
+			<!-- Right column garbage -->
+
+			<div class="garbage">
+				Spacebase website v1.00<br />
+				Initializing... <br />
+				\\<br />
+				Frontface Marketing System Processing<br />
+				Frontface Secretion Complete<br />
+				\\<br />
+				\\<br />
+				Website ready<br />
+			</div>
+
+		</div>
+
+		<script>
+			function unskew() {
+				$(".navlink").css({
+					"transform" : "skew(0deg, 0deg)",
+					"-moz-transform" : "skew(0deg, 0deg)",
+					"-ms-transform" : "skew(0deg, 0deg)",
+					"-webkit-transform" : "skew(0deg, 0deg)",
+					"-o-transform" : "skew(0deg, 0deg)"
+				});
+				$(".navlink.buy").css({
+					"top" : "121px"
+				});
+				$(".nav").css({
+					"margin-top" : "2px"
+				});
+				$(".unskewme").hide();
+				$(".skewme").css('display', 'inline-block');
+				$.cookie('skewstatus', 'unskewed', { path: '/' });
+			}
+			function skew() {
+				$(".navlink").css({
+					"transform" : "skew(0deg, -26.5deg)",
+					"-moz-transform" : "skew(0deg, -26.5deg)",
+					"-ms-transform" : "skew(0deg, -26.5deg)",
+					"-webkit-transform" : "skew(0deg, -26.5deg)",
+					"-o-transform" : "skew(0deg, -26.5deg)"
+				});
+				$(".navlink.buy").css({
+					"top" : "72px"
+				});
+				$(".nav").css({
+					"margin-top" : "-10px"
+				});
+				$(".skewme").hide();
+				$(".unskewme").css('display', 'inline-block');
+				$.cookie('skewstatus', 'skewed', { path: '/' });
+			}
+			function checkOnScreen($element) {
+				var $window = $(window);
+				var elementTop = $element.offset().top;
+				var windowTop = $window.scrollTop();
+				var windowBottom = windowTop + $window.height();
+				if (elementTop > windowTop && elementTop < windowBottom) {
+					return true;
+				}
+			}
+			$(function(){
+				$(".skewme").hide();
+				$(".unskewme").click(unskew);
+				$(".skewme").click(skew);
+				if ((typeof $.cookie('skewstatus') !== 'undefined') && ($.cookie('skewstatus') == 'unskewed')) {
+					unskew();
+				} else if ((typeof $.cookie('skewstatus') !== 'undefined') && ($.cookie('skewstatus') == 'skewed')) {
+					skew();
+				}
+
+				$('.ghostin').each(function(){
+					var $wizards = $(this);
+					$(window).scroll(function(){
+						var yPos = -($(window).scrollTop() * $wizards.data('speed') / 100);
+						var pos = 'center ' + yPos + 'px';
+						$wizards.css({
+							backgroundPosition: pos,
+						})
+					});
+				});
+
+				$(".maincontain").css("min-height", $(window).height());
+
+				$(".garbage").each(function(index){
+					
+					$element = $(this);
+					
+
+					if (checkOnScreen($element)) {
+						console.log("on screen");
+						$element.hide();
+						$element.show(1000);
+					}
+					$window = $(window);
+					$window.scroll(function(){
+						if ($element.data("revealed") != "yes") {
+							if (checkOnScreen($element)) {
+								console.log("on screen");
+								$element.hide();
+								$element.show(1000);
+								$element.data("revealed", "yes")
+							}
+						}
+					})
+					
+					
+					
+				});
+
+				// LIGHTBOX INITIALIZATION
+				$("a[rel^='lightbox']").prettyPhoto({
+					deeplinking: false,
+					social_tools: false,
+					theme: 'dark_rounded'
+				});
+				$("a.tier, li.ask").prettyPhoto({
+					deeplinking: false,
+					show_title: false,
+					social_tools: false,
+					theme: 'default'
+				});
+				
+			});
+		</script>
+	<!--[if lte IE 8]>
+	<script>
+		$(function(){
+			unskew();
+		});
+	</script>
+	<![endif]-->
+
+	</body>
+</html>

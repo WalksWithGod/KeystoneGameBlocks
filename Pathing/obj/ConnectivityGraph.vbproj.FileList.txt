@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ConnectivityGraph.Form1.resources
+obj\Debug\ConnectivityGraph.vbproj.GenerateResource.Cache
+.\bin\ConnectivityGraph.exe
+.\bin\ConnectivityGraph.pdb
+.\bin\ConnectivityGraph.xml
+.\bin\MTV3D65.dll
+obj\Debug\ConnectivityGraph.exe
+obj\Debug\ConnectivityGraph.xml
+obj\Debug\ConnectivityGraph.pdb

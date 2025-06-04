@@ -1,0 +1,52 @@
+E:\dev\c#\keystone\Sculptor\bin\Debug\Sculptor.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\Sculptor.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\Core.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\MTV3D65.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\ZipForge.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\Lidgren.Library.Network.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\MHull.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\Settings.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\LibNoise.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\VorbisDotNet.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\Core.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\MHull.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\MTV3D65.xml
+E:\dev\c#\keystone\Sculptor\bin\Debug\Settings.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\LibNoise.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\LibNoise.xml
+E:\dev\c#\keystone\Sculptor\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\Sculptor\obj\Debug\Sculptor.dll
+E:\dev\c#\keystone\Sculptor\obj\Debug\Sculptor.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\keymath.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\keymath.pdb
+E:\dev\c#\keystone\Sculptor\bin\Debug\JigLibX.dll
+E:\dev\c#\keystone\Sculptor\bin\Debug\JigLibX.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\obj\Debug\Sculptor.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\obj\Debug\Sculptor.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\Sculptor.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\Sculptor.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\Keystone.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\MTV3D65.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\ZipForge.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\Lidgren.Library.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\MHull.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\LibNoise.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\CSScriptLibrary.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\VorbisDotNet.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\JigLibX.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\Keystone.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\MHull.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\MTV3D65.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\SmartThreadPool.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\LibNoise.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\LibNoise.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\keymath.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Sculptor\bin\Debug\JigLibX.pdb

@@ -1,0 +1,27 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Lidgren.Network\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Lidgren.Network\bin\Release\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Lidgren.Network\bin\Release\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Lidgren.Network\obj\Release\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Lidgren.Network\obj\Release\Lidgren.Network.pdb
+E:\dev\c#\Project Evolution\Lidgren.Network\bin\Release\Lidgren.Network.dll
+E:\dev\c#\Project Evolution\Lidgren.Network\bin\Release\Lidgren.Network.pdb
+E:\dev\c#\Project Evolution\Lidgren.Network\obj\Release\ResolveAssemblyReference.cache
+E:\dev\c#\Project Evolution\Lidgren.Network\obj\Release\Lidgren.Network.dll
+E:\dev\c#\Project Evolution\Lidgren.Network\obj\Release\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Release\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Release\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\Lidgren.Network.XML
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\SmartThreadPool.xml
+E:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Release\Lidgren.Network.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\SmartThreadPool.dll
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\SmartThreadPool.pdb
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\bin\Release\SmartThreadPool.xml
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Release\Lidgren.Network.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Release\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\Lidgren.Network\obj\Release\Lidgren.Network.pdb

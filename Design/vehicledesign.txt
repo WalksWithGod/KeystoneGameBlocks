@@ -1,0 +1,68 @@
+When designing a ship in a 3d modeling program or floorplan design, if you want the ship to seem like a real function ship,
+then care should be taken in "ENGINEERING" the design so that it makes sense.
+
+----------------------------------------
+- How will the ship manuever?
+	- is it supposed to be nible/swift/agile?
+	- vector thrust
+        - maneuvering / landing thrusters
+	- will it maneuver in air and space?
+		- can it get by with just wings and mains or just mains and maneuver thrusters and no wings?
+	
+- Safety systems
+	- can the crew eject?
+		- cockpit capsule, escape pod or seats?
+
+- How will the ship land?
+	- can it only land on smooth surface?
+	- can it land on rocky terrain?
+	- skids or wheels?
+	- does the gear look physically robust enough for its various landing scenarios?
+	- retractable or not?
+	- arrestor hook or device for emergency or hot\combat landings about a carrier?
+
+
+- Cargo Ships
+	- how will cargo be unloaded/loaded?
+	- can the cargo be removed /added easily when landed?
+	- can the cargo be removed / added easily in flight?
+
+- fuel linkages
+	- in flight refueling probe and lines?
+	- how are maneuvering thrusters fuel line routed?
+	- or if the thrusters use diverted exhaust/power from the main engines, how are those routed through the hull?
+	- are fuel lines and such adequately protected from micrometeroites and perhaps some minor attacks?
+	- combat vehicles should have some greater protection of the fuel tanks.
+
+- what is the ship's maximum range?
+	- crew areas and requirements need to be big enough to support the duration.	
+	- a fighter, bomber, or an orbital or inter-solar system transport with a range of 48 hours or less just needs a simple cockpit
+	- a deep space transport would need space for multiple crew and larger life support systems and food + water stores and accomodations for hygiene and sleeping.
+	- a fighter craft and some others might not be preasurized and instead rely on the pilots space suit.  Or it may require a minimum life support system behind or under the cockpit to provide atmosphere and heat.
+	
+
+- how large and complex is the ship?
+	- the larger the ship, the more crew it needs.
+	- the more crew it needs, the more accomodations it needs and all this makes the ship bigger.
+
+weapons
+	- laser weapons need extra room for capacitor\battery storage.
+	- is the craft stealthy?
+		- are the weapons enclosed?
+	- are the entire turret systems retractable so that during non combat, they can remain fully stealthy
+	- chaff/flare/counter measure launchers?
+
+	- extremely large super weapons dont need turrets and should be mountained dorsally
+	- smaller weapons should use full or partial rotation turrets or mounts
+	- external bombs or missiles decrease stealth, but will sometimes optionally be mounted to increase armament
+	- internal bombs and missiles (see F-22) incresae the hull size since you need doors, as well as storage space since sometimes multiple bombs or missiles can be shot from the same bays. The F-22 for instance i think has racks that can move the next missile into the ready spot after a previous was fired.
+
+- equipment accessibility
+	- engines, landing gear, hydraulic systems, sensors and other key components need to be accessible on small craft from the outside of the craft and so textures should have panels and indicators for those areas.
+	- these same systems on large ships can in most cases be accessed strictly from the inside.
+
+- compartmentalization
+	- internally, large combat ships have multiple decks/sections that can be sealed off in the event of a hull breach to prevent the destruction of the entire ship.
+
+
+	

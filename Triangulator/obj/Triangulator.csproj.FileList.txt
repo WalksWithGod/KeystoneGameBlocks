@@ -1,0 +1,10 @@
+obj\Release\ResolveAssemblyReference.cache
+bin\Release\Triangulator.dll
+bin\Release\Triangulator.pdb
+obj\Release\Triangulator.dll
+obj\Release\Triangulator.pdb
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\Triangulator.dll
+bin\Debug\Triangulator.pdb
+obj\Debug\Triangulator.dll
+obj\Debug\Triangulator.pdb

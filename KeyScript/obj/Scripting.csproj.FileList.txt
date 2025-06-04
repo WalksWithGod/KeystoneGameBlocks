@@ -1,0 +1,14 @@
+bin\Release\Scripting.dll
+bin\Release\Scripting.pdb
+bin\Release\MTV3D65.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Scripting.dll
+obj\Release\Scripting.pdb
+bin\Debug\Scripting.dll
+bin\Debug\Scripting.pdb
+bin\Debug\MTV3D65.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Scripting.dll
+obj\Debug\Scripting.pdb
+bin\Release\MTV3D65.xml
+bin\Debug\MTV3D65.xml

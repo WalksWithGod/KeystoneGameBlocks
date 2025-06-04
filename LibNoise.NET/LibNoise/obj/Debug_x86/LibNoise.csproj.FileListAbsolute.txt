@@ -1,0 +1,9 @@
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\x86\Debug_x86\LibNoise.dll
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\x86\Debug_x86\LibNoise.pdb
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug_x86\LibNoise.dll
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug_x86\LibNoise.pdb
+D:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug_x86\LibNoise.csprojResolveAssemblyReference.cache
+C:\Users\Michael\projects\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\x86\Debug_x86\LibNoise.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\LibNoise.NET\LibNoise\bin\x86\Debug_x86\LibNoise.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug_x86\LibNoise.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\LibNoise.NET\LibNoise\obj\Debug_x86\LibNoise.pdb

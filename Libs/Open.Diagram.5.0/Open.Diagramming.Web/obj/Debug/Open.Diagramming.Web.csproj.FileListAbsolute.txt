@@ -1,0 +1,7 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Web\bin\Debug\Open.Diagramming.Web.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Web\bin\Debug\Open.Diagramming.Web.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Web\bin\Debug\Open.Diagramming.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Web\bin\Debug\Open.Diagramming.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Web\obj\Debug\Open.Diagramming.Web.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Web\obj\Debug\Open.Diagramming.Web.pdb

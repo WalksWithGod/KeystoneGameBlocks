@@ -1,0 +1,8 @@
+E:\dev\c#\keystone\FileBrowser\bin\Debug\FileBrowser.dll
+E:\dev\c#\keystone\FileBrowser\bin\Debug\FileBrowser.pdb
+E:\dev\c#\keystone\FileBrowser\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\FileBrowser\obj\Debug\FileBrowser.Browser.resources
+E:\dev\c#\keystone\FileBrowser\obj\Debug\FileBrowser.Properties.Resources.resources
+E:\dev\c#\keystone\FileBrowser\obj\Debug\FileBrowser.csproj.GenerateResource.Cache
+E:\dev\c#\keystone\FileBrowser\obj\Debug\FileBrowser.dll
+E:\dev\c#\keystone\FileBrowser\obj\Debug\FileBrowser.pdb

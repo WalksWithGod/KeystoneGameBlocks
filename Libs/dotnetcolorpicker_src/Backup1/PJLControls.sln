@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PJLControls", "PJLControls\PJLControls.csproj", "{46C6D9CE-672F-4491-BF67-AA3F8DC811B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorPickerDemo", "ColorPickerDemo\ColorPickerDemo.csproj", "{771D52DC-61A0-4F62-868E-9CC3BA000E13}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SolutionUniqueID = {F5D609B9-2D87-4BBC-B330-3F424931C98A}
+		SccProjectUniqueName1 = PJLControls\\PJLControls.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = PJLControls\\
+		SccProjectUniqueName2 = ColorPickerDemo\\ColorPickerDemo.csproj
+		SccProjectName2 = \u0022$/DotNet/PJLControls/ColorPickerDemo\u0022,\u0020HSHAAAAA
+		SccLocalPath2 = ColorPickerDemo
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{46C6D9CE-672F-4491-BF67-AA3F8DC811B7}.Debug.ActiveCfg = Debug|.NET
+		{46C6D9CE-672F-4491-BF67-AA3F8DC811B7}.Debug.Build.0 = Debug|.NET
+		{46C6D9CE-672F-4491-BF67-AA3F8DC811B7}.Release.ActiveCfg = Release|.NET
+		{46C6D9CE-672F-4491-BF67-AA3F8DC811B7}.Release.Build.0 = Release|.NET
+		{771D52DC-61A0-4F62-868E-9CC3BA000E13}.Debug.ActiveCfg = Debug|.NET
+		{771D52DC-61A0-4F62-868E-9CC3BA000E13}.Debug.Build.0 = Debug|.NET
+		{771D52DC-61A0-4F62-868E-9CC3BA000E13}.Release.ActiveCfg = Release|.NET
+		{771D52DC-61A0-4F62-868E-9CC3BA000E13}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\x86\Debug\KeySpyAI.exe.config
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\x86\Debug\KeySpyAI.exe
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\x86\Debug\KeySpyAI.pdb
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\x86\Debug\KeySpyAI.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\x86\Debug\KeySpyAI.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\x86\Debug\KeySpyAI.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\x86\Debug\KeySpyAI.exe
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\x86\Debug\KeySpyAI.pdb

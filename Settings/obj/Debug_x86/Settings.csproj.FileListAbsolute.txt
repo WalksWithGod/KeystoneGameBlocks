@@ -1,0 +1,8 @@
+D:\dev\c#\KeystoneGameBlocks\Settings\bin\x86\Debug_x86\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\Settings\bin\x86\Debug_x86\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug_x86\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\Settings\obj\Debug_x86\Settings.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Settings\bin\x86\Debug_x86\Settings.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Settings\bin\x86\Debug_x86\Settings.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\Settings\obj\Debug_x86\Settings.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\Settings\obj\Debug_x86\Settings.pdb

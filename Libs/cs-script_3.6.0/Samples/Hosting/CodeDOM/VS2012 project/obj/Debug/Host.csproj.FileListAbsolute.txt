@@ -1,0 +1,8 @@
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\obj\Debug\Host.csprojResolveAssemblyReference.cache
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\bin\Debug\Host.exe.config
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\bin\Debug\Host.exe
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\bin\Debug\Host.pdb
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\bin\Debug\CSScriptLibrary.dll
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\bin\Debug\CSScriptLibrary.xml
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\obj\Debug\Host.exe
+E:\cs-script\Samples\Hosting\CodeDOM\VS2012 project\obj\Debug\Host.pdb

@@ -1,0 +1,15 @@
+E:\dev\c#\KeystoneGameBlocks\Genesis\bin\Debug\Genesis.dll
+E:\dev\c#\KeystoneGameBlocks\Genesis\bin\Debug\Genesis.pdb
+E:\dev\c#\KeystoneGameBlocks\Genesis\obj\Debug\Genesis.dll
+E:\dev\c#\KeystoneGameBlocks\Genesis\obj\Debug\Genesis.pdb
+E:\dev\c#\KeystoneGameBlocks\Genesis\obj\Debug\Genesis.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Genesis\bin\Debug\Genesis.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Genesis\bin\Debug\Genesis.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Genesis\obj\Debug\Genesis.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Genesis\obj\Debug\Genesis.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Genesis\obj\Debug\Genesis.pdb
+D:\dev\c#\KeystoneGameBlocks\Genesis\bin\Debug\Genesis.dll
+D:\dev\c#\KeystoneGameBlocks\Genesis\bin\Debug\Genesis.pdb
+D:\dev\c#\KeystoneGameBlocks\Genesis\obj\Debug\Genesis.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Genesis\obj\Debug\Genesis.dll
+D:\dev\c#\KeystoneGameBlocks\Genesis\obj\Debug\Genesis.pdb

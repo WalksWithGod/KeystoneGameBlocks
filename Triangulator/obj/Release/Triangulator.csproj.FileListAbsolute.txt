@@ -1,0 +1,20 @@
+E:\dev\c#\keystone\Triangulator\bin\Release\Triangulator.dll
+E:\dev\c#\keystone\Triangulator\bin\Release\Triangulator.pdb
+E:\dev\c#\keystone\Triangulator\obj\Release\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\Triangulator\obj\Release\Triangulator.dll
+E:\dev\c#\keystone\Triangulator\obj\Release\Triangulator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Triangulator\bin\Release\Triangulator.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Triangulator\bin\Release\Triangulator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.pdb
+E:\dev\c#\KeystoneGameBlocks\Triangulator\bin\Release\Triangulator.dll
+E:\dev\c#\KeystoneGameBlocks\Triangulator\bin\Release\Triangulator.pdb
+E:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.dll
+E:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.pdb
+E:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Triangulator\bin\Release\Triangulator.dll
+D:\dev\c#\KeystoneGameBlocks\Triangulator\bin\Release\Triangulator.pdb
+D:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.dll
+D:\dev\c#\KeystoneGameBlocks\Triangulator\obj\Release\Triangulator.pdb

@@ -1,0 +1,183 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{C8CF8A16-F43B-49A0-92CF-1F28DF741D39}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bnoerj.AI.SharpSteer</RootNamespace>
+    <AssemblyName>SharpSteer.Demo</AssemblyName>
+    <XnaFrameworkVersion>v2.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>
+    </Thumbnail>
+    <XnaCrossPlatformGroupID>{7a8c145a-1f4a-4da9-939e-ec6769bb6197}</XnaCrossPlatformGroupID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeferredDraw.cs">
+      <Name>DeferredDraw</Name>
+    </Compile>
+    <Compile Include="Draw.cs">
+      <Name>Draw</Name>
+    </Compile>
+    <Compile Include="FixedFont.cs">
+      <Name>FixedFont</Name>
+    </Compile>
+    <Compile Include="PlugIns\Boids\BoidsPlugIn.cs">
+      <Name>BoidsPlugIn</Name>
+    </Compile>
+    <Compile Include="PlugIns\Ctf\CtfBase.cs">
+      <Name>CtfBase</Name>
+    </Compile>
+    <Compile Include="PlugIns\Ctf\CtfEnemy.cs">
+      <Name>CtfEnemy</Name>
+    </Compile>
+    <Compile Include="PlugIns\Ctf\CtfPlugIn.cs">
+      <Name>CtfPlugIn</Name>
+    </Compile>
+    <Compile Include="PlugIns\Ctf\CtfSeeker.cs">
+      <Name>CtfSeeker</Name>
+    </Compile>
+    <Compile Include="PlugIns\Ctf\Globals.cs">
+      <Name>Globals</Name>
+    </Compile>
+    <Compile Include="PlugIns\LowSpeedTurn\LowSpeedTurn.cs">
+      <Name>LowSpeedTurn</Name>
+    </Compile>
+    <Compile Include="PlugIns\LowSpeedTurn\LowSpeedTurnPlugIn.cs">
+      <Name>LowSpeedTurnPlugIn</Name>
+    </Compile>
+    <Compile Include="PlugIns\MapDrive\GCRoute.cs">
+      <Name>GCRoute</Name>
+    </Compile>
+    <Compile Include="PlugIns\MapDrive\MapDrivePlugIn.cs">
+      <Name>MapDrivePlugIn</Name>
+    </Compile>
+    <Compile Include="PlugIns\MapDrive\MapDriver.cs">
+      <Name>MapDriver</Name>
+    </Compile>
+    <Compile Include="PlugIns\MapDrive\TerrainMap.cs">
+      <Name>TerrainMap</Name>
+    </Compile>
+    <Compile Include="PlugIns\MultiplePursuit\MpBase.cs">
+      <Name>MpBase</Name>
+    </Compile>
+    <Compile Include="PlugIns\MultiplePursuit\MpPlugIn.cs">
+      <Name>MpPlugIn</Name>
+    </Compile>
+    <Compile Include="PlugIns\MultiplePursuit\MpPursuer.cs">
+      <Name>MpPursuer</Name>
+    </Compile>
+    <Compile Include="PlugIns\MultiplePursuit\MpWanderer.cs">
+      <Name>MpWanderer</Name>
+    </Compile>
+    <Compile Include="PlugIns\OneTurning\OneTurning.cs">
+      <Name>OneTurning</Name>
+    </Compile>
+    <Compile Include="PlugIns\OneTurning\OneTurningPlugIn.cs">
+      <Name>OneTurningPlugIn</Name>
+    </Compile>
+    <Compile Include="PlugIns\Pedestrian\Globals.cs">
+      <Name>Globals</Name>
+    </Compile>
+    <Compile Include="PlugIns\Pedestrian\Pedestrian.cs">
+      <Name>Pedestrian</Name>
+    </Compile>
+    <Compile Include="PlugIns\Pedestrian\PedestrianPlugIn.cs">
+      <Name>PedestrianPlugIn</Name>
+    </Compile>
+    <Compile Include="PlugIns\Soccer\AABBox.cs">
+      <Name>AABBox</Name>
+    </Compile>
+    <Compile Include="PlugIns\Soccer\Ball.cs">
+      <Name>Ball</Name>
+    </Compile>
+    <Compile Include="PlugIns\Soccer\Globals.cs">
+      <Name>Globals</Name>
+    </Compile>
+    <Compile Include="PlugIns\Soccer\Player.cs">
+      <Name>Player</Name>
+    </Compile>
+    <Compile Include="PlugIns\Soccer\SoccerPlugIn.cs">
+      <Name>SoccerPlugIn</Name>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs">
+      <Name>Program</Name>
+    </Compile>
+    <Compile Include="Demo.cs">
+      <Name>Demo</Name>
+    </Compile>
+    <Compile Include="PlugIns\Boids\Boid.cs">
+      <Name>Boid</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico">
+      <Name>Game</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content-v1.contentproj">
+      <Project>{fd5d2153-a866-438e-9e10-8e3e314db811}</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpSteer\SharpSteer-v2.x86.csproj">
+      <Project>{12BFDAB0-C79E-4191-8A1C-7A62D7A79877}</Project>
+      <Name>SharpSteer.x86</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.NestedContent.targets" />
+</Project>

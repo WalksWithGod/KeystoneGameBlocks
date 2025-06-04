@@ -1,0 +1,11 @@
+bin\Debug\TestSmartThreadPool.exe
+bin\Debug\TestSmartThreadPool.pdb
+bin\Debug\SmartThreadPool.dll
+bin\Debug\UsageControl.dll
+bin\Debug\SmartThreadPool.pdb
+bin\Debug\UsageControl.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TestSmartThreadPool.Form1.resources
+obj\Debug\TestSmartThreadPool.csproj.GenerateResource.Cache
+obj\Debug\TestSmartThreadPool.exe
+obj\Debug\TestSmartThreadPool.pdb

@@ -1,0 +1,1753 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0110)http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php -->
+<HTML lang=en xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Gamasutra: Robert Boyd's Blog - A Kickstarter Without a Cause - Class of Heroes 2</TITLE>
+<SCRIPT type=text/javascript 
+src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/jquery-1.4.2.js"></SCRIPT>
+
+<META name=node content=228>
+<META name=pagecaching content=937>
+<META name=keywords 
+content="game development, game developer, game programming, game programmer, videogame, artificial intelligence, 3D animation, game design, 3D modeling, game business, game jobs, game directory, game development software, game technology, 3D technology, game producer, game audio, game animation, virtual reality, digital entertainment, PC game, Xbox game, game news, new game, arcade development, Nintendo development, Playstation development, Playstation 2, PS2, Dreamcast development, Game Developer magazine, Computer Game Developers Conference, Game Developers Conference, Independent Game Developers Conference, CMP Game Media Group, game industry research, online game development, digital assets, free textures, free 3D models, free shaders, Gamasutra Exchange, 3D Studio Max textures"><LINK 
+rel=stylesheet type=text/css 
+href="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/styles.css">
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type><LINK 
+title="Gamasutra Article Feed" rel=alternate type=application/rss+xml 
+href="http://feeds.feedburner.com/GamasutraFeatureArticles/"><LINK 
+title="Gamasutra News Feed" rel=alternate type=application/rss+xml 
+href="http://feeds.feedburner.com/GamasutraNews/"><LINK 
+title="Gamasutra Columns Feed" rel=alternate type=application/rss+xml 
+href="http://feeds.feedburner.com/GamasutraColumns/"><LINK 
+title="Gamasutra Jobs Feed" rel=alternate type=application/rss+xml 
+href="http://feeds.feedburner.com/GamasutraJobs/"><LINK rel=stylesheet 
+type=text/css 
+href="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/redesign_comments.css">
+<SCRIPT type=text/javascript 
+src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/redesign_comments.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+
+function checkMail(obj){
+	
+	var think_opt_out = document.getElementById('Think_Opt_Out');
+	
+	if (document.getElementById('Think_Opt_Out').checked) {
+	
+		document.getElementById('Think_Opt_In').value = 0;
+	} else {
+	
+		document.getElementById('Think_Opt_In').value = 1;
+	}
+	var firstname = document.getElementById('firstname').value;
+	if (firstname == ""){
+		alert('Please provide your first name');
+		return false;
+	} 
+	
+	if (document.getElementById('lastname').value == ''){
+		alert("Please provide your lastt name");
+		return false;
+	} 
+	
+	
+	var x = document.getElementById('EmailAddr').value;
+	
+	var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if (filter.test(x)) { return true; }
+	else  { alert('Invalid Email Address detected. Please correct.'); return false; }
+	
+	
+}
+
+</SCRIPT>
+
+<SCRIPT type=text/javascript 
+src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/md5.js"></SCRIPT>
+<LINK rel=stylesheet type=text/css 
+href="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/styles(1).css">
+<META name=GENERATOR content="MSHTML 9.00.8112.16441"></HEAD>
+<BODY style="MARGIN: 0px">
+<DIV id=sitetabs>Our Properties: <A 
+href="http://www.gamasutra.com/">Gamasutra</A> <A 
+href="http://www.gamecareerguide.com/">GameCareerGuide</A> <A 
+href="http://www.indiegames.com/">IndieGames</A> <A 
+href="http://www.indieroyale.com/">Indie Royale</A> <A 
+href="http://www.gdconf.com/">GDC</A> <A href="http://www.igf.com/">IGF</A> <A 
+href="http://www.gdmag.com/">Game Developer Magazine</A> <A 
+href="http://www.game-advertising-online.com/">GAO</A> </DIV>
+<DIV id=headerBox><SPAN id=headerText>My Message</SPAN> <A id=headerCloseButton 
+href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#">close</A> 
+</DIV>
+<DIV id=wrapper><!-- Width: 999px -->
+<DIV id=header><!-- Width: 999px -->
+<TABLE style="MARGIN: 5px 0px 0px" border=0 cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD><A href="http://www.gamasutra.com/"><IMG border=0 
+      alt="Gamasutra: The Art &amp; Business of Making Games" 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gamasutra_logo.png" 
+      width=243 height=77></A><IMG alt=spacer 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=27> </TD>
+    <TD width=728><!-- 728x90 Leaderboard allowtransparency="true" --><!--/* OpenX Javascript Tag v2.8.1 */--><!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://ads.techweb.com/www/delivery/...'
+  * to
+  *   'https://ads.techweb.com/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */-->
+      <SCRIPT type=text/javascript><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.techweb.com/www/delivery/ajs.php':'http://ads.techweb.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=12");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></SCRIPT>
+      <NOSCRIPT></NOSCRIPT></TD></TR></TBODY></TABLE></DIV>
+<DIV id=ad><!-- Width: 160 px; margin-left: 5px skyscrapper--><!--right hand ads start here--><!-- 160x600 Skyscraper allowtransparency="true" style="FILTER: chroma(color=#FFFFFE)" --><!--/* OpenX Javascript Tag v2.8.1 */--><!--/*
+  * The backup image section of this tag has been generated for use on a
+  * non-SSL page. If this tag is to be placed on an SSL page, change the
+  *   'http://ads.techweb.com/www/delivery/...'
+  * to
+  *   'https://ads.techweb.com/www/delivery/...'
+  *
+  * This noscript section of this tag only shows image banners. There
+  * is no width or height in these banners, so if you want these tags to
+  * allocate space for the ad before it shows, you will need to add this
+  * information to the <img> tag.
+  *
+  * If you do not want to deal with the intricities of the noscript
+  * section, delete the tag (from <noscript>... to </noscript>). On
+  * average, the noscript tag is called from less than 1% of internet
+  * users.
+  */-->
+<SCRIPT type=text/javascript><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.techweb.com/www/delivery/ajs.php':'http://ads.techweb.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=21");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></SCRIPT>
+<NOSCRIPT></NOSCRIPT><!-- /160x600 Skyscraper --><BR>
+<DIV style="TEXT-ALIGN: center"><BR><!--/* 160x160 sponsor 1 OpenX Javascript Tag v2.8.5 */-->
+<SCRIPT type=text/javascript><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.techweb.com/www/delivery/ajs.php':'http://ads.techweb.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=143");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></SCRIPT>
+<NOSCRIPT></NOSCRIPT><BR><BR><!--/* 160x160 sponsor 2 OpenX Javascript Tag v2.8.5 */-->
+<SCRIPT type=text/javascript><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://ads.techweb.com/www/delivery/ajs.php':'http://ads.techweb.com/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=144");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></SCRIPT>
+<NOSCRIPT></NOSCRIPT></DIV><!--right hand ads end here--></DIV>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=829 bgColor=#ffffff 
+align=left>
+  <TBODY>
+  <TR>
+    <TD id=hQuickLinks vAlign=middle width=625 align=right><IMG border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A 
+      href="http://www.gamasutra.com/php-bin/news_index.php">news</A><IMG 
+      border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A 
+      href="http://www.gamasutra.com/php-bin/article_display.php">features</A><IMG 
+      border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A href="http://www.gamasutra.com/blogs/">Blogs</A><IMG border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A href="http://www.gamasutra.com/jobs/">jobs/resumes</A><IMG 
+      border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A 
+      href="http://www.gamasutra.com/contractors/contractor_display.php">contractors</A><IMG 
+      border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A 
+      href="https://store.cmpgame.com/storefront.php?loc=&amp;skin=gamasutra_redesign">store</A><IMG 
+      border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A 
+      href="http://www.gamasutra.com/static2/rssfeeds.html">rss</A><IMG border=0 
+      src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+      width=7> <A href="http://twitter.com/gamasutra">twitter</A> </TD>
+    <TD id=searchBox vAlign=middle width=209 align=center>
+      <FORM 
+      style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" 
+      method=get name=topsearch action=/search/>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width="90%">
+        <TBODY>
+        <TR>
+          <TD class=searchText vAlign=top width=19 align=left>&nbsp;</TD>
+          <TD class=searchText vAlign=middle width=60>&nbsp;SEARCH</TD>
+          <TD vAlign=middle width=100 align=center><INPUT class=search 
+            name=search_text size=10></TD>
+          <TD height=30 vAlign=middle width=30 align=right><SPAN 
+            class=whiteBorder><A class=searchButton 
+            onclick="javascript: document.topsearch.submit(); return false;" 
+            href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">GO</A></SPAN>&nbsp;&nbsp;</TD></TR></TBODY></TABLE></FORM></TD></TR>
+  <TR>
+    <TD id=hQuickLinks_topics vAlign=middle width=829 colSpan=2 align=right>
+      <UL id=topicmenu>
+        <LI id=topicmenu_all_selected><A 
+        href="http://www.gamasutra.com/">ALL</A> </LI>
+        <LI id=topicmenu_console><A 
+        href="http://www.gamasutra.com/topic/console-pc">CONSOLE/PC GAMES</A> 
+        </LI>
+        <LI id=topicmenu_social><A 
+        href="http://www.gamasutra.com/topic/social-online">SOCIAL/ONLINE 
+        GAMES</A> </LI>
+        <LI id=topicmenu_smartphone><A 
+        href="http://www.gamasutra.com/topic/smartphone-tablet">SMARTPHONE/TABLET 
+        GAMES</A> </LI>
+        <LI id=topicmenu_indie><A 
+        href="http://www.gamasutra.com/topic/indie">INDEPENDENT GAMES</A> </LI>
+        <LI id=topicmenu_serious><A 
+        href="http://www.gamasutra.com/topic/serious">SERIOUS GAMES</A> 
+    </LI></UL></TD></TR>
+  <TR>
+    <TD style="PADDING-TOP: 0px" width=829 colSpan=2>
+      <TABLE style="MARGIN-TOP: -2px" border=0 cellSpacing=0 cellPadding=0 
+      width=829>
+        <TBODY>
+        <TR>
+          <TD width=2><IMG border=0 
+            src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+            width=2></TD>
+          <TD bgColor=#eeeeee vAlign=top width=177>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width=177>
+              <TBODY>
+              <TR>
+                <TD id=memberLoginHeading class=whiteTop bgColor=#82bc7a 
+                height=19 width=177></TD></TR>
+              <TR>
+                <TD id=memberLogin></TD></TR></TBODY></TABLE><IFRAME 
+            style="DISPLAY: none" id=searchease_login_iframe height=10 
+            src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/index.htm" 
+            frameBorder=0 width=10 name=myInlineFrame scrolling=no></IFRAME>
+            <SCRIPT type=text/javascript 
+            src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/login.js"></SCRIPT>
+
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width=177>
+              <TBODY>
+              <TR>
+                <TD colSpan=4><A 
+                  href="http://www.gamasutra.com/php-bin/news_index.php"><IMG 
+                  style="MARGIN-BOTTOM: 5px" class=whiteTop border=0 
+                  alt="Latest News" 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/LatestNews_header.gif"></A> 
+                </TD></TR>
+              <TR>
+                <TD rowSpan=25 width=5><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  width=5> </TD>
+                <TD class=leftNavJobs colSpan=2><A 
+                  href="http://www.gamasutra.com/php-bin/news_index.php"><STRONG>View 
+                  All</STRONG></A> </TD>
+                <TD rowSpan=25 width=5><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  width=5> </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD class=leftNavJobs colSpan=2><STRONG>March 28, 
+                2012</STRONG></TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157><A 
+                  href="http://www.gamasutra.com/view/news/167390/DeNA_We_can_get_at_least_5M_out_of_a_game_developed_by_seven_people.php">DeNA: 
+                  'We can get at least $5M out of a game developed by seven 
+                  people'</A> [<A title="2 comments" 
+                  href="http://www.gamasutra.com/view/news/167390/DeNA_We_can_get_at_least_5M_out_of_a_game_developed_by_seven_people.php#comments">2</A>] 
+                </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157><A 
+                  href="http://www.gamasutra.com/view/news/167471/6waves_drops_Lolapps_name_announces_new_publishing_deals.php">6waves 
+                  drops 'Lolapps' name, announces new publishing deals</A> 
+</TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157><A 
+                  href="http://www.gamasutra.com/view/news/167323/NightSky_dev_on_Japanese_game_critics_ditching_the_term_indie.php"><I>NightSky</I> 
+                  dev on Japanese game critics, ditching the term 'indie'</A> 
+                  [<A title="11 comments" 
+                  href="http://www.gamasutra.com/view/news/167323/NightSky_dev_on_Japanese_game_critics_ditching_the_term_indie.php#comments">11</A>] 
+                </TD></TR>
+              <TR>
+                <TD colSpan=2><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  height=10></TD></TR></TBODY></TABLE>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width=177>
+              <TBODY>
+              <TR>
+                <TD colSpan=4><A 
+                  href="http://www.gamasutra.com/php-bin/article_display.php"><IMG 
+                  style="MARGIN-BOTTOM: 5px" class=whiteTop border=0 
+                  alt="Latest Features" 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/LatestFeatures_header.gif"></A> 
+                </TD></TR>
+              <TR>
+                <TD rowSpan=25 width=5><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  width=5> </TD>
+                <TD class=leftNavJobs colSpan=2><A 
+                  href="http://www.gamasutra.com/php-bin/article_display.php"><STRONG>View 
+                  All</STRONG></A> </TD>
+                <TD rowSpan=25 width=5><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  width=5> </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD class=leftNavJobs colSpan=2><STRONG>March 28, 
+                2012</STRONG></TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 alt=arrow 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157><A 
+                  href="http://www.gamasutra.com/view/feature/167392/sad_but_true_we_cant_prove_when_.php">Sad 
+                  But True: We Can't Prove When Super Mario Bros. Came Out</A> 
+                  [<A title="18 comments" 
+                  href="http://www.gamasutra.com/view/feature/167392/sad_but_true_we_cant_prove_when_.php#comments">18</A>] 
+                </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 alt=arrow 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157><A 
+                  href="http://www.gamasutra.com/view/feature/167214/rational_design_the_core_of_.php">Rational 
+                  Design: The Core of <I>Rayman Origins</I></A> [<A 
+                  title="7 comments" 
+                  href="http://www.gamasutra.com/view/feature/167214/rational_design_the_core_of_.php#comments">7</A>] 
+                </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 alt=arrow 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157><A 
+                  href="http://www.gamasutra.com/view/feature/167213/sponsored_feature_life_beyond_app_.php">Sponsored 
+                  Feature: Life Beyond App Stores - Carrier App Stores Are Ready 
+                  To Rule</A> </TD></TR>
+              <TR>
+                <TD colSpan=2><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  height=10></TD></TR></TBODY></TABLE>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width=177>
+              <TBODY>
+              <TR>
+                <TD colSpan=4><A href="http://www.gamasutra.com/jobs/"><IMG 
+                  style="MARGIN-BOTTOM: 5px" class=whiteTop border=0 
+                  alt="Latest Jobs" 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/LatestJobs_header.gif"></A> 
+                </TD></TR>
+              <TR>
+                <TD rowSpan=25 width=5><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  width=5></TD>
+                <TD class=leftNavJobs colSpan=2><A 
+                  href="http://www.gamasutra.com/jobs/"><STRONG>View 
+                  All</STRONG></A> &nbsp;&nbsp;&nbsp; <A 
+                  href="http://jobs.gamasutra.com/employerx/"><STRONG>Post a 
+                  Job</STRONG></A> &nbsp;&nbsp;&nbsp; <A 
+                  href="http://feeds.feedburner.com/GamasutraJobs"><STRONG>RSS</STRONG></A> 
+                </TD>
+                <TD rowSpan=25 width=5><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  width=5></TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD class=leftNavJobs colSpan=2><STRONG>March 28, 
+                2012</STRONG></TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157>International Game 
+                  Technology<BR><A 
+                  href="http://jobs.gamasutra.com/jobseekerx/viewjobrss.asp?cjid=29586&amp;accountno=226">Senior 
+                  Graphics Engineer</A> </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157>International Game 
+                  Technology<BR><A 
+                  href="http://jobs.gamasutra.com/jobseekerx/viewjobrss.asp?cjid=29587&amp;accountno=226">Project 
+                  Manager</A> </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157>International Game 
+                  Technology<BR><A 
+                  href="http://jobs.gamasutra.com/jobseekerx/viewjobrss.asp?cjid=29583&amp;accountno=226">Production 
+                  Artist III</A> </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157>International Game 
+                  Technology<BR><A 
+                  href="http://jobs.gamasutra.com/jobseekerx/viewjobrss.asp?cjid=29584&amp;accountno=226">Senior 
+                  Motion Graphics Artist (Graphic Designer)</A> </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157>Linden Lab<BR><A 
+                  href="http://jobs.gamasutra.com/jobseekerx/viewjobrss.asp?cjid=29585&amp;accountno=116773">Engineering 
+                  Managers</A> </TD></TR>
+              <TR>
+                <TD class=dot_line colSpan=2>&nbsp;</TD></TR>
+              <TR>
+                <TD vAlign=top width=10><IMG border=0 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/gray_arrow2.gif" 
+                  width=6 height=10></TD>
+                <TD class=leftNavJobs width=157>Ignite Game Technologies<BR><A 
+                  href="http://jobs.gamasutra.com/jobseekerx/viewjobrss.asp?cjid=29580&amp;accountno=117217">Video 
+                  and Multi Media Editor</A> </TD></TR>
+              <TR>
+                <TD colSpan=2><IMG border=0 alt=spacer 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+                  height=10></TD></TR></TBODY></TABLE></TD>
+          <TD width=2><IMG border=0 
+            src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+            width=2></TD>
+          <TD id=content vAlign=top width=650><IMG border=0 alt=Blogs 
+            src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/hdr_blogs.gif" 
+            width=650 height=41><BR><BR>
+            <TABLE border=0 cellSpacing=0 cellPadding=0 width=650>
+              <TBODY>
+              <TR>
+                <TD rowSpan=30 width=10>&nbsp;</TD>
+                <TD width=630><SPAN class=newsTitle>A Kickstarter Without a 
+                  Cause - Class of Heroes 2<BR></SPAN><SPAN class=newsAuth>by <A 
+                  href="http://www.gamasutra.com/blogs/author/RobertBoyd/867686/">Robert 
+                  Boyd</A> on 03/28/12 11:08:00 am &nbsp; <IMG border=0 
+                  alt="Expert Blogs" 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/expertIcon_gamaBlog.gif" 
+                  valign="bottom"> &nbsp; <IMG border=0 alt="Featured Blogs" 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/featuredIcon_gamaBlog.gif" 
+                  valign="bottom"> <BR></SPAN>
+                  <TABLE style="MARGIN-TOP: 5px" border=0 cellSpacing=0 
+                  cellPadding=0 width=630>
+                    <TBODY>
+                    <TR>
+                      <TD class=newsNav vAlign=bottom width=150><A 
+                        style="FONT-SIZE: 14px; TEXT-DECORATION: underline" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comments">16 
+                        comments</A> </TD>
+                      <TD class=newsNav vAlign=bottom width=90><A 
+                        href="http://twitter.com/?status=RT @gamasutra: A Kickstarter Without a Cause - Class of Heroes 2 http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/" 
+                        type=button name=twitter_share target=_blank><IMG 
+                        border=0 alt="Share on Twitter" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/twitter.gif" 
+                        height=20></A> </TD>
+                      <TD class=newsNav vAlign=bottom width=140><A 
+                        href="http://www.facebook.com/sharer.php?u=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" 
+                        type=button name=fb_share target=_blank><IMG border=0 
+                        alt="Share on Facebook" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/facebook_button.png"></A> 
+<!-- <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script> --></TD>
+                      <TD class=newsNav vAlign=bottom width=75>
+                        <SCRIPT type=text/javascript 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/plusone.js"></SCRIPT>
+                        <G:PLUSONE count="false" size="medium"></G:PLUSONE></TD>
+                      <TD class=newsNav vAlign=bottom width=290 align=right><A 
+                        href="http://www.gamasutra.com/blogs/rss/"><IMG border=0 
+                        alt=RSS 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/icon_rss.gif" 
+                        width=15 height=15></A> </TD></TR></TBODY></TABLE></TD>
+                <TD rowSpan=30 width=10>&nbsp;</TD></TR>
+              <TR>
+                <TD class=dot_line_tall>&nbsp;</TD></TR>
+              <TR>
+                <TD class=newsDate><STRONG></STRONG>&nbsp;&nbsp;<EM>Posted 
+                  03/28/12 11:08:00 am</EM> </TD></TR>
+              <TR>
+                <TD class=dot_line_tall>&nbsp;</TD></TR>
+              <TR>
+                <TD class=newsText>
+                  <P>I was a huge Working Designs fan back in the day. I bought 
+                  a Sega CD just to play their games (I imagine most Sega CD 
+                  owners were the same way). I spent many an hour on classics 
+                  like Dragon Force, Alundra, Arc the Lad 2, and the Growlanser 
+                  game. Lunar: Eternal Blue is my favorite game of all time. So 
+                  when I heard that Vic Ireland (president of Working Designs 
+                  before it went out of business) was teaming up with Monkey Paw 
+                  Games to start a kickstarter to localize an unspecified JRPG, 
+                  my excitement was high. &nbsp;Sure, I was excited by stuff 
+                  like the Double Fine &amp; Wasteland 2 kickstarters, but a 
+                  JRPG localization kickstarter? That was right up my 
+                  alley.<BR><BR>Then their kickstarter actually came out and 
+                  that excitement instantly evaporated.<BR><BR>The <A 
+                  href="http://www.kickstarter.com/projects/1272149684/class-of-heroes-2-deluxe-for-the-psp-system">Class 
+                  of Heroes 2 kickstarter</A> is a mess in so many ways that 
+                  it's hard to know where to begin.<BR><BR>1 - Class of Heroes 
+                  is not a series with a diehard fan base in the US. Not only 
+                  that, but the first game in the series (the only one that has 
+                  come out so far) has a 60-61% average on Gamerankings so 
+                  they've got an uphill battle trying to convince people that 
+                  the sequels are much better than the first game before they've 
+                  even begun.<BR><BR>2 - There's no digital reward tier. A 
+                  $5-$15 tier where you get a free download of the game tends to 
+                  be most popular tier for successful kickstarters but here, 
+                  there's no way to get a digital copy of the game through the 
+                  kickstarter. The game will be available for download when it 
+                  comes out but kickstarters supporters will have to buy the 
+                  game just like everyone else. <BR><BR>Not only is there no 
+                  download reward tier but there are no digital rewards of any 
+                  kind. No soundtrack download, no making-of video, no online 
+                  art book, nothing. This is just a hunch, but I'm guessing that 
+                  if you're a big fan of digital distribution, you don't care 
+                  that much for random video game collectibles. I know that's 
+                  how I am - back when I was a teenager I loved stuff like the 
+                  Lunar remake boxes but as an adult, stuff like that would just 
+                  be clutter filling up my house.<BR><BR>3 - The PSP is a dead 
+                  system in the US. Oh but wait, you can play PSP games on the 
+                  Vita! Oh right, that only works with digital copies of games 
+                  (see #2).<BR><BR>4 - "<SPAN>Suffice to say, we think there are 
+                  enough fans like us out there that want to see more J-RPGs 
+                  with great localization and presentation.&nbsp; Fans that want 
+                  their J-RPG experiences to be memorable regardless of the 
+                  platform.&nbsp; We know that this silenced J-RPG fanbase, 
+                  under-served and forgotten, isn’t thrilled with where things 
+                  are going.&nbsp; So, now’s the time to speak up and get our 
+                  happy tomorrow." And they're giving us the opportunity to show 
+                  our JRPG support with a Wizardry clone - aka a game with a 
+                  very old-school Western RPG gameplay style.<BR><BR>5 - They 
+                  don't show off the game enough. This isn't a work-in-progress 
+                  - the game is already out in Japan. And yet, there's no 
+                  trailer and only a single screenshot.<BR><BR>6 - The early 
+                  tiers are borderline offensive. The primary reward for the $5 
+                  and $10 tiers is a thank you email/letter. Saying thank you 
+                  when someone donates to your kickstarter is just common 
+                  courtesy; it shouldn't be a special reward.<BR><BR>7 - Vague 
+                  on the rewards. The primary reward is the special edition 
+                  boxed set at $59 but there are no screenshots of what the 
+                  special edition is going to look like or a clear indicator of 
+                  what the special edition is going to include. Similar thing 
+                  with the posters.<BR><BR>8 - There's no clear description of 
+                  how the money is going to be used. Make the game? Eh, the game 
+                  is already made. Release an English version of the game? 
+                  That's going to happen regardless of how the kickstarter does. 
+                  Right now, they say the money will be used to improve the 
+                  localization (plus provide the physical rewards) but what 
+                  exactly does that entail?<BR><BR>But beyond all of these many 
+                  problems with this kickstarter, there's an even bigger issue. 
+                  There's no cause for fans to rally behind. The kickstarter 
+                  starts out with a rallying cry to show your support for JRPGs 
+                  but then transforms into a rallying cry to show your support 
+                  for fancy special editions. Setting aside how this isn't a 
+                  particular good example of either (it's more of a Western RPG 
+                  with anime art and who wants a special edition for some random 
+                  game on a dead system?), it's giving a mixed message. I'd love 
+                  to show my support for more JRPGs but on the other hand, I 
+                  don't want to show my support for lavish special edition box 
+                  sets. I like getting cheap games from Steam, XBLA, PSN, and 
+                  other sites. I imagine that Working Designs' ever-increasingly 
+                  complex box sets were one of the factors involved in their 
+                  eventually demise. I don't know about you, but I'd much rather 
+                  have Working Designs still around and localizing great RPGs 
+                  than have a replica pendant or boxing puppet.<BR><BR>I'd love 
+                  to see this kickstarter succeed if only as a step to seeing 
+                  GaijinWorks and Monkey Paw Games turn into Working Designs 
+                  back at the height of its glory. For that matter, I'd even 
+                  like to throw a few bucks their way to buy Class of Heroes 2 
+                  since it sounds like a fun game (I've read from a few 
+                  different places that the series gets much better with each 
+                  new installment). Sadly, as a PSP Go owner who is planning on 
+                  buying a Vita later this year, even if I donated to their 
+                  kickstarter, I'd still have to buy the game again later. No 
+                  thanks. I'll just buy the game when it comes 
+              out.</SPAN></P></TD></TR>
+              <TR>
+                <TD class=dot_line_tall>&nbsp;</TD></TR></TBODY></TABLE>
+            <TABLE style="MARGIN-TOP: 0px" border=0 cellSpacing=0 cellPadding=0 
+            width="100%">
+              <TBODY>
+              <TR>
+                <TD width=10>&nbsp;</TD>
+                <TD>
+                  <DIV class=all_comments><A 
+                  style="FONT-SIZE: 12px; FONT-WEIGHT: bold" 
+                  name=comments>Comments</A><BR>
+                  <TABLE style="WIDTH: 630px" id=comment144028 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/JimPerry/1570/">Jim 
+                        Perry</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144028">28 
+                        Mar 2012 at 9:29 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait.jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144028_show class=single_comment>This has 
+                        "Fail" written all over it. There's no way I would throw 
+                        $60 at a Kickstarter as the minimum to get a copy of the 
+                        game. :( </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144028_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144028" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144028_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144028_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144028_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144028_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144028_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144028><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144028 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144028_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144028); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <TABLE style="WIDTH: 630px" id=comment144038 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/UjnHunter/332876/">Ujn 
+                        Hunter</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144038">28 
+                        Mar 2012 at 10:06 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(1).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144038_show class=single_comment>While I 
+                        agree on the poor choice of "Class of Heroes 2" as the 
+                        title and that they should have included a Digital tier 
+                        for people like you. I am in the complete opposite camp 
+                        when it comes to Physical &amp; Digital games. I 
+                        wouldn't have donated to the Double Fine kickstarter at 
+                        all unless they had a Physical Edition and I'd have no 
+                        interest in this kickstarter either if it was Digital 
+                        only. Why "back" something that you can just grab later 
+                        (assuming the funding is successful) for cheaper? 
+                        Granted with kickstarters there is no guarantee you'll 
+                        get anything at all for backing projects and no recourse 
+                        for getting your money back either.<BR><BR>Edit: Also as 
+                        someone who doesn't care about the "current" generation 
+                        of the PSP Vita and the 3DS, but still enjoy playing my 
+                        original PSP &amp; DS, the chance to keep bringing 
+                        titles out for those systems seems exactly what 
+                        something like kickstarter would be perfect for. 
+                      </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144038_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144038" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144038_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144038_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144038_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144038_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144038_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144038><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144038 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144038_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144038); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <DIV align=right>
+                  <TABLE style="TEXT-ALIGN: right; WIDTH: 550px" 
+                  id=comment144041 border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top colSpan=2>
+                        <HR style="TEXT-ALIGN: right; WIDTH: 550px" 
+                        class=hr_comment align=right SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 220px; PADDING-RIGHT: 5px; PADDING-TOP: 5px" 
+                      vAlign=top><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/867686/">Robert 
+                        Boyd</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144041">28 
+                        Mar 2012 at 10:12 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 550px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(2).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144041_show class=single_comment>I'm not 
+                        saying that there shouldn't be higher tiers with cool 
+                        physical rewards for people who like limited editions. 
+                        I'm saying that there's a problem when there aren't 
+                        really any worthwhile low tiers. For example, the Double 
+                        Fine kickstarter made almost half its money from the $15 
+                        &amp; $30 tiers. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Like</A> 
+                        <DIV 
+                      style="DISPLAY: inline; FLOAT: right"></DIV></DIV></TD></TR></TBODY></TABLE></DIV>
+                  <TABLE style="WIDTH: 630px" id=comment144043 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/867686/">Robert 
+                        Boyd</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144043">28 
+                        Mar 2012 at 10:26 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(2).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144043_show class=single_comment>Also, 
+                        this is terrible timing for a JRPG localization 
+                        kickstarter. Last year, there wasn't much (Trails in the 
+                        Sky on the PSP was the highlight) but this year, we've 
+                        already gotten Final Fantasy XIII-2, Tales of Graces F, 
+                        and we're getting Xenoblade Chronicles in a week or two. 
+                        And that's just the high profile stuff.<BR><BR>EDIT: 
+                        Also, XSeed Games just announced a Wizardry-esque RPG 
+                        called Unchained Blades for the 3DS &amp; PSP today. 
+                        Horrible, horrible timing for this Class of Heroes 2 
+                        kickstarter. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144043_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144043" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144043_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144043_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144043_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144043_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144043_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144043><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144043 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144043_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144043); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <TABLE style="WIDTH: 630px" id=comment144048 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/EZacharyKnight/593003/">E 
+                        Zachary Knight</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144048">28 
+                        Mar 2012 at 10:56 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(3).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144048_show class=single_comment>If it is 
+                        any consolation, they are asking for $500k and I very 
+                        much doubt they will get anywhere near that based on 
+                        current trends. With Double Fine and Wasteland 2 we were 
+                        pretty much assured they would succeed based on the 
+                        totals raised by the 2nd day. The same is not happening 
+                        here. 2 days in and only $13k raised.<BR><BR>All that is 
+                        probably based on what you have listed here as its 
+                        weaknesses. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144048_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144048" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144048_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144048_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144048_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144048_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144048_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144048><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144048 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144048_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144048); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <DIV align=right>
+                  <TABLE style="TEXT-ALIGN: right; WIDTH: 550px" 
+                  id=comment144050 border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top colSpan=2>
+                        <HR style="TEXT-ALIGN: right; WIDTH: 550px" 
+                        class=hr_comment align=right SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 220px; PADDING-RIGHT: 5px; PADDING-TOP: 5px" 
+                      vAlign=top><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/867686/">Robert 
+                        Boyd</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144050">28 
+                        Mar 2012 at 11:03 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 550px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(2).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144050_show 
+                        class=single_comment>Actually, it's only been up for 
+                        half a day. If they don't have $50k by the end of today 
+                        (which seems very unlikely), I think we can officially 
+                        call it doomed. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Like</A> 
+                        <DIV 
+                      style="DISPLAY: inline; FLOAT: right"></DIV></DIV></TD></TR></TBODY></TABLE></DIV>
+                  <DIV align=right>
+                  <TABLE style="TEXT-ALIGN: right; WIDTH: 550px" 
+                  id=comment144055 border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top colSpan=2>
+                        <HR style="TEXT-ALIGN: right; WIDTH: 550px" 
+                        class=hr_comment align=right SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 220px; PADDING-RIGHT: 5px; PADDING-TOP: 5px" 
+                      vAlign=top><A 
+                        href="http://www.gamasutra.com/blogs/EZacharyKnight/593003/">E 
+                        Zachary Knight</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144055">28 
+                        Mar 2012 at 11:13 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 550px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(3).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144055_show class=single_comment>Odd. It 
+                        says 29 days to go. Usually it says 31 on its first day 
+                        out. That is what I was basing my comments on. Unless I 
+                        just don't fully understand the campaign lengths on 
+                        Kickstarter. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Like</A> 
+                        <DIV 
+                      style="DISPLAY: inline; FLOAT: right"></DIV></DIV></TD></TR></TBODY></TABLE></DIV>
+                  <TABLE style="WIDTH: 630px" id=comment144049 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/EZacharyKnight/593003/">E 
+                        Zachary Knight</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144049">28 
+                        Mar 2012 at 11:00 am PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(3).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144049_show class=single_comment>I would 
+                        just like to point out an odd reward. The fact that as a 
+                        backer your name will be compiled in the game code. 
+                        Considering most compilers ignore comments and don't 
+                        compile them into the executable file, how are they 
+                        going to make that work without creating a very large 
+                        string or array element that could increase the file 
+                        size (not astronomically but probably noticeable 
+                        depending on number). Also, how would a supporter be 
+                        able to verify such a reward? </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144049_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144049" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144049_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144049_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144049_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144049_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144049_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144049><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144049 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144049_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144049); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <DIV align=right>
+                  <TABLE style="TEXT-ALIGN: right; WIDTH: 550px" 
+                  id=comment144124 border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top colSpan=2>
+                        <HR style="TEXT-ALIGN: right; WIDTH: 550px" 
+                        class=hr_comment align=right SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 220px; PADDING-RIGHT: 5px; PADDING-TOP: 5px" 
+                      vAlign=top><A 
+                        href="http://www.gamasutra.com/blogs/JonathanJennings/886838/">Jonathan 
+                        Jennings</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144124">28 
+                        Mar 2012 at 7:50 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 550px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/questionmark.jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144124_show class=single_comment>probably 
+                        a situation where a PR person tried to define a 
+                        programming application ( comments) and didn't fully 
+                        grasp what they were saying ...at least that's the best 
+                        idea i could come up with besides an extended array as 
+                        you said. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Like</A> 
+                        <DIV 
+                      style="DISPLAY: inline; FLOAT: right"></DIV></DIV></TD></TR></TBODY></TABLE></DIV>
+                  <TABLE style="WIDTH: 630px" id=comment144071 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/ChrisRemo/511506/">Chris 
+                        Remo</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144071">28 
+                        Mar 2012 at 12:13 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(4).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144071_show 
+                        class=single_comment>EZK,<BR><BR>Kickstarter project 
+                        creators can set any length they like for their 
+                        projects. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144071_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144071" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144071_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144071_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144071_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144071_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144071_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144071><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144071 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144071_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144071); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <DIV align=right>
+                  <TABLE style="TEXT-ALIGN: right; WIDTH: 550px" 
+                  id=comment144078 border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top colSpan=2>
+                        <HR style="TEXT-ALIGN: right; WIDTH: 550px" 
+                        class=hr_comment align=right SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 220px; PADDING-RIGHT: 5px; PADDING-TOP: 5px" 
+                      vAlign=top><A 
+                        href="http://www.gamasutra.com/blogs/EZacharyKnight/593003/">E 
+                        Zachary Knight</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144078">28 
+                        Mar 2012 at 12:46 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 550px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(3).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144078_show class=single_comment>Ah. That 
+                        makes a big difference. Thanks. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Like</A> 
+                        <DIV 
+                      style="DISPLAY: inline; FLOAT: right"></DIV></DIV></TD></TR></TBODY></TABLE></DIV>
+                  <TABLE style="WIDTH: 630px" id=comment144076 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">Ryan 
+                        Marshall<BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144076">28 
+                        Mar 2012 at 12:39 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/questionmark.jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144076_show 
+                        class=single_comment>Everything else aside, they are 
+                        targeting fans of traditional RPGs who own a PSP. That's 
+                        not a very broad audience. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144076_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144076" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144076_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144076_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144076_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144076_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144076_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144076><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144076 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144076_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144076); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <DIV align=right>
+                  <TABLE style="TEXT-ALIGN: right; WIDTH: 550px" 
+                  id=comment144077 border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top colSpan=2>
+                        <HR style="TEXT-ALIGN: right; WIDTH: 550px" 
+                        class=hr_comment align=right SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 220px; PADDING-RIGHT: 5px; PADDING-TOP: 5px" 
+                      vAlign=top><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/867686/">Robert 
+                        Boyd</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144077">28 
+                        Mar 2012 at 12:41 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 550px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(2).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144077_show class=single_comment>Not only 
+                        that, but it's not an underserved audience either. The 
+                        PSP already has many great RPGs available for it. 
+                      </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Like</A> 
+                        <DIV 
+                      style="DISPLAY: inline; FLOAT: right"></DIV></DIV></TD></TR></TBODY></TABLE></DIV>
+                  <TABLE style="WIDTH: 630px" id=comment144085 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">Luke 
+                        Mildenhall-Ward<BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144085">28 
+                        Mar 2012 at 1:26 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/questionmark.jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144085_show class=single_comment>It's 
+                        just lazy on many levels. I don't even get the 
+                        impression they care that much judging by the effort put 
+                        into this. It feels like they put the kickstarter 
+                        together in a day and then threw it out there with the 
+                        sentiment: "if it makes money—cool... if not—whatever." 
+                        </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144085_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144085" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144085_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144085_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144085_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144085_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144085_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144085><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144085 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144085_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144085); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <TABLE style="WIDTH: 630px" id=comment144093 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/JamesSadler/888475/">james 
+                        sadler</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144093">28 
+                        Mar 2012 at 2:21 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(5).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144093_show class=single_comment>There's 
+                        lots of good reasons why this is a poorly thought out 
+                        idea, and I agree with all of them. I am also a big fan 
+                        of JRPG's and would love to see the genre see a comeback 
+                        in the states, but this is a bad idea. Give people the 
+                        PSN option, or even steam and they'd see much better 
+                        results. The PSP is dead. </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144093_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144093" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144093_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144093_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144093_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144093_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144093_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144093><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144093 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144093_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144093); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <TABLE style="WIDTH: 630px" id=comment144112 border=0 
+                  cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD colSpan=2>
+                        <HR class=hr_comment SIZE=1 noShade>
+                      </TD></TR>
+                    <TR>
+                      <TD 
+                      style="TEXT-ALIGN: left; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; WIDTH: 300px; PADDING-RIGHT: 5px; PADDING-TOP: 5px"><A 
+                        href="http://www.gamasutra.com/blogs/LukeQuinn/891676/">Luke 
+                        Quinn</A><BR></TD>
+                      <TD 
+                      style="PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #dcebdc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px">
+                        <DIV class=date_comment><A 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144112">28 
+                        Mar 2012 at 4:55 pm PST</A> </DIV></TD></TR></TBODY></TABLE>
+                  <TABLE 
+                  style="MARGIN-TOP: 2px; WIDTH: 630px; MARGIN-BOTTOM: 0px" 
+                  border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                        vAlign=top><IMG 
+                        style="PADDING-BOTTOM: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 2px" 
+                        alt="profile image" 
+                        src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/thumb_portrait(6).jpg"> 
+                      </TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top>
+                        <DIV id=comment144112_show class=single_comment>LOL @ 
+                        "As a supporter, your name will be compiled into the 
+                        game code, though it won't be visible in the 
+                        credits."<BR>I hope they're not talking about putting 
+                        names in as comments, because then the names WON'T be 
+                        "part of every game shipped or downloaded in the US/UK" 
+                        as comments aren't compiled...<BR>What a total bunch of 
+                        wank; That thank you letter that they form fill better 
+                        be the most earnest mass produced email ever. (though 
+                        good on them for going to the effort to make the email 
+                        suitable for printing, forwarding, or screen grabbing 
+                        :D) </DIV></TD></TR>
+                    <TR>
+                      <TD style="TEXT-ALIGN: center; WIDTH: 80px" 
+                      vAlign=top></TD>
+                      <TD style="TEXT-ALIGN: left" vAlign=top><!--
+        <form name="comments144112_like_submit" action="/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php" method="post" style='display:inline;'>
+            <input type="hidden" name="comment_like" value="144112" />
+            <div align="right"><a href="javascript:void(0)" onclick="document.comments144112_like_submit.submit(); return false;">Like</a>  </div>
+        </form>
+-->
+                        <DIV id=comment144112_replyLink>
+                        <DIV id=no_reply_button><A 
+                        href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php">Login 
+                        to Reply or Like</A> 
+                        <DIV 
+                        style="DISPLAY: inline; FLOAT: right"></DIV></DIV></DIV>
+                        <DIV style="DISPLAY: none" id=comment144112_replyForm>
+                        <DIV id=website_comment>Reply | <A 
+                        onclick="document.comments144112_like_submit.submit(); return false;" 
+                        href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Like</A> 
+
+                        <DIV style="DISPLAY: inline; FLOAT: right"></DIV></DIV>
+                        <FORM method=post name=comments144112_reply_submit 
+                        action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php#comment144112><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                        <INPUT name=comment_reply value=144112 type=hidden> 
+                        <INPUT name=comment_type value=reply type=hidden> <A 
+                        onclick="document.comments144112_reply_submit.submit(); return false;" 
+                        href="javascript:void(0)">Submit Reply</A> | <A 
+                        onclick=cancelReplyComment(144112); 
+                        href="javascript:void(0)">Cancel Reply</A> 
+                      </FORM></DIV></TD></TR></TBODY></TABLE>
+                  <DIV id=comment_form>
+                  <HR class=hr_comment SIZE=1 noShade>
+                  <BR>
+                  <FORM method=post name=comments_submit 
+                  action=/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php>
+                  <TABLE border=0 cellSpacing=0 cellPadding=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=td_comment_name>
+                        <DIV id=user_name_comment>none </DIV></TD>
+                      <TD class=td_comment_anonymous vAlign=top></TD>
+                      <TD>&nbsp; </TD></TR>
+                    <TR>
+                      <TD class=td_blank_comment_website>
+                        <DIV id=website_comment>Comment: </DIV></TD>
+                      <TD>
+                        <DIV class=td_comment_website></DIV></TD>
+                      <TD>&nbsp;</TD></TR></TBODY></TABLE><TEXTAREA style="WIDTH: 99%" class=comment_textarea rows=8 name=comment_body></TEXTAREA> 
+                  <INPUT name=comment_type value=comment type=hidden> <BR><BR>
+                  <DIV class=comment_submit><A class=noline 
+                  onclick="document.comments_submit.submit(); return false;" 
+                  href="http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/">Submit 
+                  Comment</A> </DIV></FORM></DIV>
+                  <DIV id=no_comment_form><BR><SPAN class=comment_login><A 
+                  href="http://www.gamasutra.com/sso/login.php?from=http://www.gamasutra.com/blogs/RobertBoyd/20120328/167405/A_Kickstarter_Without_a_Cause__Class_of_Heroes_2.php"><IMG 
+                  border=0 alt="Login to Comment" 
+                  src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/btn_comment.gif" 
+                  width=113 height=16></A> </SPAN><BR></DIV>
+                  <SCRIPT type=text/javascript>
+  if(login.loggedIn)
+    document.getElementById('no_comment_form').style.display='none';
+  else
+    document.getElementById('comment_form').style.display='none';
+
+	function editComment(c)
+	{
+		document.getElementById('comment'+c+'_show').style.display = 'none';
+		document.getElementById('comment'+c+'_edit').style.display = 'block';
+	}
+	
+	function cancelEditComment(c)
+	{
+		document.getElementById('comment'+c+'_show').style.display = 'block';
+		document.getElementById('comment'+c+'_edit').style.display = 'none';
+	}
+	function replyComment(c)
+	{
+            if(login.loggedIn) {
+                document.getElementById('comment'+c+'_replyLink').style.display = 'none';
+		document.getElementById('comment'+c+'_replyForm').style.display = 'block';
+            } else {
+                window.location.assign('/sso/login.php?from=' + document.URL);
+            }
+		
+	}
+	
+	function cancelReplyComment(c)
+	{
+		document.getElementById('comment'+c+'_replyLink').style.display = 'block';
+		document.getElementById('comment'+c+'_replyForm').style.display = 'none';
+	}	
+	
+  </SCRIPT>
+                  </DIV><BR><BR></TD>
+                <TD width=10>&nbsp;</TD></TR></TBODY></TABLE></TD>
+          <TD bgColor=#ffffff rowSpan=30 width=2><IMG border=0 
+            src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/spacer.gif" 
+            width=2> </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- SiteCatalyst code version: H.21.
+Copyright 1996-2010 Adobe, Inc. All Rights Reserved
+More info available at http://www.omniture.com -->
+<SCRIPT language=JavaScript type=text/javascript 
+src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/h_s_code_remote.js"></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript><!--
+    /* You may give each page an identifying name, server, and channel on
+    the next lines. */
+	s.pageName="";
+	s.server="";
+	s.channel="";
+	s.pageType="";
+	s.prop1="";
+	s.prop2="167405";
+	s.prop3="Gamasustra | 167405 | A Kickstarter Without a Cause - Class of Heroes 2";
+	s.prop4="A Kickstarter Without a Cause - Class of Heroes 2";
+	s.prop5="GAMASUTRA BLOG";
+	s.prop6="";
+	s.prop7="Robert Boyd";
+	s.prop8="174.4.34.60 | Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.83 Safari/535.11";
+	s.prop9="";
+	s.prop10="";
+	s.prop13="";
+	/* Conversion Variables */
+	s.campaign="";
+	s.state="";
+	s.zip="";
+	s.events="event5";
+	s.products="";
+	s.purchaseID="";
+	s.eVar1="";
+	s.eVar2="";
+	s.eVar3="";
+	s.eVar4="";
+	s.eVar5="";
+	/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+    var s_code = s.t(); if (s_code) document.write(s_code)//--></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript><!--
+    if (navigator.appVersion.indexOf('MSIE') >= 0) document.write(unescape('%3C') + '\!-' + '-')
+//--></SCRIPT>
+<NOSCRIPT></NOSCRIPT><!--/DO NOT REMOVE/--><!-- End SiteCatalyst code version: H.21. --></DIV>
+<DIV class=footer1>
+<DIV class=footerline></DIV>
+<DIV id=footercontent>
+<DIV class=left><A href="http://www.techweb.com/"><IMG alt="UBM Techweb" 
+src="Gamasutra%20Robert%20Boyd's%20Blog%20-%20A%20Kickstarter%20Without%20a%20Cause%20-%20Class%20of%20Heroes%202_files/logo_ubmtechweb_white.png"></A></DIV><SPAN 
+class=footer_sectiontitle>Game Network</SPAN><BR><A 
+href="http://www.gdconf.com/" target=_blank>Game Developers Conference</A> | <A 
+href="http://www.gdceurope.com/" target=_blank>GDC Europe</A> | <A 
+href="http://www.gdconline.com/" target=_blank>GDC Online</A> | <A 
+href="http://www.gdcchina.com/" target=_blank>GDC China</A> | <A 
+href="http://www.gamasutra.com/" target=_blank>Gamasutra</A> | <A 
+href="http://www.gdmag.com/" target=_blank>Game Developer Magazine</A> | <A 
+href="http://www.game-advertising-online.com/" target=_blank>Game Advertising 
+Online</A><BR><A href="http://www.gamecareerguide.com/" target=_blank>Game 
+Career Guide</A> |<A href="http://www.igf.com/" target=_blank> Independent Games 
+Festival</A> |<!-- <a href="http://fingergaming.com/" target="_blank"> FingerGaming</a> | --> 
+<A href="http://www.indieroyale.com/" target=_blank>Indie Royale</A> | <!--<a href="http://www.worldsinmotion.biz/" target="_blank">WorldsInMotion</a> | --><A 
+href="http://indiegames.com/blog/" target=_blank>IndieGames</A> <!-- | <a href="http://www.gamerbytes.com/" target="_blank">GamerBytes</a> --><BR><BR><SPAN 
+class=footer_sectiontitle>Other UBM TechWeb Networks</SPAN><BR><A 
+href="http://createyournextcustomer.techweb.com/business-technology/" 
+target=_blank>Business Technology</A> | <A 
+href="http://createyournextcustomer.techweb.com/home/products/events/" 
+target=_blank>Business Technology Events</A> | <A 
+href="http://createyournextcustomer.techweb.com/telecommunications/" 
+target=_blank>Telecommunications &amp; Communications Providers</A> <BR><BR>
+<DIV class=footerhr></DIV>
+<DIV class=centered><A href="http://legal.us.ubm.com/privacy-notice-highlights/" 
+target=_blank>Privacy Policy</A> | <A 
+href="http://legal.us.ubm.com/terms-of-service/" target=_blank>Terms of 
+Service</A> | <A href="http://www.gamasutra.com/contactus/">Contact Us</A> | 
+Copyright ©
+<SCRIPT type=text/javascript>
+		  <!--
+		  var currentTime = new Date()
+		  var year = currentTime.getFullYear()
+		  document.write( year)
+		  //-->
+		 </SCRIPT>
+ <!--end footercontent--><A href="http://www.ubmtechweb.com/" target=_blank>UBM 
+TechWeb</A>, <A href="http://legal.us.ubm.com/copyright-notice/" 
+target=_blank>All Rights Reserved</A>.</DIV></DIV></DIV></BODY></HTML>

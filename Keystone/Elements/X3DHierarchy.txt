@@ -1,0 +1,212 @@
+      X3DField -+- SFBool
+                +- SFColor
+                +- SFColorRGBA
+                +- SFDouble
+                +- SFFloat
+                +- SFImage
+                +- SFInt32
+                +- SFNode
+                +- SFRotation
+                +- SFString
+                +- SFTime
+                +- SFVec2d
+                +- SFVec2f
+                +- SFVec3d
+                +- SFVec3f
+                |
+                +- X3DArrayField -+- MFBool
+                                  +- MFColor
+                                  +- MFColorRGBA
+                                  +- MFDouble
+                                  +- MFFloat
+                                  +- MFImage
+                                  +- MFInt32
+                                  +- MFNode
+                                  +- MFRotation
+                                  +- MFString
+                                  +- MFTime
+                                  +- MFVec2d
+                                  +- MFVec2f
+                                  +- MFVec3d
+                                  +- MFVec3f
+    
+      X3DBoundedObject
+ 
+      X3DMetadataObject
+
+      X3DUrlObject
+
+      X3DNode
+        | 
+        +- X3DProtoInstance
+        |
+        +- X3DAppearanceNode -+- Appearance
+        |
+        +- X3DAppearanceChildNode -+- FillProperties
+        |                          +- LineProperties
+        |                          |
+        |                          +- X3DMaterialNode -+- Material
+        |                          |
+        |                          +- X3DTextureNode -+- X3DTexture2DNode -+- ImageTexture (X3DUrlObject)*
+        |                          |                  |                    +- MovieTexture (X3DSoundSourceNode, X3DUrlObject)*
+        |                          |                  |                    +- PixelTexture
+        |                          |                  +- MultiTexture
+        |                          |   
+        |                          +- X3DTextureTransformNode -+- X3DTextureTransform2DNode -+- TextureTransform
+        |                                                      +- MultiTextureTransform
+        |
+        +- X3DGeometryNode -+- Arc2D
+        |                   +- ArcClose2D
+        |                   +- Box
+        |                   +- Circle2D
+        |                   +- Cone
+        |                   +- Cylinder
+        |                   +- Disk2D
+        |                   +- ElevationGrid
+        |                   +- Extrusion
+        |                   +- GeoElevationGrid
+        |                   +- IndexedLineSet
+        |                   +- LineSet
+        |                   +- PointSet
+        |                   +- Polyline2D
+        |                   +- Polypoint2D
+        |                   +- Rectangle2D
+        |                   +- Sphere
+        |                   +- Text
+        |                   +- TriangleSet2D 
+        |                   |
+        |                   +- X3DComposedGeometryNode -+- IndexedFaceSet
+        |                   |                           +- IndexedTriangleFanSet
+        |                   |                           +- IndexedTriangleSet
+        |                   |                           +- IndexedTriangleStripSet
+        |                   |                           +- TriangleFanSet
+        |                   |                           +- TriangleSet
+        |                   |                           +- TriangleStripSet
+        |                   |
+        |                   +- X3DParametricGeometryNode -+- NurbsCurve
+        |                                                 +- NurbsSweptSurface
+        |                                                 +- NurbsSwungSurface
+        |                                                 +- X3DNurbsSurfaceGeometryNode -+- NurbsPatchSurface
+        |                                                                                 +- NurbsTrimmedSurface
+        |
+        +- GeoOrigin
+        |
+        +- X3DGeometricPropertyNode -+- X3DColorNode -+- Color
+        |                            |                +- ColorRGBA
+        |                            |
+        |                            +- X3DCoordinateNode -+- Coordinate
+        |                            |                     +- CoordinateDouble
+        |                            |                     +- GeoCoordinate
+        |                            |
+        |                            +- HAnimDisplacer
+        |                            |
+        |                            +- X3DNormalNode -+- Normal
+        |                            |
+        |                            +- X3DTextureCoordinateNode -+- MultiTextureCoordinate
+        |                                                         +- TextureCoordinate
+        |                                                         +- TextureCoordinateGenerator
+        |
+        +- X3DFontStyleNode -+- FontStyle                               
+        |
+        +- MetadataDouble (X3DMetadataObject)*
+        +- MetadataFloat (X3DMetadataObject)*
+        +- MetadataInteger (X3DMetadataObject)*
+        +- MetadataSet (X3DMetadataObject)*
+        +- MetadataString (X3DMetadataObject)*
+        |
+        +- Contour2D
+        +- NurbsTextureCoordinate
+        +- X3DNurbsControlCurveNode -+- ContourPolyline2D
+        |                            +- NurbsCurve2D
+        |
+        +- X3DChildNode -+- X3DBindableNode -+- Fog
+                         |                   +- GeoViewpoint
+                         |                   +- NavigationInfo
+                         |                   +- Viewpoint
+                         |                   +- X3DBackgroundNode -+- Background 
+                         |                                         +- TextureBackground
+                         |
+                         +- Inline (X3DUrlObject, X3DBoundedObject)*
+                         |
+                         +- StaticGroup (X3DBoundedObject)*
+                         |
+                         +- X3DShapeNode -+- Shape (X3DBoundedObject)*
+                         |
+                         +- X3DGroupingNode (X3DBoundedObject)* -+- Anchor
+                         |                                       +- Billboard
+                         |                                       +- Collision (X3DSensorNode)*
+                         |                                       +- EspduTransform
+                         |                                       +- GeoLocation
+                         |                                       +- GeoLOD
+                         |                                       +- Group
+                         |                                       +- HAnimJoint
+                         |                                       +- HAnimSegment
+                         |                                       +- HAnimSite
+                         |                                       +- LOD
+                         |                                       +- Switch
+                         |                                       +- Transform
+                         |      
+                         +- NurbsSet (X3DBoundedObject)*
+                         +- NurbsOrientationInterpolator
+                         +- NurbsPositionInterpolator
+                         +- NurbsSurfaceInterpolator
+                         |
+                         +- HAnimHumanoid (X3DBoundedObject)*
+                         |
+                         +- ReceiverPdu (X3DBoundedObject)*
+                         +- SignalPdu (X3DBoundedObject)*
+                         +- TransmitterPdu (X3DBoundedObject)*
+                         |
+                         +- X3DInterpolatorNode -+- ColorInterpolator
+                         |                       +- CoordinateInterpolator
+                         |                       +- CoordinateInterpolator2D
+                         |                       +- GeoPositionInterpolator
+                         |                       +- NormalInterpolator
+                         |                       +- OrientationInterpolator
+                         |                       +- PositionInterpolator
+                         |                       +- PositionInterpolator2D
+                         |                       +- ScalarInterpolator
+                         |                   
+                         +- X3DLightNode -+- DirectionalLight
+                         |                +- PointLight
+                         |                +- SpotLight 
+                         |
+                         +- X3DScriptNode (X3DUrlObject)* -+- Script
+                         |
+                         +- X3DSensorNode -+- TimeSensor (X3DTimeDependentNode)*
+                         |                 +- Collision (X3DGroupingNode)*
+                         |                 +- X3DEnvironmentalSensorNode -+- ProximitySensor
+                         |                 |                              +- VisibilitySensor
+                         |                 |
+                         |                 +- X3DKeyDeviceSensorNode -+- KeySensor
+                         |                 |                          +- StringSensor
+                         |                 |
+                         |                 +- X3DNetworkSensorNode +- LoadSensor
+                         |                 | 
+                         |                 +- X3DPointingDeviceSensorNode -+- X3DDragSensorNode -+- CylinderSensor
+                         |                                                 |                     +- PlaneSensor
+                         |                                                 |                     +- SphereSensor
+                         |                                                 |
+                         |                                                 +- X3DTouchSensorNode -+- GeoTouchSensor
+                         |                                                                        +- TouchSensor
+                         |
+                         +- X3DSoundNode -+- Sound
+                         |
+                         +- X3DTimeDependentNode -+- TimeSensor (X3DSensorNode)*
+                         |                        |
+                         |                        +- X3DSoundSourceNode -+- AudioClip (X3DUrlObject) *
+                         |                                               +- MovieTexture (X3DTexture2DNode, X3DUrlObject)*
+                         |
+                         +- X3DSequencerNode -+- BooleanSequencer
+                         |                    +- IntegerSequencer
+                         |
+                         +- X3DTriggerNode -+- BooleanTrigger
+                         |                  +- IntegerTrigger
+                         |                  +- TimeTrigger
+                         |
+                         +- BooleanFilter
+                         +- BooleanToggle
+                         |
+                         +- X3DInfoNode --+- GeoMetadata
+                                          +- WorldInfo
+         

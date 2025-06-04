@@ -1,0 +1,8 @@
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.PingGrid.Backends.DSet.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.PingGrid.Backends.DSet.pdb
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.pdb
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\bin\Debug\SourceGrid.xml
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\obj\x86\Debug\SourceGrid.PingGrid.Backends.DSet.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\obj\x86\Debug\SourceGrid.PingGrid.Backends.DSet.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backends.DSet\obj\x86\Debug\SourceGrid.PingGrid.Backends.DSet.pdb

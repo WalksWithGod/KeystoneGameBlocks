@@ -1,0 +1,23 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.Properties.Resources.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.csproj.GenerateResource.Cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.pdb
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.exe
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.pdb
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.exe
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.pdb
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.exe.config
+E:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.exe.config
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.exe
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\bin\Release\KeySpyAI.pdb
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.Properties.Resources.resources
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.csproj.GenerateResource.Cache
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.exe
+D:\dev\c#\KeystoneGameBlocks\KeySpyAI\obj\Release\KeySpyAI.pdb

@@ -1,0 +1,18 @@
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPluginMeshEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPluginMeshEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPlugins.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPlugins.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.MeshEditCtl.resources
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPluginMeshEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPluginMeshEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPlugins.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\bin\Release\KeyPlugins.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.MeshEditCtl.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.csproj.GenerateResource.Cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginMeshEdit\obj\Release\KeyPluginMeshEdit.pdb

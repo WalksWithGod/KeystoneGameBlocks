@@ -1,0 +1,6 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\HtmlRenderer\Source\HtmlRenderer\obj\Debug\HtmlRenderer.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\HtmlRenderer\Source\HtmlRenderer\obj\Debug\HtmlRenderer.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\HtmlRenderer\Source\HtmlRenderer\bin\DebugNet45\HtmlRenderer.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\HtmlRenderer\Source\HtmlRenderer\bin\DebugNet45\HtmlRenderer.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\HtmlRenderer\Source\HtmlRenderer\obj\Debug\HtmlRenderer.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\HtmlRenderer\Source\HtmlRenderer\obj\Debug\HtmlRendererNET45.csproj.GenerateResource.Cache

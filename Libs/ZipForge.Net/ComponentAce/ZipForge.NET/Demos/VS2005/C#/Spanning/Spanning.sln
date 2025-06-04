@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spanning", "Spanning.csproj", "{AC49BF79-31FB-4F90-8C46-632BDCCED7FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC49BF79-31FB-4F90-8C46-632BDCCED7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC49BF79-31FB-4F90-8C46-632BDCCED7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC49BF79-31FB-4F90-8C46-632BDCCED7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC49BF79-31FB-4F90-8C46-632BDCCED7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

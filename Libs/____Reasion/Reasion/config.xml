@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <palettes>
+   <palette name="Adrift In Dreams">11,72,107, 59,134,134, 121,189,154, 168,219,168, 207,240,158</palette>
+   <palette name="Hanger Management">184,42,102, 184,195,178, 241,227,193, 221,206,189, 76,90,95</palette>
+   <palette name="War">35,15,43, 242,29,85, 235,235,188, 188,227,197, 130,179,174</palette>
+   <palette name="RGBW">0,0,255, 0,255,0, 255,0,0, 255,255,255</palette>
+   <palette name="Mono">0,0,0, 255,255,255</palette>
+   <palette name="Barf">0,255,255, 255,0,255, 0,255,255, 255,0,255, 0,255,255, 255,0,255, 0,255,255, 255,0,255, 0,255,255, 255,0,255</palette>
+  </palettes>
+</config>

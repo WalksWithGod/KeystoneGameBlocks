@@ -1,0 +1,12 @@
+E:\dev\c#\KeystoneGameBlocks\Pathing\bin\x86\Debug\ConnectivityGraph.exe.config
+E:\dev\c#\KeystoneGameBlocks\Pathing\bin\x86\Debug\ConnectivityGraph.exe
+E:\dev\c#\KeystoneGameBlocks\Pathing\bin\x86\Debug\ConnectivityGraph.pdb
+E:\dev\c#\KeystoneGameBlocks\Pathing\bin\x86\Debug\ConnectivityGraph.xml
+E:\dev\c#\KeystoneGameBlocks\Pathing\bin\x86\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks\Pathing\bin\x86\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks\Pathing\obj\x86\Debug\ConnectivityGraph.vbprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Pathing\obj\x86\Debug\ConnectivityGraph.Form1.resources
+E:\dev\c#\KeystoneGameBlocks\Pathing\obj\x86\Debug\ConnectivityGraph.vbproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Pathing\obj\x86\Debug\ConnectivityGraph.exe
+E:\dev\c#\KeystoneGameBlocks\Pathing\obj\x86\Debug\ConnectivityGraph.xml
+E:\dev\c#\KeystoneGameBlocks\Pathing\obj\x86\Debug\ConnectivityGraph.pdb

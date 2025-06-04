@@ -1,0 +1,207 @@
+E:\dev\c#\keystone\KeyAuthenticator\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\KeyAuthenticator.pdb
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Authentication.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Settings.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Npgsql.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Mono.Security.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Settings.pdb
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Authentication.pdb
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Npgsql.pdb
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Npgsql.xml
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\de\Npgsql.resources.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\es\Npgsql.resources.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\fi\Npgsql.resources.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\fr\Npgsql.resources.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\ja\Npgsql.resources.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\zh-CN\Npgsql.resources.dll
+E:\dev\c#\keystone\KeyAuthenticator\obj\Debug\KeyAuthenticator.exe
+E:\dev\c#\keystone\KeyAuthenticator\obj\Debug\KeyAuthenticator.pdb
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\KeyServices.dll
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\KeyServices.pdb
+E:\dev\c#\keystone\KeyAuthenticator\bin\Debug\KeyServices.xml
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Mono.Security.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.xml
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.xml
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.pdb
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\de\Npgsql.resources.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\es\Npgsql.resources.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fi\Npgsql.resources.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fr\Npgsql.resources.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\ja\Npgsql.resources.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\zh-CN\Npgsql.resources.dll
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\ResolveAssemblyReference.cache
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.exe
+J:\Backups\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Mono.Security.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\SmartThreadPool.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\de\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\es\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fi\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fr\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\ja\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyAuthenticator.exe.config
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyAuthenticator.exe
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyAuthenticator.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Npgsql.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Mono.Security.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\KeyServices.xml
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Npgsql.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\Npgsql.xml
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\de\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\es\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\fi\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\fr\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\ja\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\x86\Debug\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe.config
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Mono.Security.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.xml
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.xml
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\de\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\es\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fi\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fr\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\ja\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.exe
+E:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe.config
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyAuthenticator.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Npgsql.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Mono.Security.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyServices.xml
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Npgsql.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\Npgsql.xml
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\de\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\es\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\fi\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\fr\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\ja\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\bin\Debug\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\obj\Debug\KeyAuthenticator.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\obj\Debug\KeyAuthenticator.exe
+E:\dev\c#\KeystoneGameBlocks.bak\KeyAuthenticator\obj\Debug\KeyAuthenticator.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe.config
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.exe
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyAuthenticator.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Mono.Security.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServerCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyServices.xml
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\Npgsql.xml
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\de\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\es\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fi\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\fr\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\ja\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.exe
+D:\dev\c#\KeystoneGameBlocks\KeyAuthenticator\obj\Debug\KeyAuthenticator.pdb

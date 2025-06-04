@@ -1,0 +1,14 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\bin\Debug\KeyPluginActorEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\bin\Debug\KeyPluginActorEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\bin\Debug\KeyPlugins.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\bin\Debug\KeyPlugins.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginActorEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\obj\Debug\KeyPluginActorEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\obj\Debug\KeyPluginActorEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginActorEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginActorEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginActorEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\obj\Debug\KeyPluginActorEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginActorEdit\obj\Debug\KeyPluginActorEdit.pdb

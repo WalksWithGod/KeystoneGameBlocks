@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA202214-F6F8-4853-BCC9-CA4F13C5F479}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lidgren.Network</RootNamespace>
+    <AssemblyName>Lidgren.Network</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWithStatistics|AnyCPU' ">
+    <OutputPath>bin\ReleaseWithStatistics\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;USE_RELEASE_STATISTICS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|AnyCPU' ">
+    <OutputPath>bin\Debug_x86\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWithStatistics|x86' ">
+    <OutputPath>bin\x86\ReleaseWithStatistics\</OutputPath>
+    <DefineConstants>TRACE;USE_RELEASE_STATISTICS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|x86' ">
+    <OutputPath>bin\x86\Debug_x86\</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="INetBase.cs" />
+    <Compile Include="NetConsole.cs" />
+    <Compile Include="NetNATIntro.cs" />
+    <Compile Include="NetObjectPool.cs" />
+    <Compile Include="NetPoolItem.cs" />
+    <Compile Include="NetPoolItemSpec.cs" />
+    <Compile Include="NetQueue2.cs" />
+    <Compile Include="NetSocketPool.cs" />
+    <Compile Include="NetUDPClient.cs" />
+    <Compile Include="NetUDPServer.cs" />
+    <Compile Include="NetBase.cs" />
+    <Compile Include="NetBaseOld.cs" />
+    <Compile Include="NetBaseOld.Recycling.cs" />
+    <Compile Include="NetBaseOld.SimulateLag.cs" />
+    <Compile Include="NetBaseOld.Statistics.cs" />
+    <Compile Include="NetBitWriter.cs" />
+    <Compile Include="NetBuffer.cs" />
+    <Compile Include="NetBuffer.Peek.cs" />
+    <Compile Include="NetBuffer.Read.cs" />
+    <Compile Include="NetBuffer.Write.cs" />
+    <Compile Include="NetBufferManager.cs" />
+    <Compile Include="NetChecksum.cs" />
+    <Compile Include="NetClient.cs" />
+    <Compile Include="NetConfiguration.cs" />
+    <Compile Include="NetConnection.Approval.cs" />
+    <Compile Include="NetUDPConnection.cs" />
+    <Compile Include="NetConnection.Fragmentation.cs" />
+    <Compile Include="NetConnection.Latency.cs" />
+    <Compile Include="NetUDPConnection.Reliability.cs" />
+    <Compile Include="NetConnectionBase.cs" />
+    <Compile Include="NetConnectionStatistics.cs" />
+    <Compile Include="NetConnectionBase.StringTable.cs" />
+    <Compile Include="NetConstants.cs" />
+    <Compile Include="NetDiscovery.cs" />
+    <Compile Include="NetEnums.cs" />
+    <Compile Include="NetException.cs" />
+    <Compile Include="NetFrequencyCounter.cs" />
+    <Compile Include="NetLogger.cs" />
+    <Compile Include="NetMessage.cs" />
+    <Compile Include="NetMessageManager.cs" />
+    <Compile Include="NetPeer.cs" />
+    <Compile Include="NetQueue.cs" />
+    <Compile Include="NetRandom.cs" />
+    <Compile Include="NetRemotableType.cs" />
+    <Compile Include="NetServer.cs" />
+    <Compile Include="NetSimulator.cs" />
+    <Compile Include="NetSocket.cs" />
+    <Compile Include="NetStatistics.cs" />
+    <Compile Include="NetTCPClient.cs" />
+    <Compile Include="NetTCPConnection.cs" />
+    <Compile Include="NetTCPServer.cs" />
+    <Compile Include="NetTime.cs" />
+    <Compile Include="NetUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Libs\mlabs-pl-stp-7b123d9\SmartThreadPool\SmartThreadPool.csproj">
+      <Project>{74D4C33F-7CC8-4B2A-A7DF-D8B6E63B6EBD}</Project>
+      <Name>SmartThreadPool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

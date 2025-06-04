@@ -1,0 +1,15 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\bin\Debug\Open.Diagramming.Forms.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\bin\Debug\Open.Diagramming.Forms.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\bin\Debug\Open.Diagramming.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\bin\Debug\Open.Diagramming.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.Diagram.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.LabelEdit.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\FlowchartingResources.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Printing.PrintDocument.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.Overview.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.Ruler.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.Palette.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Forms\obj\Debug\Open.Diagramming.Forms.pdb

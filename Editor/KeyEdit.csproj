@@ -1,0 +1,1045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40793A27-478B-4357-B4C3-FC8943131F3D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KeyEdit</RootNamespace>
+    <AssemblyName>KeyEdit</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <TargetFrameworkProfile />
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|AnyCPU' ">
+    <OutputPath>bin\Debug_x86\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>Full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|x86' ">
+    <OutputPath>bin\x86\Debug_x86\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CLIENT</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <Optimize>False</Optimize>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>KeyEdit.AppMain</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr4.StringTemplate, Version=4.0.7.0, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\StringTemplate4.0\Antlr4.StringTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="CSScriptLibrary">
+      <HintPath>..\Libs\cs-script_3.6.0\Lib\Bin\NET 4.0\CSScriptLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.Instrumentation, Version=12.6.0.7, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.TreeGX, Version=12.6.0.7, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL" />
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\Libs\DotNetZipLib-DevKit-v1.9\DotNetZip-v1.9\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="MindFusion.Common, Version=1.2.3475.22165, Culture=neutral, PublicKeyToken=7fed53ada5b92263, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MindFusion\MindFusion.Diagramming for WinForms Trial\VS2008 (.NET 3.5)\MindFusion.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="MindFusion.Diagramming, Version=5.3.3.27237, Culture=neutral, PublicKeyToken=21bf4734c13246ea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MindFusion\MindFusion.Diagramming for WinForms Trial\VS2008 (.NET 3.5)\MindFusion.Diagramming.dll</HintPath>
+    </Reference>
+    <Reference Include="MindFusion.Diagramming.WinForms, Version=5.3.3.27239, Culture=neutral, PublicKeyToken=21bf4734c13246ea, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MindFusion\MindFusion.Diagramming for WinForms Trial\VS2008 (.NET 3.5)\MindFusion.Diagramming.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MTV3D65, Version=6.5.3733.40583, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\TV3D65\MTV3D65.dll</HintPath>
+    </Reference>
+    <Reference Include="Stateless, Version=2.3.1.1, Culture=neutral, PublicKeyToken=93038f0927583c9a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Stateless-2.3.1 -NET35\Stateless.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Libs\SQLiteNet\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ToolBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ToolboxControl\ToolBox\bin\Debug\ToolBox.dll</HintPath>
+    </Reference>
+    <Reference Include="WebKit.Interop">
+      <HintPath>..\Libs\WebKit.NET\WebKit.NET-0.5-src\bin\Debug\WebKit.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="WebKitBrowser">
+      <HintPath>..\Libs\WebKit.NET\WebKit.NET-0.5-src\bin\Debug\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCampaignMissionBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCampaignMissionBrowser.Designer.cs">
+      <DependentUpon>FormCampaignMissionBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BehaviorTreeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BehaviorTreeEditorControl.Designer.cs">
+      <DependentUpon>BehaviorTreeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AppDatabaseHelper.cs" />
+    <Compile Include="FormCampaignCaptainSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormCampaignCaptainSelect.Designer.cs">
+      <DependentUpon>FormCampaignCaptainSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCampaignAliens.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormCampaignAliens.Designer.cs">
+      <DependentUpon>FormCampaignAliens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCampaignGalaxy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormCampaignGalaxy.Designer.cs">
+      <DependentUpon>FormCampaignGalaxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCampaignMissionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCampaignMissionEditor.Designer.cs">
+      <DependentUpon>FormCampaignMissionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCampaignShipSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormCampaignShipSelect.Designer.cs">
+      <DependentUpon>FormCampaignShipSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCampaignNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCampaignNew.Designer.cs">
+      <DependentUpon>FormCampaignNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaves.Designer.cs">
+      <DependentUpon>FormSaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVehicleSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVehicleSelect.Designer.cs">
+      <DependentUpon>FormVehicleSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Wizard\IWizardPage.cs" />
+    <Compile Include="GUI\Wizard\WizardHost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Wizard\WizardHost.Designer.cs" />
+    <Compile Include="GUI\Wizard\WizardPageCollection.cs" />
+    <Compile Include="Helpers\NodeCreationHelper.cs" />
+    <Compile Include="Controls\Communications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Communications.Designer.cs">
+      <DependentUpon>Communications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CrewManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CrewManagementControl.Designer.cs">
+      <DependentUpon>CrewManagementControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Medical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Medical.Designer.cs">
+      <DependentUpon>Medical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Navigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Navigation.Designer.cs">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Systems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Systems.Designer.cs">
+      <DependentUpon>Systems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewportNavigationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewportNavigationControl.Designer.cs">
+      <DependentUpon>ViewportNavigationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SQLiteHelper.cs" />
+    <Compile Include="FormMain.LoopbackServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewGalaxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewGalaxy.Designer.cs">
+      <DependentUpon>FormNewGalaxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewInterior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewInterior.Designer.cs">
+      <DependentUpon>FormNewInterior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewportsDocumentWithToolbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewportsDocumentWithToolbar.Designer.cs">
+      <DependentUpon>ViewportsDocumentWithToolbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LibNoiseTextureDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LibNoiseTextureDesigner.Designer.cs">
+      <DependentUpon>LibNoiseTextureDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MessageControl.Designer.cs">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewportControl.Designer.cs">
+      <DependentUpon>ViewportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewportFloorplanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewportFloorplanControl.Designer.cs">
+      <DependentUpon>ViewportFloorplanControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewportsDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewportsDocument.Designer.cs">
+      <DependentUpon>ViewportsDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlPanel.Designer.cs">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImport.Designer.cs">
+      <DependentUpon>FormImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.AssetBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Commands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.Gallery.cs">
+    </Compile>
+    <Compile Include="FormMain.Plugins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Treeview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Views.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNetwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNetwork.Designer.cs">
+      <DependentUpon>FormNetwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewScene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewScene.Designer.cs">
+      <DependentUpon>FormNewScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewTerrainScene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewTerrainScene.Designer.cs">
+      <DependentUpon>FormNewTerrainScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewVehicle.Designer.cs">
+      <DependentUpon>FormNewVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPleaseWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPleaseWait.Designer.cs">
+      <DependentUpon>FormPleaseWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreview.Designer.cs">
+      <DependentUpon>FormPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSpriteSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSpriteSheet.Designer.cs">
+      <DependentUpon>FormSpriteSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewWorld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewWorld.Designer.cs">
+      <DependentUpon>FormNewWorld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AssetBrowserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\AssetBrowserControl.Designer.cs">
+      <DependentUpon>AssetBrowserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AssetBrowserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AssetBrowserDialog.Designer.cs">
+      <DependentUpon>AssetBrowserDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EntityBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\EntityBrowser.Designer.cs">
+      <DependentUpon>EntityBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ViewportEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewportEditorControl.Designer.cs">
+      <DependentUpon>ViewportEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="GUI\BalloonSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QuickLook.cs" />
+    <Compile Include="GUI\QuickLook.Designer.cs">
+      <DependentUpon>QuickLook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuickLook3.cs" />
+    <Compile Include="GUI\QuickLook3.Designer.cs">
+      <DependentUpon>QuickLook3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuickLookHostPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\QuickLookHostPanel.Designer.cs">
+      <DependentUpon>QuickLookHostPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\InternetClient.cs" />
+    <Compile Include="Network\NetworkClientBase.cs" />
+    <Compile Include="FormPluginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPluginManager.Designer.cs">
+      <DependentUpon>FormPluginManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\AIAPI.cs" />
+    <Compile Include="Scripting\AnimationAPI.cs" />
+    <Compile Include="Scripting\DatabaseAPI.cs" />
+    <Compile Include="Scripting\GameAPI.cs" />
+    <Compile Include="Scripting\GraphicsAPI.cs" />
+    <Compile Include="Scripting\IntellisenseBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LobbyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LobbyControl.Designer.cs">
+      <DependentUpon>LobbyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Authenticating.cs" />
+    <Compile Include="Network\AuthenticationNetManager.cs" />
+    <Compile Include="Network\LoopBackClient.cs" />
+    <Compile Include="Network\ConnectingToLobby.cs" />
+    <Compile Include="Network\GameNetManager.cs" />
+    <Compile Include="Network\INetManager.cs" />
+    <Compile Include="Network\LobbyNetManager.cs" />
+    <Compile Include="Network\NetState.cs" />
+    <Compile Include="PluginHost\EditorHost.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\BehaviorTreeEditorControl.resx">
+      <DependentUpon>BehaviorTreeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ViewportEditorControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViewportEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCampaignCaptainSelect.resx">
+      <DependentUpon>FormCampaignCaptainSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCampaignAliens.resx">
+      <DependentUpon>FormCampaignAliens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCampaignGalaxy.resx">
+      <DependentUpon>FormCampaignGalaxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCampaignMissionBrowser.resx">
+      <DependentUpon>FormCampaignMissionBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCampaignMissionEditor.resx">
+      <DependentUpon>FormCampaignMissionEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCampaignShipSelect.resx">
+      <DependentUpon>FormCampaignShipSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCampaignNew.resx">
+      <DependentUpon>FormCampaignNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewGalaxy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormNewGalaxy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewScene.resx">
+      <DependentUpon>FormNewScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewTerrainScene.resx">
+      <DependentUpon>FormNewTerrainScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewWorld.resx">
+      <DependentUpon>FormNewWorld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaves.resx">
+      <DependentUpon>FormSaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVehicleSelect.resx">
+      <DependentUpon>FormVehicleSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuickLook3.resx">
+      <DependentUpon>QuickLook3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Wizard\WizardHost.resx">
+      <DependentUpon>WizardHost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <Compile Include="FormMain.Toolbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PropertyBagCollection.cs" />
+    <Compile Include="Scripting\PhysicsAPI.cs" />
+    <Compile Include="Scripting\ScriptEditorControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptEditorDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptEditorDocument.Designer.cs">
+      <DependentUpon>ScriptEditorDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting\AudioFXAPI.cs" />
+    <Compile Include="Scripting\EntityAPI.cs" />
+    <Compile Include="Scripting\ScriptingHost.cs" />
+    <Compile Include="Scripting\ReferencedAssemblyCollection.cs" />
+    <Compile Include="Scripting\Script.cs" />
+    <Compile Include="Scripting\VisualFXAPI.cs" />
+    <Compile Include="Scripting\ScriptTemplate.cs" />
+    <Compile Include="ShipControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipControls.Designer.cs">
+      <DependentUpon>ShipControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Simulation.cs" />
+    <Compile Include="StaticScene.cs" />
+    <Compile Include="TreeviewState.cs" />
+    <Compile Include="Workspaces\AnimationEditWorkspace.cs" />
+    <Compile Include="Workspaces\BehaviorTreeEditorWorkspace.cs" />
+    <Compile Include="Workspaces\HardpointEditorWorkspace.cs" />
+    <Compile Include="Workspaces\Huds\HardpointsHud.cs" />
+    <Compile Include="Workspaces\Huds\PreviewHud.cs" />
+    <Compile Include="Workspaces\Huds\TacticalHud.cs" />
+    <Compile Include="Workspaces\PreviewWorkspace.cs" />
+    <Compile Include="Workspaces\TacticalWorkspace.cs" />
+    <Compile Include="Workspaces\Tools\InteriorTransformTool.cs" />
+    <Compile Include="Workspaces\Tools\NavPointPlacer_Old.cs" />
+    <Compile Include="Workspaces\WorkspaceBase3D.cs" />
+    <Compile Include="Workspaces\CodeEditorWorkspace.cs" />
+    <Compile Include="Workspaces\ComponentDesignWorkspace.cs" />
+    <Compile Include="Workspaces\CrewManagementWorkspace.cs" />
+    <Compile Include="Workspaces\CrewManagementWorkspace.NavBar.cs" />
+    <Compile Include="Workspaces\CrewSchedulesWorkspace.cs" />
+    <Compile Include="Workspaces\EditorWorkspace.AssetBrowser.cs" />
+    <Compile Include="Workspaces\EditorWorkspace.ToolbarTerrain.cs" />
+    <Compile Include="Workspaces\EditorWorkspace.Toolbox.cs" />
+    <Compile Include="Workspaces\EditorWorkspace.Treeview.cs" />
+    <Compile Include="Workspaces\EditorWorkspace.ViewpointBehaviors.cs" />
+    <Compile Include="Workspaces\FloorPlanDesignWorkspace.AssetBrowser.cs" />
+    <Compile Include="Workspaces\FloorPlanDesignWorkspace.Toolbox.cs" />
+    <Compile Include="Workspaces\Huds\ClientHUD.cs" />
+    <Compile Include="Workspaces\Huds\ComponentHud.cs" />
+    <Compile Include="Workspaces\Huds\EditorHud.cs" />
+    <Compile Include="Workspaces\Huds\FloorplanHud.cs" />
+    <Compile Include="Workspaces\Huds\HealthBar.cs" />
+    <Compile Include="Workspaces\Huds\HUDHelpers.cs" />
+    <Compile Include="Workspaces\Huds\NavigationHud.cs" />
+    <Compile Include="Workspaces\NavWorkspace.cs" />
+    <Compile Include="Workspaces\NavWorkspace.Treeview.cs" />
+    <Compile Include="Workspaces\RenderPreviewWorkspace.cs" />
+    <Compile Include="Workspaces\ShipSystemsWorkspace.cs" />
+    <Compile Include="Workspaces\ShipSystemsWorkspace.NavBar.cs" />
+    <Compile Include="Workspaces\SimCity3000InvasionMap.cs" />
+    <Compile Include="Workspaces\Tools\AssetPlacementTool.cs" />
+    <Compile Include="Workspaces\Tools\AutoTileSegmentPainter.cs" />
+    <Compile Include="Workspaces\Tools\ComponentFootprintPainter.cs" />
+    <Compile Include="Workspaces\Tools\HeightmapTool.cs" />
+    <Compile Include="Workspaces\Tools\InteriorLinkPainter.cs" />
+    <Compile Include="Workspaces\Tools\SelectionTool.cs" />
+    <Compile Include="Workspaces\Tools\TileSegmentPainter.cs" />
+    <Compile Include="Workspaces\Tools\UnitActionTool.cs" />
+    <Compile Include="Workspaces\Tools\WallSegmentPainter.cs" />
+    <Compile Include="Workspaces\Tools\InteriorSegmentPainter.cs" />
+    <Compile Include="Workspaces\Tools\NavPointPlacer.cs" />
+    <Compile Include="Workspaces\WorkspaceBase.cs" />
+    <Compile Include="Workspaces\CNCWorkspace.cs" />
+    <Compile Include="Workspaces\EditorWorkspace.cs" />
+    <Compile Include="Workspaces\FloorPlanDesignWorkspace.cs" />
+    <Compile Include="Workspaces\LobbyWorkspace.cs" />
+    <Compile Include="Workspaces\LoginWorkspace.cs" />
+    <Compile Include="Workspaces\ProceduralTextureWorkspace.cs" />
+    <Compile Include="Workspaces\SimWorkspace.cs" />
+    <Compile Include="Workspaces\WorkspaceManager.cs" />
+    <Compile Include="VirtualKeys.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ControlPanel.resx">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CrewManagementControl.resx">
+      <DependentUpon>CrewManagementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Systems.resx">
+      <DependentUpon>Systems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ViewportNavigationControl.resx">
+      <DependentUpon>ViewportNavigationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewInterior.resx">
+      <DependentUpon>FormNewInterior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ViewportsDocumentWithToolbar.resx">
+      <DependentUpon>ViewportsDocumentWithToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LibNoiseTextureDesigner.resx">
+      <DependentUpon>LibNoiseTextureDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MessageControl.resx">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ViewportControl.resx">
+      <DependentUpon>ViewportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ViewportFloorplanControl.resx">
+      <DependentUpon>ViewportFloorplanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ViewportsDocument.resx">
+      <DependentUpon>ViewportsDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImport.resx">
+      <DependentUpon>FormImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainBase.resx">
+      <DependentUpon>FormMainBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNetwork.resx">
+      <DependentUpon>FormNetwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewVehicle.resx">
+      <DependentUpon>FormNewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPleaseWait.resx">
+      <DependentUpon>FormPleaseWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreview.resx">
+      <DependentUpon>FormPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSpriteSheet.resx">
+      <DependentUpon>FormSpriteSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AssetBrowserControl.resx">
+      <DependentUpon>AssetBrowserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\AssetBrowserDialog.resx">
+      <DependentUpon>AssetBrowserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EntityBrowser.resx">
+      <DependentUpon>EntityBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BalloonSearch.resx">
+      <DependentUpon>BalloonSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LobbyControl.resx">
+      <DependentUpon>LobbyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPluginManager.resx">
+      <DependentUpon>FormPluginManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuickLook.resx">
+      <DependentUpon>QuickLook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuickLookHostPanel.resx">
+      <DependentUpon>QuickLookHostPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\lobby.layout" />
+    <None Include="Resources\editor.layout" />
+    <None Include="Resources\login.layout" />
+    <EmbeddedResource Include="Scripting\ScriptEditorDocument.resx">
+      <DependentUpon>ScriptEditorDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipControls.resx">
+      <DependentUpon>ShipControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\zulis.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authenticate\Authentication.csproj">
+      <Project>{1C2BB903-C7B2-4B65-B70D-7F8E40549266}</Project>
+      <Name>Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Game01\Game01.csproj">
+      <Project>{708FB6BF-0843-4088-894E-05BB1A2E3707}</Project>
+      <Name>Game01</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyCommon\KeyCommon.csproj">
+      <Project>{6C7BBA7F-03F4-4D7D-B1D3-CF8D14E2B939}</Project>
+      <Name>KeyCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
+      <Project>{427CC8D0-5448-4816-A2ED-59F821D98CFA}</Project>
+      <Name>KeyStandardLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyPlugins\KeyPlugins.csproj">
+      <Project>{403B9486-CA2A-4C11-BFF7-AF84F8A31F98}</Project>
+      <Name>KeyPlugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyScript\KeyScript.csproj">
+      <Project>{017FBBA2-80E6-4982-8451-FEACB1C4CDB8}</Project>
+      <Name>KeyScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Keystone\Keystone.csproj">
+      <Project>{A9B9D19D-DDFB-43C7-8BB6-8F2B08DEC0A3}</Project>
+      <Name>Keystone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibNoise.NET\LibNoise\LibNoise.csproj">
+      <Project>{031C8CFF-F147-44EA-B7E5-0A5644808A7E}</Project>
+      <Name>LibNoise</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\FileExplorerTreeDotNet\FileExplorerTreedotnet.csproj">
+      <Project>{8D318D3C-93F0-4458-8E83-52D52ECDBD51}</Project>
+      <Name>FileExplorerTreedotnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\HtmlRenderer\Source\HtmlRenderer\HtmlRendererNET40.csproj">
+      <Project>{73A762F1-C802-4659-9B3E-2BF6B284E606}</Project>
+      <Name>HtmlRendererNET40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\IgSpinEdit\IgSpinEdit.csproj">
+      <Project>{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}</Project>
+      <Name>IgSpinEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\ImageBrowserDotNet\ImageBrowserDotnet.csproj">
+      <Project>{de4b68e9-8cb4-4d18-be70-a1845cf4fd6e}</Project>
+      <Name>ImageBrowserDotnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\Jitter Physics\jitterphysics-master\source\Jitter\Jitter.csproj">
+      <Project>{aa03ef1a-94f7-4d30-ab14-2092863ff923}</Project>
+      <Name>Jitter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\mlabs-pl-stp-7b123d9\SmartThreadPool\SmartThreadPool.csproj">
+      <Project>{74d4c33f-7cc8-4b2a-a7df-d8b6e63b6ebd}</Project>
+      <Name>SmartThreadPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\SourceGrid_4_40_src\SourceGrid\SourceGrid.csproj">
+      <Project>{2a5a1657-dba8-4117-8e2a-9f1236ace9e2}</Project>
+      <Name>SourceGrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{BA202214-F6F8-4853-BCC9-CA4F13C5F479}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeshUtils\MeshUtils.csproj">
+      <Project>{69A1680D-4A56-4275-95DA-81A5C22AFA68}</Project>
+      <Name>MeshUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings\Settings.csproj">
+      <Project>{EF75621B-EF64-4EA7-8451-BA53BA9408A9}</Project>
+      <Name>Settings</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate_z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate_x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursorArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursorHorizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursorVertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate_x_old.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotate_y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monitor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanvasScaleHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RulerHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignToGridHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Textbox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ArrowDown.bmp" />
+    <Content Include="Resources\ArrowUp.bmp" />
+    <None Include="Resources\bar-circle.gif" />
+    <Content Include="Resources\Bitmap.ico" />
+    <Content Include="Resources\BlankIcon.ico" />
+    <None Include="Resources\cc\black\png\stop_watch_icon&amp;32.png" />
+    <None Include="Resources\cc\black\png\list_num_icon&amp;48.png" />
+    <None Include="Resources\cc\black\png\checkbox_unchecked_icon&amp;32.png" />
+    <None Include="Resources\cc\black\png\photo_icon&amp;32.png" />
+    <None Include="Resources\cc\black\png\zoom_icon&amp;32.png" />
+    <None Include="Resources\cc\black\png\dashboard_icon&amp;32.png" />
+    <None Include="Resources\cc\black\png\eye_icon&amp;32.png" />
+    <None Include="Resources\cc\black\png\expand_icon&amp;24.png" />
+    <None Include="Resources\cert_icon&amp;24.png" />
+    <None Include="Resources\cert_icon&amp;16.png" />
+    <None Include="Resources\calendar_1_icon&amp;16.png" />
+    <None Include="Resources\clipboard_past_icon&amp;16.png" />
+    <None Include="Resources\book_icon&amp;16.png" />
+    <None Include="Resources\book_side_icon&amp;16.png" />
+    <None Include="Resources\chart_bar_icon&amp;16.png" />
+    <None Include="Resources\chart_line_2_icon&amp;16.png" />
+    <None Include="Resources\cc\black\png\eye_icon&amp;16.png" />
+    <None Include="Resources\cc\black\png\save_icon&amp;24.png" />
+    <None Include="Resources\cc\black\png\db_icon&amp;16.png" />
+    <None Include="Resources\cc\black\png\round_arrow_left_icon&amp;16.png" />
+    <None Include="Resources\cc\black\png\round_arrow_right_icon&amp;16.png" />
+    <Content Include="Resources\ClosedFolder.ICO" />
+    <None Include="Resources\crew1_portrait.png" />
+    <None Include="Resources\crew1b_portrait.png" />
+    <None Include="Resources\corona_yellow.jpg" />
+    <Content Include="Resources\CSFile.ico" />
+    <Content Include="Resources\CSProject.ico" />
+    <None Include="Resources\cur_dollar_icon&amp;16.png" />
+    <None Include="Resources\doc_empty_icon&amp;16.png" />
+    <Content Include="Resources\Edit_Redo.bmp" />
+    <Content Include="Resources\Edit_Undo.bmp" />
+    <Content Include="Resources\File.ico" />
+    <Content Include="Resources\Form.ico" />
+    <None Include="app.config" />
+    <None Include="Resources\editor.definition" />
+    <None Include="Resources\htmlrenderer\CustomFont.ttf" />
+    <None Include="Resources\key_icon&amp;16.png" />
+    <None Include="Resources\hand_pro_icon&amp;16.png" />
+    <None Include="Resources\Jupiterand4moons4ab.jpg" />
+    <None Include="Resources\globe_2_icon&amp;16.png" />
+    <Content Include="Resources\htmlrenderer\comment16.gif" />
+    <Content Include="Resources\htmlrenderer\delete16.gif" />
+    <Content Include="Resources\htmlrenderer\delete32.gif" />
+    <Content Include="Resources\htmlrenderer\Event16.png" />
+    <Content Include="Resources\htmlrenderer\exclamation32.png" />
+    <Content Include="Resources\htmlrenderer\favorites32.png" />
+    <Content Include="Resources\htmlrenderer\font32.png" />
+    <Content Include="Resources\htmlrenderer\formula32.png" />
+    <Content Include="Resources\htmlrenderer\html.ico" />
+    <Content Include="Resources\htmlrenderer\html32.png" />
+    <Content Include="Resources\htmlrenderer\image32.png" />
+    <Content Include="Resources\htmlrenderer\method16.gif" />
+    <Content Include="Resources\htmlrenderer\paly32.png" />
+    <Content Include="Resources\htmlrenderer\property16.gif" />
+    <Content Include="Resources\htmlrenderer\property32.png" />
+    <Content Include="Resources\htmlrenderer\refreshdocument32.png" />
+    <Content Include="Resources\htmlrenderer\web_pallete.gif" />
+    <Content Include="Resources\htmlrenderer\Window.gif" />
+    <Content Include="Resources\KGBClient.config" />
+    <None Include="Resources\lobby.definition" />
+    <None Include="Resources\login.definition" />
+    <None Include="Resources\lock_open_icon&amp;16.png" />
+    <None Include="Resources\mail_icon&amp;16.png" />
+    <Content Include="Resources\Mouse.bmp" />
+    <Content Include="Resources\msenv22.ico" />
+    <Content Include="Resources\New.ico" />
+    <Content Include="Resources\Open.ico" />
+    <Content Include="Resources\OpenFolder.ICO" />
+    <Content Include="Resources\OutputWindow.ico" />
+    <None Include="Resources\property16.bmp" />
+    <Content Include="Resources\PropertyWindow.ico" />
+    <Content Include="Resources\Reference.ico" />
+    <Content Include="Resources\References.ico" />
+    <None Include="Resources\repair.jpg" />
+    <None Include="Resources\repair2.jpg" />
+    <Content Include="Resources\Save.bmp" />
+    <Content Include="Resources\SaveAll.bmp" />
+    <Content Include="Resources\SolutionExplorer.ico" />
+    <None Include="Resources\sq_plus_icon&amp;16.png" />
+    <None Include="Resources\sun_icon&amp;16.png" />
+    <None Include="Resources\target_icon&amp;16.png" />
+    <Content Include="Resources\TaskListWindow.ico" />
+    <Content Include="Resources\ToolboxWindow.ico" />
+    <None Include="Resources\translate.bmp" />
+    <None Include="Resources\users_icon&amp;16.png" />
+    <None Include="Resources\users_icon&amp;161.png" />
+    <None Include="Resources\track_icon&amp;16.png" />
+    <Content Include="Resources\XmlFile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Simulation\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

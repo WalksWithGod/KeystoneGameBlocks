@@ -1,0 +1,15 @@
+E:\dev\c#\keystone\NetUtils\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\NetUtils\bin\Debug\NetUtils.dll
+E:\dev\c#\keystone\NetUtils\bin\Debug\NetUtils.pdb
+E:\dev\c#\keystone\NetUtils\obj\Debug\NetUtils.dll
+E:\dev\c#\keystone\NetUtils\obj\Debug\NetUtils.pdb
+E:\dev\c#\KeystoneGameBlocks\NetUtils\bin\Debug\NetUtils.dll
+E:\dev\c#\KeystoneGameBlocks\NetUtils\bin\Debug\NetUtils.pdb
+E:\dev\c#\KeystoneGameBlocks\NetUtils\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\NetUtils\obj\Debug\NetUtils.dll
+E:\dev\c#\KeystoneGameBlocks\NetUtils\obj\Debug\NetUtils.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\NetUtils\bin\Debug\NetUtils.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\NetUtils\bin\Debug\NetUtils.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\NetUtils\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\NetUtils\obj\Debug\NetUtils.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\NetUtils\obj\Debug\NetUtils.pdb

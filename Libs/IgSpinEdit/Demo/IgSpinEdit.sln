@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgSpinEdit", "IgSpinEdit\IgSpinEdit.csproj", "{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IgSpinEditTest", "TestProj\IgSpinEditTest.csproj", "{30156E2E-419D-466C-8C72-10F70F8A561A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30156E2E-419D-466C-8C72-10F70F8A561A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30156E2E-419D-466C-8C72-10F70F8A561A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30156E2E-419D-466C-8C72-10F70F8A561A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30156E2E-419D-466C-8C72-10F70F8A561A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

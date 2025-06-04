@@ -1,0 +1,146 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServices.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Keystone.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MHull.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ZipForge.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\LibNoise.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\VorbisDotNet.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MTV3D65.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\CSScriptLibrary.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\JigLibX.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\keymath.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MHull.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\LibNoise.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MTV3D65.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\JigLibX.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Keystone.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.exe
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ZipForge.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\VorbisDotNet.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.xml
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.exe
+E:\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServerCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Mono.Security.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServerCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\de\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\es\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\fi\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\fr\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ja\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Mono.Security.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.xml
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\de\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\es\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\fi\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\fr\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ja\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ZipForge.xml
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.exe.config
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Game01.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\SmartThreadPool.xml
+E:\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.exe.config
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.exe
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyGameServer.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Game01.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServerCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServices.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Keystone.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MTV3D65.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\AtlasTextureTools.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\CSScriptLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyScript.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\LibNoise.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\SmartThreadPool.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ZipForge.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\VorbisDotNet.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MHull.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Mono.Security.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Game01.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyServerCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Keystone.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\Npgsql.xml
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MTV3D65.xml
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\AtlasTextureTools.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\CSScriptLibrary.xml
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\KeyScript.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\LibNoise.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\SmartThreadPool.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\SmartThreadPool.xml
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ZipForge.xml
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\MHull.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\de\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\es\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\fi\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\fr\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\ja\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\bin\Release\zh-CN\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.exe
+D:\dev\c#\KeystoneGameBlocks\KeyServer\obj\Release\KeyGameServer.pdb

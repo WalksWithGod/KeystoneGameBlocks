@@ -1,0 +1,171 @@
+TVM format (WIP) - by Hypnotron
+
+int32 - magic
+int32 - size of file following this current 32bits (i.e. file.Length - 8 bytes = this value)
+32bit - ?
+32bit - ?
+8bitChar - (M)
+8bitChar - (F)
+8bitChar - (O)
+8bitChar - (R)
+32bit - length to next marker (variable depending on what CONST_TV_MESHFORMAT is set)
+int16 - ?
+list...
+int16 - vertexelementoffset
+int16 - element
+int16 - usage
+int16 - stream
+end list...
+int32 - ?
+int16 - ?
+8bitChar - (M)
+8bitChar - (S)
+8bitChar - (T)
+8bitChar - (R)
+32bit - length to next marker
+32bit - appears to be a byte offset value toward the end of the file where some other data starts
+        it appears to always point to the spot 32bits AFTER the end of (M)(E)(N)(D),_______,POINTSHERE,....
+STRING TABLE ITSELF
+32bit - number of strings in the table
+list
+32bit - string length
+32bit - ?
+32bit - ?
+(var) - actual string
+end list
+
+8bitChar - (M)
+8bitChar - (S)
+8bitChar - (T)
+8bitChar - (A)
+32bit - length to next marker
+int32 - trianglecount
+int32 - group count
+int32 - vertexcount
+32bit - ?
+32bit - ?
+32bit - ?
+32bit - vertex stride (changes depending on meshformat, typically is 32)
+8bitChar - (M)
+8bitChar - (V)
+8bitChar - (E)
+8bitChar - (R)
+32bits - total length in bytes for following set of vertices (typically 32byte stride but is variable depending on meshformat)
+list...
+32bit float (xPos)
+32bit float (yPos)
+32bit float (zPos)
+32bit float (xNormal)
+32bit float (yNormal)
+32bit float (zNormal)
+32bit float (u)
+32bit float (v)
+end list...
+8bitChar - (M)
+8bitChar - (I)
+8bitChar - (1)
+8bitChar - (6)
+32bit - total length in bytes of following set of 16bit vertex indices (2 byte stride)
+list..
+16bit int (vertex index)
+end list..
+8bitChar - (M)
+8bitChar - (A)
+8bitChar - (T)
+8bitChar - (T)
+32bit - length in bytes for face group id's array
+list...
+32bit uint - group index for triangle
+end list...
+8bitChar - (M)
+8bitChar - (G)
+8bitChar - (R)
+8bitChar - (O)
+32bit - length in bytes for following field that describes number of verts, , triangles in every group (16 byte stride)
+list...
+32bit - vertex count
+32bit - ? perhaps a material index (from the list of materials in this file, not from tvmatfac)
+32bit - triangle count
+32bit - ? perhaps a texture index (from the list of filenames not from tvtexfac)
+end list...
+8bitChar - (M)
+8bitChar - (G)
+8bitChar - (R)
+8bitChar - (3)
+32bit - length in bytes for following field that describes number of verts, , triangles in every group (16 byte stride)
+list...
+32bit - material index (starts at 1)
+32bit - texture index (starts at 1)
+32bit - 
+32bit - ? perhaps a texture index (from the list of filenames not from tvtexfac)
+end list...
+
+8bitChar - (M)
+8bitChar - (G)
+8bitChar - (R)
+8bitChar - (4)
+32bit - length in bytes for following field that describes materials  (stride is ? bytes)
+32bit - groupNameID (in stringtable)
+32bit - texture1ID
+32bit - texture2ID
+32bit - texture3ID
+32bit - texture4ID
+32bit - texture5ID
+32bit - texture6ID
+32bit - texture7ID
+32bit - texture8ID
+
+32bit - index value to lookup "name" in stringtable
+????
+32bit diffuse.r
+32bit diffuse.g
+32bit diffuse.b
+32bit diffuse.a
+32bit ambient.r
+32bit ambient.g
+32bit ambient.b
+32bit ambient.a
+32bit spec.r
+32bit spec.g
+32bit spec.b
+32bit spec.a
+32bit emissive.r
+32bit emissive.g
+32bit emissive.b
+32bit emissive.a
+32bit - power
+???
+???
+end list...
+8bitChar - (M)
+8bitChar - (U)
+8bitChar - (S)
+8bitChar - (R)
+32bit - length in bytes (stride is 4 bytes? i believe this can potentially be any size but mesh.SetUserData only accets 32bit value)
+list..
+32bit - ? // this could actually safely contain a blob of user data of section length
+end list...
+8bitChar - (M)
+8bitChar - (B)
+8bitChar - (O)
+8bitChar - (U)
+32bit - length in bytes
+(3x32bit floats) Vector3 min
+(3x32bit floats) Vector3 max
+(3x32bit floats) Vector3 center
+8bitChar - (M)
+8bitChar - (E)
+8bitChar - (N)
+8bitChar - (D)
+???
+???
+???
+8bitChar - (G) // this is just a string from string table
+8bitChar - (R)
+8bitChar - (O)
+8bitChar - (U)
+8bitChar - (P)
+16bit - ?
+EOF
+
+

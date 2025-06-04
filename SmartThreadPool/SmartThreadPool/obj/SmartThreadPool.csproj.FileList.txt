@@ -1,0 +1,8 @@
+bin\Release\SmartThreadPool.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\SmartThreadPool.dll
+bin\Debug\SmartThreadPool.dll
+bin\Debug\SmartThreadPool.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SmartThreadPool.dll
+obj\Debug\SmartThreadPool.pdb

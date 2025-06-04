@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeyServices</name>
+    </assembly>
+    <members>
+        <member name="T:KeyServices.Application">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="M:KeyServices.Application.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.ServiceMain">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.KeyAdminService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyAdminService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyAdminService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.KeyChildServiceBase.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyChildServiceBase.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyGameService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyGameService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyGameService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CodeBlooded.Spades.Services.SpadesInstaller">
+            <summary>
+            Summary description for SpadesInstaller.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLobbyService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLobbyService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLobbyService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.KeyLoginService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLoginService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLoginService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

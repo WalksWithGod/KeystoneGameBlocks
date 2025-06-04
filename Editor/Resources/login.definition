@@ -1,0 +1,10 @@
+<dotnetbar version="6" fullmenus="false" fullmenushover="true" tooltips="true" scintooltip="false" animation="6">
+  <items />
+  <bars>
+  </bars>
+  <docksite size="0" dockingside="Top" />
+  <docksite size="0" dockingside="Bottom" />
+  <docksite size="0" dockingside="Left" />
+  <docksite size="0" dockingside="Right" />
+  <popups />
+</dotnetbar>

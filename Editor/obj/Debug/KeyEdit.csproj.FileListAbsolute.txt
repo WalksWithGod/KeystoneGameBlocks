@@ -1,0 +1,673 @@
+E:\dev\c#\keystone\Editor\bin\Debug\license.txt
+E:\dev\c#\keystone\Editor\bin\Debug\KeyEdit.exe
+E:\dev\c#\keystone\Editor\bin\Debug\KeyEdit.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\Core.dll
+E:\dev\c#\keystone\Editor\bin\Debug\MeshUtils.dll
+E:\dev\c#\keystone\Editor\bin\Debug\MTV3D65.dll
+E:\dev\c#\keystone\Editor\bin\Debug\Settings.dll
+E:\dev\c#\keystone\Editor\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\keystone\Editor\bin\Debug\ToolBox.dll
+E:\dev\c#\keystone\Editor\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+E:\dev\c#\keystone\Editor\bin\Debug\ZipForge.dll
+E:\dev\c#\keystone\Editor\bin\Debug\Lidgren.Library.Network.dll
+E:\dev\c#\keystone\Editor\bin\Debug\LibNoise.dll
+E:\dev\c#\keystone\Editor\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\keystone\Editor\bin\Debug\VorbisDotNet.dll
+E:\dev\c#\keystone\Editor\bin\Debug\MHull.dll
+E:\dev\c#\keystone\Editor\bin\Debug\Core.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\WeifenLuo.WinFormsUI.Docking.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\MeshUtils.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\MTV3D65.xml
+E:\dev\c#\keystone\Editor\bin\Debug\Settings.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\LibNoise.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\LibNoise.xml
+E:\dev\c#\keystone\Editor\bin\Debug\MHull.pdb
+E:\dev\c#\keystone\Editor\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormAbout.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormViewport.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormMessages.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormProperties.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormProjectExplorer.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormTaskList.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormToolbox.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormMain.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.Properties.Resources.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.ControlPanel.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.Customization.Resources.resources
+E:\dev\c#\keystone\Editor\obj\Debug\System.Diagnostics.DebugConsole.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormAppearanceEdit.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormNewGalaxy.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormPreview.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormResourceBrowser.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.Customization.Strings.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.FormToolWindow.resources
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.csproj.GenerateResource.Cache
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.exe
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.pdb
+E:\dev\c#\keystone\Editor\obj\Debug\KeyEdit.ShipControls.resources
+E:\dev\c#\keystone\Editor\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\ToolBox.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\keymath.dll
+E:\dev\c#\keystone\Editor\bin\Debug\keymath.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\JigLibX.dll
+E:\dev\c#\keystone\Editor\bin\Debug\JigLibX.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\Authentication.dll
+E:\dev\c#\keystone\Editor\bin\Debug\Authentication.pdb
+E:\dev\c#\keystone\Editor\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\keystone\Editor\bin\Debug\Lidgren.Network.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe.config
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.pdb
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\ResolveAssemblyReference.cache
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormAbout.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ViewportControl.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Properties.Resources.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ControlPanel.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.LibNoiseTextureDesigner.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.Login.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocument.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormImport.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormLogin.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormMain.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNetwork.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewGalaxy.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPreview.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.BalloonSearch.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.ColorPicker.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.frmAbout.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.frmDocument.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.frmNewWorld.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.LobbyControl.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ShipControls.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Resources.zulis.resources
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.csproj.GenerateResource.Cache
+J:\Backups\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe.licenses
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\license.txt
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Authentication.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\keymath.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Keystone.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Common.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Settings.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Svg.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MHull.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\ZipForge.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\VorbisDotNet.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Graphs.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\JigLibX.dll
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\keymath.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MHull.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.xml
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.xml
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Authentication.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.xml
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.xml
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.xml
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\JigLibX.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Keystone.pdb
+J:\Backups\KeystoneGameBlocks\Editor\bin\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Ionic.Zip.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Keystone.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ZipForge.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\VorbisDotNet.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\JigLibX.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyScript.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\JigLibX.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Keystone.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyScript.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Common.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Svg.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MHull.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Graphs.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\keymath.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MHull.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ZipForge.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormAbout.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ViewportControl.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Properties.Resources.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ControlPanel.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.LibNoiseTextureDesigner.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.Login.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocument.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormClient.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormImport.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormLogin.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormMain.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormMainBase.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNetwork.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPleaseWait.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewGalaxy.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPreview.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.BalloonSearch.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.ColorPicker.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.frmAbout.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.frmDocument.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.frmNewWorld.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.LobbyControl.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Scripting.ScriptEditor.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ShipControls.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Resources.zulis.resources
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.csproj.GenerateResource.Cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe.licenses
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe.config
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\license.txt
+E:\dev\c#\KeystoneGameBlocks_bugs_\Editor\bin\Debug\KeyEdit.exe.config
+E:\dev\c#\KeystoneGameBlocks_bugs_\Editor\obj\Debug\KeyEdit.exe
+E:\dev\c#\KeystoneGameBlocks_bugs_\Editor\obj\Debug\KeyEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\license.txt
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyEdit.exe.config
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyEdit.exe
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Antlr4.StringTemplate.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\FileExplorerTreeDotnet.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\HtmlRenderer.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\IgSpinEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\ImageBrowserDotnet.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyPlugins.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MeshUtils.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MindFusion.Common.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MindFusion.Diagramming.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MindFusion.Diagramming.WinForms.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\SourceGrid.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Stateless.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\System.Data.SQLite.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\ToolBox.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\WebKit.Interop.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\WebKitBrowser.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\TargaImage.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\ZipForge.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\VorbisDotNet.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Gibbed.Squish.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Antlr3.Runtime.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MindFusion.Svg.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MindFusion.Graphs.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Gibbed.IO.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyPlugins.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\LibNoise.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\FileExplorerTreeDotnet.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\HtmlRenderer.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\IgSpinEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\ImageBrowserDotnet.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\SourceGrid.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\SourceGrid.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MeshUtils.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\ToolBox.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Antlr4.StringTemplate.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MindFusion.Diagramming.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MindFusion.Diagramming.WinForms.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Stateless.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Stateless.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\System.Data.SQLite.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\WebKitBrowser.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\TargaImage.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\ZipForge.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Gibbed.Squish.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Antlr3.Runtime.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\Gibbed.IO.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\license.txt
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe.config
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr4.StringTemplate.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\FileExplorerTreeDotnet.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\HtmlRenderer.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\IgSpinEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ImageBrowserDotnet.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Common.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\System.Data.SQLite.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\WebKit.Interop.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\WebKitBrowser.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\TargaImage.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ZipForge.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\VorbisDotNet.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.Squish.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr3.Runtime.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Svg.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Graphs.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.IO.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\FileExplorerTreeDotnet.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\HtmlRenderer.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\IgSpinEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ImageBrowserDotnet.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr4.StringTemplate.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\System.Data.SQLite.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\WebKitBrowser.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\TargaImage.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ZipForge.xml
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.Squish.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr3.Runtime.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.IO.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ViewportEditorControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewGalaxy.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewScene.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewTerrainScene.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewWorld.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormAbout.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ControlPanel.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.CrewManagementControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.Systems.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportNavigationControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewInterior.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocumentWithToolbar.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.LibNoiseTextureDesigner.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.Login.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.MessageControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportFloorplanControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocument.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormClient.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormImport.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormLogin.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormMain.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormMainBase.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNetwork.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewVehicle.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPleaseWait.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPreview.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormSpriteSheet.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.AssetBrowserControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.AssetBrowserDialog.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.EntityBrowser.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.BalloonSearch.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.ColorPicker.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.LobbyControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPluginManager.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.DrawingControl.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.QuickLookHostPanel.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Scripting.ScriptEditorDocument.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ShipControls.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Resources.zulis.resources
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe.licenses
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe
+E:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MHull.dll
+E:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MHull.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\license.txt
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyEdit.exe.config
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyEdit.exe
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyEdit.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Antlr4.StringTemplate.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\FileExplorerTreeDotnet.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\HtmlRenderer.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\IgSpinEdit.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\ImageBrowserDotnet.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyPlugins.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MeshUtils.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MindFusion.Common.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MindFusion.Diagramming.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MindFusion.Diagramming.WinForms.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\SourceGrid.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Stateless.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\System.Data.SQLite.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\ToolBox.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\WebKit.Interop.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\WebKitBrowser.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\TargaImage.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\ZipForge.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\VorbisDotNet.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MHull.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Gibbed.Squish.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Antlr3.Runtime.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MindFusion.Svg.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MindFusion.Graphs.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Gibbed.IO.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyPlugins.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\LibNoise.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\FileExplorerTreeDotnet.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\HtmlRenderer.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\IgSpinEdit.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\ImageBrowserDotnet.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\SourceGrid.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\SourceGrid.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\ToolBox.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MeshUtils.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Antlr4.StringTemplate.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MindFusion.Diagramming.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MindFusion.Diagramming.WinForms.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Stateless.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Stateless.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\System.Data.SQLite.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\WebKitBrowser.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\TargaImage.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\ZipForge.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\MHull.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Gibbed.Squish.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Antlr3.Runtime.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\bin\Debug\Gibbed.IO.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.ViewportEditorControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormNewGalaxy.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormNewScene.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormNewTerrainScene.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormNewWorld.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormAbout.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.ControlPanel.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.CrewManagementControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.Systems.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.ViewportNavigationControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormNewInterior.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocumentWithToolbar.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.LibNoiseTextureDesigner.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.Login.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.MessageControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.ViewportControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.ViewportFloorplanControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocument.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormClient.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormImport.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormLogin.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormMain.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormMainBase.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormNetwork.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormNewVehicle.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormPleaseWait.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormPreview.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormSpriteSheet.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.GUI.AssetBrowserControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.GUI.AssetBrowserDialog.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.GUI.EntityBrowser.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.GUI.BalloonSearch.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.GUI.ColorPicker.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.LobbyControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.FormPluginManager.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.GUI.DrawingControl.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.GUI.QuickLookHostPanel.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Scripting.ScriptEditorDocument.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.ShipControls.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.Resources.zulis.resources
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.exe.licenses
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.exe
+E:\dev\c#\KeystoneGameBlocks.bak\Editor\obj\Debug\KeyEdit.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\license.txt
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe.config
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.exe
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyEdit.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr4.StringTemplate.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\FileExplorerTreeDotnet.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Game01.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\HtmlRenderer.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\IgSpinEdit.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ImageBrowserDotnet.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyScript.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Keystone.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Common.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\System.Data.SQLite.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\WebKit.Interop.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\WebKitBrowser.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\TargaImage.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\AtlasTextureTools.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ZipForge.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\VorbisDotNet.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MHull.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.Squish.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr3.Runtime.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Svg.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Graphs.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.IO.dll
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Game01.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyPlugins.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\KeyScript.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Keystone.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\LibNoise.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\FileExplorerTreeDotnet.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\HtmlRenderer.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\IgSpinEdit.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ImageBrowserDotnet.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SmartThreadPool.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\SourceGrid.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ToolBox.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MeshUtils.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr4.StringTemplate.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\CSScriptLibrary.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MindFusion.Diagramming.WinForms.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MTV3D65.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Stateless.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\System.Data.SQLite.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\WebKitBrowser.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\TargaImage.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\AtlasTextureTools.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\ZipForge.xml
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\MHull.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.Squish.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Antlr3.Runtime.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\Debug\Gibbed.IO.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ViewportEditorControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormCampaignGalaxy.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormCampaignShipSelect.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormCampaignNew.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewGalaxy.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewScene.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewTerrainScene.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewWorld.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormAbout.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormVehicleSelect.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.QuickLook3.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\SimpleWizard.WizardHost.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Properties.Resources.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ControlPanel.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.CrewManagementControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.Systems.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportNavigationControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewInterior.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocumentWithToolbar.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.LibNoiseTextureDesigner.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.Login.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.MessageControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportFloorplanControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Controls.ViewportsDocument.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormClient.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormImport.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormLogin.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormMain.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormMainBase.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNetwork.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormNewVehicle.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPleaseWait.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPreview.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormSpriteSheet.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.AssetBrowserControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.AssetBrowserDialog.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.EntityBrowser.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.BalloonSearch.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.ColorPicker.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.LobbyControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.FormPluginManager.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.DrawingControl.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.GUI.QuickLookHostPanel.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Scripting.ScriptEditorDocument.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.ShipControls.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.Resources.zulis.resources
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.csproj.GenerateResource.Cache
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe.licenses
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.exe
+D:\dev\c#\KeystoneGameBlocks\Editor\obj\Debug\KeyEdit.pdb
+D:\dev\c#\KeystoneGameBlocks\Editor\bin\x86\Debug\KeyEdit.exe.config

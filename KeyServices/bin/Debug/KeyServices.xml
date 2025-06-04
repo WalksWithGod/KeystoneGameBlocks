@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KeyServices</name>
+    </assembly>
+    <members>
+        <member name="T:KeyServices.Application">
+            <summary>
+            Summary description for Application.
+            </summary>
+        </member>
+        <member name="M:KeyServices.Application.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.ServiceMain">
+            <summary>
+            This main loop for the service which is running in a seperate thread.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyServiceBase.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.KeyAdminService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyAdminService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyAdminService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeyServices.KeyChildServiceBase">
+            <summary>
+            A child service is any service that depends on another service to be currently running.
+            Thus a child service can attempt to start the dependant service if it determines it's not running.
+            Our KeyLobbyService is a good example.  It dervives from KeyChildServiceBase and 
+            is dependant on the KeyAuthentication service to be running first.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyChildServiceBase.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyChildServiceBase.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyGameService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyGameService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyGameService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ServiceInstaller.DynamicInstaller">
+            <summary>
+            http://www.codeproject.com/KB/cs/DynWinServiceInstallUtil.aspx?display=Print
+            This is a custom project installer.
+            Applies a unique name to the service using the /name switch
+            Sets user name and password using the /user and /password switches
+            Allows the use of a local account using the /account switch
+            </summary>
+        </member>
+        <member name="M:ServiceInstaller.DynamicInstaller.GetContextParameter(System.String)">
+            <summary>
+            Return the value of the parameter in dictated by key
+            </summary>
+            <PARAM name="key">Context parameter key</PARAM>
+            <returns>Context parameter specified by key</returns>
+        </member>
+        <member name="M:ServiceInstaller.DynamicInstaller.OnBeforeInstall(System.Collections.IDictionary)">
+            <summary>
+            This method is run before the install process.
+            This method is overridden to set the following parameters:
+            service name (/name switch)
+            account type (/account switch)
+            for a user account user name (/user switch)
+            for a user account password (/password switch)
+            Note that when using a user account,
+            if the user name or password is not set,
+            the installing user is prompted for the credentials to use.
+            </summary>
+            <PARAM name="savedState"></PARAM>
+        </member>
+        <member name="M:ServiceInstaller.DynamicInstaller.OnBeforeUninstall(System.Collections.IDictionary)">
+            <summary>
+            Uninstall based on the service name
+            </summary>
+            <PARAM name="savedState"></PARAM>
+        </member>
+        <member name="M:KeyServices.KeyLobbyService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLobbyService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLobbyService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.KeyLoginService.OnStart(System.String[])">
+            <summary>
+            Set things in motion so your service can do its work.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLoginService.OnStop">
+            <summary>
+            Stop this service.
+            </summary>
+        </member>
+        <member name="M:KeyServices.KeyLoginService.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:KeyServices.WindowsServiceAccountType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KeyServices.WindowsServiceAccountType.LocalService">
+            <summary></summary>
+        </member>
+        <member name="F:KeyServices.WindowsServiceAccountType.NetworkService">
+            <summary></summary>
+        </member>
+        <member name="F:KeyServices.WindowsServiceAccountType.LocalSystem">
+            <summary></summary>
+        </member>
+        <member name="F:KeyServices.WindowsServiceAccountType.User">
+            <summary></summary>
+        </member>
+        <member name="T:KeyServices.WindowsServiceInstallInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallInfo.#ctor(System.String,System.String,KeyServices.WindowsServiceAccountType)">
+            <summary>
+            Please pass the windows service information in
+            </summary>
+            <param name="windowsServicePath">Path to folder where windows service assembly stored</param>
+            <param name="windowsServiceAssemblyName">Windows Service Assembly Name</param>
+            <param name="wsAccountType">Windows Service Account Type (not USER type)</param>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallInfo.#ctor(System.String,System.String,System.String,KeyServices.WindowsServiceAccountType)">
+            <summary>
+            Please pass the windows service information in
+            </summary>
+            <param name="windowsServiceName">Name of windows service</param>
+            <param name="windowsServicePath">Path to folder where windows service assembly stored</param>
+            <param name="windowsServiceAssemblyName">Windows Service Assembly Name</param>
+            <param name="wsAccountType">Windows Service Account Type (not USER type)</param>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallInfo.#ctor(System.String,System.String,System.String,System.String,KeyServices.WindowsServiceAccountType)">
+            <summary>
+            Please pass the windows service information in
+            </summary>
+            <param name="windowsServiceName">Name of windows service</param>
+            <param name="description">Description of windows service</param>
+            <param name="windowsServicePath">Path to folder where windows service assembly stored</param>
+            <param name="windowsServiceAssemblyName">Windows Service Assembly Name</param>
+            <param name="wsAccountType">Windows Service Account Type (not USER type)</param>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallInfo.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Please pass the windows service information in
+            </summary>
+            <param name="windowsServicePath">Path to folder where windows service assembly stored</param>
+            <param name="windowsServiceAssemblyName">Windows Service Assembly Name</param>        
+            <param name="wsAccountUserName">Username of Windows Service when Account Type is USER</param>
+            <param name="wsAccountPassword">Password of Windows Service when Account Type is USER</param>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallInfo.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Please pass the windows service information in
+            </summary>
+            <param name="windowsServiceName">Name of windows service</param>
+            <param name="windowsServicePath">Path to folder where windows service assembly stored</param>
+            <param name="windowsServiceAssemblyName">Windows Service Assembly Name</param>
+            <param name="wsAccountUserName">Username of Windows Service when Account Type is USER</param>
+            <param name="wsAccountPassword">Password of Windows Service when Account Type is USER</param>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Please pass the windows service information in
+            </summary>
+            <param name="windowsServiceName">Name of windows service</param>
+            <param name="description">Description of windows service</param>
+            <param name="windowsServicePath">Path to folder where windows service assembly stored</param>
+            <param name="windowsServiceAssemblyName">Windows Service Assembly Name</param>        
+            <param name="wsAccountUserName">Username of Windows Service when Account Type is USER</param>
+            <param name="wsAccountPassword">Password of Windows Service when Account Type is USER</param>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallInfo.#ctor(System.String,System.String,System.String,System.String,KeyServices.WindowsServiceAccountType,System.String,System.String)">
+            <summary>
+            Please pass the windows service information in
+            </summary>
+            <param name="windowsServiceName">Name of windows service</param>
+            <param name="description">Description of windows service</param>
+            <param name="windowsServicePath">Path to folder where windows service assembly stored</param>
+            <param name="windowsServiceAssemblyName">Windows Service Assembly Name</param>
+            <param name="wsAccountType">Windows Service Account Type</param>
+            <param name="wsAccountUserName">Username of Windows Service when Account Type is USER</param>
+            <param name="wsAccountPassword">Password of Windows Service when Account Type is USER</param>
+        </member>
+        <member name="P:KeyServices.WindowsServiceInstallInfo.WindowsServiceName">
+            <summary>
+            Name of windows service
+            </summary>
+        </member>
+        <member name="P:KeyServices.WindowsServiceInstallInfo.Description">
+            <summary>
+            Description of windows service
+            </summary>
+        </member>
+        <member name="P:KeyServices.WindowsServiceInstallInfo.WindowsServicePath">
+            <summary>
+            Path to folder which contains windows service binary
+            </summary>
+        </member>
+        <member name="P:KeyServices.WindowsServiceInstallInfo.WindowsServiceAssemblyName">
+            <summary>
+            Windows service binary file name
+            </summary>
+        </member>
+        <member name="P:KeyServices.WindowsServiceInstallInfo.WsAccountType">
+            <summary>
+            Account type to start windows service
+            </summary>
+        </member>
+        <member name="P:KeyServices.WindowsServiceInstallInfo.WsAccountUserName">
+            <summary>
+            Username to start windows service (if account type is User)
+            </summary>
+        </member>
+        <member name="P:KeyServices.WindowsServiceInstallInfo.WsAccountPassword">
+            <summary>
+            Password of username to start windows service (if account type is User)
+            </summary>
+        </member>
+        <member name="T:KeyServices.WindowsServiceInstallUtil">
+            <summary>
+            To use this class for installing windows service, you need a project installer (which inherits from DynamicInstaller) added to your assembly
+            </summary>
+        </member>
+        <member name="F:KeyServices.WindowsServiceInstallUtil.InstallUtilPath">
+            <summary>
+            Path to folder where InstallUtil (.Net SDK) stored
+            </summary>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallUtil.#ctor(KeyServices.WindowsServiceInstallInfo)">
+            <summary>
+            
+            </summary>
+            <param name="wsInstallInfo"></param>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallUtil.CallInstallUtil(System.String)">
+            <summary>
+            Run InstallUtil with specific params
+            </summary>
+            <param name="installUtilArguments">CommandLine params</param>
+            <returns>Status of installation</returns>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallUtil.Install">
+            <summary>
+            Install windows service
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallUtil.Install(System.String)">
+            <summary>
+            Install windows service
+            </summary>
+            <param name="logFilePath">Log file to store installation information</param>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallUtil.Uninstall">
+            <summary>
+            Uninstall windows service
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KeyServices.WindowsServiceInstallUtil.Uninstall(System.String)">
+            <summary>
+            Uninstall windows service
+            </summary>
+            <param name="logFilePath">Log file to store installation information</param>
+            <returns></returns>
+        </member>
+        <member name="T:KeyServices.RemoteWindowsServiceInstallUtil">
+            <summary>
+            Install windows service in local machine or remote machine
+            To use this class for installing windows service, you need a project installer module added to your assembly
+            </summary>
+        </member>
+        <member name="M:KeyServices.RemoteWindowsServiceInstallUtil.IsLocalMachine(System.String)">
+            <summary>
+            Check if param passed in is a local machine
+            </summary>
+            <param name="machineNameOrIpAddress"></param>
+            <returns>true : local machine, false : Remote Machine</returns>
+        </member>
+        <member name="M:KeyServices.RemoteWindowsServiceInstallUtil.CallRemoteInstallUtil(System.String)">
+            <summary>
+            Run InstallUtil in remote machine with specific params
+            </summary>
+            <param name="installUtilArguments">CommandLine params</param>
+            <returns>Status of installation</returns>
+        </member>
+        <member name="P:KeyServices.RemoteWindowsServiceInstallUtil.PsToolsPath">
+            <summary>
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,269 @@
+﻿ using System;
+using Keystone.Elements;
+using Keystone.Extensions;
+using Keystone.Helpers;
+
+namespace Keystone.IO
+{
+    /// <summary>
+    /// NodeState is used to serialize / deserialize the state of Entities, Models, and Appearance
+    /// nodes (since these nodes can contain per-instance data) when the parent Entity is
+    /// represented by a Prefab.  
+    /// </summary>
+    public class NodeState : Node
+    {
+        internal static readonly string ATTRIBUTE_REF_INDEX = "referencedindex";
+        internal static readonly string ATTRIBUTE_REF_ID = "id";
+        internal static readonly string ATTRIBUTE_REF_TYPENAME = "referencedtypename";
+        private int mIndex; // used to find the corresponding descendant child node of the prefab root Node
+        private string mReferencedNodeTypename;
+        private string mReferencedNodeID;
+
+        private Settings.PropertySpec[] mProperties;
+
+        // TODO: this "id" should match the id of the node it is saving the state for so
+        //       this node really should NOT be saved in Repository... so.. hrm... but
+        //       will this actually need to be a "Group" node so it can have child state too?
+        //       ... hrm.. so this is a question... why not just have our state nodes flat?
+        //       then we only need to recurse the prefab instance we've created during READ
+        //       and find if any state exists for it...
+        //       So we can have actually something like a NodeStateCollection can contain an array of
+        //       <Entity>
+        //            <NodeState/>
+        //            <NodeState/>
+        //            <... applies for all nested nodes including nested Entities>
+        //            < during traversal, once we encounter a "src != Empty">
+        //            < then we dont even have to process nested Entity prefabs since 
+        //            < it is already handled intrinsically..>
+        //       </>
+        //       After reading in all the states, I presume these are now assigned to the root entity
+        //       how\when do we start to apply that state and then remove the NodeState collection?
+
+        // TODO: should we supply a new id for this node or the existing?
+        //       if we're cloning then i think we should, otherwise, not.  It's same
+        //       as anything.  But the question is, how do we restore the id's for the child
+        //       nodes of the prefab that we're cloning like Model's, Appearances and Layers?
+        //       Surely those nodes need to match... 
+        //       - we need a completely seperate branch of traversing that part of the xml at that point
+        //       one where we can continue to read properties via ReadEntity() passing in the nodes
+        //       that we've cloned, but changing their IDs first.  I think this is actually
+        //       workable...  the one thing we CANNOT have though is after that is done
+        //       to return to calling function and allow it to attempt to recurse down the clonedChild
+        //       we just created.  This may seem like a good way to continue to get the overridden
+        //       properties but there'd be no way to get the src paths of any of those child nodes
+        //       because they'll never have been set since they themselves arent prefabs.  They are
+        //       in fact more like the mixins we see being used by gamebryo.
+
+        // gamebryo 2.6 prefabs http://vimeo.com/user752483
+        // Actor - state holder - intialization as well as runtime state
+        //     AIState - state holder - intialization as well as runtime state
+        //     AnimationController - state holder - intialization as well as runtime state
+        //     PhysicsState  - state holder - intialization as well as runtime state
+        //     Model (state holder) - initializatio only
+        //          AppearanceGroup0 (state holder) - initialization and potentially shader runtime and texturecycle runtime
+        //              Layer0 <-- Layers i think could be collapsed into Appearance (especially in the Shader world and move away from fixed function where textureMods are now done as shader parameters)
+        //                  Texture - shareable resource
+        //              Material - shareable resource
+        //          AppearanceGroup1
+        //
+        //          Geometry - shareable
+        //     Footprint - shareable
+        //     Animations[] - shareable
+        //     EntityScript - shareable
+        //     Behavior - shareable 
+
+        //     
+        // so when we think of a prefab, we think of 
+        // 1) template (collection of components/nodes that group and define a conceptual single entity)
+        //      - thus any removal of a node should break the prefab.  This includes changing a Mesh or 
+        //        a texture.  
+        //      - however, what if you want to remodel a prefab by changing the Mesh.. why should that
+        //        break anything?  Say you have a better mesh or texture... that should affect all future
+        //        prefabs.  So perhaps prefab is maintained so long as all the same node types exist even
+        //        if differnet resources
+        //        - but I think the thinking here is, if the instance of a prefab is completely slave to
+        //          the prefab, then changes to the prefab (at runtime or offline) MUST take priority
+        //          over the instance.
+        //          - however, if the user intends to remove nodes from the Instance, then that must 
+        //            break the prefab link.
+        //      - during I/O of a prefab instance, we MUST only store state and not structure.  
+        //        But how do we do this?
+        // 2) inheritance of structure and properties
+        //      When is inheritance broken?
+        //          - whenever a node changes
+        //          - state properties can change, nodes cannot
+        //      One Way Street Rule
+        //          - any add/remove of an instanced prefab's component breaks the prefab link
+        //          - any add/remove of a prefab component will affect all instanced components
+        // 3) Serialization
+        //      This is the primary issue...
+        //         - yes I can skip the serialization of nodes that have no instance data
+        //           for entity's that have their SRC var assigned to point to a prefab..
+        //         - yes i can post a warning that a particular prefab is no longer found and can replace
+        //           with a temp object and continue loading the scene
+        //         - but how do i save the overridden data without saving structure or
+        //           attempting to restore structure that was already specified in the prefab?
+        //         - i do afterall need to keep "id" data and some other properties at least
+        //           for our non shareable state holding nodes.
+        //           - <ModeledEntity id = "instance0" src = "prefab0.kgbentity">
+        //                  < state bag> <-- this could be something special we do
+        //                                   where instead of saving "nodes" when we encounter a prefab
+        //                                   we start saving state bags instead
+
+        public NodeState(string id) : base (id)
+        {
+            Shareable = false;
+        }
+
+        public NodeState(string id, Node node)
+            : this(id, node.GetProperties(false))
+        {
+        }
+
+        public NodeState(string id, Settings.PropertySpec[] properties) : base (id)
+        {
+            // the id must be unique as always for nodes.  It cannot match
+            // the "id" of the node we are trying to persist.
+            // 
+            mProperties = properties;
+        }
+
+        public override object Traverse(Keystone.Traversers.ITraverser target, object data)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal override Keystone.Traversers.ChildSetter GetChildSetter()
+        {
+            throw new NotImplementedException();
+        }
+
+        #region ResourceBase members
+
+        public override Settings.PropertySpec[] GetProperties(bool specOnly)
+        {
+            // we should never use the NodeState's GetProperties() right? 
+            // it's best to call ApplyProperties() when we want this NodeState
+            // to restore the persisted values within to the target node
+            throw new Exception("NodeState.GetProperties() - Use ApplyProperties() instead.");
+            //return mProperties;
+        }
+
+        public override void SetProperties(Settings.PropertySpec[] properties)
+        {
+            if (properties == null || properties.Length == 0) return;
+
+            // parse out the ATTRIBUTE_REF_TYPENAME and ATTRIBUTE_REF_INDEX
+            // and the "id" property 
+            
+            mProperties = properties;
+
+            for (int i = 0; i < properties.Length; i++)
+            {
+                if (properties[i].DefaultValue == null) continue;
+                // use of a switch allows us to pass in all or a few of the propspecs depending
+                // on whether we're loading from xml or changing a single property via server directive
+                switch (properties[i].Name)
+                {
+                    case "id": // NOT this NodeState's id! Must store in the mReferencedNodeID
+                        mReferencedNodeID =  (string)properties[i].DefaultValue;
+                        break;
+                    case "referencedindex":
+                        mIndex = int.Parse ((string)properties[i].DefaultValue);
+                        break;
+                    case "referencedtypename":
+                        mReferencedNodeTypename = (string)properties[i].DefaultValue;
+                        break;
+                }
+            }
+        }
+
+        public void ApplyProperties(Node node)
+        {
+            if (node == null) throw new ArgumentNullException();
+            // if we have no properties to set, return
+            if (mProperties == null || mProperties.Length == 0) return;
+
+            Node target;
+
+            if (mIndex == 0)
+                target = node;
+            else
+            {
+                if (node is IGroup == false) throw new Exception ();
+
+                // get the descendand node of target that is at mIndex
+                target = ((IGroup)node).FindNodeAtDescendantIndex(mIndex);
+                if (target == null) throw new Exception();
+
+                // is our found node of the correct typename?
+                if (mReferencedNodeTypename != target.TypeName)
+                    throw new Exception("NodeState.ApplyProperties() - target node is of wrong type.");
+
+                // ONLY REMOVE NODESTATE FROM REPOSITORY if mIndex > 0
+                // this node state id already matches our mReferencedNodeID 
+                // so remove the node state from the Repository which is what we want to do anyway
+                Keystone.Resource.Repository.IncrementRef(this);
+                Keystone.Resource.Repository.DecrementRef (this);
+            }
+
+
+
+            // modify the "id" of our target to the persisted value
+            System.Diagnostics.Debug.Assert(target.ID != mReferencedNodeID);
+            // must rename the node before we change it's ID
+//            throw new NotImplementedException ("RenameResource is BAD. We should clone and replace, de-parent existing and then parent cloned child. Otherwise using simple rename, the target.ID is never updated.");
+            Keystone.Resource.Repository.RenameResource(target, mReferencedNodeID);
+
+            // set the persisted values to the target
+            for (int i = 0; i < mProperties.Length; i++)
+            {
+                if (mProperties[i].DefaultValue == null) continue;
+                // NOTE: "id" is included in these properties and WILL
+                // modify the target's id.
+
+                // the destination spec has the proper typename set.  Our persisted specs 
+                // do NOT, they only contain values!
+                Settings.PropertySpec spec = target.GetProperty(mProperties[i].Name, true);
+                if (spec == null) continue; // some NodeState vars do not exist in target
+                // our persisted property values are all xml string versions
+                // (so we know it's safe to cast to string) of the values
+                // so we must still convert them to the proper values 
+                spec.ReadXMLAttribute ((string)mProperties[i].DefaultValue);
+                target.SetProperties(new Settings.PropertySpec[]{spec});
+            }
+                           
+        }
+
+        public void ApplyProperties(Settings.PropertySpec[] destinationProperties)
+        {
+            if (mProperties == null || mProperties.Length == 0 || destinationProperties == null || destinationProperties.Length == 0) return;
+            
+            for (int i = 0; i < destinationProperties.Length; i++)
+            {
+                // NOTE: we will allow null to be set against the destinationProperties
+                // if (mProperties[i].DefaultValue == null) continue;
+
+                for (int j = 0; j < mProperties.Length; j++)
+                {
+                    if (destinationProperties[i].Name == mProperties[j].Name)
+                    {
+                        destinationProperties[i].DefaultValue = mProperties[j].DefaultValue;
+                        break; ;
+                    }
+                }
+            }
+        }
+        #endregion 
+    
+        public int Index { get { return mIndex; } }
+
+        public string ReferencedTypename { get { return mReferencedNodeTypename; } }
+
+        public void Add(Settings.PropertySpec[] properties)
+        {
+            mProperties = mProperties.ArrayAppendRange(properties);
+        }
+
+    }
+}

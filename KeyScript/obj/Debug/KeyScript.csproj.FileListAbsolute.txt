@@ -1,0 +1,103 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\CSScriptLibrary.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\CSScriptLibrary.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\KeyScript.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\KeyScript.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\bin\Debug\keymath.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\KeyScript.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Scripting\obj\Debug\KeyScript.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyScript.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyScript.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\CSScriptLibrary.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\keymath.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\CSScriptLibrary.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Antlr4.StringTemplate.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Antlr3.Runtime.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Antlr4.StringTemplate.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\x86\Debug\Antlr3.Runtime.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr4.StringTemplate.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr3.Runtime.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr4.StringTemplate.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr3.Runtime.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Antlr4.StringTemplate.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Antlr3.Runtime.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Antlr4.StringTemplate.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\bin\Debug\Antlr3.Runtime.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\obj\Debug\KeyScript.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\obj\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyScript\obj\Debug\KeyScript.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyScript.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyScript.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr4.StringTemplate.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\CSScriptLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Game01.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr3.Runtime.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Game01.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr4.StringTemplate.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\CSScriptLibrary.xml
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\bin\Debug\Antlr3.Runtime.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.dll
+D:\dev\c#\KeystoneGameBlocks\KeyScript\obj\Debug\KeyScript.pdb

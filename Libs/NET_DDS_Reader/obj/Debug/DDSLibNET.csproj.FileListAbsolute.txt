@@ -1,0 +1,10 @@
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\bin\Debug\DDSLibNET.dll
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\bin\Debug\DDSLibNET.pdb
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\obj\Debug\DDSLibNET.dll
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\obj\Debug\DDSLibNET.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\obj\Debug\DDSLibNET.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\bin\Debug\DDSLibNET.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\bin\Debug\DDSLibNET.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\obj\Debug\DDSLibNET.dll

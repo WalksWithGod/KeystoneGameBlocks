@@ -1,0 +1,11 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\app.config
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\SourceGrid.Tests.dll.config
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\SourceGrid.Tests.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\SourceGrid.Tests.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\nunit.framework.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\SourceGrid.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\SourceGrid.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\bin\Debug\SourceGrid.xml
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\obj\Debug\SourceGrid.Tests.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.Tests\obj\Debug\SourceGrid.Tests.pdb

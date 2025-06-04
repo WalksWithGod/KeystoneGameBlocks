@@ -1,0 +1,52 @@
+using System;
+using System.Net;
+using System.Diagnostics;
+
+namespace Lidgren.Network
+{
+	/// <summary>
+	/// Represents a connection between this host and a remote endpoint
+	/// </summary>
+	[DebuggerDisplay("RemoteEndpoint = {m_remoteEndPoint}")]
+	public partial class NetUDPConnection : NetConnectionBase 
+	{
+         internal NetUDPConnection(NetSocket owner, NetMessageManager messageManager, NetConfiguration config, IPEndPoint remoteEndPoint, byte[] localHailData, byte[] remoteHailData)
+	    	:base (owner, messageManager , config, remoteEndPoint , localHailData , remoteHailData)
+         {
+            InitializeFragmentation();
+			InitializeReliability();
+			//InitializeCongestionControl(32);
+		}
+        
+         internal override void Connect()
+         {
+             base.Connect();
+             // m_socket.Bind(0);
+
+             OutgoingNetMessage msg = m_messageManager.CreateSystemMessage(NetSystemType.Connect);
+             msg.m_buffer.Write(m_config.ApplicationIdentifier);
+             msg.m_buffer.Write(m_socket.RandomIdentifier);
+             if (m_localHailData != null && m_localHailData.Length > 0)
+                 msg.m_buffer.Write(m_localHailData);
+
+             Enqueue(msg);
+         }
+
+		internal override void Heartbeat(double now)
+		{
+            base.Heartbeat(now);
+
+			// Resend all packets that has reached a mature age
+			ResendMessages(now);
+
+			// send all unsent messages
+			SendUnsentMessages(now);
+		}
+
+		protected override void FinalizeDisconnect()
+		{
+            base.FinalizeDisconnect();
+            ResetReliability();
+		}
+	}
+}

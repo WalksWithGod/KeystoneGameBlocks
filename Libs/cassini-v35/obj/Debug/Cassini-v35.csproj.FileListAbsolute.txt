@@ -1,0 +1,7 @@
+E:\dev\c#\Project Evolution\Libs\Binaries\cassini-v35\bin\Debug\Cassini-v35.exe
+E:\dev\c#\Project Evolution\Libs\Binaries\cassini-v35\bin\Debug\Cassini-v35.pdb
+E:\dev\c#\Project Evolution\Libs\Binaries\cassini-v35\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\Project Evolution\Libs\Binaries\cassini-v35\obj\Debug\Cassini.Properties.Resources.resources
+E:\dev\c#\Project Evolution\Libs\Binaries\cassini-v35\obj\Debug\Cassini-v35.csproj.GenerateResource.Cache
+E:\dev\c#\Project Evolution\Libs\Binaries\cassini-v35\obj\Debug\Cassini-v35.exe
+E:\dev\c#\Project Evolution\Libs\Binaries\cassini-v35\obj\Debug\Cassini-v35.pdb

@@ -1,0 +1,16 @@
+july.17.2013
+
+i like the railroad tycoon 3 go west  world map and how it is very tile based with data layers
+
+http://www.youtube.com/watch?v=1ncm0FujRvU&list=SP6F53D25ED85AF054
+http://www.youtube.com/watch?v=PWhVEnE1yEA&feature=player_detailpage#t=27s
+
+
+makes me want to have in future version a geo-scape type map where we can view infrastructure of the world
+
+but also as a way to plan our landing sites and heists and rendezous etc. 
+
+it's mount & blade ish with even some fallout 2 potential
+
+
+for procedural generation i like the idea of quadtree where we can limit the depth rendering down the tree, but where we can nest our data layers and page in from disk only what is needed.

@@ -1,0 +1,1 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\NET_DDS_Reader\obj\Debug\ResolveAssemblyReference.cache

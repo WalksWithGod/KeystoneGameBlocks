@@ -1,0 +1,54 @@
+How to Create a Lux Terrain: A Walk Through
+	-Hypnotron Nov.2.2006
+
+
+1.  Start L3DT and select File / New Map
+2.  Select Design / Inflate  (you can also select blank in the future when you become adept at designing custom)
+3.  For the Design Map Size Options
+	a.  The X, Y represent how many pixels the resulting heightmap will be in width and height.  For this reference map, let's use 256 for both X and Y values.  
+	
+	b.  Set pixel resolution to 1.  You may even desire to set this to .5 for less blocky maps HOWEVER it must be noted that the closer you set the resolution, the smaller each page will be in world units.  This means that a .5 meter resolution landscape in tv3d will result in a tvlandscape that is 128meters by 128 meters thus compared to a 1 meter resolution landscape which would be 256 by 256meter landscapes, you need twice as many to achieve the desired view distance and you'd have to crank up the PaGE_VIEW_DISTANCE to compensate (though you wouldnt necessarily double this value).  In any case, a pixel resolution of 1 will mean that each of our terrains in tv3d will be 256 x 256 meters and a total world size of 16km by 16km
+	c.  Check the "Use Disk Drive Paging" box 
+	d.  set the tile size to match the pixel resolution thus 256.
+	e.  Do not check Edge Wrapping since in Lux we do not support world wrapping.
+
+4.  Click next
+5.  At the Design Map parameters here is a brief idea of what the sliders do and what values are good ones for achieving a map with some rolling hill style mountains.  NOTE: The scale marks go from 0 to 10.
+	a.  We want 70% land and 30% ocean so set the average altitude to 7.	
+	b.  We want rolling hills as opposed to steap mountains so set altitude range to 3
+	c.  We want good sized hills and lakes and not skinny hills or tiny oceans, so set scale of features to 5
+	d.  We want our coasts and transitions between different features to be fairly complex and not have sharp drastic lines so we set fractal roughness to 8.
+	e.  We want the tops of our mountains to be fairly rounded and not pointy, so set Peak overlays to 4.
+	f.  we dont really want many flat areas within our mountains.. we want to stick with the rollng hills so set cliffs and terraces to 2.
+	g.  since we wont have steep mountains, we also dont want tons of errosion along hillsides.  So set errosion to 3.
+	h.  inland, we dont want that many lakes.  set this to 2.
+	i.  for now lets just use temperate, though in the future you can try temperate(coastal) and compare.
+	j.  Now click the "create new" for preset and svae it as "lux reference" so that next time you want to generate a new map, you can load your presets and tweak the various settings.
+
+6. Click next
+7.  A bit too much here to step through completely, but generally you can check everything for queueing except the "lightmap" and in the other dialogs in the wizard, don't select the lightmaps for anything since we use our own dynamic sun and the lightmap wouldnt match.  NOTE: You can selectively choose higher resolution for the attribute maps or texture map (you would use the texture map for the dynamic splatting/texture switching in lux), however you MUST keep the page scales the same.  So in other words, if you have 256x256 height field that results in 64x64 pages (aka landscapes in tv3d) and if you want to use a higher res 512x512 texure, then make sure that the resulting pages is still 64x64 and not 128x128.  Newer versions of L3DT have a "keep TX/HF ratio) i believe that is jsut for this purpose.
+
+NOTE: Using higher resolution attribute map will result in better alpha maps.
+
+This is pretty much it for the l3dt generation. Now you will need to export...
+
+todo:  talk about clipping the bottom of the heightmap to ~10 meters in the ocean.  this is so we reserve more fidelity for features above ground.  Since players cant swim in lux, having a completely flat sea floor is of no importance.
+
+todo: talk about using the nvidia command line tool and what parameters to compress and covnert the alphamaps to .dds NOTE: We should uplooad this tool to svn and note the path.
+
+todo: add how they should mark down the pixel resolution and the page widths
+	- very important that in the generate dialog they select a quadtree depth that matches the page width!!1
+todo: Talk about how to 
+todo: talk about how it could easily be possible to use different affine levels and generate multiple sets of terrains with varying number of vertices and then depending on a user setting (based on their system's performance) they can load the .terrain that has higher or lesser vertices.  The only things you'd need besides the seperate .terrains is to use a naming convention like  .terrain01x01y_high and terrain01x01.y_med etc and then when loading fro the .lux file you simply append the _high or _med depending on the preference the user has set.
+
+todo:  talk about exporting to .png the height fields
+todo:  talk about using the image border duplicator tool in \LuxAternia\source\toolset\ImageBorderDuplicator
+todo:  talk about using Edit mode in Unity and the File\Generate New Map tool
+todo:  talk about loading the terrain mmf and the alphamap xml and optional texture mmf
+todo:  talk about how its important the resolution you used in ledt of 1 pixel = X be the same in the generate dialog
+ 
+
+
+
+	
+	

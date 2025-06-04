@@ -1,0 +1,216 @@
+J:\Backups\KeystoneGameBlocks\Keystone\obj\Debug\ResolveAssemblyReference.cache
+J:\Backups\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.dll
+J:\Backups\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\JigLibX.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\keymath.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\MHull.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Settings.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.dll
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\MHull.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.xml
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Settings.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.xml
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\keymath.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\JigLibX.pdb
+J:\Backups\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\CSScriptLibrary.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Ionic.Zip.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\JigLibX.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\keymath.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyScript.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MHull.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\ZipForge.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\keymath.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MHull.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\ZipForge.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\CSScriptLibrary.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyScript.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\JigLibX.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\BehaviorTrees.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\keymath.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Triangulator.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\VorbisDotNet.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\ZipForge.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\keymath.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\LibNoise.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\BehaviorTrees.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Triangulator.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\ZipForge.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\x86\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\BehaviorTrees.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\VorbisDotNet.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\ZipForge.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\BehaviorTrees.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\ZipForge.xml
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MHull.dll
+E:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MHull.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Keystone.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\BehaviorTrees.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\CSScriptLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\KeyScript.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\MHull.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\MTV3D65.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\SmartThreadPool.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Triangulator.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\VorbisDotNet.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\ZipForge.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Game01.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\KeyScript.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\LibNoise.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\SmartThreadPool.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Triangulator.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\BehaviorTrees.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\CSScriptLibrary.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\MHull.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\MTV3D65.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\ZipForge.xml
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\bin\Debug\Game01.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\obj\Debug\Keystone.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\obj\Debug\Keystone.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Keystone\obj\Debug\Keystone.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Keystone.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\AtlasTextureTools.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\CSScriptLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyScript.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MHull.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\VorbisDotNet.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\ZipForge.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Game01.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\AtlasTextureTools.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\KeyScript.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\LibNoise.xml
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\SmartThreadPool.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Triangulator.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\CSScriptLibrary.xml
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MHull.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\MTV3D65.xml
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\ZipForge.xml
+D:\dev\c#\KeystoneGameBlocks\Keystone\bin\Debug\Game01.pdb
+D:\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.dll
+D:\dev\c#\KeystoneGameBlocks\Keystone\obj\Debug\Keystone.pdb

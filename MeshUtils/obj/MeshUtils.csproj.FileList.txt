@@ -1,0 +1,14 @@
+bin\Release\MeshUtils.dll
+bin\Release\MeshUtils.pdb
+bin\Release\MTV3D65.dll
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\MeshUtils.dll
+obj\Release\MeshUtils.pdb
+bin\Debug\MeshUtils.dll
+bin\Debug\MeshUtils.pdb
+bin\Debug\MTV3D65.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MeshUtils.dll
+obj\Debug\MeshUtils.pdb
+bin\Release\MTV3D65.xml
+bin\Debug\MTV3D65.xml

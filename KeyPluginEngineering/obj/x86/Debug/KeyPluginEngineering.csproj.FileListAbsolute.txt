@@ -1,0 +1,8 @@
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginEngineering.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginEngineering.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginEngineering\obj\x86\Debug\KeyPluginEngineering.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginEngineering\obj\x86\Debug\KeyPlugins.OnboardComponents.resources
+E:\dev\c#\KeystoneGameBlocks\KeyPluginEngineering\obj\x86\Debug\KeyPluginEngineering.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\KeyPluginEngineering\obj\x86\Debug\KeyPluginEngineering.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginEngineering\obj\x86\Debug\KeyPluginEngineering.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginEngineering\obj\x86\Debug\KeyPluginEngineering.pdb

@@ -1,0 +1,91 @@
+ZipForge: History of changes
+============================
+
+
+Bugs fixed:
+
+  1. Problem with deleting files from archive is solved
+  2. Problem with opening some large archives is solved
+  3. Problem with renaming files is solved
+  4. Problem with modifying some specific archives is solved
+  5. Problem with IsValidArchiveFile is solved
+  6. Problem with AddFromString is solved
+
+
+
+
+- version 1.33 (03/27/2007)
+
+  Bugs fixed:
+  
+  1. Problem with setting file comments is solved
+
+
+- version 1.32 (03/09/2007)
+
+  Bugs fixed:
+  
+  1. Problem with extracting from some ZIP files is solved
+  2. Problem with extracting with Options.Recurse=False is solved
+
+
+- version 1.31 (03/01/2007)
+
+  Bugs fixed:
+  
+  1. Problem with extracting from some ZIP files is solved
+  2. Problem with adding some specific files to archive is solved
+
+  Help file is improved.
+
+
+- version 1.30 (01/08/2007)
+
+  New features:
+  
+  1. Unicode filenames support
+  2. Quick Help support
+  3. Design time experience is improved
+  4. FullPathWithDrive path storing mode is implemented  
+  5. Installer is improved  
+  
+  Bugs fixed:
+  
+  1. Problem with opening Zip64 files created by WinZip is solved
+  2. Bug with installer blocking is fixed
+  3. Problem with uninstalling ZipForge.NET from Visual Studio toolbox is solved
+  
+  Design changes:
+  
+  1. StorePathMode, CompressionLevel, SpanningOptions, ArchiverOptions and other types and constants 
+  which are common for ZipForge and FlexCompress are moved to ComponentAce.Compression.Archiver namespace.
+  2. CurrentVersion property is removed
+  
+  
+
+- version 1.20 (10/18/2006)
+
+  New features added:
+
+  1. Spanning and splitting support
+  2. SFX (self-extracting) archives support
+  3. Installer is improved
+  4. New demos added: MakeSFX, SFXStub and Spanning
+
+  Bugs fixed:
+
+  1. Problem with non-english file names is solved
+  2. Problem with OnStoreFile event is solved
+  3. Problem with wrong error messages in exceptions is solved
+   
+- version 1.10 (09/13/2006)
+
+  New features added:
+  1. Zip64 support
+  
+  Bugs fixed:
+  1. Bug with Cancel in events is fixed.
+  2. Some minor bugs are fixed.
+
+- version 1.00 Beta (06/26/2006)
+

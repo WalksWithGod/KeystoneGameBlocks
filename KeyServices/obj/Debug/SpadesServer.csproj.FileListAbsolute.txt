@@ -1,0 +1,13 @@
+E:\dev\c#\keystone\WindowsService\bin\Debug\SpadesServer.exe
+E:\dev\c#\keystone\WindowsService\bin\Debug\SpadesServer.pdb
+E:\dev\c#\keystone\WindowsService\bin\Debug\SpadesServer.xml
+E:\dev\c#\keystone\WindowsService\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\WindowsService\obj\Debug\CodeBlooded.Spades.Services.SpadesAdminService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\CodeBlooded.Spades.Services.SpadesChildServiceBase.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\CodeBlooded.Spades.Services.SpadesGameService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\CodeBlooded.Spades.Services.SpadesLobbyService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\CodeBlooded.Spades.Services.SpadesLoginService.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\CodeBlooded.Spades.Services.SpadesServiceBase.resources
+E:\dev\c#\keystone\WindowsService\obj\Debug\SpadesServer.csproj.GenerateResource.Cache
+E:\dev\c#\keystone\WindowsService\obj\Debug\SpadesServer.exe
+E:\dev\c#\keystone\WindowsService\obj\Debug\SpadesServer.pdb

@@ -1,0 +1,12 @@
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\bin\x86\Debug_x86\KeyServices.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\bin\x86\Debug_x86\KeyServices.pdb
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.csprojResolveAssemblyReference.cache
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.KeyAdminService.resources
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.KeyChildServiceBase.resources
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.KeyGameService.resources
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.KeyLobbyService.resources
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.KeyLoginService.resources
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.KeyServiceBase.resources
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.csproj.GenerateResource.Cache
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.dll
+C:\Users\Michael\projects\KeystoneGameBlocks\KeyServices\obj\Debug_x86\KeyServices.pdb

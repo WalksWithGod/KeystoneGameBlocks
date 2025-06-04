@@ -1,0 +1,37 @@
+E:\dev\c#\Project Evolution\Authenticate\bin\Debug\Authentication.dll
+E:\dev\c#\Project Evolution\Authenticate\bin\Debug\Authentication.pdb
+E:\dev\c#\Project Evolution\Authenticate\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\Project Evolution\Authenticate\obj\Debug\Authentication.dll
+E:\dev\c#\Project Evolution\Authenticate\obj\Debug\Authentication.pdb
+E:\dev\c#\Lenn-Feb.10.2010\Project Evolution\Authenticate\bin\Debug\Authentication.dll
+E:\dev\c#\Lenn-Feb.10.2010\Project Evolution\Authenticate\bin\Debug\Authentication.pdb
+E:\dev\c#\Lenn-Feb.10.2010\Project Evolution\Authenticate\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\Lenn-Feb.10.2010\Project Evolution\Authenticate\obj\Debug\Authentication.dll
+E:\dev\c#\Lenn-Feb.10.2010\Project Evolution\Authenticate\obj\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\bin\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\bin\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\obj\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\obj\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Authenticate\bin\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Authenticate\bin\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Authenticate\bin\x86\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Authenticate\bin\x86\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Authenticate\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Authenticate\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Authenticate\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Authenticate\obj\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Authenticate\obj\Debug\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Debug\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Debug\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Debug\Authentication.pdb

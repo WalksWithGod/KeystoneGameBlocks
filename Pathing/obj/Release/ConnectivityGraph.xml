@@ -1,0 +1,175 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ConnectivityGraph
+</name>
+</assembly>
+<members>
+<member name="P:ConnectivityGraph.Link.Destination(ConnectivityGraph.Area)">
+	<summary>
+ Given a departure area, returns the destination area a link will take you too.
+ </summary>
+	<param name="currentArea"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.AreaHelper.CanTraverse(MTV3D65.TV_3DVECTOR,MTV3D65.TV_3DVECTOR@,ConnectivityGraph.BoundingBox,System.Single,System.Single)">
+	<summary>
+	</summary>
+	<param name="currentPosition"></param>
+	<param name="tryPosition"></param>
+	<param name="partition"></param>
+	<param name="cellHeight"></param>
+	<param name="maxStepHeight"></param>
+	<returns></returns>
+	<remarks>NOTE: tryPosition is passed byRef since we can modify its Y value.</remarks>
+</member><member name="M:ConnectivityGraph.Edge.GetCells">
+	<summary>
+ Depending on which outward direction this edge is with respect to its owner Area 
+ it finds and assigns the cells that belong to this edge.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.AreaBuilder.VerifyAreas(ConnectivityGraph.Area[])">
+	<summary>
+ Used to verify that every area's height and width matches.
+ That the cellcount in the area = height * width
+ All cells share the same areaID
+ That one can itterate around the outer edge cells in a complete revolution.
+ All outer edge cells neighbors OUTSIDE the area, have cell.areaID's that do NOT match the current areaID.
+ That one can traverse thru all the inner cells in a snake pattern
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.AreaBuilder.GetRandomCell(System.Collections.Generic.Dictionary{MTV3D65.TV_3DVECTOR,ConnectivityGraph.Cell})">
+	<summary>
+ Returns a random picked item from the list of all cells
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.AreaBuilder.Save(System.String,ConnectivityGraph.AreaBuilder.Region)">
+	<summary>
+ First, recall that area generation only occurs AFTER all cells for all
+ pages have been created.  In other words, after the initial NavNet
+ generation is complete.
+ 
+ However, for large worlds with lots of pages, it's still impractical to try
+ and keep all pages loaded to generate all areas for all pages.  Because we
+ have to dynamically load/unload pages during overall Area generation
+ we need to specify in the file for whether a given page has had its
+ edges and/or links already generated.
+ 
+ If only the edges are generated and not the links, then prior to unloading
+ an unfinished page, we must save the areas (which are always fully complete)
+ and the edges (including the cells that make up that edge).  
+ 
+ The links are stored with the areas and is the same in either case. 
+ </summary>
+	<param name="path"></param>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.Area.MergeInnerCells">
+	<summary>
+ A area is comprised of a bunch of cells.   This routine performs cell compression by
+ merging all the inner cells into a single large cell. Edge cells will all update their approriate neighbor to
+ reference the new combined inner cell.  NOTE: Remember that cells reference neighbor cells and links reference
+ areas.  They should not be confused.  This is why we continue to say that the merged inner cells combined to
+ form a larger cell (and not a area). This routine generally results in a 5:1 cell compression ratio.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.Area.Draw">
+	<summary>
+ Visual debugging aids.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ConnectivityGraph.WorldNode">
+	<summary>
+ World Node is a quad tree group node.  Although there are
+ methods for retreiving all entities from all leaf nodes
+ under this node, those lists are not maintained here.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ConnectivityGraph.WorldArea">
+	<summary>
+ World Area is a leaf node. This means it has no children.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.QTreeInit.CommonAncestorDistance(ConnectivityGraph.QTreeNodeLeaf@,ConnectivityGraph.QT_NODE_NEIGHBOR)">
+	<summary>
+  Determine how many jumps up the tree until a parent's border no longer matches 
+ </summary>
+	<returns></returns>
+	<remarks>Not pretty, but effective.</remarks>
+</member><member name="T:ConnectivityGraph.QTreeInit">
+	<summary>
+ Recurses the quad tree and assigns neighbors.  This allows for easy navigation from one leaf node to any of its 8 neighbors.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ConnectivityGraph.InitStageTwo">
+	<summary>
+ Recurses the quad tree and assigns neighbors.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ConnectivityGraph.QTreeNode.BuildQuadtree(ConnectivityGraph.QTreeNodeBranch@,System.Int32)">
+	<summary>
+ BuildQuadTree is a routine to divide a quadtree root node into more nodes
+ It uses a max depth contstant to determine when to stop looping. Note that
+ we do not use recursion since i'm not a math genius and the easiest method
+ I could come up with to derive cross-quadrant neighbor index values is used.
+ Using recursion would result in index values that I couldnt formulate a routine
+ to derive neighbor relationships for.
+ </summary>
+	<param name="root"></param>
+	<remarks>The order in which we index the children is important to the routine which later
+ must establish the proper neighbor references for each node</remarks>
+</member><member name="T:ConnectivityGraph.QTreeNode">
+	<summary>
+ Spatial Linear Quadtree that also maintains references to its neigbors
+ in other quadrants.  This consumes more memory than a typical quadtree
+ implementation, but we gain speed when performing range limited nearby searches.
+ NOTE: We save 3 operations for each sibling query that is located in another
+ quadrant, and 2 operations for each sibling in the same quadrant.  So
+ when we potentially need to do these searches for thousands of entities each "tick"
+ its a huge saving and results in less recursive overhead.
+ </summary>
+	<remarks>Thread safety shouldn't be a problem since updates aren't allowed after initialization.
+ In other words, for all intents and purposes this is a read only tree.</remarks>
+</member><member name="T:ConnectivityGraph.CellPointer">
+	<summary>
+ A cell that points to another cell (usually one from a neighboring page)
+ If _cell reference is not set, then an attempt is made to obtain that reference.
+ This requires and assumes that the neighboring page is loaded into memory.
+ NOTE: CellPointers as well as regular cells are only used during generation.
+ In game at runtime, we strictly use areas and links although when the areas
+ and links for a specific page are loaded, the link that points to a area
+ in another page, will use a "AreaPointer" instead of the actual reference.
+ This way these neighboring area references can be given a change to be obtained.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:ConnectivityGraph.NavNet">
+	<summary>
+ This is the primary class used during runtime (as opposed to initial generation of the cells, areas, edges and links.
+ The user controlled player has no use for the NavNet at all.   The client can rely on local physics and collision code.
+ Client Side AI controlled players however, can use the CG to pathfind in the world.  The Areas and Portals take the place of
+ predefined "paths".
+ Server Side AI players as well as Server Side Human Player boundary (cheating) enforcement can also make use of the CG.
+ Thus, the CG sits outside of any other Spatial hierarchy such as an Octree or Quadtree.  Those things are only useful when generating our CG
+ in our Editor.
+ 
+ At runtime, our only additional concern is paging in/out CG data in Single Player games (for network server controlled AI, the client 
+ has no use for the CG at all) as needed.  Or even when generating the preliminary temporary Cell data... we'd like to be able to page some of it out
+ or to even be able to generate CG data for entire regions and then link them because clearly for a huge World of Warcraft like game, you want to design regions
+ one at a time and then to merge them because otherwise it's too much data thrashing.
+ 
+ But the biggest problem with this approach is that the CG is generated based on a single Entity's demensions.  A huge rancor should not be using
+ a CG for a tiny human, although you could probably get away with allowing a tinier creature to use a larger creature's CG however realizing that 
+ these tiny creatures will be limited from going into tiny areas that it should visibly be able to pass, but because the larger creature who's CG it's using
+ cannot.  The scary solution (only because of possible memory constraints) is to create multiple CG's for different sized creatures.  That said, one should 
+ remember that Game Programmming isn't about creating "perfect" systems.   It's about fullfilling a design requirement and that's all.
+ 
+ Todo: i believe i should implement a similar "subgraph" structure for each page.  The thing is
+ sure a single page can reference its own subgraph info, but there needs to be a common point
+ where at runtime, neighboring pages can reconstruct the links between them.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,15 @@
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\SourceGrid.PingGrid.Backend.NHibernate.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\SourceGrid.PingGrid.Backend.NHibernate.pdb
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\NHibernate.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\SourceGrid.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\Iesi.Collections.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\Antlr3.Runtime.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\log4net.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\SourceGrid.pdb
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\SourceGrid.xml
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\NHibernate.xml
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\Iesi.Collections.xml
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\bin\Debug\log4net.xml
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\obj\x86\Debug\SourceGrid.PingGrid.Backend.NHibernate.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\obj\x86\Debug\SourceGrid.PingGrid.Backend.NHibernate.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_40_src\SourceGrid.PingGrid.Backend.NHibernate\obj\x86\Debug\SourceGrid.PingGrid.Backend.NHibernate.pdb

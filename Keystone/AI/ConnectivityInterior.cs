@@ -1,0 +1,1495 @@
+﻿using Keystone.Extensions;
+using Keystone.Types;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Keystone.AI
+{
+    /// <summary>
+    /// A fork of Keystone.AI.Connectivity that is designed specifically for
+    /// Portals.Interior tilesd regions.
+    /// </summary>
+    internal class ConnectivityInterior
+    {
+        internal enum GraphState
+        {
+            Dirty,     // must be rebuilt
+            Building,  // is being rebuilt
+            Ready      // up to date
+        }
+
+        internal enum AXIS
+        {
+            X,
+            Y,
+            Z
+        }
+
+
+        internal Area[][] Areas;
+        internal GraphState[] States;
+
+         
+        
+        /// <summary>
+        /// A bounding box defined in terms of contiguously connected tiles.  These
+        /// define contiguous volumes of space and do not necessarily indicate
+        /// traversability by any particular NPC.  Areas are always
+        /// box shaped and thus convex.
+        /// </summary>
+        internal struct Area
+        {
+            /// <summary>
+            /// This is the index of this area within the jagged array. NOTE: Area indices can be the same across different floors
+            /// so during PathFinding we need to comopare the Floor member as well to know if a particular Area.Index is on the floor we want. 
+            /// </summary>
+            public int Index;   
+            // to save memory, i could make Min and Max just flattened indices.  There's no need to have MinX, MinZ, MaxX, MaxZ
+            // TODO: why don't we also store the index of the array we're in?  That _is_ useful for pathfindingInterior
+            // and we should store the Floor too.
+            // I think the question is more about Portal indices and how do we allow them to point to destination Areas on another floor
+            public int Floor;
+            public int TileValue; // all tiles within this area share the same TileValue otherwise it results in a new Area being created.  Can tileValue be 0 to represent an open space like an elevator shaft? OR even just a hole that a crew member can climb down/up through to another level?
+            public int MinX;
+            public int MinZ;
+
+            public int MaxX;
+            public int MaxZ;
+
+
+            public AreaPortal[] Portals;
+
+            public bool Contains(int x, int z)
+            {
+                return x >= MinX && x <= MaxX &&
+                        z >= MinZ && z <= MaxZ;
+            }
+
+            // todo: this doesn't do us much good. we cant use the result
+            // to search for a particular tile
+            // todo: what part of our code calls on Area.Center?  I think our debug path point plotting does
+            public Vector3i Center
+            {
+                get
+                {
+                    // UnflattenCoordinate();
+                    Vector3i result;
+                    if (MaxX - MinX == 0)
+                        result.X = MinX;
+                    else
+                        result.X = (int)(MinX + ((MaxX - MinX) * 0.5d));
+
+                    result.Y = Floor;
+
+                    if (MaxZ - MinZ == 0)
+                        result.Z = MinZ;
+                    else
+                        result.Z = (int)(MinZ + ((MaxZ - MinZ) * 0.5d));
+
+                    return result;
+                }
+            }
+
+            public void RemovePortal(AreaPortal portal, AXIS axis)
+            {
+                if (Portals == null) return;
+
+                for (int i = 0; i < Portals.Length; i++)
+                    if (Portals[i].Contains(portal.MinMax[0]))
+                    {
+                        Portals = Portals.RemoveAt(i);
+                        return;
+                    }
+            }
+
+
+            public void AddPortal(AreaPortal portal, AXIS axis)
+            {
+                if (Portals == null)
+                {
+                    Portals = Portals.ArrayAppend(portal);
+                    return;
+                }
+
+#if DEBUG                
+                // verify we are not adding duplicate portals
+                if (Portals != null)
+                {
+                    for (int i = 0; i < Portals.Length; i++)
+                    {
+                        if (Portals[i] == portal) throw new Exception("Area.AddPortal() - Duplicate portal");
+                    }
+                }
+#endif
+
+                switch (axis)
+                {
+                    case AXIS.X:
+                        for (int i = 0; i < Portals.Length; i++)
+                        {
+                            // if both portals destination point to same Area 
+                            if (Portals[i].AreaIndex[0] == portal.AreaIndex[0] &&  Portals[i].AreaIndex[1] == portal.AreaIndex[1])
+                            {
+                                // merge portal test - since we know we always add portals incrementally from low X axis to high X axis
+                                // we just need to compare the the Max X axis value to determine if the added portal is adjacent
+                                // and can be merged.
+                                if (Portals[i].MinMax[1].X + 1 == portal.MinMax[1].X)
+                                { 
+                                    // NOTE: we add corresponding portal in adjacent Area seperately during connectivity generation.
+                                    Portals[i].MinMax[1].X = portal.MinMax[1].X;
+                                    System.Diagnostics.Debug.Assert(Portals[i].MinMax[0].Z == portal.MinMax[0].Z);
+                                    return;
+                                }
+                            }
+                        }
+                        break;
+                    case AXIS.Z:
+                        for (int i = 0; i < Portals.Length; i++)
+                        {
+                            // if both portals destination point to same Area 
+                            if (Portals[i].AreaIndex[0] == portal.AreaIndex[0] && Portals[i].AreaIndex[1] == portal.AreaIndex[1])
+                            {
+                                // merge portal test - since we know we always add portals incrementally from low Z axis to high Z axis
+                                // we just need to compare the the Max Z axis value to determine if the added portal is adjacent
+                                // and can be merged.
+                                if (Portals[i].MinMax[1].Z + 1 == portal.MinMax[1].Z)
+                                {
+                                    // NOTE: we add corresponding portal in adjacent Area seperately during connectivity generation.
+                                    Portals[i].MinMax[1].Z = portal.MinMax[1].Z;
+                                    System.Diagnostics.Debug.Assert(Portals[i].MinMax[0].X == portal.MinMax[0].X);
+                                    return;
+                                }
+                            }
+                        }
+                        break;
+                    case AXIS.Y: // TODO: WARNING - this code never executes for Ladders or Stairs.  Do we even need it? Hrm..
+                        for (int i = 0; i < Portals.Length; i++)
+                        {
+                            // if the destination Areas are the same, we can merge because one of the constraints we have
+                            // on Area generation, is that Up/Down traversal Areas must always have the same XZ dim+-ensions.
+                            // This is i think, only useful for Ladders and not Stairs.
+                            if (Portals[i].AreaIndex[0] == portal.AreaIndex[0] && Portals[i].AreaIndex[1] == portal.AreaIndex[1])
+                            {
+                                // for Y axis contiguous testing, i think we are always guaranteed that
+                                // all portals we attempt to add to this Area that connect along Y axis
+                                // must always be contiguous, but we must update the min/max x and z 
+                                // of the locations.
+                                Portals[i].MinMax[0].X = Math.Min(Portals[i].MinMax[0].X, portal.MinMax[0].X);
+                                Portals[i].MinMax[1].X = Math.Max(Portals[i].MinMax[1].X, portal.MinMax[1].X);
+                                Portals[i].MinMax[0].Z = Math.Min(Portals[i].MinMax[0].Z, portal.MinMax[0].Z);
+                                Portals[i].MinMax[1].Z = Math.Max(Portals[i].MinMax[1].Z, portal.MinMax[1].Z);
+                                // Y min/max should be identical for all portals
+                                System.Diagnostics.Debug.Assert(Portals[i].MinMax[0].Y == portal.MinMax[0].Y);
+                                //System.Diagnostics.Debug.Assert(Portals[i].MinMax[1].Y == portal.MinMax[1].Y);
+                                System.Diagnostics.Debug.Assert(Math.Abs(Portals[i].MinMax[0].Y - portal.MinMax[1].Y) == 1);
+
+                                // TODO: return is necessary right?  It wasn't there before so i'm adding it now Feb.14.2020
+                                return;
+                            }
+                        }
+                        break;
+                        
+                }
+                // if the portal has the same dest Area as an existing Portal, it can be merged imto the existing Portal
+                //bool merged = false;
+                //if (Portals != null)
+                //    for (int i = 0; i < Portals.Length; i++)
+                //    {
+                //        // TODO: I think one problem here is, you can have portals connecting to same area, but
+                //        //       they are not necessarily contiguous.
+                //        //        Do to the nature of how i create portals from lowest to highest, i think i just need to compare
+                //        //        the last portal to see if it's adjacent to the portal being added.
+                //        if (Portals[i].AreaID[1] == portal.AreaID[1]) // && Portals[i].Location[1] == portal.Location[0])
+                //        {
+                //            Portals[i].Location[0].X = Math.Min(Portals[i].Location[0].X, portal.Location[0].X);
+                //            Portals[i].Location[0].Y = Math.Min(Portals[i].Location[0].Y, portal.Location[0].Y);
+                //            Portals[i].Location[0].Z = Math.Min(Portals[i].Location[0].Z, portal.Location[0].Z);
+
+                //            Portals[i].Location[1].X = Math.Max(Portals[i].Location[1].X, portal.Location[1].X);
+                //            Portals[i].Location[1].Y = Math.Max(Portals[i].Location[1].Y, portal.Location[1].Y);
+                //            Portals[i].Location[1].Z = Math.Max(Portals[i].Location[1].Z, portal.Location[1].Z);
+                //            // TODO: here i think im merging tiles that are not contiguous
+                //            merged = true;
+                //            break;
+                //        }
+                //    }
+
+                // if we're still here, just append a new portal
+                Portals = Portals.ArrayAppend(portal);
+            }
+        }
+
+        internal struct AreaPortal
+        {
+            internal enum PortleFlags : byte
+            {
+                None = 0,
+                TwoWay = 1 << 0
+
+            }
+
+            // MinMax[0] and MinMax[1] form at the 2D portal between Areas.  
+            /// <summary>
+            /// X,Y,Z tile location on -/+ sides of the Area boundary
+            /// These are min/max location values which update when AreaPortals are merged together during generation.
+            /// </summary>
+            public Vector3i[] MinMax;  
+            public int[] AreaIndex; // array of 2 area indices within the jagged array.  NOTE: Location[].Y member must be compared to know what floor an area is in since Area indices can collide with Area indices from other floors. Lower Index (lowest Floor always is at subscript[0]) within this array is always at subscript[0] because we connect Area's via portals starting from bottom/left most Area onward
+            public PortleFlags Flags;    // 1way/2way, ladder, stairs, teleport, elevator, etc...
+
+  
+
+            public AreaPortal(int startTileX, int startTileY, int startTileZ,
+                               int destTileX, int destTileY, int destTileZ,
+                               int startingArea, int destinationArea)
+            {
+                
+                AreaIndex = new int[2];
+                MinMax = new Vector3i[2];
+
+                // TODO: in ctor() rename startTileX and destTileX to minX and maxX etc.
+
+                AreaIndex[0] = startingArea;
+                AreaIndex[1] = destinationArea;
+
+                if (destTileY < startTileY)
+                {
+                    AreaIndex[0] = destinationArea;
+                    AreaIndex[1] = startingArea;
+                }
+
+     
+                MinMax[0] = new Vector3i(startTileX, startTileY, startTileZ);
+                MinMax[0].X = Math.Min(startTileX, destTileX);
+                MinMax[0].Y = Math.Min(startTileY, destTileY);
+                MinMax[0].Z = Math.Min(startTileZ, destTileZ);
+
+                MinMax[1] = new Vector3i(destTileX, destTileY, destTileZ);
+                MinMax[1].X = Math.Max(startTileX, destTileX);
+                MinMax[1].Y = Math.Max(startTileY, destTileY);
+                MinMax[1].Z = Math.Max(startTileZ, destTileZ);
+
+
+                Flags = 0;
+            }
+
+            public bool Contains(Vector3i location)
+            {
+                if (location.X >= MinMax[0].X && location.Y >= MinMax[0].Y && location.Z >= MinMax[0].Z &&
+                        location.X <= MinMax[1].X && location.Y <= MinMax[1].Y && location.Z <= MinMax[1].Z) 
+                    return true;
+
+                return false;
+            }
+
+            // TODO: I think this is obsolete - all portals are 1 way, but we use 2 portals for bi-directionality.      
+            //public bool TwoWay
+            //{
+            //    get { return (Flags & PortleFlags.TwoWay) == PortleFlags.TwoWay; }
+            //    set
+            //    {
+            //        if (value)
+            //            Flags |= PortleFlags.TwoWay;
+            //        else
+            //            Flags &= ~PortleFlags.TwoWay;
+            //    }
+            //}
+
+            // DO NOT USE! - this method always results in the max X or max Z and does not allow us to reliably
+            //               find the Area to which this AreaPortal belongs.  Really, we shouldn't even have a Location[1]
+            //               we should only be pointing to the adjacent Area.
+            //public Vector3i Center
+            //{
+            //    get
+            //    {
+            //        // TODO: is this property resulting in correct values and what is it used for?
+            //        // TODO: it definetly isn't working if Y value traverses multiple floors right?
+            //        Vector3i result;
+            //        if (Location[1].X - Location[0].X == 1)
+            //        {
+            //            result.X = Location[1].X;
+            //            result.Y = Location[1].Y;
+            //            result.Z = Location[0].Z + ((Location[1].Z - Location[0].Z) / 2);
+            //        }
+            //        else
+            //        {
+            //            result.X = Location[0].X + ((Location[1].X - Location[0].X) / 2);
+            //            result.Y = Location[1].Y;
+            //            result.Z = Location[1].Z;
+            //        }
+            //        return result;
+            //    }
+            //}
+            //public BoundingBox BoundingBox
+            //{
+            //    get
+            //    {
+
+            //    }
+            //}
+
+            public static bool operator ==(AreaPortal p1, AreaPortal p2)
+            {
+                return p1.MinMax[0] == p2.MinMax[0] &&
+                       p1.MinMax[1] == p2.MinMax[1];
+            }
+
+            public static bool operator !=(AreaPortal p1, AreaPortal p2)
+            {
+                return p1.MinMax[0] != p2.MinMax[0] ||
+                       p1.MinMax[1] != p2.MinMax[1];
+            }
+        }
+
+
+        internal struct AreaBuilderNodeFast
+        {
+            // NOTE: this struct is only used during Runtime Area building in the mCalcGrid.  
+            public int AreaID;
+            public TraversalState Status; // node has either 0 not evaluated, 1 open evaluated, 2 closed evaluated status.  
+        }
+
+
+        Scene.Scene mScene;
+        int mTileCountX;
+        int mTileCountZ;
+        int mTileCountY;
+
+
+        public ConnectivityInterior(Portals.Interior interior, Keystone.Scene.Scene scene, uint tileCountX, uint floorCount, uint tileCountZ)
+        {
+            if (interior == null || scene == null) throw new ArgumentNullException();
+
+            mScene = scene;
+            System.Diagnostics.Debug.Assert(interior.CellCountY > 0);
+            Areas = new Area[interior.CellCountY][];
+            States = new GraphState[interior.CellCountY];
+            mTileCountX = (int)tileCountX;
+            mTileCountZ = (int)tileCountZ;
+            mTileCountY = (int)floorCount;
+        }
+
+        /// <summary>
+        /// Locates Area in XZ plane on floor level Y that contains the x,z tile location.
+        /// NOTE: if obstacle such as a wall takes up this tile, then no Area will exist there and
+        /// this function will return -1.
+        /// </summary>
+        /// <param name="tileX"></param>
+        /// <param name="tileY">floor level</param>
+        /// <param name="tileZ"></param>
+        /// <returns>The array index of the Area on a given floor.</returns>
+        internal int LocateAreaContainingTile(int tileX, int tileY, int tileZ)
+        {
+            if (tileY >= this.Areas.GetLength(0)) return -1;
+
+            System.Diagnostics.Debug.Assert(this.Areas.GetLength(0) >= tileY);
+            System.Diagnostics.Debug.Assert(tileY >= 0);
+
+            Area[] areas = this.Areas[tileY];
+            if (areas == null || areas.Length == 0)
+                return -1;
+
+            // find area if any, that contains this new x,y,z
+            // if x, y, z is within bounds of this zone, then one area should contain this tileID			
+            for (int i = 0; i < areas.Length; i++)
+                if (areas[i].Contains(tileX, tileZ))
+                {
+                    return i;
+                }
+
+            // area might not exist for this tile.  eg. an COMPONENT, COMPONENT_STACKABLE, WALL, terrain might be taking up this entire tile
+            return -1;
+        }
+
+        /// <summary>
+        /// Generate Areas for all floors in the Interior.
+        /// </summary>
+        /// <param name="obstacleData"></param>
+        /// <param name="tileCountX"></param>
+        /// <param name="tileCountZ"></param>
+        /// <returns></returns>
+        internal Area[][] GenerateAreas(int[,,] obstacleData)
+        {
+            // TODO: This is not called.  We use the overloaded method instead called from interior.ApplyFootprint() currently
+            int floorCount = obstacleData.GetUpperBound(1) +1;
+            Area[][] results = new Area[floorCount][];
+
+            // TODO: Here we generate Areas for each floor seperately, so how can we use portals
+            //       to connect up/down traversal? AreaPortal struct does contain a Y value for the portal location
+            //       I could add a Y param to each Area so that AreaIDs on different floors with same 2D index value, can be distinguished by their Y value.
+            //       NOTE: we do create portals seperately after all Areas for that floor are created.
+            //       We call GenerateAreas() from interior.ApplyFootprint() which is temporary for now, but it allows for update of connectivity whenever obstacles change on any deck.
+            //       So, ultimately, we need to GeneratePortals for up/down traversal.  
+            //       - first this means we need unique Areas generated for Up/Down tile mask data.
+            for (int i = 0; i < floorCount; i++)
+            {
+                results[i] = GenerateAreas(i, obstacleData);
+            }
+
+
+            // TODO: do we perform a second pass here to create the up/down Areas and Portal connections?
+            //       or can we do it from the below call and connect upper to the current lower level?
+            //       - We would need to be able to pass in existing areas or else we just overwrite them 
+            //       when generating the next floor above it as we iterate all floors.
+            //       - or if we modify the tile data on the upper floors, we can accomplish the same thing.
+            //       That means we need to be able to modify the data at some point... ideally, when placing
+            //       the component, but we sort of ruled that out earlier thinking it too complex to track.
+            return results;
+        }
+
+        /// <summary>
+        /// Generate Areas only for the single specified floor within the Interior.  But how do we connect floors along Y axis?
+        /// </summary>
+        /// <param name="floor"></param>
+        /// <param name="obstacleData"></param>
+        /// <param name="tileCountX"></param>
+        /// <param name="tileCountZ"></param>
+        /// <returns></returns>
+        internal Area[] GenerateAreas(int floor, int[,,] obstacleData)
+        {
+            System.Collections.Generic.List<Area> results = new System.Collections.Generic.List<ConnectivityInterior.Area>();
+            Area[] areas;
+
+            // create a 1d grid (indexed by flattened 3D coords.  We can use tileCountX * tileCountZ because we're only computing one deck at a time using those 3D tile coords)  
+            AreaBuilderNodeFast[] calcGrid = new AreaBuilderNodeFast[mTileCountX * mTileCountZ];
+            // NOTE: no priority queue needed here.  We want the order of the queue to be FIFO.
+            System.Collections.Generic.Queue<int> openQueue = new System.Collections.Generic.Queue<int>();
+
+
+            // TODO: predicate function eventually will be passed in to this GenerateAreas() function so that we
+            //       can build different connectivity maps based on different AI unit capabilities (eg jet pack space suit, vs walk, vs tracked)
+            // TODO: or maybe not because generating areas is an extremely expensive CPU operation
+            Func<int[,,], int, int, int, int, bool> fConnectivityFunction = (int[,,] data, int tileValue, int x, int y, int z) =>
+            {
+                // WARNING: If no script is attached to the entity, no Areas will be generated for it!
+                if (((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.BOUNDS_IN) == 0) ||
+                      data[x, y, z] != tileValue ||
+                      //((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0) && (data[x, y + 1, z] &  (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0 ||
+                      // TODO: I think the following will fail if a Stairs is placed on top most accessible floor.  We need to prevent stairs from being placed there.
+                      (data[x, y + 1, z] & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0 ||
+                      (data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.COMPONENT) != 0 ||
+                      (data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.COMPONENT_STACKABLE) != 0 ||
+                      (data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.FLOOR) == 0 || // <- This seems to prevent us from making portals after the Areas are generated and the Areas do seem to be generating fine.
+                    ((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.WALL) != 0) && (data[x, y + 1, z] & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) == 0) // TODO: what if wall AND door are on these tiles? the wall tile attributes need to be removed from those respective tiles
+                {
+
+#if DEBUG
+                    // TOOD: I think when placing stairs or ladders, i need to update the tiles on the uppper level to have FLOOR attribute set even if we remove the floor from that opening.
+                    //       This means we must also prevent user from placing a Floor there since we will auto-manage it.  This tile system is going to be a big headache going forward.  I can see it already.  It's not as
+                    //       intuitive as i thought it would be.
+                          
+                    bool result = ((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.BOUNDS_IN) == 0);
+                    //      result = ((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0);
+                    result = ((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.COMPONENT_TRAVERSABLE) != 0);
+                    result = ((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.COMPONENT_STACKABLE) != 0);
+                    result = data[x, y, z] != tileValue;
+                    result = (data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.COMPONENT) != 0; // NOTE: door "components" (what about Stairs?) dont apply for this case. WE use TILE_ATTRIBUTES.DOOR for those
+                    result = (data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.WALL) != 0;
+                    // if it's out of bounds we return false, but if the
+                    // tile data has changed, we want to start a new area
+                    // not just declare connectivity failed.
+                    // TODO: when this is called on first encounter of changed tileValue, are we
+                    // inadvertantly skipping that first row of tiles and not adding them to the new Area?
+                    // Because we only want to skip it if the BOUNDS_IN = 0.
+                     //if (result == false)
+                     //    System.Diagnostics.Debug.WriteLine("ConnectivityInterior.GenerateAreas() - Upper landing found. Skipping lower level Area");
+#endif
+                    return false;
+                }
+
+#if DEBUG
+                //if ((data[x,y,z] & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_LOWER_LANDING) != 0)
+                //    System.Diagnostics.Debug.WriteLine("Stairs lower landing found.");
+                //else if ((data[x, y, z] & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0)
+                //    System.Diagnostics.Debug.WriteLine("Stairs upper landing found.");
+#endif 
+                return true;
+            };
+
+
+            // todo: create method mScene.Collide()
+
+
+            bool stop = false;
+            // TODO: for Interior we don't want to start at center do we?  why not min x and min z?
+            //       wait, isnt 0,0,0 the min x and max z because it's array based, not cartesian based
+            //       HOWEVER we do need to modify these starting values based on the current floor level.
+            //       but wait, can't really do that either.  we must transform the 2D coords into 3D 
+            //       because our obstacleData is 0 based array.
+            //       Or can we pass in all obstacle data and just limit our search to 1 level at a time?
+            int offset = floor * (mTileCountX * mTileCountZ);
+            int currentTileID = 0 + offset; // flatten (0,0,0) == 0
+            uint currentX = 0;
+            uint currentY = (uint)floor;
+            uint currentZ = 0;
+
+
+            openQueue.Enqueue(currentTileID);
+
+
+            // Area Creation - single deck only
+            // -----------------------
+            while (openQueue.Count > 0 && !stop)
+            {
+                bool areaOpen = true;
+
+                // TODO: was it a mistake to not use index for calcGrid[] since these are all per floor
+                //       and we'd just need to add an Area.Floor property to denote which floor we're in.
+                //       Because before we were using results.Count for the index.  Then for pathing
+                //       we check value of both index and floor to know if we're traversing up/down or not
+                currentTileID = openQueue.Dequeue();
+                //Is it marked Closed? means this tile was already added to an area.
+                if (calcGrid[currentTileID - offset].Status == TraversalState.Closed)
+                {
+                    continue;
+                }
+
+                // unflatten tile index to X,Y,Z coordinates
+                Utilities.MathHelper.UnflattenIndex((uint)currentTileID, (uint)mTileCountX, (uint)mTileCountZ, out currentX, out currentY, out currentZ);
+                System.Diagnostics.Debug.Assert(floor == currentY);
+
+                Area currentArea;
+                currentArea.Portals = null;
+                currentArea.Floor = floor;
+                // area.Index value can collide on a floor by floor comparison so we should always check
+                // currentArea.FloorValue to determine if two areas are actually the same
+                currentArea.Index = results.Count;
+                currentArea.TileValue = obstacleData[(int)currentX, floor, (int)currentZ];
+                currentArea.MinX = currentArea.MaxX = (int)currentX;
+                currentArea.MinZ = currentArea.MaxZ = (int)currentZ;
+
+                // is this first tile of new Area OOB or UNPASSABLE itself?
+                bool expansionInitialSuccess = fConnectivityFunction(obstacleData, currentArea.TileValue, (int)currentX, floor, (int)currentZ);
+                // TODO: store the Area's tile attribute values so we can compare them to future tiles we try to expand into
+                //       to determine if we need to start a new area later on
+                // TODO: if the unflattened X and Z axis are % TILESPERCELL_X == 0 and % TILESPERCELL_Z == 0 and the obstacle data indicates BOUNDS_IN == false, then we should be able to skip TILESPERCELL_X and or TILESPERCELL_Z tiles on one or both axis
+                if (expansionInitialSuccess == false)
+                {
+                    // get ONE adjacent tile from each of +X and +Z axis
+                    int[] adjacentTiles = null;
+                    if (currentX < mTileCountX - 1)
+                        adjacentTiles = GetAxisExpansionTiles(AXIS.X, currentX + 1, currentY, currentZ, currentY, currentZ, (uint)mTileCountX, (uint)mTileCountZ);
+                    if (currentZ < mTileCountZ - 1)
+                        // TODO: is this ArrayAppendRange() call too expensive?  better to use a list to store the adjacents?
+                        adjacentTiles = adjacentTiles.ArrayAppendRange(GetAxisExpansionTiles(AXIS.Z, currentZ + 1, currentX, currentY, currentX, currentY, (uint)mTileCountX, (uint)mTileCountZ));
+
+                    // enqueue and thus marks as OPEN and enqueues adjacent open list 
+                    if (adjacentTiles != null)
+                    {
+                        for (int i = 0; i < adjacentTiles.Length; i++)
+                        {
+                            // never enqueue twice or if it's already closed
+                            if (calcGrid[adjacentTiles[i] - offset].Status == TraversalState.Closed || calcGrid[adjacentTiles[i] - offset].Status == TraversalState.Open)
+                                continue;
+
+                            openQueue.Enqueue(adjacentTiles[i]);
+                            calcGrid[adjacentTiles[i] - offset].Status = TraversalState.Open;
+                            calcGrid[adjacentTiles[i] - offset].AreaID = -1;
+                        }
+                    }
+                    // mark the current as closed
+                    calcGrid[currentTileID - offset].Status = TraversalState.Closed;
+                    continue;
+                }
+
+                while (areaOpen)
+                {
+                    // TODO: Maybe we should ALWAYS expand so long as the current Area.TileValue data
+                    //       matches the previous and is INBOUNDS.  So this means, we would generate Areas
+                    //       for walls, but those Areas when traversed by pathfinder would see that the
+                    //       Areas were untraversable.  Further, if the Area contains a chair or bed
+                    //       we'd know it's not traversable, but "use-able" to sit on or sleep on.
+                    // NOTE: we try to expand along each axis in secession in order to keep
+                    //       dimensions perfectly box like.
+                    bool expansionSuccessX = false;
+
+                    // +X Axis expansion evaluation 
+                    if (currentArea.MaxX < mTileCountX - 1)
+                    {
+                        // find all IN BOUND tiles within the expanded direction.  
+                        // IN BOUND refers to min/max boundaries of the entire interior, NOT IN_BOUND flagged tiles within the ship's hull
+                        int[] tiles = GetAxisExpansionTiles(AXIS.X, (uint)currentArea.MaxX + 1, (uint)floor, (uint)currentArea.MinZ, (uint)floor, (uint)currentArea.MaxZ, (uint)mTileCountX, (uint)mTileCountZ);
+                        // _all_ must pass fTraversalTest() for the expansion to succeed.
+                        expansionSuccessX = Expand(openQueue, obstacleData, calcGrid, currentArea.TileValue, tiles, offset, currentArea.Index, fConnectivityFunction);
+                        if (expansionSuccessX)
+                            currentArea.MaxX++;
+
+                        // if it fails, we still need to enqueue those 
+                    }
+
+                    // TODO: do we need to expand in the Y axis? I think this only creates Areas on XZ plane and our task is to use portals to connect between
+                    // upper and lower areas.  To do that, the portal destinations just need to be tiles on Areas within different floors.
+                    // TODO: or wait, we use portals to connect two matching XZ dimensioned areas on the lower and upper floor when there is ACCESSIBLE_TOUPPER and ACCESSIBLE_TOLOWER defined as
+                    //       the respective Area.TileValue.  The question now is, why isnt that working correctly?
+                    bool expansionSuccessZ = false;
+                    // +Z Axis expansion evaluation
+                    if (currentArea.MaxZ < mTileCountZ - 1)
+                    {
+                        // find all IN BOUND tiles within the expanded direction.  
+                        // IN BOUND refers to min/max boundaries of the entire interior, NOT IN_BOUND flagged tiles within the ship's hull
+                        int[] tiles = GetAxisExpansionTiles(AXIS.Z, (uint)currentArea.MaxZ + 1, (uint)currentArea.MinX, (uint)floor, (uint)currentArea.MaxX, (uint)floor, (uint)mTileCountX,(uint)mTileCountZ);
+                        // _all_ must pass fTraversalTest() for the expansion to succeed.
+                        expansionSuccessZ = Expand(openQueue, obstacleData, calcGrid, currentArea.TileValue, tiles, offset, currentArea.Index, fConnectivityFunction);
+                        if (expansionSuccessZ)
+                            currentArea.MaxZ++;
+                    }
+
+                    // if expansion on x and z axis fail this iteration, close this area even if
+                    // only the currentTileID is the only tile in it
+                    if (!expansionSuccessX && !expansionSuccessZ)
+                    {
+                        areaOpen = false;
+                    }
+
+                    calcGrid[currentTileID - offset].Status = TraversalState.Closed;
+                } // end inner while
+
+
+                // add Area to results and start on next Area if there are still open nodes
+                results.Add(currentArea);
+
+
+            } // end outer while
+
+            areas = results.ToArray();
+            //System.Diagnostics.Debug.Assert(areas != null && areas.Length > 0);
+
+            return areas;
+        }
+
+
+        ///// <summary>
+        ///// Generate Areas only for the single specified floor within the Interior.
+        ///// </summary>
+        ///// <param name="floor"></param>
+        ///// <param name="obstacleData"></param>
+        ///// <param name="tileCountX"></param>
+        ///// <param name="tileCountZ"></param>
+        ///// <returns></returns>
+        //internal Area[] GenerateAreas(int floor, int[,,] obstacleData, int tileCountX, int tileCountZ)
+        //{
+        //    System.Collections.Generic.List<Area> results = new System.Collections.Generic.List<ConnectivityInterior.Area>();
+        //    Area[] areas;
+
+        //    // create a 1d grid (indexed by flattened 3D coords.  We can use tileCountX * tileCountZ because we're only computing one deck at a time using those 3D tile coords)  
+        //    AreaBuilderNodeFast[] calcGrid = new AreaBuilderNodeFast[tileCountX * tileCountZ];
+        //    // NOTE: no priority queue needed here.  We want the order of the queue to be FIFO.
+        //    System.Collections.Generic.Queue<int> openQueue = new System.Collections.Generic.Queue<int>();
+
+
+        //    // TODO: predicate function eventually will be passed in to this GenerateAreas() function so that we
+        //    //       can build different connectivity maps based on different AI unit capabilities (eg jet pack space suit, vs walk, vs tracked)
+        //    Func<int[,,], int, int, int, bool> fConnectivityFunction = (int[,,] data, int x, int y, int z) =>
+        //    {
+        //        // if the bit for the indexed obstacle data shows OBSTACLE or OUTOFBOUNDS, this makes it unpassable, we'll consider the tile blocked.
+        //        // but if the bit indicates accessible through door, we should allow the connectivity through? do we flag that area as special and
+        //        // leave it as it's own special area where an NPC can determine if they have access priveledges through that door or hatch?	
+        //        // Can we have seperate areas generated in one pass? so that accessible doors have a new area generated but which can connect
+        //        // to any other UN-obstacled area?  Like can we cache the current area's footprint flags, then if the flags are different
+        //        // but still accessible, generate a new area?
+        //        if (((data[x, y, z] & (int)Portals.Interior.TILEMASK_FLAGS.BOUNDS_IN) == 0) ||
+        //            ((data[x, y, z] & (int)Portals.Interior.TILEMASK_FLAGS.COMPONENT_FLOOR_MOUNTED)) != 0)
+        //        {
+
+        //            // if it's out of bounds we return false, but if the
+        //            // tile data has changed, we want to start a new area
+        //            // not just declare connectivity failed
+        //            return false;
+        //        }
+
+
+        //        return true;
+        //    };
+
+
+
+        //    bool stop = false;
+        //    // TODO: for Interior we don't want to start at center do we?  why not min x and min z?
+        //    //       wait, isnt 0,0,0 the min x and max z because it's array based, not cartesian based
+        //    //       HOWEVER we do need to modify these starting values based on the current floor level.
+        //    //       but wait, can't really do that either.  we must transform the 2D coords into 3D 
+        //    //       because our obstacleData is 0 based array.
+        //    //       Or can we pass in all obstacle data and just limit our search to 1 level at a time?
+        //    int offset = floor * (tileCountX * tileCountZ);
+        //    int currentTileID = 0; // flatten (0,0,0) == 0
+        //    uint currentX = 0;
+        //    uint currentY = (uint)floor;
+        //    uint currentZ = 0;
+
+
+        //    openQueue.Enqueue(currentTileID);
+
+
+        //    // Area Creation - single deck only
+        //    // -----------------------
+        //    while (openQueue.Count > 0 && !stop)
+        //    {
+        //        bool areaOpen = true;
+
+        //        currentTileID = openQueue.Dequeue();
+        //        //Is it marked Closed? means this tile was already added to an area.
+        //        if (calcGrid[currentTileID].Status == TraversalState.Closed)
+        //        {
+        //            continue;
+        //        }
+
+        //        // unflatten tile index to X,Y,Z coordinates
+        //        Utilities.MathHelper.UnflattenIndex((uint)currentTileID + (uint)offset, (uint)tileCountX, (uint)tileCountZ, out currentX, out currentY, out currentZ);
+        //        System.Diagnostics.Debug.Assert(floor == currentY);
+
+        //        Area currentArea;
+        //        currentArea.Portals = null;
+        //        //currentArea.ID = currentTileID; // lowest tile (-x,-y,-z) within the area flattened is the area ID
+        //        currentArea.ID = results.Count;
+        //        currentArea.TileValue = obstacleData[(int)currentX, floor, (int)currentZ];
+        //        currentArea.MinX = currentArea.MaxX = (int)currentX;
+        //        currentArea.MinZ = currentArea.MaxZ = (int)currentZ;
+
+        //        // is this first tile of new Area OOB or UNPASSABLE itself?
+        //        bool expansionInitialSuccess = fConnectivityFunction(obstacleData, (int)currentX, floor, (int)currentZ);
+        //        // TODO: store the Area's tilemask values so we can compare them to future tiles we try to expand into
+        //        //       to determine if we need to start a new area later on
+        //        if (expansionInitialSuccess == false)
+        //        {
+        //            // get ONE adjacent tile from each of +X and +Z axis
+        //            int[] adjacentTiles = null;
+        //            if (currentX < tileCountX - 1)
+        //                adjacentTiles = GetAxisExpansionTiles(AXIS.X, (int)currentX + 1, (int)currentY, (int)currentZ, (int)currentY, (int)currentZ, tileCountX, tileCountZ);
+        //            if (currentZ < tileCountZ - 1)
+        //                adjacentTiles = adjacentTiles.ArrayAppendRange(GetAxisExpansionTiles(AXIS.Z, (int)currentZ + 1, (int)currentX, (int)currentY, (int)currentX, (int)currentY, tileCountX, tileCountZ));
+
+        //            // enqueue and thus marks as OPEN and enqueues adjacent open list 
+        //            if (adjacentTiles != null)
+        //            {
+        //                for (int i = 0; i < adjacentTiles.Length; i++)
+        //                {
+        //                    // never enqueue twice or if it's already closed
+        //                    if (calcGrid[adjacentTiles[i] - offset].Status == TraversalState.Closed || calcGrid[adjacentTiles[i] - offset].Status == TraversalState.Open)
+        //                        continue;
+
+        //                    openQueue.Enqueue(adjacentTiles[i] - offset);
+        //                    calcGrid[adjacentTiles[i] - offset].Status = TraversalState.Open;
+        //                    calcGrid[adjacentTiles[i] - offset].AreaID = -1;
+        //                }
+        //            }
+        //            // mark the current as closed
+        //            calcGrid[currentTileID].Status = TraversalState.Closed;
+        //            continue;
+        //        }
+
+        //        while (areaOpen)
+        //        {
+        //            // TODO: Maybe we should ALWAYS expand so long as the current Area.TileMask data
+        //            //       matches the previous and is INBOUNDS.  So this means, we would generate Areas
+        //            //       for walls, but those Areas when traversed by pathfinder would see that the
+        //            //       Areas were untraversable.  
+        //            // NOTE: we try to expand along each axis in secession in order to keep
+        //            //       dimensions perfectly box like.
+        //            bool expansionSuccessX = false;
+
+        //            // +X Axis expansion evaluation 
+        //            if (currentArea.MaxX < tileCountX - 1)
+        //            {
+        //                // find all IN BOUND tiles within the expanded direction.  
+        //                // IN BOUND refers to min/max boundaries of the entire interior, NOT IN_BOUND flagged tiles within the ship's hull
+        //                int[] tiles = GetAxisExpansionTiles(AXIS.X, currentArea.MaxX + 1, floor, currentArea.MinZ, floor, currentArea.MaxZ, tileCountX, tileCountZ);
+        //                // _all_ must pass fTraversalTest() for the expansion to succeed.
+        //                expansionSuccessX = Expand(openQueue, obstacleData, calcGrid, tiles, offset, currentArea.ID, fConnectivityFunction);
+        //                if (expansionSuccessX)
+        //                    currentArea.MaxX++;
+
+        //                // if it fails, we still need to enqueue those 
+        //            }
+
+        //            bool expansionSuccessZ = false;
+        //            // +Z Axis expansion evaluation
+        //            if (currentArea.MaxZ < tileCountZ - 1)
+        //            {
+        //                // find all IN BOUND tiles within the expanded direction.  
+        //                // IN BOUND refers to min/max boundaries of the entire interior, NOT IN_BOUND flagged tiles within the ship's hull
+        //                int[] tiles = GetAxisExpansionTiles(AXIS.Z, currentArea.MaxZ + 1, currentArea.MinX, floor, currentArea.MaxX, floor, tileCountX, tileCountZ);
+        //                // _all_ must pass fTraversalTest() for the expansion to succeed.
+        //                expansionSuccessZ = Expand(openQueue, obstacleData, calcGrid, tiles, offset, currentArea.ID, fConnectivityFunction);
+        //                if (expansionSuccessZ)
+        //                    currentArea.MaxZ++;
+        //            }
+
+        //            // if expansion on x and z axis fail this iteration, close this area even if
+        //            // only the currentTileID is the only tile in it
+        //            if (!expansionSuccessX && !expansionSuccessZ)
+        //            {
+        //                areaOpen = false;
+        //            }
+
+        //            calcGrid[currentTileID].Status = TraversalState.Closed;
+        //        } // end inner while
+
+
+        //        // add Area to results and start on next Area if there are still open nodes
+        //        results.Add(currentArea);
+
+
+        //    } // end outer while
+
+        //    areas = results.ToArray();
+        //    System.Diagnostics.Debug.Assert(areas != null && areas.Length > 0);
+
+        //    return areas;
+        //}
+
+
+        /// <summary>
+        /// Create portals that originate on this floor, but can also extend up or down floors. But how do we prevent
+        /// creating portals up/down that have already been created by a previous floor?  How do we know to eliminate a portal
+        /// for example when a floor covers over a ladder on the floor below making the ladder unuseable?
+        /// </summary>
+        /// <param name="areas"></param>
+        /// <param name="floor"></param>
+        /// <param name="tileCountX"></param>
+        /// <param name="tileCountY"></param>
+        /// <param name="tileCountZ"></param>
+        internal void CreatePortals(Area[][] areas)
+        {
+            if (areas == null) return;
+
+            // TODO: add timing code here to see how fast portal creation is.  I think it should be fast enough to recompute
+            //       all portals since Area count will be lowish, despite the fact that we send entire jagged array of Areas.
+
+            int floorCount = areas.GetUpperBound(0) + 1;
+
+            for (int i = 0; i < floorCount; i++)
+            {
+                CreatePortals(areas, i);
+            }
+
+
+
+            // CONSIDER when traversing in an elevator, i believe this suggests that the open area should
+            // be comprised of Area's since portal's don't represent "space" or "volume" it only represents
+            // connections between "space/volumes".  So maybe "empty" cells should be contained within
+            // an Area so that the volume is there.  Maybe in our connectivity graph, all area that is inbounds
+            // has an Area representing it.  This could also mean that up/down traversal portals can connect
+            // directly up/down and not have to extend up/down AND across to an adjacent tile to find an
+            // area to connect with.  But then I would need to be able to flag that area as being 
+            // traversable through, but must traverse across X or Z axis to another Area on that floor that has a "ground" to stand on.
+
+            // I don't know how this works to make things like elevators.  I need to consider that too
+            // because an elevator doesn't necessarily stop at every floor.  If the lowest area is
+            // an elevator, then i'd have to look up every deck of the shaft and find if there are doors
+            // there and add portals to each floor.  This seems to be a case where the "Area" needs 
+            // some more information... well actually it's just the tileID which would be of type
+            // "elevator" up/down traversal right? And this would dictate the type of search we do
+            // for adding portals.  However, when traversing something like a ladder, it is helpful to
+            // know that we can first traverse to the top of the empty Area above and then across to the landing
+            // in an adjacent tile.
+
+            // we need to performance profile portal creation and see how much CPU it uses compared to Area creation.
+            // I think Portal creation is actually "fast enough" even if we have to redo all of them
+            // after every change to the deck layout because there are far fewer Areas than Tiles.
+
+            // Can we create our 2D portals first then do a second pass here to create the up/down traversable
+            // portals?
+            
+
+            // AreaID's within the jagged array can collide with Area.IDs (indices) from upper or lower decks.  The 
+            // trick to remember is to always also compare the "Area.Floor" property which will tell us
+            // definitively if two Areas with same Index are truely the same area.   
+        }
+
+        /// <summary>
+        /// Creates 2D portals between areas within the same floor of our Interior.  WAIT, what about portals between Areas on different floors?
+        /// I think this implies that we do need to pass in the entire Graph even if we just focus on current floor and any floor immediately above
+        /// and below it.  This way we can create or modify vertical portals if necessary.
+        /// </summary>
+        /// <param name="floor"></param>
+        /// <param name="tileCountX"></param>
+        /// <param name="tileCountY"></param>
+        /// <param name="tileCountZ"></param>
+        /// <remarks>Contiguous Portals that have same source and destination Areas, are merged as they are added to the respective Areas</remarks>
+        internal void CreatePortals(Area[][] areas, int floor)
+        {
+            if (areas == null) return;
+            if (floor < 0) throw new ArgumentOutOfRangeException();
+
+            if (floor == 2)
+                System.Diagnostics.Debug.WriteLine("ConnectivityInterior.CreatePortals() - floor = 2");
+            
+            // TODO: if im passing "areas" argument by value, how are the Portals getting added to the Areas[][] jagged array? Is it because it's an array and its internally passed byref?
+
+            const int axisCount = 3; // axisCount == 3 because we only create portals from min to max (positive search direction only) on each of the 3 x,y,z axis
+            for (int areaIndex = 0; areaIndex < areas[floor].Length; areaIndex++)
+            {
+                // create all portals first for each axis face of each area
+                for (int axis = 0; axis < axisCount; axis++)
+                {
+                    // NOTE: faceTiles can be null if there are no Areas currently generated on this floor. Wait is this true? 
+                    int[] faceTiles = GetFaceTiles(areas[floor][areaIndex], floor, (AXIS)axis, mTileCountX, mTileCountY, mTileCountZ);
+                    if (faceTiles == null)
+                        continue;
+
+                    for (int j = 0; j < faceTiles.Length; j++)
+                    {
+                        uint startTileX, startTileY, startTileZ;
+                        uint destTileX, destTileY, destTileZ;
+
+                        Utilities.MathHelper.UnflattenIndex((uint)faceTiles[j], (uint)mTileCountX, (uint)mTileCountZ, out startTileX, out startTileY, out startTileZ);
+
+
+                        Area currentArea = areas[floor][areaIndex];
+
+
+                        // find the opposing tile in the area perpendicular to the current axis 
+                        // NOTE: this correctly finds the correct tile index on different floors in case of Y axis changes to the opposing tile for this face
+                        // TODO: what if the opposing tile is OOB?
+                        int opposingTileIndex = LocateOpposingTile(startTileX, startTileY, startTileZ, (AXIS)axis,
+                                                                    mTileCountX, mTileCountY, mTileCountZ,
+                                                                    out destTileX, out destTileY, out destTileZ);
+
+                        // We can check the area.TileValue and compare the upper and lower to see if there are corresponding flags.  
+                        // BUT, is there any way we can make assumptions about the lower and upper Areas to speed up the creation of what
+                        // is usually all merged portals between the two areas?
+                        if (startTileX == destTileX && startTileY == destTileY && startTileZ == destTileZ)
+                            continue;
+
+
+                        
+                        // check if we're on COMPONENT_TRAVERSABLE destTileX and destTileZ are within a Wall, but we are trying to make portal to upper landing.
+                        // in fact, i think when going from upper landing to lower landing, if we delete the Cell floor, and retry connectivity generation, that should fail too
+                        // because opposingAreaIndex will be -1.  But i'm still not sure why ladders against walls DOES work.
+
+                        // first, get a new upperOpposingAreaIndex (NOTE: the x and or z destination tile will already be +1 for us so we just need to add +1 for the upper level
+
+                        int upperOpposingAreaIndex = LocateAreaContainingTile((int)destTileX, (int)destTileY + 1, (int)destTileZ);
+                        //System.Diagnostics.Debug.Assert(destTileY + 1 == startTileY + 1);
+                        if (upperOpposingAreaIndex != -1)
+                        {
+
+                            Area upperOpposingArea = areas[destTileY + 1][upperOpposingAreaIndex];
+                            if ((currentArea.TileValue & (int)Portals.Interior.TILE_ATTRIBUTES.COMPONENT_TRAVERSABLE) != 0 && (upperOpposingArea.TileValue & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0)
+                            {
+                                // create two diagonal portals here.  One from lower to upper and the other from upper to lower
+                                AreaPortal p = new AreaPortal((int)startTileX, (int)startTileY, (int)startTileZ,
+                                                            (int)destTileX, (int)destTileY + 1, (int)destTileZ,
+                                                            areas[floor][areaIndex].Index, upperOpposingArea.Index);
+                                //p.TwoWay = false;
+                                // AXIS argument allows for merging of portals so we can keep it on X or Z axis even though the Y axis does change as well.
+                                // NOTE: we add two portals, one for each opposing Area
+                                areas[floor][areaIndex].AddPortal(p, (AXIS)axis);
+                                areas[destTileY + 1][upperOpposingAreaIndex].AddPortal(p, (AXIS)axis);
+                               // continue; // July.8.2020 - i think we don't want to continue here because there may be an opposingArea we need to connect to and not just upperOpposingArea.
+                            }
+                        }
+                        
+
+                        // find the area in the AXIS direction across from this tile 
+                        // and connect via portal							
+                        int opposingAreaIndex = LocateAreaContainingTile((int)destTileX, (int)destTileY, (int)destTileZ);
+                        if (opposingAreaIndex == -1)
+                            continue;
+
+                        Area opposingArea = areas[destTileY][opposingAreaIndex];
+
+
+                        // check for need to create direct vertical up portal to upper level from lower landing
+                        
+                        if (axis == (int)AXIS.Y)
+                        {
+                            if ((currentArea.TileValue & (int)Portals.Interior.TILE_ATTRIBUTES.LADDER_LOWER_LANDING) != 0)
+                            {
+                                // TODO: I don't think this code is every getting executed even for LADDER_LOWER_LANDING let alone stairs.
+                                System.Diagnostics.Debug.Assert(startTileX == destTileX && startTileZ == destTileZ);
+                                // what if the currentArea and upperArea are not the same dimensions?
+                                // well i think we can still create portals and merge the ones that share the same area
+                                AreaPortal p = new AreaPortal((int)startTileX, (int)startTileY, (int)startTileZ,
+                                                            (int)destTileX, (int)destTileY, (int)destTileZ,
+                                                            areas[floor][areaIndex].Index, areas[destTileY][opposingAreaIndex].Index);
+                                // p.TwoWay = false;
+                                // AXIS argument allows for merging of portals
+                                // NOTE: we add two portals, one for each opposing Area
+                                areas[floor][areaIndex].AddPortal(p, (AXIS)axis);
+                                areas[destTileY][opposingAreaIndex].AddPortal(p, (AXIS)axis);
+                                continue;
+                                // continue; // April.4.2020 should this continue be uncommented Because there may be other areas on the same floor this area will connect to?
+                            }
+                        }
+                        // test for need to create diagonal portals for Stairs. Remember we are always traveling along positive X, Y, and Z axis
+                        else if (axis == (int)AXIS.X || axis == (int)AXIS.Z)
+                        {
+
+                            System.Diagnostics.Debug.Assert(startTileY == destTileY, "Since we're searching X or Z axis here, Y values should stay the same");
+
+                           
+                            // TODO: This is our problem block of code.  When stairs are rotated in 2 of the 4 cardinal directions, we can climb the stairs but not traverse downward.
+                            if ((int)destTileY - 1 >= 0) // make sure we don't go past the lowest deck on the ship
+                            {
+                                    // TODO: in case we find the UPPER_LANDING at positive x, or z, then when we find opposing Area in positive X,Z direction, it won't be what we want.
+                                    //       Or, the lower landing needs to be found first and then connections made to the upper area.
+                                    //       I think this is the fundamnetal problem here.
+                                int lowerOpposingAreaIndex = LocateAreaContainingTile((int)destTileX, (int)destTileY - 1, (int)destTileZ);
+                                if (lowerOpposingAreaIndex != -1)
+                                {
+                                    Area lowerOpposingArea = areas[destTileY - 1][lowerOpposingAreaIndex];
+                                    if ((currentArea.TileValue & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0 && (lowerOpposingArea.TileValue & (int)Portals.Interior.TILE_ATTRIBUTES.COMPONENT_TRAVERSABLE) != 0)
+                                    {
+                                        // NOTE: here we break our normal rule of only creating portals as we traverse 
+                                        // through positive X, Y and Z axis and we create diagonal portals from the current "lower" floor to an even lower floor
+                                        AreaPortal p = new AreaPortal((int)destTileX, (int)destTileY - 1, (int)destTileZ,
+                                                                    (int)startTileX, (int)startTileY, (int)startTileZ,
+                                                                    lowerOpposingArea.Index, currentArea.Index);// areas[floor][areaIndex].Index);
+                                        System.Diagnostics.Debug.Assert(floor == startTileY);
+                                        System.Diagnostics.Debug.Assert(currentArea.Index == areas[floor][areaIndex].Index && areas[floor][areaIndex].Index == areaIndex);
+                                        // AXIS argument allows for merging of portals so we can keep it on X or Z axis even though the Y axis does change as well.
+                                        // NOTE: we add two portals, one for each opposing Area
+                                        areas[floor][areaIndex].AddPortal(p, (AXIS)axis);
+                                        areas[destTileY - 1][lowerOpposingAreaIndex].AddPortal(p, (AXIS)axis);
+
+                                        continue;
+                                    }
+                                    else if ((currentArea.TileValue & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0)
+                                    {
+                                        System.Diagnostics.Debug.WriteLine("Upper Landing with no COMPONENT_TRAVERSABLE found.");
+                                    }
+                                }
+                            }
+                        }
+
+                        //System.Diagnostics.Debug.Assert(startTileY == floor);
+                        if (startTileY != destTileY) // (floor != destTileY
+                        {
+                            break; // TODO: We don't really ever want to connect Y unless we've checked for stairs, ladders, elevators and doors
+                            System.Diagnostics.Debug.Assert(axis == (int)AXIS.Y);
+                           // System.Diagnostics.Debug.Assert(destTileY - startTileY == 1);
+
+                            // compare the lower and upper Area tiles and see if they are the same dimensions along XZ plane
+                            // we can check the first faceTile and the last faceTile XZ dimensions to get the XZ s1ize and see if they match
+                            // and in that case, we should be able to break out of this inner for loop
+                            // break;
+
+                            // we break; if the area above and below are NOT exactly the same dimensions and no portal is created between upper and lower areas
+                            if (currentArea.MinX == opposingArea.MinX && currentArea.MaxX == opposingArea.MaxX && currentArea.MinZ == opposingArea.MinZ && currentArea.MaxZ == opposingArea.MaxZ)
+                            {
+                                // compare the lower and upper Area tile values and see if there is connectivity
+                                // TODO: this test does not apply to stairs because the lower and upper landings are not directly above/beneath each other.  
+                                //       Even on ladders, the upper landing is not quite directly above the lower landing so we'd need a diagonal portal at the top and
+                                //       I suspect, we'd apply STAIR_LANDING flags to both the bottom and top floors.  There would be no COMPONENT_TRAVERSABLE flags leading to it.
+                                int valueLower = currentArea.TileValue;
+                                int valueUpper = opposingArea.TileValue;
+
+                                if ((valueLower & (int)Keystone.Portals.Interior.TILE_ATTRIBUTES.STAIR_LOWER_LANDING) != 0 || (valueUpper & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0)
+                                {
+                                    System.Diagnostics.Debug.WriteLine("ConnectivityInterior.CreatePortals() - Up/Down traversable area found.");
+                                    break; // WE DO NOT WANT TO CREATE PORTALS CONNECTING TOP AND BOTTOM LANDINGS (NOTE: This should be impossible for Stairs anyway though as they don't align on top of each other.  Ladders do however but they need portals connecting up/down
+                                }
+                                else break;
+                            }
+                            else break;
+                        }
+
+
+                        // TODO: the below works for ladders and maybe elevators where oppposing Areas are direclty above/below each other.
+                        //       But that doesn't hold true for stairs.  Is it the role of portals to handle this properly, or do we need
+                        //       seperate TILE_ATTRIBUTE enums for Stairs upper and lower landings?
+                        //       Because right now, we are creating a lower portal beneath the upper landing of the stairs and that is wrong.
+
+                        // RIGHT HERE WE TEST FOR STAIR_UPPER_LANDING above the source location and if so, we skip portal generation.
+                        // skip the portal creation if the Area directly above is a STAIR_UPPER_LANDING
+                        uint testX, testY, testZ;
+                        int opposingUpperIndex = LocateOpposingTile(startTileX, startTileY, startTileZ, AXIS.Y,
+                                                               mTileCountX, mTileCountY, mTileCountZ,
+                                                               out testX, out testY, out testZ);
+                        System.Diagnostics.Debug.Assert(startTileX == testX && startTileZ == testZ && startTileY == testY - 1);
+
+                        int upperAreaIndex = LocateAreaContainingTile((int)testX, (int)testY, (int)testZ);
+
+                        if (upperAreaIndex != -1)
+                        {
+                            if ((areas[testY][upperAreaIndex].TileValue & (int)Portals.Interior.TILE_ATTRIBUTES.STAIR_UPPER_LANDING) != 0)
+                            {
+                                continue;
+                                //System.Diagnostics.Debug.WriteLine("CreatePortals() - Upper landing found.");
+                                //AreaPortal p = new AreaPortal((int)startTileX, (int)startTileY, (int)startTileZ,
+                                //                                (int)testX, (int)testY, (int)testZ,
+                                //                                areas[startTileY][areaIndex].Index, areas[testY][opposingUpperIndex].Index);
+
+                                //areas[floor][areaIndex].AddPortal(p, (AXIS)axis);
+                                //areas[testY][opposingUpperIndex].AddPortal(p, (AXIS)axis);
+                                //// skip creating a portal if the STAIR_UPPER_LANDING is directly above the current Area.
+                                //continue;
+                            }
+                        }
+
+                        // NOTE: if we've made it this far, the portals are all within the same floor
+                        System.Diagnostics.Debug.Assert(startTileY == destTileY);
+                        // because we traverse from min to max, startTile is always guaranteed to be lower index value than the destTile right?
+                        // TODO: actually this is not true when we add the same portal to the adjacent to form 2 way connectivity.  We need to make 
+                        // sure this works properly with adjacents during pathfinding traversal.
+                        AreaPortal portal = new AreaPortal((int)startTileX, (int)startTileY, (int)startTileZ,
+                                                            (int)destTileX, (int)destTileY, (int)destTileZ,
+                                                            areas[floor][areaIndex].Index, areas[destTileY][opposingAreaIndex].Index);
+                        
+                        
+                        // TODO: if this is 2D portal why is it not two way? I think it's because
+                        // we add seperate portals to both the current area and the adjacent so they each have their own
+                        // one way portals.  The trick during pathfinding traversal is to not go back thru a portal that
+                        // has a sister portal in an adjacent it just traversed through
+                        //portal.TwoWay = false;
+                        areas[floor][areaIndex].AddPortal(portal, (AXIS)axis);
+                        areas[destTileY][opposingAreaIndex].AddPortal(portal, (AXIS)axis);
+                    } // end for
+                } // end for
+            }
+        }
+
+
+        ///// <summary>
+        ///// Creates 2D portals between areas within the same floor of our Interior.  WAIT, what about portals between Areas on different floors?
+        ///// I think this implies that we do need to pass in the entire Graph even if we just focus on current floor and any floor immediately above
+        ///// and below it.  This way we can create or modify vertical portals if necessary.
+        ///// </summary>
+        ///// <param name="floor"></param>
+        ///// <param name="tileCountX"></param>
+        ///// <param name="tileCountY"></param>
+        ///// <param name="tileCountZ"></param>
+        //internal void CreatePortals(Area[] areas, int floor)
+        //{
+        //    if (areas == null) return;
+        //    if (floor < 0) throw new ArgumentOutOfRangeException();
+
+        //    // TODO: if im passing "areas" argument by value, how are the Portals getting added to the Areas[][] jagged array? Is it because it's an array and its internally passed byref?
+
+        //    TraversalState[] areaVisitedStates = new TraversalState[areas.Length];
+        //    System.Collections.Generic.Queue<int> areaQueue = new System.Collections.Generic.Queue<int>(areas.Length);
+
+
+        //    // enqueue all areas first
+        //    for (int i = 0; i < areas.Length; i++)
+        //    {
+        //        // NOTE: this is a problem.  areas[i].ID should not always equal i because the ID should not
+        //        // be based on an index but on the lowest tileID that area[i] contains. otherwise we cannot
+        //        // extend this code to work in 3D where areas[i].IDs would collide with those of other decks
+        //        //System.Diagnostics.Debug.Assert(areas[i].ID == i);
+        //        areaQueue.Enqueue(i);
+        //        //areaQueue.Enqueue(areas[i].ID);
+        //        //flag areaIndex as "closed" so that we do not try to queue it again
+        //        areaVisitedStates[i] = TraversalState.Closed;
+        //    }
+
+        //    // enqueuing just the first area fails because the first area ends up being
+        //    // the area with the lowest minX value.
+        //    // Furthermore, if there are Areas that are completely unconnected, they will never be traversed
+        //    // such as on floor 4 (index = 3) of our test Vehicle model where one part of that single floor's deckplan is completely cut off from the other
+        //    // and can only be reached by traversing ladders/ramps, etc.  Those areas that are cut off will never
+        //    // get enqueued as adjacents because they are not adjacent to the Areas is the aft part of the ship.
+        //    //areaQueue.Enqueue(0);
+        //    // flag areaIndex as "closed" so that we do not try to queue it again
+        //    //areaVisitedStates[0] = TraversalState.Closed;
+
+        //    const int axisCount = 3; // axisCount == 3 because we only create portals from min to max (positive search direction only) on each of the 3 axis (NOTE: Y axis is currently not being used in LocateOpposingTile() or GetFaceTiles()
+        //    while (areaQueue.Count > 0)
+        //    {
+        //        int areaIndex = areaQueue.Dequeue();
+
+        //        // create all portals first for each axis face of each area
+        //        for (int i = 0; i < axisCount; i++)
+        //        {
+        //            // NOTE: faceTiles can be null if there are no Areas currently generated on this floor. Wait is this true? 
+        //            int[] faceTiles = GetFaceTiles(areas[areaIndex], floor, (AXIS)i, mTileCountX, mTileCountY, mTileCountZ);
+        //            if (faceTiles == null) continue;
+
+        //            for (int j = 0; j < faceTiles.Length; j++)
+        //            {
+        //                uint startTileX, startTileY, startTileZ;
+        //                uint destTileX, destTileY, destTileZ;
+
+        //                Utilities.MathHelper.UnflattenIndex((uint)faceTiles[j], (uint)mTileCountX, (uint)mTileCountZ, out startTileX, out startTileY, out startTileZ);
+
+        //                // find the opposing tile in the area perpendicular to the current axis 
+        //                // NOTE: this correctly finds the correct tile index on different floors in case of Y axis changes to the opposing tile for this face
+        //                // TODO: what if the opposing tile is OOB?
+        //                int opposingTileIndex = LocateOpposingTile(startTileX, startTileY, startTileZ, (AXIS)i,
+        //                                                            mTileCountX, mTileCountY, mTileCountZ,
+        //                                                            out destTileX, out destTileY, out destTileZ);
+
+        //                if (startTileX == destTileX && startTileY == destTileY && startTileZ == destTileZ) continue;
+
+        //                //TODO: if the destTileY and startTileY are not the same, then this is a 3D problem
+        //                if (startTileY != destTileY)
+        //                {
+        //                    // this means the areas we passs in need to be 2D arrays so as to include up/down decks
+        //                    // but how about ladders or elevators that span multiple decks?  the distance would be > 1 in those cases.
+        //                    // For spanninig multiple decks, I should stack components that only span 2 floors max.
+        //                    // TODO: I should save this function and make modifications to a copy before trying to generate real 3d portals
+        //                    System.Diagnostics.Debug.Assert(Math.Abs(destTileY - startTileY) == 1);
+
+        //                }
+
+        //                // find the area in the AXIS direction across from this tile 
+        //                // and connect via portal	
+        //                // TODO: this opposingAreaIndex DOES take into account the Y floor we're on, but it just
+        //                //       gets used in areas[opposingAreaIndex] which is an index on the wrong floor since areas[] is not a jagged array.						
+        //                int opposingAreaIndex = LocateAreaContainingTile((int)destTileX, (int)destTileY, (int)destTileZ);
+        //                // if there is no area, we need no portal
+        //                if (opposingAreaIndex == -1) continue;
+
+        //                // because we traverse from min to max, startTile is always guaranteed to be lower index value than the destTile right?
+        //                // TODO: actually this is not true when we add the same portal to the adjacent to form 2 way connectivity.  We need to make 
+        //                // sure this works properly with adjacents during pathfinding traversal.
+        //                AreaPortal portal = new AreaPortal((int)startTileX, (int)startTileY, (int)startTileZ,
+        //                                                    (int)destTileX, (int)destTileY, (int)destTileZ,
+        //                                                    areas[areaIndex].Index, areas[opposingAreaIndex].Index);
+
+        //                // TODO: if this is 2D portal why is it not two way? I think it's because
+        //                // we add seperate portals to both the current area and the adjacent so they each have their own
+        //                // one way portals.  The trick during pathfinding traversal is to not go back thru a portal that
+        //                // has a sister portal in an adjacent it just traversed through
+        //                portal.TwoWay = false;
+        //                areas[areaIndex].AddPortal(portal, (AXIS)i); 
+        //                // TODO: here we're adding a portal to the opposing area that points back to 
+        //                //       the current areaIndex, but the portals location[0] and location[1] are not reversed
+        //                //       for the opposingAreaIndex area.  That is maybe ok if during pathfinding we
+        //                //       don't assume 0 index points to the current Area. Instead index 0 is always lowest
+        //                //       tile coordinate
+        //                // TODO: here the opposingAreaIndex may not be for the correct floor!  Or is it? maybe we do need to
+        //                //       pass in jagged array of areas[][] but then we can't use a single index into areaVisitedStates[]
+        //                //       unless we make that a jagged array too.  The opposingAreaIndex value does seem correct though and
+        //                //       takes into account the relevant Floor level.
+        //                areas[opposingAreaIndex].AddPortal(portal, (AXIS)i);
+
+        //                // TODO: we are enqueuing possibly an Area that is on an upper floor.  
+        //                //       I don't think we really want to do that.  we do one floor at a time, but special case
+        //                //       the Y axis up/down portals.  The code doesn't throw any exception or infinite loop
+        //                //       and I think that's because it's using the same "floor" variable here and not actually using
+        //                //       the upper floor's area as the "opposingAreaIndex" which means the "opposingAreaIndex" is 
+        //                //       on this same floor
+        //                // do not enqueue opposing area if it's on a differet floor
+        //                if (destTileY != floor) continue;
+
+        //                // add the adjacent areas to queue if they are not in closed list
+        //                if (areaVisitedStates[opposingAreaIndex] == TraversalState.Closed) continue;
+        //                areaQueue.Enqueue(opposingAreaIndex);
+
+        //                // set adjacent status to closed so we dont add it more than once within this loop through faceTiles
+        //                areaVisitedStates[opposingAreaIndex] = TraversalState.Closed;
+        //            }
+
+        //            // obsolete - this MergePortals() call is obsolete because we do
+        //            // merge evaluation and insertion when we add the portal to the Area.  It's there that we
+        //            // iterate through existing portals and see if we can combine the new continguous portal
+        //            // to an existing one just by changing one of the axis dimensions and if
+        //            // both areas point to same destination.  					
+        //            // area.MergePortals((AXIS)i);
+        //        }
+        //    }
+        //}
+
+        /// <summary>
+        /// Locates a tile that is in the direction orthogonal to the axis passed in.
+        /// This way we locate a tile in an adjacent area from the current tile.
+        /// We traverse only in the positive direction since area and portal creation
+        /// occur from lowest to highest tile coordinates.
+        /// </summary>
+        /// <param name="tileX"></param>
+        /// <param name="tileY"></param>
+        /// <param name="tileZ"></param>
+        /// <param name="axis"></param>
+        /// <param name="gridSizeX"></param>
+        /// <param name="gridSizeY"></param>
+        /// <param name="gridSizeZ"></param>
+        /// <param name="adjacentTileX"></param>
+        /// <param name="adjacentTileY"></param>
+        /// <param name="adjacentTileZ"></param>
+        /// <returns></returns>
+        private int LocateOpposingTile(uint tileX, uint tileY, uint tileZ,
+                                        AXIS axis,
+                                        int gridSizeX, int gridSizeY, int gridSizeZ,
+                                        out uint adjacentTileX, out uint adjacentTileY, out uint adjacentTileZ)
+        {
+
+            switch (axis)
+            {
+                case AXIS.X:
+                    tileZ++;
+                    if (tileZ >= (uint)gridSizeZ)
+                        tileZ -= (uint)gridSizeZ;
+                    break;
+                case AXIS.Y:
+                    tileY++;
+                    if (tileY >= (uint)gridSizeY)
+                        tileY -= (uint)gridSizeY;
+                    break;
+                case AXIS.Z:
+                    tileX++;
+                    if (tileX >= (uint)gridSizeX)
+                        tileX -= (uint)gridSizeX;
+                    break;
+                default:
+                    throw new Exception();
+            }
+
+
+            adjacentTileX = tileX;
+            adjacentTileY = tileY;
+            adjacentTileZ = tileZ;
+            // TODO: I don't think I account for when there are no more Zones left along that axis and we're out of bounds of the game world
+            int adjacentTileID = (int)Utilities.MathHelper.FlattenCoordinate(tileX, tileY, tileZ, (uint)gridSizeX, (uint)gridSizeZ);
+
+            return adjacentTileID;
+        }
+
+        private int[] GetFaceTiles(Area area, int floor, AXIS axis, int gridSizeX, int gridSizeY, int gridSizeZ)
+        {
+            int[] tiles;
+            int width = 1 + area.MaxX - area.MinX;
+            int depth = 1 + area.MaxZ - area.MinZ;
+          
+            int count = 0;
+
+            System.Diagnostics.Debug.Assert(floor == area.Floor);
+
+            switch (axis)
+            {
+                case AXIS.Z:
+                    // if the adjacent tiles along Z axis will be OOB with respect to this Zone they
+                    // can still be in bounds with respect to adjacent Zone and so we do not
+                    // try to filter tiles 
+                    tiles = new int[depth];
+
+                    for (int j = 0; j < depth; j++)
+                        tiles[count++] = (int)Utilities.MathHelper.FlattenCoordinate((uint)area.MaxX, (uint)floor, (uint)(area.MinZ + j), (uint)gridSizeX, (uint)gridSizeZ);
+
+                    break;
+                case AXIS.X:
+                    // if the adjacent tiles along X axis will be OOB with respect to this Zone they
+                    // can still be in bounds with respect to adjacent Zone and so we do not
+                    // try to filter tiles 
+                    tiles = new int[width];
+
+                    for (int i = 0; i < width; i++)
+                        tiles[count++] = (int)Utilities.MathHelper.FlattenCoordinate((uint)(area.MinX + i), (uint)floor, (uint)area.MaxZ, (uint)gridSizeX, (uint)gridSizeZ);
+
+                    break;
+                case AXIS.Y: // TODO:
+                    tiles = null;// new int[2]; // only a top and bottom tile exists for Y axis in any Area. Or do we need to get all tiles above and below that are contained within the min/max X and min/max Z axis?
+                                 // or do we only need the ones along the positive Z axis?
+                                 // I think one of the constraints we have is that up/down Areas must match each other's xz plane dimensions.
+                                 // So i think our tiles array need to be sized width * depth
+                                 //tiles[0] = (int)Utilities.MathHelper.FlattenCoordinate(area.MinX - 1, area.MaxZ, (uint)gridSizeX, (uint)gridSizeZ); 
+                                 //tiles[1] = (int)Utilities.MathHelper.FlattenCoordinate(area.MinX + 1, area.MaxZ, (uint)gridSizeX, (uint)gridSizeZ); 
+                    tiles = new int[depth * width];
+                    for (int k = 0; k < width; k++)
+                        for (int l = 0; l < depth; l++)
+                        {
+                            tiles[count++] = (int)Utilities.MathHelper.FlattenCoordinate((uint)(area.MinX + k), (uint)floor, (uint)(area.MaxZ + l), (uint)gridSizeX, (uint)gridSizeZ); 
+                        }
+                    break;
+
+                default:
+                    throw new Exception("We should never have any other axis type.  NOTE: There should never be a need for negative axis directions either.");
+            }
+
+            return tiles;
+
+        }
+
+
+        private int[] GetAxisExpansionTiles(AXIS axis, uint axisValue, uint minA, uint minB, uint maxA, uint maxB, uint gridSizeX, uint gridSizeZ)
+        {
+            System.Diagnostics.Debug.Assert(axisValue >= 0 && minA >= 0 && maxA >= 0);
+            System.Diagnostics.Debug.Assert(minA <= maxA && minB <= maxB);
+
+            uint size = (maxB - minB + 1) * (maxA - minA + 1);
+            int[] results = new int[size];
+            int count = 0;
+
+            for (uint a = minA; a <= maxA; a++)
+                for (uint b = minB; b <= maxB; b++)
+                {
+                    // out of bounds tiles are guaranteed to never occur
+                    // so long as the parameters passed in are all within bounds
+                    switch (axis)
+                    {
+                        case AXIS.X:
+                            results[count++] = (int)Utilities.MathHelper.FlattenCoordinate(axisValue, a, b, gridSizeX, gridSizeZ);
+                            break;
+                        case AXIS.Y:
+                            results[count++] = (int)Utilities.MathHelper.FlattenCoordinate(a, axisValue, b, gridSizeX, gridSizeZ);
+                            break;
+                        case AXIS.Z:
+                            results[count++] = (int)Utilities.MathHelper.FlattenCoordinate(a, b, axisValue, gridSizeX, gridSizeZ);
+                            break;
+                    }
+                }
+            return results;
+        }
+
+        private bool Expand(System.Collections.Generic.Queue<int> openQueue, int[,,] grid, AreaBuilderNodeFast[] calcGrid, int areaTileValue, int[] tiles, int tilesOffset, int areaID, Func<int[,,], int, int, int, int, bool> fTraversalTest)
+        {
+            bool allSuccess = true;
+            bool[] success = new bool[tiles.Length];
+
+            // to expand the Area box, all tiles must pass fTraversalTest()
+            for (int i = 0; i < tiles.Length; i++)
+            {
+                int adjacentTileID = tiles[i] - tilesOffset;
+                if (calcGrid[adjacentTileID].Status == TraversalState.Closed)
+                    success[i] = false;
+                else
+                {
+                    uint x, y, z;
+                    int countX = grid.GetUpperBound(0) + 1;
+                    int countZ = grid.GetUpperBound(2) + 1;
+                    Keystone.Utilities.MathHelper.UnflattenIndex((uint)adjacentTileID + (uint)tilesOffset, (uint)countX, (uint)countZ, out x, out y, out z);
+                    success[i] = fTraversalTest(grid, areaTileValue,(int)x, (int)y, (int)z);
+                }
+                if (success[i] == false)
+                {
+                    if (allSuccess == true) allSuccess = false;
+                }
+            }
+
+            // if all tiles pass, mark all as "closed" and return TRUE
+            if (allSuccess)
+            {
+                for (int i = 0; i < tiles.Length; i++)
+                {
+                    int adjacentTileID = tiles[i] - tilesOffset;
+                    // successful, we mark as "closed" all evaluated tiles
+                    // mark as closed
+                    calcGrid[adjacentTileID].Status = TraversalState.Closed;
+                    calcGrid[adjacentTileID].AreaID = areaID;
+                }
+                return true;
+            }
+
+            // if any single tiles fail, we cannot expand.  We mark ONLY 
+            // the ones that passed as Open, but we still return FALSE			
+
+            for (int i = 0; i < tiles.Length; i++)
+            {
+                int adjacentTileID = tiles[i] - tilesOffset;
+                //				// mark every adjacent in this axis' expansion direction as Open 
+                //				if (success[i])
+                //				{
+                // do not enqueue it again if it's closed or if it's already in the openQueue list	
+                if (calcGrid[adjacentTileID].Status == TraversalState.Closed || calcGrid[adjacentTileID].Status == TraversalState.Open)
+                    continue;
+
+                calcGrid[adjacentTileID].Status = TraversalState.Open;
+                calcGrid[adjacentTileID].AreaID = -1;
+
+                openQueue.Enqueue(adjacentTileID + tilesOffset);
+                //				}
+                //				else  
+                //					// it failed because it's either already closed or its weight is UNPASSABLE.
+                //					// however, unpassable still means we need to be able to traverse it's adjacents!
+                //					// otherwise we stall.
+                //					calcGrid[adjacentTileID].Status = TraversalState.Closed;
+            }
+
+
+            return false;
+        }
+    }
+}

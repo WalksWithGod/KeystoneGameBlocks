@@ -1,0 +1,26 @@
+E:\dev\c#\keystone\Economy\bin\Debug\Economy.dll
+E:\dev\c#\keystone\Economy\bin\Debug\Economy.pdb
+E:\dev\c#\keystone\Economy\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\keystone\Economy\obj\Debug\Economy.dll
+E:\dev\c#\keystone\Economy\obj\Debug\Economy.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Economy\bin\Debug\Economy.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Economy\bin\Debug\Economy.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\Economy.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\Economy.pdb
+E:\dev\c#\KeystoneGameBlocks\Economy\bin\x86\Debug\Economy.dll
+E:\dev\c#\KeystoneGameBlocks\Economy\bin\x86\Debug\Economy.pdb
+E:\dev\c#\KeystoneGameBlocks\Economy\bin\Debug\Economy.dll
+E:\dev\c#\KeystoneGameBlocks\Economy\bin\Debug\Economy.pdb
+E:\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\Economy.dll
+E:\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\Economy.pdb
+E:\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\Economy.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Economy\bin\Debug\Economy.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Economy\bin\Debug\Economy.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\Economy\obj\Debug\Economy.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\Economy\obj\Debug\Economy.dll
+E:\dev\c#\KeystoneGameBlocks.bak\Economy\obj\Debug\Economy.pdb
+D:\dev\c#\KeystoneGameBlocks\Economy\bin\Debug\Economy.dll
+D:\dev\c#\KeystoneGameBlocks\Economy\bin\Debug\Economy.pdb
+D:\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\Economy.dll
+D:\dev\c#\KeystoneGameBlocks\Economy\obj\Debug\Economy.pdb

@@ -1,0 +1,9 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\bin\Release\ToolBox.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\obj\Release\Silver.UI.ToolBox.resources
+E:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\obj\Release\ToolBox.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\obj\Release\ToolBox.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\bin\Release\ToolBox.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\obj\Release\Silver.UI.ToolBox.resources
+D:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\obj\Release\ToolBox.csproj.GenerateResource.Cache
+D:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\obj\Release\ToolBox.dll
+D:\dev\c#\KeystoneGameBlocks\Libs\ToolboxControl\ToolBox\obj\Release\ToolBox.csprojResolveAssemblyReference.cache

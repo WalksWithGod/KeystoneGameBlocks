@@ -1,0 +1,14 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\bin\Debug\KeyPluginLODMeshEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\bin\Debug\KeyPluginLODMeshEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\bin\Debug\KeyPlugins.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\bin\Debug\KeyPlugins.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLODMeshEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\obj\Debug\KeyPluginLODMeshEdit.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\obj\Debug\KeyPluginLODMeshEdit.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLODMeshEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLODMeshEdit.dll
+E:\dev\c#\KeystoneGameBlocks\Plugins\KeyPluginLODMeshEdit.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\obj\Debug\KeyPluginLODMeshEdit.dll
+E:\dev\c#\KeystoneGameBlocks\KeyPluginLODMeshEdit\obj\Debug\KeyPluginLODMeshEdit.pdb

@@ -1,0 +1,283 @@
+using System;
+
+public class UserConstants
+{
+
+	#region custom constants and enums - create whatever ones you like here and they will be accessible automatically in all your scripts
+	[Flags] // attributes make ToString() output nice.
+	public enum CustomFlags : uint
+	{
+		CF_NONE = 0,
+		CF_STATS_DIRTY = 1 << 0,
+		CF_HAS_FUEL = 1 << 1,
+		CF_HAS_POWER = 1 << 2
+	}
+	
+
+	public const uint TestConstant1 = 777;
+	public static string[] TechLevels = new string[] {"Stone Age", "Bronze Age", "Iron Age", "Medieval", "Age of Sail", "Industrial", "Mechanized", "Nuclear", "Digital", "Microtech", "Genetics", "Robotic", "Exotic Materials","Metamorphosis"};
+	
+	public static string[] Craftsmanship = new string[] {"Disgraceful", "Very Poor", "Poor", "Average", "Good", "Very Good", "Fine", "Very Fine", "Exceptional", "Extraordinary"};
+	public static string[] ArmorType = new string[] {"Metal", "Wood", "Ablative", "Nonrigid", "Reflex", "Composite", "Laminate"};
+	public static string[] FrameStrength = new string[] {"Super-Light", "Extra-Light", "Ablative", "Nonrigid", "Reflex", "Composite", "Laminate"};
+	public static string[] MaterialsQuality =  new string[] {"Junk Grade", "Inferior Grade", "Very Low Grade", "Low Grade", "Average Grade", "Above Average Grade", "High Grade", "Very High Grade", "Military Grade", "Space Grade"};
+	
+	public static string[] FissionRocketFuels = new string[] {"hydrogen", "water"};
+
+	
+	#endregion
+	
+	// edit brush style 
+	// ugh, but what about something like a door that uses single drop BUT is still bound to edge?  we cant rely on brush to tell us where to bind?
+	// i suppose i just add a new enum BRUSH_DOOR  // i was thinking for doors, fine no CSG we cheat and use custom wall sections that fit door
+	// but what about windows?  do we have to create unique walls to accomodate every window design?
+	// Well, this is actually i believe what is done in FPSCreator.  They have a "Segment" which contains information on what a wall
+	// should look like based on whether it's CSG, corner, curved, whatever.  Then when building your wall and conneting walls, they auto
+	// update to form proper intersections, curves, and CSG if a door is added... that is to say, the proper underlying mesh within the segment
+	// (segments contain a list of all types) is selected.  
+	// Then for the CSG mesh itself, standard sizes are used and if you want a small portal vs large, the CSG mesh is the same size however
+	// it uses just more filler around it.  
+	// So what we would need to produce is a list of Reference meshes which are just flat and handle CSG for our various cases and have all the
+	// positions defined, then for new meshes, we make sure that the windows and door opening are same size and position within the relevant segment sub mesh
+	// So it's sort of like LOD only it's selected by neighbor and by CSG 
+	// Indeed, segments are all walls, corners, in all their forms, and the texture/material is unrelated.   Segments are all EDGE geometry
+	// and doors/windows are simply placed at CSG offset positions...
+	// Thus we can STILL USE MINIMESHES on all segments because they do not have the door/window or whatever as apart of it.  
+	// So, now we have this answered... a door is placed against a wall, a window is placed against a wall and neither window or door themselves REPLACE wall segments!
+	// So this answers all our questions and we can move forward... and we can worry about scripting dynamic segment selection when mounting a CSG door/window/vent
+	// later.  Surely these different wall segments with csg openings exist in the FPSCreator assets?
+	// Maybe a better name than wall is EDGE_SEGMENT
+	// NOTE: I finally figured out how Sims 3 and FPS Creator do fake CSG for doors and walls!  They use the "punch" geometry and stencil buffer!
+	
+	#region API Compatible Constants & Enums DO NOT CHANGE
+	// DO NOT EDIT BRUSH_TYPE order/enum values.  They match PlacementTool constants
+	public enum BRUSH_TYPE : uint  // do i even have to store this?  I could just query the script... 
+	{
+		BRUSH_SINGLE_DROP,
+		BRUSH_FLOOR,    // floor tiles, plumbing, electrical, vent
+		BRUSH_CEILING,
+		BRUSH_EDGE_SEGMENT,  // rubber band drag for wall, fence, railing
+		BRUSH_EDGE_SINGLE_SEGMENT,
+		BRUSH_CUSTOM,  // shrubs,trees,grass,rocks
+		BRUSH_CSG_MESH,  // door, window
+		BRUSH_TERRAIN_DEFORM,
+		BRUSH_TERRAIN_VEG_PAINT,
+		BRUSH_HATCH,
+		BRUSH_DOOR,
+		BRUSH_STAIRS = 16,
+		BRUSH_LADDER,
+		BRUSH_LIFT
+	}
+	#endregion
+	
+	// public enum BRUSH_TYPE : uint
+	// {
+		// SINGLE_DROP,
+		// EDGE_SINGLE, // door, window
+		// AREA_TILE,  // floor tiles, plumbing, electrical, vent
+		// EDGE_TILE,  // rubber band drag for wall, fence, railing
+		// TERRAIN_DEFORM,
+		// TERRAIN_VEG_PAINT, // shrubs,trees,grass,rocks
+		// CUSTOM         
+	// }
+	
+	public enum COMPONENT_TYPE : uint
+	{
+		FLOOR = 0,
+		CEILING,
+		WALL,
+		DOOR,
+		WINDOW,
+		HATCH,
+		LADDER,
+		STAIRS,
+		LIFT,
+		COMPONENT, // any value higher than this is a component
+		ENGINE,
+		THRUSTER, // maneuvering thrusters
+		SENSOR,
+		POWERGENERATOR,
+		COMPUTER
+	}
+	
+	public enum MOUNT_LOCATION : uint
+	{
+		WALL,
+		CEILING,
+		FLOOR,
+		COUNTER
+	}
+	
+	// allowed mounting location  [1 byte flags]
+	// todo: verify item mounted on floor/ceiling/wall is de-parented if that parent is damaged sufficiently or destroyed. The key is that so called "mounted" items are not parents of the item they visually appear to be parented to...!  They are only parented to the CelledRegion!  So simulating hierarchical damage means checking various layer flags
+	
+	// ENTITY FLAGS flags duplicated here for use in scripts... :/  meh
+	public const uint ExplicitEvents = 1 << 0;
+	public const uint AutoGenerateFootprint = 1 << 27;
+	public const uint EF_Dynamic = 1 << 9;
+	// MODEL FLAGS
+	public const uint CSGStencilSource = 1 << 5; // having CSG flags in  Model or ModelSelector (to set for all children in ModelLOD)
+    public const uint CSGStencilTarget = 1 << 6; // instead of Entity allows more complex entities to be constructed where sub Models.cs can be csg 
+    public const uint CSGStencilAccept = 1 << 7;
+	
+		
+	// mount/set points  
+	// const uint CAN_USE_CEILING = 1 << 1;
+	// const uint CAN_USE_FLOOR = 1 << 2; 
+	// const uint CAN_USE_COUNTER_TOP = 1 << 3; // can also stand ontop of floor standing things.
+	// const uint CAN_USE_WALL = 1 << 4;        
+	
+	// // but how do i determine if these mounts are taken?  and what about a counter that might accept 2 or more items placed on it?
+	// // I suppose to an extent, this could be a property of our entity stacks.  When placing items into a Cell, our entity stacks are per cell
+	// // so we know all of what item is in a cell and we can query that the item takes up a specific slot and thus know if that slot is available
+	// // 
+	// const uint PROVIDES_CEILING_MOUNT = 1 << 5;
+	// const uint PROVIDES_FLOOR_MOUNT = 1 << 6;
+	// const uint PROVIDES_COUNTER_TOP_MOUNT = 1 << 7;
+	// const uint PROVIDES_WALL_MOUNT  = 1 << 8;
+	
+	// // what about defining the number of mount points and their location?  like two clocks on a wall?  maybe not allowed?
+	// // we have one wall we only allow one door, window, hung item for instance
+	    /// <summary>
+    /// These are runtime and edit time flags 
+    /// </summary>
+    public enum ComponentFlags : uint
+    {
+        None = 0,
+        CanScaleX = 1 << 0,  // can resize entity by scaling width 
+        CanScaleY = 1 << 1,  // can resize entity by scaling height
+        CanScaleZ = 1 << 2,  // can resize entity by scaling depth 
+        CanDamage = 1 << 3,
+		CanDestroy = 1 << 4,
+		CanArmor = 1 << 5,
+        CanHavePortal = 1 << 6,
+        CanClimb = 1 << 7,   // eg ladder or stairs
+        CanMOve = 1 << 8,  // NPCMovable 
+        CanCarry = 1 << 9,
+		CanPush = 1 << 10
+		//    ?  these are DomainObject settings not Entity  
+        //       as Physical would be more inherent to Entity and whether
+        //       it contains a Physics child node right?
+    }
+
+		
+	
+	
+	// // label flag should be moved to entity 
+	// const RENDER_LABLES = 1 << 14;  // if game option enables rendering of labels, this entity will render it's label
+
+	
+	// // above are more component flags, following are more entity flags, but script can set both
+	// const uint PHYSICS_STATIC = 1 << 12;  // doesn't respond to collisions but does cause other items that collide with it to respond
+	// const uint PHYSICS_DYNAMIC = 1 << 13; //  can move if collided with
+	
+
+
+		
+	// public available list of all products that the user can populate from a special
+        // script tied to the Scene file perhpas.
+
+        // products are arbitrary all that matters is something that consumes id = 33
+    // receives as a product one with that same id = 33.  ideally then it'd be nice
+        // to load these from a db rather than use enums.
+	 public enum Product : uint
+    {
+		// Matter
+		Fuel,
+        Antimatter, // todo: these should be flags in a bit flag to make query 
+        Matter,     //       for whether a given Entity supports receptron to "consume"
+        Oxygen,     //       this product (stimulus) and thus needs to have it passed to it's
+        Water,      //        domainObject script.  The key is the flags dont need to be know
+        // odorous, detectable matter
+		Particulate_Flowers,            //      by the domainobject or entity, only that the flag positions are consistant
+        Particulate_Sweat,            //      between all game scripts so ideally if there's a way to load these
+        Particulate_Corpse,           //      from a database  
+		Particulate_Feces, 
+		Particulate_Stagnant_Water,
+		Particulate_Stagnant_Air,
+		
+		// Forces
+		Gravity,
+		Thrust,
+		
+        // Power
+		Power,
+		
+		// Audible Emissions
+		// Footsteps,
+		// Talking,
+		// 
+		
+		// Detectable Emissions (can cause damage)
+		RadarSignature,
+		EM,
+		Radiowaves,
+        Heat,        // also can do damage if threshold value high enough against passive & armor defenses
+		Microwaves,  // active radar sensors emit microwaves and can be detected with passive sensors
+        UVLight,
+		VisibleLight,
+ 
+		
+		// Other Damage
+        Kinetic,
+		Explosive, // concussive
+		Freezing, 
+		Electrical, // electrocution
+		// Crushing, 
+		// Piercing, // armor piercing bullets
+		// Cutting, 
+		
+        Repair,    // Health
+        
+		
+        // crew related
+        Fatigue,    // something that produces fatigue, makes a crew member more tired.  
+                    // something that consumes fatigue, makes a crew member less tired (eg a bed)
+        Fright,
+		Hunger,
+        Breath,
+        Thirst,
+        Morale,
+        Experience,
+        Health
+    }
+	
+		[Flags] // attributes make ToString() output nice.
+	public enum DamageFlags : uint
+	{
+		GENERIC = 0, 
+		CRUSH = 1 << 0,
+		BULLET = 1 << 1, // puncture, impaling
+		SLASH = 1 << 2,  // knife/laceration
+		BURN = 1 << 3,
+		FREEZE = 1 << 4,
+		TRAIN = 1 << 5, 
+		VEHICLE,  //(New with Alien Swarm) 
+		FALL, 
+		BLAST, 
+		CLUB,
+		SHOCK, 
+		SONIC,
+		ENERGYBEAM, 
+		DROWN,  // suffocation
+		PARALYSE, 
+		NERVEGAS,
+		SAWBLADE,
+		POISON,
+		RADIATION, 
+		DROWNRECOVER, 
+		CHEMICAL,
+		CRITICAL,
+		ACID, //(New with Alien Swarm) 
+		SLOWBURN, 
+		SLOWFREEZE 
+	}
+	
+	public enum DoorState : uint
+	{
+		Closed = 0,
+		Opened,
+		Closing,
+		Opening
+	}
+}

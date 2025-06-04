@@ -1,0 +1,12 @@
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\bin\Debug\LibNoiseClient.exe
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\bin\Debug\LibNoiseClient.pdb
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\bin\Debug\LibNoise.dll
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\bin\Debug\LibNoise.pdb
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\bin\Debug\LibNoise.xml
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\obj\Debug\LibNoiseClient.Form1.resources
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\obj\Debug\LibNoiseClient.Properties.Resources.resources
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\obj\Debug\LibNoiseClient.csproj.GenerateResource.Cache
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\obj\Debug\LibNoiseClient.exe
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\obj\Debug\LibNoiseClient.pdb
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\bin\Debug\LibNoiseClient.exe.config
+E:\dev\c#\KeystoneGameBlocks\LibNoise.NET\LibNoiseClient\obj\Debug\LibNoiseClient.csprojResolveAssemblyReference.cache

@@ -1,0 +1,7 @@
+bin\Debug\STPExamples.dll
+bin\Debug\STPExamples.pdb
+bin\Debug\SmartThreadPool.dll
+bin\Debug\SmartThreadPool.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\STPExamples.dll
+obj\Debug\STPExamples.pdb

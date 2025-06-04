@@ -1,0 +1,1032 @@
+BODY {
+	MARGIN-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND: url(http://twimgs.com/gamasutra/images/body_bg.jpg) #8a8a8a repeat-x; FONT-SIZE: 11px
+}
+H1 {
+	LINE-HEIGHT: 1.3em; MARGIN-TOP: 1.25em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN-BOTTOM: 0.75em; COLOR: #000000; FONT-SIZE: 16px; FONT-WEIGHT: bolder
+}
+H2 {
+	LINE-HEIGHT: 1.3em; MARGIN-TOP: 1.25em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN-BOTTOM: 0.75em; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bolder
+}
+H3 {
+	LINE-HEIGHT: 1.3em; MARGIN-TOP: 1.25em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN-BOTTOM: 0.75em; COLOR: #000000; FONT-SIZE: 12px; FONT-WEIGHT: bolder
+}
+A:link {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; TEXT-DECORATION: none
+}
+A:active {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #660000
+}
+.left {
+	FLOAT: left
+}
+#wrapper {
+	Z-INDEX: 0; POSITION: relative; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 1000px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#header {
+	POSITION: relative; PADDING-BOTTOM: 5px; WIDTH: 999px; PADDING-TOP: 0px
+}
+#ad {
+	WIDTH: 160px; FLOAT: right; MARGIN-LEFT: 5px
+}
+#hQuickLinks {
+	BORDER-BOTTOM: #ffffff 2px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND: url(http://twimgs.com/gamasutra/images/wht_grad.gif) #ffffff repeat-x left bottom; COLOR: #336633; FONT-SIZE: 9px; TEXT-DECORATION: none
+}
+#hQuickLinks SPAN {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+#hQuickLinks A {
+	TEXT-TRANSFORM: uppercase; MARGIN: 0px 5px; COLOR: #336633; TEXT-DECORATION: none
+}
+#hQuickLinks A.active {
+	COLOR: #336633
+}
+#hQuickLinks A:hover {
+	COLOR: #82bc7a
+}
+#hQuickLinks_topics {
+	BORDER-BOTTOM: #ffffff 2px solid; TEXT-ALIGN: left; PADDING-BOTTOM: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 9px; TEXT-DECORATION: none
+}
+TD#hQuickLinks_topics UL#topicmenu {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 2px 0px 0px 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 33px; PADDING-TOP: 0px
+}
+TD#hQuickLinks_topics UL#topicmenu A {
+	HEIGHT: 25px; COLOR: #fff
+}
+TD#hQuickLinks_topics UL#topicmenu LI {
+	POSITION: relative; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 2px; DISPLAY: inline; FLOAT: left; PADDING-TOP: 0px
+}
+TD#hQuickLinks_topics UL#topicmenu LI A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 8px
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_all A {
+	WIDTH: 60px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_all0.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_console A {
+	WIDTH: 144px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_console0.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_social A {
+	WIDTH: 159px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_social0.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_smartphone A {
+	WIDTH: 191px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_smartphone0.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_indie A {
+	WIDTH: 144px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_indie0.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_serious A {
+	WIDTH: 117px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_serious0.png)
+}
+TD#hQuickLinks_topics UL#topicmenu A:hover {
+	COLOR: #000
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_all A:hover {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_all1.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_console A:hover {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_console1.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_social A:hover {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_social1.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_smartphone A:hover {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_smartphone1.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_indie A:hover {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_indie1.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_serious A:hover {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_serious1.png)
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_all_selected A {
+	WIDTH: 60px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_all2.png); COLOR: #000
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_console_selected A {
+	WIDTH: 144px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_console2.png); COLOR: #000
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_social_selected A {
+	WIDTH: 159px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_social2.png); COLOR: #000
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_smartphone_selected A {
+	WIDTH: 191px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_smartphone2.png); COLOR: #000
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_indie_selected A {
+	WIDTH: 144px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_indie2.png); COLOR: #000
+}
+TD#hQuickLinks_topics UL#topicmenu LI#topicmenu_serious_selected A {
+	WIDTH: 117px; DISPLAY: block; BACKGROUND: url(http://twimgs.com/gamasutra/images/btn_serious2.png); COLOR: #000
+}
+#header_news {
+	TEXT-ALIGN: left; LINE-HEIGHT: 41px; WIDTH: 650px; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; BACKGROUND: url(http://twimgs.com/gamasutra/images/hdr_background.jpg) repeat-x left top; HEIGHT: 41px; COLOR: #22522a; FONT-SIZE: 21px; VERTICAL-ALIGN: middle; FONT-WEIGHT: bold
+}
+#header_news IMG {
+	LINE-HEIGHT: 41px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; FLOAT: left; VERTICAL-ALIGN: middle; PADDING-TOP: 8px
+}
+#searchBox {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/searchBG.gif) #eeeeee repeat-x; VERTICAL-ALIGN: middle
+}
+.searchText {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px
+}
+#content {
+	BACKGROUND-COLOR: #eeeeee; WIDTH: 650px
+}
+#content_news {
+	BACKGROUND-COLOR: #fafafa; WIDTH: 650px
+}
+#content_feature {
+	BACKGROUND-COLOR: #fafafa; WIDTH: 650px
+}
+#leftNav {
+	BACKGROUND-COLOR: #eeeeee; WIDTH: 177px; FLOAT: left
+}
+#footer {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 15px; PADDING-LEFT: 15px; WIDTH: 804px; PADDING-RIGHT: 15px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 40px; COLOR: #fff; CLEAR: both; FONT-SIZE: 11px; PADDING-TOP: 15px
+}
+#footer A {
+	COLOR: #fff; MARGIN-RIGHT: 10px; TEXT-DECORATION: underline
+}
+#footer SPAN {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px
+}
+#middleCol {
+	Z-INDEX: 100; TEXT-ALIGN: left; BACKGROUND-COLOR: #eeeeee; WIDTH: 350px; FLOAT: left
+}
+#rightCol {
+	BACKGROUND-COLOR: #eeeeee; WIDTH: 300px; FLOAT: right
+}
+#memberLogin {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/grn_grad.gif) #82bc7a repeat-x
+}
+A.loginboxtext:link {
+	COLOR: #009900
+}
+A.loginboxtext:active {
+	COLOR: #009900
+}
+A.loginboxtext:visited {
+	COLOR: #009900
+}
+.searchButton {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; DISPLAY: inline; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 9px; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+A.searchButton:link {
+	COLOR: #ffffff
+}
+A.searchButton:active {
+	COLOR: #ffffff
+}
+A.searchButton:visited {
+	COLOR: #ffffff
+}
+A.searchButton:hover {
+	COLOR: #660000
+}
+.featureWhiteText {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none; PADDING-TOP: 10px
+}
+.FeaturesContent {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #eeeeee; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: 9px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.FeaturesContent A:link {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #eeeeee; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.FeaturesContent A:active {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #eeeeee; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.FeaturesContent A:visited {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #eeeeee; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.FeaturesContent A:hover {
+	TEXT-ALIGN: left; BACKGROUND-COLOR: #eeeeee; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 9px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+INPUT.login {
+	BORDER-BOTTOM-STYLE: none; BACKGROUND-COLOR: #eeeeee; BORDER-LEFT-STYLE: none; WIDTH: 90px; BORDER-TOP-STYLE: none; MARGIN-BOTTOM: 4px; HEIGHT: 15px; COLOR: #000000; BORDER-RIGHT-STYLE: none; FONT-SIZE: 10px
+}
+INPUT.search {
+	BORDER-BOTTOM-STYLE: none; BACKGROUND-COLOR: #eeeeee; MARGIN-TOP: 4px; BORDER-LEFT-STYLE: none; WIDTH: 86px; BORDER-TOP-STYLE: none; MARGIN-BOTTOM: 4px; HEIGHT: 15px; COLOR: #000000; BORDER-RIGHT-STYLE: none; FONT-SIZE: 10px
+}
+.MedGreenHeader {
+	BACKGROUND-COLOR: #82bc7a; PADDING-LEFT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #22522a; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.leftNavYellow {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #ffffcc; PADDING-TOP: 5px
+}
+.leftNavGry {
+	BACKGROUND-COLOR: #cccccc
+}
+.whiteTop {
+	BORDER-TOP: #ffffff 2px solid
+}
+.leftNavButtons {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 4px; LINE-HEIGHT: 1.5; PADDING-LEFT: 10px; PADDING-RIGHT: 4px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 4px
+}
+.leftNavButtons A:link {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavButtons A:active {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavButtons A:visited {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavButtons A:hover {
+	COLOR: #660000
+}
+.dot_line {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/dots.gif) repeat-x left center; HEIGHT: 8px; FONT-SIZE: 1px
+}
+.dot_line_tall {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/dots.gif) repeat-x left center; HEIGHT: 16px; FONT-SIZE: 1px
+}
+.leftNavCalendar {
+	TEXT-ALIGN: left; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.leftNavCalendar A:link {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.leftNavCalendar A:active {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.leftNavCalendar A:visited {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.leftNavCalendar A:hover {
+	COLOR: #660000
+}
+.leftNavJobs {
+	TEXT-ALIGN: left; LINE-HEIGHT: 1.3; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.leftNavJobs A:link {
+	LINE-HEIGHT: 1.3; COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavJobs A:active {
+	LINE-HEIGHT: 1.3; COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavJobs A:visited {
+	LINE-HEIGHT: 1.3; COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavJobs A:hover {
+	COLOR: #660000
+}
+.NewsContent {
+	TEXT-ALIGN: left; LINE-HEIGHT: 1.5; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.NewsContent A:link {
+	COLOR: #336633; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.NewsContent A:active {
+	COLOR: #336633; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.NewsContent A:visited {
+	COLOR: #336633; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.NewsContent A:hover {
+	COLOR: #660000
+}
+.IndexContractorContent {
+	TEXT-ALIGN: left; LINE-HEIGHT: 1.5; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.IndexContractorContent A:link {
+	COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.IndexContractorContent A:hover {
+	COLOR: #660000
+}
+.story_title A:link {
+	LINE-HEIGHT: 17px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.story_title A:active {
+	LINE-HEIGHT: 17px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.story_title A:visited {
+	LINE-HEIGHT: 17px; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.story_title {
+	COLOR: #336633; FONT-WEIGHT: bold
+}
+.CompanyContent {
+	TEXT-ALIGN: left; LINE-HEIGHT: 1.5; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.CompanyContent A:link {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.CompanyContent A:active {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.CompanyContent A:visited {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.CompanyContent A:hover {
+	COLOR: #660000
+}
+.leftNavProjects {
+	TEXT-ALIGN: left; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.leftNavProjects A:link {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavProjects A:active {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavProjects A:visited {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.leftNavProjects A:hover {
+	COLOR: #660000
+}
+.leftNavStore {
+	TEXT-ALIGN: left; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.leftNavStore A:link {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.leftNavStore A:active {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.leftNavStore A:visited {
+	COLOR: #336633; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.leftNavStore A:hover {
+	COLOR: #660000
+}
+.loginButton {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 2px; MARGIN: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; DISPLAY: inline; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 9px; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+A.loginButton:link {
+	COLOR: #ffffff
+}
+A.loginButton:active {
+	COLOR: #ffffff
+}
+A.loginButton:visited {
+	COLOR: #ffffff
+}
+A.loginButton:hover {
+	COLOR: #660000
+}
+.SmRedText {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+A.SmRedText:link {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.SmRedText:active {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.SmRedText:visited {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.SmRedText A:link {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.SmRedText A:active {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.SmRedText A:visited {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.SmRedText:hover {
+	TEXT-DECORATION: underline
+}
+.SmRedText A:hover {
+	TEXT-DECORATION: underline
+}
+.SmWhiteText {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+A.SmWhiteText:link {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.SmWhiteText:active {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.SmWhiteText:visited {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.SmWhiteText A:link {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.SmWhiteText A:active {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.SmWhiteText A:visited {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #ffffff; FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.SmWhiteText:hover {
+	TEXT-DECORATION: underline
+}
+.SmWhiteText A:hover {
+	TEXT-DECORATION: underline
+}
+.thumbnailImage {
+	PADDING-BOTTOM: 1px; BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 10px; FLOAT: left; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 5px
+}
+.thumbnailImageRight {
+	PADDING-BOTTOM: 5px; BORDER-RIGHT-WIDTH: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 5px; FLOAT: right; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; PADDING-TOP: 3px
+}
+.whiteBorder {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; LINE-HEIGHT: 18px; BORDER-TOP: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid
+}
+.cont_search {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND: url(http://twimgs.com/gamasutra/images/grad_cont_search.gif) #989898 repeat-x left bottom; COLOR: #ffffff; FONT-SIZE: 10px
+}
+.nameSearch {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 15px
+}
+.catSearch {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 15px
+}
+INPUT.search2 {
+	BORDER-BOTTOM-STYLE: none; BACKGROUND-COLOR: #eeeeee; MARGIN-TOP: 8px; BORDER-LEFT-STYLE: none; WIDTH: 265px; BORDER-TOP-STYLE: none; MARGIN-BOTTOM: 8px; HEIGHT: 15px; COLOR: #000000; BORDER-RIGHT-STYLE: none; FONT-SIZE: 10px
+}
+SELECT.search2 {
+	BORDER-BOTTOM-STYLE: none; BACKGROUND-COLOR: #eeeeee; MARGIN-TOP: 8px; BORDER-LEFT-STYLE: none; WIDTH: 265px; BORDER-TOP-STYLE: none; MARGIN-BOTTOM: 8px; COLOR: #000000; BORDER-RIGHT-STYLE: none; FONT-SIZE: 10px
+}
+.powerSearchButton {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; DISPLAY: inline; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 9px; FONT-WEIGHT: bolder; TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+A.powerSearchButton:link {
+	COLOR: #660000
+}
+A.powerSearchButton:active {
+	COLOR: #660000
+}
+A.powerSearchButton:visited {
+	COLOR: #660000
+}
+A.powerSearchButton:hover {
+	COLOR: #ffffff
+}
+TD.contNavLinks {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: bolder; PADDING-TOP: 2px
+}
+.contNavLinks A:link {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+.contNavLinks A:visited {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+.contNavLinks A:active {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+.contNavLinks A:hover {
+	COLOR: #660000
+}
+TD.whtRow {
+	BACKGROUND: #ffffff; HEIGHT: 2px; FONT-SIZE: 1px
+}
+TD.whtRow2 {
+	BACKGROUND: #ffffff; HEIGHT: 2px; FONT-SIZE: 1px
+}
+TD.premCat {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; LETTER-SPACING: -0.05em; PADDING-RIGHT: 7px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND: #81bc78; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bolder; PADDING-TOP: 2px
+}
+DIV.viewAllButton {
+	BORDER-BOTTOM: #660000 1px solid; BORDER-LEFT: #660000 1px solid; MARGIN-TOP: 1px; PADDING-LEFT: 1px; LETTER-SPACING: 0em; PADDING-RIGHT: 1px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FLOAT: right; COLOR: #660000; FONT-SIZE: 9px; BORDER-TOP: #660000 1px solid; BORDER-RIGHT: #660000 1px solid
+}
+DIV.viewAllButton A:link {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 9px; TEXT-DECORATION: none
+}
+DIV.viewAllButton A:visited {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 9px; TEXT-DECORATION: none
+}
+DIV.viewAllButton A:active {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #660000; FONT-SIZE: 9px; TEXT-DECORATION: none
+}
+DIV.viewAllButton A:hover {
+	COLOR: #ffffff
+}
+TD.whtRow1 {
+	BACKGROUND: #ffffff; HEIGHT: 1px; FONT-SIZE: 1px
+}
+TD.premListing {
+	PADDING-BOTTOM: 7px; PADDING-LEFT: 11px; PADDING-RIGHT: 7px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND: url(http://twimgs.com/gamasutra/images/grn_grad.gif) #82bc7a repeat-x; COLOR: #000000; FONT-SIZE: 9px; PADDING-TOP: 7px
+}
+.contLogo {
+	BORDER-BOTTOM-STYLE: none; BORDER-LEFT-STYLE: none; WIDTH: 120px; BORDER-TOP-STYLE: none; FLOAT: left; HEIGHT: 60px; BORDER-RIGHT-STYLE: none; MARGIN-RIGHT: 15px
+}
+TD.premListing A:link {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.premListing A:visited {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.premListing A:active {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.premListing A:hover {
+	COLOR: #ffffff
+}
+TD.premListing A.header:link {
+	COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+TD.premListing A.header:visited {
+	COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+TD.premListing A.header:active {
+	COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+TD.premListing A.header:hover {
+	COLOR: #660000
+}
+TD.featCat {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; LETTER-SPACING: -0.05em; PADDING-RIGHT: 7px; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; BACKGROUND: #999999; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bolder; PADDING-TOP: 2px
+}
+TD.featListing {
+	PADDING-BOTTOM: 7px; PADDING-LEFT: 11px; PADDING-RIGHT: 7px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND: url(http://twimgs.com/gamasutra/images/grad_gry.gif) #cccccc repeat-x; COLOR: #000000; FONT-SIZE: 9px; PADDING-TOP: 7px
+}
+TD.featListing A:link {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.featListing A:visited {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.featListing A:active {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.featListing A:hover {
+	COLOR: #ffffff
+}
+TD.featListing A.header:link {
+	COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+TD.featListing A.header:visited {
+	COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+TD.featListing A.header:active {
+	COLOR: #ffffff; FONT-SIZE: 11px; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+TD.featListing A.header:hover {
+	COLOR: #660000
+}
+.greenarrows {
+	COLOR: #336633; FONT-SIZE: 0.9em; TEXT-DECORATION: none
+}
+A.greenarrows:link {
+	COLOR: #336633; FONT-SIZE: 0.9em; TEXT-DECORATION: none
+}
+A.greenarrows:active {
+	COLOR: #336633; FONT-SIZE: 0.9em; TEXT-DECORATION: none
+}
+A.greenarrows:visited {
+	COLOR: #336633; FONT-SIZE: 0.9em; TEXT-DECORATION: none
+}
+A.greenarrows:hover {
+	COLOR: #660000
+}
+TD.pageNav {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: bolder
+}
+TD.pageNav A:link {
+	COLOR: #336633; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.pageNav A:visited {
+	COLOR: #336633; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.pageNav A:active {
+	COLOR: #336633; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+TD.pageNav A:hover {
+	COLOR: #660000
+}
+SPAN.pageNav {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px; FONT-WEIGHT: bolder
+}
+SPAN.pageNav A:link {
+	COLOR: #336633; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+SPAN.pageNav A:visited {
+	COLOR: #336633; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+SPAN.pageNav A:active {
+	COLOR: #336633; FONT-WEIGHT: bolder; TEXT-DECORATION: underline
+}
+SPAN.pageNav A:hover {
+	COLOR: #660000
+}
+TD.newsNav {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #336633; FONT-SIZE: 10px
+}
+TD.newsNav A:link {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+TD.newsNav A:visited {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+TD.newsNav A:active {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+TD.newsNav A:hover {
+	COLOR: #660000
+}
+.newsTitle {
+	LINE-HEIGHT: 1.3em; LETTER-SPACING: -0.05em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 18px; FONT-WEIGHT: bolder
+}
+.newsAuth {
+	LINE-HEIGHT: 1.3em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #666666; FONT-SIZE: 14px; FONT-WEIGHT: normal
+}
+.newsDate {
+	LINE-HEIGHT: 1.3em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px
+}
+.newsText {
+	LINE-HEIGHT: 1.3em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px
+}
+.newsText A:link {
+	COLOR: #336633; TEXT-DECORATION: underline
+}
+.newsText A:active {
+	COLOR: #336633; TEXT-DECORATION: underline
+}
+.newsText A:visited {
+	COLOR: #336633; TEXT-DECORATION: underline
+}
+.newsText A:hover {
+	COLOR: #660000
+}
+.featureText {
+	LINE-HEIGHT: 1.3em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 12px
+}
+.featureText A:link {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.featureText A:active {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.featureText A:visited {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+.featureText A:hover {
+	COLOR: #660000
+}
+.imgBox {
+	POSITION: relative; PADDING-LEFT: 5px; FLOAT: right; LEFT: 10px
+}
+.adBox {
+	POSITION: relative; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; FLOAT: right; CLEAR: right; PADDING-TOP: 20px; LEFT: 10px
+}
+.articleNav {
+	TEXT-ALIGN: left; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 10px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+TD.articleNav {
+	PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+A.articleNav:link {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+A.articleNav:active {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+A.articleNav:visited {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+A.articleNav:hover {
+	COLOR: #660000
+}
+UL.relatedNews {
+	POSITION: relative; LIST-STYLE-IMAGE: url(http://twimgs.com/gamasutra/images/gray_arrow2.gif); LEFT: -15px
+}
+UL.relatedNews LI {
+	FONT-SIZE: 11px
+}
+UL.relatedNews LI A:link {
+	COLOR: #336633; TEXT-DECORATION: underline
+}
+UL.relatedNews LI A:active {
+	COLOR: #336633; TEXT-DECORATION: underline
+}
+UL.relatedNews LI A:visited {
+	COLOR: #336633; TEXT-DECORATION: underline
+}
+UL.relatedNews LI A:hover {
+	COLOR: #660000
+}
+UL.relatedNews LI.header {
+	POSITION: relative; LIST-STYLE-TYPE: none; FONT-SIZE: 12px; FONT-WEIGHT: bolder; LIST-STYLE-IMAGE: none; LEFT: -15px
+}
+TD.contractor_profile_item_description {
+	WIDTH: 150px; FONT-WEIGHT: bold
+}
+TD.sectionTitle H1 {
+	BORDER-BOTTOM: #ffffff 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 5px; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; BACKGROUND: url(http://twimgs.com/gamasutra/images/grad_gry.gif) #cccccc repeat-x; COLOR: #000000; PADDING-TOP: 5px
+}
+TD.sectionTitle2 {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.2em; MARGIN-TOP: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN-BOTTOM: 0px; COLOR: #000000; FONT-SIZE: 16px; FONT-WEIGHT: bolder; PADDING-TOP: 0px
+}
+TD.mainSections {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #cccccc; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bolder; PADDING-TOP: 5px
+}
+TD.mainSections P {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 1.5em; MARGIN-TOP: 3px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN-BOTTOM: 3px; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: bolder; PADDING-TOP: 0px
+}
+TD.mainSections P.subSections {
+	PADDING-LEFT: 10px
+}
+TD.mainSections A:link {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+TD.mainSections A:active {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+TD.mainSections A:visited {
+	COLOR: #336633; TEXT-DECORATION: none
+}
+TD.mainSections A:hover {
+	COLOR: #660000
+}
+.category_link A:link {
+	COLOR: black
+}
+.category_link A:active {
+	COLOR: black
+}
+.category_link A:visited {
+	COLOR: black
+}
+INPUT.search3 {
+	BORDER-BOTTOM-STYLE: none; BACKGROUND-COLOR: #eeeeee; MARGIN-TOP: 0px; BORDER-LEFT-STYLE: none; WIDTH: 150px; BORDER-TOP-STYLE: none; MARGIN-BOTTOM: 0px; HEIGHT: 13px; COLOR: #000000; BORDER-RIGHT-STYLE: none; FONT-SIZE: 10px
+}
+.newsletterSignupButton {
+	PADDING-BOTTOM: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: inline; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; MARGIN-BOTTOM: 0px; COLOR: #660000; FONT-SIZE: 9px; FONT-WEIGHT: bolder; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+A.newsletterSignupButton:link {
+	COLOR: #660000
+}
+A.newsletterSignupButton:active {
+	COLOR: #660000
+}
+A.newsletterSignupButton:visited {
+	COLOR: #660000
+}
+A.newsletterSignupButton:hover {
+	COLOR: #ffffff
+}
+TABLE#jobBoardTabs {
+	MARGIN-TOP: 3px
+}
+#jobBoardTabs TD.tab_active {
+	TEXT-ALIGN: center; BACKGROUND: url(http://twimgs.com/gamasutra/images/tab_jobs_active.gif) #eeeeee no-repeat center top
+}
+#jobBoardTabs TD.tab_active A:link {
+	COLOR: #ffffff; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabs TD.tab_active A:visited {
+	COLOR: #ffffff; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabs TD.tab_active A:active {
+	COLOR: #ffffff; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabs TD.tab_active A:hover {
+	TEXT-DECORATION: underline
+}
+#jobBoardTabs TD.tab_bkg {
+	TEXT-ALIGN: center; BACKGROUND: url(http://twimgs.com/gamasutra/images/tab_jobs_inactive.gif) #eeeeee no-repeat center top
+}
+#jobBoardTabs TD.tab_bkg A:link {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabs TD.tab_bkg A:visited {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabs TD.tab_bkg A:active {
+	COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabs TD.tab_bkg A:hover {
+	TEXT-DECORATION: underline
+}
+#jobBoardTabs TD.tab_content {
+	BACKGROUND: url(http://twimgs.com/gamasutra/images/grn_grad_tall.gif) #7fba7a repeat-x left top; COLOR: #ffffff; FONT-SIZE: 9px
+}
+#jobBoardTabsSearch {
+	PADDING-LEFT: 5px; WIDTH: 125px; FLOAT: left; COLOR: #ffffff; PADDING-TOP: 10px
+}
+#jobBoardTabsSearch A:link {
+	COLOR: #ffffff; FONT-SIZE: 9px; TEXT-DECORATION: underline
+}
+#jobBoardTabsSearch A:active {
+	COLOR: #ffffff; FONT-SIZE: 9px; TEXT-DECORATION: underline
+}
+#jobBoardTabsSearch A:visited {
+	COLOR: #ffffff; FONT-SIZE: 9px; TEXT-DECORATION: underline
+}
+#jobBoardTabsSearch A:hover {
+	COLOR: #660000
+}
+INPUT.search4 {
+	BORDER-BOTTOM-STYLE: none; BACKGROUND-COLOR: #eeeeee; MARGIN-TOP: 3px; BORDER-LEFT-STYLE: none; WIDTH: 125px; BORDER-TOP-STYLE: none; MARGIN-BOTTOM: 3px; HEIGHT: 13px; COLOR: #000000; BORDER-RIGHT-STYLE: none; FONT-SIZE: 10px
+}
+#jobBoardTabsSearch #searchBox {
+	TEXT-ALIGN: center; WIDTH: 50px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; COLOR: #ffffff; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #searchBox A:link {
+	TEXT-ALIGN: center; WIDTH: 50px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; COLOR: #ffffff; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #searchBox A:active {
+	TEXT-ALIGN: center; WIDTH: 50px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; COLOR: #ffffff; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #searchBox A:visited {
+	TEXT-ALIGN: center; WIDTH: 50px; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; COLOR: #ffffff; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #searchBox A:hover {
+	TEXT-DECORATION: underline
+}
+#jobBoardTabsSearch #advSearchBox {
+	TEXT-ALIGN: center; WIDTH: 65px; FLOAT: right; COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #advSearchBox A:link {
+	TEXT-ALIGN: center; WIDTH: 65px; FLOAT: right; COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #advSearchBox A:active {
+	TEXT-ALIGN: center; WIDTH: 65px; FLOAT: right; COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #advSearchBox A:visited {
+	TEXT-ALIGN: center; WIDTH: 65px; FLOAT: right; COLOR: #660000; FONT-WEIGHT: bolder; TEXT-DECORATION: none
+}
+#jobBoardTabsSearch #advSearchBox A:hover {
+	TEXT-DECORATION: underline
+}
+#jobBoardTabsSearch A:link {
+	TEXT-DECORATION: underline
+}
+#jobBoardTabsSearch A:active {
+	TEXT-DECORATION: underline
+}
+#jobBoardTabsSearch A:visited {
+	TEXT-DECORATION: underline
+}
+#jobBoardTabsLinks {
+	PADDING-LEFT: 0px; WIDTH: 510px; FLOAT: right; MARGIN-LEFT: 0px; FONT-SIZE: 10px; PADDING-TOP: 5px
+}
+#jobBoardTabsLinks TD A:link {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+#jobBoardTabsLinks TD A:active {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+#jobBoardTabsLinks TD A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+#jobBoardTabsLinks TD A:hover {
+	COLOR: #660000
+}
+.jobDate {
+	COLOR: #336633; FONT-SIZE: 14px
+}
+TABLE#jobListingFull {
+	BORDER-BOTTOM: #22522a 1px solid; BORDER-LEFT: #22522a 1px solid; WIDTH: 650px; MARGIN-BOTTOM: 15px; BORDER-TOP: #22522a 1px solid; BORDER-RIGHT: #22522a 1px solid
+}
+TABLE#jobListingFull TD.company {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; WIDTH: 650px; BACKGROUND: #82bc7a; COLOR: #22522a; FONT-SIZE: 14px; FONT-WEIGHT: bolder; PADDING-TOP: 2px
+}
+TABLE#jobListingFull TD.jobTitle {
+	BORDER-BOTTOM: #22522a 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; WIDTH: 650px; BACKGROUND: #cccccc; COLOR: #660000; FONT-SIZE: 11px; BORDER-TOP: #22522a 1px solid; FONT-WEIGHT: normal; PADDING-TOP: 2px
+}
+TABLE#jobListingFull TD.jobDesc {
+	PADDING-BOTTOM: 15px; PADDING-LEFT: 15px; WIDTH: 440px; PADDING-RIGHT: 10px; BACKGROUND: #cccccc; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: normal; PADDING-TOP: 15px
+}
+TABLE#jobListingFull TD.jobLogo {
+	PADDING-BOTTOM: 15px; WIDTH: 210px; PADDING-RIGHT: 10px; BACKGROUND: #cccccc; PADDING-TOP: 15px
+}
+TABLE#jobListingFull TD.jobTitle A:link {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingFull TD.jobTitle A:active {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingFull TD.jobTitle A:visited {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingFull TD.jobDesc A:link {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingFull TD.jobDesc A:active {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingFull TD.jobDesc A:visited {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingFull TD.jobTitle A:hover {
+	TEXT-DECORATION: underline
+}
+TABLE#jobListingFull TD.jobDesc A:hover {
+	TEXT-DECORATION: underline
+}
+TABLE#jobListingTitleOnly {
+	WIDTH: 650px; MARGIN-BOTTOM: 15px
+}
+TABLE#jobListingTitleOnly TD.company {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; WIDTH: 650px; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bolder; PADDING-TOP: 2px
+}
+TABLE#jobListingTitleOnly TD.jobTitle {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; WIDTH: 650px; COLOR: #660000; FONT-SIZE: 11px; FONT-WEIGHT: normal; PADDING-TOP: 2px
+}
+TABLE#jobListingTitleOnly TD.jobTitle A:link {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingTitleOnly TD.jobTitle A:active {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingTitleOnly TD.jobTitle A:visited {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+TABLE#jobListingTitleOnly TD.jobTitle A:hover {
+	TEXT-DECORATION: underline
+}
+P.event1stpara {
+	MARGIN-TOP: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; COLOR: #880000; MARGIN-LEFT: 50px; FONT-SIZE: 12px; MARGIN-RIGHT: 50px
+}
+P.event1stpara:first-letter {
+	COLOR: #880000; FONT-SIZE: 22px; FONT-WEIGHT: bold
+}
+.event_tbl_header {
+	BACKGROUND-COLOR: #85b54f; PADDING-LEFT: 5px; COLOR: #000000; FONT-SIZE: 12px
+}
+.event_tbl_list {
+	PADDING-LEFT: 5px; BACKGROUND: #eff5e9; COLOR: #000000; FONT-SIZE: 11px
+}
+.event_tbl_list_dots {
+	PADDING-LEFT: 5px; BACKGROUND: url(http://twimgs.com/gamasutra/jobs/images/dots2.gif) #eff5e9; COLOR: #000000; FONT-SIZE: 11px
+}
+.nodot {
+	BACKGROUND: url(http://twimgs.com/gamasutra/jobs/images/nodots.gif) #eff5e9
+}
+.top_5_event_jobs A:link {
+	FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.top_5_event_jobs A:visited {
+	FONT-FAMILY: verdana; TEXT-DECORATION: none
+}
+.top_5_event_jobs A:hover {
+	TEXT-DECORATION: underline
+}
+.top_5_event_jobs {
+	MARGIN-BOTTOM: 6px; MARGIN-LEFT: 0px
+}
+#selected_event {
+	BACKGROUND-IMAGE: none; BACKGROUND-COLOR: #880000; COLOR: #ffffcc
+}
+.category_links A:link {
+	COLOR: #666666; FONT-WEIGHT: bold
+}
+.category_links A:visited {
+	COLOR: #666666; FONT-WEIGHT: bold
+}
+.category_links {
+	COLOR: #666666; FONT-WEIGHT: bold
+}
+.category_links A:hover {
+	COLOR: #660000
+}
+DIV.blog_index {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-SIZE: large; FONT-WEIGHT: bold; WORD-SPACING: 1ex; PADDING-TOP: 5px
+}
+SPAN.blog_index {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-SIZE: 10px; FONT-WEIGHT: bold; WORD-SPACING: 1ex; PADDING-TOP: 5px
+}
+.bold {
+	FONT-WEIGHT: bold
+}
+SPAN.gamacode {
+	TEXT-ALIGN: left; PADDING-LEFT: 20px; DISPLAY: block
+}
+.footer1 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 1em; MARGIN-TOP: 10px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; BACKGROUND: #000; HEIGHT: 173px; COLOR: #336633; CLEAR: both; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+.footer1 A {
+	COLOR: #fff
+}
+.footer1 A:hover {
+	TEXT-DECORATION: none
+}
+.footer1 IMG {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 20px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 40px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px
+}
+.footerline {
+	PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #ccc; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 3px; PADDING-TOP: 0px
+}
+#footercontent {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 998px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.footerhr {
+	BORDER-BOTTOM: #707070 1px solid; BACKGROUND-COLOR: #000; MARGIN: 10px 0px; HEIGHT: 1px; CLEAR: both
+}
+.footer_sectiontitle {
+	COLOR: #336633; FONT-SIZE: 15px; FONT-WEIGHT: bold
+}
+#headerBox {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #999999; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; DISPLAY: none; FONT: bold 1.4em Verdana; PADDING-TOP: 10px
+}
+#headerCloseButton {
+	FLOAT: right
+}
+#sitetabs {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial,Helvetica,sans-serif; WHITE-SPACE: nowrap; BACKGROUND: url(http://twimgs.com/gamasutra/images/sitetabs_bg.jpg) repeat-x 0px 0px; HEIGHT: 35px; COLOR: #000000; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+#sitetabs A {
+	PADDING-BOTTOM: 6px; BACKGROUND-COLOR: #dddddd; MARGIN: 0px 4px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; DISPLAY: inline-block; FONT-FAMILY: Arial,Helvetica,sans-serif; COLOR: #777777; TEXT-DECORATION: none; PADDING-TOP: 6px
+}

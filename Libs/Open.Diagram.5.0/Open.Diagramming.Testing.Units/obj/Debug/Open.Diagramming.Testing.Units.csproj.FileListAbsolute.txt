@@ -1,0 +1,9 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\bin\Debug\Open.Diagramming.Testing.Units.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\bin\Debug\Open.Diagramming.Testing.Units.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\bin\Debug\Open.Diagramming.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\bin\Debug\Open.Diagramming.Forms.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\bin\Debug\Open.Diagramming.Forms.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\bin\Debug\Open.Diagramming.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\obj\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\obj\Debug\Open.Diagramming.Testing.Units.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\Open.Diagram.5.0\Open.Diagramming.Testing.Units\obj\Debug\Open.Diagramming.Testing.Units.pdb

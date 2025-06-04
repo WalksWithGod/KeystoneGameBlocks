@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/12673//LibNoise
+END
+Checkerboard.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/13254//LibNoise/Checkerboard.cs
+END
+GradientNoiseBasis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/13256//LibNoise/GradientNoiseBasis.cs
+END
+FastNoiseBasis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/13252//LibNoise/FastNoiseBasis.cs
+END
+FastRidgedMultifractal.cs
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/13254//LibNoise/FastRidgedMultifractal.cs
+END
+FastTurbulence.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/13254//LibNoise/FastTurbulence.cs
+END
+Billow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/13252//LibNoise/Billow.cs
+END
+Perlin.cs
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/13256//LibNoise/Perlin.cs
+END
+Math.cs
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/13254//LibNoise/Math.cs
+END
+Constant.cs
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/12805//LibNoise/Constant.cs
+END
+FastNoise.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/13252//LibNoise/FastNoise.cs
+END
+Voronoi.cs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/13256//LibNoise/Voronoi.cs
+END
+Cylinders.cs
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/12798//LibNoise/Cylinders.cs
+END
+ValueNoiseBasis.cs
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/13259//LibNoise/ValueNoiseBasis.cs
+END
+IModule.cs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/12680//LibNoise/IModule.cs
+END
+LibNoise.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/13256//LibNoise/LibNoise.csproj
+END
+RidgedMultifractal.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/13252//LibNoise/RidgedMultifractal.cs
+END
+FastBillow.cs
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/13254//LibNoise/FastBillow.cs
+END
+Turbulence.cs
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/13252//LibNoise/Turbulence.cs
+END
+Spheres.cs
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/12799//LibNoise/Spheres.cs
+END

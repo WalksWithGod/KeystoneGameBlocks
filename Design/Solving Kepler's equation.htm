@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0038)http://www.projectpluto.com/kepler.htm -->
+<HTML><HEAD><TITLE>Solving Kepler's equation</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META name=Author content="Bill Gray">
+<META name=GENERATOR content="MSHTML 9.00.8112.16450"></HEAD>
+<BODY>
+<P><B><FONT size=+1>Solving Kepler's equation: discussion of theory, plus C code 
+</FONT></B></P>
+<P><I>Last updated 12 Feb 98</I></P>
+<P>A recent post on the sci.astro.amateur newsgroup asked about a solution to 
+Kepler's equation for the hyperbolic case. The following code is extracted from 
+that used in my <A href="http://www.projectpluto.com/home.htm">Guide 
+software</A>, in hopes that it will prove useful to someone. (Please don't use 
+this in commercial software without notifying me. We might work out a trade or 
+something, but I'm not too interested in supporting my competition to this 
+extent! But for use in your own personal projects... use it freely.) </P>
+<P>There have been an amazing number of solutions offered to Kepler's equation 
+over the years, most of which try to optimize the following factors: </P>
+<LI><B>Simplicity. </B>The solution offered below is somewhat complex; <I>for my 
+particular purpose,</I> that was entirely acceptable, since it allowed me to do 
+quite well in some other areas. If I were teaching an introductory course in 
+astronomical computing, I might start with something simpler. And, of course, 
+complexity is the enemy of bug-free software. 
+<LI><B>Completeness. </B>A lot of solutions converge for elliptical orbits only, 
+or for low-eccentricity cases. (For example, the Kepler solver used in most 
+artificial satellite software is in this category. You don't deal with 
+hyperbolic or near-parabolic cases in that instance.) Again, for my particular 
+purpose, <I>all</I> cases <I>must</I> converge to a solution to be acceptable. 
+<LI><B>Worst-case behavior. </B>Some solutions converge quite rapidly in most 
+cases, but may end up with really slow convergence (usually for nearly-parabolic 
+orbits). In my case, having poor behavior in such cases would not be acceptable. 
+
+<LI><B>Average-case behavior. </B>The definition of an "average" case will 
+obviously vary! In my software, there are an enormous number of cases with 
+eccentricity &lt; .3 (asteroids), and a lot of cases that are nearly parabolic, 
+but not quite (comets). So I naturally invested some thought in making sure 
+those converge as quickly as possible. 
+<LI><B>Generalness of the solution. </B>You can, without much trouble, write 
+code that will find the solution to a generalized continuous function, given 
+that you know a solution exists between two points. The benefit of this is that 
+your "equation solver" can then be used for pretty much anything you want. In my 
+case, this very particular equation was so important that I felt it worthwhile 
+to sacrifice "generalness" to get a much faster solution. 
+<P>For my purposes, it was necessary that the code converge for <I>all</I> 
+cases, elliptical, hyperbolic, and parabolic; and that it do so as briskly as 
+possible. (I've omitted the parabolic case below, by the way. In that case, an 
+analytical, non-iterative solution is used.) In some cases, Guide must compute 
+positions for tens of thousands of asteroids, and do so quickly enough to update 
+the chart right away. Also, the first version of this code was created in 1991, 
+when math chips were still scarce; I was willing to do almost anything to make 
+the code run faster. I probably wouldn't go to such extremes in the Pentium 
+era... but since I've already got the code, and it's tested and ready... why 
+not? </P>
+<P>And now, a blow-by-blow description of how the kepler( ) function works. The 
+first step is just to check for a zero mean anomaly; in this case, the return 
+value is trivially zero, and the function returns right away. (This also evades 
+divide-by-zero cases later on.) </P>
+<P>Next, if the eccentricity is less than .3, we use a "low-eccentricity" 
+formula from Meeus' <I>Astronomical Algorithms</I>. This gets us a very good 
+solution; follow up with one iteration (pardon the oxymoron!) of Newton's 
+method, and we have our solution. This was important for that "zillions of 
+asteroids" case. Almost all asteroids will stop here; few have high 
+eccentricities. </P>
+<P>For what follows, it's necessary to be on the positive half of the orbit. If 
+the mean anomaly is negative, we flip the sign and record that fact by setting 
+<TT>is_negative = 1</TT>. </P>
+<P>Now, the step following this will require most of the explanation. In the 
+end, the only thing we'll be doing is a simple iteration of Newton's method. But 
+to make sure it converges, we'll need a good starting value. For elliptical 
+orbits that either have an eccentricity less than .8 or a mean anomaly greater 
+than 60 degrees, setting our initial guess for the eccentric anomaly equal to 
+the mean anomaly is good enough. But if we've got a hyperbolic orbit, <I>or</I> 
+if the eccentricity is greater than .8 and the mean anomaly is below 60 degrees, 
+a smarter initial guess may be absolutely essential to guarantee convergence. 
+(In other cases, we'd get convergence, but it would be embarrassingly slow.) 
+</P>
+<P>The basic idea is to perform a series expansion of Kepler's equation, and to 
+keep only the first few terms. That equation can be solved or approximated 
+analytically, and the result is a good enough solution to Kepler's equation that 
+we can be sure of getting convergence. Here's the math, for both the elliptical 
+and hyperbolic cases. </P>
+<P>Elliptical case: </P><PRE>M = E - ecc * sin( E)
+M = E - ecc * (E - E^3 / 6 + higher terms)
+M = (1 - ecc) * E + (ecc / 6) * E^3 + higher terms
+</PRE>
+<P>Hyperbolic case: </P><PRE>M = ecc * sinh( E) - E
+M = ecc * (E + E^3 / 6 + higher terms) - E
+M = (ecc - 1) * E + (ecc / 6) * E^3 + higher terms
+</PRE>
+<P>(1 - ecc) is always positive in the elliptical case (ecc &lt; 1) and (ecc - 
+1) is also always positive in the hyperbolic case (ecc &gt; 1). So really, we 
+have only one equation to consider: </P><PRE>M = fabs( 1 - ecc) * E + (ecc / 6) * E^3
+</PRE>
+<P>(Note to non-C programmers: fabs = floating-point absolute value.) </P>
+<P>For a starter, we guess that E^3 is not going to be all that important. If 
+so, then a good guess for E would be <TT>E = M / fabs( 1 - ecc)</TT>. So we 
+compute that value, and then test our guess that this first term will dominate 
+the second term. If, instead, our guess for E leads to </P><PRE>fabs( 1 - ecc) * E &lt; (ecc / 6) * E^3
+6 * fabs( 1 - ecc) / ecc &lt; E^2
+(assume ecc is close to 1)
+6 * fabs( 1 - ecc) &lt; E^2
+</PRE>
+<P>then it's really the cubic, or the higher-order terms that dominate. So we 
+switch instead to dropping the term in E, and we get </P><PRE>M = (ecc / 6) * E^3
+E = cube_root( 6 * M / ecc)
+</PRE>
+<P>Now, in truth, if you have a hyperbolic case with (roughly) M &gt; pi, those 
+"higher-order" terms in the sinh expansion start to dominate. So in that case, 
+we switch to: </P><PRE>M = ecc * sinh( E) - E
+(E is a lot smaller than ecc * sinh( E))
+M = ecc * sinh( E)
+E = inverse_sinh( M / ecc)
+</PRE>
+<P>For each of these cases, we've got a starting value of E that is guaranteed 
+to converge to a solution. The approximations made above are admittedly crude; 
+there is always the tradeoff between "better starting approximation allowing 
+fewer Newton steps, at the cost of more math up-front" versus "lousy 
+approximation that can be done with little math, but that then requires 
+seemingly endless iterations." The above is the result of creating a lot of 
+contour plots, showing the number of iterations as a function of M and ecc. In 
+particular, most comets have eccentricities very close to, but not equal to, 1, 
+with small M during their time near perihelion; I regarded that as a crucial 
+case, and invested much skull sweat in getting that to converge briskly. </P>
+<P>An interesting point concerning the hyperbolic case has been made by Chris 
+Marriott, author of <A href="http://www.skymap.com/">SkyMap </A>. He noted that 
+the two "guesses" for an initial anomaly, <TT>E1=cube_root(6*M)</TT> and 
+<TT>E2=asinh(M/ecc)</TT>, define bounds for the actual value of E; you can be 
+certain that E2 &lt; E &lt; E1. This makes implementing a secant or 
+binary-search method much easier. </P><PRE>#include &lt; math.h &gt;
+
+#define PI 3.14159265358979323
+#define THRESH 1.e-8
+#define CUBE_ROOT( X)  (exp( log( X) / 3.))
+
+static double asinh( const double z);
+double kepler( const double ecc, double mean_anom);
+
+static double asinh( const double z)
+{
+   return( log( z + sqrt( z * z + 1.)));
+}
+
+static double kepler( const double ecc, double mean_anom)
+{
+   double curr, err, thresh;
+   int is_negative = 0, n_iter = 0;
+
+   if( !mean_anom)
+      return( 0.);
+
+   if( ecc &lt; .3)     /* low-eccentricity formula from Meeus,  p. 195 */
+      {
+      curr = atan2( sin( mean_anom), cos( mean_anom) - ecc);
+            /* one correction step,  and we're done */
+      err = curr - ecc * sin( curr) - mean_anom;
+      curr -= err / (1. - ecc * cos( curr));
+      return( curr);
+      }
+
+   if( mean_anom &lt; 0.)
+      {
+      mean_anom = -mean_anom;
+      is_negative = 1;
+      }
+
+   curr = mean_anom;
+   thresh = THRESH * fabs( 1. - ecc);
+   if( ecc &gt; .8 &amp;&amp; mean_anom &lt; PI / 3. || ecc &gt; 1.)    /* up to 60 degrees */
+      {
+      double trial = mean_anom / fabs( 1. - ecc);
+
+      if( trial * trial &gt; 6. * fabs(1. - ecc))   /* cubic term is dominant */
+         {
+         if( mean_anom &lt; PI)
+            trial = CUBE_ROOT( 6. * mean_anom);
+         else        /* hyperbolic w/ 5th &amp; higher-order terms predominant */
+            trial = asinh( mean_anom / ecc);
+         }
+      curr = trial;
+      }
+
+   if( ecc &lt; 1.)
+      {
+      err = curr - ecc * sin( curr) - mean_anom;
+      while( fabs( err) &gt; thresh)
+         {
+         n_iter++;
+         curr -= err / (1. - ecc * cos( curr));
+         err = curr - ecc * sin( curr) - mean_anom;
+         }
+      }
+   else
+      {
+      err = ecc * sinh( curr) - curr - mean_anom;
+      while( fabs( err) &gt; thresh)
+         {
+         n_iter++;
+         curr -= err / (ecc * cosh( curr) - 1.);
+         err = ecc * sinh( curr) - curr - mean_anom;
+         }
+      }
+   return( is_negative ? -curr : curr);
+}
+</PRE></LI></BODY></HTML>

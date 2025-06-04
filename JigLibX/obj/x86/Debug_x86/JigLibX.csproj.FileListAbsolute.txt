@@ -1,0 +1,12 @@
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug_x86\JigLibX.dll
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug_x86\JigLibX.pdb
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\ResolveAssemblyReference.cache
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\JigLibX.dll
+C:\Users\Hypnotron\Documents\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\JigLibX.pdb
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\JigLibX.pdb
+E:\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug_x86\JigLibX.dll
+E:\dev\c#\KeystoneGameBlocks\JigLibX\bin\x86\Debug_x86\JigLibX.pdb
+E:\dev\c#\KeystoneGameBlocks\JigLibX\obj\x86\Debug_x86\JigLibX.dll

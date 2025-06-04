@@ -1,0 +1,11 @@
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\SourceGrid.PingGrid.Backend.Essent.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\SourceGrid.PingGrid.Backend.Essent.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\Esent.Collections.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\SourceGrid.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\Esent.Interop.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\SourceGrid.pdb
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\SourceGrid.xml
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\bin\Debug\Esent.Collections.xml
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\obj\x86\Debug\SourceGrid.PingGrid.Backend.Essent.dll
+E:\dev\c#\KeystoneGameBlocks\Libs\SourceGrid_4_30_src\SourceGrid.PingGrid.Backend.Essent\obj\x86\Debug\SourceGrid.PingGrid.Backend.Essent.pdb

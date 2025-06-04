@@ -1,0 +1,126 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServerCommon.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Lidgren.Network.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Settings.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\SmartThreadPool.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Mono.Security.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Lidgren.Network.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\SmartThreadPool.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Settings.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.xml
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServerCommon.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\de\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\es\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\fi\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\fr\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\ja\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.exe
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.exe.config
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.exe
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Mono.Security.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.xml
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.pdb
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.xml
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\de\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\es\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\fi\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\fr\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\ja\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.exe
+E:\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyLobby.exe.config
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyLobby.exe
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyLobby.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyCommon.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyServerCommon.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyServices.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Lidgren.Network.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Settings.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyStandardLibrary.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Ionic.Zip.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Npgsql.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Mono.Security.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyCommon.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyServerCommon.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyServices.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyServices.xml
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Lidgren.Network.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Settings.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\KeyStandardLibrary.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Npgsql.pdb
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\Npgsql.xml
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\de\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\es\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\fi\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\fr\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\ja\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\bin\Debug\zh-CN\Npgsql.resources.dll
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\obj\Debug\KeyLobby.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\obj\Debug\KeyLobby.exe
+E:\dev\c#\KeystoneGameBlocks.bak\KeyLobby\obj\Debug\KeyLobby.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.exe.config
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.exe
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyLobby.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServerCommon.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Lidgren.Network.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Settings.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyStandardLibrary.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Ionic.Zip.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Mono.Security.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServerCommon.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyServices.xml
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Lidgren.Network.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Settings.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\KeyStandardLibrary.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\Npgsql.xml
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\de\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\es\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\fi\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\fr\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\ja\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\bin\Debug\zh-CN\Npgsql.resources.dll
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.exe
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.pdb
+D:\dev\c#\KeystoneGameBlocks\KeyLobby\obj\Debug\KeyLobby.csprojResolveAssemblyReference.cache

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src
+END
+RandomGenerator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/RandomGenerator.cs
+END
+SteerLibrary.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/SteerLibrary.cs
+END
+OpenSteerUtility.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/OpenSteerUtility.cs
+END
+SimpleVehicle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/SimpleVehicle.cs
+END
+lq.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/lq.cs
+END
+Obstacle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/Obstacle.cs
+END
+PathWay.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/PathWay.cs
+END
+lqProximity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/lqProximity.cs
+END
+AbstractVehicle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/AbstractVehicle.cs
+END
+Proximity.cs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/Proximity.cs
+END
+Vector3.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/Vector3.cs
+END
+LocalSpace.cs
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/LocalSpace.cs
+END
+Colours.cs
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/3/trunk/src/OpenSteerDotNet/src/Colours.cs
+END

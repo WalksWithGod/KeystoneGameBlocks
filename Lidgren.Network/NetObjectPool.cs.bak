@@ -1,0 +1,139 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
+
+namespace Lidgren.Network
+{
+    /// <summary>
+    /// A pool is a manager of pre-constructed resources.  The pool is responsible for automatically incrementing/decrementing
+    /// the size of the pool as needed to optimally use resources
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public abstract class NetObjectPool<T> where T : NetPoolItem
+    {
+        protected Dictionary<string, T> _unavailable = new Dictionary<string, T>();
+        protected Dictionary<string, T> _available = new Dictionary<string, T>();
+
+        protected int _expirationTime;
+
+
+        protected NetObjectPool(int expirationTime)
+        {
+            if (expirationTime <= 0) throw new ArgumentOutOfRangeException();
+            _expirationTime = expirationTime;
+        }
+
+        protected abstract bool Validate(T obj, object spec);
+        protected abstract T Create();
+
+        public void ExpireItems()
+        {
+            // remove items that have expired to reclaim resources
+    
+        }
+
+        public void CheckIn(T obj)
+        {
+            lock (_unavailable)
+            {
+                _unavailable.Remove(obj.ID.ToString());
+            }
+
+            lock (_available)
+            {
+                // update the checkout time
+                obj.CheckInTime = DateTime.Now.TimeOfDay.TotalMilliseconds;
+                _available.Add(obj.ID.ToString(), obj);
+            }
+        }
+
+        /// <summary>
+        /// Allows the external creation of a new pool item (that is in use) to be added to the pool for management
+        /// </summary>
+        /// <param name="obj"></param>
+        public void CheckOut(T obj)
+        {
+            lock (_unavailable)
+            {
+                _unavailable.Add(obj.ID.ToString(), obj);
+            }
+        }
+
+        //The checkOut() method first checks to see if there are any objects in the unlocked hashtable. 
+        //If so, it cycles through them and looks for a valid one. Validation depends on two things. 
+        //First, the object pool checks to see that the object's last-usage time does not exceed the 
+        //expiration time specified by the subclass. Second, the object pool calls the abstract validate() 
+        //method, which does any class-specific checking or reinitialization that is needed to re-use the 
+        //object. If the object fails validation, it is freed and the loop continues to the next object in
+        //the hashtable. When an object is found that passes validation, it is moved into the locked hashtable
+        //and returned to the process that requested it. If the unlocked hashtable is empty, or none of its
+        //objects pass validation, a new object is instantiated and returned.
+        public T CheckOut(object spec)
+        {
+            T resource;
+            lock (_available)
+            {
+                if (_available.Count > 0)
+                {
+                    IDictionaryEnumerator en = _available.GetEnumerator();
+
+                    while (en.MoveNext())
+                    {
+                        // remove it from available and add it to unavailable and return it
+                        if (Validate((T)en.Value, spec))
+                        {
+                            resource = (T)en.Value;
+                            _available.Remove(resource.ID.ToString());
+                            lock (_unavailable)
+                            {
+                                _unavailable.Add(resource.ID.ToString(), resource);
+                            }
+                            return resource;
+                        }
+                    }
+                }
+
+                // so we can handle creation ourselves.  Pool should 
+                return null;
+
+                //// still here so we couldn't find an available resource in the "free" list so create a new instance of the desired resource
+                //resource = Create();
+                //resource.CheckOutTime = DateTime.Now.TimeOfDay.TotalMilliseconds;
+                //lock (_unavailable)
+                //{
+                //    _unavailable.Add(resource.CheckOutTime, resource);
+                //}
+                //return resource;
+            }
+        }
+
+        private bool IsExpired(T obj)
+        {
+            return DateTime.Now.TimeOfDay.TotalMilliseconds - obj.CheckInTime > _expirationTime;
+        }
+
+        protected void Expire(T obj)
+        {
+            lock (_available)
+            {
+                _available.Remove(obj.ID.ToString());
+            }
+        }
+
+        protected int Count()
+        {
+            return _available.Count + _unavailable.Count;
+        }
+
+        protected int CountCheckedIn()
+        {
+            return _available.Count;
+        }
+
+        protected int CountCheckedOut()
+        {
+            return _unavailable.Count;
+        }
+    }
+}

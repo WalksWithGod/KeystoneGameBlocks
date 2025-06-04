@@ -1,0 +1,40 @@
+rogue system  - feature list
+
+    Dynamically-generated galaxy each time a new "game" is created.
+    Real-time motion for galactic objects (some planets literally take hundreds of years to orbit their star).
+    Support for anomalies such as comets, asteroid belts, Kuiper Belts, and more.
+    Multiple star classes from dwarf to super nova.
+    Multiple planet classes from rock to gas giant.
+    Planets/moons are dynamically textured based on type for endless variety.
+    Planet/moon atmospheres change based on current conditions.
+    Celestial gravitational forces.
+    Time Acceleration when traversing great distances via SAN (Suspended ANimation). Turns trips lasting weeks (real-time) into seconds.
+    Fully programmable keyboard, mouse and multiple joystick devices.
+    Fully interactive/click-able cockpit controls.
+    Various forms of cockpit displays and instrumentation, as well as helmet displays.
+    6 DOF TrackIR support.
+    Ability to walk around in first-person mode inside any ship that is large enough (as long as the interior art exists) using FPS style controls.
+    Newtonian flight model with ship systems to provide a more atmospheric feel when needed.
+    Thruster-based maneuvering.
+    Various drive systems for intra- and inter-system travel as well as local travel.
+    Functional ships are created by mounting various systems into the hull.
+    Movable exterior and interior ship parts.
+    Various exterior and interior lighting (formation lights, flood lights, instrument lights, etc).
+    "Tail number" and squadron markings as well as user-defined nose art.
+    Ship systems have dependencies on other systems.
+    Armor and deflector systems to defend against damage from energy weapons, as well as blast and impact forces.
+    Ship systems can receive different types and amounts internal damage which adversely affect operation in various ways.
+    Systems can suffer non-combat related damage.
+    Larger ships have external attachment points to accept a variety of equipment such as turreted weapons, solar arrays, etc).
+    Player has full control of the ship from pre-flight to post-flight.
+    STC (Space-Traffic Control) communications for each ship that has docking collars or hangar bays.
+    Ship to ship communication with other characters.
+    Characters have "relationships" with other characters, factions and the player, which vary over time.
+    Characters have mental and physical attributes that are always being updated, altering their decision making, determination, and combat effectiveness.
+    AI employ various flight maneuvers based on the current situation.
+    AI fly their ship by feeding flight input into it just as the player has to do.
+    AI and player both have to contend with "background clutter" of varying types (based on things such as star class and local anomalies) when attempting to target other ships.
+    Player's pilot "avatar" reacts to conditions inside the cockpit.
+    Campaign and scripted-mission structure and control.
+    Full particle system for internal/external effects.
+    Separate internal and external sound system. External sound is modified by the "level of vacuum" as well as user-defined range setting (at 0 range you'd get a realistic exterior audio experience, while at higher ranges it would become more movie-like).

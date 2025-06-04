@@ -1,0 +1,7 @@
+smoothing group issue with the castle?  on castle.obj there are quite a few that use smoothing groups instead of just vertex normals it seems and maybe this is the issue... investigate more
+
+seems to me smoothgroups say that even though you will have two or more faces that share vertices, that when rendering those vertices for each face should have vertices that for a given face use the face normal for each face that shares the vertex... need to keep investigating to understand smoothing groups.  It does say "vertex normals" override smoothing groups so that seems contradictory.  hrm... that said arent i already with mesh.AddVertex effectively creating seperate verices for each face and thus computing face normals for them?  
+
+Well further reading of the spec does indicate im right in that smoothing groups have no vn at all and just use face normals but then are rendered with normals that are averaged... so really this indicates needing seperate vertices for rendering the tvmesh version since d3d has no smoothing groups, so id need to track smoothing groups for my faces  and then in turn, vertices either need to know all faces they are apart of or i have to itterate through each face every time to find all ones that utilize a specific vertex so i can compute the smooth normal for each. annoying.
+
+This indicates to me that obj is cool and all, but it has some elements i only want to support for loading and not while editing (i.e. i dont want to have to save out smoothing group info or allow users to create them do i?)

@@ -1,0 +1,28 @@
+June.24.2012
+
+Gene Expression Engine for Alien Species creator
+
+inspired by Craig Perko's Time Travel MMO concept
+https://www.youtube.com/watch?v=FrJFSfok5us
+
+
+I was googling for procedural alien design and came across Craig's Time Travel MMO concept for allowing players to interact in a MMO with a time travel mechanic without ruining the game for everyone.  The short version of that story is all players have their own timeline that they can only change themselves in order to change the current state of the world.  
+
+Whhen he talked about how this is effectively a "crafting" engine where various events are used to craft new world states, this seemed like a perfect way to think about a procedural alien generation engine.
+
+
+- must start with some abstract genes and rules for how those genes can interact with one another
+- mutations fail if the interaction is not allowed
+- mutations suceed if the interaction is allowed
+- some mutations can enable the allowance of new interations or disable the allowance of previous interactions
+
+so as a prototype application concept... it's sort of like crafting
+
+
+THIS IS COMPLETELY DETERMINITISTIC GENE EXPRESSION ENGINE
+
+
+
+Adaptation-->  vs Environment
+
+- I think we should cheat here so that instead of this long term evolution of random mutations that either allow a species to better adapt to the environment, we instead try within 

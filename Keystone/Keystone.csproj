@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9B9D19D-DDFB-43C7-8BB6-8F2B08DEC0A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Keystone</RootNamespace>
+    <AssemblyName>Keystone</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;FIXED_ORIGIN=false</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|AnyCPU' ">
+    <OutputPath>bin\Debug_x86\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|x86' ">
+    <OutputPath>bin\x86\Debug_x86\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSScriptLibrary">
+      <HintPath>..\Libs\cs-script_3.6.0\Lib\Bin\NET 4.0\CSScriptLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\Libs\DotNetZipLib-DevKit-v1.9\DotNetZip-v1.9\Release\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="MHull">
+      <HintPath>..\MHull\Debug\MHull.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2911.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.DirectInput, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="MTV3D65, Version=6.5.3733.40583, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\TV3D65\MTV3D65.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VorbisDotNet, Version=1.3.1.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\VorbisDotNet-1.3.1\VorbisDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ZipForge, Version=1.3.4.0, Culture=neutral, PublicKeyToken=3a6e82ca8e39718a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ZipForge.Net\ComponentAce\ZipForge.NET\Bin\2005\ZipForge.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\Connectivity.cs" />
+    <Compile Include="AI\ConnectivityInterior.cs" />
+    <Compile Include="AI\Pathing.cs" />
+    <Compile Include="AI\PathingBroadPhase.cs" />
+    <Compile Include="AI\PathingEnums.cs" />
+    <Compile Include="AI\PathingInterior.cs" />
+    <Compile Include="AI\PathingParameters.cs" />
+    <Compile Include="AI\PriorityQueueB.cs" />
+    <Compile Include="AI\Procedural_Mission_Spawner.cs" />
+    <Compile Include="AI\RecastDetour.cs" />
+    <Compile Include="AI\Steering\BaseVehicle.cs" />
+    <Compile Include="AI\Steering\Database\IProximityDatabase.cs" />
+    <Compile Include="AI\Steering\Database\ITokenForProximityDatabase.cs" />
+    <Compile Include="AI\Steering\Database\LocalityQueryDatabase.cs" />
+    <Compile Include="AI\Steering\Database\LocalityQueryProximityDatabase.cs" />
+    <Compile Include="AI\Steering\Helpers\Colors.cs" />
+    <Compile Include="AI\Steering\Helpers\LocalSpaceBasisHelpers.cs" />
+    <Compile Include="AI\Steering\Helpers\MatrixHelpers.cs" />
+    <Compile Include="AI\Steering\Helpers\PathwayHelpers.cs" />
+    <Compile Include="AI\Steering\Helpers\RandomHelpers.cs" />
+    <Compile Include="AI\Steering\Helpers\Utilities.cs" />
+    <Compile Include="AI\Steering\Helpers\Vector3Helpers.cs" />
+    <Compile Include="AI\Steering\Helpers\VehicleHelpers.cs" />
+    <Compile Include="AI\Steering\IAnnotationService.cs" />
+    <Compile Include="AI\Steering\IFlowField.cs" />
+    <Compile Include="AI\Steering\ILocalSpaceBasis.cs" />
+    <Compile Include="AI\Steering\IVehicle.cs" />
+    <Compile Include="AI\Steering\LocalSpace.cs" />
+    <Compile Include="AI\Steering\NullAnnotationService.cs" />
+    <Compile Include="AI\Steering\Obstacles\IObstacle.cs" />
+    <Compile Include="AI\Steering\Obstacles\SphericalObstacle.cs" />
+    <Compile Include="AI\Steering\Pathway\GatewayPathway.cs" />
+    <Compile Include="AI\Steering\Pathway\IPathway.cs" />
+    <Compile Include="AI\Steering\Pathway\PolylinePathway.cs" />
+    <Compile Include="AI\Steering\Pathway\TrianglePathway.cs" />
+    <Compile Include="AI\Steering\SimpleVehicle.cs" />
+    <Compile Include="AI\Steering\SteerLibrary.cs" />
+    <Compile Include="Animation\AnimationClip.cs" />
+    <Compile Include="Animation\AnimationTrack.cs" />
+    <Compile Include="Animation\BonedAnimation.cs" />
+    <Compile Include="Animation\EllipticalAnimation.cs" />
+    <Compile Include="Animation\KeyframeInterpolator.cs" />
+    <Compile Include="Animation\TextureAnimation.cs" />
+    <Compile Include="Appearance\Atlas.cs" />
+    <Compile Include="Appearance\Layer.cs" />
+    <Compile Include="Appearance\SpriteSheet.cs" />
+    <Compile Include="Appearance\TextureCycle.cs" />
+    <Compile Include="Behavior\Actions\Action.cs" />
+    <Compile Include="Behavior\Actions\Action_RandomPath.cs" />
+    <Compile Include="Behavior\Actions\Script.cs" />
+    <Compile Include="Behavior\BehaviorContext.cs" />
+    <Compile Include="Behavior\BehaviorNodeState.cs" />
+    <Compile Include="Behavior\Composites\Composite.cs" />
+    <Compile Include="Behavior\Composites\Selector.cs" />
+    <Compile Include="Behavior\Composites\Sequence.cs" />
+    <Compile Include="Behavior\Behavior.cs" />
+    <Compile Include="Cameras\RegionPVS.cs" />
+    <Compile Include="Celestial\LightsHelper.cs" />
+    <Compile Include="Celestial\PrimitivesHelper.cs" />
+    <Compile Include="Celestial\SkyHelper.cs" />
+    <Compile Include="Celestial\TerrainHelper.cs" />
+    <Compile Include="Collision\Collider2D.cs" />
+    <Compile Include="Collision\ColliderTileMap2D.cs" />
+    <Compile Include="Collision\IBroadphaseItem.cs" />
+    <Compile Include="Collision\PickComparers.cs" />
+    <Compile Include="Console\Console.cs" />
+    <Compile Include="Controls\Button2D.cs" />
+    <Compile Include="Controls\Control2D.cs" />
+    <Compile Include="Culling\FrustumCone.cs" />
+    <Compile Include="Culling\FrustumSphere.cs" />
+    <Compile Include="DXObjects\MultistreamVertexBuffer.cs" />
+    <Compile Include="DXObjects\VertexHelper.cs" />
+    <Compile Include="EditTools\Brush.cs" />
+    <Compile Include="EditTools\HingeTool.cs" />
+    <Compile Include="EditTools\ManipulatorFunctions.cs" />
+    <Compile Include="DomainObjects\DomainObject.cs" />
+    <Compile Include="EditOperations\CrossSection.cs" />
+    <Compile Include="EditTools\CellPainter.cs" />
+    <Compile Include="EditTools\PlacementLocations.cs" />
+    <Compile Include="EditTools\PlacementMode.cs" />
+    <Compile Include="EditTools\PlacementTool.cs" />
+    <Compile Include="EditTools\TransformTool.cs" />
+    <Compile Include="EditTools\Widgets.cs" />
+    <Compile Include="Elements\Actor3d.cs" />
+    <Compile Include="DomainObjects\ScriptNode2.cs" />
+    <Compile Include="Elements\Background.cs" />
+    <Compile Include="Elements\BillboardText.cs" />
+    <Compile Include="Elements\BoundGroup.cs" />
+    <Compile Include="Elements\Actor3d_New.cs" />
+    <Compile Include="Elements\InstancedBillboard.cs" />
+    <Compile Include="Elements\InstancedGeometry.cs" />
+    <Compile Include="Elements\LinesGeometry3D.cs" />
+    <Compile Include="Elements\MinimeshGeometry.cs" />
+    <Compile Include="Elements\ModelSelector.cs" />
+    <Compile Include="Elements\ModelSequence.cs" />
+    <Compile Include="Elements\ModelSwitch.cs" />
+    <Compile Include="Elements\Terrain.cs" />
+    <Compile Include="Elements\TexturedQuad2D.cs" />
+    <Compile Include="Entities\DefaultEntity.cs" />
+    <Compile Include="Entities\Digest.cs" />
+    <Compile Include="Entities\Proxy2D.cs" />
+    <Compile Include="Entities\ProxyControl2D.cs" />
+    <Compile Include="Entities\SpawnPoint.cs" />
+    <Compile Include="Entities\SteerableEntity.cs" />
+    <Compile Include="Entities\Viewpoint.cs" />
+    <Compile Include="EntitySystems\Emitters\AnimatedTextureHPEmitter.cs" />
+    <Compile Include="EntitySystems\Emitters\BillboardHPEmitter.cs" />
+    <Compile Include="EntitySystems\Emitters\InstancedBillboardHPEmitter.cs" />
+    <Compile Include="EntitySystems\Emitters\Particle.cs" />
+    <Compile Include="EntitySystems\Emitters\ShockwaveHPEmitter.cs" />
+    <Compile Include="EntitySystems\EntitySystemModel.cs" />
+    <Compile Include="EntitySystems\HeavyParticleEffect.cs" />
+    <Compile Include="EntitySystems\HeavyParticleSystemManager.cs" />
+    <Compile Include="EntitySystems\HeavyParticleEmitter.cs" />
+    <Compile Include="EntitySystems\Modifiers\ColorModifier.cs" />
+    <Compile Include="EntitySystems\Modifiers\DampingModifier.cs" />
+    <Compile Include="EntitySystems\Modifiers\Modifier.cs" />
+    <Compile Include="EntitySystems\Modifiers\OpacityModifier.cs" />
+    <Compile Include="EntitySystems\Modifiers\RotationModifier.cs" />
+    <Compile Include="EntitySystems\Modifiers\RotationRateModifier.cs" />
+    <Compile Include="EntitySystems\Modifiers\ScaleModifier.cs" />
+    <Compile Include="Environment3D\CloudSystem.cs" />
+    <Compile Include="Environment3D\Fog.cs" />
+    <Compile Include="Environment3D\Lightning.cs" />
+    <Compile Include="Environment3D\Rain.cs" />
+    <Compile Include="Environment3D\Rainbow.cs" />
+    <Compile Include="Environment3D\VolumetricFog.cs" />
+    <Compile Include="FX\FXClouds.cs" />
+    <Compile Include="FX\FXParticleSystemPool.cs" />
+    <Compile Include="Helpers\Functions.cs" />
+    <Compile Include="Helpers\ThreadSafeDictionary.cs" />
+    <Compile Include="Hud\AxisIndicator.cs" />
+    <Compile Include="Hud\Hud.cs" />
+    <Compile Include="Hud\StarGrid.cs" />
+    <Compile Include="IK\Ball.cs" />
+    <Compile Include="IK\Hing.cs" />
+    <Compile Include="IK\Link.cs" />
+    <Compile Include="IK\IKSolver.cs" />
+    <Compile Include="IK\Joint.cs" />
+    <Compile Include="IK\PhysicalModel.cs" />
+    <Compile Include="IK\Sliding.cs" />
+    <Compile Include="Immediate_2D\Renderable2DQuad.cs" />
+    <Compile Include="Immediate_2D\Renderable2DTexturedQuad.cs" />
+    <Compile Include="Immediate_2D\ShadowedText.cs" />
+    <Compile Include="IO\IPageableTVNode.cs" />
+    <Compile Include="IO\NodeState.cs" />
+    <Compile Include="Messages\CelledRegion_Paint.cs" />
+    <Compile Include="Messages\Node_Create.cs" />
+    <Compile Include="Octree\HashGrid.cs" />
+    <Compile Include="Octree\OctreeOctant.cs" />
+    <Compile Include="Octree\StaticOctree.cs" />
+    <Compile Include="Physics\Colliders\BoxCollider.cs" />
+    <Compile Include="Physics\Colliders\CapsuleCollider.cs" />
+    <Compile Include="Physics\Colliders\SphereCollider.cs" />
+    <Compile Include="Physics\Newtonian.cs" />
+    <Compile Include="Physics\RigidBody.cs" />
+    <Compile Include="Portals\CelledVolumeNode.cs" />
+    <Compile Include="Portals\CellFootprint.cs" />
+    <Compile Include="Portals\CellMap.cs" />
+    <Compile Include="Portals\CellObject.cs" />
+    <Compile Include="Portals\CellPlacementInfo.cs" />
+    <Compile Include="Portals\GUINode.cs" />
+    <Compile Include="Portals\Segment.cs" />
+    <Compile Include="Portals\SegmentStyle.cs" />
+    <Compile Include="Profiler\IProfile.cs" />
+    <Compile Include="Profiler\IProfileHook.cs" />
+    <Compile Include="Profiler\Profile.cs" />
+    <Compile Include="Profiler\ProfileHook.cs" />
+    <Compile Include="QuadTree\QuadtreeCollection.cs" />
+    <Compile Include="QuadTree\QuadtreeQuadrant.cs" />
+    <Compile Include="RenderSurface\RSFormatInfo.cs" />
+    <Compile Include="Scene\OverlayScene.cs" />
+    <Compile Include="Scene\PartialScene.cs" />
+    <Compile Include="Hud\CoordinateGrid.cs" />
+    <Compile Include="Behavior\Decorators\Delayer.cs" />
+    <Compile Include="Behavior\Decorators\Repeater.cs" />
+    <Compile Include="Behavior\Decorators\Condition.cs" />
+    <Compile Include="AI\Formation.cs" />
+    <Compile Include="AI\ISteerable.cs" />
+    <Compile Include="AI\WaypointGraph.cs" />
+    <Compile Include="AI\Targeting.cs" />
+    <Compile Include="Animation\Animation.cs" />
+    <Compile Include="Animation\ActorBlendedAnimation.cs" />
+    <Compile Include="Animation\AnimationController.cs" />
+    <Compile Include="Animation\MorphTarget.cs" />
+    <Compile Include="Appearance\Appearance.cs" />
+    <Compile Include="Appearance\CubeMap.cs" />
+    <Compile Include="Appearance\DUDVTexture.cs" />
+    <Compile Include="Appearance\GroupAttribute.cs" />
+    <Compile Include="Appearance\DefaultAppearance.cs" />
+    <Compile Include="Appearance\Diffuse.cs" />
+    <Compile Include="Appearance\Emissive.cs" />
+    <Compile Include="Appearance\Material.cs" />
+    <Compile Include="Appearance\NormalMap.cs" />
+    <Compile Include="Appearance\NullAppearance.cs" />
+    <Compile Include="Appearance\Specular.cs" />
+    <Compile Include="Appearance\SplatAlpha.cs" />
+    <Compile Include="Appearance\SplatAppearance.cs" />
+    <Compile Include="Appearance\VolumeTexture.cs" />
+    <Compile Include="BatchList.cs" />
+    <Compile Include="CameraControllers\ViewpointController.cs" />
+    <Compile Include="CameraControllers\ChaseViewController.cs" />
+    <Compile Include="CameraControllers\EditorViewController.cs" />
+    <Compile Include="CameraControllers\OrthographicEditorViewController.cs" />
+    <Compile Include="Celestial\GeneratePlanetoidBelt.cs" />
+    <Compile Include="Celestial\GenerateUniverse.cs" />
+    <Compile Include="Celestial\GenerateUniverseParams.cs" />
+    <Compile Include="Celestial\Nebula.cs" />
+    <Compile Include="Celestial\ProceduralHelper.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\ICommandProgress.cs" />
+    <Compile Include="Commands\IProgress.cs" />
+    <Compile Include="Controllers\AutoTrackingController.cs" />
+    <Compile Include="Controllers\IControllableVehicle.cs" />
+    <Compile Include="EditTools\ScalingManipulator.cs" />
+    <Compile Include="Controllers\CharacterController.cs" />
+    <Compile Include="CoreClient.cs" />
+    <Compile Include="DXObjects\LineDrawer.cs" />
+    <Compile Include="DXObjects\MeshRenderer.cs" />
+    <Compile Include="DXObjects\StateBlock.cs" />
+    <Compile Include="EditDataStructures\Cell.cs" />
+    <Compile Include="EditDataStructures\CellFaceIterator.cs" />
+    <Compile Include="EditDataStructures\CellVertexIterator.cs" />
+    <Compile Include="EditDataStructures\Edge.cs" />
+    <Compile Include="EditDataStructures\EditableMesh.cs" />
+    <Compile Include="EditDataStructures\Face.cs" />
+    <Compile Include="EditDataStructures\FaceEdgeIterator.cs" />
+    <Compile Include="EditDataStructures\ObjLoader.cs" />
+    <Compile Include="EditDataStructures\QuadEdge.cs" />
+    <Compile Include="EditDataStructures\Vertex.cs" />
+    <Compile Include="EditDataStructures\VertexEdgeIterator.cs" />
+    <Compile Include="EditOperations\MoveOp.cs" />
+    <Compile Include="EditOperations\AddPointOp.cs" />
+    <Compile Include="EditOperations\RaiseAlt.cs" />
+    <Compile Include="EditTools\BrushShape.cs" />
+    <Compile Include="EditTools\BrushSize.cs" />
+    <Compile Include="EditTools\Eraser.cs" />
+    <Compile Include="EditTools\GroupSelectBrush.cs" />
+    <Compile Include="EditTools\ITool.cs" />
+    <Compile Include="EditTools\LineTool.cs" />
+    <Compile Include="EditTools\MoveTool.cs" />
+    <Compile Include="EditTools\PointBrush.cs" />
+    <Compile Include="EditTools\RectangleTool.cs" />
+    <Compile Include="EditTools\RotateTool.cs" />
+    <Compile Include="EditTools\ScaleTool.cs" />
+    <Compile Include="EditTools\SelectionTool.cs" />
+    <Compile Include="EditTools\ThrowObjectTool.cs" />
+    <Compile Include="EditTools\Tool.cs" />
+    <Compile Include="EditTools\ToolState.cs" />
+    <Compile Include="Elements\EmitterPointSprite.cs" />
+    <Compile Include="Elements\MeshWaveFrontObj.cs" />
+    <Compile Include="DomainObjects\DomainObjectScript_old.cs" />
+    <Compile Include="Entities\BonedEntity.cs" />
+    <Compile Include="Entities\Character.cs" />
+    <Compile Include="Entities\Container.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\IPhysicsEntity.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\Proxy3D.cs" />
+    <Compile Include="FX\FXDustBubble.cs" />
+    <Compile Include="FX\FXLightning.cs" />
+    <Compile Include="FX\FXSkyBoxTV.cs" />
+    <Compile Include="Helpers\TVTypeConverter.cs" />
+    <Compile Include="ICore.cs" />
+    <Compile Include="Immediate_2D\IRenderable2DItem.cs" />
+    <Compile Include="Immediate_2D\Renderable2DBox.cs" />
+    <Compile Include="Immediate_2D\Renderable2DLines.cs" />
+    <Compile Include="Immediate_2D\Renderable2DPolygon.cs" />
+    <Compile Include="Immediate_2D\Renderable2DText.cs" />
+    <Compile Include="Interfaces\INodeListener.cs" />
+    <Compile Include="IO\ClientPager.cs" />
+    <Compile Include="IO\ServerPager.cs" />
+    <Compile Include="IO\XMLDatabase.cs" />
+    <Compile Include="Lights\DirectionalLight.cs" />
+    <Compile Include="Loaders\TruevisionMeshLoader.cs" />
+    <Compile Include="Modeler\AdjacencyInfo.cs" />
+    <Compile Include="Modeler\IndexedVertex.cs" />
+    <Compile Include="Modeler\VirtualGroup.cs" />
+    <Compile Include="Modeler\IndexedFace.cs" />
+    <Compile Include="Modeler\MeshEditable.cs" />
+    <Compile Include="Modeler\TexCoord.cs" />
+    <Compile Include="Network\LoopbackServer.cs" />
+    <Compile Include="Network\NetworkClientBase.cs" />
+    <Compile Include="Physics\BroadPhases\BroadPhase.cs" />
+    <Compile Include="Physics\BroadPhases\BruteForce.cs" />
+    <Compile Include="Physics\BroadPhases\DynamicBinaryHierarchy.cs" />
+    <Compile Include="Cameras\Camera.cs" />
+    <Compile Include="Cameras\Viewport.cs" />
+    <Compile Include="Cameras\RenderingContext.cs" />
+    <Compile Include="Celestial\Atmosphere.cs" />
+    <Compile Include="Celestial\Biosphere.cs" />
+    <Compile Include="Celestial\Body.cs" />
+    <Compile Include="Celestial\StarSeperationSelector.cs" />
+    <Compile Include="Celestial\Enums.cs" />
+    <Compile Include="Celestial\GasGiant.cs" />
+    <Compile Include="Celestial\ISystem.cs" />
+    <Compile Include="Celestial\GenerateMoon.cs" />
+    <Compile Include="Celestial\Orbit.cs" />
+    <Compile Include="Celestial\OrbitSelector.cs" />
+    <Compile Include="Celestial\Star.cs" />
+    <Compile Include="Celestial\GenerateStar.cs" />
+    <Compile Include="Celestial\StarSector.cs" />
+    <Compile Include="Celestial\StellarSystem.cs" />
+    <Compile Include="Celestial\GenerateStellarSystem.cs" />
+    <Compile Include="Celestial\Temp.cs" />
+    <Compile Include="Celestial\World.cs" />
+    <Compile Include="Celestial\GenerateWorld.cs" />
+    <Compile Include="Collision\CollisionTest.cs" />
+    <Compile Include="Collision\PickResult.cs" />
+    <Compile Include="Collision\Response.cs" />
+    <Compile Include="Commands\CommandProcessor.cs" />
+    <Compile Include="Commands\CommandState.cs" />
+    <Compile Include="EditTools\IGizmo.cs" />
+    <Compile Include="EditTools\ManipulatorController.cs" />
+    <Compile Include="EditTools\RotationGizmo.cs" />
+    <Compile Include="EditTools\UIController.cs" />
+    <Compile Include="Controls\Button.cs" />
+    <Compile Include="Controls\ButtonGroup.cs" />
+    <Compile Include="Controls\Control.cs" />
+    <Compile Include="Elements\BillboardChain.cs" />
+    <Compile Include="Elements\BoundTransformGroup.cs" />
+    <Compile Include="Elements\BoundNode.cs" />
+    <Compile Include="Portals\CellSceneNode.cs" />
+    <Compile Include="Portals\EntityNode.cs" />
+    <Compile Include="Elements\InstancedModel.cs" />
+    <Compile Include="Entities\ModeledEntity.cs" />
+    <Compile Include="Portals\CelledRegionNode.cs" />
+    <Compile Include="Portals\RegionNode.cs" />
+    <Compile Include="Portals\SceneNode.cs" />
+    <Compile Include="Octree\OctreeRegionNode.cs" />
+    <Compile Include="Controllers\Arcball.cs" />
+    <Compile Include="Controllers\InputController.cs" />
+    <Compile Include="Controllers\FirstPerson.cs" />
+    <Compile Include="Controllers\Interpreter.cs" />
+    <Compile Include="Controllers\SystemController.cs" />
+    <Compile Include="Converters\Tokenizer.cs" />
+    <Compile Include="Culling\ConvexHull.cs" />
+    <Compile Include="Culling\PlanedFrustum.cs" />
+    <Compile Include="Culling\OcclusionCuller.cs" />
+    <Compile Include="Culling\OcclusionFrustum.cs" />
+    <Compile Include="Culling\PortalFrustum.cs" />
+    <Compile Include="Culling\ViewFrustum.cs" />
+    <Compile Include="DeviceCaps.cs" />
+    <Compile Include="Elements\BonedModel.cs" />
+    <Compile Include="Elements\Attractor.cs" />
+    <Compile Include="Elements\Billboard.cs" />
+    <Compile Include="Elements\Chunk.cs" />
+    <Compile Include="Elements\Model.cs" />
+    <Compile Include="Elements\Transform.cs" />
+    <Compile Include="Elements\Emitter.cs" />
+    <Compile Include="Elements\Group.cs" />
+    <Compile Include="Elements\Imposter.cs" />
+    <Compile Include="Elements\EmitterProperties.cs" />
+    <Compile Include="Elements\ModelLODSwitch.cs" />
+    <Compile Include="Elements\Minimesh.cs" />
+    <Compile Include="Elements\Node.cs" />
+    <Compile Include="Elements\Geometry.cs" />
+    <Compile Include="Portals\Occluder.cs" />
+    <Compile Include="Physics\CollisionDetectionType.cs" />
+    <Compile Include="Physics\CombinedUpdateable.cs" />
+    <Compile Include="Physics\CompoundBodyBVHNode.cs" />
+    <Compile Include="Physics\Constraints\Constraint.cs" />
+    <Compile Include="Physics\Contact.cs" />
+    <Compile Include="Physics\Controller.cs" />
+    <Compile Include="Physics\ControllerTableKey.cs" />
+    <Compile Include="Physics\DetectorVolume.cs" />
+    <Compile Include="Physics\Primitives\BoxPrimitive.cs" />
+    <Compile Include="Physics\Primitives\CapsulePrimitive.cs" />
+    <Compile Include="Physics\Primitives\CollisionPrimitive.cs" />
+    <Compile Include="Physics\CompoundBody.cs" />
+    <Compile Include="Physics\Primitives\ConePrimitive.cs" />
+    <Compile Include="Physics\Primitives\CylinderPrimitive.cs" />
+    <Compile Include="Physics\PhysicsBody.cs" />
+    <Compile Include="Physics\Primitives\ICollisionPrimitive.cs" />
+    <Compile Include="Physics\Primitives\SpherePrimitive.cs" />
+    <Compile Include="Physics\Primitives\TrianglePrimitive.cs" />
+    <Compile Include="Physics\Constraints\SingleBodyConstraint.cs" />
+    <Compile Include="Physics\Events\EventHandlerCollisionEnded.cs" />
+    <Compile Include="Physics\Events\EventHandlerContactCreated.cs" />
+    <Compile Include="Physics\Events\EventHandlerContactCreatedImmediate.cs" />
+    <Compile Include="Physics\Events\EventHandlerContactRemoved.cs" />
+    <Compile Include="Physics\Events\EventHandlerControllerCreated.cs" />
+    <Compile Include="Physics\Events\EventHandlerControllerCreatedImmediate.cs" />
+    <Compile Include="Physics\Events\EventHandlerControllerRemoved.cs" />
+    <Compile Include="Physics\Events\EventHandlerEntityBeginsTouchingVolume.cs" />
+    <Compile Include="Physics\Events\EventHandlerEntityStopsTouchingVolume.cs" />
+    <Compile Include="Physics\Events\EventHandlerEntityUpdated.cs" />
+    <Compile Include="Physics\Events\EventHandlerEntityUpdatedImmediate.cs" />
+    <Compile Include="Physics\Events\EventHandlerInitialCollisionDetected.cs" />
+    <Compile Include="Physics\Events\EventHandlerVolumeBeginsContainingEntity.cs" />
+    <Compile Include="Physics\Events\EventHandlerVolumeStopsContainingEntity.cs" />
+    <Compile Include="Physics\Events\EventStorageCollisionEnded.cs" />
+    <Compile Include="Physics\Events\EventStorageContactCreated.cs" />
+    <Compile Include="Physics\Events\EventStorageContactRemoved.cs" />
+    <Compile Include="Physics\Events\EventStorageControllerCreated.cs" />
+    <Compile Include="Physics\Events\EventStorageControllerRemoved.cs" />
+    <Compile Include="Physics\Events\EventStorageInitialCollisionDetected.cs" />
+    <Compile Include="Physics\Force.cs" />
+    <Compile Include="Physics\PropertyCombineMethod.cs" />
+    <Compile Include="Physics\RayCastableContainer.cs" />
+    <Compile Include="Physics\RayCastableContainerWithoutMargins.cs" />
+    <Compile Include="Physics\ResourcePool.cs" />
+    <Compile Include="Physics\SimulationIsland.cs" />
+    <Compile Include="Physics\SimulationSettings.cs" />
+    <Compile Include="Physics\SolverUpdateable.cs" />
+    <Compile Include="Physics\SortableEntity.cs" />
+    <Compile Include="Physics\Space.cs" />
+    <Compile Include="Physics\Toolbox.cs" />
+    <Compile Include="Physics\Updateable.cs" />
+    <Compile Include="Portals\CelledRegion.cs" />
+    <Compile Include="Portals\InteriorCell.cs" />
+    <Compile Include="Portals\Root.cs" />
+    <Compile Include="Portals\Zone.cs" />
+    <Compile Include="Portals\ZoneRoot.cs" />
+    <Compile Include="Profiler\Utils.cs" />
+    <Compile Include="Scene\ClientScene.cs" />
+    <Compile Include="Scene\Scene.cs" />
+    <Compile Include="Scene\SceneManagerBase.cs" />
+    <Compile Include="Scene\SceneType.cs" />
+    <Compile Include="Scene\ServerScene.cs" />
+    <Compile Include="Scene\ServerSceneManager.cs" />
+    <Compile Include="CoreServer.cs" />
+    <Compile Include="Shaders\ProceduralShader.cs" />
+    <Compile Include="ShadowMapping\CBoundingBox.cs" />
+    <Compile Include="ShadowMapping\CCamera.cs" />
+    <Compile Include="ShadowMapping\CLocatedVector.cs" />
+    <Compile Include="ShadowMapping\CParallelSplitShadowMapping.cs" />
+    <Compile Include="ShadowMapping\MathHelpers.cs" />
+    <Compile Include="Simulation\AreaOfInterest.cs" />
+    <Compile Include="Simulation\IEntitySystem.cs" />
+    <Compile Include="Simulation\Missions\Event.cs" />
+    <Compile Include="Simulation\Missions\Mission.cs" />
+    <Compile Include="Simulation\Missions\MissionData.cs" />
+    <Compile Include="Simulation\Missions\Objective.cs" />
+    <Compile Include="Simulation\Missions\SpawnPoint.cs" />
+    <Compile Include="Simulation\SimSystem.cs" />
+    <Compile Include="Simulation\Simulation.cs" />
+    <Compile Include="Simulation\StarDigest.cs" />
+    <Compile Include="Sound\AudioClip3D.cs" />
+    <Compile Include="Sound\AudioTraverser.cs" />
+    <Compile Include="Sound\SoundNode3D.cs" />
+    <Compile Include="Sound\XAudio2.cs" />
+    <Compile Include="SpatialNodes\ISpatialNode.cs" />
+    <Compile Include="States\NodeState.cs" />
+    <Compile Include="States\NodeStateBlock.cs" />
+    <Compile Include="DomainObjects\DomainObject_old.cs" />
+    <Compile Include="TileMap\StructureLevel.cs" />
+    <Compile Include="TileMap\StructureVoxels.cs" />
+    <Compile Include="TileMap\TileTypes.cs" />
+    <Compile Include="TileMap\LockBitmap.cs" />
+    <Compile Include="TileMap\MapLayer.cs" />
+    <Compile Include="TileMap\MapLayerGrid.cs" />
+    <Compile Include="TileMap\Pattern.cs" />
+    <Compile Include="TileMap\Structure.cs" />
+    <Compile Include="TileMap\VoxelStructureLevel.cs" />
+    <Compile Include="Timers\GameTime.cs" />
+    <Compile Include="Traversers\Collider.cs" />
+    <Compile Include="Traversers\EntityQuery.cs" />
+    <Compile Include="Traversers\ScaleCuller.cs" />
+    <Compile Include="Traversers\ScaleDrawer.cs" />
+    <Compile Include="Traversers\VisibleItemInfo.cs" />
+    <Compile Include="Vehicles\Vehicle.cs" />
+    <Compile Include="Enums\ChangeStates.cs" />
+    <Compile Include="Enums\CullMode.cs" />
+    <Compile Include="Immediate_2D\DebugDraw.cs" />
+    <Compile Include="Elements\Actor3d_very_old.cs" />
+    <Compile Include="Appearance\Texture.cs" />
+    <Compile Include="Elements\ParticleSystem.cs" />
+    <Compile Include="Enums\MOUSE_BUTTONS.cs" />
+    <Compile Include="Events\BeginTranslation.cs" />
+    <Compile Include="Events\Events.cs" />
+    <Compile Include="Events\EventType.cs" />
+    <Compile Include="Events\IEvent.cs" />
+    <Compile Include="Events\IEventConsumer.cs" />
+    <Compile Include="Events\IEventHandler.cs" />
+    <Compile Include="Events\RepeatableEvent.cs" />
+    <Compile Include="Events\WeaponFired.cs" />
+    <Compile Include="FX\FXBase.cs" />
+    <Compile Include="FX\FXExhaustTrail.cs" />
+    <Compile Include="FX\FXFog.cs" />
+    <Compile Include="FX\FXFullscreenPost.cs" />
+    <Compile Include="FX\FXGlow.cs" />
+    <Compile Include="FX\FXImposters.cs" />
+    <Compile Include="FX\FXInstanceRenderer.cs" />
+    <Compile Include="FX\FXPlanetAtmosphere.cs" />
+    <Compile Include="FX\FXRain.cs" />
+    <Compile Include="FX\FXSkyGradient.cs" />
+    <Compile Include="FX\FXSkySphereTV.cs" />
+    <Compile Include="FX\FXWater.cs" />
+    <Compile Include="FX\IFXProvider.cs" />
+    <Compile Include="FX\IFXSubscriber.cs" />
+    <Compile Include="FX\FXSubscriberData.cs" />
+    <Compile Include="GUI\EvoGUI.cs" />
+    <Compile Include="Lights\ProjectiveTexturePointLight.cs" />
+    <Compile Include="Lights\PointLight.cs" />
+    <Compile Include="Lights\SpotLight.cs" />
+    <Compile Include="Loaders\WaveFrontObjMaterialLibraryLoader.cs" />
+    <Compile Include="Loaders\WaveFrontObj.cs" />
+    <Compile Include="Loaders\WaveFrontObjGroup.cs" />
+    <Compile Include="Loaders\WaveFrontObjIndexedFace.cs" />
+    <Compile Include="Loaders\WavefrontObjLoader.cs" />
+    <Compile Include="Loaders\WaveFrontObjMaterial.cs" />
+    <Compile Include="Loaders\WaveFrontObjSmoothingGroup.cs" />
+    <Compile Include="TV3DNewtonPhysics.cs" />
+    <Compile Include="Portals\PortalNode.cs" />
+    <Compile Include="Profiler\Profiler.cs" />
+    <Compile Include="RenderSurface\RenderSurface.cs" />
+    <Compile Include="RenderSurface\RSResolution.cs" />
+    <Compile Include="Controllers\InputControllerBase.cs" />
+    <Compile Include="Elements\IGroup.cs" />
+    <Compile Include="AI\Flocking.cs" />
+    <Compile Include="AI\Steering.cs" />
+    <Compile Include="Interfaces\INotifyDeviceReset.cs" />
+    <Compile Include="Interfaces\IObserver.cs" />
+    <Compile Include="Devices\KeyboardState.cs" />
+    <Compile Include="IO\ReadContext.cs" />
+    <Compile Include="IO\SceneArchiver.cs" />
+    <Compile Include="IO\WriteContext.cs" />
+    <Compile Include="IO\XmlHelper.cs" />
+    <Compile Include="Lights\LightingData.cs" />
+    <Compile Include="LODBuilder.cs" />
+    <Compile Include="Octree\Octree.cs" />
+    <Compile Include="Octree\OTreeInjector.cs" />
+    <Compile Include="Portals\Portal.cs" />
+    <Compile Include="Portals\Region.cs" />
+    <Compile Include="Portals\Teleport.cs" />
+    <Compile Include="Resource\ImposterPool.cs" />
+    <Compile Include="Resource\ObjectPool.cs" />
+    <Compile Include="RenderSurface\RenderSurfacePool.cs" />
+    <Compile Include="Resource\PoolContext.cs" />
+    <Compile Include="Resource\ResourceBase.cs" />
+    <Compile Include="IO\Pager.cs" />
+    <Compile Include="Scene\SceneInfo.cs" />
+    <Compile Include="Scene\ClientSceneManager.cs" />
+    <Compile Include="Scene\SpatialGraph.cs" />
+    <Compile Include="Scheduling\ISchedular.cs" />
+    <Compile Include="Scheduling\ITask.cs" />
+    <Compile Include="Scheduling\Schedular.cs" />
+    <Compile Include="Shaders\LightSpaceMap.cs" />
+    <Compile Include="Shaders\OceanShader.cs" />
+    <Compile Include="Shaders\ShadowMap.cs" />
+    <Compile Include="Shaders\SkyGradient.cs" />
+    <Compile Include="Simulation\ISimulation.cs" />
+    <Compile Include="Sound\AudioManager.cs" />
+    <Compile Include="Sound\Effect.cs">
+    </Compile>
+    <Compile Include="Sound\ISoundNode.cs" />
+    <Compile Include="Sound\Listener.cs" />
+    <Compile Include="Sound\Movie.cs" />
+    <Compile Include="Sound\MusicClip.cs" />
+    <Compile Include="Sound\AudioClip.cs" />
+    <Compile Include="Sound\SoundCard.cs" />
+    <Compile Include="Sound\SoundNode2D.cs" />
+    <Compile Include="Sound\StreamingSoundNode.cs" />
+    <Compile Include="Sound\Video.cs" />
+    <Compile Include="Timers\HiResTimer.cs" />
+    <Compile Include="Traversers\ChildSetter.cs" />
+    <Compile Include="Traversers\ITraversable.cs" />
+    <Compile Include="Traversers\ITraverser.cs" />
+    <Compile Include="Interfaces\ISubject.cs" />
+    <Compile Include="IO\Import.cs" />
+    <Compile Include="Devices\Keyboard.cs" />
+    <Compile Include="Devices\Mouse.cs" />
+    <Compile Include="IO\SceneReader.cs" />
+    <Compile Include="IO\SceneWriter.cs" />
+    <Compile Include="Lights\Light.cs" />
+    <Compile Include="QuadTree\Branch.cs" />
+    <Compile Include="QuadTree\Branch3d.cs" />
+    <Compile Include="Interfaces\IBoundVolume.cs" />
+    <Compile Include="QuadTree\Leaf.cs" />
+    <Compile Include="QuadTree\Leaf3d.cs" />
+    <Compile Include="Elements\Mesh3d.cs" />
+    <Compile Include="QuadTree\QTreeNode.cs" />
+    <Compile Include="QuadTree\Picker.cs" />
+    <Compile Include="QuadTree\Quadrant.cs" />
+    <Compile Include="QuadTree\Sector.cs" />
+    <Compile Include="QuadTree\TreeBuilder.cs" />
+    <Compile Include="QuadTree\TreeInjector.cs" />
+    <Compile Include="Resource\Repository.cs" />
+    <Compile Include="Resource\IResource.cs" />
+    <Compile Include="Scene\SceneManager.cs" />
+    <Compile Include="FX\FXBloom.cs" />
+    <Compile Include="Shaders\FXRenderStage.cs" />
+    <Compile Include="Shaders\GaussianDistribution.cs" />
+    <Compile Include="FX\FXWaterOcean.cs" />
+    <Compile Include="Shaders\Shader.cs" />
+    <Compile Include="Simulation\Satellite.cs" />
+    <Compile Include="Simulation\Weather.cs" />
+    <Compile Include="Timers\MMTimer.cs" />
+    <Compile Include="Timers\TimeManager.cs" />
+    <Compile Include="Timers\Timer.cs" />
+    <Compile Include="Traversers\Locator.cs" />
+    <Compile Include="Traversers\Picker.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Devices\GraphicsDevice.cs" />
+    <Compile Include="Workspaces\IWorkspace.cs" />
+    <Compile Include="Workspaces\IWorkspaceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AtlasTextureTools\AtlasTextureTools.csproj">
+      <Project>{EA08BBA8-82C9-48ED-9983-52E712226D13}</Project>
+      <Name>AtlasTextureTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Authenticate\Authentication.csproj">
+      <Project>{1C2BB903-C7B2-4B65-B70D-7F8E40549266}</Project>
+      <Name>Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyCommon\KeyCommon.csproj">
+      <Project>{6c7bba7f-03f4-4d7d-b1d3-cf8d14e2b939}</Project>
+      <Name>KeyCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
+      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
+      <Name>KeyStandardLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyScript\KeyScript.csproj">
+      <Project>{017FBBA2-80E6-4982-8451-FEACB1C4CDB8}</Project>
+      <Name>KeyScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibNoise.NET\LibNoise\LibNoise.csproj">
+      <Project>{031c8cff-f147-44ea-b7e5-0a5644808a7e}</Project>
+      <Name>LibNoise</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\Jitter Physics\jitterphysics-master\source\Jitter\Jitter.csproj">
+      <Project>{aa03ef1a-94f7-4d30-ab14-2092863ff923}</Project>
+      <Name>Jitter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\mlabs-pl-stp-7b123d9\SmartThreadPool\SmartThreadPool.csproj">
+      <Project>{74D4C33F-7CC8-4B2A-A7DF-D8B6E63B6EBD}</Project>
+      <Name>SmartThreadPool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lidgren.Network\Lidgren.Network.csproj">
+      <Project>{ba202214-f6f8-4853-bcc9-ca4f13c5f479}</Project>
+      <Name>Lidgren.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings\Settings.csproj">
+      <Project>{EF75621B-EF64-4EA7-8451-BA53BA9408A9}</Project>
+      <Name>Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Triangulator\Triangulator.csproj">
+      <Project>{4F07E2C3-2C72-4010-8E57-11BB76D322C9}</Project>
+      <Name>Triangulator</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Elements\X3DHierarchy.txt" />
+    <Content Include="ProfilingSessions\Session20140826_210237.sdps" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Physics\ForceFields\" />
+    <Folder Include="Physics\Vehicle\" />
+    <Folder Include="Threading\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

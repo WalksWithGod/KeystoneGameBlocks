@@ -1,0 +1,20 @@
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\bin\Release\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\bin\Release\Authentication.pdb
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\obj\Release\Authentication.dll
+C:\Documents and Settings\Hypnotron\My Documents\dev\c#\Project Evolution\Authenticate\obj\Release\Authentication.pdb
+E:\dev\c#\Project Evolution\Authenticate\bin\Release\Authentication.dll
+E:\dev\c#\Project Evolution\Authenticate\bin\Release\Authentication.pdb
+E:\dev\c#\Project Evolution\Authenticate\obj\Release\ResolveAssemblyReference.cache
+E:\dev\c#\Project Evolution\Authenticate\obj\Release\Authentication.dll
+E:\dev\c#\Project Evolution\Authenticate\obj\Release\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Release\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Release\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Release\Authentication.dll
+E:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Release\Authentication.pdb
+E:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Release\Authentication.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Release\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Authenticate\bin\Release\Authentication.pdb
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Release\Authentication.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Release\Authentication.dll
+D:\dev\c#\KeystoneGameBlocks\Authenticate\obj\Release\Authentication.pdb

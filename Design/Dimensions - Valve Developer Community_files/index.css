@@ -1,0 +1,87 @@
+ul#filetoc {
+	background-color: rgb(82, 82, 82) !important;
+}
+.wikitable {
+	color: rgb(185, 183, 181);
+}
+.TablePager {
+	color: rgb(185, 183, 181);
+}
+table.wikitable {
+	border-color: rgb(82, 82, 82); background-color: rgb(38, 38, 38);
+}
+.wikitable th {
+	border-color: rgb(82, 82, 82); background-color: rgb(38, 38, 38);
+}
+.wikitable td {
+	border-color: rgb(82, 82, 82); background-color: rgb(38, 38, 38);
+}
+#pagehistory li.selected {
+	border: 1px solid rgb(100, 100, 100); background-color: rgb(64, 64, 64);
+}
+#pagehistory li {
+	border: currentColor;
+}
+.mw-plusminus-pos {
+	color: rgb(35, 155, 32);
+}
+.mw-plusminus-neg {
+	color: rgb(211, 61, 61);
+}
+.TablePager tr:hover td {
+	background-color: rgb(82, 82, 82);
+}
+.TablePager th {
+	background-color: rgb(82, 82, 82);
+}
+.TablePager td {
+	background-color: rgb(38, 38, 38);
+}
+.TablePager {
+	border: 1px solid rgb(100, 100, 100);
+}
+.TablePager td {
+	border: 1px solid rgb(100, 100, 100);
+}
+.TablePager th {
+	border: 1px solid rgb(100, 100, 100);
+}
+.mw-search-formheader div.search-types ul li.current a {
+	border-color: rgb(82, 82, 82); color: rgb(185, 183, 181);
+}
+.mw-search-formheader {
+	border-color: rgb(82, 82, 82); background-color: rgb(82, 82, 82);
+}
+fieldset#mw-searchoptions {
+	border-color: rgb(82, 82, 82) !important;
+}
+fieldset {
+	border-color: rgb(82, 82, 82); background-color: rgb(38, 38, 38) !important;
+}
+input {
+	border: 1px solid rgb(102, 102, 102); color: rgb(185, 183, 181); background-color: rgb(32, 32, 32);
+}
+select {
+	border: 1px solid rgb(102, 102, 102); color: rgb(185, 183, 181); background-color: rgb(32, 32, 32);
+}
+td.diff-otitle {
+	color: rgb(162, 162, 162); background-color: rgb(82, 82, 82);
+}
+td.diff-ntitle {
+	color: rgb(162, 162, 162); background-color: rgb(82, 82, 82);
+}
+table.diff {
+	color: black; background-color: rgb(188, 188, 188);
+}
+td.diff-context {
+	background: 0px 0px rgb(226, 226, 226); color: black;
+}
+td.diff-deletedline {
+	color: black;
+}
+td.diff-addedline {
+	color: black;
+}
+.diffchange {
+	color: red;
+}

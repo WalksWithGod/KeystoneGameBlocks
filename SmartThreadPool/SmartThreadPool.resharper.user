@@ -1,0 +1,48 @@
+<Configuration>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:@System.Collections">
+      <Item value="Generic" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System">
+      <Item value="Collections" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Collections.Generic">
+      <Item value="Queue" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <EditorManager>
+    <RecentFiles>
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:STPStartInfo.cs" caret="182" visual-x="0" visual-y="0" />
+      <File id="976DB12F-9198-4AD9-981A-1652615C9B0D/f:Form1.cs" caret="29674" visual-x="0" visual-y="1700" />
+      <File id="C11A4561-CCB5-4C96-8DF2-B804031D89D8/f:UsageHistoryControl.cs" caret="0" visual-x="0" visual-y="0" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:Interfaces.cs" caret="0" visual-x="0" visual-y="0" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:Exceptions.cs" caret="0" visual-x="0" visual-y="0" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:WorkItemFactory.cs" caret="0" visual-x="0" visual-y="4386" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:WIGStartInfo.cs" caret="0" visual-x="0" visual-y="0" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:CallerThreadContext.cs" caret="239" visual-x="0" visual-y="0" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:PriorityQueue.cs" caret="2118" visual-x="0" visual-y="1054" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:WorkItemsGroup.cs" caret="0" visual-x="0" visual-y="204" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:SmartThreadPool.cs" caret="10106" visual-x="0" visual-y="2125" />
+      <File id="8684FC56-A679-4E2E-8F96-E172FB062EB6/f:STPPerformanceCounter.cs" caret="4980" visual-x="0" visual-y="1258" />
+    </RecentFiles>
+  </EditorManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <ReFormatCode>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+    <DecorateModifiers>False</DecorateModifiers>
+  </ReFormatCode>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+</Configuration>

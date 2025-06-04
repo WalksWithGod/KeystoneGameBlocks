@@ -1,0 +1,10 @@
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\bin\Release\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\bin\Release\AtlasTextureTools.pdb
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\Release\AtlasTextureTools.csprojResolveAssemblyReference.cache
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\Release\AtlasTextureTools.dll
+E:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\Release\AtlasTextureTools.pdb
+D:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\bin\Release\AtlasTextureTools.dll
+D:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\bin\Release\AtlasTextureTools.pdb
+D:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\Release\AtlasTextureTools.csprojResolveAssemblyReference.cache
+D:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\Release\AtlasTextureTools.dll
+D:\dev\c#\KeystoneGameBlocks\AtlasTextureTools\obj\Release\AtlasTextureTools.pdb
