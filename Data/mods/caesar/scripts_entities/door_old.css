@@ -1,0 +1,410 @@
+using System;
+using Keystone.Types;
+using Keystone.CSG;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class Door : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[6];
+		// Name,  Type, Category, Default Value 
+		// Name,  Type, Category, Description, Default Value
+		category = "public properties";
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "door");
+		properties[1] = new PropertySpec("weight", typeof(double).Name, category, 0);
+        properties[2] = new PropertySpec("cost", typeof(double).Name, category, 0);
+		properties[3] = new PropertySpec("volume", typeof(double).Name, category, 0);
+		properties[4] = new PropertySpec("surfacearea", typeof(double).Name, category, 0);
+		properties[5] = new PropertySpec("hitpoints", typeof(int).Name, category, 0);
+		
+		category = "private variables";
+		
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+		
+		
+		// create a test rule using a Delegate rule
+		//EntityAPI.AddRule (
+		//	domainObjectID, "description", new SimpleRule("Name cannot be empty.", delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+			
+		
+		EntityAPI.AddRule (domainObjectID, "description",
+			new SimpleRule(1, Rule_Description));
+			
+		// create a test rule that uses the Validate script method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+		
+		// queryable mods
+		// assign values to specific "mod" properties that the celledregion will query
+		// to determine what modifications this domainobject will have on the parent.
+		// so for a celledregion parent, maybe it modifies the map layer
+		// for some other entity, maybe it modifies a crew members skill level.
+		
+		// so celledRegion can query the layout of this entity
+		// it can query the allowed places it can be set/orientation <-- there's no need to put that in the DomainObject explicitly
+		// 
+		
+		
+		// add consumptions
+		//EntityAPI.AssignConsumption()
+		//	- and consumption is a broad term for any stimulus or product (synonymous i think)
+		//    such as antimatter fuel or kinetic damage consumption
+		//	- radar or other active sensor scan (and may emit a return signal)
+		//  
+		
+		// add production
+		//EntityAPI.AssignProduction();
+		
+		// define any stores
+		//EntityAPI.DefineProductStore();
+		
+		System.Diagnostics.Debug.WriteLine (UserConstants.TestConstant1.ToString());
+	}
+	
+	#region Rules
+	private static bool Rule_Description(object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+		
+		
+	}
+	#endregion
+
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+		//      if (parent is CelledRegion)
+		//      {
+		//          EntityAPI.SetFlags (entityID, CSG_SOURCE);
+		//          string wallID = EntityAPI.CellMap_GetWallEntityID(edgeID);
+		//          // set target only if a door/window is added to an edge stack
+		//          // that already has a wall
+		//          EntitiyAPI.SetFlags(wallID, CSG_TARGET);
+		//      }
+		
+		
+		//// if a csg source is added to an edge stack that already contains a wall
+		//// then set that wall's CSGStencilTarget flag.
+		//// if a wall is added to an edge stack that already contains a door
+		//// then set that wall's CSGStencilTarget flag.  Normally you would think
+		//// the door can't be added prior to the wall, but there's a possibilty perhaps
+		//// during XML load.  So for now we'll allow it.
+		//edge = GetEdge(entity.CellIndex, entity.CellRotation);
+		//if (mEdgeStructures.ContainsKey (edge.ID) == false) break;
+
+		//ModeledEntity partition = mEdgeStructures[edge.ID]; // Partitions[partitionIndex];
+		//if (partition == null) break;
+		//Model[] targetModels = ((ModeledEntity)partition).SelectModel(SelectPass.CSGStencilAccept, 0);
+		//if (targetModels == null || targetModels.Length == 0) break;
+
+		//Model[] sourceModels = ((ModeledEntity)entity).SelectModel(SelectPass.CSGStencilSource, 0);
+		//if (sourceModels == null || sourceModels.Length == 0) break;
+
+		//for (int i = 0; i < targetModels.Length; i++)
+		//{
+		//    targetModels[i].SetFlagValue(
+		//        (uint)Keystone.Elements.Model.ModelFlags.CSGStencilTarget, true);
+
+		//    // todo: this flag needs to be applied recursively
+		//    // and it needs to be applied to any new children added to that entity
+		//    // or any of it's children!  
+		//    // todo: but do we take into account the geometry of the stencil source?
+		//    // since here we do add all targets to different render buckets
+		//    // todo: next major question is, if we wind up having to render
+		//    // sources and targets together with the specific target assigned,
+		//    // how do we achieve this?
+		//    // NOTE: we cannot assign a stencil reference value here.  There's only
+		//    // 255 values (0 is reserved for empty) and during editing who knows
+		//    // how many doors and walls an entire ship might have.  So if we wanted to use
+		//    // ref values, we'd have to pick the closest visible csg sources  and start numbering
+		//    // up to max of 255 from there (recycling 255 at that point probably would be fine 
+		//    // and result in unnoticeable errors as any geometry you saw thru them would be far away)
+		//    // In any case, the result is that we have to assign the ref numbers during render
+		//    // So that means each CSG Source must know it's target.  There's no way around it.
+		//    // So the questoin is, how do we manage that?
+		//    // eg. entity.RegisterCSGTarget(wallEntity)
+		//    //             - that recursively registers childs that do have CSGAvailable == true
+		//    //             - how do we unregister these? say if i a target gets destroyed? How do
+		//    //               we remove the wallEntity reference from the entity?
+
+		//    // TODO: Perhaps something we can do instead is, set a CSGStencilSource flag fine
+		//    //       and set a flag for a potential target, and THEN when our ScaleCuller.cs
+		//    //       traverses a Cell, it can couple in the Visibility, the pairs itself.
+		//    //       since we know all pairs will be within the same cell... erm... well
+		//    //       and neihboring... right?  This way in my scale culler i can group them...
+		//    //       perhaps i can even group them here in the cell ahead of time!  
+		//    //       The good news is that there wont be many visible doors at once... like even
+		//    //       20 visible (whihc is unlikely) would be relatively few in the overall scheme 
+		//    //       of things I think.
+		//}
+					
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+	//      string wallID = EntityAPI.CellMap_GetWallEntityID(edgeID);
+                //      // only one CSG_TARGET per wall so this will not cause problem with assuming this is the only CSG_SOURCE.  This IS the only CSG_SOURCE
+                //      // this doesn't prevent us from implementing damage holes in doors.  we simply
+                //      // provide LOD/Selector levels for the punch
+                //      // This is why the punch should be it's own entity... but the problem there is
+                //      // The punch then should tell it's own parent that it's a CSG_SOURCE?
+                //      // Since it becomes convoluted for the Punch entity which is a child of
+                //      // the door frame, to directly modify the wall right?
+                //      // Hrm... it'd be somewhat nice to have the Punch be directly childed
+                //      // to the wall, but... then what of the frame?  It makes adding
+                //      // a door as a single grouped entity more difficult if frame, punch, door
+                //      // must all be added seperately.  Removing them as well..
+                //      // And what about the headache of scripting seperate scripts for
+                //      // frame, door and punch?  A punch doesnt really need a domain object
+                //      // as it's a graphical thing mostly... and the frame + door is nicer
+                //      // as a single entity too...
+                //      // but also keep in mind, PUNCH needs a seperate rendering pass
+                //      //   - what if (assuming punch is a special node type that is not an entity
+                //      //      similar to Geometry, LOD, Collider, Punch) if we wanted to render
+                //      //     the punch seperately (or a collider volume), we set that flag and
+                //      //     added the entity to two RegionCullingInfo items... one which specified
+                //      //     via flag to render Mesh, Collider, Punch, etc.
+                //      //       - So for now let's assume this approach, what about the moving door?
+                //      //         Does it have it's own DomainObjectScript? Or does the parent frame
+                //      //         Manage it?  What if the child moving door hasnt been loaded yet?
+                //      //       - i htink clearly the animated door has to be a seperate entity
+                //      //         afterall it can be animated/translated/rotated differently.
+                //      //         I think one way around the issue of how does parent script know
+                //      //         about the child (besides childIDs[] = EntityAPI.GetChildre(entityID);
+                //      //         is to in fact script the door seperately.
+                //      //         - and shouldnt the door itself be able to tell it's parent to
+                //      //         enable/disable the CSGSource flag since if door is closed and undamaged
+                //      //         it doesnt need CSG stencil operations applied.
+                //      //         I think part of the answer is that when we design entities
+                //      //         and their scripts, we are doing so with the knowledge that we know
+                //      //         how they are constructed hierarchically and will exploit that in our scripts.
+                //      //         For instance, the DoorEntity's script knows there's a child AnimatedDoor
+                //      //         and that it's the first child.
+                //      //         But the other thing from a DomainObjectScript point of view where i have custom
+                //      //         fields like ArmorThickness, FrameStrength or whatever... is i dont want to have to
+                //      //         do this twice for child doors.  I could circumvent this somewhat.. make the parent
+                //      //         entity be the only interactable object and have it's picking / colliding be based on
+                //      //         a box instead of geometry... but... it seems to get kludgy that way.
+                //      //         but its definetly a headache to have the child door be defined (custom property wise)
+                //      //         seperately.  It's as if in a sense, i dont want the child door to behave as it's own
+                //      //         thing.  I dont want it scriptable at all... just the parent.
+                //      //         And technically i could still allow the picker to have rules to query the child but
+                //      //         to still report the picked entity as being the overall doorFrame entity.
+                //      //         I think this is my answer.
+                //      //         So we also need flags to ensure at runtime no other child can be added to 
+                //      //         either doorframe or animated door.
+                //      //         ***But what if the DoorFrame is added via XMLRead BEFORE
+                //      //          the wall it wants to set the flag on?
+                //      //         Recall that i wanted the DoorFrame to NOT be a child of Wall
+                //      //         because i wanted the DoorFrame to be able to modify it's parent
+                //      //         celledRegion's map layer. 
+                //      //            - But what if the answer to this is to have the parent CelledRegion
+                //      //              query the child for mods, rather than have the child mod the parent?
+                //      //            This way the CelledRegion can handle modifying a flag to a wall
+                //      //            and the map layer regardless of whether door or wall loads first?
+                //      //
+                //      //
+                //      // Also consider how the GUI Button / Trigger to open a door works...
+                //      // That button/trigger needs to wire to the proper door.
+                //      // http://www.newerth.com/wiki/index.php/XR_Map_Triggers
+                //      // http://game-engine.visual3d.net/wiki/entity-creation-models-prefabs-avatars-and-entity-types
+                //      //     - in the visual3d implementation, a trigger is added as a child to an entity
+                //      //       in order to associate it (just drag and drop the trigger onto it)
+                //      // http://unity3d.com/support/documentation/Components/class-CapsuleCollider.html
+                //      //    - i like how in unity3d, their colliders can be flagged as triggers which
+                //      //     tells the physics engine to ignroe them as collision objects that need physics reaction calcs
+                //      //     but to still notify the app that something has entered the trigger volume of that collider
+                //      //     Contrast to Unreal where triggers are seperate Entities.  Hrm...
+                //      EntitiyAPI.DisableFlags(wallID, CSG_TARGET);
+		return entityID;
+
+	}
+	
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_CSG_MESH;}
+	
+	// returns a 16x32 grid (512 bytes) showing which tile bits are occupied by this entity
+	// NOTE: The footprint flags can contain more info than just the physical location of the component.
+	// It can contain information about whether it mounts to a wall or ceiling or floor.
+	// TODO: But wait, if its 16x16, how do we design a footprint that spans multiple cells?
+	// todo: well, sims3 uses a tilefootprint and a sub-array footprint.  Effectively
+	// if we just make the single byte footprint NxN where N is evenly divisible by 16, then we 
+	// can always compute how many full x full tiles is represented by the footprint.
+	// todo: i think it would be preferable to have the footprint be a file that we can modify in an editor
+	// rather than hardcode it in the script?  But wait, the problem with using the array like this
+	// is that it forces a contiguous array and doesnt allow us to do things like sims where an arch
+	// has no footprint tile in the middle and thus takes up no sub-array data there.
+	public static byte[,] QueryCellFootprint ()
+	{
+		return new byte[,]{{1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+						   {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
+	}
+	
+	public static Vector3d[] QueryCellPlacement (string celledRegionID, uint cellIndex, byte cellOffset, byte cellRotation)
+	{
+		const double TO_DEGREES = 360d / 256d;
+		Vector3d position, scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+		
+		
+		rotation.x = 0;
+		rotation.y = (double)(cellRotation * TO_DEGREES);
+		rotation.z = 0;
+				
+		// based on the cellIndex, determine the position in celled region relative coordiantes
+		// of the top left of that cell
+
+		uint[] cellPosition = EntityAPI.CellMap_Unflatten(celledRegionID, cellIndex);
+		float[] start = EntityAPI.CellMap_GetStartIndices (celledRegionID);
+		
+		// 
+		position.x = start[0] + cellPosition[0];
+		position.y = start[1] + cellPosition[1];
+		position.z = start[2] + cellPosition[2];
+		
+		Vector3d size = EntityAPI.CellMap_GetCellSize (celledRegionID);
+		position *= size;
+				
+		Vector3d halfSize = size * .5;
+		
+		switch (cellRotation)
+		{
+			case 0:
+				position.z += halfSize.z - size.z / 32d; // half of 1/16th the width
+				break;
+			case 64:  // 90 degrees
+				position.x += halfSize.x - size.x / 32d;
+				break;
+			case 128: // 180 degrees
+				position.z -= halfSize.z + size.z / 32d; // half of 1/16th the width
+				break;
+			case 192: // 270 degrees
+				position.x -= halfSize.x + size.x / 32d;
+				break;
+		}
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation}; 
+	}
+	
+	#endregion
+
+	// Updates the build statistics
+	public static void BuildUpdate (string domainObjectID)
+	{
+		// configuring the list of proeprty grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+		
+	}	
+
+	public static void Tick (string domainObjectID)
+	{
+		// consume
+		
+		// produce
+		
+		
+	}
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "turnon":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}	
+}
+
+

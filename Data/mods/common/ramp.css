@@ -1,0 +1,126 @@
+using System;
+using Keystone.Types;
+using Keystone.CSG;
+using KeyScript;
+using KeyCommon.Simulation;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class Ramp: BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+	
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[1];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "ramp");
+
+		category = "private variables";
+		
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+				
+
+		EntityAPI.AddRule (domainObjectID, "description", new SimpleRule(1, Rule_Description));				
+	}
+	
+	#region Rules
+	
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we get the value from the args where we know for property rules the value is first and only argument
+		string description = (string)args[0];  
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+	}
+	#endregion
+
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+
+	}
+	
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}
+	
+	public static uint QueryComponentType () { return (uint)UserConstants.COMPONENT_TYPE.COMPONENT;}
+	
+	public static Vector3d[] QueryCellPlacement (string celledRegionID, Vector3i tileLocation, byte cellRotation)
+	{
+		const double TO_DEGREES = 360d / 256d;
+		Vector3d position, scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+		
+		rotation.x = 0;
+		rotation.y = (double)(cellRotation * TO_DEGREES);
+		rotation.z = 0;
+			
+		// tile location is basically x, z pixel coordinate with y as floor level
+		// we need to convert this to a celledRegion relative coordinate which will give us
+		// a 3D position that represents the CENTER of that tile (not the top/left corner)
+		position = EntityAPI.CellMap_GetTilePosition3D(celledRegionID, tileLocation);
+		Vector3d size = EntityAPI.CellMap_GetTileSize (celledRegionID);
+
+				
+		// assuming this generic component has it's Y position at floor (not centered in it's bbox)
+		// then we need to lower position.y we return to be on the floor of the cell.		
+		double floorHeight = position.y - (size.y * 0.5);
+		position.y = floorHeight;
+		
+		// get the local bounding box of the component
+		// if the center.y != 0.0 (within some epsilon)
+		// then the box.min.y is likely on the floor.  test if the min.y is at 0.0 or some epsilon.
+		// if both are out of range,we'll just go with center.
+
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation}; 
+	}
+	
+	#endregion
+
+	#region Build statistics
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+		switch (index)
+		{
+			default:
+				break;
+		}
+	}
+	#endregion
+}

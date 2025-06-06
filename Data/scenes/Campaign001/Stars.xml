@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Star luminosityclass="4" spectraltype="4" spectralsubtype="8" luminosity="0.49984" temperature="5500" age="1" stablelifespan="10.90909" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.080374E+09" mass="1.0845408241725E+30" surfacegravity="0" orbitalradius="18700276686944" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Ry" id="026daa5a-433c-44cc-b5d6-12e62f39c511">
+    <DirectionalLight ref="b4b1f4f0-6fd7-4ce9-b25b-3435aa9845b1" />
+    <ModelSequence ref="5777e516-cb13-4f70-b58e-37ad9f2f527c" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="026daa5a-433c-44cc-b5d6-12e62f39c511_corona_animation" id="6b2d196c-9502-4e72-9ced-41b8a974b025">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="4551e702-ce09-4274-8903-d31153546250" id="4551e702-ce09-4274-8903-d31153546250" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="63dfe32d-b000-4d58-8dbb-6f00f60cbade" id="63dfe32d-b000-4d58-8dbb-6f00f60cbade" />
+    </Animation>
+    <World ref="d592fd81-2327-4e25-a408-ca383bd936ac" />
+    <World ref="852d956a-39e2-4220-a412-629668a9c996" />
+    <World ref="bf87ae1d-2dfc-4ba2-b923-6a683143b794" />
+    <World ref="af0f862d-c10c-470c-892e-71e1de493d95" />
+    <World ref="a7dd8889-bff4-4a42-929b-a0dd99a0bb15" />
+    <World ref="41c24c75-a490-45d4-a78c-f194a7938160" />
+    <World ref="f76cad65-7c99-416a-98c6-9fadf32b0690" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="5" spectralsubtype="8" luminosity="0.095844" temperature="4100" age="2" stablelifespan="86.73469" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="8.513315E+08" mass="1.65342239513913E+30" surfacegravity="0" orbitalradius="37825138728" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Epanun" id="0399f0e5-f8a4-415a-8030-79a73e253f30">
+    <DirectionalLight ref="cc7e2f53-0f9e-4d23-a4d7-53b5ba22ced4" />
+    <ModelSequence ref="b812d391-1d57-4da9-ab52-fb52cf453b39" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="0399f0e5-f8a4-415a-8030-79a73e253f30_corona_animation" id="1d6f011c-3ed4-40a7-9dc2-2272106a9a6e">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="376753ef-52f8-42f8-b90b-6e87e84e471f" id="376753ef-52f8-42f8-b90b-6e87e84e471f" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="86f4ad89-c8e6-4bad-8d5a-a48432eb5213" id="86f4ad89-c8e6-4bad-8d5a-a48432eb5213" />
+    </Animation>
+    <World ref="733dd8f6-e3d9-41c6-8579-d049a7f0e4f7" />
+    <World ref="82bbefe7-f39d-4177-9773-b29ac61d81b0" />
+    <World ref="6a0860b1-99af-48e6-a058-85bd410ed3a6" />
+    <World ref="841e28e7-d3af-4a92-946f-b446a6d81ce9" />
+    <World ref="879c4f88-c375-435b-afa9-67a22ab50b34" />
+    <World ref="d58ab501-9f42-4bcb-aa4f-186cbb3f74d0" />
+    <World ref="c4b3c971-e289-4d7d-b2fb-9e20965b6b47" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="2" luminosity="0.040512" temperature="3620" age="2" stablelifespan="97.91666" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="7.100005E+08" mass="7.89012601242947E+29" surfacegravity="0" orbitalradius="262151311256" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uropa" id="2b2dad33-4aa5-42d8-9995-4fb2b12de759">
+    <DirectionalLight ref="983e6844-0d7e-414e-9e9d-eb3e387095fe" />
+    <ModelSequence ref="29a6c3bd-1f80-4541-bc43-57ec1c9c6c5d" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="2b2dad33-4aa5-42d8-9995-4fb2b12de759_corona_animation" id="99ec6e6e-493f-416c-a9b9-a6cbd5c89d5a">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="f5c9b2bd-f97d-4254-81d4-a551b6d29d40" id="f5c9b2bd-f97d-4254-81d4-a551b6d29d40" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="06ac4415-632f-47e8-852a-e52e2d80c818" id="06ac4415-632f-47e8-852a-e52e2d80c818" />
+    </Animation>
+    <World ref="54ff4b25-4473-4fc1-b18e-d05003a312de" />
+    <World ref="c48b0087-322d-45a8-9131-5f013b55140b" />
+    <World ref="33de988c-1bee-4dfc-afae-ee5dfe64858c" />
+    <World ref="341dbc44-ee20-4814-8635-1825229c8407" />
+    <World ref="debb8708-bf0a-4d6c-9072-f4854a178907" />
+    <World ref="db45f968-cd64-466c-a759-753aab0f185b" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="4" luminosity="0.01926" temperature="3350" age="3.5" stablelifespan="98.88889" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="5.716399E+08" mass="3.78835811851524E+29" surfacegravity="0" orbitalradius="7480180419936" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Rterat" id="c82dcde2-1ac4-40de-8814-16d74d7f3274">
+    <DirectionalLight ref="8a99ddc6-0b3c-4d77-8484-1244a8d9aa42" />
+    <ModelSequence ref="db1f8766-12d0-4b69-aeaa-9ad8f405aa41" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="c82dcde2-1ac4-40de-8814-16d74d7f3274_corona_animation" id="cdc2345a-4ef4-4547-ae18-f714c539f5ac">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="237b53a0-df67-4fa1-84dd-0962eb74e5ac" id="237b53a0-df67-4fa1-84dd-0962eb74e5ac" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="a4de0413-2886-44d8-bdb8-b700670d4ed8" id="a4de0413-2886-44d8-bdb8-b700670d4ed8" />
+    </Animation>
+    <World ref="cb439440-715c-4d29-a431-caaac80d16aa" />
+    <World ref="b26e21c2-00d6-4795-9707-320db6364523" />
+    <World ref="adf2f025-1eb4-4bfb-b8c4-2d17f4b5fa5f" />
+    <World ref="a205434e-56d9-4121-b894-ec4da9923497" />
+    <World ref="c1937081-4b06-4f03-8e1c-923765fed71f" />
+    <World ref="30b51894-4e10-49e6-93c1-c32b794415e3" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="8" luminosity="0.00098" temperature="2600" age="8" stablelifespan="1030.612" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="2.140673E+08" mass="2.00893421282019E+29" surfacegravity="0" orbitalradius="4488043793640" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uropl" id="e9084c8a-ac3e-4c0d-b9fa-37c8e9ffb12b">
+    <DirectionalLight ref="40838ce4-5a81-4f42-8fc4-410306ff180f" />
+    <ModelSequence ref="87eb998e-523d-47fd-b66a-fa1058524d8e" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="e9084c8a-ac3e-4c0d-b9fa-37c8e9ffb12b_corona_animation" id="86f3bfd5-16e2-4f8c-985e-20779a784694">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="f77979a1-5fa2-467d-9878-bf4f74e1a5ad" id="f77979a1-5fa2-467d-9878-bf4f74e1a5ad" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="3ee44dbe-6ae0-43c1-9742-807e482a142e" id="3ee44dbe-6ae0-43c1-9742-807e482a142e" />
+    </Animation>
+    <World ref="5be03368-b9b6-4af6-a011-af0b2e0e0764" />
+    <World ref="5da7856d-c6de-41bf-901f-012e32e1a54d" />
+    <World ref="7fcc88b4-5d7e-4dee-aac1-4312c09797c7" />
+    <World ref="d6477fc4-78de-435e-9a4a-06727251e7a2" />
+    <World ref="a05f7406-bd68-4aae-b022-01fa06fc5564" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="5" luminosity="0.01023" temperature="3200" age="9.5" stablelifespan="94.81916" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="4.565852E+08" mass="1.92932372371441E+29" surfacegravity="0" orbitalradius="7480122892592" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="It" id="fb218cf0-4d65-490d-b14c-1cf916354475">
+    <DirectionalLight ref="ba4aa5c9-5cc2-4c53-ba0f-54af468f974b" />
+    <ModelSequence ref="4fcb777b-ce00-4e6d-9e22-127ba6b298c1" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="fb218cf0-4d65-490d-b14c-1cf916354475_corona_animation" id="b0280215-d4b3-4010-aa9b-223edf4783ba">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="d0fec48f-d9b6-4853-90ca-0d4e6a40ab40" id="d0fec48f-d9b6-4853-90ca-0d4e6a40ab40" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="2aa062e4-0894-41b6-b081-e2bd5de5af62" id="2aa062e4-0894-41b6-b081-e2bd5de5af62" />
+    </Animation>
+    <World ref="60eaef20-3f18-46fd-b4be-38012c933cd0" />
+    <World ref="ab70b04c-8081-412f-97ab-6ea74ab2e630" />
+    <World ref="ad044d95-5b8f-4c90-bd6f-d1031713b38d" />
+    <World ref="0a496ac4-db80-4a51-97eb-f15c5c98e28c" />
+    <World ref="42150a63-7aa5-46d6-ab13-8adfa8aa0b0f" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="4" spectralsubtype="1" luminosity="1.358" temperature="5960" age="1.5" stablelifespan="8.900001" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.516496E+09" mass="2.40386566871262E+30" surfacegravity="0" orbitalradius="5236684468064" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Plurn" id="9057e2bd-ee52-4a14-8197-06f80dd37dcf">
+    <DirectionalLight ref="02b3ad5d-f049-4100-8ed7-8b37ce09f41b" />
+    <ModelSequence ref="a3715d84-d724-4940-934f-dac4ddc28239" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="9057e2bd-ee52-4a14-8197-06f80dd37dcf_corona_animation" id="afb0f052-7459-4b37-9fc1-2d8cf4b735f4">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="ca6e373c-db32-4031-b289-79ea1311707c" id="ca6e373c-db32-4031-b289-79ea1311707c" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="d6999641-039b-4e11-8758-500bc1414602" id="d6999641-039b-4e11-8758-500bc1414602" />
+    </Animation>
+    <World ref="0083d512-0a20-4b39-9327-a2a68ab72777" />
+    <World ref="401b30f2-6116-49a6-85e1-1a8c85e4244f" />
+    <World ref="d136724c-c5a5-477f-a378-2cc7ab009f96" />
+    <World ref="d9d0ad21-42b4-4911-8fd0-558517d3c393" />
+    <World ref="9a23db04-f25e-4eef-b30e-32c325aaaf95" />
+    <World ref="262dea6f-edf4-4c41-b1e6-696228e2a880" />
+    <World ref="81feaf10-b838-42b9-95cc-d41dbc12e938" />
+  </Star>
+  <Star luminosityclass="5" spectraltype="6" spectralsubtype="2" luminosity="0.0038402" temperature="3620" age="3.5" stablelifespan="106.5934" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="2.185968E+08" mass="8.14421142067444E+28" surfacegravity="0" orbitalradius="299305082384" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Path" id="58cc853b-e734-4417-aa37-71cc797cc3a2">
+    <DirectionalLight ref="29c64ea4-6022-4a84-927f-28ccb00a9ff5" />
+    <ModelSequence ref="6da56907-5040-44dd-9af7-84cd8c541a2c" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="58cc853b-e734-4417-aa37-71cc797cc3a2_corona_animation" id="3451a777-5914-4460-a48f-822d85d270df">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="be032390-a40a-4ea1-b4f2-f76ec3598a3b" id="be032390-a40a-4ea1-b4f2-f76ec3598a3b" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="e3ccf8fb-a41e-4f8d-a0a7-9578a7770d71" id="e3ccf8fb-a41e-4f8d-a0a7-9578a7770d71" />
+    </Animation>
+    <World ref="d764962a-0d2e-4dca-9011-7e66c889328a" />
+    <World ref="373ae543-8f1f-4880-ac6f-a09a7c71a2c7" />
+    <World ref="1651cfec-f993-4e18-b26b-1bf63ede6b81" />
+    <World ref="c69f6828-a192-4abe-8a33-9c39968cca91" />
+    <World ref="97d2ef92-19fb-4b09-aeba-3634cbbb605e" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="6" luminosity="0.007546" temperature="3000" age="10.5" stablelifespan="1010.204" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="4.461695E+08" mass="1.51617233997939E+30" surfacegravity="0" orbitalradius="299418868736" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Th" id="90fa7ac4-c85a-4457-879c-4fb0d24e6d8a">
+    <DirectionalLight ref="b36931da-cad2-4552-b243-5e4a8bc7d2c5" />
+    <ModelSequence ref="5f6bfc13-f0b8-439e-8177-ebdff6cfe945" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="90fa7ac4-c85a-4457-879c-4fb0d24e6d8a_corona_animation" id="83e29641-a38e-4d58-bac6-bf402eff0080">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="30a827b5-1588-463a-ac5d-22c9ff417c1c" id="30a827b5-1588-463a-ac5d-22c9ff417c1c" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="c612f5eb-a566-4563-8091-c889276803ef" id="c612f5eb-a566-4563-8091-c889276803ef" />
+    </Animation>
+    <World ref="8a1ca792-d8b4-4107-a485-bc6ddb90d976" />
+    <World ref="64e2bda1-8be8-4a01-885b-9249c055990e" />
+    <World ref="756978d4-4ba8-4bbb-ab73-81defbd5ca51" />
+    <World ref="bc3f978e-76d5-4219-8156-66d4a39bf025" />
+    <World ref="1c44e30f-09ee-42b5-90e9-970fc3adfb77" />
+    <World ref="91c98016-563d-467b-8684-9bc4b76d7bf2" />
+    <World ref="97c1388d-159f-4a44-b643-c79d3a7a309a" />
+  </Star>
+  <Star luminosityclass="0" spectraltype="6" spectralsubtype="7" luminosity="420750" temperature="2800" age="4" stablelifespan="0.0004706476" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="3.824547E+12" mass="3.9385589052479E+31" surfacegravity="0" orbitalradius="1953412792327.67" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uturnu" id="1fd3275f-5c60-4eb7-b527-40f82ba05470">
+    <DirectionalLight ref="72e93b22-e9b2-4c17-8230-bd2356b0c188" />
+    <ModelSequence ref="79700ea3-d6b4-4ccb-a897-de59747ef704" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="1fd3275f-5c60-4eb7-b527-40f82ba05470_corona_animation" id="0122ffef-a338-4d75-9e18-d96e6b1bcda1">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="c9b6e9f6-3d69-4513-a7b9-dd7ec879b472" id="c9b6e9f6-3d69-4513-a7b9-dd7ec879b472" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="63f6cb72-bcee-4305-923e-965127d8eb06" id="63f6cb72-bcee-4305-923e-965127d8eb06" />
+    </Animation>
+    <World ref="badf6e7a-dd9a-4607-9d68-405a03fd549e" />
+    <World ref="31abeeaf-6aa8-41cd-9d1e-ccfde7e12f67" />
+    <World ref="080e8ffc-5861-4fee-bdae-795eea263fa1" />
+    <World ref="302f7c51-864f-41a8-b0d0-ebbe9a578ff6" />
+    <World ref="a478d2af-2598-4bf2-808c-415e2d09b15a" />
+    <World ref="e26d5f93-e5f3-4872-b054-41911e4fbe61" />
+    <World ref="ea653c5d-a060-43bc-9e3d-0713c10f6128" />
+    <World ref="5b582b6b-3aec-405e-be51-15078d9a8779" />
+    <World ref="c22e5f63-dee9-4894-9736-813cc689312e" />
+    <World ref="d76e3028-af4f-4ff5-a788-362f7c3bcb98" />
+    <World ref="f8cd8a4b-9c7d-4dc1-a9af-ba894b74ecde" />
+    <World ref="0ecda8f5-4b5e-4452-a20f-9380e5bb13a4" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="4" spectralsubtype="2" luminosity="1.216" temperature="5920" age="2" stablelifespan="10.4" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.454479E+09" mass="2.51528882247001E+30" surfacegravity="0" orbitalradius="26180358339296" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Io" id="60197bb7-9e95-4fc1-a990-e72c65879d16">
+    <DirectionalLight ref="113314d3-35f6-4ce1-8b66-61ef6bb4a463" />
+    <ModelSequence ref="a7863a55-8c47-4d35-a025-1acd21eaec6e" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="60197bb7-9e95-4fc1-a990-e72c65879d16_corona_animation" id="a3a9900d-e7d9-4457-9bfb-75f18b67893c">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="d357a40d-2d42-4173-97a4-60d1d214b69f" id="d357a40d-2d42-4173-97a4-60d1d214b69f" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="f95fdc6a-9d6a-4262-8030-56d7492c36d9" id="f95fdc6a-9d6a-4262-8030-56d7492c36d9" />
+    </Animation>
+    <World ref="c681f26f-ef41-4833-b639-588ea1e58cf6" />
+    <World ref="f820ffec-59e3-404b-9c45-9e2549dedde6" />
+    <World ref="dee94934-efb6-4643-97e2-d320a5e0e073" />
+    <World ref="d73a09cf-34a4-4520-a77b-6559cafe966a" />
+    <World ref="9c849556-83d5-42cf-b25c-247cdf3942e9" />
+    <World ref="133411d8-d871-4e3a-a1a8-eaa049581b69" />
+    <World ref="091a029f-41da-4b90-ae1f-55b69c2d9fb6" />
+    <World ref="60b8dfb0-4f98-49e7-b044-24fa6a1d5eea" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="7" luminosity="0.003784" temperature="2800" age="0.5" stablelifespan="1022.727" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="3.626966E+08" mass="7.69727594921117E+29" surfacegravity="0" orbitalradius="33840875341.5094" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Usanus" id="b1b28cc2-590a-46ee-9474-a8ce772fee89">
+    <DirectionalLight ref="93fe6294-ed5f-4b0b-b9ce-4edd8047edf8" />
+    <ModelSequence ref="ab3c0af2-7e1c-4132-a959-0ab0dd4338c6" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="b1b28cc2-590a-46ee-9474-a8ce772fee89_corona_animation" id="a8c05627-f482-4cfc-81a6-9bc7e00bf5ca">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="400a63ca-5c76-435f-a169-8681b622fb9e" id="400a63ca-5c76-435f-a169-8681b622fb9e" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="ebf3abbe-ad35-4b72-ac7b-7a82ea794163" id="ebf3abbe-ad35-4b72-ac7b-7a82ea794163" />
+    </Animation>
+    <World ref="08bb2610-a600-4127-a4b4-7e5cd739c377" />
+    <World ref="6abe54ad-4fd4-4933-b23d-39da944a8ddc" />
+    <World ref="54233688-2b7c-4251-b6c0-dee39b0fc75d" />
+    <World ref="e3fb7a78-5564-4998-ae15-310e5156bbca" />
+    <World ref="e83fc618-f641-452f-b112-7636ef7a5d28" />
+    <World ref="8689990e-91a8-4f7b-b04b-1c04e3344953" />
+  </Star>
+  <Star luminosityclass="0" spectraltype="0" spectralsubtype="0" luminosity="0" temperature="0" age="0" stablelifespan="0" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.392E+09" mass="1.99176814392E+30" surfacegravity="0" orbitalradius="0" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Sol" id="e4c96e22-7445-4159-b902-7984b72918e9">
+    <DirectionalLight ref="1f2d7db2-9cc6-4844-9632-c23c6cebc1c1" />
+    <ModelSequence ref="ae8e600d-c270-429e-86c3-b9dd83a1a150" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="e4c96e22-7445-4159-b902-7984b72918e9_corona_animation" id="0e75ca02-bcc1-49e1-a6b3-0715281fe6cb">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="7349aa1b-59a4-4e99-86ca-ced789e2cecd" id="7349aa1b-59a4-4e99-86ca-ced789e2cecd" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="9f1dc326-9e7a-4399-8f15-695df8f79604" id="9f1dc326-9e7a-4399-8f15-695df8f79604" />
+    </Animation>
+    <World ref="1bc1d4bc-52da-423f-a8d4-5d2249394ba6" />
+    <World ref="2e0e1025-ebf7-42ce-9689-23275a7e240f" />
+    <World ref="353c93ca-dcd0-442b-8bee-93c180dbf1c2" />
+    <World ref="c305beb7-da35-4b81-9db5-9e70b9553f44" />
+    <World ref="8b932742-c487-4074-a3e6-7a13e7eb8e1e" />
+    <World ref="ff65c04c-fe15-4a4b-9961-55ff5e6e4f2c" />
+    <World ref="d9afbed0-c0ed-4b17-8dcf-3c598c8256d8" />
+    <World ref="68c9dd92-0957-4dfc-9a9d-af8d8752eb87" />
+    <World ref="6d17ff34-e370-41a9-aff7-1b04f064a6c6" />
+    <World ref="d83320f4-622c-4afb-83a0-46fe5f1a4819" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="9" luminosity="0.000455" temperature="2400" age="6.5" stablelifespan="1218.462" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.711856E+08" mass="1.10289410127331E+29" surfacegravity="0" orbitalradius="5236011812792" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Ernup" id="d8732273-fcd1-4385-949c-62c4416eae6f">
+    <DirectionalLight ref="f703c436-9019-44af-909e-2ef5891d3124" />
+    <ModelSequence ref="cce6ade7-2a59-4d41-9f8b-4a7588aefb37" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="d8732273-fcd1-4385-949c-62c4416eae6f_corona_animation" id="057f06f3-d5f5-41fd-9f7f-304550cf92bd">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="9413e85c-30cb-4a11-889c-0a3a28822c4d" id="9413e85c-30cb-4a11-889c-0a3a28822c4d" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="a79fa599-27f4-4f87-8071-370634a6b109" id="a79fa599-27f4-4f87-8071-370634a6b109" />
+    </Animation>
+    <World ref="0a5c3f22-5d5d-41e9-9883-505e6171055e" />
+    <World ref="e7a448cd-d607-4eb2-b200-858d919a1c43" />
+    <World ref="f9d63fc2-657a-4373-ac87-00e9f29ec87a" />
+    <World ref="61f80776-0cb2-469f-8caa-4ef190eb2f82" />
+    <World ref="7cb0bdc7-873a-49af-8f1c-235f37064a84" />
+    <World ref="ac038d03-0f50-4b94-93d4-00eb4b7a958a" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="8" luminosity="0.00101" temperature="2600" age="4" stablelifespan="1019.802" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="2.173191E+08" mass="2.04888883053301E+29" surfacegravity="0" orbitalradius="299304443560" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Neutu" id="87fa9155-28bc-4394-8380-dd7fcc55ccc2">
+    <DirectionalLight ref="46d0144d-a1fd-4d45-bbae-2b2774e34c46" />
+    <ModelSequence ref="f04c4e0e-8cd9-4018-a139-297c8d5db40e" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="87fa9155-28bc-4394-8380-dd7fcc55ccc2_corona_animation" id="a7334688-c1ed-4405-bf60-9be1c13bf226">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="82c1f8ac-36da-422b-bbc4-45560278f276" id="82c1f8ac-36da-422b-bbc4-45560278f276" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="9cc65168-6238-4a22-b6f1-75380be8d8fd" id="9cc65168-6238-4a22-b6f1-75380be8d8fd" />
+    </Animation>
+    <World ref="a57c0841-7b0b-4893-a5fa-3ea2cb524903" />
+    <World ref="08389e49-42b0-4b1f-92a3-e626611fc711" />
+    <World ref="f75338fc-5ee8-4c95-ab47-7ff0eb9d49ca" />
+    <World ref="8d4af072-2c9e-444c-af94-eeab09889eac" />
+    <World ref="fd858bb5-f6ef-4bf6-b9d0-f5fa20669a9f" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="1" luminosity="0.050496" temperature="3750" age="10" stablelifespan="102.0833" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="7.386691E+08" mass="1.0252663273376E+30" surfacegravity="0" orbitalradius="224766172560" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Plurnur" id="d0bf4046-c990-4788-8b87-c0f62adb8e9e">
+    <DirectionalLight ref="fbf62c00-5f4b-41d9-816e-aecccce5a780" />
+    <ModelSequence ref="45e2a4d1-b277-4f62-9e91-e4dac39aaa3e" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="d0bf4046-c990-4788-8b87-c0f62adb8e9e_corona_animation" id="1c4bc278-ca64-434b-bee0-d1dc83056acf">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="dbaab9ed-06ee-49c0-9739-252269a232d2" id="dbaab9ed-06ee-49c0-9739-252269a232d2" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="33eb1495-67b9-4eb4-b189-0ccd62b4a4d4" id="33eb1495-67b9-4eb4-b189-0ccd62b4a4d4" />
+    </Animation>
+    <World ref="437973c1-a09f-4dd1-b801-c4e6c3693c8a" />
+    <World ref="495abe12-df2d-47b2-a19c-f825074d21a8" />
+    <World ref="317adbde-1975-40a4-a5ca-a884c27d9246" />
+    <World ref="f5806722-8b6a-4a46-96ff-e8df6199318d" />
+    <World ref="e6b0e89d-0bd7-438b-a4aa-a2dbb3fe7c81" />
+    <World ref="943cf3ca-5ce3-4964-851f-e4a7bc340246" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="3" spectralsubtype="8" luminosity="1.957" temperature="6150" age="1.5" stablelifespan="5.308125" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.709736E+09" mass="2.06613271896756E+30" surfacegravity="0" orbitalradius="11220696768160" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Topit" id="9d00520e-3f51-4dc4-aee8-646da5f3cbb1">
+    <DirectionalLight ref="9bbecfe6-6305-4f50-b480-afc393045453" />
+    <ModelSequence ref="083d6244-6a9d-491b-81c9-963f415dacdd" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="9d00520e-3f51-4dc4-aee8-646da5f3cbb1_corona_animation" id="e7e44813-c7d7-407f-950c-e763988a2880">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="33eb6579-483a-4529-a6e3-f6f57e4c5bef" id="33eb6579-483a-4529-a6e3-f6f57e4c5bef" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="c1632dfe-464f-41b1-8010-ccc7e64357b1" id="c1632dfe-464f-41b1-8010-ccc7e64357b1" />
+    </Animation>
+    <World ref="f1084b16-61c8-49cb-9924-28da936ba992" />
+    <World ref="f6148254-4320-45f8-9381-04f4e0621417" />
+    <World ref="fa7bb420-6e90-4208-80a2-891dff727dac" />
+    <World ref="963f3b59-4eb8-43bd-bfce-881511e5cdb0" />
+    <World ref="d866983b-8287-42bb-941c-86507fa50588" />
+    <World ref="d711f40f-c138-4d96-a8c7-fd1568421cb0" />
+    <World ref="d531a7cc-4ecc-41a4-bd18-8983980f0483" />
+  </Star>
+  <Star luminosityclass="0" spectraltype="6" spectralsubtype="5" luminosity="288000" temperature="3200" age="4.5" stablelifespan="0.000653125" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="2.422592E+12" mass="3.74115922257398E+31" surfacegravity="0" orbitalradius="1248695331688" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Rth" id="06430e80-4e10-4d3c-b43a-47913846e4de">
+    <DirectionalLight ref="4829e1dc-013b-42c0-bd05-7d42a8c5f542" />
+    <ModelSequence ref="0a656c85-2428-46b0-b419-435aa006577a" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="06430e80-4e10-4d3c-b43a-47913846e4de_corona_animation" id="04f8bc11-c45f-4eee-96e7-3cda77309b1d">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="92eec9ce-5b33-460b-8652-e0c2bf2164f7" id="92eec9ce-5b33-460b-8652-e0c2bf2164f7" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="99ffcdf9-1236-4a66-924a-ee35152432f2" id="99ffcdf9-1236-4a66-924a-ee35152432f2" />
+    </Animation>
+    <World ref="212a2265-6886-4f83-bdfb-056f795b17f5" />
+    <World ref="cbbc3111-b03a-443d-a8be-c87e28e9eda3" />
+    <World ref="c5de9c3c-be14-45db-bd39-e34e8ecd0fe3" />
+    <World ref="53687f4e-50b6-4a74-aa9e-7a97917358f5" />
+    <World ref="92bd184b-3880-4e91-9f26-2a1ea9e36ffd" />
+    <World ref="e4f6a175-260e-447e-b128-dbe997d7f21a" />
+    <World ref="0b89c4a4-d1b5-4d91-a94b-b2173f2e3e08" />
+    <World ref="a80cc128-41a4-4d7c-996a-8226bf693a5c" />
+    <World ref="b35b6c01-9436-4183-96c6-f28393837442" />
+    <World ref="2d34ec85-96fd-4add-ba21-6a06775adfa4" />
+    <World ref="314dedd4-3e33-4370-98bc-b576eb99c415" />
+    <World ref="1524dd1f-108d-4a5e-99a2-0539511a894e" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="2" luminosity="0.038824" temperature="3620" age="7.5" stablelifespan="109.7826" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="6.950515E+08" mass="8.47738320643191E+29" surfacegravity="0" orbitalradius="1496326445728" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uptut" id="aad9938d-7e01-47e6-afa7-670314c021d3">
+    <DirectionalLight ref="1afabcc3-0d93-4e47-ac11-8d1eb7e2156c" />
+    <ModelSequence ref="591c966f-8d98-42fb-9e1d-5bf21b1afda4" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="aad9938d-7e01-47e6-afa7-670314c021d3_corona_animation" id="ea332fdc-4f35-44a6-b6b7-34614e3dc09e">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="88431b9f-f3b3-45e6-a354-d4f0c27452fd" id="88431b9f-f3b3-45e6-a354-d4f0c27452fd" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="94f25c98-0664-4bff-b98d-36611d48601c" id="94f25c98-0664-4bff-b98d-36611d48601c" />
+    </Animation>
+    <World ref="5980b4ed-9e4f-416f-85d5-a3b8b97b1cf5" />
+    <World ref="3736e42b-602d-4b58-8b57-d2649536564d" />
+    <World ref="9e838043-400c-4f22-a63d-722fd5900d6d" />
+    <World ref="ca1e6f64-0002-4693-afb8-dad7420a8366" />
+    <World ref="54aa32b8-9d46-4718-b6ab-b5687ec785b3" />
+    <World ref="bc134dd4-b57c-44b4-a6fb-f2a2722ab63b" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="3" spectralsubtype="4" luminosity="3.1856" temperature="6550" age="9.5" stablelifespan="8.553491" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.923078E+09" mass="5.41943206597001E+30" surfacegravity="0" orbitalradius="7480856139136" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Pioplu" id="d810b8db-6c27-42dd-bb5a-0d4d3fbf2df2">
+    <DirectionalLight ref="814410df-9e20-4275-9f72-595e6b2e369c" />
+    <ModelSequence ref="7c9c113d-bc26-4aac-8384-a95ef795c66b" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="d810b8db-6c27-42dd-bb5a-0d4d3fbf2df2_corona_animation" id="50ca921e-1f34-4a9f-9c92-f4b46f3a74b9">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="bbb5ac5e-83c7-4ea8-801e-65e746f290fb" id="bbb5ac5e-83c7-4ea8-801e-65e746f290fb" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="9f30c33f-45ab-4794-8fe8-fe8e5e7df1f5" id="9f30c33f-45ab-4794-8fe8-fe8e5e7df1f5" />
+    </Animation>
+    <World ref="58231c8c-fc21-4895-a985-9d1a55bdf283" />
+    <World ref="ace730d3-91fc-4164-ab4f-1110389b8746" />
+    <World ref="c2047b3a-c820-49b3-b5b0-797215e0e311" />
+    <World ref="c9ce0e74-e50a-4119-b8cc-ba7b123c5ac4" />
+    <World ref="05beb4cb-d6d1-4d18-87df-36a399c228c0" />
+    <World ref="a0a31ca7-209d-4bdd-81f9-f70b73f0043c" />
+    <World ref="7f1a6a72-4c7d-494d-897f-39682707c7e9" />
+    <World ref="13680918-674c-4093-a02b-a97ca5e84058" />
+    <World ref="8724e6c5-53ac-4af5-add8-257bdd02421d" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="4" luminosity="0.021186" temperature="3350" age="9.5" stablelifespan="86.86868" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="5.995409E+08" mass="3.66055079204001E+29" surfacegravity="0" orbitalradius="112498189464" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Upiopl" id="4d897e4a-989d-406d-96a3-84337a36f6e7">
+    <DirectionalLight ref="756d363c-62b7-4fbc-974c-28695cea8293" />
+    <ModelSequence ref="0d389ad6-dbd2-451b-a06a-929cf78b1fdd" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="4d897e4a-989d-406d-96a3-84337a36f6e7_corona_animation" id="5e33adc9-3f7a-4077-878e-5b63e9a7bab5">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="cd5acc0e-6ed8-4f06-980a-12fe03aecb36" id="cd5acc0e-6ed8-4f06-980a-12fe03aecb36" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="d84f610d-a4cd-44dd-8f2c-de9a5cbd9289" id="d84f610d-a4cd-44dd-8f2c-de9a5cbd9289" />
+    </Animation>
+    <World ref="dd04f490-579b-475b-8688-d13a2b05812e" />
+    <World ref="e548fc47-7abf-423c-a8e2-5b57bf778cdb" />
+    <World ref="1f6e65c0-5775-488e-8939-18029f291bb1" />
+    <World ref="96fc4ec4-498b-438e-bfc7-7f68b7742d67" />
+    <World ref="e100c21b-1eae-4292-a6a1-2dbf180e39e8" />
+  </Star>
+  <Star luminosityclass="2" spectraltype="2" spectralsubtype="5" luminosity="43" temperature="8200" age="8" stablelifespan="0.4" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="4.508068E+09" mass="3.42096367355809E+30" surfacegravity="0" orbitalradius="8230138094176" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Usanu" id="5c76783d-8fd6-48df-8396-5d5a37c97278">
+    <DirectionalLight ref="8687a317-a22e-43b8-854e-847b88b1498e" />
+    <ModelSequence ref="fe34a207-42c2-4311-a734-d6ec2131a4a2" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="5c76783d-8fd6-48df-8396-5d5a37c97278_corona_animation" id="4e001d45-c9cd-4c03-8a42-43d514c02e72">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="ee2d6881-fe09-434c-99b0-251812c230b7" id="ee2d6881-fe09-434c-99b0-251812c230b7" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="55891820-2e94-4cd3-a96d-4dd2eab10d91" id="55891820-2e94-4cd3-a96d-4dd2eab10d91" />
+    </Animation>
+    <World ref="ebd5bc98-9c65-4e57-bff7-e2d31f693761" />
+    <World ref="c871aecc-9b43-42b5-9c2e-073fefd38983" />
+    <World ref="3994b576-4696-4afc-9d17-6ce647c58ee0" />
+    <World ref="a6ea8504-b350-4fff-b09a-d83e8a98ef66" />
+    <World ref="7ff771c2-1323-432a-97f9-d7fa96817934" />
+    <World ref="ccb53693-7147-4ae5-bc2b-d586d7a49e39" />
+    <World ref="f401da92-8a53-434e-94cc-eafed6cb1c88" />
+    <World ref="74a53044-d796-4a67-bae0-a495e055d13e" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="6" spectralsubtype="0" luminosity="0.05418" temperature="3900" age="1" stablelifespan="120.9302" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="7.07415E+08" mass="1.30316708924636E+30" surfacegravity="0" orbitalradius="11573549833.8365" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Veurn" id="ccba174d-fa18-4373-82c5-107cfc2dba48">
+    <DirectionalLight ref="8387802f-f30f-4135-847d-8a7ee7244a1e" />
+    <ModelSequence ref="fb668c14-c663-4c0e-ba39-01dc8e1867a7" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="ccba174d-fa18-4373-82c5-107cfc2dba48_corona_animation" id="c33a2a4c-a7a0-4bef-bab6-65460156cfed">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="d513bc4d-0522-4dee-afd3-bb8dae9617b4" id="d513bc4d-0522-4dee-afd3-bb8dae9617b4" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="c1ee7dc2-0fcc-4323-89da-664c6c141d2a" id="c1ee7dc2-0fcc-4323-89da-664c6c141d2a" />
+    </Animation>
+    <World ref="a4af3a82-efcf-4c3c-bd18-6de96ce7b5c8" />
+    <World ref="55f3d0fc-68a1-429d-992e-6ddb32a093c6" />
+    <World ref="9ed85f50-a642-4531-8ae0-340632bb1166" />
+    <World ref="34886410-54f9-4565-93b1-c6c4f710f5d4" />
+    <World ref="928c58ef-8e65-41d1-8010-87e3581313c3" />
+    <World ref="d541f920-c771-49b2-a829-3505bdd11763" />
+    <World ref="bef78840-072f-432c-be60-3f30c20af3a7" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="3" spectralsubtype="4" luminosity="3.5838" temperature="6550" age="1.5" stablelifespan="6.725822" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="2.039733E+09" mass="4.79412736863073E+30" surfacegravity="0" orbitalradius="7480914466304" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Lusan" id="0b5fd3eb-69ab-4b6b-931d-3d94b1263671">
+    <DirectionalLight ref="977ed5c7-34b5-49cf-a99c-26a6a8a45e53" />
+    <ModelSequence ref="8a902138-9400-4e9d-b848-98f10b6e81db" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="0b5fd3eb-69ab-4b6b-931d-3d94b1263671_corona_animation" id="35cda82f-ec64-4d34-8090-3b5f827043cf">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="6c9c7143-0d70-42e3-9112-3444a1683b6c" id="6c9c7143-0d70-42e3-9112-3444a1683b6c" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="33f7e7da-0269-4fc2-8886-40ea42876962" id="33f7e7da-0269-4fc2-8886-40ea42876962" />
+    </Animation>
+    <World ref="5b0b22d1-5143-4460-9b2d-afe354ea98d1" />
+    <World ref="c7584d1c-267b-42c9-9338-2dca64aada2d" />
+    <World ref="f03ffad2-5eed-4092-a556-f0db5a326d5b" />
+    <World ref="d924322a-d98f-49e3-8c8b-6c881a12b3dc" />
+    <World ref="1bb3b272-b1f4-4386-a638-6065573ad393" />
+    <World ref="839db644-89b3-470d-9464-220c6e1e141c" />
+    <World ref="4108fa44-25b1-4004-9fe6-9db9b4694417" />
+    <World ref="d4a42279-9576-4cf7-b70e-d06491c2f314" />
+  </Star>
+  <Star luminosityclass="4" spectraltype="2" spectralsubtype="3" luminosity="27.3" temperature="8700" age="4.5" stablelifespan="1.593407" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="3.191E+09" mass="8.65183305548404E+30" surfacegravity="0" orbitalradius="300791283904" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="33554540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;False" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Tupiopa" id="2f6efafb-3e2a-4f34-b0f3-274850401421">
+    <DirectionalLight ref="c992a479-8566-48e8-bc02-0187029313fb" />
+    <ModelSequence ref="9eb00169-aaaf-42fd-8955-bd4303c39c5b" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="2f6efafb-3e2a-4f34-b0f3-274850401421_corona_animation" id="4a589165-52e6-45e3-9ea3-f7b2d4c3dd68">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="63845c14-35f4-4c24-9cb5-56f431ea48bb" id="63845c14-35f4-4c24-9cb5-56f431ea48bb" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="3fbabf5c-ef89-4801-ad5e-7f9c6f936f9f" id="3fbabf5c-ef89-4801-ad5e-7f9c6f936f9f" />
+    </Animation>
+    <World ref="1ba26a0b-e584-4e76-a4d4-0ab6298db54f" />
+    <World ref="c9be470d-2c92-4864-b917-86e3def2e1dd" />
+    <World ref="b357ff2f-cd8a-4da5-8e3f-dbcfcfd14ed8" />
+    <World ref="eca64731-5056-452f-bcdd-4ae1caf9f09b" />
+    <World ref="8e67c88b-e385-4893-9018-fcd360304a81" />
+    <World ref="90e15d73-95e5-4fb6-a923-9c969553a784" />
+    <World ref="807d12dc-8e6d-4cd3-b1e8-aab116bf405b" />
+    <World ref="bdfca874-8b9b-45cc-98bf-8e9100781a67" />
+    <World ref="dfb3255d-c649-4e8f-b419-856d2d6263d9" />
+    <World ref="e8f9cb7a-4e0e-4d8e-af6d-435a86bb7241" />
+  </Star>
+</root>

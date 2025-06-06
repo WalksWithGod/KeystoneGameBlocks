@@ -1,0 +1,17 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'axis_arrow.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+d 1.000000
+
+newmtl Color_F11
+Ka 0.000000 0.000000 0.000000
+Kd 0.298039 0.600000 0.000000
+Ks 0.000000 0.000000 0.000000
+d 1.000000
+
+#EOF

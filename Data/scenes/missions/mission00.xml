@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <section name = "info">
+	<key name = "name" display="Name" value="A Shakedown Cruise" type="System.String" />
+	<key name = "description" display="Description" value="This is a test mission." type="System.String" />
+</section>
+ <section name = "briefing" >
+      <key name = "text" display="Mission Briefing" value="caesar\entities\vehicles\yorktown.kgbentity" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+   <section name="vehicle_spawnpoint_0">
+      <key name = "region" display="region" value="Zone,0,0,0" type= "System.String" />
+      <key name = "prefab" display="prefab" value="caesar\entities\vehicles\yorktown.kgbentity" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+      <key name= "count" display="count" value = "1" type="System.Int" />
+      <key name = "trigger" display="on start" value = "on start" type="" />
+  </section>
+   <section name="vehicle_spawnpoint_1">
+      <key name = "region" display="region" value="Zone,0,0,0" type= "System.String" />
+      <key name = "prefab" display="prefab" value="caesar\entities\vehicles\test3.kgbentity" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+  <section name="objectivepoint0">
+      <key name = "region" display="Region" value="Zone,0,0,0" />
+      <key name = "translation" display="Objective Point 0" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+      <key name = "radius" display="Radius" value = "1000" />
+   </section>
+   <section name="objective0">
+      <key name = "Find UEA Calypso" display="Find UEA Calypso" value="" type="System.String" />
+      <key name = "Primary" display="Objective Priority" value="0" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+   <section name="objective1">
+      <key name = "Find UEA Calypso" display="Find UEA Calypso" value="" type="System.String" />
+      <key name = "Primary" display="Objective Priority" value="0" type="System.String" />
+      <key name = "objective point" display= "Objective Point" value = "objectivepoint2" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+   <section name="objective2">
+      <key name = "Find UEA Calypso" display="Find UEA Calypso" value="" type="System.String" />
+      <key name = "Primary" display="Objective Priority" value="0" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+  <section name = "objective3" >
+      <key name = "waypoint" display="Waypoint" value="waypoint4" />
+      <key name = "RTB with less than 15% casualties" display="Find UEA Calypso" value="" type="System.String" />
+      <key name = "Primary" display="Objective Priority" value="0" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+  <section name = "objective4" >
+      <key name = "Eliminate hostile forces" display="Find UEA Calypso" value="" type="System.String" />
+      <key name = "Secondary" display="Objective Priority" value="1" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+  <section name = "enemy objective 0" >
+      <key name = "Eliminate hostile forces" display="Find UEA Calypso" value="" type="System.String" />
+      <key name = "Secondary" display="Objective Priority" value="1" type="System.String" />
+      <key name = "translation" display="translation" value="0.1137255,0.1058824,0.0627451" type="Vector3d" />
+  </section>
+</configuration>

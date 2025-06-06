@@ -1,0 +1,105 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'Gladiator_engine_bare.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Color_007
+Ka 0.227451 0.227451 0.227451
+Kd 0.227451 0.227451 0.227451
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+
+newmtl 0048_PaleGoldenrod1
+Ka 0.933333 0.909804 0.666667
+Kd 0.933333 0.909804 0.666667
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+
+newmtl Metal_Steel_Textured_White
+Ka 0.749020 0.749020 0.749020
+Kd 0.749020 0.749020 0.749020
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Steel_Textured_White.PNG
+
+newmtl Metal_Seamed
+Ka 0.462745 0.466667 0.450980
+Kd 0.462745 0.466667 0.450980
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Seamed.PNG
+
+newmtl Metal_Steel_Textured
+Ka 0.415686 0.431373 0.482353
+Kd 0.415686 0.431373 0.482353
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Steel_Textured.PNG
+
+newmtl Metal_Panel
+Ka 0.560784 0.615686 0.619608
+Kd 0.560784 0.615686 0.619608
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Panel.PNG
+
+newmtl Metal_Aluminum_Grooved
+Ka 0.819608 0.784314 0.607843
+Kd 0.819608 0.784314 0.607843
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Aluminum_Grooved.PNG
+
+newmtl Metal_Corrogated_Shiny
+Ka 0.756863 0.756863 0.756863
+Kd 0.756863 0.756863 0.756863
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Corrogated_Shiny.PNG
+
+newmtl Color_A10
+Ka 0.800000 0.639216 0.639216
+Kd 0.800000 0.639216 0.639216
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+
+newmtl Metal_Rusted
+Ka 0.721569 0.458824 0.356863
+Kd 0.721569 0.458824 0.356863
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Rusted.PNG
+
+newmtl Metal_Aluminum_Anodized
+Ka 0.792157 0.819608 0.858824
+Kd 0.792157 0.819608 0.858824
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Aluminum_Anodized.PNG
+
+newmtl Metal_Embossed
+Ka 0.564706 0.564706 0.564706
+Kd 0.564706 0.564706 0.564706
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Gladiator_engine_bare_Textures/Metal_Embossed.PNG
+
+#EOF

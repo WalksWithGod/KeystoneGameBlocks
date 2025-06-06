@@ -1,0 +1,549 @@
+newmtl crate01
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd crate01_d.tga
+
+newmtl panel04
+Ka 1 1 1
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd panel04_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl cable_mat
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.8 0.8 0.8
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd cable_d.tga
+
+newmtl decoration_mat
+Ka 0 0 0
+Kd 1 1 1
+Ks 1 1 1
+Ni 1
+Ns 250
+Tf 1 1 1
+d 1
+map_Kd decoration_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl door01
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd door01_D.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl door02
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd door02_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl door02
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd door02_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 0.941176 0.643137 0.0823529
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl door02
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd door02_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl door03
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd door03_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl door03
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd door03_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 0.941176 0.643137 0.0823529
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl door03
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd door03_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl fire_ext_mat
+Ka 0 0 0
+Kd 1 1 1
+Ks 1.5 1.5 1.5
+Ni 1
+Ns 399
+Tf 1 1 1
+d 1
+map_Kd fire_ext_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl base02
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 250
+Tf 1 1 1
+d 1
+map_Kd base02_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl base02
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd base02_d.tga
+
+newmtl light02_mat
+Ka 0 0 0
+Kd 0.988235 0.756863 0.529412
+Ks 1.2 1.2 1.2
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd light02_d.tga
+
+newmtl light01
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd light01_d.tga
+
+newmtl monitor_mat
+Ka 0 0 0
+Kd 0.505882 0.505882 0.505882
+Ks 0.2 0.2 0.2
+Ni 1
+Ns 200
+Tf 1 1 1
+d 1
+map_Kd monitor_d.tga
+
+newmtl screen
+Ka 0 0 0
+Kd 0.141176 0.141176 0.141176
+Ks 0.8 0.8 0.8
+Ni 1
+Ns 600
+Tf 1 1 1
+d 1
+map_Kd monitor_e.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl motor_mat
+Ka 0 0 0
+Kd 1 1 1
+Ks 1.2 1.2 1.2
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd motor_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl pipe_end
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd pipe_end_d.tga
+
+newmtl pipe_tex
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd pipe_tex_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl pipe_end
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd pipe_end_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl panel04
+Ka 1 1 1
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+map_Kd panel04_d.tga
+
+newmtl pipe_end
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd pipe_end_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl pipe_end
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd pipe_end_d.tga
+
+newmtl pipe_tex
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd pipe_tex_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl grate
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd grate_d.tga
+
+newmtl mat_step
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0.4 0.4 0.4
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd steps_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl panel_vent
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd panel_vent01_d.tga
+
+newmtl panel05_d
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd panel05_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 0.941176 0.643137 0.0823529
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl wall01
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.8 0.8 0.8
+Ni 1
+Ns 399
+Tf 1 1 1
+d 1
+map_Kd wall01_d.tga
+map_bump wall01_h.tga
+bump wall01_h.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl low_mat
+Ka 0 0 0
+Kd 0.764706 0.764706 0.764706
+Ks 0.2 0.2 0.2
+Ni 1
+Ns 600
+Tf 1 1 1
+d 1
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+
+newmtl rim
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+Ns 300
+Tf 1 1 1
+d 1
+map_Kd rim01_d.tga
+
+newmtl wall03_mat
+Ka 0 0 0
+Kd 0.752941 0.752941 0.752941
+Ks 0.2 0.2 0.2
+Ni 1
+Ns 600
+Tf 1 1 1
+d 1
+map_Kd wall03_d.tga
+
+newmtl wall03_mat2
+Ka 0 0 0
+Kd 0.752941 0.752941 0.752941
+Ks 0.2 0.2 0.2
+Ni 1
+Ns 600
+Tf 1 1 1
+d 1
+map_Kd wall03_column_d.tga
+
+newmtl col_mat
+Ka 0 0 0
+Kd 1 0.501961 0
+Ks 0 0 0
+Ni 1
+Ns 400
+Tf 1 1 1
+d 1
+

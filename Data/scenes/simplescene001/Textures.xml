@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\entities\accommodations\Metal_Aluminum_Anodized.PNG" flags="3" name="DIFFUSE" id="e05bc6b3-fd76-4d1d-8634-7fa0491fc14b">
+    <Texture ref="caesar\entities\accommodations\Metal_Aluminum_Anodized.PNG" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\entities\accommodations\Metal_Aluminum_Anodized.PNG" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\entities\accommodations\Metal_Corrogated_Shiny1.PNG" flags="3" name="DIFFUSE" id="03c66503-8a90-4522-bd9c-37bacb156675">
+    <Texture ref="caesar\entities\accommodations\Metal_Corrogated_Shiny1.PNG" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\entities\accommodations\Metal_Corrogated_Shiny1.PNG" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\entities\accommodations\Metal_Rough.PNG" flags="3" name="DIFFUSE" id="05d3e958-0e1f-444a-b8cc-8775a7289f34">
+    <Texture ref="caesar\entities\accommodations\Metal_Rough.PNG" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\entities\accommodations\Metal_Rough.PNG" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\actors\aiko_1_D2.dds" flags="3" name="DIFFUSE" id="650457cf-5a0d-4d87-8a91-a0507daf6e48">
+    <Texture ref="caesar\actors\aiko_1_D2.dds" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\actors\aiko_1_D2.dds" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\actors\aiko_1_D2.dds" flags="3" name="DIFFUSE" id="8c1cd594-1bd5-476e-bba7-20529b6c6822">
+    <Texture ref="caesar\actors\aiko_1_D2.dds" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\actors\Col-X_2_D2.dds" flags="3" name="DIFFUSE" id="198a5b46-daf6-401d-9849-87a8629ec456">
+    <Texture ref="caesar\actors\Col-X_2_D2.dds" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\actors\Col-X_2_D2.dds" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\actors\Col-X_2_D2.dds" flags="3" name="DIFFUSE" id="73160ff1-8f00-4f6a-9f20-747634926fc9">
+    <Texture ref="caesar\actors\Col-X_2_D2.dds" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\actors\Col-X_2_D2.dds" flags="3" name="DIFFUSE" id="4a03835c-08e9-411b-8e11-6a66541ff576">
+    <Texture ref="caesar\actors\Col-X_2_D2.dds" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\actors\Col-X_2_D2.dds" flags="3" name="DIFFUSE" id="d22acfc1-1aaf-488e-916c-b1a645e2495a">
+    <Texture ref="caesar\actors\Col-X_2_D2.dds" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\laser.png" flags="3" name="DIFFUSE" id="0211e78f-5cc4-4773-98d6-a1655d9eec95">
+    <Texture ref="caesar\textures\laser.png" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\textures\laser.png" />
+</root>

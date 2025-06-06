@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Material diffuse="0.52549,0.023529,0.023529,1" ambient="0.108955,0.108955,0.108955,1" specular="0.5215687,0.01960784,0.02352941,1" emissive="0,0,0,1" opacity="1" power="0" flags="7" name="MATERIAL" id="Material.001" />
+  <Material diffuse="0.603922,0.843137,0.898039,1" ambient="0.261135,0.261135,0.261135,1" specular="0.603922,0.843137,0.898039,1" emissive="0,0,0,1" opacity="1" power="0" flags="7" name="MATERIAL" id="Material__2" />
+  <Material diffuse="0.694118,0.101961,0.345098,1" ambient="0.164407,0.164407,0.164407,1" specular="0.694118,0.101961,0.345098,1" emissive="0,0,0,1" opacity="1" power="0" flags="7" name="MATERIAL" id="Material__3" />
+  <Material diffuse="0.662745,0.662745,0.662745,1" ambient="0,0,0,1" specular="0,0,0,1" emissive="0,0,0,1" opacity="1" power="125.4902" flags="7" name="MATERIAL" id="LightGray3" />
+  <Material diffuse="0.168627,0.160784,0.168627,1" ambient="0,0,0,1" specular="0,0,0,1" emissive="0,0,0,1" opacity="1" power="125.4902" flags="7" name="MATERIAL" id="Burnt_Umber3" />
+  <Material diffuse="0.8,0.8,0.8,1" ambient="0,0,0,1" specular="0.8,0.8,0.8,1" emissive="0,0,0,1" opacity="1" power="0" flags="7" name="MATERIAL" id="None" />
+  <Material diffuse="0,0,0,0" ambient="0,0,1,1" specular="0,0,0,0" emissive="0,0,1,1" opacity="0.2509804" power="12" flags="7" name="MATERIAL" id="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+</root>

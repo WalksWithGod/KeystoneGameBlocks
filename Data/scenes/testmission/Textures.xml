@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\stardx7.png" flags="3" name="DIFFUSE" id="7042d03e-745a-4370-9c19-6bb63a2083ac">
+    <Texture ref="caesar\Shaders\Planet\stardx7.png" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\stardx7.png" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\stardx7.png" flags="3" name="DIFFUSE" id="ba194216-8651-41ca-b6e2-9ce3801e4449">
+    <Texture ref="caesar\Shaders\Planet\stardx7.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\stardx7.png" flags="3" name="DIFFUSE" id="4d7a0739-aff9-43c2-8d6c-83c388170610">
+    <Texture ref="caesar\Shaders\Planet\stardx7.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="False" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\SunWhite.dds" flags="3" name="DIFFUSE" id="676d0af9-1e5f-45d3-acec-3cf729e34c8b">
+    <Texture ref="caesar\textures\SunWhite.dds" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\textures\SunWhite.dds" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="False" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\SunWhite.dds" flags="3" name="DIFFUSE" id="e7b56453-bbb8-4be7-857e-bff384d1496b">
+    <Texture ref="caesar\textures\SunWhite.dds" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="2ab49b33-a12b-49be-8ec3-a8105307e28c">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="c2967094-c15a-4e6b-8498-6d40a4854e15">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\MoonNormal.dds" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="7a40c47d-b7a0-4f3b-a992-32a138b86c82">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="7cac905d-3a7c-4b33-8d33-f7a89f604684">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\2k_earth_daymap.jpg" flags="3" name="DIFFUSE" id="9e488261-f313-43e0-a08b-746600a43143">
+    <Texture ref="caesar\Shaders\Planet\2k_earth_daymap.jpg" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\2k_earth_daymap.jpg" />
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\flatnormalmap.dds" flags="3" name="NORMALMAP" id="45f149fe-86c4-4b7f-9a69-8db87d49a951">
+    <Texture ref="caesar\Shaders\Planet\flatnormalmap.dds" />
+  </NormalMap>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\flatnormalmap.dds" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="26c5b481-584d-42ed-85a7-e396ddfb82bd">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="c3b22e12-1477-4b36-b637-4ad6e966b04f">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\2k_earth_daymap.jpg" flags="3" name="DIFFUSE" id="17728481-d053-421f-a059-8c6df9f41dd9">
+    <Texture ref="caesar\Shaders\Planet\2k_earth_daymap.jpg" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\flatnormalmap.dds" flags="3" name="NORMALMAP" id="d0d95cf8-1459-4f81-ace1-172bee833ac4">
+    <Texture ref="caesar\Shaders\Planet\flatnormalmap.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\neptune_current.dds" flags="3" name="DIFFUSE" id="1a23ced6-4d45-49d9-94d5-f1e12970becf">
+    <Texture ref="caesar\Shaders\Planet\neptune_current.dds" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\neptune_current.dds" />
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\flatnormalmap.dds" flags="3" name="NORMALMAP" id="2b7ebfc6-8557-4958-ba1a-6a61e659cfd8">
+    <Texture ref="caesar\Shaders\Planet\flatnormalmap.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\ring.png" flags="3" name="DIFFUSE" id="07eac720-e4ef-4164-b254-558b8a027e6e">
+    <Texture ref="caesar\Shaders\Planet\ring.png" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\ring.png" />
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\noise.jpg" flags="3" name="NORMALMAP" id="342241a0-3d8a-4cff-8ba4-9ec630d7f0a5">
+    <Texture ref="caesar\Shaders\Planet\noise.jpg" />
+  </NormalMap>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\Shaders\Planet\noise.jpg" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="d494fa14-a565-4c1f-b0b4-a1620422b795">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="8e21b020-609d-40b3-ad86-a4e2c747a8ec">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="4c67001f-2c75-4ccb-949c-212b18bfc7ec">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="ac25a9c3-fe27-48d1-83ed-60d194e8ad7f">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="9830f16d-ee06-4bb0-8ec5-978ed8e3f9cb">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="d7b837b8-2ba2-4e73-aeab-207040a60c34">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="226452cd-670a-4c65-bae4-7d1f463c6a8a">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="c5647645-1979-4d60-a037-15c523d42315">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\neptune_current.dds" flags="3" name="DIFFUSE" id="0c7225fa-dc39-485c-8319-eac59c617fda">
+    <Texture ref="caesar\Shaders\Planet\neptune_current.dds" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\flatnormalmap.dds" flags="3" name="NORMALMAP" id="3ea92850-9349-40a2-8f13-30bd853b7f6e">
+    <Texture ref="caesar\Shaders\Planet\flatnormalmap.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\ring.png" flags="3" name="DIFFUSE" id="56f0aa1e-c4ea-40e2-b71c-5a4201874141">
+    <Texture ref="caesar\Shaders\Planet\ring.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\noise.jpg" flags="3" name="NORMALMAP" id="626646d7-f3b8-422c-a3e8-438b1f2b72dd">
+    <Texture ref="caesar\Shaders\Planet\noise.jpg" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\neptune_current.dds" flags="3" name="DIFFUSE" id="e983d419-e843-466e-8c1c-1732e8bb4222">
+    <Texture ref="caesar\Shaders\Planet\neptune_current.dds" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\flatnormalmap.dds" flags="3" name="NORMALMAP" id="da5e5fe1-94f7-44d0-8f5c-6d4ee9ae0578">
+    <Texture ref="caesar\Shaders\Planet\flatnormalmap.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\ring.png" flags="3" name="DIFFUSE" id="c5b419d6-fdb1-4402-8d94-f141db9345dc">
+    <Texture ref="caesar\Shaders\Planet\ring.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\noise.jpg" flags="3" name="NORMALMAP" id="58cc2bd8-234a-4bcb-95a4-531ba421f116">
+    <Texture ref="caesar\Shaders\Planet\noise.jpg" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\neptune_current.dds" flags="3" name="DIFFUSE" id="921e1358-7fb6-42f1-b0f6-e5804c2578d4">
+    <Texture ref="caesar\Shaders\Planet\neptune_current.dds" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\flatnormalmap.dds" flags="3" name="NORMALMAP" id="634352a3-184d-4edc-b74e-cb40bf0270af">
+    <Texture ref="caesar\Shaders\Planet\flatnormalmap.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\ring.png" flags="3" name="DIFFUSE" id="30afd0da-91d5-458a-a9c5-2cf3eff1feba">
+    <Texture ref="caesar\Shaders\Planet\ring.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\noise.jpg" flags="3" name="NORMALMAP" id="0c7f9834-e3b8-4f0f-bed7-50a4c2bc2df6">
+    <Texture ref="caesar\Shaders\Planet\noise.jpg" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="86061fd0-7f9c-4316-9551-0062409d7584">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="b37a7082-eca6-4d80-833b-e2d8f62571ea">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" flags="3" name="DIFFUSE" id="6c7261a8-7bce-45eb-9b03-c045bf02dbad">
+    <Texture ref="caesar\Shaders\Planet\planet_Miners_Moon_4138.png" />
+  </Diffuse>
+  <NormalMap tscale="1,1" toffset="0,0" trotation="0" texture="caesar\Shaders\Planet\MoonNormal.dds" flags="3" name="NORMALMAP" id="f8d1164d-c927-4c7f-8692-165762fed5f8">
+    <Texture ref="caesar\Shaders\Planet\MoonNormal.dds" />
+  </NormalMap>
+</root>

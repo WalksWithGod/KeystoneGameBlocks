@@ -1,0 +1,216 @@
+using System;
+using Keystone.Types;
+using Keystone.Utilities;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class MotionField : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		// add a persistant variable
+		// todo: would be nice if the main difference between a property and a variable
+		// was just a flag in the PropertySpec that indicated it's category type.
+		
+		string category = "public properties";
+		
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[5];
+		// name, type, default value
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, (object)"Motion Field");
+		properties[1] = new PropertySpec("fieldtype", typeof(int).Name, category, 0);
+		
+		// changing the particle count, how could we get this to Add/Remove particles from the field?
+		// we could invalidate the mesh3d and reload it with new settings...
+		
+		properties[2] = new PropertySpec("particlecount", typeof(int).Name, category, 10000);
+		properties[3] = new PropertySpec("visibledistance", typeof(double).Name, category, 50000);
+
+		// todo: can we add an actual array of Vector3d particle positions here? 
+		// then we could easily get/set the array values but how do we then
+		// assign those values to the positions in the mesh?  A pointsprite mesh should
+		// or could have a method to SetPositionArray()  like minimesh perhaps
+		// So we would need to query for the mesh id?
+		
+		category = "private variables";
+		properties[4] = new PropertySpec("particletexture", typeof(string).Name, category,(object)"");
+
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+		
+		
+		
+		// create a test rule using a Delegate rule
+		//EntityAPI.AddRule (
+		//	domainObjectID, "description", new SimpleRule(1, delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+			
+		
+		EntityAPI.AddRule (domainObjectID, "description",
+			new SimpleRule(1, Rule_Description));
+			
+		// create a test rule that uses the Validate script method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+						
+		// some fields may emit radiation or some other effect
+		EntityAPI.CreateTransmitter(domainObjectID, "radiation", 2);
+		
+		// add consumptions
+		//EntityAPI.AssignConsumption()
+		//	- and consumption is a broad term for any stimulus or product (synonymous i think)
+		//    such as antimatter fuel or kinetic damage consumption
+		//	- radar or other active sensor scan (and may emit a return signal)
+		//  
+		
+		// add production
+		//EntityAPI.AssignProduction();
+		
+		// define any stores
+		//EntityAPI.DefineProductStore();
+	}
+	
+	#region Rules
+	private static bool Rule_Description(object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+				
+	}
+	#endregion
+
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+		return entityID;
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+		return entityID;
+	}
+	
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}	
+	#endregion
+	
+	// Updates the build statistics
+	public static void BuildUpdate (string domainObjectID)
+	{
+		// configuring the list of proeprty grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+		// todo: reconfigure the star's properties upon change of width and other parameters?
+		// I don't think we will support in 1.0 because it requires too much to change when it comes to
+		// habital zones changing and planets being out of position and possibly being consumed by the star
+	}	
+
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+				
+		// consume sensor emissions making it difficult for players/npcs to scan
+		
+		// produce radiation
+		
+		
+		// NOTE: unlike lens flare, motion fields need to be bound to a single viewport
+		// because we must persist the previous values of the particles between frames.
+		
+		// position the individual particles in the field with respect to the camera
+		
+	}
+	
+	
+	public static void OnRender (string contextID, string entityID, string modelID, string shaderID, 
+	Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+		Vector3d cameraPosition = GraphicsAPI.GetCameraPosition (contextID);
+		Vector3d forward = GraphicsAPI.GetCameraLook(contextID);
+		
+		// todo: should try to get the mesh by name?  Then we can retrieve it's vertex data
+		// and reposition them
+		// todo: however to do that, we would need a way to create that field from here and get the name
+		// or a way to just get closest descendant by type (eg Mesh3d)
+		
+		// get particle position data
+		var tmp = EntityAPI.GetCustomPropertyValue(entityID, "positiondata");
+		if (tmp == null || (tmp is Vector3d[] == false) return;
+		
+		Vector3d[] data = (Vector3d[])tmp;
+		
+		for (int i = 0; i < data.Length; i++)
+		{
+			Vector3d direction = data[i].Position - cameraPosition;
+			// instance.Normalize() both Normalizes instance and returns length
+			double distance = direction.Normalize();
+
+			// if the particle is no longer in front of the camera, move it out to the front and at 
+			// a 260 units away
+			if (Vector3d.DotProduct(direction, forward) < 0d)
+			{
+				Vector3d position = RandomHelper.RandomVector(); // Random returns normalized random vector
+				float num3 = 32f + (204.8f * ((float) Global.Instance.rand.NextDouble()));
+				data[i].Position = (Vector3d) ((cameraPosition + (forward * 260f)) + (position * num3));
+			}
+			// if the particle is still in front of the camera BUT is now beyond a certain range
+			// (eg if we're moving backwards) then 
+			else if (distance > 400f)
+			{
+				Vector3d position = RandomHelper.RandomVector(); // Random returns normalized random vector
+				float num4 = 32f + (32f * ((float) Global.Instance.rand.NextDouble()));
+				data[i].Position = (Vector3d) ((cameraPosition + (forward * -40f)) + (position * num4));
+			}
+		}
+			
+		// assign the position data back 
+		// TODO: Wait, maybe we dont assign to entity, we assign it to the Mesh3d
+		// so how do we get the mesh3d?  
+		EntityAPI.SetCustomPropertyValue(entityID, "positiondata", data);
+			
+		//System.Diagnostics.Debug.WriteLine ("Context = " + contextID);
+		
+		// compute flare positions for this viewport
+		int width = GraphicsAPI.GetViewportWidth(contextID);
+		int height = GraphicsAPI.GetViewportHeight(contextID);
+
+		
+		//System.Diagnostics.Debug.WriteLine ("OnRender()");	
+	}
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+				
+			// runtime properties
+			case "enableflare":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}	
+}

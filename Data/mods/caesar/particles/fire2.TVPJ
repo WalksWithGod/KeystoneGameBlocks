@@ -1,0 +1,4 @@
+<particle-system>
+  <emitter type="billboard" max-particles="100" id="0" size="32" location="0/0/0" direction="0/1/0" directional="True" randomdirectionfactor="0.3/0/0.3" power="20" lifetime="5" shape="0" texture="particles\nebula.dds" color="1,0.1,0.1,0.5" speed="50" usegravity="False" gravity="0/-0.5/0" alphachange="1" alphablending="1" alphatest="True" alpharef="0" alphadepthwrite="False" boxsize="0/0/0" sphereradius="0" looping="True">
+  </emitter>
+</particle-system>

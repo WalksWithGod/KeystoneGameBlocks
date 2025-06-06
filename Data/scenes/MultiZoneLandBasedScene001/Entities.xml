@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ModeledEntity fixedscreensize="0" entityflags="92" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Sky" id="d8d8fa4c-24af-4edc-bff5-a1ae0038aa08">
+    <Model ref="8948c784-f640-4dc4-ade5-87c6b98c109d" />
+  </ModeledEntity>
+</root>

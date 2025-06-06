@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-89979.5546875,-89990.8046875,-89990.203125,89975.5859375,89928.8671875,89976.203125" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="7f5daa24-01cd-4ffc-a267-d9d816de6d48">
+    <Model ref="db805b12-dfe7-491a-bb92-f1f51ed5cd40" />
+    <Model ref="e30ac4de-956e-40a2-aa84-48cbd02c7e63" />
+    <Model ref="400d3d4a-3028-4d3e-829a-f69ac6be1f0f" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-89979.5546875,-89990.8046875,-89990.203125,89975.5859375,89928.8671875,89976.203125" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="db805b12-dfe7-491a-bb92-f1f51ed5cd40">
+    <DefaultAppearance ref="e05ac444-9750-42f6-aa75-6ed787e4ecb0" />
+    <Mesh3d ref="caesar\meshes\pointsprites\starfield0.tvm" />
+  </Model>
+  <Model cullmode="0" modelflags="12" boundingbox="-89912.453125,-89588.5078125,-89408.125,89628.828125,89756.703125,88771.1484375" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="e30ac4de-956e-40a2-aa84-48cbd02c7e63">
+    <DefaultAppearance ref="ef0d550f-079d-4b32-847e-3592705a26ab" />
+    <Mesh3d ref="caesar\meshes\pointsprites\starfield1.tvm" />
+  </Model>
+  <Model cullmode="0" modelflags="12" boundingbox="-89962,-84862.2265625,-88400.375,89646.28125,87574.0390625,86985.9453125" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="400d3d4a-3028-4d3e-829a-f69ac6be1f0f">
+    <DefaultAppearance ref="36c8f510-ddd8-46cc-b598-2df14400fc73" />
+    <Mesh3d ref="caesar\meshes\pointsprites\starfield2.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-7.95173173449849,-7.95173173449849,-5.65685510635376,7.95173173449849,7.95173173449849,5.65685510635376" position="0,0,0" scale="696000000,696000000,696000000" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="47e224e8-e309-4a27-9145-dff69135c6f8">
+    <Model ref="13d1d1e7-1f1a-4db0-89a1-568911920b69" />
+    <Model ref="4ac5658d-289f-4e36-bb9d-16689afc0779" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-5.65685510635376,-5.65685510635376,-5.65685510635376,5.65685510635376,5.65685510635376,5.65685510635376" position="0,0,0" scale="1,1,1" rotation="0,0,0.331360939939806,0.94350406860925" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="corona1" id="13d1d1e7-1f1a-4db0-89a1-568911920b69">
+    <DefaultAppearance ref="74ab6c8b-bd02-4b84-a280-b5092595757a" />
+    <Billboard ref="pbillboard_2_11.31371_11.31371_True" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-5.65685510635376,-5.65685510635376,-5.65685510635376,5.65685510635376,5.65685510635376,5.65685510635376" position="0,0,0" scale="1,1,1" rotation="0,0,-0.331296405381978,-0.943526730824824" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="corona2" id="4ac5658d-289f-4e36-bb9d-16689afc0779">
+    <DefaultAppearance ref="e1888a37-0193-403b-9696-d5b3c8379ec1" />
+    <Billboard ref="pbillboard_2_11.31371_11.31371_True" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="244,244,244" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_de71b651-3f06-4847-9e47-f48cda70fe98">
+    <Model ref="c624c752-0280-4235-a9f4-cb1eea6e44ee" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Mercury_world" id="c624c752-0280-4235-a9f4-cb1eea6e44ee">
+    <DefaultAppearance ref="a268da3c-d5c2-4254-9b39-704490264f7a" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="6051800,6051800,6051800" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_e3cfd2f1-5b56-4cf3-a3f5-fc65cf36a21a">
+    <Model ref="9559e59b-df6b-44d1-8547-57b4ffce8fb9" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Venus_world" id="9559e59b-df6b-44d1-8547-57b4ffce8fb9">
+    <DefaultAppearance ref="bd069e5f-b110-4c34-9a0f-938443c25ae8" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1.08,-1.08,-1.08,1.08,1.08,1.08" position="0,0,0" scale="6378150,6378150,6378150" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_aaa6fdc4-d7d1-4d0d-a7c5-0184c039d490">
+    <Model ref="337fb117-f159-4be0-9ce2-a8918162b760" />
+    <Model ref="135d33eb-4708-45cb-a47f-533be8087397" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Earth_world" id="337fb117-f159-4be0-9ce2-a8918162b760">
+    <DefaultAppearance ref="e102a7e2-bfea-4fcf-849f-f52019f8a093" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1.08,1.08,1.08" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Earth_atmosphere" id="135d33eb-4708-45cb-a47f-533be8087397">
+    <Mesh3d ref="psphere_1_150_150_256" />
+    <DefaultAppearance ref="1e20c701-ff72-4c36-b397-62144b3a2b3b" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1738000,1738000,1738000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_b9c145bd-d8e8-41ac-a83a-72fe18838978">
+    <Model ref="555a77b1-9cb4-4da7-8e8c-24b0807df4a0" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Moon_world" id="555a77b1-9cb4-4da7-8e8c-24b0807df4a0">
+    <DefaultAppearance ref="ffadbd31-b16d-4ff1-b302-7485d54cfbfa" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1.08,-1.08,-1.08,1.08,1.08,1.08" position="0,0,0" scale="3397000,3397000,3397000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_e58fb81c-8890-407a-b85a-0627dd3155aa">
+    <Model ref="ca3e2a45-8139-4dba-953d-a3b41e3a7aab" />
+    <Model ref="ae6c2ddf-8442-4c9a-90c3-c16ed26e618d" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Mars_world" id="ca3e2a45-8139-4dba-953d-a3b41e3a7aab">
+    <DefaultAppearance ref="07bc7ee8-374e-4c36-b47e-514e5a08e93b" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1.08,1.08,1.08" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Mars_atmosphere" id="ae6c2ddf-8442-4c9a-90c3-c16ed26e618d">
+    <Mesh3d ref="psphere_1_150_150_256" />
+    <DefaultAppearance ref="a33962bc-6504-4cb2-a260-173a2fc2212a" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-7.74999926090241,-1,-7.74999926090241,7.74999926090241,1,7.74999926090241" position="0,0,0" scale="71422,71422,71422" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_73f67eb0-18f0-49c9-b408-359fb8d2346a">
+    <Model ref="0247bbee-3662-4b4c-977c-7059c432f85c" />
+    <Model ref="84555b8a-0975-476c-8d92-c6997bea9c6c" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Jupiter_world" id="0247bbee-3662-4b4c-977c-7059c432f85c">
+    <DefaultAppearance ref="9abca60d-03af-4cc1-b92c-aa4abb2802c3" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-4.99999952316284,0,-4.99999952316284,4.99999952316284,0.0999999940395355,4.99999952316284" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Jupiter_rings" id="84555b8a-0975-476c-8d92-c6997bea9c6c">
+    <DefaultAppearance ref="40482c92-9a7b-4f39-ac96-f1a61433b8bc" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1833000,1833000,1833000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_98850db8-8c1b-4a0d-831d-b50b8a8ef99c">
+    <Model ref="73410029-e171-4342-8858-c848a381a071" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Io_world" id="73410029-e171-4342-8858-c848a381a071">
+    <DefaultAppearance ref="fff06531-69f4-4bc0-adf7-a58d6a830e78" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1560800,1560800,1560800" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_74e021f8-f802-4a3d-bee5-81f81cea2099">
+    <Model ref="fafd2f9c-fadb-4dcd-8393-0ab5d2a0713e" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Europa_world" id="fafd2f9c-fadb-4dcd-8393-0ab5d2a0713e">
+    <DefaultAppearance ref="ce57d74f-16e4-4c42-808e-44f852482b74" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="2631200,2631200,2631200" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_24d9cb91-6f7c-4a40-ae2e-05a0f7e661fb">
+    <Model ref="ae7d260b-a583-4526-98d1-a285e721e75b" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Ganymede_world" id="ae7d260b-a583-4526-98d1-a285e721e75b">
+    <DefaultAppearance ref="f011ecd7-549e-4e90-845f-39e3481c74e5" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="2410300,2410300,2410300" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_55b86eb2-3f3d-4157-ab54-eab1d124070d">
+    <Model ref="d54b0c32-b6cb-4bf1-8de7-dccefe09fb26" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Callisto_world" id="d54b0c32-b6cb-4bf1-8de7-dccefe09fb26">
+    <DefaultAppearance ref="0f4bc0c7-cd57-4b1c-b360-30c20525c987" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-7.74999926090241,-1,-7.74999926090241,7.74999926090241,1,7.74999926090241" position="0,0,0" scale="60268000,60268000,60268000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_3be0f6fb-e1f1-416b-bb23-f791f1f37b0f">
+    <Model ref="50259e4b-0048-439e-a547-d8473c8248db" />
+    <Model ref="6646e83a-b836-4f8e-b90f-e2529eb93763" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Saturn_world" id="50259e4b-0048-439e-a547-d8473c8248db">
+    <DefaultAppearance ref="f41d8dfa-c6d5-4e2d-b36a-02721476ed5b" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-4.99999952316284,0,-4.99999952316284,4.99999952316284,0.0999999940395355,4.99999952316284" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Saturn_rings" id="6646e83a-b836-4f8e-b90f-e2529eb93763">
+    <DefaultAppearance ref="9c1133f6-1e0b-40e4-960e-7d2378f77614" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-7.74999926090241,-1,-7.74999926090241,7.74999926090241,1,7.74999926090241" position="0,0,0" scale="25559000,25559000,25559000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_bd63b9e4-c91d-4a58-ae53-eef0c6e78265">
+    <Model ref="5c58f571-687c-4734-ac56-bb4ad5f99d8c" />
+    <Model ref="2bc5e0f6-7e2c-49b8-91c2-5010e457cdd8" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uranus_world" id="5c58f571-687c-4734-ac56-bb4ad5f99d8c">
+    <DefaultAppearance ref="a5e04e4d-e190-4aa3-8b37-f45cf1c61160" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-4.99999952316284,0,-4.99999952316284,4.99999952316284,0.0999999940395355,4.99999952316284" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uranus_rings" id="2bc5e0f6-7e2c-49b8-91c2-5010e457cdd8">
+    <DefaultAppearance ref="1ac05c6e-506a-49b2-b9b7-d0ac9df95269" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-7.74999926090241,-1,-7.74999926090241,7.74999926090241,1,7.74999926090241" position="0,0,0" scale="24766000,24766000,24766000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_e04298eb-f208-4586-ba9d-4ab77f9005cf">
+    <Model ref="e4a14e73-364f-4284-a614-b5f3b5f57e89" />
+    <Model ref="c096354a-12c4-4263-82c8-5ccd662b2105" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Neptune_world" id="e4a14e73-364f-4284-a614-b5f3b5f57e89">
+    <DefaultAppearance ref="d0aae8e5-0638-49d6-ad0c-ce3649086ffe" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-4.99999952316284,0,-4.99999952316284,4.99999952316284,0.0999999940395355,4.99999952316284" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Neptune_rings" id="c096354a-12c4-4263-82c8-5ccd662b2105">
+    <DefaultAppearance ref="e737e54c-f278-49ab-b125-4503fefa4b62" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1137000,1137000,1137000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_a39fc0b4-b77d-49d0-8b26-3282fb56bbaa">
+    <Model ref="21bf9d60-0830-4367-abde-2d9d233b125b" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Pluto_world" id="21bf9d60-0830-4367-abde-2d9d233b125b">
+    <DefaultAppearance ref="bee157ce-29c6-4836-be8c-85db435b332e" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1163000,1163000,1163000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_dc525810-5c24-4ffb-9ba2-48312c9933d0">
+    <Model ref="6714b625-9914-498e-acbd-a8c81f6b6c7d" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Eris_world" id="6714b625-9914-498e-acbd-a8c81f6b6c7d">
+    <DefaultAppearance ref="e6b8f4f8-92a7-425e-bede-0d4f78df407c" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+</root>

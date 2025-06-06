@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Root regiondiameterx="74799002943488" regiondiametery="74799002943488" regiondiameterz="74799002943488" octreenodedepth="3" octreedepth="0" entityflags="6291484" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="-37399501471744,-37399501471744,-37399501471744,37399501471744,37399501471744,37399501471744" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="ROOT" id="1bfa89b4-385c-4c3f-906f-86081c9b1ca8">
+    <DirectionalLight ref="9fcd4ffc-ae69-4069-b812-e3dfebb07efd" />
+    <Vehicle ref="6364c82d-0f63-42d3-ba04-d6bf2e14276e" />
+    <Vehicle ref="d26d3c5e-d406-4423-83df-4b9412c1f919" />
+    <Background3D fixedscreensize="0" entityflags="16777372" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="-89532.3959457249,-89901.3010582071,-90166.1216128009,90397.3931167751,89932.0036292929,89624.0658871991" position="403.643116775099,28.6208167929486,-229.520050300941" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="starfield" id="starfield_23a9c09d-847b-4b87-b2dd-60383743be24">
+      <ModelSequence ref="c904ef92-9013-4cee-9bba-36c25e1002d5" />
+    </Background3D>
+    <StellarSystem ref="44fe57c7-f9f6-4672-8d0c-6bf30b648f30" />
+  </Root>
+</root>

@@ -1,0 +1,380 @@
+using System;
+using Game01.GameObjects;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class DayNightCycle_Sun : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		string category = "public properties";
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[4];
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "day/night cycle sun");
+		
+		category = "private variables";
+		properties[1] = new PropertySpec("hexflare", typeof(string).Name, category,(object)@"caesar\shaders\Sky\HexaFlare.jpg");
+		properties[2] = new PropertySpec("circleflare", typeof(string).Name, category, (object)@"caesar\shaders\Sky\circleflare.jpg");
+		properties[3] = new PropertySpec("rainbowcircleflare", typeof(string).Name, category, (object)@"caesar\shaders\Sky\rainbowcircleflare.jpg");
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{	
+		// set stats flag as dirty so OnUpdate() will call UpdateStats() first time through
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+		
+		// Entity FLAGS (as opposed to Component flags) should be set here as they are per entity
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.ExplicitEvents, true);
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.EF_Dynamic, false);
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+		return entityID;
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+	
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		return "<html><body>TODO: ATMOSPHERE</body></html>";
+			
+	}
+	
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+	
+	#region Rules
+	private static bool Rule_Description(object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);		
+	}	
+	#endregion
+
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}	
+	#endregion
+	
+	#region Build statistics
+	// Updates the build statistics
+	public static void UpdateStats (string entityID)
+	{
+		// configuring the list of proeprty grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,false);
+	}	
+	#endregion
+	
+	#region Run-time	
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// NOTE: if simulation is paused, graphics can still render, but this
+		//       OnUpdate() will not be called.
+		// NOTE: If simulation is NOT paused, this OnUpdate() will be called
+		//       as many times per entity to satisfy fixed timestep settings!
+		//       Thus it is important to keep this function optimized!
+		// NOTE: We shouldn't be too afraid of complex entities like engines & hardpoints 
+		//       for exterior thrusters because even though this does represent 
+		//       relatively complex ship design, it is still a very modest, and
+		//       controlled, and contained way of extending the game as a platform.
+		//       It's like in Tribes.  Ultimately the modding was still grounded
+		//       by the rules of the system.  The system rules were immuteable.
+		//       That is the most important thing to remember about this approach.  
+		//       The system rules must make sense, they must contrain freedom,
+		//       or else it ends up being like Unity3d.  
+
+		string parentID = (string)EntityAPI.GetParentID(entityID);
+		object tmp = EntityAPI.GetCustomPropertyValue (parentID, "sunposition");
+		if (tmp == null) return;
+		
+		float intensity = (float)EntityAPI.GetCustomPropertyValue(parentID, "sunintensity");
+		if (intensity <= 0.49f) 
+			EntityAPI.SetVisible(entityID, false);
+		else
+			EntityAPI.SetVisible(entityID, true);
+			
+		Vector3d sunPosition = (Vector3d)tmp;
+		EntityAPI.SetPropertyValue (entityID, "position", sunPosition);
+	}
+	
+	
+	public static void OnRender (string contextID, string entityID, string modelID, string shaderID, 
+								Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+		//System.Diagnostics.Debug.WriteLine ("OnRender()");	
+		if (EntityAPI.GetVisible (entityID) == false)
+			return;
+			
+		// check for frustum visibility of star billboard
+		// for billboards, we might be able to do 2d screenspace frustum test
+		if (GraphicsAPI.IsVisible (contextID, entityID) == false) return;
+		
+		// if partially occluded, do not draw flares. 
+		// check for occlusion behind collidable objects such as terrain, trees, houses (not clouds and atmosphere)
+		bool occluded = GraphicsAPI.IsOccluded (contextID, entityID, modelID, cameraSpacePosition);
+		if (occluded) return;
+		
+		//System.Diagnostics.Debug.WriteLine ("Context = " + contextID);
+		const float PERCENTAGE_SCREEN_WIDTH = 0.4f; 
+		
+	    // get the direction and distance to the star
+		double distance;
+		Vector3d toStar = Vector3d.Normalize(cameraSpacePosition, out distance); // Vector3d.Normalize(cameraPosition - starPosition);
+
+		// if the angle is too extreme, we do not draw the flare
+		// but we also scale the size by the angle
+		// Set the size of the flares depending on viewport size and a dot product
+        Vector3d normedLookAt = GraphicsAPI.GetCameraLook(contextID);
+		Vector3d billboardNormal = -normedLookAt;
+       	float dotProduct = (float)Vector3d.DotProduct(billboardNormal, toStar);
+		if (dotProduct > -0.8)
+			// we are not facing the star billboard	enough to produce flares	
+			return; 
+		
+		// compute flare positions for this viewport
+		int width = GraphicsAPI.GetViewportWidth(contextID);
+		int height = GraphicsAPI.GetViewportHeight(contextID);
+
+		Vector2f viewportCenter;
+		viewportCenter.x = (float)width / 2f;
+		viewportCenter.y = (float)height / 2f;
+				
+    	Vector3d temp = GraphicsAPI.Project (contextID, toStar);
+	    Vector2f starPosition2D;
+		starPosition2D.x = (float)temp.x;
+		starPosition2D.y = (float)temp.y;
+    	    
+		// note: domain object scripts are shared...
+		// http://answers.unity3d.com/questions/17649/fade-between-textures-in-the-same-script.html
+		var hexflare = EntityAPI.GetCustomPropertyValue(entityID, "hexflare");
+		var circleflare = EntityAPI.GetCustomPropertyValue(entityID, "circleflare");
+		var rainbowcircleflare = EntityAPI.GetCustomPropertyValue(entityID, "rainbowcircleflare");
+		
+		if (hexflare == null) return;
+		if (string.IsNullOrEmpty((string)hexflare)) return;
+		
+		int color = 1;
+
+		// TODO: // Flares need additive blending and im not sure im setting that via api anywhere
+		//    _screen2D.Settings_SetTextureFilter(CONST_TV_TEXTUREFILTER.TV_FILTER_BILINEAR);
+        //    _screen2D.Settings_SetAlphaTest(false, 0);
+        //    _screen2D.Settings_SetAlphaBlending(true, CONST_TV_BLENDINGMODE.TV_BLEND_ADD);
+			
+		// glow
+//		VisualFXAPI.DrawTexturedQuad(Core._CoreClient.Globals.GetTex("Glow"),
+//      _sun2DPos.x - _sunHalfFlareSize, _sun2DPos.y - _sunHalfFlareSize,
+//      _sun2DPos.x + _sunHalfFlareSize, _sun2DPos.y + _sunHalfFlareSize,
+//      color, color, color, color);
+
+		// rays
+//		color = Core._CoreClient.Globals.RGBA(0.05f, 0.05f, 0.05f, 1f);
+//      VisualFXAPI.DrawTexturedQuad(Core._CoreClient.Globals.GetTex("Rays"),
+//      _sun2DPos.x - _sunHalfFlareSize*2f, _sun2DPos.y - _sunHalfFlareSize*2f,
+//      _sun2DPos.x + _sunHalfFlareSize*2f, _sun2DPos.y + _sunHalfFlareSize*2f,
+//      color, color, color, color);
+		
+       	int halfFlareSize = (int)(width * PERCENTAGE_SCREEN_WIDTH * (dotProduct * dotProduct * dotProduct));
+
+    	Vector2f flareVector = starPosition2D - viewportCenter;
+		
+		string hex = hexflare.ToString();
+		
+		// hexaflare 1
+		VisualFXAPI.DrawTexturedQuad (contextID, hex, 
+		starPosition2D.x + flareVector.x * -0.25f,
+		starPosition2D.y + flareVector.y * -0.25f,
+		halfFlareSize * 0.5f, 
+		halfFlareSize * 0.5f,
+        0.0f, true); //, SecondaryAlpha);
+
+		// hexaflare 2
+		VisualFXAPI.DrawTexturedQuad (contextID, hex, 
+		starPosition2D.x + flareVector.x * -0.5f,
+		starPosition2D.y + flareVector.y * -0.5f,
+		halfFlareSize * 0.9f, 
+		halfFlareSize * 0.9f,
+        1.3f, true); //, SecondaryAlpha);
+
+		// hexaflare 3
+		VisualFXAPI.DrawTexturedQuad (contextID, hex, 
+		starPosition2D.x + flareVector.x * -0.7f,
+		starPosition2D.y + flareVector.y * -0.7f,
+		halfFlareSize * 0.1f, 
+		halfFlareSize * 0.1f,
+        0.5f, true); //, SecondaryAlpha);
+
+		// hexaflare 4
+		VisualFXAPI.DrawTexturedQuad (contextID, hex, 
+		starPosition2D.x + flareVector.x * -1.25f,
+		starPosition2D.y + flareVector.y * -1.25f,
+		halfFlareSize, 
+		halfFlareSize,
+        2.75f, true); //, SecondaryAlpha);
+
+		float SecondaryColor = .4f; // Math.Max(1 - DistanceFactor, 0) / 1.5f;
+		int SecondaryAlpha = Keystone.Types.Color.RGBA(SecondaryColor, SecondaryColor, SecondaryColor, 1f);
+
+		string circle = circleflare.ToString();
+		// circle flare 1
+		VisualFXAPI.DrawTexturedQuad (contextID, circle, 
+		starPosition2D.x + flareVector.x * 0.25f,
+		  starPosition2D.y + flareVector.y * 0.25f, 
+		  halfFlareSize * 4,
+		  halfFlareSize * 4, 
+		  0, SecondaryAlpha, true);
+	    
+		// hexaflare 5
+		VisualFXAPI.DrawTexturedQuad (contextID, hex, 
+		starPosition2D.x + flareVector.x * 0.5f,
+		starPosition2D.y + flareVector.y * 0.5f, 
+		halfFlareSize * 1.5f,
+		halfFlareSize * 1.5f, 
+		2, SecondaryAlpha, true);
+
+		// circle flare 2
+		VisualFXAPI.DrawTexturedQuad (contextID, circle, 
+        starPosition2D.x + flareVector.x * -1,
+        starPosition2D.y + flareVector.y * -1, 
+        halfFlareSize * 1.4f,
+        halfFlareSize * 1.4f,
+        0, SecondaryAlpha, true);
+
+		// circle flare 3
+		VisualFXAPI.DrawTexturedQuad (contextID, circle, 
+        starPosition2D.x + flareVector.x * -2.25f,
+        starPosition2D.y + flareVector.y * -2.25f, 
+        halfFlareSize * 3.5f,
+        halfFlareSize * 3.5f,
+        0, SecondaryAlpha, true);
+
+		// rainbow circle flare 1
+		VisualFXAPI.DrawTexturedQuad (contextID, rainbowcircleflare.ToString(), 
+        starPosition2D.x + flareVector.x * -3,
+        starPosition2D.y + flareVector.y * -3, 
+        halfFlareSize * 7,
+        halfFlareSize * 7, 
+        0, SecondaryAlpha, true);                
+	}
+	#endregion
+}

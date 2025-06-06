@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Interior cellsize="2.5,3,2.5" cellcountx="25" cellcounty="9" cellcountz="41" spatialtreedepth="6" datapath="test\6364c82d-0f63-42d3-ba04-d6bf2e14276e.interior" tilecountx="16" tilecountz="16" octreedepth="6" entityflags="4236383" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\ship_interior.css" usertypeid="0" boundingbox="-31.25,-13.5,-51.25,31.25,13.5,51.25" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="INTERIOR" id="22619d00-17cd-458c-942c-03589f34b5cd">
+    <DirectionalLight ref="0438fbe6-02a9-4b48-af5e-1e39faecb9cd" />
+    <ModeledEntity ref="4d561a4b-5435-4342-be8d-fd07646e92bd" />
+    <ModeledEntity ref="98169869-ae4a-42d4-9b9a-6a5f218cea66" />
+    <ModeledEntity ref="717065ca-c216-47eb-9c7b-5ed8dcfcc2ba" />
+    <BonedEntity ref="d8a008b6-fc4a-4c25-b636-46f1e5eee17e" />
+    <BonedEntity ref="11eada10-c21d-4b05-a223-38563236e326" />
+    <BonedEntity ref="9a42f616-8f81-499e-a0e7-a613ec9034aa" />
+  </Interior>
+  <Interior cellsize="2.5,3,2.5" cellcountx="25" cellcounty="9" cellcountz="41" spatialtreedepth="6" datapath="test\d26d3c5e-d406-4423-83df-4b9412c1f919.interior" tilecountx="16" tilecountz="16" octreedepth="6" entityflags="4236383" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\ship_interior.css" usertypeid="0" boundingbox="-31.25,-13.5,-51.25,31.25,13.5,51.25" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="INTERIOR" id="cf991aa3-28f8-47ff-94f0-c88057379de7">
+    <DirectionalLight ref="bf0ba4b4-2ca0-4dfd-9f6a-865414233c61" />
+    <ModeledEntity ref="1f6f78a9-c53e-4baa-94d9-cef207a6c521" />
+    <ModeledEntity ref="43ed61ba-ad21-41dd-af09-4d25b4669118" />
+    <ModeledEntity ref="7013cbb3-ade6-4a8c-8336-2cd2c8f8f790" />
+    <BonedEntity ref="ff5c9fb3-466a-4305-b540-fde5cf9526b7" />
+    <BonedEntity ref="f71f8b36-9fcf-4a34-844c-354373503199" />
+    <BonedEntity ref="8b42249a-8dcc-4ad9-9d9e-b9542f90e5ad" />
+  </Interior>
+</root>

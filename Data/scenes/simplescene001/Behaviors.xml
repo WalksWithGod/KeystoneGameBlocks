@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Sequence flags="7" name="SEQUENCE" id="caesar\behaviors\vehicle_patrol.kgbbehavior">
+    <Script ref="caesar\scripts_behaviors\npc_vehicle_patrol.css" />
+  </Sequence>
+  <Script flags="7" name="SCRIPT" id="caesar\scripts_behaviors\npc_vehicle_patrol.css" />
+  <Sequence flags="6" name="SEQUENCE" id="caesar\behaviors\npc_crew_default.kgbbehavior">
+    <Script ref="caesar\scripts_behaviors\npc_random_path.css" />
+    <Script ref="caesar\scripts_behaviors\npc_follow_path.css" />
+  </Sequence>
+  <Script flags="7" name="SCRIPT" id="caesar\scripts_behaviors\npc_random_path.css" />
+  <Script flags="7" name="SCRIPT" id="caesar\scripts_behaviors\npc_follow_path.css" />
+</root>

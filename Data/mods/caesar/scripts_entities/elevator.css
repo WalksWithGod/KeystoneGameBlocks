@@ -1,0 +1,305 @@
+using System;
+using Game01;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class Elevator : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[7];
+		properties[0] = new PropertySpec("description", typeof(string).Name, (object)"elevator");
+		properties[1] = new PropertySpec("weight", typeof(double).Name, 0);
+		properties[2] = new PropertySpec("cost", typeof(double).Name, 0);
+		properties[3] = new PropertySpec("volume", typeof(double).Name, 0);
+		properties[4] = new PropertySpec("surfacearea", typeof(double).Name, 0);
+		properties[5] = new PropertySpec("hitpoints", typeof(int).Name, 0);
+		
+		// states
+		properties[6] = new PropertySpec("inuse", typeof(bool).Name, false);
+		// what about current floor? is that just part of AIBlackboard data?
+		
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+		
+		
+		// create a test rule using a Delegate rule handler
+		//EntityAPI.AddRule (
+		//	domainObjectID, "description", new SimpleRule(1, delegate {return (null, (string)properties[0].DefaultValue).Length != 0; }));
+			
+		// NOTE: we don't need the EntityID at this point, it just needs to be in the signature of the callback handler method
+		// TODO: collision events like "OnEnter" or "OnExit" are not designed to be added in this way.  They must be intrinsic
+		//       to the Script just like InitializeEntity(), OnUpdate(), OnRender(), etc. 
+	//	EntityAPI.PropertyChangedEventAdd (domainObjectID, "onenter", Event_OnEnter);
+		
+		// TODO: should collision / trigger area events be intrinsic functions to the script?
+		
+		
+		// todo: shouldn't the rule signature include the EntityID? Some rule's may require us to
+		//       look up the value of other custom properties and for us to do that, we need the EntityID
+		// NOTE: we don't need the EntityID to add the rule, it just needs to be in the signature of the callback handler method
+		EntityAPI.AddRule (domainObjectID, "description", new SimpleRule(1, Rule_Description));
+			
+		// create a test rule that uses the Validate script method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+		
+		// queryable mods
+		// assign values to specific "mod" properties that the Interior will query
+		// to determine what modifications this domainobject will have on the parent.
+		// so for a Interior parent, maybe it modifies the map layer
+		// for some other entity, maybe it modifies a crew members skill level.
+		
+		// so Interior can query the layout of this entity
+		// it can query the allowed places it can be set/orientation <-- there's no need to put that in the DomainObject explicitly
+		
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{
+		//EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.AutoGenerateFootprint, true);
+		
+	}
+	
+	
+	#region Events
+	// TODO: collision events like "OnEnter" or "OnExit" are not designed to be added in this way.  They must be intrinsic
+	//       to the Script just like InitializeEntity(), OnUpdate(), OnRender(), etc. 
+	private static void Event_OnEnter (string entityID)
+	{
+		System.Diagnostics.Debug.WriteLine("npc.Event_OnEnter()");
+		
+	}	
+	#endregion
+	
+	
+	#region Rules
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+		
+		
+	}
+	#endregion
+
+	public static object Register(string entityID, string parentID)
+	{
+		// TODO: verify Register() is called during deserialization of ship interior
+
+		// make modifications 
+		
+		// collapse the floor and ceiling cells beneath this hatch
+		System.Diagnostics.Debug.WriteLine ("elevator.css OnAddedToParent()");
+		return entityID;
+	}
+	
+	public static object UnRegister (string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		System.Diagnostics.Debug.WriteLine ("elevator.css OnAddedToParent()");
+
+		bool parentIsInterior = EntityAPI.GetTypename(parentID) == "Interior";
+		if (!parentIsInterior) return entityID;
+
+		// TODO: verify OnAddedToParent() is called during deserialization of ship interior
+		// TODO: verify if we move the elevator, a remove and re-add occurs so that this function is called again
+		// make modifications 
+		
+		// which dictionary will the parent Interior add this to? how will it know? (eg that this elevator takes up an entire cell)
+
+		
+		// find the cell index this entity is being added to based on it's 3D worldspace position.
+		// is the elementIndex assigned to the child elevator prior to this script getting called?
+		uint elementIndex = EntityAPI.CellMap_GetCellIndexFromWorldPosition(parentID, entityID);
+
+		// make modifications 
+		
+		// TODO: we need to update the stats for this elevator - weight, volume, cost, etc
+		
+		// TODO: is the ceiling using the wrong elementIndex? should it be cellCountX * cellCountZ less?
+		     
+		// collapse the ceiling cells above this elevator within the parent Interor
+		// or would it be better for the Interior to query mods that this component should make and then
+		// perform the collapses itself?  I think for now, it's not important which we choose.
+		// On the one hand i'd expect only the Interior to allow those sorts of modifications like,
+		// for instance a general rule that says if a component takes up an entire cell, collapse the floor and ceiling beneath it.
+		// To an extent, the game has to trust the scripts that modders make.  
+		EntityAPI.CellMap_SetCeilingCollapseState(parentID, elementIndex, true);
+		// apply the footprint data to this cell?  I think that occurs automatically within Interior.AddChild() -> RegisterEntity
+
+
+		// when removing, how do we restore the previous floor and ceiling tiles texture lookup index?
+		// should we cache that here in our custom properties so that we know?  Or wait, those 
+		// values are still in the collapsed floor and ceiling... they are just collapsed not deleted.
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+		System.Diagnostics.Debug.WriteLine ("elevator.css OnRemovedFromParent()");
+
+		bool parentIsInterior = EntityAPI.GetTypename(parentID) == "Interior";
+		if (!parentIsInterior) return entityID;
+		
+		uint elementIndex = EntityAPI.CellMap_GetCellIndexFromWorldPosition(parentID, entityID);
+
+		// TODO: do we necessarily want to undo the collapse when removing the elevator?
+		// I don't think so. i think user should manually replace the floor above the elevator if they choose too
+		EntityAPI.CellMap_SetCeilingCollapseState(parentID, elementIndex, false);
+		return entityID;
+
+	}
+	
+
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_LIFT;}	
+	
+	// NOTE: I believe this function never gets called.  Components positions are determined by ship_interior.css.QueryCellPlacement()
+	// TODO: is tilelocation the top, left most tile for components that take up many tiles?
+	// TODO: I think when applying footprints, i apply from bottom, left most tile and increment along the positive x,y axis
+	public static Vector3d[] QueryCellPlacement (string entityID, string interiorID, Vector3d position, byte cellRotation)
+	{
+		// NOTE: I believe this function never gets called.  Components positions are determined by ship_interior.css.QueryCellPlacement()
+		const double TO_DEGREES = 360d / 256d;
+		Vector3d scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+		
+		rotation.x = 0;
+		rotation.y = (double)(cellRotation * TO_DEGREES);
+		rotation.z = 0;
+				
+		// TODO: I think elevators should be forced to snap in the center of the Cell (not tile!)
+		//       so we need to get the cell that contains the "position" and then get the Cell
+		//       dimensions, and use the center of that as the position.
+		Vector3d size = EntityAPI.CellMap_GetTileSize (interiorID);
+		
+		// assuming this elevator component has it's Y position at floor (not centered in it's bbox)
+		// then we need to lower position.y we return to be on the floor of the cell.		
+		double floorHeight = position.y - (size.y * 0.5);
+		position.y = floorHeight;
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation};
+		// TODO: verify elevator cannot exist on empty cell, unless it connects to another elevator beneath it.
+	}
+	#endregion
+	
+	#region Build statistics
+	private static void UpdateStats (string entityID)
+	{
+		// configuring the list of property grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+		
+	}	
+	#endregion
+	
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// manage movement state and determine if we are moving, which direction, where we need to stop etc.
+		
+		// when the elevator stops at floors, do we update the tile_attributes of those tiles so that
+		// they are traversable?  shouldn't they already be traversable so long as the elevator shaft
+		// extends to that floor?  because pathing will be looking for traversable areas.
+		// Portals through the doors would be very similar to regular Doors.
+		
+		// do we need an in game "panel" with buttons, for calling the elevator?
+		
+		// how do we get the NPCs to rise up with the elevator?
+		// - i.e. does the elevator need to know which NPCs are passengers on it and then adjust their Y axis position to match?
+		//        - do we maintain a list of passengers during event where a passenger triggers the "onEnter" event?
+		
+		// how do we make a trigger for when NPC passengers enter and exit the elevator?
+		// (INCIDENTALLY, how do we trigger NPCs to update in the quadtree particularly when switching floors )
+		// movementstate for the waypoint in front of the elevator should have "waiting_for_elevator"
+		// and then eventually entering_elevator and exiting_elevator
+		
+                                                                                                                                                                                                                                                                                                                                                                  		// if our elevator pad consists of an Area with tileValue and our NPCs move through the ship
+		// altering tilemap values (occupying and unoccupying) then the trigger would be when entering the elevator "Area"
+		// but i dont think i want NPCs modifying the tiles because they move too much. hrm.
+		
+		// can the elevator pad register a trigger within the Interior.cs when it arrives at a floor?
+		
+		// can the NPC then determine when it enters a traversable_component and call a trigger?
+		// - this would require us tracking the NPCs movements within the Interior and checking against registered triggers.
+		
+		// how do we know when the door opens so that we can enter and when it closes so that it can start to move?
+		
+		// does the elevator movement between floors cause it to change quadtree location?
+		
+		// how do we know which floors the elevator reaches?
+		// i could set min/max floor properties in the custom properties which would be unique to each elevator
+		
+	}
+	
+	// TODO: I should be passing in an EntityID here as well as the ScriptIID because some validation
+	//       may rely on the values of other custom property values which are unique per Entity instance.
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "inuse":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}	
+	
+
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+		switch (index)
+		{
+			default:
+				break;
+		}
+	}
+}
+
+

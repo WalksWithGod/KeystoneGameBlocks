@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ModeledEntity id="common.zip|meshes/terrain/dirt.kgbsegment" fixedscreensize="0" entityflags="3093" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\tile_floor.css" boundingbox="-1.33716702461243,-9.99999997475243E-07,-1.25002300739288,1.33716702461243,2.83020091056824,1.25002300739288" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="Dirt">
+    <ModelSequence ref="98bd0641-c590-4805-82a2-b021b2fee896" />
+  </ModeledEntity>
+</root>

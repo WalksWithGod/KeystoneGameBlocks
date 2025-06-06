@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Diffuse id="74721dea-c29a-4a95-b1b0-17ec990f193e" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Texture id="caesar\textures\terrain\marsslope.jpg" texturetype="0" flags="7" name="TEXTURE" />
+  <Diffuse id="4d4b0933-aa21-4c14-88a5-a70704ba3241" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="720b2008-0464-40d7-a5ad-480dea23eee3" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="31642baf-a13a-4ac3-a284-f99a24b4fbcc" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="d846178c-a982-4dbe-9ee5-35ca27fcea59" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="de155644-a53c-439c-8973-d76a6e73391a" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="ccc72247-1adf-4a6c-9b74-c86eb82abc12" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="c637f3eb-09e6-443a-9091-e5bf2661dfd9" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="497de9f4-c40a-4f5b-a2e6-e0f01b23eb50" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="7dd50a16-ef54-4dbe-8021-c7b6e49d602c" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+  <Diffuse id="43d8cf8c-deaf-4bb3-968e-eca98e42c904" alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\terrain\marsslope.jpg" flags="3" name="DIFFUSE">
+    <Texture ref="caesar\textures\terrain\marsslope.jpg" />
+  </Diffuse>
+</root>

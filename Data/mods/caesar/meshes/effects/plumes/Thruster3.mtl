@@ -1,0 +1,44 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'Thruster3.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Translucent_Resin_Crush_Green
+Ka 0.407843 0.874510 0.431373
+Kd 0.407843 0.874510 0.431373
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.500000
+map_Kd Thruster3_Textures/Translucent_Resin_Crush_Green.PNG
+
+newmtl Translucent_Glass_Gold
+Ka 0.819608 1.000000 0.101961
+Kd 0.819608 1.000000 0.101961
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.500000
+map_Kd Thruster3_Textures/Translucent_Glass_Gold.PNG
+
+newmtl Translucent_Resin_Crush_Red1
+Ka 0.258824 0.811765 0.937255
+Kd 0.258824 0.811765 0.937255
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.600000
+map_Kd Thruster3_Textures/Translucent_Resin_Crush_Red1.PNG
+
+newmtl Translucent_Glass_Corrugated
+Ka 0.200000 0.968627 0.380392
+Kd 0.200000 0.968627 0.380392
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.800000
+map_Kd Thruster3_Textures/Translucent_Glass_Corrugated.PNG
+
+#EOF

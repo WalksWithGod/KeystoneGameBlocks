@@ -1,0 +1,1 @@
+update the default KGBClient.config in keyedit.proj KGBClient.config  and then delete the config here and it will be replaced with the default.

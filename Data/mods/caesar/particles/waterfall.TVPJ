@@ -1,0 +1,4 @@
+<particle-system>
+  <emitter type="billboard" max-particles="500" id="0" texture="particles\squiggles.dds" size="32" location="0/0/0" direction="0/-1/0" directional="True" randomdirectionfactor="0/1/0" power="10" lifetime="4" shape="2" color="0.2,0.5,1,1" speed="10" usegravity="True" gravity="0/-30/0" alphachange="1" alphablending="1" alphatest="True" alpharef="0" alphadepthwrite="False" boxsize="50/5/5" sphereradius="0" looping="True" />
+  <emitter type="billboard" max-particles="500" id="1" texture="particles\squiggles.dds" size="14" location="0/-200/0" direction="0/1/0" directional="True" randomdirectionfactor="0.3/1/0.2" power="70" lifetime="2.5" shape="2" color="0.5,0.7,1,1" speed="15" usegravity="True" gravity="0/-50/0" alphachange="1" alphablending="1" alphatest="False" alpharef="0" alphadepthwrite="False" boxsize="50/5/5" sphereradius="0" looping="True" />
+</particle-system>

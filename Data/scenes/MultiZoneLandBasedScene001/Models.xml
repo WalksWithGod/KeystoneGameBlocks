@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Model cullmode="0" modelflags="2" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="99998,99998,99998" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="8948c784-f640-4dc4-ade5-87c6b98c109d">
+    <Mesh3d ref="puvtstripsphere_64_16_1" />
+    <DefaultAppearance ref="429c4ae4-f216-4759-b9c1-d00b1c03e48d" />
+  </Model>
+</root>

@@ -1,0 +1,4 @@
+03-26-2015 16:44:56 | Continuing debug file on debug.txt
+03-26-2015 16:44:56 | TEXTURE MANAGER : Loading of 'particles\star1.dds' successful 'star1.dds' on index 3 
+03-26-2015 16:45:00 | START UNLOAD
+03-26-2015 16:45:00 | RESOURCE MANAGER : Engine successfully unloaded

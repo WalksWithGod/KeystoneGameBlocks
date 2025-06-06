@@ -1,0 +1,17 @@
+aiko animations
+
+0 - 19 - hit fall left
+20 - 39 - hit fall left against wall
+40 - 59 - hit fall right
+60 - 79 - hit fall right against wall
+80 - 199 - climb
+200 - 218 - land 
+219 - 229 - idle
+230 - 248 - walk
+204 - 223 - strafe left
+224 - 243 - strafe right
+244 - 262 - run
+263 -  - throw grenade
+ -  - crouch idle
+ -  - crouch walk
+ -  - crouch throw grenade

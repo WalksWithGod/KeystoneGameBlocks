@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="43b45ee5-17d0-421a-aa93-0f57f95a6b70" />
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="9303f9d0-ce45-4c84-8b08-8b1bc7e1cdfe" />
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="17ed5899-5ed1-44eb-97ef-bac44692a610" />
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="c0c24981-8d72-4c39-aa80-db0c65053e81" />
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="524bd04c-3cb9-4af4-9383-8a448fe92151" />
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="6a86d718-b91c-4396-b612-bdc3fa95be62" />
+</root>

@@ -1,0 +1,353 @@
+using System;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+// NOTE: This is the revised Floor where an entire deck on a ship is represented by a single Entity.
+public class Floor : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+	
+		//uint userResizeable = 1 << 19;
+		//EntityAPI.SetComponentFlags (domainObjectID, userResizeable | FIXED); // walls and floors can't be moved once placed.
+		//EntityAPI.SetFlags (entityID, UseInstancing | CastShadows | ReceivShadows | Pickable );
+		
+		// create the custom properties	
+		string category = "public properties";
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[11];
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "floor");
+		properties[1] = new PropertySpec("weight", typeof(double).Name, category, 0);
+		properties[2] = new PropertySpec("cost", typeof(double).Name, category, 0);
+		properties[3] = new PropertySpec("volume", typeof(double).Name, category, 0);
+		properties[4] = new PropertySpec("surfacearea", typeof(double).Name, category, 0);
+		properties[5] = new PropertySpec("health", typeof(int).Name, category, 0);
+
+		
+		category = "build"; // the following apply over entire floor
+		properties[6] = new PropertySpec("frame strength", typeof(string).Name, category, "", "Light", "", typeof (FrameStrengthConverter).AssemblyQualifiedName);
+		properties[7] = new PropertySpec("materials quality", typeof(string).Name, category, "", "", "", typeof (MaterialQualityConverter).AssemblyQualifiedName);
+		properties[8] = new PropertySpec("craftsmanship", typeof(string).Name, category, "", "", "", typeof (CraftsmanshipConverter).AssemblyQualifiedName);
+		properties[9] = new PropertySpec("tech level", typeof(int).Name, category, "", 7, "", typeof (TechLevelConverter).AssemblyQualifiedName);
+		
+		
+		
+		// living metal, biomechanical, robotic, responsive) <-- THESE CAN USUALLY BE DESCRIBED IN TERMS OF WHAT THEY CONSUME OR PRODUCE
+		//    - for robotic, i think ill be physically plotting any electrical and communications lines that will 
+		//      automatically added weight and cost
+		//		- living metal (nanobot) offers self regenerative bonus)
+		//         and consumes supplies to recover hitpoints (aka: Produces regeneration)
+		//
+		// 		- biomechanical can feel pain but can heal 
+		//        but also can consume pathogens and result in loss of hitpoints
+		// 
+		// enum FrameAttributes  // see above notes: Perhaps these function as Production/Consumption _IF_ the
+		//                       // structural frame attributes exist
+		// {
+		//		none = 0,
+		// 		robotic = 1 << 0,
+		//		responsive = 1 << 1,
+		// 		living metal= 1 << 2,
+		// 		mechanical = 1 << 3
+		// }
+		
+		category = "armor"; // the following can be added to every single tile thus an array is used
+		                    // however, these are actually a dictionary so that we can use tile index
+							// and not waste space with empty arrays
+		// struct ArmorLayer
+		// {
+		// 		DR
+		// 		PD
+		// }
+		
+		properties[10] = new PropertySpec("tilestate", typeof(StructureState[]).Name, category, 0);
+		// struct StructureState // individual wall or floor/ceiling structure
+		// {
+		//		ArmorLayer[] Armor;  
+		// 		hitpoints
+		// 		damage
+		//		doubleSided
+		//		style // style of wall, can be brick, fence, etc
+		//		TextureUV // to match the atlas sub-texture
+		// }
+
+		category = "private variables";
+			
+		category= "operations";
+		// todo: ideally if we could create a list of repairable things under the "repair" category
+		//       then we could get repair-able properties and their etas, their supply cost, etc
+		//properties[11] = new PropertySpec("repair", typeof(float).Name, category, 0.0f);		
+		
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+		
+		
+		// create a test rule using a Delegate rule
+		//EntityAPI.AddRule (
+		//	domainObjectID, "description", new SimpleRule (1, delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+			
+		
+		EntityAPI.AddRule (domainObjectID, "description",
+			new SimpleRule(1, Rule_Description));
+			
+		// create a test rule that uses the Validate script method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+		
+		// queryable mods
+		// assign values to specific "mod" properties that the celledregion will query
+		// to determine what modifications this domainobject will have on the parent.
+		// so for a celledregion parent, maybe it modifies the map layer
+		// for some other entity, maybe it modifies a crew members skill level.
+		
+		// so celledRegion can query the layout of this entity
+		// it can query the allowed places it can be set/orientation <-- there's no need to put that in the DomainObject explicitly
+		// 
+		
+		// FOOTPRINT - but what if we need a dynamic updateable footprint?  Maybe footprint and MaxFootprint can just be handled in
+		// script?  But we do want a way to QueryFootprint so we can draw it correctly based on rotation
+		//EntityAPI.AssignFootprint (new uint[] {0});  in the sims, it uses a footprint at bottom right which negates any need for a "center"  
+		
+		// MAX FOOTPRINT
+		//EntityAPI.AssignMaxFootprint (); // max footprint when scaling...
+		// just thought of a simple way to handle scaling of things like reactors and life support systems!
+		// you must define the 8 corners of the component as well as the "bed" and the "top" 
+		// The corners don't get repeated, but the top, middle and bed do.  So one design for the "bed" could be a series of
+		// cylinders or whatever.  These get repeated  (tiled) and potentially also scaled up in size.  In terms of repeating
+		// if you drag the component's scale in the Y direction, you can get another layer so care should be given when designing
+		// the overall model such that it looks "ok" in all scaling combinations.
+		
+		
+		// add consumptions
+		//EntityAPI.AssignConsumption()
+		//	- and consumption is a broad term for any stimulus or product (synonymous i think)
+		//    such as antimatter fuel or kinetic damage consumption
+		//	- radar or other active sensor scan (and may emit a return signal)
+		//  
+		
+		// add production
+		//EntityAPI.AssignProduction();
+		
+		// define any stores
+		//EntityAPI.DefineProductStore();
+	}
+	
+	#region Rules
+	private static bool Rule_Description(object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+		
+		
+	}
+	#endregion
+
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+		return entityID;
+	}
+	
+// called when the script is fully loaded and the Entity represented
+	// by this DomainObject is added to it's Parent entity
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		
+		// compute the position based on the cell
+		
+		
+		// make modifications 
+
+		// verify parent is a map and not just for example a zone
+		// region where this child entity represented by this script
+		// is just debris floating around.
+		bool parentIsMap = true; // (bool)args[1]; // what if this is an EntityFlag we can query and not an arg?
+		
+		if (parentIsMap)
+		{
+			// this establishes that the tile is walkable
+			// 
+		//	EntityAPI.CellMap_SetLayerMod (parentEntityID, "traversable", true);
+			// floor prevents us from going to bottom layer
+		//	EntityAPI.CellMap_SetLayerMod (parentEntityID, "connectivity", true); 
+			
+			// ***if this entity is damaged sufficiently, we can run an 
+			// OnDamaged script here where we can modify the map layer 
+			// to allow connectivity to the bottom or even breach hull
+			// *** That is how we deal with damage and modifying of a map
+			// layer based on the state of the entities that define 
+			// traversability and connectivity.
+			// 
+			// if this is resizable and may take up more than one tile
+			// the entity is rotated, then do we call UnRegister then Register()
+			// from within the parent?
+			
+		}
+
+			return null;
+	}	
+	
+	// called if "registered" flag is set and the Entity represented 
+	// by this DomainObject is being removed from parent entity
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+		return entityID;
+	}
+	
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_FLOOR;}
+	
+	public static Vector3d[] QueryCellPlacement (string celledRegionID, uint cellIndex, byte cellOffset, byte cellRotation)
+	{
+		Vector3d position;
+
+		// retrieve x,y,z by unflattening the cellIndex
+		uint[] axisIndices = EntityAPI.CellMap_Unflatten (celledRegionID, cellIndex);
+		
+		float[] start = EntityAPI.CellMap_GetStartIndices (celledRegionID);
+		position.x = (start[0] + axisIndices[0]);
+		position.y = (start[1] + axisIndices[1]);
+		position.z = (start[2] + axisIndices[2]);
+			
+		Vector3d size = EntityAPI.CellMap_GetCellSize (celledRegionID);
+		position *= size;
+			
+		// the position of a cell is always the center which we compute by
+		// adding the origin offset to the above start + dimensions calc
+		// recall that the sole purpose of the origin offset is to deal with odd or even number cell count 
+		// on any axis by shifting the center on the even numbered axis
+		//Vector3d originOffset = EntityAPI.CellMap_GetOriginOffset (celledRegionID);
+		//position += originOffset;
+		position.y -= size.y * .5; // for floor, we want it to be flat against bottom of cell so substract half height
+		
+		return new Vector3d[] {position}; 
+	}
+	
+	#endregion
+	
+// todo: how to set up properties for Armor and Structure
+	// 	- what if armor is a type of consumer that can get saturated and then loses its effectiveness after it's been "filled"
+	// 
+	// todo: Where/How do i enforce CelledRegion placement/position rules 
+	//		1) clearly it's the component that knows how to modify the map layer.
+	//         This is part of the knowledge of this component's "build" logic.
+	//         Clearly the CelledRegion isn't going to have this knowledge for every possible component type.
+	//         - This also means then that when adding other components on a tile, those components must
+	//          know how to organize themselves (place themselves on a table vs on teh floor) based on what
+	//          is already there. 
+	//				- that responsibility must always be on the new component being added.
+	//              - thus adding a different floor will see the previous floor and sell the previous and replace with the
+	//                new. 
+	//                - so all of this logic is in the build logic for the given thing.
+	//                   This means that we need a sound system for this build logic to be queried when placing
+	//                   a component... and with some api functions for the component to get existing map data from the
+	//                   parent celledregion
+	//					
+	//  todo:  How do i update plugin drop down boxes for ship design features that need to change based on the 
+	// 
+	// - when picking and placing a floor for example
+	// 		
+	// Updates the build statistics
+	// for args we need both domain object and entity since domain objects are shared
+	// 
+	public static void BuildUpdate (string domainObjectID)
+	{
+		// configuring the list of proeprty grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+	}	
+	
+	// public methods like Initialize, Update, BuildUpdate and some others in the future
+	// we will query for when the script is loaded and then set flags in the entity so we know
+	// which ones are callable and we dont have to dictionary "ContainsKey" or something every time
+	public static void Update (string domainObjectID)
+	{
+		// consume
+		
+		// produce		
+		
+	}
+	
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "turnon":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}
+	
+	// event called when damage is either increased or repaired
+	public static void DamageChanged (object[] args)
+	{
+		const float THRESHOLD = 0.5f;
+		
+		string entityID = (string)args[0];
+		uint maxHitPoints = (uint)args[1];
+		uint lastHitPoints = (uint)args[2];
+
+		// if total damage exceeds 50% then we are now traversable
+		int change = (int)args[3];
+		if (change == 0) return; 
+		
+		uint currentHitpoints = (uint)(lastHitPoints + change);
+		uint totalDamage = 0;
+		// if we have fewer hitpoints now then we did previously
+		if (currentHitpoints < lastHitPoints) 
+		{
+			// did we exceed threshold
+			if (totalDamage > THRESHOLD)
+			{
+				// modify the map layer
+			}
+		}
+		else // we've been (at least partially) repaired  
+		{
+		
+		}
+	}	
+}
+

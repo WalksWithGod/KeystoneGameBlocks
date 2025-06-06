@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\shaders\SkyGradient\Clouds.dds" flags="3" name="DIFFUSE" id="fc88c941-e7fd-4ace-8de9-25c4c1b97599">
+    <Texture ref="caesar\shaders\SkyGradient\Clouds.dds" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\shaders\SkyGradient\Clouds.dds" />
+</root>

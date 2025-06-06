@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <DefaultAppearance lightingmode="1" blendingmode="1" defines="GEOMETRY_MESH,FORWARD" targetresource="caesar\shaders\VolumeLines.fx" flags="3" name="DEFAULTAPPEARANCE" id="0ff382f4-2c5f-4ba6-aeb5-557499023fc3">
+    <Diffuse ref="efcaf32f-de4d-4d3a-92cd-6ee9b7a921e9" />
+    <Material ref="emissive_material_-256" />
+  </DefaultAppearance>
+</root>

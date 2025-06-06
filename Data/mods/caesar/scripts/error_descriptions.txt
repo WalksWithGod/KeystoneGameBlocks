@@ -1,0 +1,4 @@
+// English - US Localized Error Code Descriptions
+Description field cannot be null or empty.
+Field is read only and cannot be modified.
+Tech Level for this component cannot exceed $0.

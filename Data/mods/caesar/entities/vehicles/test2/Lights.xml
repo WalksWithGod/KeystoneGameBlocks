@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <DirectionalLight isbillboard="False" direction="0.468292901873313,-0.468292901873313,0.749268654162273" range="100000" diffuse="1,1,1,1" ambient="1,1,1,1" specular="0.003921569,0.003921569,0.003921569,0.003921569" specularlevel="1" specularenabled="True" indoorlight="False" useforlightmapping="False" castshadows="False" managed="True" bumpusespecular="False" bumpapproxpointlightbydir="False" entityflags="2098248" attachedtoboneid="-1" tilelocation="0,0,0" boundingbox="-100000,-100000,-100000,100000,100000,100000" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="DIRECTIONALLIGHT" id="cfb8438e-f862-4b3d-ba17-fb30071ef840" />
+</root>

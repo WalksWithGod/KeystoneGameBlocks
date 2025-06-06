@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="-0.136963054537773,0.323791354894638,0.999999940395355" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="7706657e-1613-4bab-b54a-f38b8f031fcf">
+    <Model ref="e1d96307-ffe4-4138-858f-b80c1695a3fd" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="1.79330475244545,0.898234730651413,-1.91441833583041" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="4d732482-9e3e-42be-ada0-07d544edaefc">
+    <Model ref="7e6c85e9-93e0-4680-b97d-ba0668c0075c" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0.178193195000356,0.32178929266428,-0.124753666157405" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="036a2eea-ccc7-422a-8905-5dec2612150d">
+    <Model ref="6896b3b8-e19d-4594-953d-c200ba6d3bee" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="-0.1409522742033,0.337088733911514,0.999999940395355" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="d99b68a1-5ebe-40d2-b7d9-e9bf914288e4">
+    <Model ref="ea627ec9-172e-4028-a8ea-da18f7bc0cff" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="-0.0239352937787771,0.289218157529831,0.999999940395355" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="ae0e12d9-3656-4a74-b467-ea87ff7d10e3">
+    <Model ref="ecda33bd-8534-4524-922a-d394a1f89918" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0.0744653567671776,0.285228937864304,0.999999940395355" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="9afa51f2-b183-4b36-a658-0f9fe1a2b35d">
+    <Model ref="e0809955-3b4e-42c1-b736-0330e0ef80eb" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="-0.154249668121338,0.311823695898056,0.600623740911484" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="07f3acc1-6161-49ce-bc64-fa6903410fbe">
+    <Model ref="a9eb8c40-6e03-4105-9153-4d8844b78229" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0.644602596759796,0.00697510549798608,-1.23902450585365" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="0ac023ae-15ce-4720-acf1-c3905f1e13f0">
+    <Model ref="874c2b6e-74e2-4fa5-9eb5-b175d59f20cf" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0.28875470161438,0.0387983098626137,-1.35731546664238" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="b85641e1-a487-4ff4-a7e4-133d9ca24c56">
+    <Model ref="637c5554-121c-4ae3-9e71-61267b6e8a3a" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="220" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="14.2618820452664,7.60650072955814,-131.593516628744" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="circle" id="9519d893-b30c-478a-a5fb-4a1a98324845">
+    <Model ref="410e2b77-0d3c-4240-8228-99d8fa81e125" />
+  </ModeledEntity>
+</root>

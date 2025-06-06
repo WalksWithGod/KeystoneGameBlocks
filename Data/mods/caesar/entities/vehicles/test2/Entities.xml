@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ModeledEntity fixedscreensize="0" entityflags="1134" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\crew_station_helm.css" footprint="eJwTYBBgGAVUBIxE4lH9tNE/CkgGAPygAF0=" boundingbox="-11.0666339993477,-10.9815259873867,38.3227500021458,-9.55533397197723,-10.0036259889603,39.182206004858" position="-10.3125,-10.5,38.75" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="helm" src="caesar\entities\crew stations\helm.kgbentity" id="c3ef9443-9fb5-4d1b-9a98-1d2c86f9b09d">
+    <Model ref="48154bb4-160d-4a4b-9fe2-348796c9d95c" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="1134" attachedtoboneid="-1" tilelocation="0,0,0" boundingbox="-21.925312374441,14.4598137880686,94.2465944745459,20.8947254673559,23.3987425114039,136.416100547544" position="-2.21992897987366,14.7638006210327,-4.61786603927612" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="turrret" id="94e75241-1500-4236-9123-1c12e4e688d0">
+    <Model ref="25a2b799-dfa2-4e64-8128-9ebe5fba5b7e" />
+    <ModeledEntity ref="fea7627f-f173-4ab7-920a-cdb2294a7249" />
+    <ModeledEntity ref="dfb0ce8f-a602-478b-9953-28de89250e47" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="1134" attachedtoboneid="-1" tilelocation="0,0,0" boundingbox="-1.88030776819408,17.8499935413722,106.816670940153,2.05670025506795,21.7271984363917,173.143117950193" position="-0.413012385368347,1.30323886871338,-8.86735057830811" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="barrel" id="fea7627f-f173-4ab7-920a-cdb2294a7249">
+    <Model ref="b0c3ee1d-54e6-4c8a-87fd-7f1183bbec50" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="1134" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\sensor_radar.css" boundingbox="-4.23400578340709,23.50275137229,112.397297670028,1.56820025602162,24.7154203201655,118.199505616806" position="-0.829873323440552,9.30324459075928,-0.0338478051126003" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="radar sensor" id="dfb0ce8f-a602-478b-9953-28de89250e47">
+    <Model ref="cefe1981-8093-4080-be94-f56e9da001fb" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="-27.0539132102412,9.60546477092539,68.8635297276892,-23.0539132102412,11.6054647709254,72.8635297276892" position="-26.7246627807617,11.2737646102905,-48.932788848877" scale="2,1,2" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="engineTopLeft" id="e5e395f9-07a2-4169-8cba-0f165e7c87de">
+    <ModelSelector ref="5e5c70e6-f00f-42df-9cf3-dd0321cd2bc1" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="-27.300714586584,-11.6662542079564,68.8635297276892,-23.300714586584,-9.66625420795642,72.8635297276892" position="-26.9714641571045,-9.99795436859131,-48.932788848877" scale="2,1,2" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="engineBottomLeft" id="3734c73e-a9c2-4fb2-8ec1-145d9b7d0310">
+    <ModelSelector ref="e05e7532-f247-451c-8a66-0a6ace58c636" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="24.1425379768926,10.1289194370631,68.8635220982947,28.1425379768926,12.1289194370631,72.8635220982947" position="24.4717884063721,11.7972192764282,-48.9327964782715" scale="2,1,2" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="engineTopRight" id="2cf11467-35f5-4bc9-ba7b-9aef6cebcdee">
+    <ModelSelector ref="0b226201-9d49-4091-ad90-805cf2e58407" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="24.6289176003057,-11.8125592921849,68.8635220982947,28.6289176003057,-9.81255929218491,72.8635220982947" position="24.9581680297852,-10.1442594528198,-48.9327964782715" scale="2,1,2" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="engineBottomRight" id="f560ee23-f45d-4b7f-a900-fa20580dba61">
+    <ModelSelector ref="c96fd849-3deb-4cf1-8b88-d0b6e59038d8" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="-30.2580185874385,-0.800759539472688,163.896931216947,-28.2580185874385,1.19924046052731,165.896931216947" position="-30.928768157959,0.867540299892426,45.1006126403809" scale="1,1,1" rotation="0,0.707106781186547,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterFwdLeft" id="7d22fdfc-30b6-469d-aa2d-4393c919337b">
+    <ModelSelector ref="b217b1a4-8190-466b-90ab-f2a2b6f03f96" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="-30.2580014213008,-0.959178194868196,75.323730991117,-28.2580014213008,1.04082180513181,77.323730991117" position="-30.9287509918213,0.709121644496918,-43.4725875854492" scale="1,1,1" rotation="0,0.707106781186547,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterAftLeft" id="5515a2ba-9650-4fee-b0a9-33e5217aec4f">
+    <ModelSelector ref="75c399b2-2f5a-46ae-bddb-e7bfe3efc0eb" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="28.7971114174443,-1.62733190180622,164.080608890287,30.7971114174443,0.372668098193778,166.080608890287" position="28.1263618469238,0.0409679375588894,45.2842903137207" scale="1,1,1" rotation="0,0.707106781186548,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterFwdRight" id="9882be3e-5123-4c50-ba97-df55585b4332">
+    <ModelSelector ref="2dd9de30-2964-4412-99a8-8e1b2e297c44" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="28.7971152321416,-0.961388811933626,74.9675145604529,30.7971152321416,1.03861118806638,76.9675145604529" position="28.1263656616211,0.706911027431488,-43.8288040161133" scale="1,1,1" rotation="0,0.707106781186548,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterAftRight" id="21d0581b-4ef6-443d-997a-04127ff3cd3c">
+    <ModelSelector ref="b88b67d1-3950-48db-957b-cca878bb9d8f" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="8.76603689351858,-1.34980697976314,168.288712070218,10.7660368935186,0.650193020236862,170.288712070218" position="8.09528732299805,0.318492859601974,49.4923934936523" scale="1,1,1" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterFwd1" id="e5ad3033-259a-480b-9234-386c68c0128f">
+    <ModelSelector ref="c25ef7cf-2dfe-4f09-ac04-5b9e478af885" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="-14.6965762122554,-1.80160060571395,168.288715884916,-12.6965762122554,0.198399394286049,170.288715884916" position="-15.3673257827759,-0.133300766348839,49.4923973083496" scale="1,1,1" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterFwd2" id="e3f14421-b1a6-4497-b31f-207aa52fd559">
+    <ModelSelector ref="44430a46-788b-4eda-b73b-3eaa135e2d25" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="-8.74259290537059,-0.417563722002134,69.8635373570838,-6.74259290537059,1.58243627799787,71.8635373570838" position="-9.41334247589111,1.25073611736298,-48.9327812194824" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterAft1" id="458408f0-53fc-4c3e-b3c1-cc56a471f59d">
+    <ModelSelector ref="4ec2f3db-265a-46bb-90cc-cb507eebe058" />
+  </ModeledEntity>
+  <ModeledEntity fixedscreensize="0" entityflags="134218862" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\engine.css" boundingbox="3.7875231758672,0.385666444433106,69.863525912992,5.7875231758672,2.38566644443311,71.863525912992" position="3.11677360534668,2.05396628379822,-48.9327926635742" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="thrusterAft2" id="6b09875d-9a27-4d4c-b43e-0dd313eb4ad4">
+    <ModelSelector ref="a4b5bf15-7783-420a-829c-9347f104f805" />
+  </ModeledEntity>
+</root>

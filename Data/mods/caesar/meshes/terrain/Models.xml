@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ModelSequence id="98bd0641-c590-4805-82a2-b021b2fee896" style="0" enabledchildren="0" boundingbox="-1.33716702461243,-9.99999997475243E-07,-1.25002300739288,1.33716702461243,2.83020091056824,1.25002300739288" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODELSEQUENCE">
+    <Model ref="42bee827-e49e-4542-bb94-9d6b21d68f24" />
+    <Model ref="218a76c0-3e99-4148-b72d-d6badaef5353" />
+    <Model ref="bd767e9a-260e-4826-b9c6-385eeef98a56" />
+    <Model ref="5c328cfc-d7a1-4b97-8952-e7d97bde8c62" />
+    <Model ref="cc465c03-d9b0-4643-9d1b-a237dd183933" />
+    <Model ref="a8cc4324-243c-47a5-901c-c7359210758d" />
+    <Model ref="990bb1e0-3842-42bc-baa6-d6f3af13c4c5" />
+    <Model ref="23a1659f-1726-495d-9a54-ad59f3929a0e" />
+    <Model ref="f34dc125-d96d-4741-9780-9202acb1dbfd" />
+    <Model ref="876b5b37-181d-41a0-9152-c9fad790c032" />
+    <Model ref="f9f05ef8-0912-436e-acec-4434230cda33" />
+    <Model ref="f23184ca-f402-464a-b097-cbf63193941f" />
+  </ModelSequence>
+  <Model id="42bee827-e49e-4542-bb94-9d6b21d68f24" cullmode="0" modelflags="14" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL" />
+  <Model id="218a76c0-3e99-4148-b72d-d6badaef5353" cullmode="0" modelflags="14" boundingbox="-1.25000405311584,2.82920098304749,-1.25000405311584,1.25000405311584,2.83020091056824,1.25000202655792" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_ext_interiorcap.obj" />
+    <DefaultAppearance ref="150a45e6-7ba9-443f-863f-8d878560a84f" />
+  </Model>
+  <Model id="bd767e9a-260e-4826-b9c6-385eeef98a56" cullmode="0" modelflags="14" boundingbox="-1.25000500679016,0,-1.25000405311584,1.25000500679016,0,1.25000202655792" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_ext_interiorfloor.obj" />
+    <DefaultAppearance ref="cdcbd042-67d9-49a4-aa0b-4f860ed4992d" />
+  </Model>
+  <Model id="5c328cfc-d7a1-4b97-8952-e7d97bde8c62" cullmode="0" modelflags="14" boundingbox="-1.25000500679016,0,-1.25000202655792,1.25000500679016,2.82980990409851,1.25000202655792" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_four_sided_00.obj" />
+    <DefaultAppearance ref="cf43130f-c97a-42ae-9b68-84bb981347dd" />
+  </Model>
+  <Model id="cc465c03-d9b0-4643-9d1b-a237dd183933" cullmode="0" modelflags="14" boundingbox="-1.30535900592804,4.99999987368938E-06,-1.2500079870224,1.27697801589966,2.82981395721436,1.25000405311584" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_three_sided_end.obj" />
+    <DefaultAppearance ref="079c37a6-111c-4eef-bfe0-6d03594aa27f" />
+  </Model>
+  <Model id="a8cc4324-243c-47a5-901c-c7359210758d" cullmode="0" modelflags="14" boundingbox="-1.2694239616394,3.99999998990097E-06,-1.25001096725464,1.25434398651123,2.82981395721436,1.2500079870224" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_two_sided_00.obj" />
+    <DefaultAppearance ref="6c4dde0b-78a0-4435-8c23-baf77568267c" />
+  </Model>
+  <Model id="990bb1e0-3842-42bc-baa6-d6f3af13c4c5" cullmode="0" modelflags="14" boundingbox="-1.2593309879303,3.99999998990097E-06,-1.2500079870224,1.25001096725464,2.82981395721436,1.25001001358032" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_two_sided_01.obj" />
+    <DefaultAppearance ref="10950985-c699-497b-9664-38eacc39014a" />
+  </Model>
+  <Model id="23a1659f-1726-495d-9a54-ad59f3929a0e" cullmode="0" modelflags="14" boundingbox="-1.25000202655792,-9.99999997475243E-07,-1.25001204013824,1.25000202655792,2.82981109619141,1.25001096725464" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_two_sided_corner.obj" />
+    <DefaultAppearance ref="6074ad85-84da-43de-9743-9a03abbc626e" />
+  </Model>
+  <Model id="f34dc125-d96d-4741-9780-9202acb1dbfd" cullmode="0" modelflags="14" boundingbox="-1.25,0,-1.25001895427704,1.25000095367432,2.82981204986572,1.25001895427704" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_one_sided_00.obj" />
+    <DefaultAppearance ref="e7f5f783-b62b-4c53-9e19-0c9e72ca4dad" />
+  </Model>
+  <Model id="876b5b37-181d-41a0-9152-c9fad790c032" cullmode="0" modelflags="14" boundingbox="-1.25000202655792,0,-1.25001800060272,1.25000202655792,2.82981204986572,1.25001800060272" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_one_sided_01.obj" />
+    <DefaultAppearance ref="5387abd5-a1bd-4ccb-975c-7cf8448b8462" />
+  </Model>
+  <Model id="f9f05ef8-0912-436e-acec-4434230cda33" cullmode="0" modelflags="14" boundingbox="-1.25,0,-1.25001895427704,1.25000095367432,2.82981300354004,1.25001895427704" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_one_sided_02.obj" />
+    <DefaultAppearance ref="dff27343-5e1c-4fb8-8eef-b913cab832ed" />
+  </Model>
+  <Model id="f23184ca-f402-464a-b097-cbf63193941f" cullmode="0" modelflags="14" boundingbox="-1.33716702461243,0,-1.25002300739288,1.33716702461243,2.82981300354004,1.25002300739288" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODEL">
+    <Mesh3d ref="caesar\meshes\terrain\dirt_one_sided_03.obj" />
+    <DefaultAppearance ref="3fa0ef14-69ef-49c1-bc00-dffbd910307f" />
+  </Model>
+</root>

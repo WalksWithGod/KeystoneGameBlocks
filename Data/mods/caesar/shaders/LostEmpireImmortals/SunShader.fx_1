@@ -1,0 +1,125 @@
+string description = "Planet Shader";
+
+//------------------------------------
+float4x4 view : View;
+float4x4 projection : Projection;
+
+float sunAlpha;
+float starSize;
+
+float2 rotSun1;
+float2 rotSun2;
+
+float time;
+
+texture sunTexture : Diffuse
+<
+	string ResourceName = "default_color.dds";
+>;
+
+texture starTexture : Diffuse
+<
+	string ResourceName = "default_color.dds";
+>;
+
+//------------------------------------
+struct vertexInput {
+    float4 position				: POSITION;
+    float2 texCoordDiffuse		: TEXCOORD0;
+    float2 offset				: TEXCOORD1;
+    float4 color				: COLOR0;
+};
+
+struct vertexOutput {
+    float4 Position			: POSITION;
+    float2 texCoordDiffuse	: TEXCOORD0;
+    float2 texCoordDiffuse1	: TEXCOORD1;
+    float2 texCoordDiffuse2	: TEXCOORD2;
+    float4 color			: COLOR0;
+    float starDimmer		: TEXCOORD3;
+};
+
+
+//------------------------------------
+vertexOutput VS_TransformAndTexture(vertexInput IN) 
+{
+
+    vertexOutput OUT;
+    OUT.texCoordDiffuse = IN.texCoordDiffuse;
+    //OUT.texCoordDiffuse1 = mul(IN.texCoordDiffuse,rotSun1);
+    //OUT.texCoordDiffuse2 = mul(IN.texCoordDiffuse,rotSun2);
+    
+    
+    
+    //x0+(x-x0)*cos(d)-(y-y0)*sin(d)
+    OUT.texCoordDiffuse1.x=0.5f+(IN.texCoordDiffuse.x-0.5f)*rotSun1.y-(IN.texCoordDiffuse.y-0.5f)*rotSun1.x;
+    
+    //y0+(x-x0)*sin(d)+(y-y0)*cos(d)
+    OUT.texCoordDiffuse1.y=0.5f+(IN.texCoordDiffuse.x-0.5f)*rotSun1.x+(IN.texCoordDiffuse.y-0.5f)*rotSun1.y;
+      
+	//x0+(x-x0)*cos(d)-(y-y0)*sin(d)
+    OUT.texCoordDiffuse2.x=0.5f+(IN.texCoordDiffuse.x-0.5f)*rotSun2.y-(IN.texCoordDiffuse.y-0.5f)*rotSun2.x;
+    
+    //y0+(x-x0)*sin(d)+(y-y0)*cos(d)
+    OUT.texCoordDiffuse2.y=0.5f+(IN.texCoordDiffuse.x-0.5f)*rotSun2.x+(IN.texCoordDiffuse.y-0.5f)*rotSun2.y;
+      
+   
+    //Move the position into camera space
+    
+    float4 position = mul(IN.position,view);
+	OUT.color= float4(IN.color.rgb,1);
+	OUT.starDimmer = sin(time*IN.color.a + IN.position.x + IN.position.z)*0.33f+0.66f;
+	//Displace corner	
+	position.xy += IN.offset*starSize;
+	
+	OUT.Position = mul(position, projection);
+    
+    return OUT;
+}
+
+
+//------------------------------------
+sampler sunSampler = sampler_state 
+{
+    texture = <sunTexture>;
+    AddressU  = CLAMP;        
+    AddressV  = CLAMP;
+    MIPFILTER = LINEAR;
+    MINFILTER = LINEAR;
+    MAGFILTER = LINEAR;
+};
+
+sampler starSampler = sampler_state 
+{
+    texture = <starTexture>;
+    AddressU  = CLAMP;        
+    AddressV  = CLAMP;
+    MIPFILTER = LINEAR;
+    MINFILTER = LINEAR;
+    MAGFILTER = LINEAR;
+};
+
+
+//-----------------------------------
+float4 PS_Textured( vertexOutput IN): COLOR
+{
+  float4 starTexture = tex2D( starSampler, IN.texCoordDiffuse );
+  float4 sunTexture1 = tex2D( sunSampler, IN.texCoordDiffuse1);
+  float4 sunTexture2 = tex2D( sunSampler, IN.texCoordDiffuse2);
+  sunTexture1 *= IN.color;
+  sunTexture2 *= IN.color;
+  sunTexture1 += sunTexture2;
+  return float4(lerp(sunTexture1.rgb, starTexture.rgb * IN.starDimmer, sunAlpha),1);
+}
+
+
+
+//-----------------------------------
+technique textured
+{
+    pass p0 
+    {	
+		VertexShader = compile vs_1_1 VS_TransformAndTexture();
+		PixelShader  = compile ps_1_1 PS_Textured();
+    }
+}

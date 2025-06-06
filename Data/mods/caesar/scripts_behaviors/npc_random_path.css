@@ -1,0 +1,99 @@
+using System;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyCommon.Traversal;
+
+public class NPC_Behavior_Random_Path : BaseScript // TODO: should this inheret from a different BaseScript like a NPCBehaviorBase base script?
+                                                   // and shouldn't Execute return a BehaviorTreeResult enum value?
+{
+	// TODO: what is Validate for?
+	public static bool Validate (string entityID, double elapsedSeconds)
+	{
+		//System.Diagnostics.Debug.WriteLine (string.Format("Entity {0} Spawned at {1}", entityID, 1));
+		return true;
+	}
+	
+	public static void Enter (string entityID, double elapsedSeconds)
+	{
+	}
+	
+	// http://www.what-could-possibly-go-wrong.com/fluent-behavior-trees-for-ai-and-game-logic/
+	// todo: should this method actually be called "Perform" just as it in the Action class?  
+	public static BehaviorResult Execute (string entityID, double elapsedSeconds)
+	{
+		// TODO: AIBlackboardData data must be initialized with all the AIBlackboardData variables by the NPC's standard entity script.
+		KeyCommon.Data.UserData data = EntityAPI.GetAIBlackboardData(entityID);
+		if (data == null) return BehaviorResult.Fail;
+		
+		// are we currently executing a path? if so, just return
+		bool onPath = data.GetBool ("ai_path_in_progress");
+		if (onPath) 
+		{
+			// has the floor geometry changed?  Do we need to compute a new path even if we're already on one?	
+			// maybe we don't need any event for when geometry has changed if we always recomputed PathFind every 1 second.
+			return BehaviorResult.Success;
+		}
+		
+		// are we on cooldown from last path follow?
+		double elapsedCooldown = elapsedSeconds + data.GetDouble("ai_pathing_cooldown_elapsed");
+		data.SetDouble ("ai_pathing_cooldown_elapsed", elapsedCooldown);
+		bool onCooldown =  data.GetDouble ("ai_pathing_cooldown_elapsed") <= data.GetDouble ("ai_pathing_cooldown");
+		if (onCooldown) 
+		{
+			data.SetBool ("ai_path_in_progress", false);
+			data.SetInteger ("ai_current_point", -1);
+			data.SetVector3dArray ("ai_path_points", null);
+			EntityAPI.SetAIBlackboardData (entityID, data);
+			return BehaviorResult.Fail;
+		}
+		else
+			data.SetDouble ("ai_pathing_cooldown_elapsed", elapsedSeconds);
+		
+		// compute a new random destination in Interior region coordinates
+		string parentID = EntityAPI.GetParentID(entityID);
+		Vector3d position = EntityAPI.GetPositionRegionSpace(entityID);
+		// TODO: Do we have / need an overall AI/TaskManager creating paths and tasks for our crew to do?  Well, that
+		// might be job of the 1st Officer or some other chiefs of department(s).  There AI scripts and/or behavior trees
+		// would include the ability to assign tasks to subordinates.
+		// Subordinates can assign themselves recreational tasks, eating, sleeping, bathing, relaxing in the "bar" room, etc.
+		// How does a task like "fix engine nacelle 01" turned into multiple tasks like pathing, then fixing, then completing and updating
+		// the log, then taking the next task.
+		Vector3d destination = AIAPI.GetRandomDestination(parentID, entityID); // TODO: GetRandomDestination() is temporary function for testing pathing. Needs to be removed in finished project.
+		
+		// compute and assign a new path
+		string[] components;
+		Vector3d[] points = AIAPI.Path_Find(parentID, entityID, position, destination, out components);
+		data.SetVector3dArray ("ai_path_points", points);
+		data.SetStringArray ("ai_path_components", components);
+		
+		if (points != null)
+		{
+			// todo: verify with the scripts being IPageabelResources in the Action node, we can easily deserialize them from the NPC prefab.
+			data.SetBool ("ai_path_in_progress", true);
+			data.SetInteger ("ai_current_point", 0);
+		}
+		else
+		{
+			data.SetBool ("ai_path_in_progress", false);
+			EntityAPI.SetAIBlackboardData (entityID, data);
+			return BehaviorResult.Fail;
+		}
+		// if on a path, steer to next point. steer should return a velocity
+		// TODO: how does scripting work with Obfuscation?
+		// TODO: don't Composite nodes like Sequence and Selector nodes need scripted code too?  How did we do this for our Viewpoint controllers?
+		//		- we didn't use any scripts.  We just used a lot of Sequence nodes with lots of Action nodes underneath.
+		// TODO: does using script files make obfuscating the project's binaries problematic?
+		// TODO: shouldn't we only compute a new velocity, and allow Simulation.Update() to then update the position of the Entity?
+		//       This way we're not modifying the scene in script and we can replicate final positions of Entities that have moved via the server during Update().
+		//       We can compute a steer velocity, then set that velocity to the Entity and allow Simulation.Update() to find new position each frame
+		EntityAPI.SetAIBlackboardData (entityID, data);
+		return BehaviorResult.Success;
+	}
+	
+	public static void Exit (string entityID, double elapsedSeconds)
+	{
+	}
+}

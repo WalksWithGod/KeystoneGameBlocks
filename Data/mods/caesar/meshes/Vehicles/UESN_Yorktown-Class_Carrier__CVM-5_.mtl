@@ -1,0 +1,91 @@
+newmtl Default_Material
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ns 127
+newmtl Burnt_Umber3
+Ka 0 0 0
+Kd 0.168627 0.160784 0.168627
+Ks 0 0 0
+Ns 127
+newmtl LightGray3
+Ka 0 0 0
+Kd 0.662745 0.662745 0.662745
+Ks 0 0 0
+Ns 127
+newmtl Charcoal
+Ka 0 0 0
+Kd 0.137255 0.137255 0.137255
+Ks 0 0 0
+Ns 127
+newmtl DimGray
+Ka 0 0 0
+Kd 0.411765 0.411765 0.411765
+Ks 0 0 0
+Ns 127
+newmtl Burnt_Umber2
+Ka 0 0 0
+Kd 0.105882 0.101961 0.109804
+Ks 0 0 0
+Ns 127
+newmtl Beige1
+Ka 0 0 0
+Kd 0.576471 0.509804 0.341176
+Ks 0 0 0
+Ns 127
+newmtl LightGray1
+Ka 0 0 0
+Kd 0.788235 0.788235 0.788235
+Ks 0 0 0
+Ns 127
+newmtl Material5
+Ka 0 0 0
+Kd 0.411765 0.580392 0.847059
+Ks 0 0 0
+Ns 127
+newmtl Blinds_Cloth_Horizontal
+Ka 0 0 0
+Kd 0.486275 0.376471 0.047059
+Ks 0 0 0
+Ns 127
+map_Kd Blinds_Cloth_Horizontal.PNG
+newmtl 0044_DarkGoldenrod
+Ka 0 0 0
+Kd 0.788235 0.576471 0.160784
+Ks 0 0 0
+Ns 127
+newmtl Material17
+Ka 0 0 0
+Kd 0.858824 0.858824 0.858824
+Ks 0 0 0
+Ns 127
+newmtl Color_008
+Ka 0 0 0
+Kd 0.058824 0.058824 0.058824
+Ks 0 0 0
+Ns 127
+newmtl 0046_Gold
+Ka 0 0 0
+Kd 1 0.909804 0.227451
+Ks 0 0 0
+Ns 127
+newmtl 0020_Red
+Ka 0 0 0
+Kd 1 0 0
+Ks 0 0 0
+Ns 127
+newmtl 0071_MediumSpringGreen
+Ka 0 0 0
+Kd 0 0.980392 0.603922
+Ks 0 0 0
+Ns 127
+newmtl LightGray
+Ka 0 0 0
+Kd 0.756863 0.756863 0.756863
+Ks 0 0 0
+Ns 127
+newmtl 0038_Orange
+Ka 0 0 0
+Kd 0.937255 0.552941 0.117647
+Ks 0 0 0
+Ns 127

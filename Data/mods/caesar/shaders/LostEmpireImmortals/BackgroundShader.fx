@@ -1,0 +1,55 @@
+texture backgroundTexture : Diffuse;
+float2 offset;
+
+//------------------------------------
+struct vertexInput {
+    float4 position				: POSITION;
+    float2 texCoordDiffuse		: TEXCOORD0;
+};
+
+struct vertexOutput {
+    float4 position		: POSITION;
+    float2 texCoordDiffuse	: TEXCOORD0;
+};
+
+
+//------------------------------------
+vertexOutput VS_TransformAndTexture(vertexInput IN) 
+{
+    vertexOutput OUT;
+    OUT.position = IN.position;
+    OUT.texCoordDiffuse = IN.texCoordDiffuse;
+    OUT.texCoordDiffuse+=offset;
+    return OUT;
+}
+
+
+//------------------------------------
+sampler TextureSampler = sampler_state 
+{
+    texture = <backgroundTexture>;
+    AddressU  = WRAP;        
+    AddressV  = WRAP;
+    AddressW  = WRAP;
+    MIPFILTER = LINEAR;
+    MINFILTER = LINEAR;
+    MAGFILTER = LINEAR;
+};
+
+
+//-----------------------------------
+float4 PS_Textured( vertexOutput IN): COLOR
+{
+  float4 diffuseTexture = tex2D( TextureSampler, IN.texCoordDiffuse );
+  return diffuseTexture;
+}
+
+//-----------------------------------
+technique textured
+{
+    pass p0 
+    {		
+		VertexShader = compile vs_1_1 VS_TransformAndTexture();
+		PixelShader  = compile ps_1_1 PS_Textured();
+    }
+}

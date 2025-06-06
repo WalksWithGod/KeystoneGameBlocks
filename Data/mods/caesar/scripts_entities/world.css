@@ -1,0 +1,344 @@
+using System;
+using Keystone.Types;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+using Antlr4.StringTemplate;
+//using Antlr4.StringTemplate.Compiler;
+//using Antlr4.StringTemplate.Extensions;
+//using Antlr4.StringTemplate.Misc;
+
+public class World : BaseScript
+{
+	public static void Initialize(string scriptID)
+	{
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[6];
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, (object)"World");
+		properties[1] = new PropertySpec("mass", typeof(double).Name, category, 0);
+		properties[2] = new PropertySpec("volume", typeof(double).Name, category, 0);
+		properties[3] = new PropertySpec("surfacearea", typeof(double).Name, category, 0);
+		
+		category= "production";
+		
+		// create array of products produced by this component.  
+		Production[] production = new Production[1];
+		production[0].ProductID = (uint)UserConstants.Product.Gravity;
+		production[0].UnitCount = -1; // infinite production can be distributed to all consumers with no regard for priority since there is enough to supply all relevant consumers.
+		production[0].DistributionMode = DistributionType.Region; 
+
+		properties[4] = new PropertySpec("production", typeof(Production[]).Name, category, production);
+		properties[4].IsSerializable = false;
+		
+		properties[5] = new PropertySpec("animation_playing", typeof(bool).Name, category, false);
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(scriptID, properties);
+		
+		
+		// create a test rule using an inline delegate 
+		//EntityAPI.AddRule (scriptID, "description", 
+		// new SimpleRule(1, delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+					
+		EntityAPI.AddRule (scriptID, "description", new SimpleRule(1, Rule_Description));
+		EntityAPI.AddRule (scriptID, "mass", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "volume", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "surfacearea", new SimpleRule(2, Rule_ReadOnly));
+		
+		// create a test rule that uses the Validate() method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+						
+		// force production handler runs every physics tick or at fixed delta time
+		EntityAPI.AssignProductionHandler(scriptID,(uint)UserConstants.Product.Gravity, Force_Production_Update);
+		
+		// regular production handler runs at seperate hz (possibly once per 1/10 second)
+		//EntityAPI.AssignProductionHandler(scriptID, (uint)UserConstants.Product.Gravity, Production_Update);
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{
+		//AnimationAPI.Animation_Play(entityID, entityID + "_orbit_animation", true);
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		object propertyValue = EntityAPI.GetPropertyValue(entityID, "name");
+		string name = null;
+		if (propertyValue != null)
+			name = (string)propertyValue;
+		else
+			name = "unknown star";
+
+		string basePath = GameAPI.Path_GetDataPath();
+		
+		//NOTE: must use RawGroupDirectory if we just want straight template text with no type definition info required
+		TemplateRawGroupDirectory group = new TemplateRawGroupDirectory(System.IO.Path.Combine(basePath, @"mods\common\layouts\"), System.Text.Encoding.ASCII, '$', '$');
+		
+		Template pageST = group.GetInstanceOf("component_page");
+		Template bodyST = group.GetInstanceOf("world_body");
+		
+		// .Add cannot be done on compiled templates.  CompiledTemplates are effectively frozen so it makes sense!
+		bodyST.Add("componenttypename", name);
+		pageST.Add("title", "Component Page");
+		pageST.Add("body", bodyST);
+		
+		//bodyST.Add("consumertable", consumerListST);
+		
+		return pageST.Render();		
+	}
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+	
+	#region Rules
+	private static bool Rule_ReadOnly (string entityID, object[] args)
+	{
+		return false; 
+	}
+	
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+		
+	}
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "turnon":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}	
+	#endregion
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}	
+	#endregion
+	
+	#region Build statistics
+	public static void BuildUpdate (string domainObjectID)
+	{
+		// configuring the list of proeprty grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+		
+	}	
+	#endregion
+	
+
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// June.21.2017 - Orbit elliptical animations feature cut for version 1.0.
+		/* // NOTE: World orbits are (typically except for some rogue objects perhaps)
+		// POSITIONED via an ANIMATION that is defined and set during
+		// world generation.  Thus, World orbits are animated using elipitcal animation
+		// and are not physically modeled.
+		
+		// NOTE: Trying to call Animation_Play() in InitializeEntity() results in all sorts of errors
+		// bool playing = (bool)EntityAPI.GetCustomPropertyValue (entityID, "animation_playing");
+		// if (!playing)
+		// {
+			// AnimationAPI.Animation_Play(entityID, entityID + "_orbit_animation", true);
+			// EntityAPI.SetCustomPropertyValue (entityID, "animation_playing", true);
+		// } */
+	}
+	
+	#region Production
+	public static Production[] Production_Update (string entityID, double elapsedSeconds)
+	{
+		return null;
+	}
+	
+	public static Production[] Force_Production_Update (string entityID, double elapsedSeconds)
+	{
+		Production[] production = (Production[])EntityAPI.GetCustomPropertyValue (entityID, "production");
+			
+		if (production == null) return null;
+		System.Diagnostics.Debug.WriteLine ("World.Force_Production_Update() - gravity");
+		// assign entityID, we could do this in InitializeEntity
+		production[0].SourceEntityID = entityID;
+		
+		// update the property value after modifications
+		// todo: we're modifying a reference above so i dont think the following is required
+		EntityAPI.SetCustomPropertyValue (entityID, "production", production);
+		
+		return production;
+	}
+	#endregion
+	
+	public static void OnRender (string contextID, string entityID, string[] modelIDs, string shaderID, 
+								Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+		
+		// the star that is in the same region as this world is the light source we want the position of
+		string regionID = EntityAPI.GetEntityRegionID (entityID);
+		string starID = EntityAPI.GetDescendantOfType (regionID, "Star");		
+		System.Diagnostics.Debug.Assert (starID != null);
+		Vector3d starPosition = (Vector3d)EntityAPI.GetPropertyValue (starID, "position");
+		// TODO: we need camera space star position.
+		
+		
+		// if this is the planetary rings model, assign the planet's radius and the star's position to it's shader
+		// world model is first child in the Sequence - get it's radius squared
+		double planetRadiusSquared = (double)(float)EntityAPI.GetPropertyValue(entityID, "diameter");
+		planetRadiusSquared /= 2d;
+		planetRadiusSquared *= planetRadiusSquared;
+		planetRadiusSquared = 5101102;
+		// ring model is the last child in the Sequence - assign the radius and star light position
+		if (string.IsNullOrEmpty(shaderID)) return;
+		// HACK: For now these parameters are assigned to all planet entity's shaders (world, atmosphere, clouds, rings)
+		VisualFXAPI.SetShaderParameterFloat (shaderID, "PlanetRadiusSquared", (float)planetRadiusSquared);
+        //VisualFXAPI.SetShaderParameterVector3(shaderID, "LightPosition", starPosition);
+
+	}
+
+}

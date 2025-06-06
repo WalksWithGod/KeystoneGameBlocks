@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Root regiondiameterx="74799002943488" regiondiametery="74799002943488" regiondiameterz="74799002943488" octreenodedepth="3" octreedepth="0" entityflags="6291484" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="-37399501471744,-37399501471744,-37399501471744,37399501471744,37399501471744,37399501471744" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="ROOT" id="Root,testlinelist">
+    <DirectionalLight ref="5f4cd7f8-ed65-4d1a-8294-be26d91a7a0d" />
+    <ModeledEntity ref="7706657e-1613-4bab-b54a-f38b8f031fcf" />
+    <ModeledEntity ref="4d732482-9e3e-42be-ada0-07d544edaefc" />
+    <ModeledEntity ref="036a2eea-ccc7-422a-8905-5dec2612150d" />
+    <ModeledEntity ref="d99b68a1-5ebe-40d2-b7d9-e9bf914288e4" />
+    <ModeledEntity ref="ae0e12d9-3656-4a74-b467-ea87ff7d10e3" />
+    <ModeledEntity ref="9afa51f2-b183-4b36-a658-0f9fe1a2b35d" />
+    <ModeledEntity ref="07f3acc1-6161-49ce-bc64-fa6903410fbe" />
+    <ModeledEntity ref="0ac023ae-15ce-4720-acf1-c3905f1e13f0" />
+    <ModeledEntity ref="b85641e1-a487-4ff4-a7e4-133d9ca24c56" />
+    <ModeledEntity ref="9519d893-b30c-478a-a5fb-4a1a98324845" />
+  </Root>
+</root>

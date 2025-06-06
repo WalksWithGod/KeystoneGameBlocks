@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\laser.png" flags="3" name="DIFFUSE" id="efcaf32f-de4d-4d3a-92cd-6ee9b7a921e9">
+    <Texture ref="caesar\textures\laser.png" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\textures\laser.png" />
+</root>

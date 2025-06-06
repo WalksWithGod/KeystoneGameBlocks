@@ -1,0 +1,202 @@
+Just like Visual Studio, every new project is given it's own directory.
+
+The directory structure is generated and KGB when importing items will automatically copy them to the appropriate location, create a prefab (definition) for it which will allow you to add copies within your scene usign the settings you've already set.
+
+
+the first level of folders immediately underneath the main \data\prefabs\  folder are treated as seperate mod or game folders.
+
+These folders can exist as ZIP files as well and are treated just as if they were folders.  
+
+The only shared folder that can exist and be used by all games is "common."  
+
+Thus a game when searching for a resource will check data\prefabs\common\   and \data\prefabs\modname\  as the two root directories.
+
+
+If there exists both prefabs\common\   and prefabs\common.zip or  prefabs\modname.zip and prefabs\modname\  the folder takes precendence.
+
+
+
+Prefabs consist solely of XML data and link to Geometry and Appearance folders
+
+
+\Data\Common\Geometry\
+\Data\Common\Appearances\
+or
+\Data\Common\Geometry.zip
+\Data\Common\Appearances.zip
+
+
+\Data\ModName\Geometry\
+\Data\ModName\Appearances\
+or
+\Data\ModName\Geometry.zip
+\Data\ModName\Appearances.zip
+
+
+
+\Appearances\Materials\
+\Appearances\Shaders\
+\Appearances\Textures\
+
+
+When your game is compiled, prefabs in your map are stored in the normal xml database layout and are referenced by id or if an id of 0 is specified, then a new instance is generated.
+
+
+anyway, something like this and for now im not going to worry too much about how exactly things are laid out but what i will do is get toolbar option for 'importing' in.  Imports are not prefabs.  Lights and certain other types of objects cannot be saved as prefabs.
+
+===========================
+here's how crytek 2 does it
+
+http://doc.crymod.com/SandboxManual/frames.html?frmname=topic&frmfile=ModSetupSandbox.html
+
+your mod is called via commandline switch crysis.exe -mod mymodname
+
+ root directory of your Crysis Game \Mods\MYMOD\Bin32 
+
+root directory of your Crysis Game \Mods\MYMOD\Code (C++ source) 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\ 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Animations 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Entities 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Fonts 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Levels 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Levels\Multiplayer\ 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Localized 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Libs 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Materials 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Music 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Objects 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Prefabs 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Scripts 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Shaders 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Sounds 
+
+root directory of your Crysis Game \Mods\MYMOD\Game\Textures 
+
+
+ Preparing a Mod for distribution
+ 
+
+Re-Packing your Mod 
+
+In order to optimize your modification for the distribution it is always good to pack the folders inside your mod in order to minimize the size and to keep everything easily structured for the community. 
+
+This is a list of which folders should be put into one new .pak file: 
+
+Animations.pak 
+
+Animations 
+
+GameData.pak 
+
+Entities 
+
+Fonts 
+
+Libs 
+
+Materials 
+
+Prefabs 
+
+Scripts 
+
+Music.pak 
+
+Music 
+
+Objects.pak 
+
+Objects 
+
+Shaders.pak 
+
+Shaders 
+
+Sounds.pak 
+
+Sounds 
+
+Textures.pak 
+
+Textures 
+
+Before you start creating such a .pak file be sure to have a ZIP or RAR program (such as WinZip, 7Zip or WinRar) installed. To create such a .pak file please follow these steps: 
+
+ 
+
+   1. Go to your mod folder that is located inside root directory of your Crysis Game \Mods\
+
+ 
+
+   2. Enter the “game” folder and select some folders you want to put into a .pak file.
+
+ 
+
+   3. Right click on one of the folders and select “add to archive...”.
+
+ 
+
+   4. Define the name of the file (e.g. GameData or Objects) and use the normal .zip compression. ( note: other compressions won’t work properly!)
+
+ 
+
+   5. Replace the .zip ending by .pak and create the archive.
+
+ 
+
+ 
+
+List Mod in the ingame Mod Loader
+To have your mod being listed ingame in the mod loading menu you need to prepare a specific .xml file that needs to be stored in the following directory: 
+
+root directory of your Crysis Game \Mods\mymod 
+
+The file is called “info.xml” and includes the following content. 
+
+ 
+
+<?xml version="1.0" encoding="utf-8"?>
+<Mod Name="<yourmod>" Version="<0.0>"  Screenshot="<jpg file>" Description="<description>" url="<URL>"/>
+
+ 
+
+The following is a description of what kind of information can be put into this file: 
+
+Mod Name = "" //put in the name of your mod 
+
+Version = "<0.0>" //add the version number of your mod 
+
+Screenshot = "" //image for the mod loader menu 
+
+Description = "" //description of the mod 
+
+url = "" //URL of your mod/mod team 
+
+ 
+
+It is recommended to always implement a small banner of your mod that is getting displayed automatically when selecting your mod ingame via the Mod Loader. It helps the community to identify your mod easier and also looks nice and more professional. 
+
+To add an image place a screenshot with the maximum size of 512x384 in your mod folder and add the full name of it to the Screenshot description inside the “info.xml” file.
+
+
+
+
+
+
+
+  

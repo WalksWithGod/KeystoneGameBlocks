@@ -1,0 +1,293 @@
+using System;
+using Game01.GameObjects;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using Keystone.Types;
+using Keystone.Utilities;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class npc : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		string category = "public properties";
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[4];
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, (object)"Creep Spawn Point");
+
+		properties[1] = new PropertySpec("last spawn time", typeof(double).Name, category, 0d);
+		properties[2] = new PropertySpec("spawn rate milliseconds", typeof(double).Name, category, 1000d);
+		properties[3] = new PropertySpec("prefab relative path", typeof(string).Name, category, (object)@"caesar\actors\monster-animated-character.kgbentity");
+			
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+
+		// create a test rule using a Delegate rule
+		EntityAPI.AddRule (domainObjectID, "description", new SimpleRule(1, Rule_Description));
+	}
+	
+	
+	public static void InitializeEntity(string entityID)
+	{
+		// set stats flag as dirty so OnUpdate() will call UpdateStats()
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+	
+		// we don't want same data shared by all entities so we must
+		// initialize here for specific entity
+		KeyCommon.Data.UserData data = new KeyCommon.Data.UserData ();
+		data.SetDouble ("spawn_last_time", 0);		
+		data.SetDouble ("spawn_rate_seconds", 5);	
+
+							
+		EntityAPI.SetCustomPropertyValue(entityID, "userdata", data);
+		
+		// Entity FLAGS (as opposed to Component flags) should be set here as they are per entity
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.ExplicitEvents, true);
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+	
+	public static object OnParentChanged (string entityID, string parentID, string previousParentID)
+	{
+
+		return entityID;
+	}
+	
+	public static void OnRegionChanged (string entityID, string regionID, string previousRegionID)
+	{
+	}
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		return "<html><body>TODO: Creep Spawn Point</body></html>";
+		
+		object propertyValue = EntityAPI.GetCustomPropertyValue(entityID, "description");
+		string name = null;
+		if (propertyValue != null)
+			name = (string)propertyValue;
+			
+		name = "Creep Spawn Point";
+
+		return ""; // pageST.Render();		
+	}
+	
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+	
+	#region Events
+	private static void Event_ZoneChanged (string entityID)
+	{
+		System.Diagnostics.Debug.WriteLine("npc.Event_ZoneChanged()");
+		
+	}	
+	#endregion
+	
+	#region Rules
+	private static bool Rule_Description(object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);		
+	}	
+	#endregion
+
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}	
+	#endregion
+	
+	#region Build statistics
+	// Updates the build statistics
+	public static void UpdateStats (string entityID)
+	{
+		// configuring the list of proeprty grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+		// stats dirty flag can now be reset to false
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,false);
+	}	
+	#endregion
+	
+	#region Run-time	
+	public static void OnSelected (string entityID, string workspaceName, string contextName)
+	{
+		
+		// load the "patrol" "attack" etc menu to command bar
+		// (vehicle menu should be posiitioned each frame for us based on window size)
+		
+		
+		// switch mouse tool to "unit_action" tool by with value of "move_to_location" by default
+		// keyboard hotkeys can modify the value to things like "attack_location" 
+		string toolName = "unit_action"; // "waypoint_placer";
+		object toolValue = "move_to_location"; // "pursue_target"; // "attack_location"; // "attack_target"
+		string toolTarget = entityID;
+		GameAPI.Workspace_SetTool(workspaceName, toolName, toolTarget, toolValue);
+	}
+	
+	public static void OnSelectionLost (string entityID, string workspaceName, string contextName)
+	{
+	
+		// clear command bar 
+		
+	}
+	
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// NOTE: if simulation is paused, graphics can still render, but this
+		//       OnUpdate() will not be called.
+		// NOTE: If simulation is NOT paused, this OnUpdate() will be called
+		//       as many times per entity to satisfy fixed timestep settings!
+		//       Thus it is important to keep this function optimized!
+				
+		KeyCommon.Data.UserData data =(KeyCommon.Data.UserData) EntityAPI.GetCustomPropertyValue(entityID, "userdata");
+
+ 		double lastSpawnTime = data.GetDouble ("spawn_last_time");		
+		double spawnROF = data.GetDouble ("spawn_rate_seconds");		
+		
+		string sceneID = (string)EntityAPI.GetEntitySceneID (entityID); 	
+		double totalElapsed = (double)GameAPI.GetTotalElapsedSeconds (sceneID);	
+			
+		if (totalElapsed - lastSpawnTime > spawnROF)
+		{
+			string regionID = EntityAPI.GetEntityRegionID(entityID);
+			Vector3d position = EntityAPI.GetPosition (entityID);
+			// TODO: this position is not on top of the terrain.
+			EntityAPI.Spawn(@"caesar\actors\monster-animated-character-x.kgbentity", regionID, position);
+			data.SetDouble ("spawn_last_time", totalElapsed);
+			
+			// is this necessary?  or is data a reference that updates in our property value too?
+			EntityAPI.SetCustomPropertyValue(entityID, "userdata", data);
+		}
+		
+
+	}
+	
+		
+	public static void OnRender (string contextID, string entityID, string modelID, string shaderID, 
+								Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+	
+	}
+	#endregion
+	
+	
+}

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <SceneInfo firstnodetypename="ZoneRoot" type="2" serializeemptyzones="False" flags="3" name="SCENEINFO" id="MultiZoneLandBasedScene001_SceneInfo">
+    <Viewpoint startingregion="ZoneRoot,MultiZoneLandBasedScene001" startingtranslation="0,0,0" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="02d8d08f-e1bd-4824-a5b8-f49af11598fe" />
+    <Viewpoint startingregion="Zone,1,0,1" startingtranslation="0,0,0" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="12c2b4dc-4dab-4bd8-8d44-83df62d6b169" />
+  </SceneInfo>
+</root>

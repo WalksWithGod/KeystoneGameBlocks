@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <DefaultAppearance lightingmode="0" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="caesar\shaders\SkyGradient\SkyGradient.fx" flags="3" name="DEFAULTAPPEARANCE" id="429c4ae4-f216-4759-b9c1-d00b1c03e48d">
+    <Diffuse ref="fc88c941-e7fd-4ace-8de9-25c4c1b97599" />
+    <Material ref="b18fb386-b3bd-4eb5-a4ad-cb614247fc67" />
+  </DefaultAppearance>
+</root>

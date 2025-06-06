@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="f54a050a-e4ea-4a30-853d-b0378bace1f0">
+    <Material ref="hull_yellow" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="e202bd5f-15b0-44e8-a0de-4d73bb91b284">
+    <Material ref="Default_Material" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="1" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="d22c845d-89f2-4107-b1df-630ecd42ebd3">
+    <Material ref="Default_Material" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="5a6863de-95b2-4dc8-8f9c-088e7a2352b9">
+    <GroupAttribute ref="1550fb4d-f73b-45a5-b050-a4aac5f7fac1" />
+    <GroupAttribute ref="6ef815a2-8d83-4b98-afcd-ba1b77af5791" />
+    <GroupAttribute ref="957ef495-da07-4c27-a493-6a212f15e2d5" />
+    <GroupAttribute ref="dcdb3f47-ba8e-4403-8ad4-f641ae9a40d6" />
+    <GroupAttribute ref="bcbe719a-1ca9-4054-b221-c32d9c9a44d3" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="1550fb4d-f73b-45a5-b050-a4aac5f7fac1">
+    <Material ref="Default_Material" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="6ef815a2-8d83-4b98-afcd-ba1b77af5791">
+    <Material ref="0059_DarkOliveGreen" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="957ef495-da07-4c27-a493-6a212f15e2d5">
+    <Diffuse ref="833bc83e-5b4c-4c32-8988-9510cb8c3ddd" />
+    <Material ref="Metal_Aluminum_Anodized" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="dcdb3f47-ba8e-4403-8ad4-f641ae9a40d6">
+    <Diffuse ref="0c769c10-d159-46ab-8b50-fadf736f347a" />
+    <Material ref="Metal_Corrogated_Shiny1" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="bcbe719a-1ca9-4054-b221-c32d9c9a44d3">
+    <Diffuse ref="ffe5ea06-8855-4ac4-9512-2e65f7cfc952" />
+    <Material ref="Metal_Rough" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="NUM_SPLITS_1,GEOMETRY_ACTOR,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="dce4a2b8-5345-43ef-a91c-673e40dff726">
+    <GroupAttribute ref="a3662bd3-34fe-4923-aaa4-c87d96df2e18" />
+    <GroupAttribute ref="333e8282-4c1c-467d-b72a-92fd98ef3293" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="a3662bd3-34fe-4923-aaa4-c87d96df2e18">
+    <Diffuse ref="1a84ab6f-f5ff-4d65-8b27-946e793545bc" />
+    <Material ref="Material4" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="333e8282-4c1c-467d-b72a-92fd98ef3293">
+    <Diffuse ref="246b9be3-0532-4b02-a75c-b3afea348c1e" />
+    <Material ref="Material5" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="1" defines="GEOMETRY_ACTOR,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="f741b9e8-fea0-4a01-8085-6e7d63300aec">
+    <GroupAttribute ref="faea3ab1-cef5-499e-854a-b1ac7974db3e" />
+    <GroupAttribute ref="7793a706-1195-4437-a479-886dcef99e91" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="faea3ab1-cef5-499e-854a-b1ac7974db3e">
+    <Material ref="Material2" />
+    <Diffuse ref="e3226b28-2a27-4aa7-a336-833219218d0b" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="7793a706-1195-4437-a479-886dcef99e91">
+    <Material ref="Material3" />
+    <Diffuse ref="1774ad48-00aa-4dce-977f-5581186aec4d" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="1" defines="GEOMETRY_ACTOR,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="2ee52ccb-f504-4101-88c9-c571f599644a">
+    <GroupAttribute ref="ea0102fd-85e4-4576-a93d-27bf4d22cff9" />
+    <GroupAttribute ref="e0446aec-deab-41be-862e-f98ff08143cb" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="ea0102fd-85e4-4576-a93d-27bf4d22cff9">
+    <Material ref="Material2" />
+    <Diffuse ref="8f0193af-b666-43d0-aca9-e35c6af3cce2" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="e0446aec-deab-41be-862e-f98ff08143cb">
+    <Material ref="Material3" />
+    <Diffuse ref="e51758a3-48da-49ac-8e5f-9e04a972f2d7" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="32fca205-8f52-4c77-a668-6aa304c8a857">
+    <Material ref="Material__2" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="97bbd781-089e-4e38-b042-1647b83e6d0e">
+    <GroupAttribute ref="f2866903-c888-4ba5-a0ca-d34e73890273" />
+    <GroupAttribute ref="7707410f-bde9-4bcd-a5d6-16cc33951f7b" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="f2866903-c888-4ba5-a0ca-d34e73890273">
+    <Material ref="LightGray3" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="7707410f-bde9-4bcd-a5d6-16cc33951f7b">
+    <Material ref="Burnt_Umber3" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="4a1c8b16-6dfc-4519-a936-2e93d148a4c2">
+    <Material ref="Material__3" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="4" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="98dc77dd-3267-4cc3-aaba-c08ad0680ad0">
+    <Material ref="2d9bcdc1-6ff9-49fd-8ecf-b909ed159236" />
+    <Diffuse ref="f761ba37-d38f-45ae-8cae-8bd6db47d51e" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="c3be1f05-0bdd-4c9c-9bf7-77450dd3a10a">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="a6a5b4b5-f869-4bba-b199-762ef3128bf0">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="db4f4465-e7ad-4cf7-ad82-8b9fcc6acc7b">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="6f022fd3-da94-4f2a-afb3-e60a34ae7b4d">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="07e7a30c-1626-46d5-bdec-21c27632329d">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="9b2380a0-e3ae-4a33-9036-599907a28b80">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="a7f34639-283f-497e-8f8e-c47b238f6d97">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="21a36fd3-ea02-4f9f-a5b9-4391019e8c76">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="bc920033-3c38-44cb-8a27-3b9ca4a7d2e2">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="e9f98103-23e1-4b57-9def-9c70738ea07c">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="bd4b91c1-686e-4e8b-8bc2-843aa83869ed">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="4ae2547b-2ace-4c4e-b6f8-4d79abd6c502">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="6acadf00-0a09-4c30-9fa1-552da5e751f7">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="da9bfae9-97bb-45b5-ac00-46f40a092699">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="59c88a54-3622-4f72-9f45-533190435ac3">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="cb86b741-ae9b-49ec-a7e1-c4aaed5f459e">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="49e37013-c1ff-4763-9591-f2e4522417d0">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="5472dba0-0e23-4efc-9b33-e5735660e867">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="591bcdb7-15d7-4006-86a4-62b24ce587a8">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="50033550-fb4c-4a57-b788-d80e39e21463">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="f055693d-ad99-4e33-b09e-e06f2dc14903">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="1bf83796-80b2-489f-98cb-9b79e315e496">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="efd6190a-166d-4ec8-8395-537a0278d3ec">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="fd2fc4ce-381a-4ae5-a5b4-e894387d81d4">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="cebd6728-9583-4518-ba61-8a68eedea432">
+    <Material ref="hull_yellow" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="b08f1b10-d636-4139-877a-b7d4789900e2">
+    <Material ref="Default_Material" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="1" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="3b95983a-7a98-43a2-939d-3d59f16ea41f">
+    <Material ref="Default_Material" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="3d309564-4a24-4922-bd8d-40e8aa50b9cb">
+    <GroupAttribute ref="2b6d3bcb-41b8-47d9-a603-702698fbf00e" />
+    <GroupAttribute ref="a71a9e90-8bfd-43cf-bed0-34f7ce583a6d" />
+    <GroupAttribute ref="04fb3761-db26-4fc1-8e04-c179fb17e293" />
+    <GroupAttribute ref="e0750de8-1982-4c3e-9b5c-ebe0b6b24dfe" />
+    <GroupAttribute ref="6a81a86c-2c5b-4365-b63b-810251b3d467" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="2b6d3bcb-41b8-47d9-a603-702698fbf00e">
+    <Material ref="Default_Material" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="a71a9e90-8bfd-43cf-bed0-34f7ce583a6d">
+    <Material ref="0059_DarkOliveGreen" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="04fb3761-db26-4fc1-8e04-c179fb17e293">
+    <Diffuse ref="00bb8bad-c939-4550-897b-c53a585b9620" />
+    <Material ref="Metal_Aluminum_Anodized" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="e0750de8-1982-4c3e-9b5c-ebe0b6b24dfe">
+    <Diffuse ref="cf788789-67a5-4138-af4b-d5ff9dd30468" />
+    <Material ref="Metal_Corrogated_Shiny1" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="6a81a86c-2c5b-4365-b63b-810251b3d467">
+    <Diffuse ref="2f011fe6-c2cf-45f4-9372-ad6e3fdcc594" />
+    <Material ref="Metal_Rough" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="NUM_SPLITS_1,GEOMETRY_ACTOR,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="971c26b0-fc30-4903-93da-7fb39d87f984">
+    <GroupAttribute ref="ae8cddb7-6b89-4b4d-ad82-5ceebd4bb39b" />
+    <GroupAttribute ref="68c6d223-7ea5-4079-83bd-07775077d87a" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="ae8cddb7-6b89-4b4d-ad82-5ceebd4bb39b">
+    <Diffuse ref="ee873651-2690-4b6e-8d30-6fabfb4c943c" />
+    <Material ref="Material4" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="68c6d223-7ea5-4079-83bd-07775077d87a">
+    <Diffuse ref="ebef19c3-6695-4b72-a248-58f65a36f946" />
+    <Material ref="Material5" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="1" defines="GEOMETRY_ACTOR,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="a1abef36-3cc2-4ee7-9606-021ccac3a109">
+    <GroupAttribute ref="651a748f-aecb-4629-a259-24c6b0225838" />
+    <GroupAttribute ref="cdcfb89a-2be0-4a47-98cd-6731fe3812b3" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="651a748f-aecb-4629-a259-24c6b0225838">
+    <Material ref="Material2" />
+    <Diffuse ref="72ddb181-1c11-4c2c-b69a-9d05524425af" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="cdcfb89a-2be0-4a47-98cd-6731fe3812b3">
+    <Material ref="Material3" />
+    <Diffuse ref="029b0a06-3dc4-4ed0-9775-eaad818fc1c2" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="1" defines="GEOMETRY_ACTOR,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="469bc6b6-dde0-4ea7-83b9-a06dce1668b0">
+    <GroupAttribute ref="c51ee151-2328-41e9-a4c8-eebc20301e6a" />
+    <GroupAttribute ref="42a94086-6236-4869-9d77-dd551e0848f0" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="c51ee151-2328-41e9-a4c8-eebc20301e6a">
+    <Material ref="Material2" />
+    <Diffuse ref="d75f3914-0e43-4918-a766-7a9aa8a8a3d5" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="1" flags="3" name="GROUPATTRIBUTE" id="42a94086-6236-4869-9d77-dd551e0848f0">
+    <Material ref="Material3" />
+    <Diffuse ref="0124f4e6-51d4-4f30-84a8-f1eaddcbccb7" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="61431e0b-cb03-4ba3-94f2-5b62b018cf20">
+    <Material ref="Material__2" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="f7f38174-837e-4d0e-bce2-749131c7a29d">
+    <GroupAttribute ref="d9387a3d-d1ef-4a5f-b187-bf831d926a2b" />
+    <GroupAttribute ref="d753e50f-c5e9-4170-ac8c-1354d0797a8a" />
+  </DefaultAppearance>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="d9387a3d-d1ef-4a5f-b187-bf831d926a2b">
+    <Material ref="LightGray3" />
+  </GroupAttribute>
+  <GroupAttribute blendingmode="0" flags="3" name="GROUPATTRIBUTE" id="d753e50f-c5e9-4170-ac8c-1354d0797a8a">
+    <Material ref="Burnt_Umber3" />
+  </GroupAttribute>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="464bf170-83bc-46f7-8c2e-3e0c244937bb">
+    <Material ref="Material__3" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="4" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="ed43f658-f5a0-41a0-8dbf-0dc4180c2f0b">
+    <Material ref="2d9bcdc1-6ff9-49fd-8ecf-b909ed159236" />
+    <Diffuse ref="8f8503f9-553e-43ac-aa66-8092cca71ebe" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="67bcbe38-2f26-458d-84c7-9b8040ac1b1e">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="14f9715e-36ae-473c-9f38-b4d79a5ef8ad">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="1f40fcd0-998d-47c1-9ce7-e15bbec6f6ce">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="0cc39c56-79cf-4197-9bb1-6c316f54dc94">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="ba0125bb-b1f2-4025-9c28-33a46f0efdc6">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="af62bee1-64d7-47ca-b86b-7aeae3ffab61">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="585fb137-d8bc-48bc-a64e-4d5f944762f2">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="b778f95f-a8ed-4bbb-af4e-a9604396619a">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="7fba6f3b-be8a-4ea5-aa54-5510aba1073d">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="8d499f38-23cc-4155-b0a5-6b140773ebd3">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="69aaf839-685b-43bd-93ff-f240409a7ec3">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="95f0a7ca-dba2-4a76-9811-09a0eb4b56ae">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="1ebd24f4-41be-4013-baf0-ec25fcad3010">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="a8cf4785-78b0-47ed-889d-cf6bd6be6b03">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="b627a7ef-63fa-4f36-907f-c9252154df6a">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="3f1a9c03-3339-4937-8e29-73c562bdb15f">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="ef46d8ee-effc-4dfd-a91d-75c616984037">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="5fed42bc-e175-4f01-ad70-34da0736737e">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="7d85b0ea-5e93-4d22-a9c4-4cdbab899ffc">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="ebd1e1b7-1521-4f13-9ea0-755a568680e1">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="32a72c11-57f9-4fab-a1b2-72f6b77dc6e1">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="fc633548-a412-48b4-b44a-2a3ce345f490">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="4f57d692-1db9-4488-8d81-0c1b2b04e4d9">
+    <Material ref="None" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="0" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="1b826c54-482b-4193-9882-6d2a68178397">
+    <Material ref="da80c4af-3a51-49d9-b0a2-df8b88113f06" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="93d0051f-60f3-4554-a1d2-abd198f5078b">
+    <Diffuse ref="5b152440-3e55-4e2d-9ea9-1ec46d69ba6c" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="467d4903-1799-455b-8fd8-c45097968a6f">
+    <Diffuse ref="92eb6d11-0c3d-419d-b9c0-ef9d26ab49d0" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="3dc85392-d572-4965-9e90-661a224d1ee5">
+    <Diffuse ref="cd0575eb-7ac9-4684-8b5f-b3b5d4deb84f" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="8516f364-5eda-46c6-9c8e-e2938de724b1">
+    <Diffuse ref="00aa79f5-f580-4a0a-82ee-a77db8912097" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="6b89be19-b2b9-43e6-ac3d-e2da961c5b42">
+    <Diffuse ref="6403aebd-b639-4ce6-a709-d085b63f632c" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="8523027a-0904-4383-8694-e979d9ecd2c4">
+    <Diffuse ref="8d5eedea-ade2-4a1d-ae24-59638182fb63" />
+    <NormalMap ref="7a096b4c-b650-4560-b8e4-478c586a2607" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="60dc1891-aa53-4e52-a44d-a047d2a82123">
+    <Diffuse ref="955bc372-5dd2-4320-8c0a-bd066d657f08" />
+    <NormalMap ref="9f0b1694-126a-4bf2-81b1-a77651525092" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="0ad7f152-861f-4efe-b0b1-665470b7e9bc">
+    <Diffuse ref="8e6c176d-bafa-40c5-b5ee-58f008e9aed9" />
+    <NormalMap ref="933c2a03-30ad-4eae-bf1f-0e59a6d41684" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="1" defines="GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\AtmosphereShader_DirectionalLight.fx" flags="3" name="DEFAULTAPPEARANCE" id="61f57556-f0c9-4b22-8959-62839733a803" />
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="62f97a42-97e1-441c-b573-a33d01c31732">
+    <Diffuse ref="ab8f82d6-0d04-4799-b025-263d870d816a" />
+    <NormalMap ref="c9b8e60b-36ce-4274-affa-d1a9dd8c020b" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="da787d6c-5174-4448-a046-81798094427e">
+    <Diffuse ref="281ce725-4443-4deb-8a1c-6d9a3f75dc4c" />
+    <NormalMap ref="c620651a-90f7-42d3-947a-1b06bec50fad" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="1" defines="GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\AtmosphereShader_DirectionalLight.fx" flags="3" name="DEFAULTAPPEARANCE" id="0e8dcdfb-9f85-444e-b717-b87dc2193352" />
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="fc2616ea-701c-41d7-bb23-8dd59b883fdc">
+    <Diffuse ref="7f594200-0175-4060-9d95-b68784cc6591" />
+    <NormalMap ref="69892f3b-f8e3-4728-81af-a40dc167b7a1" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="922271cc-481c-4c1e-b67a-448c5b654e35">
+    <Diffuse ref="657c8fb8-0586-4057-a99f-de44e313c90d" />
+    <NormalMap ref="2c4166ed-d7e8-458f-b3d3-be1c565956ad" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="6103f8dd-2092-48ee-aaa9-7eb6db97857b">
+    <Diffuse ref="412c4c75-6db3-4b60-9fdc-6cb02644de63" />
+    <NormalMap ref="9c7675e3-d778-48ed-852e-9dbc9800fb00" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="675fc481-746e-40fe-93c9-9e0bbdf6bef0">
+    <Diffuse ref="190456db-01ad-4c16-8140-9f2bfad0e00d" />
+    <NormalMap ref="e5b5b93a-09f9-4bd5-8bad-6e4b92212c0d" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="e15da468-6d52-497c-ba37-c05a1f5481bf">
+    <Diffuse ref="c03bf98c-8003-4518-b814-7c901eb7b8db" />
+    <NormalMap ref="7f2e8f5a-b02f-4e7c-91e4-b7b6a5358fc8" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="a134a4b0-4c63-4def-b865-eb3b37644522">
+    <Diffuse ref="64d8be12-0c1d-4926-8890-dc011831dff6" />
+    <NormalMap ref="989c7aa7-b1d3-4105-8cf2-45b188828da3" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="b6cafe34-959b-4d32-bfe8-15483fb0cb5c">
+    <Diffuse ref="37a28a72-2ade-4092-87ba-738921f9662d" />
+    <NormalMap ref="eb2cf56b-1966-4b29-aa2a-86472bbd1a23" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="58a7e7e5-e5cb-4e09-85bf-a1faa7616beb">
+    <Diffuse ref="1ec8454c-f51e-4360-a14a-31e5723fdbc4" />
+    <NormalMap ref="32d783bc-e15c-44c5-a922-99e7db4270c5" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="1278d5f2-6bd9-44ea-b765-3a53867826ce">
+    <Diffuse ref="7e1bc914-cd7e-4108-b088-d442dc5b1609" />
+    <NormalMap ref="62d1adc4-3ee5-4450-b9a2-257b401af1e9" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="a847f790-3d4c-4de4-88c5-d5ae4336e634">
+    <Diffuse ref="702bef17-6de3-41d7-9fc7-c3714844af0b" />
+    <NormalMap ref="68a58bdc-d75d-48f5-9874-0148277ad971" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="88a037a6-16b0-4d3e-a358-6e4e1a244ac3">
+    <Diffuse ref="3e12a01e-199b-4d11-b32d-f0305bcbda6d" />
+    <NormalMap ref="35337781-3ea7-40c1-90aa-668c4667a6ff" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="51dde3ce-7f29-4dfe-8223-8ac875b0de63">
+    <Diffuse ref="e7f62ea5-f1f4-4194-b502-111788c8e59d" />
+    <NormalMap ref="1651022b-2390-4c61-9d0b-5347fcb7fe92" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="1cb45cb7-3389-466e-96ba-9563ba2811ff">
+    <Diffuse ref="b223c2e5-597b-4450-9a5e-057919714c87" />
+    <NormalMap ref="3fca1975-dad6-4c65-a7f0-df1ff901c350" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="537f4d92-cbe8-4472-a63e-3504adaf8c41">
+    <Diffuse ref="f2f920d9-04d3-49ca-939c-aee863831869" />
+    <NormalMap ref="e7f5d5f2-bd83-4f21-a67f-f221a08f3d56" />
+  </DefaultAppearance>
+</root>

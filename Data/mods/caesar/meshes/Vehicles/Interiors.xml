@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Interior cellsize="2.5,3,2.5" cellcountx="45" cellcounty="25" cellcountz="94" spatialtreedepth="6" celldatabasepath="caesar\meshes\vehicles\yorktown_w_interior.interior" tilecountx="16" tilecountz="16" octreedepth="6" entityflags="42063" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts\ship_interior.css" boundingbox="-56.25,-37.5,-117.5,56.25,37.5,117.5" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="INTERIOR" id="64fcf9cf-f44c-4795-b6ff-08139bab6149" />
+</root>

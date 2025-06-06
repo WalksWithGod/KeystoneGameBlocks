@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <SceneInfo firstnodetypename="Root" type="0" serializeemptyzones="False" flags="3" name="SCENEINFO" id="simplescene001_SceneInfo">
+    <Viewpoint startingregion="cad71ad6-6dcd-495a-b8f5-6547a1fe9975" startingtranslation="0,0,0" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="9a3462b1-d082-484c-8297-083f64714a2d" />
+    <Viewpoint startingregion="cad71ad6-6dcd-495a-b8f5-6547a1fe9975" startingtranslation="0,0,0" focusentity="5618dc4a-7f87-4ed3-a9c2-d272842b884c" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="d4583df3-6efa-4778-bdd2-8d7c312fff75" />
+  </SceneInfo>
+</root>

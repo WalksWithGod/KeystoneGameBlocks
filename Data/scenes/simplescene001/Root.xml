@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Root regiondiameterx="74799002943488" regiondiametery="74799002943488" regiondiameterz="74799002943488" octreenodedepth="3" octreedepth="0" entityflags="6291484" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="-37399501471744,-37399501471744,-37399501471744,37399501471744,37399501471744,37399501471744" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="ROOT" id="cad71ad6-6dcd-495a-b8f5-6547a1fe9975">
+    <DirectionalLight ref="9f2bbf79-fab4-4b89-ba82-bb6391416846" />
+    <Vehicle ref="95700a49-afcf-4bf2-a6a2-7161a1189c29" />
+  </Root>
+</root>

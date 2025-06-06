@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <SceneInfo firstnodetypename="Root" type="0" serializeemptyzones="False" flags="3" name="SCENEINFO" id="linelist_SceneInfo">
+    <Viewpoint startingregion="Root,linelist" startingtranslation="0,0,0" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="e1f2b155-1722-4c84-ace6-9b3c3ea458a8" />
+  </SceneInfo>
+</root>

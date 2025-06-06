@@ -1,0 +1,69 @@
+using System;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyCommon.Traversal;
+
+public class NPC_Open_Door : BaseScript // TODO: should this inheret from a different BaseScript like a NPCBehaviorBase base script?
+                                        // and shouldn't Execute return a BehaviorTreeResult enum value?
+{
+	// TODO: what is Validate for?
+	public static bool Validate (string entityID, double elapsedSeconds)
+	{
+		//System.Diagnostics.Debug.WriteLine (string.Format("Entity {0}", entityID));
+		return true;
+	}
+	
+	public static void Enter (string entityID, double elapsedSeconds)
+	{
+	}
+	
+
+	// http://www.what-could-possibly-go-wrong.com/fluent-behavior-trees-for-ai-and-game-logic/
+	// TODO: how do we know when this node needs to be used in the BehaviorTree?  Because normally it's 
+	//       "walk to location" and then we need to wait til we get there and determine if there's something like a "door" or elevator
+	//       that the npc needs to "use".
+	// todo: should this method actually be called "Perform" just as it in the Action class?  
+	public static BehaviorResult Execute (string entityID, double elapsedSeconds)
+	{
+		// TODO: AIBlackboardData data must be initialized with all the AIBlackboardData variables by the NPC's standard entity script.
+		// TODO: really, before this execute is called, the blackboard data should already exist and we shouldn't have to check for null here
+		KeyCommon.Data.UserData data = EntityAPI.GetAIBlackboardData(entityID);
+		if (data == null) return BehaviorResult.Fail;
+		
+		// NOTE: if we've reached this script in the sequence, then many checks we should not have to do.
+		//       We should be able to just grab the current pointIndex, and if it's -1, set it to 0 and start
+		//       steering to that point.
+		
+		// if the door state is already "opening" we need to just wait til it reaches "opened"
+		// 
+		
+		// TODO: are we recovering from a paused game?  The elapsedSeconds needs to be reset.
+		//       That should maybe be the job for a separate node.
+		
+		// TODO: isn't it here that the npc must grab any data on a "door" and "use" the door to open it?
+		//       and wait until it's open before walking through it?  This would mean we'd need to check the tileValue
+		//       we're on to know if we have to "use" something or not.  Or is it handled in the BehaviorTree where
+		//       a different branch is reached when needing to "use" a door?
+
+		// get from the data the target door 
+		string doorID = data.GetString ("target");
+		if (string.IsNullOrEmpty(doorID)) return BehaviorResult.Success;
+		
+		//EntityAPI.Execute(doorID, "use");
+		// TODO: do we execute play animation here too?
+		//        don't we first need to get the state of the door?
+		
+		// is the following call necessary?  or is data a reference that updates in our property value too?
+		EntityAPI.SetAIBlackboardData (entityID, data);
+		return BehaviorResult.Success;
+	}
+	
+	public static void Exit (string entityID, double elapsedMilliseconds)
+	{
+	}
+	
+	
+}

@@ -1,0 +1,48 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'Thruster1_interior_assembly.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Glass_Sky_Reflection1
+Ka 0.800000 0.000000 0.023529
+Kd 0.800000 0.000000 0.023529
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Thruster1_interior_assembly_Textures/Glass_Sky_Reflection1.PNG
+
+newmtl Red
+Ka 1.000000 0.000000 0.000000
+Kd 1.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+
+newmtl DimGray
+Ka 0.411765 0.411765 0.411765
+Kd 0.411765 0.411765 0.411765
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+
+newmtl Orange
+Ka 1.000000 0.647059 0.000000
+Kd 1.000000 0.647059 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.500000
+
+newmtl Yellow2
+Ka 1.000000 1.000000 0.000000
+Kd 1.000000 1.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.390000
+
+#EOF

@@ -1,0 +1,350 @@
+using System;
+using Game01;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class Beam : BaseScript
+{
+	public static void Initialize(string scriptID)
+	{
+		// PROPERTIES
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[4];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, (object)"beam");
+		// TODO: length needs to be the "range" of the weapon or perhaps the distance to the farplane or whichever is less
+		properties[1] = new PropertySpec("length", typeof(double).Name, category, 1000d);  
+		properties[2] = new PropertySpec("jitter", typeof(bool).Name, category, true);
+		properties[3] = new PropertySpec("default beam scale", typeof(Vector3d).Name, category, new Vector3d(1,1,1));
+		// todo: do i need an impactPoint and an impactNormal for determining placement of "impact" particle fx?
+		
+		
+		
+		category= "production";
+		
+		// // create array of products produced by this component.  
+		// Production[] production = new Production[1];
+		// production[0].ProductID = (uint)UserConstants.Product.VisibleLight;
+		// production[0].UnitCount = 1; 
+		// production[0].UnitValue = -1; 
+		// production[0].DistributionMode = DistributionType.Container; 
+		// production[0].DistributionFilterFunc = ThrustDistribtuionFilter;
+		
+		// properties[19] = new PropertySpec("production", typeof(Production[]).Name, category, production);
+		// properties[19].IsSerializable = false;
+		
+		
+		// add the properties to the entity
+		EntityAPI.AddCustomProperties(scriptID, properties);
+
+		//EntityAPI.AddRule (scriptID, "description", new SimpleRule(1, Rule_Description));
+		//EntityAPI.AddRule (scriptID, "damage", new SimpleRule(2, Rule_ReadOnly));
+
+
+		// visible light production handler runs at seperate hz from Force_Production
+		EntityAPI.AssignProductionHandler(scriptID, (uint)UserConstants.Product.VisibleLight, Production_VisibleLight);
+
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{
+		// here we do some per Entity modifications such as setting entity flags
+		// since Initialize() is done once per Script instance and InitializeEntity()
+		// occurs once per Entity that is using this script.
+		
+		EntityAPI.RegisterProduction(entityID, (uint)UserConstants.Product.VisibleLight);
+			
+	}
+	
+	public static void UnInitializeEntity(string entityID)
+	{	
+		EntityAPI.UnRegisterProduction(entityID, (uint)UserConstants.Product.VisibleLight);	
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+
+	}
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		return "<html><body>TODO: ENGINE</body></html>";
+	}
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+
+
+	#region Rules
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "range":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}
+	#endregion
+
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}
+
+	public new static Vector3d[] QueryCellPlacement (string entityID, string interiorID, Vector3d position, byte cellRotation)
+	{
+		return BaseScript.QueryCellPlacement (entityID, interiorID, position, cellRotation);
+	}
+	
+	#endregion
+
+	#region Build statistics
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+	
+		// when a build property changes, run BuildUpdate() to recompute statS?
+		// Not exactly.  We instead set a flag that the "stats" are dirty 
+		// this way future property changes dont result in multiple calls to update stats.
+		// 
+		switch (index)
+		{
+			default:
+				break;
+		}
+	}
+	
+	#endregion
+	
+	#region Run-time
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// visible light production struct?
+		// clear previously produced units from last tick
+		// produce
+		// retreive unit produced during previous tick
+		// run the consumer
+		
+		bool enabled = (bool)EntityAPI.GetFlag (entityID, "enable");
+		if (enabled == false) return;
+		
+		
+		//string modelID = EntityAPI.FindDescendantByName(entityID, "beam model");	
+		string modelID = EntityAPI.GetDescendantOfType(entityID, "Model"); // todo: i could cache this
+		
+		// scale the beam's model x for width and y for length. NOTE: the beam is 1x1 meter unit dimensions
+		double range = (double)EntityAPI.GetCustomPropertyValue(entityID, "length");
+		Vector3d scale;
+		scale.x = 4;
+		scale.y = range;
+		scale.z = 1;
+		EntityAPI.SetCustomPropertyValue(entityID, "default beam scale", scale);
+		EntityAPI.SetPropertyValue(modelID, "scale", scale);
+		
+		// enable the pointlights and position them at their respective positions at start and end of beam.
+		string pointLightStartID = EntityAPI.FindDescendantByName(entityID, "pointlight start");
+		string pointLightEndID = EntityAPI.FindDescendantByName(entityID, "pointlight end");
+				
+		// set the pointlight ranges based on the power output of the beam?
+		Vector3d position = EntityAPI.GetPositionLocalSpace(entityID);
+		position.z = range;
+		EntityAPI.SetPositionLocalSpace (pointLightEndID, position);
+		
+	
+		// compute's the bbox center and then moves the center.z = center.z - (center.depth / 2);
+		// FXAPI.Register( helper.computeexternalposition(entityID), vector3d offset, length, radius, color, etc);
+		
+		// external impact emitter management
+		
+		
+		// external muzzle flash management
+		
+		// register / unregister sound - wait, actually ithink
+		// rather than AudioAPI.Register() for these 3d sounds we implement a sound node that hosts
+		// an audio clip resource and the sound node can track the playback of the sound and the 3d audio
+		// as camera moves.  
+		// AudioAPI.Register(); // todo: like our hexalfares, can we set sound's paths in custom properties?
+		// 	// http://castle-engine.sourceforge.net/x3d_implementation_sound.php
+	//
+
+	}
+	
+	// producing light makes the vehicle easier to detect with optical sensors and infrared sensors
+	public static Production[] Production_VisibleLight (string entityID, double elapsedSeconds)
+	{
+		return null;
+	}
+	
+
+	
+	// OnRender gets called for each model including all Models in nested Sequence/Selector nodes
+	public static void OnRender (string contextID, string entityID, string[] modelIDs, string shaderID, 
+								 Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+		
+		// if the weapon is firing, the beam entity will be enabled 
+		bool enabled = (bool)EntityAPI.GetFlag (entityID, "enable");
+		if (enabled == false) return;
+		
+		if (modelIDs.Length < 1) return;
+		
+		string name = EntityAPI.GetName(modelIDs[0]);
+		if (string.IsNullOrEmpty(name)) return;
+		
+		// // todo: this doesnt work for two reasons.
+		// // 1-the beam is it's own child entity and needs its own script
+		// // 2-we dont include the beam model's scale when computing the billboard rotation
+		// if (name == "beam model")
+		// {
+			// // randomly scale the beam within a range to jitter/vibrate the beam
+			// // - we need to cache the default scale and then randomly tweak that value
+			// //   each frame to produce a jitter / vibrate effect.
+			Vector3d defaultScale = Vector3d.Zero();
+			object val = EntityAPI.GetCustomPropertyValue (entityID, "default beam scale");
+			if (val == null || (Vector3d)val == Vector3d.Zero())
+			{
+				// first time, cache the model's scale as the default scale
+				val = EntityAPI.GetPropertyValue (modelIDs[1], "scale");
+				defaultScale = (Vector3d)val;
+				EntityAPI.SetCustomPropertyValue(entityID, "default beam scale", defaultScale);
+			}
+			else
+				defaultScale = (Vector3d)val;
+			
+			// randomize the beam model's scale a bit for simple animation effect
+			Vector3d scale = defaultScale;
+			Random r = new Random();
+			double s = 0.8 + r.NextDouble() * 0.4 ;
+			// NOTE: for beam weapon billboards, we only randomize the width of the beam
+			scale.x *= s;
+			
+			EntityAPI.SetPropertyValue (modelIDs[0], "scale", scale);
+			
+			//System.Diagnostics.Debug.WriteLine ("Beam.OnRender() - beam scaled.");		
+		// }
+		
+	}
+	
+	#endregion
+}

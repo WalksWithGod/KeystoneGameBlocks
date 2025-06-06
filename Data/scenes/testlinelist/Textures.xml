@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\neutron_trail.dds" flags="3" name="DIFFUSE" id="6e101a75-5aca-4ac4-b901-670959a16eef">
+    <Texture ref="caesar\textures\neutron_trail.dds" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\textures\neutron_trail.dds" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\neutron_trail.dds" flags="3" name="DIFFUSE" id="3aab63f7-ad8c-4822-9f83-62366c151a64">
+    <Texture ref="caesar\textures\neutron_trail.dds" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\neutron_trail.dds" flags="3" name="DIFFUSE" id="4fc18a78-6c35-4842-8825-c3b5ab703aff">
+    <Texture ref="caesar\textures\neutron_trail.dds" />
+  </Diffuse>
+</root>

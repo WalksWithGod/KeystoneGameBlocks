@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="4a8ded32-4d3c-4f3f-976f-5228dc448201">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Texture texturetype="0" flags="7" name="TEXTURE" id="caesar\textures\Walls\wall00.png" />
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="dcb6d357-f289-4fcf-8dc9-f074c6cb71a6">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="5cf649b2-1ce0-4095-b59a-fcd23b6b05f2">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="e013228a-0235-455a-9dd3-706ae6921f19">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="4cd09e50-5291-4df8-8fb5-af6f52489022">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="21480e6f-033c-474c-8d75-4e52763cf438">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="47b2ff7a-a3da-4834-9fe5-290534dacfdd">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="21a98311-c1b9-4964-865e-3187bea56431">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="60a30171-98c1-4a12-842b-0f58689f085f">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="4022f3db-0849-415d-96f2-58ba737e3416">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="7eeea2d2-9c27-45c9-923c-ad567724eb61">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="6466a194-1f48-4ff8-b6a8-281930474f4c">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="b86acbda-59ae-4762-90a1-25cddf5bcb83">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="b4826909-501a-4d47-9d81-7d84c1fbf8ee">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="8dbedac0-533e-410c-ae29-536c36c12d16">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="7d28d559-03be-4099-86f1-ac25b268ea67">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="7adec7a0-a2e3-4edd-a1ce-75ef0642e83a">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="d9668d5f-669a-4e97-9acd-21b72bf60087">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="19f70117-a9e4-4849-afbc-4da91b6ac9da">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="bd8bd3e4-306d-4bf1-9de1-8a7934379a15">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="e59efbbf-2130-4630-9d7f-c2e85a52d37f">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="956f36eb-9dd9-4896-a594-672da973b8a0">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="ce22a595-5e7d-4d01-89eb-77d3e8a7cbfc">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="4799565b-19c8-4c06-8ac4-b47ce6d9259a">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="70eda451-5341-48b6-b7c3-185941b97305">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="c722dd5b-f373-4022-86e5-14eb1dd05973">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="f0809a08-a1af-4a8d-9643-777a4cc9078e">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="e0f4e2b9-e3dc-46ff-943f-c209cbff4672">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="71c6488b-edaf-423d-ad1b-eef03b6f066c">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+  <Diffuse alphatest="False" alphatestrefvalue="128" alphatestdepthwrite="True" textureclamp="False" tscale="1,1" toffset="0,0" trotation="0" texture="caesar\textures\Walls\wall00.png" flags="3" name="DIFFUSE" id="3d4290af-5fa0-493e-9bf5-f69f614caa1a">
+    <Texture ref="caesar\textures\Walls\wall00.png" />
+  </Diffuse>
+</root>

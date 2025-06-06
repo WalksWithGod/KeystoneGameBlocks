@@ -1,0 +1,132 @@
+using System;
+using Game01.GameObjects;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class tile_floor : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		string category = "public properties/misc";
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[1];
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "tile floor");
+		// category = "public properties/statistics";
+		// properties[1] = new PropertySpec("weight", typeof(double).Name, category, 0);
+        // properties[2] = new PropertySpec("cost", typeof(double).Name, category, 0);
+		// properties[3] = new PropertySpec("volume", typeof(double).Name, category, 0);
+		// properties[4] = new PropertySpec("surfacearea", typeof(double).Name, category, 0);
+		// properties[5] = new PropertySpec("health", typeof(int).Name, category, 0);
+		
+		// category = "build"; // the following apply for entire interior
+		// properties[6] = new PropertySpec("frame strength", typeof(string).Name, category, "", "Light", "", typeof (FrameStrengthConverter).AssemblyQualifiedName);
+		// properties[7] = new PropertySpec("materials quality", typeof(string).Name, category, "", "", "", typeof (MaterialQualityConverter).AssemblyQualifiedName);
+		// properties[8] = new PropertySpec("craftsmanship", typeof(string).Name, category, "", "", "", typeof (CraftsmanshipConverter).AssemblyQualifiedName);
+		// properties[9] = new PropertySpec("tech level", typeof(int).Name, category, "", 7, "", typeof (TechLevelConverter).AssemblyQualifiedName);
+		
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+		
+		// Entity.SetCustomPropertyValues --> calls validate this is only for custom properties though
+		// but i see no reason we cant have rules added for intrinsic properties.  
+		// similarly, our ROUTE should be able to respond to changes in fields just like
+		// our business rules do...
+		// note: we have domainobject.mRulesSet because there we can share all those rules with all
+		// instances of that entity.  so maybe a seperate set of rules for intrinsics? but wait
+		// that's not needed really. that same domainobject rules can test the intrinsics too,we just
+		// need to create the rules and then if we want different rules behavior, we use a different entity
+		// script (aka domainobject script).   Same then is said for our Routes
+		// Routes than are listeners and handlers
+		EntityAPI.AddRule (domainObjectID, "description", new SimpleRule(1, Rule_Description));
+		EntityAPI.AddRule (domainObjectID, "description", new SimpleRule(1, Rule_Description));	
+	}
+		
+	public static void InitializeEntity(string entityID)
+	{
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+	
+		// Entity FLAGS (as opposed to Component flags) should be set here as they are per entity
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.ExplicitEvents, true);
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+
+	#region Rules
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);		
+	}	
+	#endregion
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_FLOOR;}	
+	#endregion
+		
+	
+	#region Build statistics
+		// todo: rather than this specific OnCustomPropertyChanged, why not a 
+	//       specific handler for a specific property change? It can be similar to how we handle
+	//       rules validation
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+		// when a build property changes, run BuildUpdate() to recompute statS?
+		// Not exactly.  We instead set a flag that the "stats" are dirty 
+		// this way future property changes dont result in multiple calls to update stats.
+		// 
+		switch (index)
+		{
+			case 9:
+			case 10:
+			case 11:
+			case 12:
+				//EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+				break;
+			default:
+				break;
+		}
+	}
+		
+	#endregion
+	
+	#region Run-time
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+	}
+	#endregion
+	
+}

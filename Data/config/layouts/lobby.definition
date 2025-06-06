@@ -1,0 +1,13 @@
+<dotnetbar version="6" fullmenus="false" fullmenushover="true" tooltips="true" scintooltip="false" animation="6">
+  <items />
+  <bars>
+    <bar name="barStatusBar" candockleft="false" candockright="false" candocktop="false" candockbottom="true" candockdoc="false" candocktab="false" text="barStatusBar" dockline="0" dockoffset="0" grabhandle="9" menubar="false" stretch="true" style="2" wrapdock="false" wrapfloat="true" canundock="false" state="2" dockside="4" visible="true" custom="false" canhide="false" imagesize="0" itemsp="0" themes="false" cancust="false" layout="0" eqbutton="false" canautohide="false" canreordertabs="false" autocaptionsync="true">
+      <items />
+    </bar>
+  </bars>
+  <docksite size="0" dockingside="Top" />
+  <docksite size="0" dockingside="Bottom" />
+  <docksite size="0" dockingside="Left" />
+  <docksite size="0" dockingside="Right" />
+  <popups />
+</dotnetbar>

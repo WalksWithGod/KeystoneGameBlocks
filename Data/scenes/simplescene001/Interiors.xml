@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Interior cellsize="2.5,3,2.5" cellcountx="25" cellcounty="9" cellcountz="41" spatialtreedepth="6" datapath="simplescene001\95700a49-afcf-4bf2-a6a2-7161a1189c29.interior" tilecountx="16" tilecountz="16" octreedepth="6" entityflags="4236383" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\ship_interior.css" usertypeid="0" boundingbox="-31.25,-13.5,-51.25,31.25,13.5,51.25" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="INTERIOR" id="5618dc4a-7f87-4ed3-a9c2-d272842b884c">
+    <DirectionalLight ref="b932c941-0aa5-4316-9f60-d5958185dcce" />
+    <ModeledEntity ref="313c3b07-90df-4c57-8f7a-97d1abe0d26b" />
+    <ModeledEntity ref="1f3acda2-4ecf-4786-80c6-638f013b0386" />
+    <ModeledEntity ref="71430ba3-07d3-47f2-9795-e9bfddfbd9c6" />
+    <BonedEntity ref="1c07380f-48e9-42d0-bb0c-47d1900aaa2e" />
+    <BonedEntity ref="16e5e938-0bde-4803-a618-278b8ee98289" />
+    <BonedEntity ref="d6350781-202a-4f33-a3e2-36c5a5595aba" />
+  </Interior>
+</root>

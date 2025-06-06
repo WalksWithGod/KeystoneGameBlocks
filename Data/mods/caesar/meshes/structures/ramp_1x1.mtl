@@ -1,0 +1,10 @@
+newmtl Default_Material
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ns 0
+newmtl RoyalBlue
+Ka 0.254902 0.411765 0.882353
+Kd 0.254902 0.411765 0.882353
+Ks 0.333333 0.333333 0.333333
+Ns 0

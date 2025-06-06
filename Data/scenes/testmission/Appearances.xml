@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <DefaultAppearance lightingmode="2" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="ec1da4bc-535f-4a3b-965e-e74772cd107d">
+    <Diffuse ref="7042d03e-745a-4370-9c19-6bb63a2083ac" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="f1425567-40f8-4902-93a7-d2f0d9619ed5">
+    <Diffuse ref="ba194216-8651-41ca-b6e2-9ce3801e4449" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="2" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="c159c7dd-3293-4be9-ada4-f1b0f2353aad">
+    <Diffuse ref="4d7a0739-aff9-43c2-8d6c-83c388170610" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="7f663431-ea31-4c33-9d92-642907e5d2f2">
+    <Diffuse ref="676d0af9-1e5f-45d3-acec-3cf729e34c8b" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="2" defines="GEOMETRY_MESH,FORWARD" targetresource="tvdefault" flags="3" name="DEFAULTAPPEARANCE" id="403d09e9-5886-46c2-955b-4e8e35809414">
+    <Diffuse ref="e7b56453-bbb8-4be7-857e-bff384d1496b" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="f69979eb-7268-45a9-813a-03f6799d430a">
+    <Diffuse ref="2ab49b33-a12b-49be-8ec3-a8105307e28c" />
+    <NormalMap ref="c2967094-c15a-4e6b-8498-6d40a4854e15" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="2c735cdd-2623-4316-8f5d-090b5047beb5">
+    <Diffuse ref="7a40c47d-b7a0-4f3b-a992-32a138b86c82" />
+    <NormalMap ref="7cac905d-3a7c-4b33-8d33-f7a89f604684" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="bef7761d-872e-4697-b7a1-eb7f598e0b24">
+    <Diffuse ref="9e488261-f313-43e0-a08b-746600a43143" />
+    <NormalMap ref="45f149fe-86c4-4b7f-9a69-8db87d49a951" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="1" defines="GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\AtmosphereShader_DirectionalLight.fx" flags="3" name="DEFAULTAPPEARANCE" id="394efe99-f337-4e89-8588-c2313481182b" />
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="d040236a-50e0-4e0a-a5d9-eb88b161872b">
+    <Diffuse ref="26c5b481-584d-42ed-85a7-e396ddfb82bd" />
+    <NormalMap ref="c3b22e12-1477-4b36-b637-4ad6e966b04f" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="776ef338-4bfe-4476-b8b5-b5c6fa240c88">
+    <Diffuse ref="17728481-d053-421f-a059-8c6df9f41dd9" />
+    <NormalMap ref="d0d95cf8-1459-4f81-ace1-172bee833ac4" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="1" defines="GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\AtmosphereShader_DirectionalLight.fx" flags="3" name="DEFAULTAPPEARANCE" id="cf5a2fc5-4cda-402d-8430-ac33a5523184" />
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="e7b14f07-974c-4165-a19e-a480c23a8bbb">
+    <Diffuse ref="1a23ced6-4d45-49d9-94d5-f1e12970becf" />
+    <NormalMap ref="2b7ebfc6-8557-4958-ba1a-6a61e659cfd8" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="1afefb47-b785-4c27-984d-243bd79f829e">
+    <Diffuse ref="07eac720-e4ef-4164-b254-558b8a027e6e" />
+    <NormalMap ref="342241a0-3d8a-4cff-8ba4-9ec630d7f0a5" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="1c3ca0f1-f280-4712-a769-86e833c5d6a8">
+    <Diffuse ref="d494fa14-a565-4c1f-b0b4-a1620422b795" />
+    <NormalMap ref="8e21b020-609d-40b3-ad86-a4e2c747a8ec" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="fbee8d00-0461-4534-b85f-164b71f79e97">
+    <Diffuse ref="4c67001f-2c75-4ccb-949c-212b18bfc7ec" />
+    <NormalMap ref="ac25a9c3-fe27-48d1-83ed-60d194e8ad7f" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="a939553f-3aa6-4a43-b03d-389951a9a7ea">
+    <Diffuse ref="9830f16d-ee06-4bb0-8ec5-978ed8e3f9cb" />
+    <NormalMap ref="d7b837b8-2ba2-4e73-aeab-207040a60c34" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="dc1b0fff-249c-4fa6-af35-1add601bf046">
+    <Diffuse ref="226452cd-670a-4c65-bae4-7d1f463c6a8a" />
+    <NormalMap ref="c5647645-1979-4d60-a037-15c523d42315" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="f188ce2b-0aba-4df8-b977-00c9b172f716">
+    <Diffuse ref="0c7225fa-dc39-485c-8319-eac59c617fda" />
+    <NormalMap ref="3ea92850-9349-40a2-8f13-30bd853b7f6e" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="bd4b1349-34d1-47df-baa0-cda8bc2d2dcf">
+    <Diffuse ref="56f0aa1e-c4ea-40e2-b71c-5a4201874141" />
+    <NormalMap ref="626646d7-f3b8-422c-a3e8-438b1f2b72dd" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="97ccd71b-23e3-4218-a8c1-3b3ad5c8f3cc">
+    <Diffuse ref="e983d419-e843-466e-8c1c-1732e8bb4222" />
+    <NormalMap ref="da5e5fe1-94f7-44d0-8f5c-6d4ee9ae0578" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="c79d2139-4d25-4191-99f1-c18d21056da3">
+    <Diffuse ref="c5b419d6-fdb1-4402-8d94-f141db9345dc" />
+    <NormalMap ref="58cc2bd8-234a-4bcb-95a4-531ba421f116" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="f8e61535-c124-4ecc-95bc-bab9fc12daf1">
+    <Diffuse ref="921e1358-7fb6-42f1-b0f6-e5804c2578d4" />
+    <NormalMap ref="634352a3-184d-4edc-b74e-cb40bf0270af" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="0" blendingmode="1" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\Rings2.fx" flags="3" name="DEFAULTAPPEARANCE" id="bae0e96d-2833-4c8c-ac5a-426c6b6bc7e5">
+    <Diffuse ref="30afd0da-91d5-458a-a9c5-2cf3eff1feba" />
+    <NormalMap ref="0c7f9834-e3b8-4f0f-bed7-50a4c2bc2df6" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="93995ff3-848d-445e-927e-90229f923774">
+    <Diffuse ref="86061fd0-7f9c-4316-9551-0062409d7584" />
+    <NormalMap ref="b37a7082-eca6-4d80-833b-e2d8f62571ea" />
+  </DefaultAppearance>
+  <DefaultAppearance lightingmode="1" blendingmode="0" defines="NORMALMAP,GEOMETRY_MESH,FORWARD" targetresource="caesar\Shaders\Planet\WorldShader.fx" flags="3" name="DEFAULTAPPEARANCE" id="a3bbd9dc-584e-4577-8900-e55abcfc74cd">
+    <Diffuse ref="6c7261a8-7bce-45eb-9b03-c045bf02dbad" />
+    <NormalMap ref="f8d1164d-c927-4c7f-8692-165762fed5f8" />
+  </DefaultAppearance>
+</root>

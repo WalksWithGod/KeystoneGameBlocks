@@ -1,0 +1,78 @@
+using System;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+
+public class Viewpoint_Smooth : BaseScript
+{
+	
+	// static should work here
+	public static bool Validate (string entityID, double elapsedMilliseconds)
+	{
+		//todo: verify user can't access Keystone.Core._Core and such
+		System.Diagnostics.Debug.WriteLine (string.Format("Entity {0} Spawned at {1}", entityID, 1));
+		return true;
+	}
+	
+	public static void Enter (string entityID, double elapsedMilliseconds)
+	{
+		
+	}
+	
+	public static void Execute (string entityID, double elapsedSeconds)
+	{
+		// todo: get our rotation axis
+		// todo: get our rotation angular velocity
+		// todo: update new rotation based on elapsedSeconds
+		// note: child entities should not adapt rotation.
+		// note: terrain, clouds and atmosphere should be sequenced models, not entities
+		// note: ring perhaps is entity though?  not sure yet... why should it be?
+		
+		// todo: get it's parent entity's position
+		// string parentID = EntityAPI.GetParent(entityID);
+		//Vector3d center= EntityAPI.GetPosition (parentID);
+		
+		// this behavior will always orbit the parent otherwise this script
+		// will not be assigned.
+		
+		// advance the elapsed period of the orbit (wrapping after every completed period)
+		
+		// eccentricity is known
+		// semimajor axis is known
+		// elapsed period is what matters...
+		// take that value and pass in to Math2 function that accepts
+		// semimajoraxis, eccentricity, elapsedperiod, 
+		// and use that to get a unit value that we can scale
+		// and apply any rotation with respect to the eliptical plane
+		
+		// what if we used an eliptical animation instead?
+		// the cool thing about animations is they track their own elapsed times
+		// 
+		
+		Vector3d newPosition = Keystone.Math2.Math2.MoveAroundPoint(center, radius, heading, vertAngle);
+		EntityAPI.SetPosition(entityID, newPosition);
+		
+		
+		
+		// following is simplistic code that rotates around origin
+		Vector3d center = new Vector3d();
+		Vector3d position= EntityAPI.GetPosition (entityID);
+				
+		double heading = Keystone.Math2.Math2.Heading2DDegrees(position);
+		double radius = position.Length;
+		heading += (double)elapsedSeconds;
+		if (heading > 360) heading = 0;
+		double vertAngle = 0 ;
+		Vector3d velocity = EntityAPI.GetVelocity (entityID) * elapsedSeconds;  // velocity per frame
+		
+		Vector3d newPosition = Keystone.Math2.Math2.MoveAroundPoint(center, radius, heading, vertAngle);
+		EntityAPI.SetPosition(entityID, newPosition);
+	}
+	
+	public static void Exit (string entityID, double elapsedSeconds)
+	{
+	}
+}
+

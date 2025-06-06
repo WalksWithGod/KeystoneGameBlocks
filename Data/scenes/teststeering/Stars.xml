@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Star luminosityclass="0" spectraltype="0" spectralsubtype="0" luminosity="0" temperature="0" age="0" stablelifespan="0" innerlimitdistance="0" outerlimitdistance="0" lifezoneinneredge="0" lifezoneouteredge="0" snowline="0" density="0" diameter="1.392E+09" mass="1.99176814392E+30" surfacegravity="0" orbitalradius="0" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="16540" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\star.css" usertypeid="0" customproperties="Star;0;0;0;caesar\shaders\Sky\HexaFlare.jpg;caesar\shaders\Sky\circleflare.jpg;caesar\shaders\Sky\rainbowcircleflare.jpg;True" boundingbox="-5534405287.21095,-5534405287.21095,-3937171154.02222,5534405287.21095,5534405287.21095,3937171154.02222" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Sol" id="1ffffd2c-3eda-43fb-b729-3651e537cf9f">
+    <DirectionalLight ref="7ca8e01e-6b88-460c-bad2-2e03ac7888b3" />
+    <ModelSequence ref="47e224e8-e309-4a27-9145-dff69135c6f8" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="1ffffd2c-3eda-43fb-b729-3651e537cf9f_corona_animation" id="4f35aea8-4e58-491b-b2ee-87448ba88767">
+      <KeyframeInterpolator_rotation keyframes="0,0,0,1,0,0,0.999961923064171,0.0087265354983739,0,0,8.72664624890715E-05,-0.999999996192282" target="corona1" targetproperty="rotation" duration="60" flags="3" name="59881f9e-1a1c-4be1-87c1-898a02f4419d" id="59881f9e-1a1c-4be1-87c1-898a02f4419d" />
+      <KeyframeInterpolator_rotation keyframes="0,0,8.72664624890715E-05,-0.999999996192282,0,0,0.999961923064171,0.0087265354983739,0,0,0,1" target="corona2" targetproperty="rotation" duration="60" flags="3" name="f4be4410-5842-4cda-88f8-78e9cbc5bec4" id="f4be4410-5842-4cda-88f8-78e9cbc5bec4" />
+    </Animation>
+    <World ref="de71b651-3f06-4847-9e47-f48cda70fe98" />
+    <World ref="e3cfd2f1-5b56-4cf3-a3f5-fc65cf36a21a" />
+    <World ref="aaa6fdc4-d7d1-4d0d-a7c5-0184c039d490" />
+    <World ref="e58fb81c-8890-407a-b85a-0627dd3155aa" />
+    <World ref="73f67eb0-18f0-49c9-b408-359fb8d2346a" />
+    <World ref="3be0f6fb-e1f1-416b-bb23-f791f1f37b0f" />
+    <World ref="bd63b9e4-c91d-4a58-ae53-eef0c6e78265" />
+    <World ref="e04298eb-f208-4586-ba9d-4ab77f9005cf" />
+    <World ref="a39fc0b4-b77d-49d0-8b26-3282fb56bbaa" />
+    <World ref="dc525810-5c24-4ffb-9ba2-48312c9933d0" />
+  </Star>
+</root>

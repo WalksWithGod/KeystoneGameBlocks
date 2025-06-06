@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ZoneRoot regionsacross="5" regionshigh="1" regionsdeep="5" structurelevelshigh="0" regiondiameterx="74799002943488" regiondiametery="74799002943488" regiondiameterz="74799002943488" octreenodedepth="0" octreedepth="0" entityflags="12300" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="ZONEROOT" id="ZoneRoot,Campaign001">
+    <Background3D fixedscreensize="0" entityflags="1048684" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="starfield" id="starfield_e3cd45f0-011b-460b-bbb8-558227ed38db">
+      <ModelSequence ref="fa41662b-a95b-4ec4-adab-80f56b6fc609" />
+    </Background3D>
+  </ZoneRoot>
+</root>

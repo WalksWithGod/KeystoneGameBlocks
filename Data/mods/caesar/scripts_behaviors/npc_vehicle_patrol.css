@@ -1,0 +1,157 @@
+using System;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyCommon.Traversal;
+
+// TODO: should this inheret from a different BaseScript like a NPCBehaviorBase base script?
+public class NPC_Vehicle_Behavior_Patrol : BaseScript 
+{                                                   
+	// TODO: what is Validate for?
+	public static bool Validate (string entityID, double elapsedSeconds)
+	{
+		//System.Diagnostics.Debug.WriteLine (string.Format("Entity {0} Spawned at {1}", entityID, 1));
+		return true;
+	}
+	
+	public static void Enter (string entityID, double elapsedSeconds)
+	{
+	}
+	
+	// todo: is this a behavior for the NPC ship's helm? or do i just attach it the Vehicle entity?
+	// todo: the helm script should be informed by the decisions of the behavior tree right? 
+	//       For instance, we assign the "travel to" destination in the behavior tree.
+	
+	// todo: another node in the behavior tree would control when to do active sensor scans right?
+	//       This would mean the behavior tree is attached to the vehicle or that we have a seperate
+	//       behavior tree attached to a tactical station within the npc vehicle.
+	
+	// todo: how do we determine our patrol area and waypoints?  Do we make an AIAPI.**** call?
+	//       For the short term, i could use a random point within a circular area of a given radius centered around Earth? (but not within Earth's radius).  So actually all this is, is, first defining the radius and then picking a random point along that circumfrance.
+	// todo: how do we keep things deterministic? i could initate each CustomData with an ID and then
+	//       append an iteration to it each time the tree is traversed and use that as next random seed.
+	
+	// http://www.what-could-possibly-go-wrong.com/fluent-behavior-trees-for-ai-and-game-logic/
+	// https://www.youtube.com/watch?v=ZZY9YE7rZJw
+	// todo: should this method actually be called "Perform" just as it in the Action class?  
+	public static BehaviorResult Execute (string entityID, double elapsedSeconds)
+	{
+		// NOTE: data must be initialized by Entity's main script. eg. "ai_patrolling" needs to be added in ship_ai_controlled.css.InitializeEntity()
+		string vehicleID = entityID; // NOTE: This behavior is already assigned to the Vehicle!  //EntityAPI.GetOwnerID(entityID);
+		if (string.IsNullOrEmpty(vehicleID))
+			return BehaviorResult.Fail;
+		
+		// todo: i think this is failing because entityID should be the helm entity and that it currently not loading in the npc ship.
+		// todo: also i need to check that the behavior tree is assigned to the npc ship's helm or mistakenly on the vehicle itself.
+		// TODO: AIBlackboardData data must be initialized with all the AIBlackboardData variables by the NPC's standard entity script.
+		// TODO: what if i passed the UserData into the Execute() method instead?
+		KeyCommon.Data.UserData data = EntityAPI.GetAIBlackboardData(entityID);
+		if (data == null) return BehaviorResult.Fail;
+		
+		// are we currently executing a path? if so, just return
+		bool patrolInProgress = data.GetBool ("ai_patrolling");
+		if (patrolInProgress) 
+		{
+			// todo: have we reached our destination?
+			
+			
+			return BehaviorResult.Success;
+		}
+		
+		// 
+		// // are we on cooldown from last path follow?
+		// double elapsedCooldown = elapsedSeconds + data.GetDouble("ai_patrolling_cooldown_elapsed");
+		// data.SetDouble ("ai_patrolling_cooldown_elapsed", elapsedCooldown);
+		// bool onCooldown =  data.GetDouble ("ai_patrolling_cooldown_elapsed") <= data.GetDouble ("ai_patrolling_cooldown");
+		// if (onCooldown) 
+		// {
+			// // todo: should i set data.SetBool("ai_action", "none");
+			// data.SetBool ("ai_patrolling", false);
+			// // todo: is it necessary to reassign the data? its a reference object so i would think no. need to test and verify
+			// EntityAPI.SetAIBlackboardData (entityID, data);
+			// return BehaviorResult.Fail;
+		// }
+		// else
+		// {
+			// data.SetDouble ("ai_patrolling_cooldown_elapsed", elapsedSeconds);
+		
+		// }
+		// compute a new random destination in Interior region coordinates
+		
+		Vector3d position = EntityAPI.GetPositionRegionSpace(vehicleID);
+		string zoneID = EntityAPI.GetParentID(vehicleID);
+		string earthID = EntityAPI.FindDescendantByName(zoneID, "Earth");
+		if (string.IsNullOrEmpty(earthID)) return BehaviorResult.Fail;
+		
+		
+		position = EntityAPI.GetPositionRegionSpace(earthID);
+		
+
+		double radius = Keystone.Utilities.MathHelper.AU_To_Meters(0.0001d);
+		Vector3d destination = Keystone.Utilities.MathHelper.GetRandomPointOnCircle(position, radius);
+		//todo: now lets just configure alternating between this destination and our starting destination
+		bool raiseChangeEvent = true;
+		
+		return BehaviorResult.Success;
+		
+		
+		Vector3d heading = new Keystone.Types.Vector3d();
+                
+        heading.y = Keystone.Utilities.MathHelper.Heading2DDegrees(position - destination);
+        EntityAPI.SetCustomPropertyValue(entityID, "heading", heading, raiseChangeEvent);
+				
+		EntityAPI.SetCustomPropertyValue(entityID, "destination", destination, raiseChangeEvent);
+		System.Diagnostics.Debug.WriteLine("npc_vehicle_patrol.css - destination selected - " + destination.ToString());
+		data.SetBool ("ai_patrolling", true);
+		
+		// TODO: Do we have / need an overall AI/TaskManager creating paths and tasks for coordinating NPC ships behaviors?  Thier AI scripts and/or behavior trees
+		// TODO: we could use the natural hierarchy of a ship's crew such as Captain, Helmsman, Tactical, etc
+		//       and they can inform each other to determine the behavior.
+		// So i think this patrol behavior should be part of Helm, and the "patrol" directive should be set by the helm operator after receiving an order from the Captain.  Likewise, a Governor (eg Admiral) can set broad orders to individual captains to coordinate behaviors.
+		// IMPORTANT: all the customData for all of this is setup in the Entity.CustomData so different behaviors can assign new values just by using the entityID obtained through a query such as finding the "helm" or "tactical" etc
+		
+		// would include the ability to assign tasks to subordinates.
+		// Subordinates can assign themselves recreational tasks...
+		
+		// How does a task like "patrol waypoint 0" turned into multiple tasks like pathing, then scanning, then completing and updating
+		// the log, then taking the next task.
+		
+		//Vector3d destination = AIAPI.GetRandomDestination(parentID, entityID); // TODO: GetRandomDestination() is temporary function for testing pathing. Needs to be removed in finished project.
+		
+		// todo: we do not want to travel through any obstacle like a celestial body 
+		// // compute and assign a new path
+		// string[] components;
+		// Vector3d[] points = AIAPI.Path_Find(parentID, entityID, position, destination, out components);
+		// data.SetVector3dArray ("ai_path_points", points);
+		// data.SetStringArray ("ai_path_components", components);
+		
+		// if (points != null)
+		// {
+			// // todo: verify with the scripts being IPageabelResources in the Action node, we can easily deserialize them from the NPC prefab.
+			// data.SetBool ("ai_path_in_progress", true);
+			// data.SetInteger ("ai_current_point", 0);
+		// }
+		// else
+		// {
+			// data.SetBool ("ai_path_in_progress", false);
+			// EntityAPI.SetAIBlackboardData (entityID, data);
+			// return BehaviorResult.Fail;
+		// }
+		// if on a path, steer to next point. steer should return a velocity
+		// TODO: how does scripting work with Obfuscation?
+		// TODO: don't Composite nodes like Sequence and Selector nodes need scripted code too?  How did we do this for our Viewpoint controllers?
+		//		- we didn't use any scripts.  We just used a lot of Sequence nodes with lots of Action nodes underneath.
+		// TODO: does using script files make obfuscating the project's binaries problematic?
+		// TODO: shouldn't we only compute a new velocity, and allow Simulation.Update() to then update the position of the Entity?
+		//       This way we're not modifying the scene in script and we can replicate final positions of Entities that have moved via the server during Update().
+		//       We can compute a steer velocity, then set that velocity to the Entity and allow Simulation.Update() to find new position each frame
+		EntityAPI.SetAIBlackboardData (entityID, data);
+		return BehaviorResult.Success;
+	}
+	
+	public static void Exit (string entityID, double elapsedSeconds)
+	{
+	}
+}

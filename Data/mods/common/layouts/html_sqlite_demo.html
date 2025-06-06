@@ -1,0 +1,542 @@
+<!doctype html>
+ 
+<html>
+<head>
+<title>HTML5 Offline data storage demo</title>
+<!--html5 offline data storage example, HTML5 Demos and Examples, HTML5 Offline Web Application-->
+<style>
+h1, h2, h3
+{
+   margin: 0;   padding: 0;
+   border: 0;   outline: 0;
+   color: #fff;vertical-align: baseline;
+   background: transparent;
+}
+ 
+body
+{
+    width: 1100px; margin: 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+}
+ 
+body > header
+{
+    background: #000; padding: 20px;
+    height: 50px; clear: both;
+}
+ 
+body > header hgroup h1
+{
+   font-size: 3.0em; text-transform: uppercase;
+   color: #fff;
+}
+ 
+body > footer
+{
+    background: #000; padding: 10px;
+    color: #fff; clear: both;
+}
+ 
+aside
+{
+    margin-top: 20px; float: right;
+    display: block; position: relative;
+}
+ 
+.header
+{
+    margin: auto; width: 100%;
+    border-style: dotted;
+    border-color: Brown; border-width: 0.5em;
+}
+ 
+.button
+{
+    display: inline-block;
+    outline: none; cursor: pointer;
+    text-align: center; text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .2em 2em .2em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    background-color:Red;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+</style>
+ 
+<!--<script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script src="Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+<script src="Scripts/jquery-1.4.1-vsdoc.js" type="text/javascript"></script> -->
+<script type="text/javascript" src="js/jquery-latest.min.js"></script>
+<script type="text/javascript">
+ 
+/****************************************************************************
+*Purpose of the document is to explain below functionalities of HTML5 offline data storage
+1. Save Record
+2. Access Record
+3. Delete Record
+4. Edit & Update Record
+****************************************************************************/
+ 
+/****************************************************************************
+*Add event listeners for buttons - Save Record / Update Record button
+****************************************************************************/
+$(document).ready(function ()
+{
+	 $('footer').text( "The DOM is now loaded and can be manipulated." );
+	 
+     db.transaction(function (tx) {tx.executeSql('CREATE TABLE IF NOT EXISTS UserDetails(Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, seqId INTEGER, name TEXT NOT NULL, emailId TEXT NOT NULL, telNo TEXT NOT NULL, city TEXT NOT NULL)', []);});
+     $('#btnSubmit').bind('click', function ()
+     {
+     saveRecord();
+     });
+    renderRecordsOnScreen();
+	
+});
+ 
+/****************************************************************************
+Global variables
+****************************************************************************/
+var Type; var Url; var Data; var ContentType; var DataType; var ProcessData;
+var db = window.openDatabase("testdb", "1.0", "TestDatabase", 1024 * 1000);
+var tds;
+var selectedRecordsArr = [];
+var recordUpdateFlag = false;
+var btnSubmit_SaveLabel = "Save Record";
+var btnSubmit_UpdateLabel = "Update Record";
+var recordIdToUpdate;
+ 
+/****************************************************************************
+Function: comboAction_onChange()
+Purpose: to select all records of the table if action selected is 'Delete All Records'
+****************************************************************************/
+function comboAction_onChange(actionList)
+{
+   var recordCount = $("#tblRecords > tbody > tr").length;
+   if (actionList.value == 'Delete All Records' && recordCount > 0)
+   {
+      $("#chkSelectAll").prop("checked", true);
+      selectAllRecords();
+   }
+   else if (recordCount == 0)
+   {
+     comboAction.selectedIndex = 0;
+     alert('No record available/selected to perform action.');
+   }//end of else if
+}//end of function
+ 
+/****************************************************************************
+Function: actionOnSelectedRecord()
+Purpose: select action to be performed on single or group of records & click OK to commit.
+Flow: select action from combo box to be performed on single or group of records & click OK to commit.
+****************************************************************************/
+function actionOnBulkRecords()
+{
+   var actionToPerform = comboAction.value; //value at selectedIndex;
+   var selectedRecordsCount = selectedRecordsArr.length;
+   if (selectedRecordsCount > 0)
+   {
+     switch (actionToPerform)
+     {
+        case "Edit Record":
+            {
+             //alert('to edit -: ' + selectedRecordsArr.toString());
+             editRecord();
+             break;
+            }//end of case "Edit Record":
+        case "Delete Record":
+            {
+             //alert('to delete -: '+ selectedRecordsArr.toString())
+             deleteRecords();
+             break;
+            }//end of case "Delete Record"
+        case "Delete All Records":
+            {
+              //alert('Delete all')
+              deleteRecords();
+              break;
+            } //end of case "Delete All Records"
+        default:
+            {
+              alert('no action..');
+              break;
+            }
+       }//end of switch block
+   }
+   else
+   {
+      alert('Please select atleast one record..');
+   }
+}//end of function
+ 
+/****************************************************************************
+Function: saveRecord()
+Purpose: To save the entered details into offline database
+Flow:
+1. It restrics to enter all the fields on the form.
+2. creates table (UserDetails) if not exist.
+3. creates userDetails object and pass it to insertRecord() method to save the record
+****************************************************************************/
+function saveRecord()
+{
+    if ($('#Full_Name').val() == "" || $('#Email_Address').val() == ""
+        || $('#Telephone_Number').val() == "" || $('#City').val() == "")
+    {
+       alert("All fields are mandatory");
+    }//end if
+    else
+    {
+      userDetails = { seqId: 1, name: $('#Full_Name').val(),
+                     email: $('#Email_Address').val(),
+                     tel: $('#Telephone_Number').val(),
+                     city: $('#City').val() };
+      if (btnSubmit.value == btnSubmit_SaveLabel)
+      {
+        insertRecord(userDetails["name"], userDetails["email"],
+                     userDetails["tel"], userDetails["city"]);
+      }
+      else if (btnSubmit.value == btnSubmit_UpdateLabel)
+      {
+        updateRecord(userDetails["name"], userDetails["email"],
+                     userDetails["tel"], userDetails["city"],
+                     recordIdToUpdate);
+      }
+   } //End of else statement
+}
+/****************************************************************************
+Function: insertRecord()
+Purpose: To save the entered details into offline database
+Flow: inserts the passed details in to the table (UserDetails)
+****************************************************************************/
+function insertRecord(varName, varEmail, varTel, varCity)
+{
+  db.transaction(function (tx)
+  {
+            tx.executeSql('INSERT INTO UserDetails(name, emailId, telNo, city) VALUES (?, ?, ?, ?)', [varName, varEmail, varTel, varCity],
+            insertRecord_onSuccess, insertRecord_onError);
+  });
+}
+/****************************************************************************
+Function: insertRecord_onSuccess() / insertRecord_onError()
+Purpose: insert record event handlers
+Flow:
+****************************************************************************/
+function insertRecord_onSuccess(tx, result)
+{
+  refreshHtmlPage(); //delete existing records on the screen if any
+  renderRecordsOnScreen(); //fetch records from offline db & render on the screen
+  resetDataEntryForm();
+}
+ 
+function insertRecord_onError(tx, error)
+{
+  alert(error.message);
+}
+/****************************************************************************
+Function: updateRecord()
+Purpose: To update the edited details into offline database
+Flow:
+****************************************************************************/
+function updateRecord(varName, varEmail, varTel, varCity, varRecordId)
+{
+   var updateQuery = "UPDATE UserDetails SET name = ?, emailId = ?, telNo = ?, city = ? WHERE Id=?";
+   db.transaction(function (tx)
+   {
+     tx.executeSql(updateQuery, [varName, varEmail, varTel, varCity, varRecordId],
+                   updateRecord_onSuccess, updateRecord_onError);
+   });
+}
+ 
+/****************************************************************************
+Function: updateRecord_onSuccess() / updateRecord_onError()
+Purpose: update record event handlers
+Flow:
+****************************************************************************/
+function updateRecord_onSuccess(tx, result)
+{
+  refreshHtmlPage(); //delete existing records on the screen if any
+  renderRecordsOnScreen(); //fetch records from offline db & render on the screen
+  resetDataEntryForm();
+}
+function updateRecord_onError(tx, error)
+{
+  alert(error.message);
+}
+/****************************************************************************
+Function: resetDataEntryForm()
+Purpose: to reset all the fields of data entry form
+Flow:
+****************************************************************************/
+function resetDataEntryForm()
+{
+   $('#Full_Name').val("");
+   $('#Email_Address').val("");
+   $('#Telephone_Number').val("");
+   $('#City').val("");
+}
+/****************************************************************************
+Function: renderRecordsOnScreen()
+Purpose: fetch all records one by one from offline database(Sqlite) & pass it to addTableRow() method
+for displaying on the screen
+Flow:
+****************************************************************************/
+function renderRecordsOnScreen()
+{
+   db.transaction(function (tx) {
+   tx.executeSql("SELECT * FROM UserDetails", [],
+   function (tx, rs)
+   {
+     if (rs.rows.length > 0)
+     {
+       for (var i = 0; i < rs.rows.length; i++)
+       {
+         r = rs.rows.item(i);
+         tds = '<tr><td><input type="checkbox" id="' + r['Id'] +
+               '" onclick="selectRecord(this)" />' + 'Chk-' + i +
+               '</td><td>' + r['name'] + '</td>' + '<td>' +
+                r['emailId'] + '</td>' + '<td>' + r['telNo'] +
+               '</td>' + '<td>' + r['city'] + '</td></tr>';
+         addTableRow($('#tblRecords'));
+      }//end of for
+     }
+   },
+   function (tx, error)
+   {
+      alert(error.message);
+      //alert('error while rendering records on screen..');
+   });
+   });
+}
+ 
+/****************************************************************************
+Function: refreshHtmlPage()
+Purpose: refresh the html page & reset the global variables
+Flow:
+****************************************************************************/
+function refreshHtmlPage()
+{
+  var rowCount = $("#tblRecords > tbody > tr").length;
+  if (rowCount > 0) { $("tbody", tblRecords).remove(); }
+  $("#chkSelectAll").prop("checked", false);
+  btnSubmit.value = btnSubmit_SaveLabel;
+  comboAction.selectedIndex = 0;
+  recordIdToUpdate = null;
+  selectedRecordsArr = [];
+}
+/****************************************************************************
+Function: addTableRow()
+Purpose: display the record fetched from offline db.
+Flow:
+****************************************************************************/
+function addTableRow(jQtable)
+{
+  jQtable.each
+  (
+    function ()
+    {
+    var $table = $(this);
+    //var tds = '<tr><td>Uday Ahirrao</td><td>uday.ahirrao@gmail.com</td><td>9823605480</td><td>this is hard-coded record.</td></tr>';
+    if ($('tbody', this).length > 0)
+    {
+         $('tbody', this).append(tds);
+    } else {
+      $(this).append(tds);
+    }
+    }
+  ); //end of jQtable.each
+}
+ 
+/****************************************************************************
+Function: selectAllRecords()
+Purpose: function called on click of checkbox in the table header.
+Flow:
+****************************************************************************/
+function selectAllRecords()
+{
+var recordCount = $("#tblRecords > tbody > tr").length;
+selectedRecordsArr = []; //initially reset the array to blank
+//if ($('#chkSelectAll').is(':checked') == true && recordCount > 0)
+if (recordCount > 0)
+{
+$("#tblRecords > tbody > tr").each(function () //for each <tr> element that is child of table "#tblRecords > tbody"
+{
+//td > * means get all children of the <td> element & represent it by the "this" object
+$("td > *", this).each(function () {
+if ($(this).attr("type") == "checkbox")
+{
+this.checked = $('#chkSelectAll').is(':checked');
+if ($('#chkSelectAll').is(':checked')) //insert checkbox id into array only if header chkbox is selected
+{
+selectedRecordsArr.push(this.id) //id of the checkboxes
+}
+}
+});
+});
+}
+}
+ 
+/****************************************************************************
+Function: selectRecord(chkbox)
+Purpose: function called on click of checkbox in each row.
+Flow:
+****************************************************************************/
+function selectRecord(chkbox)
+{
+var recordId = chkbox.id;
+selectedRecordsArr = []; //initially reset the array to blank
+var recordCount = $("#tblRecords > tbody > tr").length;
+if (recordCount > 0)
+{
+$("#tblRecords > tbody > tr").each(function () //for each <tr> element that is child of table "#tblRecords > tbody"
+{
+//td > * means get all children of the <td> element & represent it by the "this" object
+$("td > *", this).each(function () {
+//use the type attribute to find out exactly what type of input element it is - text, checkbox, button, etc..
+if ($(this).attr("type") == "checkbox" && ($(this).is(':checked')) == true)
+{
+var x = this.id;
+selectedRecordsArr.push(this.id) //id of the selected checkboxes
+}
+});
+});
+}
+//alert(selectedRecordsArr.toString());
+}
+/****************************************************************************
+Function: editRecord()
+Purpose: edit single record
+Flow:
+****************************************************************************/
+function editRecord()
+{
+	//var updateQuery = 'UPDATE UserDetails';
+	if (selectedRecordsArr.length > 1) {
+		alert('You can select only one record to edit at a single time.');
+	} else {
+		var recordId = selectedRecordsArr.toString();
+		var selectQuery = 'SELECT * FROM UserDetails Where Id = ' + recordId;
+		//var selectQuery = 'SELECT FROM UserDetails Where Id = 74';
+		db.transaction(function (tx) {
+			tx.executeSql(selectQuery, [], function (tx, rs) {
+				if (rs.rows.length == 1)
+				{
+					r = rs.rows.item(0);
+					recordIdToUpdate = r['Id'];
+					Full_Name.value = r['name']
+					Email_Address.value = r['emailId'];
+					Telephone_Number.value = r['telNo'];
+					City.value = r['city'];
+					recordUpdateFlag = true;
+					btnSubmit.value = btnSubmit_UpdateLabel;
+				}
+			}, function (tx, error) { alert('error while fetching record to edit..'); });
+		});
+	}
+}
+ 
+/****************************************************************************
+Function: deleteRecords()
+Purpose: delete all rows from offline database
+Flow:
+****************************************************************************/
+function deleteRecords()
+{
+  var deleteQuery; // = 'DELETE FROM UserDetails where Id IN(' + selectedRecordsArr.toString() + ')';
+  if ($('#chkSelectAll').is(':checked')) //delte all records
+    deleteQuery = 'DELETE FROM UserDetails';
+  else
+    deleteQuery = 'DELETE FROM UserDetails where Id IN(' + selectedRecordsArr.toString() + ')';
+  db.transaction(function (tx){tx.executeSql(deleteQuery, [], deleteRecord_onSuccess, deleteRecord_onError)});
+}
+ 
+  function deleteRecord_onSuccess(tx, result) //delete record transaction success handler
+  {
+    refreshHtmlPage(); //delete existing records on the screen if any
+    renderRecordsOnScreen(); //fetch records from offline db if any & render on the screen
+  }
+  function deleteRecord_onError(tx, error) //delete record transaction failure handler
+  {
+    alert('error while deleting records');
+  }
+</script>
+ 
+</head>
+ <body>
+<header><hgroup>
+          <h3>HTML5 Demo Application: Using Offline datastorage (SQlite)</h3>
+          <h5>By Mr. Uday Ahirrao (<a href="mailto:uday.ahirrao@gmail.com">uday.ahirrao@gmail.com)</a></h5>
+  </hgroup></header>
+ <div>
+   <article style="border: 2px dotted brown;">
+   <table style="float: left;">
+   <tr>
+     <td colspan="2"><p style="text-align: center">All fields are mandatory.</p></td>
+   </tr>
+   <tr>
+     <td><label for="Full_Name" class="required">Full Name</label></td>
+     <td><input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width: 250px"></td>
+   </tr>
+   <tr>
+     <td><label for="Email_Address" class="required">Email Address</label></td>
+     <td><input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width: 250px"></td>
+   </tr>
+   <tr>
+     <td><label for="Telephone_Number" class="not-required">Telephone Number</label></td>
+     <td><input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width: 250px"></td>
+   </tr>
+   <tr>
+     <td><label for="City" class="required">City</label></td>
+     <td><textarea style="width: 250px; height: 120px" name="City" id="City" maxlength="2000"></textarea></td>
+   </tr>
+   <tr>
+     <td colspan="2" style="text-align: center">
+     <input id="btnSubmit" type="button" value="Save Record">
+     <!--<input id="btnDeleteRecord" type="button" value="Delete All Records">-->
+    </td>
+   </tr>
+ </table>
+ <aside>
+  <table id="tblRecords" width="650" border="1">
+   <caption style="text-align:right;">
+   <div>
+     <select id="comboAction" onchange="comboAction_onChange(this)">
+       <option value="Bulk Action">Bulk Action</option>
+       <option value="Delete Record">Delete Record</option>
+       <option value="Edit Record">Edit Record</option>
+       <option value="Delete All Records">Delete All Records</option>
+    </select>
+    <input type="button" value="Ok" id="btnBulkAction" onclick="actionOnBulkRecords()" class="button"/>
+    </div>
+ </caption>
+ <thead>
+ <tr>
+    <th><input type="checkbox" id="chkSelectAll" onclick="selectAllRecords()"/></th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>City</th>
+ </tr>
+ </thead>
+ <tfoot>
+ <tr>
+    <td colspan="5">Table Footer</td>
+ </tr>
+ </tfoot>
+ <tbody>
+  <!--<tr>
+    <td>Uday Ahirrao</td><td>uday.ahirrao@gmail.com</td><td>9823605480</td>
+    <td>this is hard-coded record.</td></tr>
+  -->
+ </tbody>
+ </table>
+ </aside>
+ </article><!--start article -->
+ </div>
+ <footer>Page Footer</footer>
+ </body>
+ </html>

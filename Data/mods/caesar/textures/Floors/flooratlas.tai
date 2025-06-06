@@ -1,0 +1,21 @@
+# flooratlas.tai
+# AtlasCreationTool.exe -halftexel -o flooratlas
+#
+# <filename>		<atlas filename>, <atlas idx>, <atlas type>, <woffset>, <hoffset>, <depth offset>, <width>, <height>
+#
+# Texture <filename> can be found in texture atlas <atlas filename>, i.e., 
+# flooratlas<idx>.dds of <atlas type> type with texture coordinates boundary given by:
+#   A = ( <woffset>, <hoffset> )
+#   B = ( <woffset> + <width>, <hoffset> + <height> )
+#
+# where coordinates (0,0) and (1,1) of the original texture map correspond
+# to coordinates A and B, respectively, in the texture atlas.
+# If the atlas is a volume texture then <depth offset> is the w-coordinate
+# to use the access the appropriate slice in the volume atlas.
+
+F_f_02_D2 - Copy (2).dds		flooratlas0.dds, 0, 2D, 0.000244, 0.001953, 0.000000, 0.124512, 0.996094
+F_f_02_D2 - Copy (3).dds		flooratlas0.dds, 0, 2D, 0.125244, 0.001953, 0.000000, 0.124512, 0.996094
+F_f_02_D2 - Copy (4).dds		flooratlas0.dds, 0, 2D, 0.250244, 0.001953, 0.000000, 0.124512, 0.996094
+F_f_02_D2 - Copy (5).dds		flooratlas0.dds, 0, 2D, 0.375244, 0.001953, 0.000000, 0.124512, 0.996094
+F_f_02_D2 - Copy.dds		flooratlas0.dds, 0, 2D, 0.500244, 0.001953, 0.000000, 0.124512, 0.996094
+F_f_02_D2.dds		flooratlas0.dds, 0, 2D, 0.625244, 0.001953, 0.000000, 0.124512, 0.996094

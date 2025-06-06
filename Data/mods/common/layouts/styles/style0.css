@@ -1,0 +1,78 @@
+p {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12;
+}
+
+td {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12;
+}
+
+th {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	background: #99CCCC;
+	font-size: 12;
+}
+
+ul {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12;
+}
+
+dl {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12;
+}
+
+blockquote {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12;
+}
+
+pre {
+	font-family: Lucida Console,Courier New,Courier;
+	font-size: 12;
+}
+
+small {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 10;
+}
+
+H1 {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 32;
+}
+
+H2 {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 20;
+}
+
+H3 {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 16;
+}
+
+H4 {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 14;
+}
+
+H5 {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 12;
+}
+
+a {text-decoration: none;}
+a:hover { color: #FF0000; text-decoration: underline;}
+a:active { color: #FF0000;}
+a:link { color: #FF0000; }
+a:visited { color: #880000; t}	

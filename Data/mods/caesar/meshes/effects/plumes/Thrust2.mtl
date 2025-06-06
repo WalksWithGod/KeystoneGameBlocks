@@ -1,0 +1,26 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'Thrust2.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Color_I06
+Ka 0.898039 0.200000 0.235294
+Kd 0.898039 0.200000 0.235294
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.450000
+
+newmtl Color_C02
+Ka 0.984314 0.541176 0.168627
+Kd 0.984314 0.541176 0.168627
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.500000
+
+#EOF

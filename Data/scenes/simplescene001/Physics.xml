@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="7cfe0006-d02f-4b69-80c0-d137cadd59fc" />
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="4012254c-6ccc-44f2-954d-1b2e32ba95fa" />
+  <RigidBody mass="1" static="False" drag="0" kinematic="False" flags="3" name="RIGIDBODY" id="4b44d536-3ef9-450f-9abb-d3a91d32f352" />
+</root>

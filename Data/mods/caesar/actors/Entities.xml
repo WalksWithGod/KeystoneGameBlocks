@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <BonedEntity fixedscreensize="0" entityflags="263279" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\crew_member.css" footprint="eJwTYBBgGAWjYBSMXAAAhGQAIQ==" boundingbox="-0.451722671226924,-0.889114755336498,3.09778414400786,0.549118963523443,1.11462226765945,3.58393830450743" position="0.0409340136485647,-0.852792000834201,3.34352687224119" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="BONEDENTITY" id="caesar\actors\colonel-x.kgbentity">
+    <Animation speed="0.005" forward="True" loop="False" flags="3" name="ANIMATION" id="dc147b5c-d31d-41d7-92ce-b46dc1816d4c">
+      <BonedAnimation sourcecid="0" intrinsic="True" startframe="0" endframe="2497" index="-1" target="MODEL" duration="104" flags="3" name="Anim-1" id="cc29f509-116a-4209-8346-c416055f9d14" />
+    </Animation>
+    <Model ref="01884cd4-01d0-4727-9994-55ff3b2bd305" />
+    <Animation speed="0.005" forward="True" loop="True" flags="3" name="idle" id="b853c697-ad9e-4a58-a95e-7fab1f5e0ae4">
+      <BonedAnimation sourcecid="0" intrinsic="False" startframe="219" endframe="232" index="-1" target="MODEL" duration="0" flags="3" name="idle" id="a4c47757-e1f1-429f-8c00-a76f58c8bd22" />
+    </Animation>
+    <Animation speed="0.005" forward="True" loop="False" flags="3" name="walk" id="1c42366e-a971-4316-a2c3-6c6b5b0a3076">
+      <BonedAnimation sourcecid="0" intrinsic="False" startframe="235" endframe="259" index="-1" target="MODEL" duration="1" flags="3" name="walk" id="4b3bdd18-40c6-435c-bc08-a77213449a5e" />
+    </Animation>
+    <Animation speed="0.005" forward="True" loop="False" flags="3" name="climb" id="c19a5826-0298-4845-a8d7-b5fcc81b5b32">
+      <BonedAnimation sourcecid="0" intrinsic="False" startframe="160" endframe="189" index="-1" target="MODEL" duration="1" flags="3" name="climb" id="1db5eb13-0896-4b85-8117-91655485df06" />
+    </Animation>
+    <RigidBody ref="9e41b7f1-7408-41dd-84e4-3bcefc931466" />
+    <CapsuleCollider trigger="False" radius="1" height="2" center="0,0,0" direction="0,0,0" flags="3" name="CAPSULECOLLIDER" id="7a9d1228-a6e7-4754-bef6-ff2051570812" />
+    <Animation speed="0.005" forward="True" loop="False" flags="3" name="sit" id="519f3eb4-8a93-4762-adac-463fada74521">
+      <BonedAnimation sourcecid="0" intrinsic="False" startframe="180" endframe="181" index="-1" target="MODEL" duration="0" flags="3" name="sit" id="7de42770-c54f-4b71-91d5-64a296d2c95c" />
+    </Animation>
+    <Animation speed="0.005" forward="True" loop="False" flags="3" name="sleep" id="d6fbcb95-326e-49a3-bfb5-15e0ec4799b6">
+      <BonedAnimation sourcecid="0" intrinsic="False" startframe="18" endframe="19" index="-1" target="MODEL" duration="0" flags="3" name="sleep" id="ad1ff1d6-ee31-4646-8d69-417fac7b492f" />
+    </Animation>
+  </BonedEntity>
+</root>

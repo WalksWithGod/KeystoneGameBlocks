@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Interior cellsize="2.5,3,2.5" cellcountx="25" cellcounty="9" cellcountz="41" spatialtreedepth="6" datapath="caesar\entities\vehicles\test_hull.interior" tilecountx="16" tilecountz="16" octreedepth="6" entityflags="42063" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\ship_interior.css" boundingbox="-31.25,-13.5,-51.25,31.25,13.5,51.25" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" flags="3" name="INTERIOR" id="2896d377-1f93-46a2-b630-52ab2dd5d723">
+    <DirectionalLight ref="cfb8438e-f862-4b3d-ba17-fb30071ef840" />
+    <ModeledEntity ref="c3ef9443-9fb5-4d1b-9a98-1d2c86f9b09d" />
+  </Interior>
+</root>

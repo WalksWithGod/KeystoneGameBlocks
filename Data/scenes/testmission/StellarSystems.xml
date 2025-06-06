@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <StellarSystem density="0" diameter="1.392E+09" mass="1.9891E+30" surfacegravity="0" orbitalradius="0" orbitaleccentricity="0" orbitalperiod="0" orbitalinclination="0" orbitalprocession="0" orbitalepoch="0" fixedscreensize="0" entityflags="16540" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Sol System" id="00ee9f89-ffa1-4080-987d-b7c24889d1b8">
+    <Star ref="c1072829-9b52-4592-98a7-caf28bb9cb76" />
+  </StellarSystem>
+</root>

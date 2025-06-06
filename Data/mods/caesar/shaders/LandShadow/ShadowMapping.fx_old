@@ -1,0 +1,243 @@
+// -------------------------------------------------------------
+// Those settings are (and must be) set by the host program
+// -------------------------------------------------------------
+//#define NO_FILTERING
+//#define PCF_3X3
+//#define PCF_4X4
+//#define PCF_BILINEAR_FILTERING
+//#define VSM
+//#define VSM_BILINEAR_FILTERING
+
+// -------------------------------------------------------------
+// Constants
+// -------------------------------------------------------------
+#ifdef VSM
+	// No bias is needed with properly filtered VSM!
+	#define DEPTH_BIAS 0
+#else
+	#define DEPTH_BIAS 0.0125f
+#endif
+
+// -------------------------------------------------------------
+// Semantic mappings
+// -------------------------------------------------------------
+float4x4 matWorldViewProjection : WORLDVIEWPROJECTION;
+float4x4 matWorld : WORLD;
+
+float3 dirLightDirection : LIGHTDIR0_DIRECTION;
+
+// -------------------------------------------------------------
+// Textures & Samplers
+// -------------------------------------------------------------
+texture texDepthMap;
+sampler sampDepthMap = sampler_state 
+{
+	Texture = (texDepthMap);
+	AddressU = CLAMP;
+	AddressV = CLAMP;
+};
+
+// -------------------------------------------------------------
+// Parameters
+// -------------------------------------------------------------
+float4x4 matLightViewProjection;
+float4x4 matLightViewProjectionTexture;
+float texelSize, shadowMapSize;
+#ifdef PCF_3X3
+	const float2 pcfOffsets[9];
+#endif
+#ifdef PCF_4X4
+	const float2 pcfOffsets[16];
+#endif
+
+// -------------------------------------------------------------
+// Input/Output channels
+// -------------------------------------------------------------
+struct VS_INPUT
+{
+	float4 position : POSITION;
+};
+struct VS_OUTPUT
+{
+	float4 position : POSITION;
+	float2 shadowMapCoord : TEXCOORD0;
+	float depth : TEXCOORD1;
+	// TODO : Once multipass works, put PCF offsets in VS_OUTPUT! à la Gaussian...
+};
+#define PS_INPUT VS_OUTPUT
+
+// -------------------------------------------------------------
+// Vertex Shader
+// -------------------------------------------------------------
+VS_OUTPUT VS(const VS_INPUT IN)
+{
+	VS_OUTPUT OUT;
+	
+	OUT.position = mul(IN.position, matWorldViewProjection);
+	float4 worldPos = mul(IN.position, matWorld);
+
+	OUT.shadowMapCoord = mul(worldPos, matLightViewProjectionTexture).xy;
+	float4 lightPerspectivePosition = mul(worldPos, matLightViewProjection);
+	OUT.depth = lightPerspectivePosition.z - DEPTH_BIAS;
+	
+	return OUT;
+}
+
+// -------------------------------------------------------------
+// Pixel Shader functions
+// -------------------------------------------------------------
+float pcfLookup(float4 shadowMapCoord, float2 pcfOffset, float depth)
+{
+	float4 pcfCoord = float4(shadowMapCoord.xy + pcfOffset, shadowMapCoord.zw);	
+	return (depth > tex2Dproj(sampDepthMap, pcfCoord).r) ? 0 : 1;
+}
+float pcf3x3Bilinear(float3x3 pcfSamples, int i, int j)
+{
+	return pcfSamples[i][j]   + pcfSamples[i+1][j]   +
+	       pcfSamples[i][j+1] + pcfSamples[i+1][j+1];
+}
+float pcf4x4Bilinear(float4x4 pcfSamples, int i, int j)
+{
+	return pcfSamples[i][j]   + pcfSamples[i+1][j]   + pcfSamples[i+2][j]   +
+		   pcfSamples[i][j+1] + pcfSamples[i+1][j+1] + pcfSamples[i+2][j+1] +
+		   pcfSamples[i][j+2] + pcfSamples[i+1][j+2] + pcfSamples[i+2][j+2];
+}
+
+float vsmLookup(float depth, float2 shadowMapCoord)
+{
+	float4 shadowMapSample = tex2D(sampDepthMap, shadowMapCoord);
+	float2 moments = tex2D(sampDepthMap, shadowMapCoord).rg;
+	float minimumShadow = depth <= moments.x;
+	
+	float variance = moments.y - moments.x * moments.x;
+	float m_d = moments.x - depth;
+	float p_max = variance / (variance + m_d * m_d);
+	
+	return max(minimumShadow, p_max);
+}
+
+float lerpBilinear(float2x2 samples, float2 weight)
+{
+	return lerp(lerp(samples._m00, samples._m01, weight.x),
+	            lerp(samples._m10, samples._m11, weight.x), weight.y);
+}
+
+float4 PS(const PS_INPUT IN) : COLOR
+{
+	float shadow = 0;
+	
+	#ifdef PCF_3X3
+		float3x3 pcfSamples;
+		for(int i=0; i<3; i++) 
+			for(int j=0; j<3; j++)
+				pcfSamples[i][j] = (IN.depth > tex2D(sampDepthMap, IN.shadowMapCoord + pcfOffsets[3*i+j]).r) ? 0 : 1;
+				//pcfSamples[i][j] = pcfLookup(IN.shadowMapCoord, pcfOffsets[3*i+j], IN.depth);
+	#endif
+	#ifdef PCF_4X4
+		float4x4 pcfSamples;
+		for(int i=0; i<4; i++) 
+			for(int j=0; j<4; j++)
+				pcfSamples[i][j] = (IN.depth > tex2D(sampDepthMap, IN.shadowMapCoord + pcfOffsets[4*i+j]).r) ? 0 : 1;
+				//pcfSamples[i][j] = pcfLookup(IN.shadowMapCoord, pcfOffsets[4*i+j], IN.depth);
+	#endif
+	
+	#ifdef PCF_BILINEAR_FILTERING
+		float2x2 bilinearSamples;
+		#ifdef PCF_3X3		
+			bilinearSamples._m00 = pcf3x3Bilinear(pcfSamples, 0, 0);
+			bilinearSamples._m01 = pcf3x3Bilinear(pcfSamples, 0, 1);
+			bilinearSamples._m10 = pcf3x3Bilinear(pcfSamples, 1, 0);
+			bilinearSamples._m11 = pcf3x3Bilinear(pcfSamples, 1, 1);		
+		#endif
+		#ifdef PCF_4X4
+			float3x3 reducedPcfMatrix = (float3x3)pcfSamples;
+			bilinearSamples._m00 = dot(reducedPcfMatrix[0], 1) + dot(reducedPcfMatrix[1], 1) + dot(reducedPcfMatrix[2], 1);
+			bilinearSamples._m01 = pcf4x4Bilinear(pcfSamples, 0, 1);
+			bilinearSamples._m10 = pcf4x4Bilinear(pcfSamples, 1, 0);
+			bilinearSamples._m11 = pcf4x4Bilinear(pcfSamples, 1, 1);
+		#endif	
+				
+		float2 weight;
+		#ifdef PCF_3X3
+			weight = frac(IN.shadowMapCoord * shadowMapSize);
+		#endif
+		#ifdef PCF_4X4
+			weight = frac(IN.shadowMapCoord * shadowMapSize - 0.5f);
+		#endif				
+		
+		shadow = lerpBilinear(bilinearSamples, weight);
+		#ifdef PCF_3X3
+			shadow /= 4;
+		#endif
+		#ifdef PCF_4X4
+			shadow /= 9;
+		#endif
+	#else
+		#ifdef PCF_3X3
+			shadow = dot(pcfSamples[0], 1) + dot(pcfSamples[1], 1) + dot(pcfSamples[2], 1);
+			shadow /= 9;
+		#endif
+		#ifdef PCF_4X4
+			shadow = dot(pcfSamples[0], 1) + dot(pcfSamples[1], 1) + dot(pcfSamples[2], 1) + dot(pcfSamples[3], 1);
+			shadow /= 16;
+		#endif
+	#endif
+	
+	#ifdef NO_FILTERING
+		shadow = (IN.depth > tex2D(sampDepthMap, IN.shadowMapCoord).r) ? 0 : 1;
+	#endif
+	
+	#ifdef VSM
+		#ifdef VSM_BILINEAR_FILTERING
+			float2 weight = frac(IN.shadowMapCoord * shadowMapSize);
+			
+			float2x2 bilinearSamples;
+			bilinearSamples._m00 = vsmLookup(IN.depth, IN.shadowMapCoord);
+			bilinearSamples._m01 = vsmLookup(IN.depth, IN.shadowMapCoord + float2(texelSize, 0));
+			bilinearSamples._m10 = vsmLookup(IN.depth, IN.shadowMapCoord + float2(0, texelSize));
+			bilinearSamples._m11 = vsmLookup(IN.depth, IN.shadowMapCoord + texelSize);			
+			
+			shadow = lerpBilinear(bilinearSamples, weight);
+		#else
+			shadow = vsmLookup(IN.depth, IN.shadowMapCoord);
+		#endif
+	#endif
+
+	return (1.0f - shadow).rrrr;
+}
+
+// -------------------------------------------------------------
+// Techniques
+// -------------------------------------------------------------
+technique TSM3
+{
+    pass P1
+    {
+		VertexShader = compile vs_3_0 VS();
+		PixelShader = compile ps_3_0 PS();
+    }
+}
+technique TSM2b
+{
+    pass P1
+    {
+		VertexShader = compile vs_2_0 VS();
+		PixelShader = compile ps_2_b PS();
+    }
+}
+technique TSM2a
+{
+    pass P1
+    {
+		VertexShader = compile vs_2_0 VS();
+		PixelShader = compile ps_2_a PS();
+    }
+}
+technique TSM2
+{
+    pass P1
+    {
+		VertexShader = compile vs_2_0 VS();
+		PixelShader = compile ps_2_0 PS();
+    }
+}

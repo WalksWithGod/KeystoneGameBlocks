@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ZoneRoot regionsacross="3" regionshigh="1" regionsdeep="3" structurelevelshigh="32" regiondiameterx="80" regiondiametery="96" regiondiameterz="80" octreenodedepth="0" octreedepth="0" entityflags="6291468" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="ZONEROOT" id="ZoneRoot,MultiZoneLandBasedScene001">
+    <DirectionalLight ref="58683b0a-5b6e-44ac-b234-a1cba8022f12" />
+    <ModeledEntity ref="d8d8fa4c-24af-4edc-bff5-a1ae0038aa08" />
+  </ZoneRoot>
+</root>

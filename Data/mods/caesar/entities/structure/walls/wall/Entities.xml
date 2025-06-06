@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <ModeledEntity fixedscreensize="0" entityflags="1134" attachedtoboneid="-1" tilelocation="0,0,0" boundingbox="-1.54194262767391,-1.48055740155286,4.27714784148737,1.27055737232609,1.51944259844714,4.58964784148737" position="-0.13569262767391,-1.48055740155286,4.43339784148737" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="MODELEDENTITY" id="caesar|entities\structure\walls\wall.kgbentity">
+    <ModelSelector ref="5ff866db-a6e0-4ffa-867c-8a5a46631303" />
+  </ModeledEntity>
+</root>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <SceneInfo firstnodetypename="Root" type="0" serializeemptyzones="False" flags="3" name="SCENEINFO" id="test_SceneInfo">
+    <Viewpoint startingregion="1bfa89b4-385c-4c3f-906f-86081c9b1ca8" startingtranslation="0,0,0" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="5f0489ba-65ac-4fed-8aa1-77324ab0970d" />
+    <Viewpoint startingregion="1bfa89b4-385c-4c3f-906f-86081c9b1ca8" startingtranslation="0,0,0" focusentity="22619d00-17cd-458c-942c-03589f34b5cd" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="fad4fda8-ec1c-4776-b97e-e6af2cc10544" />
+    <Viewpoint startingregion="1bfa89b4-385c-4c3f-906f-86081c9b1ca8" startingtranslation="0,0,0" focusentity="cf991aa3-28f8-47ff-94f0-c88057379de7" entityflags="0" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="False" inheritrotation="False" velocity="0,0,10" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VIEWPOINT" id="d03e5715-6a80-48c7-b254-87357314bb17" />
+  </SceneInfo>
+</root>

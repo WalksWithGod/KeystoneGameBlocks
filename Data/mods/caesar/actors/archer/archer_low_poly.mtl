@@ -1,0 +1,2053 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'archer_low_poly.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl prague_castle_wall_tex
+Ka 0.482353 0.482353 0.486275
+Kd 0.482353 0.482353 0.486275
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/prague_castle_wall_tex.PNG
+
+newmtl skin
+Ka 0.839216 0.572549 0.454902
+Kd 0.839216 0.572549 0.454902
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/skin.PNG
+
+newmtl chainmail
+Ka 0.290196 0.243137 0.188235
+Kd 0.290196 0.243137 0.188235
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/chainmail.PNG
+
+newmtl Carpet_Loop_Pattern
+Ka 0.454902 0.650980 0.231373
+Kd 0.454902 0.650980 0.231373
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/Carpet_Loop_Pattern.PNG
+
+newmtl James_woods
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods.PNG
+
+newmtl Carpet_Plush_Charcoal
+Ka 0.341176 0.341176 0.341176
+Kd 0.341176 0.341176 0.341176
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/Carpet_Plush_Charcoal.PNG
+
+newmtl Metal_Corrogated_Shiny3
+Ka 0.756863 0.756863 0.756863
+Kd 0.756863 0.756863 0.756863
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/Metal_Corrogated_Shiny3.PNG
+
+newmtl Carpet_Berber_Multi
+Ka 0.592157 0.407843 0.149020
+Kd 0.592157 0.407843 0.149020
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/Carpet_Berber_Multi.PNG
+
+newmtl Wood_Cherry_Original
+Ka 0.596078 0.337255 0.164706
+Kd 0.596078 0.337255 0.164706
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/Wood_Cherry_Original.PNG
+
+newmtl Metal_Seamed
+Ka 0.462745 0.466667 0.450980
+Kd 0.462745 0.466667 0.450980
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/Metal_Seamed.PNG
+
+#Distorted-Textures
+newmtl James_woods1
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods1.PNG
+
+newmtl James_woods2
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods2.PNG
+
+newmtl James_woods3
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods3.PNG
+
+newmtl James_woods4
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods4.PNG
+
+newmtl James_woods5
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods5.PNG
+
+newmtl James_woods6
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods6.PNG
+
+newmtl James_woods7
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods7.PNG
+
+newmtl James_woods8
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods8.PNG
+
+newmtl James_woods9
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods9.PNG
+
+newmtl James_woods10
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods10.PNG
+
+newmtl James_woods11
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods11.PNG
+
+newmtl James_woods12
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods12.PNG
+
+newmtl James_woods13
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods13.PNG
+
+newmtl James_woods14
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods14.PNG
+
+newmtl James_woods15
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods15.PNG
+
+newmtl James_woods16
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods16.PNG
+
+newmtl James_woods17
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods17.PNG
+
+newmtl James_woods18
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods18.PNG
+
+newmtl James_woods19
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods19.PNG
+
+newmtl James_woods20
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods20.PNG
+
+newmtl James_woods21
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods21.PNG
+
+newmtl James_woods22
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods22.PNG
+
+newmtl James_woods23
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods23.PNG
+
+newmtl James_woods24
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods24.PNG
+
+newmtl James_woods25
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods25.PNG
+
+newmtl James_woods26
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods26.PNG
+
+newmtl James_woods27
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods27.PNG
+
+newmtl James_woods28
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods28.PNG
+
+newmtl James_woods29
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods29.PNG
+
+newmtl James_woods30
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods30.PNG
+
+newmtl James_woods31
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods31.PNG
+
+newmtl James_woods32
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods32.PNG
+
+newmtl James_woods33
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods33.PNG
+
+newmtl James_woods34
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods34.PNG
+
+newmtl James_woods35
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods35.PNG
+
+newmtl James_woods36
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods36.PNG
+
+newmtl James_woods37
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods37.PNG
+
+newmtl James_woods38
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods38.PNG
+
+newmtl James_woods39
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods39.PNG
+
+newmtl James_woods40
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods40.PNG
+
+newmtl James_woods41
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods41.PNG
+
+newmtl James_woods42
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods42.PNG
+
+newmtl James_woods43
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods43.PNG
+
+newmtl James_woods44
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods44.PNG
+
+newmtl James_woods45
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods45.PNG
+
+newmtl James_woods46
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods46.PNG
+
+newmtl James_woods47
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods47.PNG
+
+newmtl James_woods48
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods48.PNG
+
+newmtl James_woods49
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods49.PNG
+
+newmtl James_woods50
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods50.PNG
+
+newmtl James_woods51
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods51.PNG
+
+newmtl James_woods52
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods52.PNG
+
+newmtl James_woods53
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods53.PNG
+
+newmtl James_woods54
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods54.PNG
+
+newmtl James_woods55
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods55.PNG
+
+newmtl James_woods56
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods56.PNG
+
+newmtl James_woods57
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods57.PNG
+
+newmtl James_woods58
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods58.PNG
+
+newmtl James_woods59
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods59.PNG
+
+newmtl James_woods60
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods60.PNG
+
+newmtl James_woods61
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods61.PNG
+
+newmtl James_woods62
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods62.PNG
+
+newmtl James_woods63
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods63.PNG
+
+newmtl James_woods64
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods64.PNG
+
+newmtl James_woods65
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods65.PNG
+
+newmtl James_woods66
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods66.PNG
+
+newmtl James_woods67
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods67.PNG
+
+newmtl James_woods68
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods68.PNG
+
+newmtl James_woods69
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods69.PNG
+
+newmtl James_woods70
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods70.PNG
+
+newmtl James_woods71
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods71.PNG
+
+newmtl James_woods72
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods72.PNG
+
+newmtl James_woods73
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods73.PNG
+
+newmtl James_woods74
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods74.PNG
+
+newmtl James_woods75
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods75.PNG
+
+newmtl James_woods76
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods76.PNG
+
+newmtl James_woods77
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods77.PNG
+
+newmtl James_woods78
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods78.PNG
+
+newmtl James_woods79
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods79.PNG
+
+newmtl James_woods80
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods80.PNG
+
+newmtl James_woods81
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods81.PNG
+
+newmtl James_woods82
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods82.PNG
+
+newmtl James_woods83
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods83.PNG
+
+newmtl James_woods84
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods84.PNG
+
+newmtl James_woods85
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods85.PNG
+
+newmtl James_woods86
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods86.PNG
+
+newmtl James_woods87
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods87.PNG
+
+newmtl James_woods88
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods88.PNG
+
+newmtl James_woods89
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods89.PNG
+
+newmtl James_woods90
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods90.PNG
+
+newmtl James_woods91
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods91.PNG
+
+newmtl James_woods92
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods92.PNG
+
+newmtl James_woods93
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods93.PNG
+
+newmtl James_woods94
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods94.PNG
+
+newmtl James_woods95
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods95.PNG
+
+newmtl James_woods96
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods96.PNG
+
+newmtl James_woods97
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods97.PNG
+
+newmtl James_woods98
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods98.PNG
+
+newmtl James_woods99
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods99.PNG
+
+newmtl James_woods100
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods100.PNG
+
+newmtl James_woods101
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods101.PNG
+
+newmtl James_woods102
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods102.PNG
+
+newmtl James_woods103
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods103.PNG
+
+newmtl James_woods104
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods104.PNG
+
+newmtl James_woods105
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods105.PNG
+
+newmtl James_woods106
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods106.PNG
+
+newmtl James_woods107
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods107.PNG
+
+newmtl James_woods108
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods108.PNG
+
+newmtl James_woods109
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods109.PNG
+
+newmtl James_woods110
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods110.PNG
+
+newmtl James_woods111
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods111.PNG
+
+newmtl James_woods112
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods112.PNG
+
+newmtl James_woods113
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods113.PNG
+
+newmtl James_woods114
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods114.PNG
+
+newmtl James_woods115
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods115.PNG
+
+newmtl James_woods116
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods116.PNG
+
+newmtl James_woods117
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods117.PNG
+
+newmtl James_woods118
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods118.PNG
+
+newmtl James_woods119
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods119.PNG
+
+newmtl James_woods120
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods120.PNG
+
+newmtl James_woods121
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods121.PNG
+
+newmtl James_woods122
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods122.PNG
+
+newmtl James_woods123
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods123.PNG
+
+newmtl James_woods124
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods124.PNG
+
+newmtl James_woods125
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods125.PNG
+
+newmtl James_woods126
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods126.PNG
+
+newmtl James_woods127
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods127.PNG
+
+newmtl James_woods128
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods128.PNG
+
+newmtl James_woods129
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods129.PNG
+
+newmtl James_woods130
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods130.PNG
+
+newmtl James_woods131
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods131.PNG
+
+newmtl James_woods132
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods132.PNG
+
+newmtl James_woods133
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods133.PNG
+
+newmtl James_woods134
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods134.PNG
+
+newmtl James_woods135
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods135.PNG
+
+newmtl James_woods136
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods136.PNG
+
+newmtl James_woods137
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods137.PNG
+
+newmtl James_woods138
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods138.PNG
+
+newmtl James_woods139
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods139.PNG
+
+newmtl James_woods140
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods140.PNG
+
+newmtl James_woods141
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods141.PNG
+
+newmtl James_woods142
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods142.PNG
+
+newmtl James_woods143
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods143.PNG
+
+newmtl James_woods144
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods144.PNG
+
+newmtl James_woods145
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods145.PNG
+
+newmtl James_woods146
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods146.PNG
+
+newmtl James_woods147
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods147.PNG
+
+newmtl James_woods148
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods148.PNG
+
+newmtl James_woods149
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods149.PNG
+
+newmtl James_woods150
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods150.PNG
+
+newmtl James_woods151
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods151.PNG
+
+newmtl James_woods152
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods152.PNG
+
+newmtl James_woods153
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods153.PNG
+
+newmtl James_woods154
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods154.PNG
+
+newmtl James_woods155
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods155.PNG
+
+newmtl James_woods156
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods156.PNG
+
+newmtl James_woods157
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods157.PNG
+
+newmtl James_woods158
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods158.PNG
+
+newmtl James_woods159
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods159.PNG
+
+newmtl James_woods160
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods160.PNG
+
+newmtl James_woods161
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods161.PNG
+
+newmtl James_woods162
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods162.PNG
+
+newmtl James_woods163
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods163.PNG
+
+newmtl James_woods164
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods164.PNG
+
+newmtl James_woods165
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods165.PNG
+
+newmtl James_woods166
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods166.PNG
+
+newmtl James_woods167
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods167.PNG
+
+newmtl James_woods168
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods168.PNG
+
+newmtl James_woods169
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods169.PNG
+
+newmtl James_woods170
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods170.PNG
+
+newmtl James_woods171
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods171.PNG
+
+newmtl James_woods172
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods172.PNG
+
+newmtl James_woods173
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods173.PNG
+
+newmtl James_woods174
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods174.PNG
+
+newmtl James_woods175
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods175.PNG
+
+newmtl James_woods176
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods176.PNG
+
+newmtl James_woods177
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods177.PNG
+
+newmtl James_woods178
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods178.PNG
+
+newmtl James_woods179
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods179.PNG
+
+newmtl James_woods180
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods180.PNG
+
+newmtl James_woods181
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods181.PNG
+
+newmtl James_woods182
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods182.PNG
+
+newmtl James_woods183
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods183.PNG
+
+newmtl James_woods184
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods184.PNG
+
+newmtl James_woods185
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods185.PNG
+
+newmtl James_woods186
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods186.PNG
+
+newmtl James_woods187
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods187.PNG
+
+newmtl James_woods188
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods188.PNG
+
+newmtl James_woods189
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods189.PNG
+
+newmtl James_woods190
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods190.PNG
+
+newmtl James_woods191
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods191.PNG
+
+newmtl James_woods192
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods192.PNG
+
+newmtl James_woods193
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods193.PNG
+
+newmtl James_woods194
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods194.PNG
+
+newmtl James_woods195
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods195.PNG
+
+newmtl James_woods196
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods196.PNG
+
+newmtl James_woods197
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods197.PNG
+
+newmtl James_woods198
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods198.PNG
+
+newmtl James_woods199
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods199.PNG
+
+newmtl James_woods200
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods200.PNG
+
+newmtl James_woods201
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods201.PNG
+
+newmtl James_woods202
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods202.PNG
+
+newmtl James_woods203
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods203.PNG
+
+newmtl James_woods204
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods204.PNG
+
+newmtl James_woods205
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods205.PNG
+
+newmtl James_woods206
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods206.PNG
+
+newmtl James_woods207
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods207.PNG
+
+newmtl James_woods208
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods208.PNG
+
+newmtl James_woods209
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods209.PNG
+
+newmtl James_woods210
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods210.PNG
+
+newmtl James_woods211
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods211.PNG
+
+newmtl James_woods212
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods212.PNG
+
+newmtl James_woods213
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods213.PNG
+
+newmtl James_woods214
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods214.PNG
+
+newmtl James_woods215
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods215.PNG
+
+newmtl James_woods216
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods216.PNG
+
+newmtl James_woods217
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods217.PNG
+
+newmtl James_woods218
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods218.PNG
+
+newmtl James_woods219
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods219.PNG
+
+newmtl James_woods220
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods220.PNG
+
+newmtl James_woods221
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods221.PNG
+
+newmtl James_woods222
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods222.PNG
+
+newmtl James_woods223
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods223.PNG
+
+newmtl James_woods224
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods224.PNG
+
+newmtl James_woods225
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods225.PNG
+
+newmtl James_woods226
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods226.PNG
+
+newmtl James_woods227
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods227.PNG
+
+newmtl James_woods228
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods228.PNG
+
+newmtl James_woods229
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods229.PNG
+
+newmtl James_woods230
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods230.PNG
+
+newmtl James_woods231
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods231.PNG
+
+newmtl James_woods232
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods232.PNG
+
+newmtl James_woods233
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods233.PNG
+
+newmtl James_woods234
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods234.PNG
+
+newmtl James_woods235
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods235.PNG
+
+newmtl James_woods236
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods236.PNG
+
+newmtl James_woods237
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods237.PNG
+
+newmtl James_woods238
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods238.PNG
+
+newmtl James_woods239
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods239.PNG
+
+newmtl James_woods240
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods240.PNG
+
+newmtl James_woods241
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods241.PNG
+
+newmtl James_woods242
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods242.PNG
+
+newmtl James_woods243
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods243.PNG
+
+newmtl James_woods244
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods244.PNG
+
+newmtl James_woods245
+Ka 0.596078 0.482353 0.447059
+Kd 0.596078 0.482353 0.447059
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd archer_low_poly_Textures/James_woods245.PNG
+
+#EOF

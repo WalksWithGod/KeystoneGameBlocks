@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Mesh3d meshformat="0" cullmode="1" boundingbox="-30.9287567138672,-14.7638072967529,-48.9327964782715,28.1263618469238,14.7638053894043,49.4924011230469" flags="7" name="MESH3D" id="caesar\meshes\vehicles\test_hull.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-0.754133999347687,-0.481525987386703,-0.427249997854233,0.757166028022766,0.496374011039734,0.432206004858017" flags="7" name="MESH3D" id="caesar\meshes\crew_stations\console_1970_a.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-0.346533000469208,0.00925800018012524,-0.326463013887405,0.3456169962883,0.999657988548279,0.32557401061058" flags="7" name="MESH3D" id="caesar\entities\accommodations\station_chair.obj" />
+  <Mesh3d meshformat="0" cullmode="1" boundingbox="-21.3761329650879,0.364313006401062,-20.9318580627441,21.443904876709,9.30324172973633,21.2376480102539" flags="7" name="MESH3D" id="caesar\meshes\vehicles\test_turret.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-2.8549530506134,0.104005999863148,-2.74730706214905,2.94725298881531,1.31667494773865,3.0549008846283" flags="7" name="MESH3D" id="caesar\meshes\exterior\sensor.obj" />
+  <Mesh3d meshformat="0" cullmode="1" boundingbox="-0.918115973472595,2.45125389099121,0.505568981170654,3.01889204978943,6.32845878601074,66.8320159912109" flags="7" name="MESH3D" id="caesar\meshes\vehicles\test_turret_barrel.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1,-1,-1,1,1,1" flags="7" name="MESH3D" id="caesar\meshes\propulsion\thruster.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" flags="7" name="MESH3D" id="caesar\meshes\effects\plumes\Thrust2.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-89936.0390625,-89905.859375,-89936.6015625,89993.75,89903.3828125,89853.5859375" flags="7" name="starfield_4449ca10-4ec8-4a63-aa09-18a15cca47c6" id="caesar\meshes\pointsprites\starfield0.tvm" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-89888.6953125,-89929.921875,-89389.7890625,89945.8359375,89743.4609375,89384.3671875" flags="7" name="starfield_0fe323bc-e859-4b8c-a719-15199f832299" id="caesar\meshes\pointsprites\starfield1.tvm" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-89918.5234375,-79063.1640625,-89202.078125,89353.21875,89767.09375,89175.21875" flags="7" name="starfield_d29954f1-fbb5-4e19-8962-12a80d73b58a" id="caesar\meshes\pointsprites\starfield2.tvm" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="0,0,0,0,0,0" flags="7" name="MESH3D" id="psphere_1_150_150_19" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="0,0,0,0,0,0" flags="7" name="MESH3D" id="psphere_1_150_150_256" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="0,0,0,0,0,0" flags="7" name="MESH3D" id="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+</root>

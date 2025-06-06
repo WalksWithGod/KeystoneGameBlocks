@@ -1,0 +1,726 @@
+using System;
+using Game01;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using Keystone.Types;
+using Keystone.CSG;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using KeyScript.Routes;
+using Settings;
+
+public class Engine : BaseScript
+{
+	public static void Initialize(string scriptID)
+	{
+		// PROPERTIES
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[19];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, (object)"fusion thruster");
+		category = "statistics";
+		properties[1] = new PropertySpec("weight", typeof(double).Name, category, 0.0);
+		properties[2] = new PropertySpec("cost", typeof(double).Name, category, 0.0);
+		properties[3] = new PropertySpec("volume", typeof(double).Name, category, 0.0);
+		properties[4] = new PropertySpec("surfacearea", typeof(double).Name, category, 0.0);
+		properties[5] = new PropertySpec("hitpoints", typeof(int).Name, category, 0);
+		properties[6] = new PropertySpec("power_reqt", typeof(double).Name, category, 777.0);
+		properties[7] = new PropertySpec("damage", typeof(int).Name, category, 0); // hitpoints lost
+		// isConnected; // shows if the component has a connection to a fuel source of the correct fuel type
+		// 	- todo: we can show an icon above the component if it is fueled.
+		//    todo: how do we have the celledregion which owns the "link" entities notify a component that it
+		//          is connected or not?
+		category = "build";
+		properties[8] = new PropertySpec("fuel type", typeof(string).Name, category, "", "hydrogen", "", typeof (FissionRocketFuelTypeConverter).AssemblyQualifiedName);
+		
+		// NOTE: 1 light second = 299,792,458 meters
+		properties[9] = new PropertySpec("thrust", typeof(double).Name, category, 10000.0);
+		
+		properties[10] = new PropertySpec("materials quality", typeof(string).Name, category, "", "", "", typeof (MaterialQualityConverter).AssemblyQualifiedName);
+		properties[11] = new PropertySpec("craftsmanship", typeof(string).Name, category, "", "", "", typeof (CraftsmanshipConverter).AssemblyQualifiedName);
+		properties[12] = new PropertySpec("tech level", typeof(int).Name, category, "", 7, "", typeof (TechLevelConverter).AssemblyQualifiedName);
+		
+		category = "private variables";
+		properties[13] = new PropertySpec("default plume scale", typeof(Vector3d).Name, category, Vector3d.Zero());
+		
+		category= "operations";
+		properties[14] = new PropertySpec("breaker", typeof(bool).Name, category, false);
+		properties[15] = new PropertySpec("regulator", typeof(float).Name, category, 1.0f); // todo: a type convertor for 1.0 percentage throttle at .01 intervals max
+		properties[16] = new PropertySpec("angular thrust", typeof(bool).Name, category, false);
+		properties[17] = new PropertySpec("thrust vector", typeof(Vector3d).Name, category, Vector3d.Zero());
+		
+		// todo: ideally if we could create a list of repairable things under the "repair" category
+		//       then we could get repair-able properties and their ETAs, their supply cost, etc
+		properties[18] = new PropertySpec("repair", typeof(float).Name, category, 0.0f);
+		
+
+		category= "production";
+		
+		// // create array of products produced by this component.  
+		// Production[] production = new Production[1];
+		// production[0].ProductID = (uint)UserConstants.Product.Thrust;
+		// production[0].UnitCount = 1; 
+		// production[0].UnitValue = Vector3d.Forward() * (double)properties[9].DefaultValue; 
+		// production[0].DistributionMode = DistributionType.Container; 
+		// production[0].DistributionFilterFunc = ThrustDistribtuionFilter;
+		
+		// properties[19] = new PropertySpec("production", typeof(Production[]).Name, category, production);
+		// properties[19].IsSerializable = false;
+		
+		// // list of products consumed by this component
+		// properties[20] = new PropertySpec("consumption", typeof(uint[]).Name, category, new uint[]{(uint)UserConstants.Product.Power});
+		// properties[20].IsSerializable = false;
+		//todo: should this also consume a fuel like hydrogen?
+		
+		// add the properties to the entity
+		EntityAPI.AddCustomProperties(scriptID, properties);
+
+		
+		// EXPLICIT EVENTS - events must be added after the custom properties have been added
+		//EntityAPI.PropertyChangedEventAdd()
+//		EntityAPI.AddEvent (scriptID, "breaker", new KeyScript.Events.PropertyChangedEvent("breaker", Event_BreakerChanged));
+		
+		// RULES
+		// create a test rule using an inline delegate rule
+		//EntityAPI.AddRule (scriptID, "description", 
+		//	new SimpleRule("Name cannot be empty.", 
+		//	delegate {return ((string)properties[0].DefaultValue).Length != 0; }));		
+		EntityAPI.AddRule (scriptID, "description", new SimpleRule(1, Rule_Description));
+		
+		// uses SI derived units, thus for thrust it is the "newton" 
+		// http://en.wikipedia.org/wiki/SI_derived_unit
+		EntityAPI.AddRule (scriptID, "thrust", new SimpleRule(3, Rule_MinimumThrust));
+		EntityAPI.AddRule (scriptID, "tech level", new SimpleRule(3, Rule_MinimumTL));
+		
+		// read only property rules
+		EntityAPI.AddRule (scriptID, "cost", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "weight", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "volume", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "surface area", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "hitpoints", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "damage", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "fuel usage", new SimpleRule(2, Rule_ReadOnly));
+		
+	
+		
+		// create a test rule that uses the Validate script method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+		
+		// queryable mods
+		// assign values to specific "mod" properties that the celledregion will query
+		// to determine what modifications this domainobject will have on the parent.
+		// so for a celledregion parent, maybe it modifies the map layer
+		// for some other entity, maybe it modifies a crew members skill level.
+		
+		// so celledRegion can query the layout of this entity
+		// it can query the allowed places it can be set/orientation <-- there's no need to put that in the DomainObject explicitly
+				
+		// force production handler runs every physics tick
+		EntityAPI.AssignProductionHandler(scriptID, (uint)UserConstants.Product.Thrust, Force_Production_Update);
+		EntityAPI.AssignProductionHandler(scriptID, (uint)UserConstants.Product.Angular_Thrust, Force_Production_Update);
+		
+		// visible light production handler runs at seperate hz from Force_Production
+		EntityAPI.AssignProductionHandler(scriptID, (uint)UserConstants.Product.VisibleLight, Production_VisibleLight);
+
+		// add power consumption
+		EntityAPI.CreateConsumption(scriptID, "power", (uint)UserConstants.Product.Power, Consumption_Power);
+		
+		// create any stores.  Is this necessary?  The idea is that most production is emitted and used
+		// or lost.  But a store defines a place where production can be stored and then used later.
+		// A battery for example doesn't produce, but it can store production.
+		//EntityAPI.CreateStore(scriptID, productID, capacity);
+				
+		// crytek cryengine - local spawnParams = {};
+		//spawnParams.class = "BasicEntity";
+		//spawnParams.archetype=props.Archetype;
+		//spawnParams.name = self:GetName().."_spawnedentity_"..self.spawncount;
+		//spawnParams.flags = 0;
+		//spawnParams.orientation = {x=0,y=0,z=0};
+		//spawnParams.position=self:GetPos();
+		//spawnParams.scale = nil;
+		//local spawnedEntity = System.SpawnEntity(spawnParams);
+
+		// if this engine, spawns a "hardpoint" that is a specific entity
+		// and which this engine assigns itself as "owner", 
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{
+		// here we do some per Entity modifications such as setting entity flags
+		// since Initialize() is done once per Script instance and InitializeEntity()
+		// occurs once per Entity that is using this script.
+		
+		
+		
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.AutoGenerateFootprint, true);
+
+		EntityAPI.RegisterProduction(entityID, (uint)UserConstants.Product.Thrust);
+				
+				
+		// find the helm if it exists and then register with it?
+		
+		
+			
+		// expose specific events and set a flag to not allow routes
+		// which are free-form wiring of fields.  
+		
+		// EVENTS
+		// normally any field can have a route assigned to it. This includes intrinsic entity fields
+		// but here, we're kind of creating half of one with the source entity and endpoint set
+		// This i think is wrong.  We dont want to create Routes because Routes should in reality be deserialized.
+		// Instead what we want is a way to flag a particular property as being routeable with the rest
+		// locked because we want users to take the engine prefab to only be able to route to the on/off
+		// event
+		
+		// when the "on" custom property changes, route that to any specified target
+		// but question here is, how do we serialize the target?  With "custom properties" we store
+		// values in a string and we restore them after the Script is added to the entity.
+		// here i suspect we'd need something similar.  for every "event" that exists, we look for 
+		// the existance of a "route".  Perhaps a category "events" and a flag that says only
+		// explicit events allowed, and then saving a 'route' is done such that the list of routes
+		// is inherent entity property we serialize, but which we must check entity flag on explicity events
+		// before we allow the route to be instanced.
+		//EntityAPI.AddRoute (entityID, "on");
+		
+		// Entity FLAGS (as opposed to Component flags) should be set here as they are per entity
+		//uint explicitEvents = 1 << 30;
+		//EntityAPI.SetEntityFlag(entityID, explicitEvents, true);
+	}
+	
+	public static void UnInitializeEntity(string entityID)
+	{
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.AutoGenerateFootprint, true);
+		
+		EntityAPI.UnRegisterProduction(entityID, (uint)UserConstants.Product.Thrust);
+		
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+
+	}
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		return "<html><body>TODO: ENGINE</body></html>";
+	}
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+
+	#region Events
+	private static void Event_BreakerChanged (string entityID)
+	{
+		System.Diagnostics.Debug.WriteLine("Event_BreakerChanged()");
+	}	
+	#endregion
+	
+	#region Rules
+	private static bool Rule_ReadOnly (string entityID, object[] args)
+	{
+		return false; 
+	}
+	
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we get the value from the args where we know for property rules the value is first and only argument
+		string description = (string)args[0];  
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+	}
+	
+	private static bool Rule_MinimumTL (string entityID, object[] args)
+	{		
+		// we get the value from the args where we know for property rules the value is first and only argument
+		int techlevel = (int)args[0];
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_MinimumTL'.  Testing value '" + techlevel.ToString() + "'");
+		return techlevel >= 8;
+	}
+	
+	private static bool Rule_MinimumThrust(string entityID, object[] args)
+	{
+		double thrust = (double)args[0];
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_MinimumTL'.  Testing value '" + thrust.ToString() + "'");
+		return thrust >= 0.0;
+	}
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "turnon":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}
+	#endregion
+
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}
+	
+	public new static Vector3d[] QueryCellPlacement (string entityID, string interiorID, Vector3d position, byte cellRotation)
+	{
+		return BaseScript.QueryCellPlacement (entityID, interiorID, position, cellRotation);
+	}
+	
+	#endregion
+
+	#region Build statistics
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+	
+		// when a build property changes, run BuildUpdate() to recompute statS?
+		// Not exactly.  We instead set a flag that the "stats" are dirty 
+		// this way future property changes dont result in multiple calls to update stats.
+		// 
+		switch (index)
+		{
+			case 0:
+			case 1:
+			case 2:
+				break;
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+			case 12:
+				EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+				break;
+			default:
+				break;
+		}
+	}
+	
+	private static void UpdateStats (string entityID)
+	{
+		const double litersperhour = 3.78541;
+		const double literspersecond = litersperhour / (60d * 60d);
+		int tl = (int)EntityAPI.GetCustomPropertyValue (entityID, "tech level");
+				
+		float craftsmanship = UserFunctions.GetCraftsmanshipCoefficient ((string)EntityAPI.GetCustomPropertyValue (entityID, "craftsmanship"));
+		float materialsquality = UserFunctions.GetMaterialsQualityCoefficient((string)EntityAPI.GetCustomPropertyValue (entityID, "materials quality"));
+				
+		double thrust = (double)EntityAPI.GetCustomPropertyValue (entityID, "thrust");
+		double weight = 0.325 * thrust + 4000.0;
+		weight = UserFunctions.CalcComponentModifiedWeight (weight, tl, materialsquality);
+		double cost = weight * 25.0; 
+		cost = UserFunctions.CalcComponentModifiedCost (cost, tl, craftsmanship);
+
+		double volume = UserFunctions.CalcComponentVolume(weight);
+		double fuel = 0.5 * thrust * literspersecond;  
+		fuel = UserFunctions.CalcComponentsModifiedFuelConsumption (fuel, craftsmanship);
+		
+		double surfacearea = UserFunctions.CalcComponentSurfaceArea (volume);
+		int hitpoints = UserFunctions.CalcComponentHitpoints(surfacearea);
+		
+		// todo: condense into a single call
+		EntityAPI.SetCustomPropertyValue (entityID, "cost", cost);
+		EntityAPI.SetCustomPropertyValue (entityID, "weight", weight);
+		EntityAPI.SetCustomPropertyValue (entityID, "volume", volume);
+		EntityAPI.SetCustomPropertyValue (entityID, "fuel usage", fuel);
+		EntityAPI.SetCustomPropertyValue (entityID, "surfacearea", surfacearea);
+		EntityAPI.SetCustomPropertyValue (entityID, "hitpoints", hitpoints);
+		
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,false);
+	}	
+	#endregion
+	
+	#region Run-time
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// clear previously produced units from last tick
+		// produce
+		// retreive unit produced during previous tick
+		// run the consumer
+		if (EntityAPI.GetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY) == true)
+		{
+			System.Diagnostics.Debug.WriteLine ("Updating Stats");
+			UpdateStats (entityID);
+			System.Diagnostics.Debug.WriteLine ("Updating Stats - COMPLETED.");
+		}
+
+		string modelID = EntityAPI.FindDescendantByName(entityID, "exhaust_plume");
+		
+		// if breaker is on, and we have fuel, enable to plume model
+		object val = EntityAPI.GetCustomPropertyValue (entityID, "breaker");
+		if (val == null || (bool)val == false)
+		{
+			// todo: // read flag to determine if we have fuel
+			
+			EntityAPI.SetFlag (modelID, "enable", false);
+		}
+		else 
+			EntityAPI.SetFlag(modelID, "enable", true);
+		
+		
+		
+		
+		
+		// http://www.youtube.com/watch?v=r9Xhjmg3Wf8 <-- really nice rumbly powerful looking / sounding engine thrust plumes
+		// get state of the plume emitter flags so we know whether to continue ramping up
+		// or cool down, register new if just turning on, unregister if plume is now out.
+		// are we damaged and should emit black smoke?
+		// compute's the bbox center and then moves the center.z = center.z - (center.depth / 2);
+		// FXAPI.Register( helper.computeexternalposition(entityID), vector3d offset, length, radius, color, etc);
+		
+		// external plume emitter management
+		// external flare management
+		
+		// register / unregister sound - wait, actually ithink
+		// rather than AudioAPI.Register() for these 3d sounds we implement a sound node that hosts
+		// an audio clip resource and the sound node can track the playback of the sound and the 3d audio
+		// as camera moves.  
+		// AudioAPI.Register(); // todo: like our hexalfares, can we set sound's paths in custom properties?
+		// 	// http://castle-engine.sourceforge.net/x3d_implementation_sound.php
+	//
+		
+		// are we destroyed and need to explode?
+		
+	}
+	
+	public static Production[] Production_VisibleLight (string entityID, double elapsedSeconds)
+	{
+		return null;
+	}
+	
+	public static Production[] Force_Production_Update (string entityID, double elapsedSeconds)
+	{
+		EntityAPI.SetCustomPropertyValue (entityID, "production", null);
+		
+		// http://orbitalvector.com/Deep%20Space%20Propulsion/Fission%20Rockets/Fission%20Rockets.htm
+		// http://news.discovery.com/space/zooms/project-bifrost-interstellar-space-fission-120120.html
+		// http://www.projectrho.com/public_html/rocket/enginelist.php
+		//
+		// TODO: a fission rocket engine
+		// consumes water, but intially it must be filled with radioactive 
+		// fuel and then regulated with control rods (control rods can be damaged) (aka dilithium crystals)
+		// - thus a fission rocket consumes internal fuel as well 
+		//		- but i think the idea is that the rocket consumes its internal fuel and when it runs out the entire thing must essentially be refurbished or just replaced.  After 15 years you'll likely
+		// not even want to replace it.  You're better off buying a new engine.
+		// - this internal fuel is needed before the reactor can be turned on.  
+		// - this internal fuel 
+		// or more detailed if/else which allows for some heat
+		// to still be emitted if cooling down
+		
+		// if not installed in a vehicle, no production
+		// NOTE: The owner is not necessarily the same as the parentID because some engines might be attached to pylons.
+		string vehicleID = EntityAPI.GetOwnerID (entityID);
+		if (string.IsNullOrEmpty(vehicleID)) return null;
+		
+		// and we have consumed power from previous tick, we can produce thrust
+		bool hasPower = EntityAPI.GetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_HAS_POWER);
+//		if (hasPower == false) 
+//		{
+//			// intitiate shutdown?  
+//			// set ON = false.
+//			// set THROTTLE = 0.0
+//			// unregister plume emitter if it was active (we can use flags for determining this). That should actually be done in this.OnUpdate()
+//			return null;
+//		}
+
+		// if the engine is turned off, no production
+		object val = EntityAPI.GetCustomPropertyValue (entityID, "breaker");
+		if (val == null || (bool)val == false) 
+		{
+			return null;
+		}
+		// if throttle is 0.0, no production
+		val = EntityAPI.GetCustomPropertyValue (entityID, "regulator");
+		if (val == null) return null;
+		float throttle = (float)val;
+		if (throttle == 0.0f) 
+		{
+			return null;
+		}
+		// if thrust amount build option == 0.0, no production
+		val = EntityAPI.GetCustomPropertyValue (entityID, "thrust");
+		if (val == null) return null;
+		double maxthrust = (double)val;
+		if (maxthrust == 0.0) 
+		{
+			return null;
+		}
+		
+		
+		// modify thrust by damage above certain threshold
+		double modifiedThrust = maxthrust * throttle;
+
+		// NOTE: main difference between a maneuvering thruster and the main engines is maneuvering thrusters can potentially change the rotation and not the translation of the Vehicle. However, they can also "strafe" which is lateral translation. 
+		
+		// TODO: if there is no production, don't we have to SetCustomPropertyValue(entityID, "production", null)?
+		Production[] production = new Production[1]; // (Production[])EntityAPI.GetCustomPropertyValue (entityID, "production");
+		production[0] = new Production();
+		
+		production[0].SourceEntityID = entityID;
+
+		bool angularThrust = (bool)EntityAPI.GetCustomPropertyValue(entityID, "angular thrust");
+		
+
+		if (angularThrust)
+		{
+			modifiedThrust = 0.001d; // TEMP HACK 		
+			production[0].ProductID = (uint)UserConstants.Product.Angular_Thrust;
+			Vector3d thrustVector = (Vector3d)EntityAPI.GetCustomPropertyValue(entityID, "thrust vector");
+			production[0].UnitValue = thrustVector * modifiedThrust; 		
+		}
+		else 
+		{
+			production[0].ProductID = (uint)UserConstants.Product.Thrust;
+			
+			Quaternion rotation = EntityAPI.GetRotationRegionSpace (vehicleID);
+			// NOTE: it's important that main engines rotation is zero here
+			// NOTE: actually, multiplying the RegionSpace rotation of the engine duplicates the multiplication.
+			//       If i do want to multiply the rotation, it should be the local space rotation of the engine
+			//       or, just use the RegionSpace rotation of the engine by itself without multiplying to vehicle
+			//       regionspace rotation.
+			//rotation *= EntityAPI.GetRotationRegionSpace(entityID);
+								
+			//System.Diagnostics.Debug.WriteLine("Vehicle Rotation = " + rotation.ToString());
+			// NOTE: UnitValue type is Vector3d not Quaternion.
+			production[0].UnitValue = (rotation * Vector3d.Forward()) * modifiedThrust; 
+			
+			//System.Diagnostics.Debug.WriteLine("Engine.Force_Production_Update() - Linear Thrust = " + modifiedThrust.ToString());
+		}
+		production[0].DistributionList = new string[]{vehicleID};  //todo: i think this gets ignored since DistributionMode = Container
+		
+		// thrust (gets applied to the owner vehicle)
+		production[0].DistributionMode = DistributionType.Container; 
+		production[0].DistributionFilterFunc = ThrustDistribtuionFilter;
+		
+		
+		// light (detectable)
+		
+		// heat (damage for craft that gets too close and infrared detectable based on output level)
+		
+		// blast (damage)
+		
+		
+		return production;
+	}
+	
+	private static bool ThrustDistribtuionFilter (Production production, string entityID)
+	{
+		// TODO: i forget what this does
+		
+		return true;
+	}
+	
+
+	public static Consumption[] Consumption_Power (string entityID, Production production, double elapsedSeconds)
+	{
+		Consumption[] consumptionResult = (Consumption[])EntityAPI.GetCustomPropertyValue (entityID, "consumption");
+
+		// if the engine is turned off, no consumption
+		object val = EntityAPI.GetCustomPropertyValue (entityID, "breaker");
+		if (val == null || (bool)val == false) return consumptionResult;
+	
+		string producerID = production.SourceEntityID;
+		// is there fuel that can be consumed from the production source?
+		
+		// if so, deduct our fuel usage
+		
+		// set flag to indicate whether we have acquired our fuel reqts
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_HAS_POWER ,true);
+		
+		// update the producer's power quantity value after modifications
+		//EntityAPI.SetCustomPropertyValue (producerID, "production", production);
+		
+		return consumptionResult;
+	}
+	
+	
+	// OnRender gets called for each model including all Models in nested Sequence/Selector nodes
+	public static void OnRender (string contextID, string entityID, string[] modelIDs, string shaderID, 
+								 Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+		
+		// if the engine is "On" 
+		object val = EntityAPI.GetCustomPropertyValue (entityID, "breaker");
+		if (val == null || (bool)val == false) return;
+		
+		// if the plume is enable==false, modelIDs[1] will not exist so just return
+		if (modelIDs.Length <= 1) return;
+		
+		string name = EntityAPI.GetName(modelIDs[1]);
+		if (string.IsNullOrEmpty(name)) return;
+		
+		// TODO: im confused.  Shouldn't the plume be attached to the exterior vehicle
+		// and then from here we can grab the exterior vehicle ID and enable/disable
+		// that Model on the exterior vehciels' model selector?  The problem there is
+		// we do not know how many engines the user will install.  Should they be required
+		// to place the engines in the nacells and then only be allowed to change their size
+		// by increasing the length/height of the engines along the cells and using autotile
+		// to make the intersections between engine parts fit together? 
+		// Because we have to manually position the plume locations on the exterior!  We do
+		// not place the plumes as selector Models of the Engine hierarchy. 
+		// WAIT: now i remember, i had created a version of our starship where the nacels
+		// were seperate from the hull, and i placed the engine.css to the nacels and added
+		// the exhaust plume model as selector model option for that engine hieararchy. The
+		// problem with this is that there's no interior access to the engines within a floorplan
+		// arrangement.  
+		if (name == "exhaust_plume")
+		{
+			// randomly scale the plume within a range to jitter/vibrate the plume
+			// - we need to cache the default scale and then randomly tweak that value
+			//   each frame to produce a jitter / vibrate effect.
+			Vector3d defaultScale = Vector3d.Zero();
+			val = EntityAPI.GetCustomPropertyValue (entityID, "default plume scale");
+			if (val == null || (Vector3d)val == Vector3d.Zero())
+			{
+				// first time, cache the model's scale as the default scale
+				val = EntityAPI.GetPropertyValue (modelIDs[1], "scale");
+				defaultScale = (Vector3d)val;
+				EntityAPI.SetCustomPropertyValue(entityID, "default plume scale", defaultScale);
+			}
+			else
+				defaultScale = (Vector3d)val;
+			
+			// randomize the plume model's scale a bit for simple animation effect
+			Vector3d scale = defaultScale;
+			Random r = new Random();
+			double s = 0.8 + r.NextDouble() * 0.4 ;
+			scale.x *= s;
+			scale.y *= s;
+			scale.z *= s;
+			
+			EntityAPI.SetPropertyValue (modelIDs[1], "scale", scale);
+			
+			//System.Diagnostics.Debug.WriteLine ("Engine.OnRender() - exhaust plume scaled.");		
+		}
+		
+	}
+	
+	#endregion
+}

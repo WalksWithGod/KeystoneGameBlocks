@@ -1,0 +1,42 @@
+<dotnetbarlayout version="6" zorder="1,10,7,5">
+  <docksite size="0" dockingside="Top" originaldocksitesize="0" />
+  <docksite size="0" dockingside="Bottom" originaldocksitesize="0" />
+  <docksite size="0" dockingside="Left" originaldocksitesize="0">
+    <dockcontainer orientation="0" w="0" h="0">
+      <barcontainer w="-3" h="705">
+        <bar name="barLeftDockBar" dockline="0" layout="2" dockoffset="0" state="2" dockside="1" visible="true">
+          <items>
+            <item name="dockContainerItemLeft" origBar="" origPos="-1" pos="0" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </docksite>
+  <docksite size="0" dockingside="Right" originaldocksitesize="0">
+    <dockcontainer orientation="0" w="0" h="0">
+      <barcontainer w="-3" h="705">
+        <bar name="barRightDockBar" dockline="0" layout="2" dockoffset="0" state="2" dockside="2" visible="true">
+          <items>
+            <item name="dockContainerItemRight" origBar="" origPos="-1" pos="0" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </docksite>
+  <documents>
+    <dockcontainer orientation="0" w="0" h="0">
+      <barcontainer w="1006" h="654">
+        <bar name="barDocumentDockBar" dockline="0" layout="2" dockoffset="0" state="2" dockside="5" visible="true">
+          <items>
+            <item name="docDock1" origBar="" origPos="-1" pos="0" visible="false" />
+            <item name="docDock2" origBar="" origPos="-1" pos="1" visible="false" />
+            <item name="docDock3" origBar="" origPos="-1" pos="2" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </documents>
+  <bars>
+    <bar name="barStatusBar" dockline="0" layout="0" dockoffset="0" state="2" dockside="4" visible="true" />
+  </bars>
+</dotnetbarlayout>

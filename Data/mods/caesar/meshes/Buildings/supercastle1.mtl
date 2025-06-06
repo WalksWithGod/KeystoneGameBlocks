@@ -1,0 +1,131 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'supercastle1.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl BrickOldSharp0184_1_S1
+Ka 0.545098 0.486275 0.368627
+Kd 0.545098 0.486275 0.368627
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/BrickOldSharp0184_1_S1.PNG
+
+newmtl MarbleTiles0040_1_S1
+Ka 0.603922 0.541176 0.411765
+Kd 0.603922 0.541176 0.411765
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/MarbleTiles0040_1_S1.PNG
+
+newmtl BrickOldRounded0067_2_S1
+Ka 0.686275 0.596078 0.443137
+Kd 0.686275 0.596078 0.443137
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/BrickOldRounded0067_2_S1.PNG
+
+newmtl BrickOldSharp0175_9_S1
+Ka 0.745098 0.674510 0.549020
+Kd 0.745098 0.674510 0.549020
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/BrickOldSharp0175_9_S1.PNG
+
+newmtl Ivy0070_7_S1
+Ka 0.396078 0.435294 0.207843
+Kd 0.396078 0.435294 0.207843
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/Ivy0070_7_S1.PNG
+
+newmtl WindowStainedGlass0024_S1
+Ka 0.352941 0.349020 0.345098
+Kd 0.352941 0.349020 0.345098
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.800000
+map_Kd supercastle1_Textures/WindowStainedGlass0024_S1.PNG
+
+newmtl WindowStainedGlass0004_S1
+Ka 0.419608 0.388235 0.360784
+Kd 0.419608 0.388235 0.360784
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.790000
+map_Kd supercastle1_Textures/WindowStainedGlass0004_S1.PNG
+
+newmtl RooftilesSlate0051_3_S1
+Ka 0.388235 0.407843 0.384314
+Kd 0.388235 0.407843 0.384314
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/RooftilesSlate0051_3_S1.PNG
+
+newmtl WindowStainedGlass0043_1_S1
+Ka 0.196078 0.231373 0.200000
+Kd 0.196078 0.231373 0.200000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.800000
+map_Kd supercastle1_Textures/WindowStainedGlass0043_1_S1.PNG
+
+newmtl OrnamentBorder0019_2_S1
+Ka 0.650980 0.580392 0.419608
+Kd 0.650980 0.580392 0.419608
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/OrnamentBorder0019_2_S1.PNG
+
+newmtl WindowStainedGlass0018_S1
+Ka 0.250980 0.274510 0.262745
+Kd 0.250980 0.274510 0.262745
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.800000
+map_Kd supercastle1_Textures/WindowStainedGlass0018_S1.PNG
+
+newmtl RoofingInside0017_2_S1
+Ka 0.458824 0.415686 0.356863
+Kd 0.458824 0.415686 0.356863
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/RoofingInside0017_2_S1.PNG
+
+newmtl WoodStudded0029_1_S1
+Ka 0.160784 0.137255 0.098039
+Kd 0.160784 0.137255 0.098039
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd supercastle1_Textures/WoodStudded0029_1_S1.PNG
+
+newmtl Translucent_Glass_Blue
+Ka 0.211765 0.341176 0.329412
+Kd 0.211765 0.341176 0.329412
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.500000
+
+newmtl WindowStainedGlass0007_S1
+Ka 0.588235 0.600000 0.509804
+Kd 0.588235 0.600000 0.509804
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 0.850000
+map_Kd supercastle1_Textures/WindowStainedGlass0007_S1.PNG
+
+#EOF

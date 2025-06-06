@@ -1,0 +1,281 @@
+using System;
+using Game01;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyCommon.Traversal;
+
+public class NPC_Behavior_Follow_Path : BaseScript // TODO: should this inheret from a different BaseScript like a NPCBehaviorBase base script?
+                                                   // and shouldn't Execute return a BehaviorTreeResult enum value?
+{
+	// TODO: what is Validate for?
+	public static bool Validate (string entityID, double elapsedSeconds)
+	{
+		//System.Diagnostics.Debug.WriteLine (string.Format("Entity {0} Spawned at {1}", entityID, 1));
+		return true;
+	}
+	
+	public static void Enter (string entityID, double elapsedSeconds)
+	{
+	}
+	
+	// http://www.what-could-possibly-go-wrong.com/fluent-behavior-trees-for-ai-and-game-logic/
+	// todo: should this method actually be called "Perform" just as it in the Action class?  
+	public static BehaviorResult Execute (string entityID, double elapsedSeconds)
+	{
+		// TODO: AIBlackboardData data must be initialized with all the AIBlackboardData variables by the NPC's standard entity script.
+		// TODO: really, before this execute is called, the blackboard data should already exist and we shouldn't have to check for null here
+		KeyCommon.Data.UserData data = EntityAPI.GetAIBlackboardData(entityID);
+		if (data == null) return BehaviorResult.Fail;
+		
+		// NOTE: if we've reached this script in the sequence, then many checks we should not have to do.
+		//       We should be able to just grab the current pointIndex, and if it's -1, set it to 0 and start
+		//       steering to that point.
+				
+		// TODO: are we recovering from a paused game?  The elapsedSeconds needs to be reset.
+		
+		// TODO: Do we have / need an overall AI/TaskManager creating paths and tasks for our crew to do?  Well, that
+		// might be job of the 1st Officer or some other chiefs of department(s).  There AI scripts and/or behavior trees
+		// would include the ability to assign tasks to subordinates.
+		// The user as the captain could assign tasks to officers who can then delegate to subordinates on duty.
+		// Subordinates can assign themselves recreational tasks, eating, sleeping, bathing, relaxing in the "bar" room, etc.
+		// How does a task like "fix engine nacelle 01" turned into multiple tasks like pathing, then fixing, then completing and updating
+		// the log, then taking the next task.
+		
+		
+		// TODO: the pathfind() and its results is where we need to determine whether we can walk through a particular door.
+		//       here in the script, we just need to know if there is a door and then procede to open it and walk through it.
+		
+		// TODO: isn't it here that the npc must grab any data on a "door" and "use" the door to open it?
+		//       and wait until it's open before walking through it?  This would mean we'd need to check the tileValue
+		//       we're on to know if we have to "use" something or not.  Or is it handled in the BehaviorTree where
+		//       a different branch is reached when needing to "use" a door?  Or do we simply need to assign a "string"
+		//       that indicates an Entity we can "use" to trigger any animations or waiting to enter a door or elevator.
+		//       Hrm, how to handle this...
+		
+		
+		// 1:1 mapping of mechanisms to pathpoints.  array elements can be null or empty. null or empty means use default walk animation 
+		// when heading to that pathPoint.  I think this is step 1 of our strategy.  Our PathFind() method needs to assign mechanisms id's byte
+		// with 1:1 mapping to pathpoints.
+		// TODO: What about "movement_state?"  Should our pathfind() result be filling in a movement_state array as well?
+		// TODO: string[] mechanisms = data.GetStringArray("ai_mechanisms");
+		// TODO: In Gamebryo scripting, the AI and animations and states were all just tracked in a monolithic script.
+		//       ACTUALLY, this is not true.  It appears that an Entity in Gamebryo can have many different "behaviors" such as
+		//       OnAttacked() and these behaviors can be assigned a script to handle them.  So in this sense, a behaviorTree that tells us
+		//       what script will be handled is ok.  The problem is determining the granularity.  I think our scripts should be hybrid
+		//       between BT and monolithic script.
+		// https://www.youtube.com/watch?v=Az6X0Vi9hH4
+		
+		Vector3d[] pathPoints = data.GetVector3dArray ("ai_path_points");
+		string[] components = data.GetStringArray("ai_path_components");
+		
+		int currentPathPoint = data.GetInteger ("ai_current_point");
+		 
+		if (pathPoints == null || pathPoints.Length == 0) return BehaviorResult.Fail;
+		System.Diagnostics.Debug.Assert (pathPoints.Length == components.Length);
+
+		if (currentPathPoint == -1) currentPathPoint = 0;
+		
+		Vector3d currentTranslation = EntityAPI.GetPositionRegionSpace (entityID);
+		Vector3d goal = pathPoints[currentPathPoint];
+		
+		
+		double distanceToPathPoint; 
+		Vector3d resultDirection = Vector3d.Normalize(goal - currentTranslation, out distanceToPathPoint);
+		
+		// // TODO: if our acceleration takes us beyond the goal, we should not go back
+		// //       but advance towards next
+		// // TODO: actually, we should just have a proximity radius to point and if we're close enough, advance to next point in path
+		
+		// // if direction to current sub-goal before and after movement has changed, then we overshot
+		double proximityRadius = data.GetDouble ("ai_path_proximity_radius");
+		bool reachedPathPoint = Math.Abs(distanceToPathPoint) <= proximityRadius;
+		// //bool reachedPathPoint = Vector3d.GetDistance3d (direction, resultDirection)) < 0.1;
+		// exactly opposite facing vectors will yeild a dotproduct of -1.0f
+		
+		// if we've exceeded the path point, then we should contribute excess velocity towards the next point
+		
+		// bool reachedPathPoint = (goal == currentTranslation || Vector3d.DotProduct(direction, resultDirection) - proximityRadius <= -1.0);
+		
+		if (reachedPathPoint) 
+		{
+			// Have we reached a special pathpoint where we need to execute a "use" scripted method on a Component (eg. a door to open it?)
+			// Do we grab the Component with an API call on this interior, or do we include that along with the Vector3d[] path points. (in other words, a differnt struct that holds both the pathpoints and the Component string Entity IDs)
+			if (!string.IsNullOrEmpty(components[currentPathPoint]))
+			{
+				string componentID = components[currentPathPoint];
+				
+				// what is the state of the door?
+				// for any state other than "opened" we must wait.
+				// If door is closing or closed, we must "open" it and wait.
+				uint componentType = (uint)EntityAPI.Execute (componentID, "QueryComponentType", null); // TODO: This needs to query the door component type by GetPropertyValue(componentID, "usertypeid");
+				if (componentType == (uint)Enums.COMPONENT_TYPE.DOOR)
+				{
+					System.Diagnostics.Debug.WriteLine ("npc_follow_path - door found");	
+					// TODO: how do we resume to other pathpoints after the door opens?
+					// we simply need to increment the currentPathPoint and assign it to the blackboard data.
+					KeyCommon.Data.UserData componentData = EntityAPI.GetAIBlackboardData(componentID);
+					string state = componentData.GetString("state");
+					// TODO: replace open/close state with just one custom property on the door prefab?
+					//       Then include a timer on the door to wait for 3 seconds or so before automatically closing after the last "Use" gets executed
+					if (state == "closed")
+					{
+						// if there is a door, "use" the door to open it.  We already know that the NPC has access 
+						// priveleges because the PathFind() algorithm takes that into account in determining pathpoints.					
+						// we need to "use" the door.  We already know the NPC has proper security clearance
+						// TODO: should each NPC call "Use" even if the door is already opened in order to reset the timer in the door to stay open before closing?
+						// NOTE: call to "Use" is case sensitive!
+						EntityAPI.Execute (componentID, "Use", new string[] {componentID, entityID});
+
+						//goal = currentTranslation; // pause here so our velocity will be 0 next frame
+						System.Diagnostics.Debug.WriteLine ("npc_follow_path - OPENING DOOR.");
+						// should we be setting componentData values here? this should occur during the .Execute (componentID, "use", ..)
+						//componentData.SetString ("state", "opening");
+						//TODO: we need to stop movement of the NPC until the door fully opens
+						EntityAPI.SetAIBlackboardData (componentID, componentData);
+						return BehaviorResult.Success;
+					}
+					else if (state == "opening")
+					{
+						goal = currentTranslation;
+						Vector3d acc = new Vector3d(); // AIAPI.Steer(entityID, goal, elapsedSeconds);
+						Vector3d dir = ApplySteering(entityID, acc, elapsedSeconds, out currentTranslation);
+						return BehaviorResult.Success;
+					}
+					else if (state == "opened")
+					{
+						// do nothing, resume steering
+					}
+					else if (state != "opened")
+					{	
+						System.Diagnostics.Debug.WriteLine ("npc_follow_path - DOOR NOT OPENED");
+						return BehaviorResult.Success;
+					}
+					// TODO: how does the door close?  Does it automatically close x seconds after it has been "used?"
+					//       if so, how do we prevent it from closing on a NPC inside the doorway?
+					//       And should the counter to close door reset after every NPC steps through it.
+				}
+			}
+			
+			
+			// do while excess movement is beyond next pathpoint
+			// move to next pathpoint
+			int numPathPoints = pathPoints.Length;
+			// System.Diagnostics.Debug.WriteLine("WAYPOINT destination reached");
+			if (currentPathPoint < numPathPoints - 1)
+			{
+				currentPathPoint++;
+				goal = pathPoints[currentPathPoint];
+				System.Diagnostics.Debug.WriteLine("PATHING: moving to point:" + currentPathPoint.ToString());
+			}
+			else
+			{
+				data.SetBool ("ai_path_in_progress", false);
+				data.SetVector3dArray ("ai_path_points", null);
+				EntityAPI.SetVelocity (entityID, Vector3d.Zero());
+				currentPathPoint = -1;
+				// set final position in case we overshot a bit 
+				// TODO: no. We dont want to snap to final position since we use a proximity radius
+				// EntityAPI.SetPosition (entityID, goal);
+				System.Diagnostics.Debug.WriteLine("PATHING: FINAL destination reached.");			
+			}
+
+			
+			
+			
+			data.SetInteger ("ai_current_point", currentPathPoint);
+		}
+
+		// find steering force then apply to movement.
+		double maxSpeed = (double)EntityAPI.GetCustomPropertyValue(entityID, "maxspeed"); //TODO: max speed can be variable based on damage
+		double maxForce = (double)EntityAPI.GetCustomPropertyValue(entityID, "maxforce"); //TODO: max steering force can be variable based on damage
+		double slowDownDistance = distanceToPathPoint / 2d;
+		
+		// TODO: Steer and ApplySteering should not alter NPC translation there.  That should happen here
+		//       so that we can stop (pause) the NPC at a door for instance.
+		Vector3d acceleration = AIAPI.Steer(entityID, goal, maxForce, maxSpeed, slowDownDistance, elapsedSeconds);
+		Vector3d direction = ApplySteering(entityID, acceleration, elapsedSeconds, out currentTranslation);
+		// TODO: shouldn't we just be getting out velocity not currentTranslation and allow Simulation.Update() to finalize movement?
+		// TODO: And "ApplySteering()" should just compute force and rotation and then we assign velocity and angular velocity?
+		
+		
+		
+		// remove any drift along the Y axis after steering. The goal points are always guaranteed to be == floorheight 
+		//currentTranslation.y = goal.y;
+
+		// if on a path, steer to next point. steer should return a velocity
+		// TODO: how does scripting work with Obfuscation?
+		// TODO: don't Composite nodes like Sequence and Selector nodes need scripted code too?  How did we do this for our Viewpoint controllers?
+		//		- we didn't use any scripts.  We just used a lot of Sequence nodes with lots of Action nodes underneath that had anonymous methods assigned.
+		// TODO: does using script files make obfuscating the project's binaries problematic?
+		// TODO: shouldn't we only compute a new velocity, and allow Simulation.Update() to then update the position of the Entity?
+		//       This way we're not modifying the scene in script and we can replicate final positions of Entities that have moved via the server during Update().
+		//       We can compute a steer velocity, then set that velocity to the Entity and allow Simulation.Update() to find new position each frame
+		
+		//EntityAPI.SetPosition (entityID, currentTranslation);
+		// is the following call necessary?  or is data a reference object that updates in our property value too?
+		EntityAPI.SetAIBlackboardData (entityID, data);
+		return BehaviorResult.Success;
+	}
+	
+	public static void Exit (string entityID, double elapsedMilliseconds) // todo: i believe this should be elapsedSeconds
+	{
+	}
+	
+	private static Vector3d ApplySteering(string entityID, Vector3d acceleration, double elapsedSeconds, out Vector3d newPosition)
+	{
+		// Euler integrate acceleration into velocity
+		// TODO: verify the acceleration computed by Steer() is itself _NOT_ converted to a PER-FRAME value
+		// or else we'll be doing it twice by multiplying acceleration * elapsedSeconds below
+		Vector3d velocity = EntityAPI.GetVelocity (entityID);
+		velocity *= elapsedSeconds;
+		velocity += acceleration * elapsedSeconds;
+		// todo: enforce max velocity
+		// velocity = Vector3d.Limit (velocity, maxSpeed);
+		EntityAPI.SetVelocity (entityID, velocity);
+
+		Vector3d velocityThisFrame = velocity; // * elapsedSeconds;
+
+		// Euler integrate velocity into translation
+		Vector3d translation = EntityAPI.GetPositionRegionSpace (entityID);
+		newPosition = translation + velocityThisFrame;
+		EntityAPI.SetPositionRegionSpace (entityID, newPosition);
+		
+		// velocity direction vector will be used to compute a heading rotation
+		Vector3d direction = Vector3d.Normalize(velocityThisFrame);
+		
+		Quaternion rotation = AIAPI.RotateTo(direction); 
+		EntityAPI.SetPropertyValue (entityID, "rotation", rotation);
+
+		return direction;
+	}
+	
+/* 	private static Vector3d ApplySteering(string entityID, Vector3d acceleration, double elapsedSeconds, out Vector3d newPosition)
+	{
+		// Euler integrate acceleration into velocity
+		// TODO: verify the acceleration computed by Steer() is itself _NOT_ converted to a PER-FRAME value
+		// or else we'll be doing it twice by multiplying acceleration * elapsedSeconds below
+		Vector3d velocity = EntityAPI.GetVelocity (entityID);
+		velocity += acceleration * elapsedSeconds;
+		// todo: enforce max velocity
+		// velocity = Vector3d.Limit (velocity, maxSpeed);
+		EntityAPI.SetVelocity (entityID, velocity);
+
+		Vector3d velocityThisFrame = velocity; // * elapsedSeconds;
+
+		// Euler integrate velocity into translation
+		Vector3d translation = EntityAPI.GetPosition (entityID);
+		newPosition = translation + velocityThisFrame;
+		EntityAPI.SetPosition (entityID, newPosition);
+		
+		// velocity direction vector will be used to compute a heading rotation
+		Vector3d direction = Vector3d.Normalize(velocityThisFrame);
+		
+		Quaternion rotation = AIAPI.RotateTo(direction); 
+		EntityAPI.SetPropertyValue (entityID, "rotation", rotation);
+
+		return direction;
+	} */
+}

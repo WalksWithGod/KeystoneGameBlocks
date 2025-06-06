@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.95105654001236,0,-1,0.95105654001236,0,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="b85ffc33-7c9f-4ab2-ac4d-7ec118cbd98c">
+    <DefaultAppearance ref="0ff382f4-2c5f-4ba6-aeb5-557499023fc3" />
+    <Mesh3d ref="pcircle_10_1" />
+  </Model>
+</root>

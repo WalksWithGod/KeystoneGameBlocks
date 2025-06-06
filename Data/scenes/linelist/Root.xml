@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Root regiondiameterx="74799002943488" regiondiametery="74799002943488" regiondiameterz="74799002943488" octreenodedepth="3" octreedepth="0" entityflags="6291468" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="0,0,0,0,0,0" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="ROOT" id="Root,linelist">
+    <DirectionalLight ref="6d89f47b-07fc-4fff-9e17-7483c8247a4e" />
+  </Root>
+</root>

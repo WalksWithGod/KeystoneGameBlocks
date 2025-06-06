@@ -1,0 +1,16 @@
+<particle-system>
+  <emitter type="billboard" max-particles="150" id="0" size="256" location="0/0/0" direction="0/0/0" directional="True" randomdirectionfactor="1/1/1" power="7" lifetime="7" shape="1" texture="particles\smokey.dds" color="1,1,1,0.1" speed="35" usegravity="False" gravity="0/-1/0" alphachange="1" alphablending="4" alphatest="True" alpharef="0" alphadepthwrite="False" boxsize="0/0/0" sphereradius="250" looping="True" texture-missing="true">
+    <particle-keyframes>
+      <keyframe id="0" key="0" size="0/0/0" color="1,1,1,0" />
+      <keyframe id="1" key="5" size="0/0/0" color="0.7,0,0,0.7" />
+      <keyframe id="2" key="7" size="0/0/0" color="1,1,1,0" />
+    </particle-keyframes>
+  </emitter>
+  <emitter type="billboard" max-particles="150" id="1" size="256" location="200/100/0" direction="0/0/0" directional="True" randomdirectionfactor="1/1/1" power="10" lifetime="7" shape="1" texture="particles\smokey.dds" color="1,1,1,0.1" speed="35" usegravity="False" gravity="0/-1/0" alphachange="1" alphablending="4" alphatest="True" alpharef="0" alphadepthwrite="False" boxsize="0/0/0" sphereradius="250" looping="True">
+    <particle-keyframes>
+      <keyframe id="0" key="0" size="0/0/0" color="1,1,1,0" />
+      <keyframe id="1" key="5" size="0/0/0" color="0.7,0,0,0.7" />
+      <keyframe id="2" key="7" size="0/0/0" color="1,1,1,0" />
+    </particle-keyframes>
+  </emitter>
+</particle-system>

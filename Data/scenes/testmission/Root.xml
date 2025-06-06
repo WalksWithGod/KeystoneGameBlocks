@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Root regiondiameterx="74799002943488" regiondiametery="74799002943488" regiondiameterz="74799002943488" octreenodedepth="3" octreedepth="0" entityflags="6291484" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="-37399501471744,-37399501471744,-37399501471744,37399501471744,37399501471744,37399501471744" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="ROOT" id="df3d574e-7a1f-4abd-b5bf-b0c943bb26b8">
+    <Background3D fixedscreensize="0" entityflags="16777372" attachedtoboneid="-1" tilelocation="0,0,0" usertypeid="0" boundingbox="-89908.5625,-89950.7265625,-89952.5546875,89960.1796875,89948.046875,89988.2578125" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="starfield" id="starfield_934e39c0-2f3b-4554-9422-1984b6531e78">
+      <ModelSequence ref="9d6b0e90-2b80-40c4-8679-a676402a7826" />
+    </Background3D>
+    <StellarSystem ref="00ee9f89-ffa1-4080-987d-b7c24889d1b8" />
+  </Root>
+</root>

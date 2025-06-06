@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Actor3d actormode="0" meshformat="0" cullmode="3" boundingbox="-20.4272956848145,-0.958211839199066,-5.79067850112915,20.0124320983887,69.1402053833008,9.61957836151123" flags="7" name="ACTOR3D" id="caesar\actors\AIKO.TVA" />
+  <Actor3d actormode="0" meshformat="0" cullmode="3" boundingbox="-18.8216648101807,-1.34528720378876,-8.90412712097168,18.2465438842773,72.8671951293945,9.10158252716064" flags="7" name="ACTOR3D" id="caesar\actors\Colonel-X.X" />
+</root>

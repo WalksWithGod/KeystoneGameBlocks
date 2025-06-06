@@ -1,0 +1,46 @@
+using System;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyCommon.Traversal;
+
+public class Entity_Behavior_Orbit : BaseScript
+{
+	public static bool Validate (string entityID, double elapsedMilliseconds)
+	{
+		//todo: verify user can't access Keystone.Core._Core and such
+		System.Diagnostics.Debug.WriteLine (string.Format("Entity {0} Spawned at {1}", entityID, 1));
+		return true;
+	}
+	
+	public static void Enter (string entityID, double elapsedMilliseconds)
+	{
+		
+	}
+	
+	public static BehaviorResult Execute (string entityID, double elapsedMilliseconds)
+	{
+		// orbit this entity around the origin
+		Vector3d origin = new Vector3d();
+		Vector3d position= EntityAPI.GetPosition (entityID);
+
+		double heading = Keystone.Math2.Math2.Heading2DDegrees(position);
+		double radius = position.Length;
+		heading += (double)elapsedMilliseconds * .1;
+		if (heading > 360) heading %= 360;
+		double vertAngle = 0 ;
+		Vector3d velocity = EntityAPI.GetVelocity (entityID);
+		Vector3d newPosition = Keystone.Math2.Math2.MoveAroundPoint(origin, radius, heading, vertAngle);
+		// TODO: shouldn't we only compute a new velocity, and allow Simulation.Update() to then update the position of the Entity?
+		//       This way we're not modifying the scene in script and we can replicate final positions of Entities that have moved via the server during Update().
+		EntityAPI.SetPosition(entityID, newPosition);
+		return BehaviorResult.Running;
+	}
+	
+	public static void Exit (string entityID, double elapsedMilliseconds)
+	{
+	}
+}
+

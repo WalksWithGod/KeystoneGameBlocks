@@ -1,0 +1,711 @@
+using System;
+using Keystone.Types;
+
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+
+using Settings;
+using Antlr4.StringTemplate;
+//using Antlr4.StringTemplate.Compiler;
+//using Antlr4.StringTemplate.Extensions;
+//using Antlr4.StringTemplate.Misc;
+
+public class Star : BaseScript
+{
+	public static void Initialize(string scriptID)
+	{
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[8];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "",(object)"Star", "", typeof (MaterialQualityConverter).AssemblyQualifiedName);
+		properties[1] = new PropertySpec("mass", typeof(double).Name, category, 0);
+		properties[2] = new PropertySpec("volume", typeof(double).Name, category, 0);
+		properties[3] = new PropertySpec("surfacearea", typeof(double).Name, category, 0);
+
+		category = "private variables";
+		properties[4] = new PropertySpec("hexflare", typeof(string).Name, category,(object)@"caesar\shaders\Sky\HexaFlare.jpg");
+		properties[5] = new PropertySpec("circleflare", typeof(string).Name, category, (object)@"caesar\shaders\Sky\circleflare.jpg");
+		properties[6] = new PropertySpec("rainbowcircleflare", typeof(string).Name, category, (object)@"caesar\shaders\Sky\rainbowcircleflare.jpg");
+		properties[7] = new PropertySpec("animation_playing", typeof(bool).Name, category, false);
+		
+		category= "production";
+		
+		// create array of products produced by this component.(eg. gravity, heat, radiation)
+//		Production[] production = new Production[1];
+//		production[0].ProductID = (uint)UserConstants.Product.Gravity;
+//		production[0].UnitCount = -1; // infinite production can be distributed to all consumers with no regard for priority since there is enough to supply all relevant consumers.
+//		production[0].DistributionMode = DistributionType.Region; 
+		
+//		properties[8] = new PropertySpec("production", typeof(Production[]).Name, category, production);
+//		properties[8].IsSerializable = false;
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(scriptID, properties);
+		
+		
+		// create a test rule using an inline delegate 
+		//EntityAPI.AddRule (scriptID, "description", 
+		// new SimpleRule(1, delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+					
+		EntityAPI.AddRule (scriptID, "description", new SimpleRule(1, Rule_Description));
+		EntityAPI.AddRule (scriptID, "mass", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "volume", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "surfacearea", new SimpleRule(2, Rule_ReadOnly));
+		
+		// create a test rule that uses the Validate() method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+					
+		// force production handler runs every physics tick
+//		EntityAPI.AssignForceProductionHandler(scriptID, Force_Production_Update);
+		
+		// regular production handler runs at seperate hz (possibly once per 1/10 second)
+		EntityAPI.AssignProductionHandler(scriptID, (uint)UserConstants.Product.Gravity, Production_Update);
+		
+		// add heat production
+		
+		// add EM interfearance production (adds a -modifier to certain sensors)
+		
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{
+		// Cannot call AnimationAPI.Animation_Play() here because child nodes of the 
+		// Star Entity may not be loaded and added as children yet.
+		// AnimationAPI.Animation_Play(entityID, entityID + "_corona_animation", true);
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		
+		// TODO: use sqlite to get our star data
+		//		- what do we need to get this working?
+		//
+		// TODO: i think Body, Star, World classes should all be ModeledEntity with SQL db for property store
+		//		 but where perhaps these classes can "deserialize" from the db and then offer those properties
+		//       via custom properties as we do now.
+
+		
+		object propertyValue = EntityAPI.GetPropertyValue(entityID, "name");
+		string name = null;
+		if (propertyValue != null)
+			name = (string)propertyValue;
+		else
+			name = "unknown star";
+
+		string basePath = GameAPI.Path_GetDataPath();
+		
+		//NOTE: must use RawGroupDirectory if we just want straight template text with no type definition info required
+		TemplateRawGroupDirectory group = new TemplateRawGroupDirectory(System.IO.Path.Combine(basePath, @"mods\common\layouts\"), System.Text.Encoding.ASCII, '$', '$');
+		
+		Template pageST = group.GetInstanceOf("component_page");
+		Template bodyST = group.GetInstanceOf("star_body");
+		
+		// .Add cannot be done on compiled templates.  CompiledTemplates are effectively frozen so it makes sense!
+		bodyST.Add("componenttypename", name);
+		bodyST.Add ("time", DateTime.Now.ToString("HH:mm:ss") );
+		
+				
+		// if we've scanned this star, display it's basic stats
+		int stype = (int)EntityAPI.GetPropertyValue (entityID, "spectraltype");
+		string s = "";
+		
+		switch (stype)
+		{
+				case 0:
+					s = "Super Giant";
+					break;
+				case 1:
+					s = "Giant II";
+					break;
+				case 2:
+					s = "Giant III";
+					break;
+				case 3:
+					s = "Sub Giant";
+					break;
+				case 4:
+					s = "Dwarf";
+					break;
+				case 5:
+					s = "Sub Dwarf";
+					break;
+				case 6:
+					s = "White Dwarf";
+					break;
+				case 7:
+					s = "Pulsar";
+					break;
+				case 8:
+					s = "Neutron Star";
+					break;
+				case 9:
+					s = "Black Hole";
+					break;
+				default:
+					s = "?";
+					break;
+
+		}
+			
+		bodyST.Add ("spectraltype", s);
+		
+		float luminosity = (float)EntityAPI.GetPropertyValue(entityID, "luminosity");
+		bodyST.Add ("luminosity", "1.1");
+		
+		const double solMass = 1.98892E+30d;
+		double mass = (double)EntityAPI.GetPropertyValue(entityID, "mass");
+		mass = Math.Round (mass / solMass, 2);
+		string massText = mass.ToString() + " Sol masses";
+		bodyST.Add ("mass", massText);
+		float density = (float)EntityAPI.GetPropertyValue(entityID, "density");
+		string densityText = density.ToString() + " kg/m3";
+		bodyST.Add ("density", densityText);
+		float diameter = (float)EntityAPI.GetPropertyValue(entityID, "diameter");
+		float radius = diameter * 0.5f / 1000f;
+		string radiusText = radius.ToString() + " km";
+		bodyST.Add ("radius", radiusText);
+		float surfaceGravity = (float)EntityAPI.GetPropertyValue(entityID, "surfacegravity");
+		string surfaceGravityText = surfaceGravity.ToString() + " m/s^2 (" + "x Earth)";
+		bodyST.Add ("surfacegravity", surfaceGravityText);
+		
+		bodyST.Add ("escapevelocity", "617.6 km/s");
+		
+		int temperature = (int)EntityAPI.GetPropertyValue(entityID, "temperature");
+		bodyST.Add ("surfacetemperature", temperature.ToString() + " Kelvin");
+		
+		bodyST.Add ("surfaceradiation","950,000 REM");
+		
+		pageST.Add("title", "Component Page");
+		pageST.Add("body", bodyST);
+		
+		// TODO: figure out what goes into the sqlite DB and what is in XML
+		// TODO: if the DB contains just the info we've "sensed" then instead of EntityAPI.GetPropertyValue()
+		//       we should use a sql query to get any info.
+		
+		
+		
+		// TODO: Get the list of worlds that orbit the star
+		
+		// TODO: Get companion stars
+		
+		// TODO: Get list of artificial satellites and vehicles in orbit ("contacts")
+		
+		// TODO: Generate a policy on XML properties vs DB fields
+		//		- should XML properties always exist along with DB fields? 
+		//		- do we utilize GetProperties() and SetProperties() as per usual only change the data store?
+		//			just as how we use Get/SetProperties() for sending over the wire
+		//		- what about when we want properties from the DB and not the XML such as in case of client sensor scan data being limited?
+		//		- when sending over the wire, how do we know if the data should be saved to client DB and not just/
+		//		stored in the XML SetProperties()?
+		//		- flags for which properties the user can retreive based on a given scan type and scan accuracy
+		//		  (in multiplayer, each user has their own properties they have access to)
+		
+		// - generate galaxy 
+		//		- create run-time client db
+		//		- star and world data added to "server" sqlite db
+		// 		- other procedural data for biosphere, life forms, minerals, economies etc
+		
+
+		// add satellites table 
+		Template satellitesTableST = group.GetInstanceOf("satellites_table");
+		
+		var satellitesArray = new[] { 
+			new { ID = "Mercury", Type = "4", OrbitalRadius = "1", Mass = "10" }, 
+			new { ID = "Venus", Type = "1", OrbitalRadius = "2", Mass = "11" }
+		};
+		
+		satellitesTableST.Add ("satellites", satellitesArray);
+		
+		bodyST.Add ("satellites", satellitesTableST);
+		
+		
+		return pageST.Render();		
+		
+
+	}
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			case "addtask":
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - " + name);
+				break;
+			case "edittask":
+				break;
+			case "surveystar":
+				break;
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+	
+	#region Rules
+	private static bool Rule_ReadOnly (string entityID, object[] args)
+	{
+		return false; 
+	}
+	
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		return !string.IsNullOrEmpty(description);		
+	}
+	
+	public static bool Validate (string entityID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+				
+			// runtime properties
+			case "enableflare":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}
+	#endregion
+
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}	
+	#endregion
+	
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+		System.Diagnostics.Debug.WriteLine ("OnCustomPropertyChanged ()" + index.ToString());
+		
+		switch (index)
+		{
+
+			// here when we change a custom property inside of this custompropertychanged event
+			// it will trigger this event again. Is that ok?  
+			// That could result in potentially a infinite loop if 2 properties end up changing each other.
+			// Alternatively, if we gain a reference to the array of PropertySpecs, I think then we can directly
+			// modify a property without triggering any event.
+			
+			// I think ideally, we only want to trigger the event to the script when the property change occurred
+			// by the user, not by the script itself.
+			// I think easiest way to do this is when calling thru this EntityAPI, we know it's a script
+			// so we should pass with option to disable OnPropertyChanged event call
+			case 0: // description
+			
+				Settings.PropertySpec[] properties = EntityAPI.GetCustomProperties(entityID, false);
+				properties[1].DefaultValue = 9000; // this does not work.  setting a value on the DomainObject 
+				                                   // is not correct.  It must be set on the Entity's custompropertyvalues var.
+				
+				// update the mass of the star? 
+				// but this means script can modify custom properties of an entity client side and it pre-supposes that
+				// the client and server scripts will be identical... why shouldn't it though?  I think it's fine.
+				// afterall this is after the property change has been validated.
+				EntityAPI.SetCustomPropertyValue(entityID, "mass", 90000);
+				break;
+			default:
+				break;
+		}
+	}
+
+	#region Build statistics
+	public static void BuildUpdate (string domainObjectID)
+	{
+		
+		// todo: reconfigure the star's properties upon change of width and other parameters?
+		// I don't think we will support in 1.0 because it requires too much to change when it comes to
+		// habital zones changing and planets being out of position and possibly being consumed by the star
+		
+		
+	}	
+	#endregion
+	
+	
+	
+	#region Production
+	public static Production[] Production_Update (string entityID, double elapsedSeconds)
+	{
+		return null;
+	}
+	
+	public static Production[] Force_Production_Update (string entityID, double elapsedSeconds)
+	{
+		Production[] production = (Production[])EntityAPI.GetCustomPropertyValue (entityID, "production");
+		
+		if (production == null) return null;
+		
+		
+		// assign entityID, we could do this in InitializeEntity
+		production[0].SourceEntityID = entityID;
+		
+		
+		// you can talk about how this is the path of PC games before the visceral gaming era began
+		// but you can't prove that it was only a temporary path until you show it yourself and then
+		// the others will follow.. because they'll have to follow.  You give the player options and show them
+		// depth they havent seen, then they will expect more from the big players.  It's the indies job to push
+		// the gaming experience.   It's the same for all things, but in most industries, it's too difficult
+		// for a sole individual to demonstrate this change, all they can do is advocate it.  It's truely unfortunate.
+		// The patent laws are a big reason for this.
+		
+		// heat
+		
+		// EM interference
+		
+		// radiation
+		
+		// update the property value after modifications
+		EntityAPI.SetCustomPropertyValue (entityID, "production", production);
+		
+		return production;
+		
+				//  
+		
+		// gravity is tricky... it's something we want to EMIT, and not simply be stored and have to be
+		// retreived by something that is using it.  GRAVITY must get EMITTED.  So what is an emission?
+		// it's likely a sphere primitive, ray primitive, cone primitive, box primitive, cyllinder, etc.
+		// Transport/Distribution mechanism. These primitives are those mechanisms.  The other mechanism
+		// is a link via a diffusion grid.  supply chain.
+		// So 
+		// 
+		
+		// to cache consumers of a production, how?  and seperate lists of consumers for different
+		// products that are created by this entity? (eg gravity, heat, radiation, concussion damage, etc)
+		// I think that is per state info so it should be  cached in Entity.GetSubscribedConsumers (productID);
+		// Question is, can this be done automatically for us... meaning user doesnt directly subscribe
+		// instead they draw the links in the grid mask.  And perhaps in the case of ships for gravity and heat and such
+		// these transport/distribution emission volumes always exist and we track when a ship has entered or left them
+		// and then register/unregister them as consumers... that could save a TON of time!
+		// I think taht is a good idea.  The logic exists in the interior grid and in the emission volumes.
+		//  - but wait, does this mean an emission volume is in the scene or is it purely in the simulation side? no
+		// a scene node?
+		// - and then what about trigger volumes?  if an emission volume is not in scene but only in simulation
+		// then so should trigger volumes _OR_ vice versa.  So maybe a sub-entity exists that is the emission volume.
+		//  - but it couldn't actually be a real sub-entity as that would ruin the hierarchical bounding volume.  
+		//    It would need to be a sibling and invisible to rendering but visiible to simulation.
+		
+		// todo: rather than a single production, how about an array of produced things
+		// including gravity, heat, EM, etc so that we return them all in one call instead of
+		// having a single production callback for each type.
+		
+		// indeed, and i think if this is a production that uses a list of subscribers type of
+		// consumers, then we can add that to the production result.  
+		// the subscribers are easily cached in a custom private var.
+		
+		// interior cell wise, if something requires electricity and the grid mask
+		// is modified to create a link to an electricity generator, an event can fire
+		// in the producer that a consumer has been found.  This adds it.
+		// When the connection is broken by disbling of a tile or modifying of the grid mask
+		// the even in the producer fires that the consumer has been disconnected.
+	}
+	#endregion
+	
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		bool playing = (bool)EntityAPI.GetCustomPropertyValue (entityID, "animation_playing");
+		if (!playing)
+		{
+			AnimationAPI.Animation_Play(entityID, entityID + "_corona_animation", true);
+			EntityAPI.SetCustomPropertyValue (entityID, "animation_playing", true);
+		}
+		
+		// produce and add to store.  Built in stores are usually temporary
+		// and used only prior to dispersing to the consumers.
+		
+		
+		// Health has a max value, just as thrust has max value
+		// and power use has max value and all of those things can be computed.
+		
+		// However, it should be remembered that Health and Thrust and Power can ALL
+		// be modeled using Transmitters and Receivers or Consumers and Producers!  
+		// Repair() is the transmission of hitpoints 
+		// Damage() is a transmission that consumes hiptoints.
+		// This is critical for thinking about how methods are constructed for
+		// modifying these values on entities.  Or when trying to execute an action
+		// against them.  What we are really doing is starting a transmitter or production.
+		// 
+		// System.Diagnostics.Debug.WriteLine ("OnUpdate()");
+		// check custom flag to see if any of the build properties dirty?
+		// if so, re-compute build stats, then clear that flag
+		int flags;
+			
+		Settings.PropertySpec[] properties = EntityAPI.GetCustomProperties(entityID, false);
+		
+		// rotate NOTE: child entities should not inherit rotation
+		
+		// orbit // <-- uses an animation class now
+		
+		
+		// consume hydrogen
+		
+		// produce helium
+		
+		// configure stores
+		
+		// 
+		
+	}
+	
+	// todo: is this being called twice for each corona?!  We do not want that.  We could change things such
+	// that OnRender is only called by Entity and never by the sub-models... hrm...
+	public static void OnRender (string contextID, string entityID, string[] modelIDs, string shaderID, 
+								Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+		//System.Diagnostics.Debug.WriteLine ("OnRender()");	
+	
+		// check for occlusion of star
+				
+		//System.Diagnostics.Debug.WriteLine ("Context = " + contextID);
+		const float PERCENTAGE_SCREEN_WIDTH = 0.2f; 
+		
+		// are we too far away to render a flare?
+	    // get the direction and distance to the star
+		double distance;
+		Vector3d toStar = Vector3d.Normalize(cameraSpacePosition, out distance); // Vector3d.Normalize(cameraPosition - starPosition);
+		double max_flare_visible_range = 74799000000000d; // distance between sectors todo: use API to get this value
+		                                                  // todo: also scale our flare sizes by the distance ratio
+		if (distance > max_flare_visible_range) return;
+		
+		// compute flare positions for this viewport
+		int width = GraphicsAPI.GetViewportWidth(contextID);
+		//System.Diagnostics.Debug.WriteLine ("Width = " + width.ToString());
+		int height = GraphicsAPI.GetViewportHeight(contextID);
+		//System.Diagnostics.Debug.WriteLine ("Height = " + height.ToString());
+
+		Vector2f viewportCenter;
+		viewportCenter.x = width / 2f;
+		viewportCenter.y = height / 2f;
+		
+	    // Set the size of the flares depending on viewport size and a dot product
+        Vector3d normedLookAt = GraphicsAPI.GetCameraLook(contextID);
+        // System.Diagnostics.Debug.WriteLine ("Look = " + normedLookAt.ToString());
+
+
+    	Vector3d temp = GraphicsAPI.Project (contextID, toStar);
+		//if (temp.z < 0) return; // star is behind us. normally should not occur if culling works properly
+	    Vector2f starPosition2D;
+		starPosition2D.x = (float)temp.x;
+		starPosition2D.y = (float)temp.y;
+    	  
+	    
+		// note: domain object scripts are shared...
+		// http://answers.unity3d.com/questions/17649/fade-between-textures-in-the-same-script.html
+		var hexflare = EntityAPI.GetCustomPropertyValue(entityID, "hexflare");
+		var circleflare = EntityAPI.GetCustomPropertyValue(entityID, "circleflare");
+		var rainbowcircleflare = EntityAPI.GetCustomPropertyValue(entityID, "rainbowcircleflare");
+		
+		if (hexflare == null) return;
+		if (string.IsNullOrEmpty((string)hexflare)) return;
+		
+		int color = 1;
+
+		// glow
+//		VisualFXAPI.DrawTexturedQuad(Core._CoreClient.Globals.GetTex("Glow"),
+//      _sun2DPos.x - _sunHalfFlareSize, _sun2DPos.y - _sunHalfFlareSize,
+//      _sun2DPos.x + _sunHalfFlareSize, _sun2DPos.y + _sunHalfFlareSize,
+//      color, color, color, color);
+
+		// rays
+//		color = Core._CoreClient.Globals.RGBA(0.05f, 0.05f, 0.05f, 1f);
+//      VisualFXAPI.DrawTexturedQuad(Core._CoreClient.Globals.GetTex("Rays"),
+//      _sun2DPos.x - _sunHalfFlareSize*2f, _sun2DPos.y - _sunHalfFlareSize*2f,
+//      _sun2DPos.x + _sunHalfFlareSize*2f, _sun2DPos.y + _sunHalfFlareSize*2f,
+//      color, color, color, color);
+
+		Vector3d billboardNormal = -normedLookAt;
+       	float dotProduct = (float)Vector3d.DotProduct(billboardNormal, toStar);
+		if (dotProduct > 0) return; // we are not facing the star billboard
+		
+       	int halfFlareSize = (int)(width * PERCENTAGE_SCREEN_WIDTH * (dotProduct * dotProduct * dotProduct));
+
+    	Vector2f flareVector = starPosition2D - viewportCenter;
+		
+		// hexaflare 1
+		VisualFXAPI.DrawTexturedQuad (contextID, hexflare.ToString(), 
+		starPosition2D.x + flareVector.x * -0.25f,
+		starPosition2D.y + flareVector.y * -0.25f,
+		halfFlareSize * 0.5f, 
+		halfFlareSize * 0.5f,
+        0.0f, true); //, SecondaryAlpha);
+
+		// hexaflare 2
+		VisualFXAPI.DrawTexturedQuad (contextID, hexflare.ToString(), 
+		starPosition2D.x + flareVector.x * -0.5f,
+		starPosition2D.y + flareVector.y * -0.5f,
+		halfFlareSize * 0.9f, 
+		halfFlareSize * 0.9f,
+        1.3f, true); //, SecondaryAlpha);
+
+		// hexaflare 3
+		VisualFXAPI.DrawTexturedQuad (contextID, hexflare.ToString(), 
+		starPosition2D.x + flareVector.x * -0.7f,
+		starPosition2D.y + flareVector.y * -0.7f,
+		halfFlareSize * 0.1f, 
+		halfFlareSize * 0.1f,
+        0.5f, true); //, SecondaryAlpha);
+
+		// hexaflare 4
+		VisualFXAPI.DrawTexturedQuad (contextID, hexflare.ToString(), 
+		starPosition2D.x + flareVector.x * -1.25f,
+		starPosition2D.y + flareVector.y * -1.25f,
+		halfFlareSize, 
+		halfFlareSize,
+        2.75f, true); //, SecondaryAlpha);
+
+//      SecondaryColor = .4f; // Math.Max(1 - DistanceFactor, 0) / 1.5f;
+//      SecondaryAlpha =VisualFXAPI.RGBA(SecondaryColor, SecondaryColor, SecondaryColor, 1);
+
+		// circle flare 1
+//		VisualFXAPI.DrawTexturedRotatedQuad (contextID, circleflare.ToString(), 
+//      starPosition2D.x + flareVector.x * 0.25f,
+//      starPosition2D.y + flareVector.y * 0.25f, 
+//      halfFlareSize * 4,
+	//  halfFlareSize * 4, 
+	  //0, SecondaryAlpha);
+	    
+		// hexaflare 5
+		//VisualFXAPI.DrawTexturedRotatedQuad (contextID, hexflare.ToString(), 
+//      starPosition2D.x + flareVector.x * 0.5f,
+//      starPosition2D.y + flareVector.y * 0.5f, 
+//      halfFlareSize * 1.5f,
+//      halfFlareSize * 1.5f, 
+//      2, SecondaryAlpha);
+
+		// circle flare 2
+		//VisualFXAPI.DrawTexturedRotatedQuad (contextID, circleflare.ToString(), 
+//      starPosition2D.x + flareVector.x * -1,
+//      starPosition2D.y + flareVector.y * -1, 
+//      halfFlareSize * 1.4f,
+//      halfFlareSize * 1.4f,
+//      0, SecondaryAlpha);
+
+		// circle flare 3
+		// VisualFXAPI.DrawTexturedRotatedQuad (contextID, circleflare.ToString(), 
+//      starPosition2D.x + flareVector.x * -2.25f,
+//      starPosition2D.y + flareVector.y * -2.25f, 
+//      halfFlareSize * 3.5f,
+//      halfFlareSize * 3.5f,
+//      0, SecondaryAlpha);
+
+		// rainbow circle flare 1
+		// VisualFXAPI.DrawTexturedRotatedQuad (contextID, rainbowcircleflare.ToString(), 
+//      starPosition2D.x + flareVector.x * -3,
+//      starPosition2D.y + flareVector.y * -3, 
+//      halfFlareSize * 7,
+//      halfFlareSize * 7, 
+//      0, SecondaryAlpha);                
+
+	}	
+}

@@ -1,0 +1,57 @@
+pre, code, kbd, samp, tt { font-family: monospace; *font-size: 108%; line-height: 100%; }
+
+body { font: 13px/1.231 arial,helvetica,clean,sans-serif; *font-size: small; *font: x-small; }
+
+
+div.overall {}
+div.heading {
+    margin-right:143px;  
+    width: 50%; }
+
+div.info {margin-left:128; width: 50%; }
+
+div.info li {
+    list-style: none;
+    position: relative;
+}
+div.info h3 {
+    text-align:center;
+    position: relative;
+}
+span.value{
+    white-space:nowrap;
+    text-align:right;
+    width: 142px;
+    position: absolute;
+    right: 0;
+}
+!- # nested div's aren't parsed correctly by htmlrenderer-!
+div.columns{
+    margin:9px 9px 0 9px;
+    padding:0;
+    background:#FFF;}
+  #level0 {
+    background:#FC0;}
+  #level1 {
+    margin-left:143px;
+    padding-left:9px;
+    background:#FFF;}
+  #level2 {
+    background:#FFF3AC;}
+  #componenticon  {
+    float:left;
+    width:127px;}
+  #main {
+    background:#CCC;}
+
+li{
+    list-style: none;
+    position: relative;
+}
+
+.yui3-g { letter-spacing: -0.31em; *letter-spacing: normal; word-spacing: -0.43em; }
+
+.yui3-u, .yui3-u-1, .yui3-u-1-2 { display: inline-block; zoom: 1; *display: inline; letter-spacing: normal; word-spacing: normal; vertical-align: top; }
+
+.yui3-u-1 { display: block; }
+.yui3-u-1-2 { width: 50%; }

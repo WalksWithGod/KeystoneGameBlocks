@@ -1,0 +1,28 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'SmartTreesMiddle.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Leaves2
+Ka 0.317647 0.345098 0.203922
+Kd 0.317647 0.345098 0.203922
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd SmartTreesMiddle_Textures/Leaves2.PNG
+
+newmtl Vegetation_Bark_Ponderosa
+Ka 0.619608 0.454902 0.392157
+Kd 0.619608 0.454902 0.392157
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd SmartTreesMiddle_Textures/Vegetation_Bark_Ponderosa.PNG
+
+#EOF

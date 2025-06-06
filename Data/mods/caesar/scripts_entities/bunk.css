@@ -1,0 +1,118 @@
+using System;
+using Game01;
+using Keystone.Types;
+using Keystone.CSG;
+using KeyScript;
+using KeyCommon.Simulation;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class GenericComponent : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		string category = "Misc"; //"public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[1];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category,(object)"bunk");
+
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+				
+		// create a test rule using an inline delegate rule
+		//EntityAPI.AddRule (domainObjectID, "description", 
+		//	new SimpleRule("Name cannot be empty.", 
+		//	delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+		
+		EntityAPI.AddRule (domainObjectID, "description", new SimpleRule(1, Rule_Description));				
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{
+		//EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.AutoGenerateFootprint, true);
+		
+	}
+	
+	#region Rules
+	
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we get the value from the args where we know for property rules the value is first and only argument
+		string description = (string)args[0];  
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+	}
+	#endregion
+
+	public static object Register(string entityID, string parentID)
+	{
+		// make modifications 
+		// this method gets called when restoring components from saved xml and not just during initial asset placement.
+		// this means we can perform an auto-tile test here? but then how does our asset placement preview get the correct sub-model to render?
+		return entityID;
+	}
+	
+	public static object UnRegister (string entityID, string parentID)
+	{
+
+		return entityID;
+
+	}
+	
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}
+		
+	// todo: where do we return a bool indicating whether placement is valid?  I cant just hardcode
+	// within Interior validity checking reqts for all component types?
+	// a Validate function needs to be added to this script and for it to be called by the Interior during assetplacement and during
+	// restore from saved file.
+	public static Vector3d[] QueryCellPlacement (string entityID, string interiorID, Vector3d position, byte cellRotation)
+	{
+		const double TO_DEGREES = 360d / 256d;
+		Vector3d scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+		
+		
+		rotation.x = 0;
+		rotation.y = (double)(cellRotation * TO_DEGREES);
+		rotation.z = 0;
+				
+		// tile location is basically x, z pixel coordinate with y as floor level
+		// we need to convert this to a celledRegion relative coordinate which will give us
+		// a 3D position that represents the CENTER of that tile (not the top/left corner)
+		//position = EntityAPI.CellMap_GetTilePosition3D(interiorID, tileLocation);
+		Vector3d size = EntityAPI.CellMap_GetTileSize (interiorID);
+		
+		// assuming this generic component has it's Y position at floor (not centered in it's bbox)
+		// then we need to lower position.y we return to be on the floor of the cell.		
+		double floorHeight = position.y - (size.y * 0.5);
+		position.y = floorHeight;
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation}; 
+	}
+	
+	#endregion
+
+	#region Build statistics
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+		switch (index)
+		{
+			default:
+				break;
+		}
+	}
+	#endregion
+}
+

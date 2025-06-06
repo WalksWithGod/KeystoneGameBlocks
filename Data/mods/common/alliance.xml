@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <section name="alliance members">
+      <key name="American" display="American" value="45" type="System.Int32" />
+      <key name="French" display="French" value="5" type="System.Int32" />
+	  <key name="German" display="German" value="5" type="System.Int32" />
+	  <key name="Russian" display="Russian" value="5" type="System.Int32" />
+	  <key name="Italian" display="Italian" value="5" type="System.Int32" />
+	  <key name="Spanish" display="Spanish" value="5" type="System.Int32" />
+	  <key name="African" display="African" value="5" type="System.Int32" />
+	  <key name="Arab" display="Arab" value="5" type="System.Int32" />
+	  <key name="Turkish" display="Turkish" value="5" type="System.Int32" />
+	  <key name="Japanese" display="Japanese" value="5" type="System.Int32" />
+	  <key name="Chinese" display="Chinese" value="5" type="System.Int32" />
+	  <key name="Korean" display="Korean" value="5" type="System.Int32" />
+   </section>
+</configuration>

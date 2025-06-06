@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Model cullmode="0" modelflags="14" boundingbox="-30.9287567138672,-14.7638072967529,-48.9327964782715,28.1263618469238,14.7638053894043,49.4924011230469" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="da36c7f2-f420-4d70-ad8a-7b4aa8de5aac">
+    <Mesh3d ref="caesar\meshes\vehicles\test_hull.obj" />
+    <DefaultAppearance ref="f54a050a-e4ea-4a30-853d-b0378bace1f0" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.754133999347687,-0.481525987386703,-0.427249997854233,0.757166028022766,0.496374011039734,0.432206004858017" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="5e9991ba-11df-4534-aecb-77cfe2b57164">
+    <Mesh3d ref="caesar\meshes\crew_stations\console_1970_a.obj" />
+    <DefaultAppearance ref="e202bd5f-15b0-44e8-a0de-4d73bb91b284" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.754133999347687,-0.481525987386703,-0.427249997854233,0.757166028022766,0.496374011039734,0.432206004858017" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="d8ca1762-ae19-4251-ad98-cce4efd54b3b">
+    <Mesh3d ref="caesar\meshes\crew_stations\console_1970_a.obj" />
+    <DefaultAppearance ref="d22c845d-89f2-4107-b1df-630ecd42ebd3" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.346533000469208,0.00925800018012524,-0.326463013887405,0.3456169962883,0.999657988548279,0.32557401061058" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="dc5618b5-8035-431a-ae17-acf1298ce697">
+    <Mesh3d ref="caesar\entities\accommodations\station_chair.obj" />
+    <DefaultAppearance ref="5a6863de-95b2-4dc8-8f9c-088e7a2352b9" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-20.4272956848145,-0.958211839199066,-5.79067850112915,20.0124320983887,69.1402053833008,9.61957836151123" position="0,0,0" scale="0.025,0.025,0.025" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="89b9b044-c1c4-481b-bd62-ea14f21f179d">
+    <Actor3d ref="caesar\actors\AIKO.TVA" />
+    <DefaultAppearance ref="dce4a2b8-5345-43ef-a91c-673e40dff726" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-18.8216648101807,-1.34528720378876,-8.90412712097168,18.2465438842773,72.8671951293945,9.10158252716064" position="0,0,0" scale="0.027,0.027,0.027" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="5d3e161e-a4ed-4540-aacd-e9b1f6a97493">
+    <Actor3d ref="caesar\actors\Colonel-X.X" />
+    <DefaultAppearance ref="f741b9e8-fea0-4a01-8085-6e7d63300aec" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-18.8216648101807,-1.34528720378876,-8.90412712097168,18.2465438842773,72.8671951293945,9.10158252716064" position="0,0,0" scale="0.027,0.027,0.027" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="72661de2-58c9-4bd3-bf5d-6d3be7731b07">
+    <Actor3d ref="caesar\actors\Colonel-X.X" />
+    <DefaultAppearance ref="2ee52ccb-f504-4101-88c9-c571f599644a" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-21.3761329650879,0.364313006401062,-20.9318580627441,21.443904876709,9.30324172973633,21.2376480102539" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="701fc9f7-8282-466a-bc17-d04e74704a4e">
+    <Mesh3d ref="caesar\meshes\vehicles\test_turret.obj" />
+    <DefaultAppearance ref="32fca205-8f52-4c77-a668-6aa304c8a857" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-2.8549530506134,0.104005999863148,-2.74730706214905,2.94725298881531,1.31667494773865,3.0549008846283" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="ebe1ccf2-107c-48b4-87ec-8c079894dc1a">
+    <Mesh3d ref="caesar\meshes\exterior\sensor.obj" />
+    <DefaultAppearance ref="97bbd781-089e-4e38-b042-1647b83e6d0e" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.918115973472595,2.45125389099121,0.505568981170654,3.01889204978943,6.32845878601074,66.8320159912109" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="46345faf-fe89-432e-aa73-30fc73cc10f8">
+    <Mesh3d ref="caesar\meshes\vehicles\test_turret_barrel.obj" />
+    <DefaultAppearance ref="4a1c8b16-6dfc-4519-a936-2e93d148a4c2" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.5,0,-0.5,0.5,1,1" position="0,0,0" scale="3.25807675349437,419.294149198875,1" rotation="0.706733551352529,0,0,-0.707479814123797" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="1bad0051-2a61-4595-b2d8-f812c4f4d8dd">
+    <Billboard ref="pbillboard_2_1_1_False" />
+    <DefaultAppearance ref="98dc77dd-3267-4cc3-aaba-c08ad0680ad0" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="8630dfc0-cf9b-42ca-990f-3be6168e6f95">
+    <Model ref="4ff9ab62-0148-4aa9-b26b-6da68a14ce28" />
+    <Model ref="08ff6e8b-49eb-4cfe-8f1e-740d19394545" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="4ff9ab62-0148-4aa9-b26b-6da68a14ce28">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="c3be1f05-0bdd-4c9c-9bf7-77450dd3a10a" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="08ff6e8b-49eb-4cfe-8f1e-740d19394545">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="a6a5b4b5-f869-4bba-b199-762ef3128bf0" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="fbaaeffa-da1d-485d-b8cf-473292e54eff">
+    <Model ref="93a29a00-53d7-4096-84b6-9c41db9fb070" />
+    <Model ref="690509fc-c57c-4934-9da5-79705608590b" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="93a29a00-53d7-4096-84b6-9c41db9fb070">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="db4f4465-e7ad-4cf7-ad82-8b9fcc6acc7b" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="690509fc-c57c-4934-9da5-79705608590b">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="6f022fd3-da94-4f2a-afb3-e60a34ae7b4d" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="1d057789-a37f-47aa-9533-2c6903774eaa">
+    <Model ref="fe0ad0df-003b-4b03-85bb-1f9f7e7df46e" />
+    <Model ref="1823b1b2-2a6b-4950-8900-832166f12c72" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="fe0ad0df-003b-4b03-85bb-1f9f7e7df46e">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="07e7a30c-1626-46d5-bdec-21c27632329d" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="1823b1b2-2a6b-4950-8900-832166f12c72">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="9b2380a0-e3ae-4a33-9036-599907a28b80" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="39073bc6-96b1-45c8-802b-c07d9f4c3bac">
+    <Model ref="4ccab882-80ee-47ee-a09b-3aa84a246b95" />
+    <Model ref="e9147670-ba64-41bd-af43-070f45cfb65b" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="4ccab882-80ee-47ee-a09b-3aa84a246b95">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="a7f34639-283f-497e-8f8e-c47b238f6d97" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="e9147670-ba64-41bd-af43-070f45cfb65b">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="21a36fd3-ea02-4f9f-a5b9-4391019e8c76" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="7fe6b7d9-df5e-4852-b43d-32164419311b">
+    <Model ref="ce40fb36-7532-4925-8987-d6cd4141292b" />
+    <Model ref="9541e0cf-bfec-417a-8059-ab6a9285bcf4" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="ce40fb36-7532-4925-8987-d6cd4141292b">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="bc920033-3c38-44cb-8a27-3b9ca4a7d2e2" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="9541e0cf-bfec-417a-8059-ab6a9285bcf4">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="e9f98103-23e1-4b57-9def-9c70738ea07c" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="e3cbb20e-bc31-4b28-ace4-79fea7eff404">
+    <Model ref="f05c6d6f-1e96-4709-b76f-da17ed08e25f" />
+    <Model ref="7a8c9b78-2922-46b8-b8d3-b07b34dbc894" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="f05c6d6f-1e96-4709-b76f-da17ed08e25f">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="bd4b91c1-686e-4e8b-8bc2-843aa83869ed" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="7a8c9b78-2922-46b8-b8d3-b07b34dbc894">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="4ae2547b-2ace-4c4e-b6f8-4d79abd6c502" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="9834aeea-3a58-46af-bcd1-b7b20a4b753d">
+    <Model ref="3cafdea3-ec0f-492b-b3b5-e0dcc5fbf5d0" />
+    <Model ref="c8115de3-fc76-4598-8491-e40837cf30ab" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="3cafdea3-ec0f-492b-b3b5-e0dcc5fbf5d0">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="6acadf00-0a09-4c30-9fa1-552da5e751f7" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="c8115de3-fc76-4598-8491-e40837cf30ab">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="da9bfae9-97bb-45b5-ac00-46f40a092699" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="1121fbc9-3428-4bbd-8bd1-74f77debe926">
+    <Model ref="2f992d97-7af2-49c2-a39c-3e76041eb488" />
+    <Model ref="229e0b1e-297c-49bb-ae06-36f9475fbcb1" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="2f992d97-7af2-49c2-a39c-3e76041eb488">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="59c88a54-3622-4f72-9f45-533190435ac3" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="229e0b1e-297c-49bb-ae06-36f9475fbcb1">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="cb86b741-ae9b-49ec-a7e1-c4aaed5f459e" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="7044b1bc-e625-412a-a78d-391ab3f4ed93">
+    <Model ref="3b14f3b3-27ab-4177-a411-5050e5f5a738" />
+    <Model ref="411d2e58-5a99-4405-89fc-13c7d812c6e1" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="3b14f3b3-27ab-4177-a411-5050e5f5a738">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="49e37013-c1ff-4763-9591-f2e4522417d0" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="411d2e58-5a99-4405-89fc-13c7d812c6e1">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="5472dba0-0e23-4efc-9b33-e5735660e867" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="b54db9fd-94d6-49de-be49-db6a8029d6e9">
+    <Model ref="588cc48c-bb55-44e8-8e70-3e72c725a9fa" />
+    <Model ref="75229045-5564-4250-b3de-bb17601ea8fe" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="588cc48c-bb55-44e8-8e70-3e72c725a9fa">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="591bcdb7-15d7-4006-86a4-62b24ce587a8" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="75229045-5564-4250-b3de-bb17601ea8fe">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="50033550-fb4c-4a57-b788-d80e39e21463" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="b1104f82-e581-47fc-9166-3f0897cdfc99">
+    <Model ref="02fc3361-efba-4caf-8983-0ef298b13aac" />
+    <Model ref="95810c7f-3c0b-4f1c-855a-8dce12a0ac2f" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="02fc3361-efba-4caf-8983-0ef298b13aac">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="f055693d-ad99-4e33-b09e-e06f2dc14903" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="95810c7f-3c0b-4f1c-855a-8dce12a0ac2f">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="1bf83796-80b2-489f-98cb-9b79e315e496" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="50f97748-dca3-4447-bc93-58450a26119b">
+    <Model ref="859e50c7-f40d-4f0c-b50e-900456e27e26" />
+    <Model ref="b25e5122-6107-4695-9092-582d72b4482f" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="859e50c7-f40d-4f0c-b50e-900456e27e26">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="efd6190a-166d-4ec8-8395-537a0278d3ec" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="b25e5122-6107-4695-9092-582d72b4482f">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="fd2fc4ce-381a-4ae5-a5b4-e894387d81d4" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-30.9287567138672,-14.7638072967529,-48.9327964782715,28.1263618469238,14.7638053894043,49.4924011230469" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="00474f70-1d66-4216-b1cd-5b335fbbe716">
+    <Mesh3d ref="caesar\meshes\vehicles\test_hull.obj" />
+    <DefaultAppearance ref="cebd6728-9583-4518-ba61-8a68eedea432" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.754133999347687,-0.481525987386703,-0.427249997854233,0.757166028022766,0.496374011039734,0.432206004858017" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="21f79fcc-b408-4386-9765-751bfd2021ac">
+    <Mesh3d ref="caesar\meshes\crew_stations\console_1970_a.obj" />
+    <DefaultAppearance ref="b08f1b10-d636-4139-877a-b7d4789900e2" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.754133999347687,-0.481525987386703,-0.427249997854233,0.757166028022766,0.496374011039734,0.432206004858017" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="ea189189-2a77-401b-b7a8-6baeca115b5a">
+    <Mesh3d ref="caesar\meshes\crew_stations\console_1970_a.obj" />
+    <DefaultAppearance ref="3b95983a-7a98-43a2-939d-3d59f16ea41f" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.346533000469208,0.00925800018012524,-0.326463013887405,0.3456169962883,0.999657988548279,0.32557401061058" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="409288ae-1eb2-42c8-9b9d-7d7b2647f6d7">
+    <Mesh3d ref="caesar\entities\accommodations\station_chair.obj" />
+    <DefaultAppearance ref="3d309564-4a24-4922-bd8d-40e8aa50b9cb" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-20.4272956848145,-0.958211839199066,-5.79067850112915,20.0124320983887,69.1402053833008,9.61957836151123" position="0,0,0" scale="0.025,0.025,0.025" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="95aa9a6f-4f89-495c-a817-fcdae5780423">
+    <Actor3d ref="caesar\actors\AIKO.TVA" />
+    <DefaultAppearance ref="971c26b0-fc30-4903-93da-7fb39d87f984" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-18.8216648101807,-1.34528720378876,-8.90412712097168,18.2465438842773,72.8671951293945,9.10158252716064" position="0,0,0" scale="0.027,0.027,0.027" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="a58ab9ef-cc15-43e9-af6b-117e9bf4244b">
+    <Actor3d ref="caesar\actors\Colonel-X.X" />
+    <DefaultAppearance ref="a1abef36-3cc2-4ee7-9606-021ccac3a109" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-18.8216648101807,-1.34528720378876,-8.90412712097168,18.2465438842773,72.8671951293945,9.10158252716064" position="0,0,0" scale="0.027,0.027,0.027" rotation="0,1,0,6.12303176911189E-17" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="3a0924af-90f7-4305-9a42-b7f5e43e09c0">
+    <Actor3d ref="caesar\actors\Colonel-X.X" />
+    <DefaultAppearance ref="469bc6b6-dde0-4ea7-83b9-a06dce1668b0" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-21.3761329650879,0.364313006401062,-20.9318580627441,21.443904876709,9.30324172973633,21.2376480102539" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="6f47c9b5-1dc4-43c9-bff3-017e3b326a38">
+    <Mesh3d ref="caesar\meshes\vehicles\test_turret.obj" />
+    <DefaultAppearance ref="61431e0b-cb03-4ba3-94f2-5b62b018cf20" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-2.8549530506134,0.104005999863148,-2.74730706214905,2.94725298881531,1.31667494773865,3.0549008846283" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="9d8d7d89-e11e-4d8f-bb64-88730d89c16c">
+    <Mesh3d ref="caesar\meshes\exterior\sensor.obj" />
+    <DefaultAppearance ref="f7f38174-837e-4d0e-bce2-749131c7a29d" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.918115973472595,2.45125389099121,0.505568981170654,3.01889204978943,6.32845878601074,66.8320159912109" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="e9cd9113-e58b-4e10-98af-f7e5b3e0be0c">
+    <Mesh3d ref="caesar\meshes\vehicles\test_turret_barrel.obj" />
+    <DefaultAppearance ref="464bf170-83bc-46f7-8c2e-3e0c244937bb" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.5,0,-0.5,0.5,1,1" position="0,0,0" scale="3.25807675349437,419.294149198875,1" rotation="0.706733551352529,0,0,-0.707479814123797" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="22a09d43-1b95-46d3-88e4-c9421fcbc550">
+    <Billboard ref="pbillboard_2_1_1_False" />
+    <DefaultAppearance ref="ed43f658-f5a0-41a0-8dbf-0dc4180c2f0b" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="6c5d11ab-5b33-4e91-8fc8-e763289555b9">
+    <Model ref="b0c0a25b-1a98-43ec-b117-205dc91b6aea" />
+    <Model ref="5f0a1014-a0d0-4d1b-87e0-cee839313ba9" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="b0c0a25b-1a98-43ec-b117-205dc91b6aea">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="67bcbe38-2f26-458d-84c7-9b8040ac1b1e" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="5f0a1014-a0d0-4d1b-87e0-cee839313ba9">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="14f9715e-36ae-473c-9f38-b4d79a5ef8ad" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="85d85c57-8e38-4026-b6f7-4813fd779106">
+    <Model ref="5e8153e3-8031-4ac9-992e-3406f180f97a" />
+    <Model ref="07ff62ce-8931-46ef-84ed-1bd1c1041ef5" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="5e8153e3-8031-4ac9-992e-3406f180f97a">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="1f40fcd0-998d-47c1-9ce7-e15bbec6f6ce" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="07ff62ce-8931-46ef-84ed-1bd1c1041ef5">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="0cc39c56-79cf-4197-9bb1-6c316f54dc94" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="cad989b3-e89f-46bb-acbb-b6a906737599">
+    <Model ref="78bf04b9-9ed7-4f63-8970-ede6de4f17a6" />
+    <Model ref="75e163e4-3a32-4acf-8e16-4e630c9b83b5" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="78bf04b9-9ed7-4f63-8970-ede6de4f17a6">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="ba0125bb-b1f2-4025-9c28-33a46f0efdc6" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="75e163e4-3a32-4acf-8e16-4e630c9b83b5">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="af62bee1-64d7-47ca-b86b-7aeae3ffab61" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="0e4307a2-c16e-4c23-9db2-3e38c56cdaaa">
+    <Model ref="acabf44e-87eb-49bd-b7ff-ea7e0e292e9e" />
+    <Model ref="ebd71782-b681-403e-88e9-d11d0c465864" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="acabf44e-87eb-49bd-b7ff-ea7e0e292e9e">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="585fb137-d8bc-48bc-a64e-4d5f944762f2" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="ebd71782-b681-403e-88e9-d11d0c465864">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="b778f95f-a8ed-4bbb-af4e-a9604396619a" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="eb9a61c3-533b-4c17-b317-33c483235580">
+    <Model ref="23f72b00-7105-4ecc-859e-7dd93021bf22" />
+    <Model ref="618381df-95e1-4cf6-8aa9-a3367ef66b9d" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="23f72b00-7105-4ecc-859e-7dd93021bf22">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="7fba6f3b-be8a-4ea5-aa54-5510aba1073d" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="618381df-95e1-4cf6-8aa9-a3367ef66b9d">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="8d499f38-23cc-4155-b0a5-6b140773ebd3" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="00ac0c79-7b10-42da-a60e-db9cb884d5ab">
+    <Model ref="2c68bd49-b3d0-4119-9473-feee4f2bad4b" />
+    <Model ref="5c578bac-1958-4298-9468-8a98453f0753" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="2c68bd49-b3d0-4119-9473-feee4f2bad4b">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="69aaf839-685b-43bd-93ff-f240409a7ec3" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="5c578bac-1958-4298-9468-8a98453f0753">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="95f0a7ca-dba2-4a76-9811-09a0eb4b56ae" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="14d49f1e-f357-416f-bc84-c559a0b75bdc">
+    <Model ref="ad50a05e-044d-49f9-8356-b86cab8de0df" />
+    <Model ref="e3d7d310-1897-40ef-b5c1-fa71c5c26c24" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="ad50a05e-044d-49f9-8356-b86cab8de0df">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="1ebd24f4-41be-4013-baf0-ec25fcad3010" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="e3d7d310-1897-40ef-b5c1-fa71c5c26c24">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="a8cf4785-78b0-47ed-889d-cf6bd6be6b03" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="e58a33bc-db9d-4e3e-a415-262873ac24c1">
+    <Model ref="8226ea8b-aab8-47c3-824c-f047b6b151b3" />
+    <Model ref="83ea53e4-9e27-4db1-9040-bbd5a0d04442" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="8226ea8b-aab8-47c3-824c-f047b6b151b3">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="b627a7ef-63fa-4f36-907f-c9252154df6a" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="83ea53e4-9e27-4db1-9040-bbd5a0d04442">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="3f1a9c03-3339-4937-8e29-73c562bdb15f" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="debc9bb4-6ef3-421e-af8b-17c2f8f1320e">
+    <Model ref="350cadd4-740a-4b18-8b80-af0abc592a7b" />
+    <Model ref="2fa87b4b-30de-4bba-ab63-bfa1e9d1d1f7" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="350cadd4-740a-4b18-8b80-af0abc592a7b">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="ef46d8ee-effc-4dfd-a91d-75c616984037" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="2fa87b4b-30de-4bba-ab63-bfa1e9d1d1f7">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="5fed42bc-e175-4f01-ad70-34da0736737e" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="e9d7c96b-ff39-4a4a-b04d-201bb4a540da">
+    <Model ref="ace3a08c-ce03-411d-a2c8-f7bdc445e021" />
+    <Model ref="b861c886-c371-4eeb-a967-bdbab98afc8c" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="ace3a08c-ce03-411d-a2c8-f7bdc445e021">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="7d85b0ea-5e93-4d22-a9c4-4cdbab899ffc" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="b861c886-c371-4eeb-a967-bdbab98afc8c">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="ebd1e1b7-1521-4f13-9ea0-755a568680e1" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="8247e1ed-fd04-4f54-a8f4-43143c76cefc">
+    <Model ref="c001c5bc-c3a4-4609-98bc-93924f086cd6" />
+    <Model ref="ecf2a327-e6a7-44ee-9358-d1096e6c0781" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="c001c5bc-c3a4-4609-98bc-93924f086cd6">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="32a72c11-57f9-4fab-a1b2-72f6b77dc6e1" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="ecf2a327-e6a7-44ee-9358-d1096e6c0781">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="fc633548-a412-48b4-b44a-2a3ce345f490" />
+  </Model>
+  <ModelSelector style="0" enabledchildren="0" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSELECTOR" id="fb2d547e-bc89-44ba-b507-6aacddac35e1">
+    <Model ref="89e4be20-14c9-478a-9d54-81cea1f41224" />
+    <Model ref="dd51752e-0414-4f9f-86be-831f8ebf6ba6" />
+  </ModelSelector>
+  <Model cullmode="0" modelflags="14" boundingbox="-1,-1,-1,1,1,1" position="0,0,0" scale="1,1,1" rotation="0.707106781186547,0,0,0.707106781186548" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="89e4be20-14c9-478a-9d54-81cea1f41224">
+    <Mesh3d ref="caesar\meshes\propulsion\thruster.obj" />
+    <DefaultAppearance ref="4f57d692-1db9-4488-8d81-0c1b2b04e4d9" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" position="0,0,0" scale="0.967598222087882,0.967598222087882,0.967598222087882" rotation="0.707106781186548,0,0,-0.707106781186547" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="2" name="exhaust_plume" id="dd51752e-0414-4f9f-86be-831f8ebf6ba6">
+    <Mesh3d ref="caesar\meshes\effects\plumes\Thrust2.obj" />
+    <DefaultAppearance ref="1b826c54-482b-4193-9882-6d2a68178397" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="-89936.0390625,-89929.921875,-89936.6015625,89993.75,89903.3828125,89853.5859375" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="c904ef92-9013-4cee-9bba-36c25e1002d5">
+    <Model ref="fc8a753f-e38c-464f-a56c-9b1c4312691f" />
+    <Model ref="ba0acbd5-ccae-4af7-8da4-cedcc5ec362c" />
+    <Model ref="dcfd412c-9aff-4bd1-8040-2be7d216d490" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="-89936.0390625,-89905.859375,-89936.6015625,89993.75,89903.3828125,89853.5859375" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="fc8a753f-e38c-464f-a56c-9b1c4312691f">
+    <DefaultAppearance ref="93d0051f-60f3-4554-a1d2-abd198f5078b" />
+    <Mesh3d ref="caesar\meshes\pointsprites\starfield0.tvm" />
+  </Model>
+  <Model cullmode="0" modelflags="12" boundingbox="-89888.6953125,-89929.921875,-89389.7890625,89945.8359375,89743.4609375,89384.3671875" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="ba0acbd5-ccae-4af7-8da4-cedcc5ec362c">
+    <DefaultAppearance ref="467d4903-1799-455b-8fd8-c45097968a6f" />
+    <Mesh3d ref="caesar\meshes\pointsprites\starfield1.tvm" />
+  </Model>
+  <Model cullmode="0" modelflags="12" boundingbox="-89918.5234375,-79063.1640625,-89202.078125,89353.21875,89767.09375,89175.21875" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODEL" id="dcfd412c-9aff-4bd1-8040-2be7d216d490">
+    <DefaultAppearance ref="3dc85392-d572-4965-9e90-661a224d1ee5" />
+    <Mesh3d ref="caesar\meshes\pointsprites\starfield2.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="696000000,696000000,696000000" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="51c27e4a-e6c7-49a5-adff-97ec183663a9">
+    <Model ref="98c839d8-3c24-4d16-a690-6c72dbcffd79" />
+    <Model ref="4b3be393-5786-4ba7-ab77-9689acaf04e9" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="corona1" id="98c839d8-3c24-4d16-a690-6c72dbcffd79">
+    <DefaultAppearance ref="8516f364-5eda-46c6-9c8e-e2938de724b1" />
+    <Billboard ref="pbillboard_2_11.31371_11.31371_True" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="corona2" id="4b3be393-5786-4ba7-ab77-9689acaf04e9">
+    <DefaultAppearance ref="6b89be19-b2b9-43e6-ac3d-e2da961c5b42" />
+    <Billboard ref="pbillboard_2_11.31371_11.31371_True" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="244,244,244" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_4de44d24-31bf-425a-b57d-59d99caa944d">
+    <Model ref="51966a39-25f7-440f-af1d-1f90f0e3cdc4" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Mercury_world" id="51966a39-25f7-440f-af1d-1f90f0e3cdc4">
+    <DefaultAppearance ref="8523027a-0904-4383-8694-e979d9ecd2c4" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="6051800,6051800,6051800" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_00cb6b57-3b49-4bef-9e6a-721452cc9ee5">
+    <Model ref="47cef205-a16f-45d4-92f2-708dc6423493" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Venus_world" id="47cef205-a16f-45d4-92f2-708dc6423493">
+    <DefaultAppearance ref="60dc1891-aa53-4e52-a44d-a047d2a82123" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="6378150,6378150,6378150" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_81d76357-9ef4-4a84-95f1-9129912986f8">
+    <Model ref="41418dd7-2444-4039-b38f-d907a20bb189" />
+    <Model ref="9a481d0e-7413-4b7b-a9df-1eb1b5afce95" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Earth_world" id="41418dd7-2444-4039-b38f-d907a20bb189">
+    <DefaultAppearance ref="0ad7f152-861f-4efe-b0b1-665470b7e9bc" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1.08,1.08,1.08" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Earth_atmosphere" id="9a481d0e-7413-4b7b-a9df-1eb1b5afce95">
+    <Mesh3d ref="psphere_1_150_150_256" />
+    <DefaultAppearance ref="61f57556-f0c9-4b22-8959-62839733a803" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1738000,1738000,1738000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_c2dcf074-a230-45b8-b26c-5f2bd7f3a5d0">
+    <Model ref="e3a213a9-d547-4367-8ab1-6dd19d08a1d5" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Moon_world" id="e3a213a9-d547-4367-8ab1-6dd19d08a1d5">
+    <DefaultAppearance ref="62f97a42-97e1-441c-b573-a33d01c31732" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="3397000,3397000,3397000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_9087f825-7a50-4967-aff4-a8b8cecdd7c0">
+    <Model ref="3100c100-38b5-48cb-af5d-faf695662695" />
+    <Model ref="6086d36b-62dd-4bb7-8aec-5ad2f226ccbb" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Mars_world" id="3100c100-38b5-48cb-af5d-faf695662695">
+    <DefaultAppearance ref="da787d6c-5174-4448-a046-81798094427e" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1.08,1.08,1.08" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Mars_atmosphere" id="6086d36b-62dd-4bb7-8aec-5ad2f226ccbb">
+    <Mesh3d ref="psphere_1_150_150_256" />
+    <DefaultAppearance ref="0e8dcdfb-9f85-444e-b717-b87dc2193352" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="71422,71422,71422" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_17d563c4-d65a-4710-8988-d204bbd6bd5a">
+    <Model ref="412b94f2-825a-4507-987d-0e11d65b5be6" />
+    <Model ref="df4346da-35ca-4b63-874e-87629f51aa4c" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Jupiter_world" id="412b94f2-825a-4507-987d-0e11d65b5be6">
+    <DefaultAppearance ref="fc2616ea-701c-41d7-bb23-8dd59b883fdc" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Jupiter_rings" id="df4346da-35ca-4b63-874e-87629f51aa4c">
+    <DefaultAppearance ref="922271cc-481c-4c1e-b67a-448c5b654e35" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1833000,1833000,1833000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_ea6730ae-fc73-45f4-9c21-fb714cbb7645">
+    <Model ref="53928e8d-6fce-41ad-b8ee-6853d405cf2e" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Io_world" id="53928e8d-6fce-41ad-b8ee-6853d405cf2e">
+    <DefaultAppearance ref="6103f8dd-2092-48ee-aaa9-7eb6db97857b" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1560800,1560800,1560800" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_6528a9f4-0a5d-4b62-b44f-8cacde96827e">
+    <Model ref="0eed1bae-de88-4b9f-af2a-333bb48d183c" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Europa_world" id="0eed1bae-de88-4b9f-af2a-333bb48d183c">
+    <DefaultAppearance ref="675fc481-746e-40fe-93c9-9e0bbdf6bef0" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="2631200,2631200,2631200" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_cf6efce9-6d99-4da8-96e0-96561aff8393">
+    <Model ref="fbc6331a-c6c7-45ff-8758-340d463ea66d" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Ganymede_world" id="fbc6331a-c6c7-45ff-8758-340d463ea66d">
+    <DefaultAppearance ref="e15da468-6d52-497c-ba37-c05a1f5481bf" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="2410300,2410300,2410300" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_World_ec2e3d6b-96fb-49f4-8cd9-bb9b95bb97af">
+    <Model ref="d50d2369-21c5-4810-b7c3-0a9843a45299" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Callisto_world" id="d50d2369-21c5-4810-b7c3-0a9843a45299">
+    <DefaultAppearance ref="a134a4b0-4c63-4def-b865-eb3b37644522" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="60268000,60268000,60268000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_f56a63ec-38bc-4169-9af7-8f8d3a75034c">
+    <Model ref="25be3b09-eb5c-46cb-8ec1-a0957d17135e" />
+    <Model ref="4de86e70-c2dd-4150-bfdc-8e46b21101b5" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Saturn_world" id="25be3b09-eb5c-46cb-8ec1-a0957d17135e">
+    <DefaultAppearance ref="b6cafe34-959b-4d32-bfe8-15483fb0cb5c" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Saturn_rings" id="4de86e70-c2dd-4150-bfdc-8e46b21101b5">
+    <DefaultAppearance ref="58a7e7e5-e5cb-4e09-85bf-a1faa7616beb" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="25559000,25559000,25559000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_6a33d5ef-fe2e-48b8-a12d-d17c6a9a0d0c">
+    <Model ref="07456c64-63bd-4a2f-85dd-cfd8f8f3a623" />
+    <Model ref="b635f427-d96d-465f-9fac-fd0e76e358e2" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uranus_world" id="07456c64-63bd-4a2f-85dd-cfd8f8f3a623">
+    <DefaultAppearance ref="1278d5f2-6bd9-44ea-b765-3a53867826ce" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Uranus_rings" id="b635f427-d96d-465f-9fac-fd0e76e358e2">
+    <DefaultAppearance ref="a847f790-3d4c-4de4-88c5-d5ae4336e634" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="24766000,24766000,24766000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_e60dc3f2-c204-4e63-822e-98ddda2ef7b0">
+    <Model ref="3bcc30b2-5363-49c2-a112-b7b417c44d8a" />
+    <Model ref="38f75c52-04c7-4d06-939a-b648d7d3fcd2" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Neptune_world" id="3bcc30b2-5363-49c2-a112-b7b417c44d8a">
+    <DefaultAppearance ref="88a037a6-16b0-4d3e-a358-6e4e1a244ac3" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1.55,1.55,1.55" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Neptune_rings" id="38f75c52-04c7-4d06-939a-b648d7d3fcd2">
+    <DefaultAppearance ref="51dde3ce-7f29-4dfe-8223-8ac875b0de63" />
+    <Mesh3d ref="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1137000,1137000,1137000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_0b35bbd9-7597-43e4-bf2f-a82cdef9779e">
+    <Model ref="00f47fa8-9ce3-45ef-b7e5-20ccd3cfe6d4" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Pluto_world" id="00f47fa8-9ce3-45ef-b7e5-20ccd3cfe6d4">
+    <DefaultAppearance ref="1cb45cb7-3389-466e-96ba-9563ba2811ff" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+  <ModelSequence style="0" enabledchildren="0" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1163000,1163000,1163000" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="MODELSEQUENCE" id="sequence_for_Star_21dcf7ae-b2c6-4ab4-85d1-6581054116f8">
+    <Model ref="38179b82-bc1e-4d57-8964-85573b4a7c20" />
+  </ModelSequence>
+  <Model cullmode="0" modelflags="14" boundingbox="1.70141173319264E+38,1.70141173319264E+38,1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38,-1.70141173319264E+38" position="0,0,0" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="False" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="Eris_world" id="38179b82-bc1e-4d57-8964-85573b4a7c20">
+    <DefaultAppearance ref="537f4d92-cbe8-4472-a63e-3504adaf8c41" />
+    <Mesh3d ref="psphere_1_150_150_19" />
+  </Model>
+</root>

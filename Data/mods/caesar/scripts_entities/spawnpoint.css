@@ -1,0 +1,269 @@
+using System;
+using Game01;
+using Game01.GameObjects;
+
+using KeyCommon.Simulation;  // todo: these should be in KeyGame where KeyGame is NOT referenced by Keystone.dll
+
+using Keystone.Types;
+using Keystone.Extensions;
+using Keystone.CSG;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class SpawnPoint : BaseScript
+{
+	public static void Initialize(string scriptID)
+	{
+		// todo: how does the server (loopback) know that this Entity is to be updated by it and
+		//       not the client?
+		// todo: do i need to keep track of the entities spawned by a particular
+		//       spawn point so that we can only spawn again when / if that particular entity is destroyed?
+		// todo: are there things we want to spawn and automatically destroy after a certain lifetime and then
+		//       spawn again?
+		// todo: well, the loopback knows when 
+		// todo: what if i want to load random custom property values for various spawned Entities?
+		//       
+			
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[18];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category,(object)"spawn point");
+		properties[1] = new PropertySpec("state", typeof(string).Name, category, (object)"idle"); //idle, spawning, spawn completed 
+		properties[2] = new PropertySpec("trigger", typeof(string).Name, category, (object)"on start"); // on start, on pickup
+		properties[3] = new PropertySpec("interval", typeof(int).Name, category, 300); // seconds
+		properties[4] = new PropertySpec("random interval", typeof(bool).Name, category, false);
+		properties[5] = new PropertySpec("min interval", typeof(int).Name, category, 200);
+		properties[6] = new PropertySpec("max interval", typeof(int).Name, category, 400); 
+		properties[7] = new PropertySpec("max count", typeof(int).Name, category, 1); // -1 == infinite
+		properties[8] = new PropertySpec("current count", typeof(int).Name, category, 0);
+		properties[9] = new PropertySpec("random name", typeof(bool).Name, category, false);
+		properties[10] = new PropertySpec("entity name", typeof(string).Name, category, (object)"USS Yorktown");
+		
+		properties[11] = new PropertySpec("region", typeof(string).Name, category, (object)"Zone 0,0,0"); 
+		properties[12] = new PropertySpec("prefabs", typeof(string[]).Name, category, new string[]{"caesar\\entities\\vehicles\\yorktown.kgbentity", "caesar\\entities\\vehicles\\test3.kgbentity"}); 
+		properties[13] = new PropertySpec("random prefab", typeof(bool).Name, category, false);
+		properties[14] = new PropertySpec("shape", typeof(string).Name, category,(object) "point"); // point, box, sphere
+		properties[15] = new PropertySpec("size", typeof(Vector3d).Name, category, Vector3d.Zero()); 
+		properties[16] = new PropertySpec("radius", typeof(double).Name, category, 0); 
+		properties[17] = new PropertySpec("translation", typeof(Vector3d).Name, category, Vector3d.Zero());
+
+			
+		// add the properties to the script
+		EntityAPI.AddCustomProperties(scriptID, properties);
+				
+		
+		EntityAPI.AddRule (scriptID, "description", new SimpleRule(1, Rule_Description));
+
+		EntityAPI.AddRule (scriptID, "range", new SimpleRule(3, Rule_MinimumRange));
+		EntityAPI.AddRule (scriptID, "tech level", new SimpleRule(3, Rule_MinimumTL));
+		
+		// read only property rules
+		EntityAPI.AddRule (scriptID, "cost", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "weight", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "volume", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "surface area", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "hitpoints", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "damage", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "fuel usage", new SimpleRule(2, Rule_ReadOnly));
+
+
+	}
+
+	public static void InitializeEntity(string entityID)
+	{
+		KeyCommon.Data.UserData data = new KeyCommon.Data.UserData(); 
+		
+		data.SetDouble("last_spawn_elapsed", 0);
+		data.SetDouble ("random_interval_selected", 0d);
+
+		
+		EntityAPI.SetAIBlackboardData(entityID, data);
+		
+		EntityAPI.SetCustomPropertyValue(entityID, "trigger", (object)"on start");
+	}
+	
+	public static void UnInitializeEntity(string entityID)
+	{
+
+		
+	}
+	
+	#region Rules
+	private static bool Rule_ReadOnly (string entityID, object[] args)
+	{
+		return false; 
+	}
+	
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we get the value from the args where we know for property rules the value is first and only argument
+		string description = (string)args[0];  
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+	}
+	
+	private static bool Rule_MinimumTL (string entityID, object[] args)
+	{		
+		// we get the value from the args where we know for property rules the value is first and only argument
+		int techlevel = (int)args[0];
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_MinimumTL'.  Testing value '" + techlevel.ToString() + "'");
+		return techlevel >= 8;
+	}
+	
+	private static bool Rule_MinimumRange(string entityID, object[] args)
+	{
+		double range = (double)args[0];
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_MinimumRange'.  Testing value '" + range.ToString() + "'");
+		return range >= 0.0;
+	}
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "turnon":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}
+	#endregion
+
+	public static object Register(string entityID, string parentID)
+	{
+		// make modifications 
+
+
+		return entityID;
+	}
+	
+	public static object UnRegister (string entityID, string parentID)
+	{
+
+		// unregister production and consumption
+		return entityID;
+
+	}
+	
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}
+	
+	public static Vector3d[] QueryCellPlacement (string entityID, string interiorID, Vector3d position, byte cellRotation)
+	{
+		
+		Vector3d dummy = new Vector3d(1,1,1);
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {dummy, dummy, dummy}; 
+	}
+	
+	#endregion
+
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+	
+		// when a build property changes, run BuildUpdate() to recompute statS?
+		// Not exactly.  We instead set a flag that the "stats" are dirty 
+		// this way future property changes dont result in multiple calls to update stats.
+		// 
+		switch (index)
+		{
+			case 0:
+			case 1:
+			case 2:
+				break;
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+				break;
+			default:
+				break;
+		}
+	}
+	
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		KeyCommon.Data.UserData data = EntityAPI.GetAIBlackboardData(entityID);
+		double elapsed = data.GetDouble("last_spawn_elapsed");
+		double currentInterval = data.GetDouble ("random_interval_selected");
+		
+		
+		string entityName = (string)EntityAPI.GetPropertyValue(entityID, "name");
+		//System.Diagnostics.Debug.WriteLine ("spawnpoint.cs.OnUpdate() - " + entityName);
+	
+		string state = (string)EntityAPI.GetCustomPropertyValue(entityID, "state");
+		string trigger = (string)EntityAPI.GetCustomPropertyValue(entityID, "trigger");
+		int currentCount = (int)EntityAPI.GetCustomPropertyValue(entityID, "current count");
+		int maxCount = (int)EntityAPI.GetCustomPropertyValue(entityID, "max count");
+		string[] prefabs = (string[])EntityAPI.GetCustomPropertyValue(entityID, "prefabs");
+		
+		bool spawnInitiated = false;
+		
+		if (state == "idle")
+		{
+			// todo: how do we know when the spawning is complete?
+			if (trigger == "on start")
+			{
+				if (currentCount == 0)
+				{
+					Vector3d translation = (Vector3d)EntityAPI.GetCustomPropertyValue(entityID, "translation");
+					string regionID = EntityAPI.GetParentID(entityID);
+					EntityAPI.Spawn(entityID, regionID, prefabs[1], translation);
+					spawnInitiated = true;
+				}
+				
+			}
+			
+			if (spawnInitiated)
+			{
+				EntityAPI.SetCustomPropertyValue(entityID, "state", (object)"spawning");
+				EntityAPI.SetCustomPropertyValue(entityID, "current count", currentCount + 1);
+			}
+		}
+		//double elapsed = (double)EntityAPI.GetCustomPropertyValue(entityID, "interval");
+		
+		
+		
+	}
+	
+	
+	#region Run-time
+	
+	
+	public static void OnRender (string contextID, string entityID, string[] modelIDs, string shaderID, 
+								 Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+	}
+	
+	#endregion
+}
+

@@ -1,0 +1,11 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v5.0.2255862537)
+
+newmtl Material__1
+Kd 1 1 1
+Ks 0.045000002 0.045000002 0.045000002
+Ke 0 0 0
+Ns 8
+illum 2
+map_Kd C:\WORK\FPS Creator\MAPS\texturebank\scifi\scenery\doors\door_c\door_c_D2.tga
+

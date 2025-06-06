@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-89979.5546875,-89990.8046875,-89990.203125,89975.5859375,89928.8671875,89976.203125" flags="7" name="starfield_4b47cf7d-9d5d-4af6-9efe-78004218afde" id="caesar\meshes\pointsprites\starfield0.tvm" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-89912.453125,-89588.5078125,-89408.125,89628.828125,89756.703125,88771.1484375" flags="7" name="starfield_219dc9de-a271-477d-aed8-ce1363fa406f" id="caesar\meshes\pointsprites\starfield1.tvm" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-89962,-84862.2265625,-88400.375,89646.28125,87574.0390625,86985.9453125" flags="7" name="starfield_d414cd23-0024-44b4-a775-e123fcb0476f" id="caesar\meshes\pointsprites\starfield2.tvm" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1,-1,-1,1,1,1" flags="7" name="MESH3D" id="psphere_1_150_150_19" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1,-1,-1,1,1,1" flags="7" name="MESH3D" id="psphere_1_150_150_256" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-4.99999952316284,0,-4.99999952316284,4.99999952316284,0.0999999940395355,4.99999952316284" flags="7" name="MESH3D" id="C:\Users\Michael\projects\KeystoneGameBlocks\data\mods\caesar\Meshes\worlds\ring.tvm" />
+</root>

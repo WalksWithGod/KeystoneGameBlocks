@@ -1,0 +1,39 @@
+<dotnetbarlayout version="6" zorder="10,9,2,1">
+  <docksite size="0" dockingside="Top" originaldocksitesize="0" />
+  <docksite size="300" dockingside="Bottom" originaldocksitesize="0">
+    <dockcontainer orientation="1" w="0" h="0">
+      <barcontainer w="1276" h="297">
+        <bar name="barRightDockBar" candockleft="true" candockright="true" candocktop="true" candockbottom="true" candockdoc="false" candocktab="true" text="dockContainerItem1" dockline="999" dockoffset="0" grabhandle="8" menubar="false" stretch="true" style="2" wrapdock="false" wrapfloat="true" state="2" dockside="4" visible="true" custom="true" canhide="false" imagesize="0" itemsp="0" themes="false" fontname="Microsoft Sans Serif" fontemsize="8.25" fontstyle="0" layout="2" eqbutton="false" showtab="true" seldocktab="0" autocaptionsync="true">
+          <items>
+            <item name="dockContainerItem1" origBar="" origPos="-1" pos="0" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </docksite>
+  <docksite size="358" dockingside="Left" originaldocksitesize="0">
+    <dockcontainer orientation="0" w="0" h="0">
+      <barcontainer w="355" h="338">
+        <bar name="barLeftDockBar" candockleft="true" candockright="true" candocktop="true" candockbottom="true" candockdoc="false" candocktab="true" text="Scene Explorer" dockline="-1" dockoffset="0" grabhandle="8" menubar="false" stretch="true" style="2" wrapdock="false" wrapfloat="true" state="2" dockside="1" visible="true" custom="true" canhide="false" imagesize="0" itemsp="0" themes="false" fontname="Microsoft Sans Serif" fontemsize="8.25" fontstyle="0" layout="2" eqbutton="false" showtab="true" seldocktab="0" autocaptionsync="true">
+          <items>
+            <item name="dockContainerItemLeft" origBar="" origPos="-1" pos="0" />
+            <item name="dockContainerItemRight" origBar="" origPos="-1" pos="1" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </docksite>
+  <docksite size="0" dockingside="Right" originaldocksitesize="0" />
+  <documents>
+    <dockcontainer orientation="0" w="0" h="0">
+      <barcontainer w="918" h="338">
+        <bar name="barDocumentDockBar" dockline="0" layout="2" dockoffset="0" state="2" dockside="5" fpos="751,552,128,128" visible="true" seldocktab="0">
+          <items>
+            <item name="docDock0" origBar="" origPos="-1" pos="0" />
+          </items>
+        </bar>
+      </barcontainer>
+    </dockcontainer>
+  </documents>
+  <bars />
+</dotnetbarlayout>

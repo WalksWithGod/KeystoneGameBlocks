@@ -1,0 +1,443 @@
+using System;
+using Game01;
+using Game01.GameObjects;
+using Keystone.Types;
+using Keystone.CSG;
+using KeyScript;
+using KeyCommon.Simulation;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class Turret : BaseScript
+{
+	public static void Initialize(string scriptID)
+	{
+		string category = "Misc"; //"public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[20];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category,(object)"turret");
+
+		category = "operations";
+		// weapon entity name = "weapon barrel" which we can search for descendant by name
+		
+		// tactical station (find by name of descendants of parent.Interior)
+		
+		
+		category = "private variables";
+		//[Header("Rotations")]
+
+        //[Tooltip("Transform of the turret's azimuthal rotations.")]
+        //[SerializeField] private Transform turretBase = null;
+
+        //[Tooltip("Transform of the turret's elevation rotations. ")]
+        //[SerializeField] private Transform barrels = null;
+
+        properties[1] = new PropertySpec("elevationSpeed", typeof(float).Name, category, 30f);
+        properties[2] = new PropertySpec("maxElevation", typeof(float).Name, category, 60f);
+		properties[3] = new PropertySpec("maxDepression", typeof(float).Name, category, 5f);
+		
+
+		// Speed at which the turret can rotate left/right.
+        properties[4] = new PropertySpec("traverseSpeed", typeof(float).Name, category, 60f);
+        properties[5] = new PropertySpec("leftLimit", typeof(float).Name, category, 120f);
+		properties[6] = new PropertySpec("rightLimit", typeof(float).Name, category, 120f);
+		// When true, the turret can only rotate horizontally with the given limits.
+		properties[7] = new PropertySpec("hasLimitedTraverse", typeof(bool).Name, category, false);
+
+        // When idle, the turret does not aim at anything and simply points forwards.
+		properties[8] = new PropertySpec("isIdle", typeof(bool).Name, category, true);
+		properties[9] = new PropertySpec("isTurretAtRest", typeof(bool).Name, category, true);
+
+        // Position the turret will aim at when not idle. Set this to whatever you want the turret to actively aim at.
+        properties[10] = new PropertySpec("aimPosition", typeof(Vector3d).Name, category, new Vector3d(0.0d, 0.0d, 0.0d));
+		properties[11] = new PropertySpec("targetID", typeof(string).Name, category, null);
+		
+        // When the turret is within this many degrees of the target, it is considered aimed.
+        properties[12] = new PropertySpec("aimedThreshold", typeof(float).Name, category, 5f);
+		properties[13] = new PropertySpec("limitedTraversalAngle", typeof(float).Name, category, 0f);
+	
+		properties[14] = new PropertySpec("angleToTarget", typeof(float).Name, category, 0f);
+		properties[15] = new PropertySpec("elevation", typeof(float).Name, category, 0f);
+
+		properties[16] = new PropertySpec("hasBarrels", typeof(bool).Name, category, false);
+		properties[17] = new PropertySpec("isAimed", typeof(bool).Name, category, false);
+		properties[18] = new PropertySpec("isBaseAtRest", typeof(bool).Name, category, false);
+		properties[19] = new PropertySpec("isBarrelAtRest", typeof(bool).Name, category, false);
+		
+		
+		// projectile[] (kinetic object or energy bolt or beam)
+		// todo: do we make the projectile a sub-model of the turret entity that we can enable/disable?
+		// 		 engine plumes are sub-models of the engine.
+		//       the main issue would be we may want multiple projectiles active from a given turret at once.
+		
+		// todo: can we model the Entity projectile and assign a billboard mesh3d with appearance?
+		// todo: a laser beam can perhaps consist of 3 parts. A beam, a muzzle flash, a pointlight at the muzzle 
+		//       the beam and muzzle flash can have a vibration animation just like the engine plumes
+		// todo: the beam may be offset a bit from the spawn point so as not to interfere with the muzzle flash billboard
+		//       Actually, it would be better for a PRIMITIVE type be set where the origin and end points are can be specified when the mesh3d is created and then moved on the fly.
+		// todo: we need to make sure the boundingbox is updated properly so the laser is visible even when the turret itself is not.
+		
+		// for the laser itself a bool Active and double ActiveTime perhaps so we can remove it from the scene and cache it for re-use
+		
+
+		
+		// todo: we may want to mesh.SetVertex() for the quad billboard's endpoints so that the origin if offset
+		//       to align with the muzzle position.
+		// todo: perhaps we can use an Vector3d offset to apply to the vertices?
+		//       NOTE: the endpoint should stop at a collision location and not travel through the target.
+		
+		// impact particle system (maybe the damage consumption of the ship can produce these)
+		
+		// spawnpoint - model space position of the tip of the barrel where we will spawn projectiles and energy beams
+		//	 todo: should spawnpoint be an Entity attached to the tip of the barrel?
+		
+		// target
+		
+		// bool isFiring 
+		
+		// burstcount - the number of projectiles in burst mode
+		
+		// todo: for recoilanimation it can be triggered onfiring and that animation will push the turret back and then gradually forward again.
+		
+		// double fireDuration // milliseconds that it will last such as for a beam weapon. most projectiles have 0 duration
+		
+		// rateoffire/cooldown - milliseconds between shots. (should this be managed by tactical station?)
+		
+		// add the properties to the entity's script object
+		EntityAPI.AddCustomProperties(scriptID, properties);
+				
+		// create a test rule using an inline delegate rule
+		//EntityAPI.AddRule (scriptID, "description", 
+		//	new SimpleRule("Name cannot be empty.", 
+		//	delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+		
+		EntityAPI.AddRule (scriptID, "description", new SimpleRule(1, Rule_Description));				
+	}
+	
+	/// <summary>
+    /// True when the turret is idle and at its resting position.
+    /// </summary>
+    public static bool IsTurretAtRest (string entityID)
+	{ 
+		bool isBarrelAtRest = (bool)EntityAPI.GetCustomPropertyValue(entityID, "isBarrelAtRest");
+		bool isBaseAtRest = (bool)EntityAPI.GetCustomPropertyValue(entityID, "isBaseAtRest");
+		return isBarrelAtRest && isBaseAtRest; 
+	} 
+
+    /// <summary>
+    /// Angle in degress to the given <see cref="AimPosition"/>. When the turret is idle,
+    /// the angle reports 999.
+    /// </summary>
+    public static float AngleToTarget (string entityID) 
+	{ 
+		bool isIdle = (bool)EntityAPI.GetCustomPropertyValue(entityID, "isIdle");
+		// todo: if there is no target, we should return to rest rotation
+		float angleToTarget = (float)EntityAPI.GetCustomPropertyValue(entityID, "angleToTarget");
+		return isIdle ? 999f : angleToTarget; 
+	}
+		
+		
+	public static void InitializeEntity(string entityID)
+	{
+		//EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.AutoGenerateFootprint, true);
+		
+	}
+	
+	#region Rules
+	
+	private static bool Rule_Description(string entityID, object[] args)
+	{
+		// we get the value from the args where we know for property rules the value is first and only argument
+		string description = (string)args[0];  
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+	}
+	#endregion
+
+	public static object Register(string entityID, string parentID)
+	{
+		// make modifications 
+		// this method gets called when restoring components from saved xml and not just during initial asset placement.
+		// this means we can perform an auto-tile test here? but then how does our asset placement preview get the correct sub-model to render?
+		return entityID;
+	}
+	
+	public static object UnRegister (string entityID, string parentID)
+	{
+
+		return entityID;
+
+	}
+	
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}
+	
+	// todo: where do we return a bool indicating whether placement is valid?  I cant just hardcode
+	// within Interior validity checking reqts for all component types?
+	// a Validate function needs to be added to this script and for it to be called by the Interior during assetplacement and during
+	// restore from saved file.
+	public static Vector3d[] QueryCellPlacement (string entityID, string interiorID, Vector3d position, byte cellRotation)
+	{
+		const double TO_DEGREES = 360d / 256d;
+		Vector3d scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+		
+		
+		rotation.x = 0;
+		rotation.y = (double)(cellRotation * TO_DEGREES);
+		rotation.z = 0;
+				
+		// tile location is basically x, z pixel coordinate with y as floor level
+		// we need to convert this to a celledRegion relative coordinate which will give us
+		// a 3D position that represents the CENTER of that tile (not the top/left corner)
+		//position = EntityAPI.CellMap_GetTilePosition3D(interiorID, tileLocation);
+		Vector3d size = EntityAPI.CellMap_GetTileSize (interiorID);
+		
+		// assuming this generic component has it's Y position at floor (not centered in it's bbox)
+		// then we need to lower position.y we return to be on the floor of the cell.		
+		double floorHeight = position.y - (size.y * 0.5);
+		position.y = floorHeight;
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation}; 
+	}
+	
+	#endregion
+
+	#region Build statistics
+	
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+		switch (index)
+		{
+			default:
+				break;
+		}
+	}
+	#endregion
+	
+	// https://github.com/brihernandez/GunTurrets2 - MIT License
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		
+		// clear previously produced units from last tick
+		// produce
+		// retreive unit produced during previous tick
+		// run the consumer
+		
+		// if rotating, consume power
+		
+		// todo: i believe rotation and turret position need to be derived Region rotations and positions
+		Quaternion turretRotation = EntityAPI.GetRotationRegionSpace(entityID);
+		string targetID = (string)EntityAPI.GetCustomPropertyValue(entityID, "targetID");
+		bool isIdle = (bool)EntityAPI.GetCustomPropertyValue(entityID, "isIdle");
+		bool targetValid = EntityAPI.EntityValid(targetID);
+		
+		Vector3d aimPosition = Vector3d.Zero();
+		if (!targetValid)
+		{
+			// no need to clear it if it's already cleared
+			if (!string.IsNullOrEmpty(targetID))
+				EntityAPI.SetCustomPropertyValue(entityID,"targetID", null);
+			
+			isIdle = true;
+		}
+		else if (!string.IsNullOrEmpty(targetID))
+		{	
+			aimPosition = EntityAPI.GetPositionRegionSpace(targetID); // (Vector3d)EntityAPI.GetCustomPropertyValue(entityID, "aimPosition");
+			
+			isIdle = false;
+		}
+		// if no targetID rotate to neutral position.
+		// if we are already at neutral position, just return
+			
+		Vector3d turretPosition = (Vector3d)EntityAPI.GetPositionRegionSpace(entityID);
+		
+		bool isAimed = (bool)EntityAPI.GetCustomPropertyValue(entityID, "isAimed");;
+		//System.Diagnostics.Debug.WriteLine("Is Aimed = " + isAimed.ToString());
+		if (isIdle)
+		{
+			bool isTurretAtRest = (bool)EntityAPI.GetCustomPropertyValue(entityID, "isTurretAtRest");
+			//if (!isTurretAtRest)
+			//	RotateTurretToIdle();
+			isAimed = false;
+			//System.Diagnostics.Debug.WriteLine("Is Idle = " + isIdle.ToString());
+		}
+		else
+		{
+			turretRotation = RotateBaseToFaceTarget(turretRotation, turretPosition, aimPosition, elapsedSeconds);
+
+		//	if (hasBarrels)
+		//		RotateBarrelsToFaceTarget(aimPosition);
+
+			// Turret is considered "aimed" when it's pointed at the target.
+			float angleToTarget = GetTurretAngleToTarget(aimPosition, turretPosition, turretRotation);
+
+			// Turret is considered "aimed" when it's pointed at the target.
+			float aimedThreshold = (float)EntityAPI.GetCustomPropertyValue(entityID, "aimedThreshold");
+			isAimed = angleToTarget < aimedThreshold;
+			//System.Diagnostics.Debug.WriteLine("Angle to target == " + angleToTarget.ToString());
+			EntityAPI.SetCustomPropertyValue (entityID, "isBarrelAtRest", false);
+			EntityAPI.SetCustomPropertyValue (entityID, "isBaseAtRest", false);
+		 }
+			
+		EntityAPI.SetCustomPropertyValue (entityID, "isAimed", isAimed);
+		EntityAPI.SetRotationRegionSpace (entityID, turretRotation);
+		// read flag to determine if we have power
+		
+		// are we too damaged, if so set "breaker" = false
+		// is damage slowing down our speed 
+		// float damage = EntityAPI.GetCustomPropertyValue(entityID, "damage");
+		// float speed = EntityAPI.GetCustomPropertyValue(entityID, "speed");
+		
+		// read property if we're on
+		
+		
+		// FXAPI.Register( helper.computeexternalposition(entityID), vector3d offset, length, radius, color, etc);
+		
+
+		
+		// register / unregister sound 
+		// AudioAPI.Register(); // todo: like our hexalfares, can we set sound's paths in custom properties?
+		// 
+		
+		// are we destroyed and need to explode on the exterior and Interior of the ship?
+		
+		
+		// if the target is moving and our projectile is not moving at lightspeed (eg beam weapon) then lead the target
+		//string targetID = (string)EntityAPI.GetCustomPropertyValue(turretID, "targetID");
+		// Vector3d targetPosition = (Vector3d)EntityAPI.GetPropertyValue (targetID, "position");
+		
+		// rotate shortest distance to target at max available rotation angular speed
+		
+
+		
+		// rotate the barrel x (pitch) so that it points at the target location 
+		// NOTE: target can be a position on a World or asteroid, etc.
+		// Essentially what we need is a LookAt(target, speed); function.
+		//    I think the main trickyness is that it needs to take into account its world rotation and 
+		//    not just its local rotation, but we need to find the local rotation
+
+		// the turret can be polled by tactical to determine ifAimed=true 
+		
+	}
+	
+	 private static float GetTurretAngleToTarget(Vector3d targetPosition, Vector3d turretPosition, Quaternion turretRotation)
+	 {
+		 float angle = 999f; // degrees, not radians
+
+		// if (hasBarrels)
+		// {
+			// angle = (float)Vector3d.AngleBetweenVectors(targetPosition - barrels.position, barrels.forward);
+		// }
+		// else
+		// {
+			 Vector3d turretUp = turretRotation.Up();
+			 Vector3d flattenedTarget = (targetPosition - turretPosition).ProjectOnToPlane(turretUp);
+
+			//angle = (float)Vector3d.AngleBetweenVectors(flattenedTarget - turretPosition, turretRotation.Forward());
+			angle = (float)Vector3d.AngleBetweenVectors(targetPosition - turretPosition, turretRotation.Forward());
+		// }
+
+		 return angle * (float)Keystone.Utilities.MathHelper.RADIANS_TO_DEGREES;
+	 }
+
+	// private void RotateTurretToIdle()
+	// {
+		// // Rotate the base to its default position.
+		// if (hasLimitedTraverse)
+		// {
+			// limitedTraverseAngle = Mathf.MoveTowards(
+				// limitedTraverseAngle, 0f,
+				// TraverseSpeed * Time.deltaTime);
+
+			// if (Mathf.Abs(limitedTraverseAngle) > Mathf.Epsilon)
+				// turretBase.localEulerAngles = Vector3.up * limitedTraverseAngle;
+			// else
+				// isBaseAtRest = true;
+		// }
+		// else
+		// {
+			// turretBase.rotation = Quaternion.RotateTowards(
+				// turretBase.rotation,
+				// transform.rotation,
+				// TraverseSpeed * Time.deltaTime);
+
+			// isBaseAtRest = Mathf.Abs(turretBase.localEulerAngles.y) < Mathf.Epsilon;
+		// }
+
+		// if (hasBarrels)
+		// {
+			// elevation = Math.MoveTowards(elevation, 0f, ElevationSpeed * Time.deltaTime);
+			// if (Math.Abs(elevation) > Mathf.Epsilon)
+				// barrels.localEulerAngles = Vector3.right * -elevation;
+			// else
+				// isBarrelAtRest = true;
+		// }
+		// else // Barrels automatically at rest if there are no barrels.
+			// isBarrelAtRest = true;
+	// }
+
+	// private void RotateBarrelsToFaceTarget(Vector3d targetPosition)
+	// {
+		// Vector3d localTargetPos = turretBase.InverseTransformDirection(targetPosition - barrels.position);
+		// Vector3d flattenedVecForBarrels = Vector3d.ProjectOnPlane(localTargetPos, Vector3.up);
+
+		// float targetElevation = Vector3.Angle(flattenedVecForBarrels, localTargetPos);
+		// targetElevation *= Math.Sign(localTargetPos.y);
+
+		// targetElevation = Mathf.Clamp(targetElevation, -MaxDepression, MaxElevation);
+		// elevation = Mathf.MoveTowards(elevation, targetElevation, ElevationSpeed * Time.deltaTime);
+
+		// if (Math.Abs(elevation) > Mathf.Epsilon)
+			// barrels.localEulerAngles = Vector3.right * -elevation;
+
+	// }
+
+	private static Quaternion RotateBaseToFaceTarget(Quaternion turretRotation, Vector3d turretPosition, Vector3d targetPosition, double elapsedSeconds)
+	{
+		Quaternion result;
+		double TraverseSpeed = 15d;
+		
+		// todo: i think turretRotation.Up() needs to be taken from the derived rotation
+		Vector3d turretUp = turretRotation.Up();
+
+		Vector3d dir = targetPosition - turretPosition;
+		//dir = Vector3d.Normalize(dir);
+		// https://github.com/Unity-Technologies/UnityCsReference/blob/master/Runtime/Export/Math/Vector3.cs
+		Vector3d flattenedVecForBase = dir.ProjectOnToPlane(turretUp);
+
+		// if (hasLimitedTraverse)
+		// {
+			// Vector3d turretForward = turretRotation.Forward(); //transform.forward;
+			// double targetTraverse = Vector3d.SignedAngle(turretForward, flattenedVecForBase, turretUp);
+
+			// targetTraverse = Math.Clamp(targetTraverse, -LeftLimit, RightLimit);
+			// limitedTraverseAngle = Mathf.MoveTowards(
+				// limitedTraverseAngle,
+				// targetTraverse,
+				// TraverseSpeed * Time.deltaTime);
+
+			// if (Mathf.Abs(limitedTraverseAngle) > Math.Epsilon)
+				// turretBase.localEulerAngles = Vector3.up * limitedTraverseAngle;
+		// }
+		// else
+		// {
+			result = Quaternion.RotateTowards(
+				new Quaternion(turretRotation.Forward(), turretUp),
+				new Quaternion(flattenedVecForBase, turretUp),
+				TraverseSpeed * elapsedSeconds);
+		//}
+
+		return result;
+	}
+}
+

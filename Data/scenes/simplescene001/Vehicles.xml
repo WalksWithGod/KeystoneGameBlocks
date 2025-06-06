@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Vehicle fixedscreensize="0" entityflags="33554654" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\ship_ai_controlled.css" usertypeid="250" boundingbox="-27.9027501345679,-15.3212296024562,70.8377364848434,31.1523684262231,14.206383083701,169.262934086162" position="-22.5352747711479,0.547732415534391,117.688514898877" scale="1,1,1" rotation="0,5.81311416334772E-17,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VEHICLE" id="95700a49-afcf-4bf2-a6a2-7161a1189c29">
+    <Model ref="68fecd17-7d98-4542-bcd0-6d8e502a8414" />
+    <Interior ref="5618dc4a-7f87-4ed3-a9c2-d272842b884c" />
+    <ModeledEntity ref="eca10e06-aa99-4988-8720-8eeb05c446b1" />
+    <ModeledEntity ref="2dad12d3-d8af-4458-9290-c302e5fcf580" />
+    <ModeledEntity ref="e2f02d4a-0678-4aab-bc2e-c7dd30574470" />
+    <ModeledEntity ref="a72e322b-37de-4cb1-8d5c-081937c1d649" />
+    <ModeledEntity ref="17305744-8d98-4481-b22f-d9edcf426b6e" />
+    <ModeledEntity ref="7026939e-5e3d-4edd-bc2a-a6b5bc0863cd" />
+    <ModeledEntity ref="e929b5a1-c9f3-48af-9276-7992215daa69" />
+    <ModeledEntity ref="49f039a6-555b-45a2-851d-48517ca25a65" />
+    <ModeledEntity ref="9a873ba7-1bc4-4348-8abe-6d5e7a0bb3c8" />
+    <ModeledEntity ref="4be76cb7-15cf-4e88-b1fa-8f70274b2d88" />
+    <ModeledEntity ref="304a9d64-9c95-4c6e-9685-fb1ba9c4452f" />
+    <ModeledEntity ref="08d96c25-4aac-488f-a943-6f648b490e1b" />
+    <ModeledEntity ref="337387c3-81b2-4ead-a890-634a52fa5602" />
+    <Sequence ref="caesar\behaviors\vehicle_patrol.kgbbehavior" />
+  </Vehicle>
+</root>

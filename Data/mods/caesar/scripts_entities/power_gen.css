@@ -1,0 +1,794 @@
+using System;
+using Game01;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using Keystone.Types;
+using Keystone.CSG;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using KeyScript.Routes;
+using Settings;
+using Antlr4.StringTemplate;
+//using Antlr4.StringTemplate.Compiler;
+//using Antlr4.StringTemplate.Extensions;
+//using Antlr4.StringTemplate.Misc;
+
+public class PowerGenerator : BaseScript
+{
+	private struct ConsumerTest
+	{
+		public string ID;
+		public double Usage;
+		public float Regulator; // 0.0 - 1.0f
+		public float T1;
+		public bool Breaker;
+	}
+	
+	public static void Initialize(string scriptID)
+	{
+		// PROPERTIES
+		string category = "public properties";
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[18];
+		// name, type, category, default value
+		// name, type, category, description, default value, editor, converter
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "Fission Reactor");
+		category = "statistics";
+		properties[1] = new PropertySpec("output", typeof(double).Name, category, 0.0);
+		properties[2] = new PropertySpec("weight", typeof(double).Name, category, 0.0);
+		properties[3] = new PropertySpec("cost", typeof(double).Name, category, 0.0);
+		properties[4] = new PropertySpec("volume", typeof(double).Name, category, 0.0);
+		properties[5] = new PropertySpec("surfacearea", typeof(double).Name, category, 0.0);
+		properties[6] = new PropertySpec("hitpoints", typeof(int).Name, category, 0);
+		properties[7] = new PropertySpec("fuel usage", typeof(double).Name, category, 0.0);
+		properties[8] = new PropertySpec("damage", typeof(int).Name, category, 0); // hitpoints lost
+		// isConnected; // shows if the component has a connection to a fuel source of the correct fuel type
+		// 	- todo: we can show an icon above the component if it is fueled.
+		//    todo: how do we have the celledregion which owns the "link" entities notify a component that it
+		//          is connected or not?
+		category = "build";
+		properties[9] = new PropertySpec("fuel type", typeof(string).Name, category, "", "hydrogen", "", typeof (FissionRocketFuelTypeConverter).AssemblyQualifiedName);
+		
+		properties[10] = new PropertySpec("materials quality", typeof(string).Name, category, "", "", "", typeof (MaterialQualityConverter).AssemblyQualifiedName);
+		properties[11] = new PropertySpec("craftsmanship", typeof(string).Name, category, "", "", "", typeof (CraftsmanshipConverter).AssemblyQualifiedName);
+		properties[12] = new PropertySpec("tech level", typeof(int).Name, category, "", 7, "", typeof (TechLevelConverter).AssemblyQualifiedName);
+		
+		// build
+		// - scaleable, minScale, maxScale, scaleIncrement (eg 1/16 increments to match tiles per cell x and z) 
+		//   -AutoGenerateFootprintMask <-- autogenerate requires only one type of footprint mask for every tile
+		//    
+		// runtime
+		// - moveable, carryable, 
+		
+		category = "private variables";
+			
+		category= "operations";
+		properties[13] = new PropertySpec("breaker", typeof(bool).Name, category, false);
+		properties[14] = new PropertySpec("regulator", typeof(float).Name, category, 0.0f); // todo: a type convertor for 1.0 percentage throttle at .01 intervals max
+		// todo: ideally if we could create a list of repairable things under the "repair" category
+		//       then we could get repair-able properties and their etas, their supply cost, etc
+		properties[15] = new PropertySpec("repair", typeof(float).Name, category, 0.0f);
+		
+		category= "production"; // values are not serialized
+		// create array of products produced by this component.  
+		Production[] production = new Production[1];
+		production[0].ProductID = (uint)UserConstants.Product.Power;
+		production[0].UnitCount = 1; // infinite production can be distributed to all consumers with no regard for priority since there is enough to supply all relevant consumers.
+		// todo: how do we assign the distrution list if we are postponing PowerLink for v2.0?
+		production[0].DistributionMode = DistributionType.List; // PowerLink
+		// our FilterTest just needs to fit the signature
+		production[0].DistributionFilterFunc = FilterTest;
+		
+		properties[16] = new PropertySpec("production", typeof(Production[]).Name, category, production);
+		properties[16].IsSerializable = false;
+		
+		// list of products consumed by this component
+		properties[17] = new PropertySpec("consumption", typeof(uint[]).Name, category, new uint[]{(uint)UserConstants.Product.Fuel});
+		properties[17].IsSerializable = false;
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(scriptID, properties);
+
+		
+		// EXPLICIT EVENTS - events must be added after the custom properties have been added
+		EntityAPI.AddEvent (scriptID, "scale", new KeyScript.Events.PropertyChangedEvent("scale", Event_ScaleChanged));
+		EntityAPI.AddEvent (scriptID, "breaker", new KeyScript.Events.PropertyChangedEvent("breaker", Event_BreakerChanged));
+
+		
+		// RULES
+		// create a test rule using an inline delegate rule
+		//EntityAPI.AddRule (scriptID, "description", 
+		//	new SimpleRule("Name cannot be empty.", 
+		//	delegate {return ((string)properties[0].DefaultValue).Length != 0; }));		
+		EntityAPI.AddRule (scriptID, "description", new SimpleRule(1, Rule_Description));
+		// uses SI derived units, thus for output it is the "joule" 
+		// http://en.wikipedia.org/wiki/SI_derived_unit
+		
+		EntityAPI.AddRule (scriptID, "tech level", new SimpleRule(3, Rule_MinimumTL));
+		
+		// read only property rules
+		EntityAPI.AddRule (scriptID, "output", new SimpleRule(3, Rule_MinimumOutput));
+		EntityAPI.AddRule (scriptID, "cost", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "weight", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "volume", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "surface area", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "hitpoints", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "damage", new SimpleRule(2, Rule_ReadOnly));
+		EntityAPI.AddRule (scriptID, "fuel usage", new SimpleRule(2, Rule_ReadOnly));
+		
+		// set flag to allow this component to generate it's own footprint based on the
+		// shape of the model, or sequence or 1st in a selector.
+		//	- when this component is first loaded into the component editor, the footprint already should
+		//    be autogenerated. Perhaps by default all components use this and only when "override"
+		//    autogeneration do we use stored footprints?
+		
+		// create a test rule that uses the Validate script method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+		
+		// queryable mods
+		// assign values to specific "mod" properties that the celledregion will query
+		// to determine what modifications this domainobject will have on the parent.
+		// so for a celledregion parent, maybe it modifies the map layer
+		// for some other entity, maybe it modifies a crew members skill level.
+					
+		// regular production handler runs at seperate hz (possibly once per frame)
+		// todo: i think this should also pass a productID as well as have seperate
+		//       handlers for each productID.
+		EntityAPI.AssignProductionHandler(scriptID, (uint)UserConstants.Product.Power, Production_Power);
+
+		// add fuel consumption - todo: why didn't i name this AssignConsumptionHandler ?
+		// and is it even necessary as we can deduct fuel during regular Update() surely?
+		// or even if i have to create a FuelProduction from our internal store of fissionables
+		// we can then run the production handler for that which automatically handles consumption code too?
+		// the issue is that over time ive forgotten some of the specifics of the planned implementation...
+		// this is what happens when you have to write an entire project yourself, it's hard to keep the 
+		// specific details of the design of each different area all in focus and fresh at the same time.
+		// There is no fuel "production" there is just fuel "storage" and on whatever frequency "tick" we
+		// need to deduct from that "storage."
+		// todo: in the near term, ignore fuel availability and just produce power at each tick frequency.
+		EntityAPI.CreateConsumption(scriptID, "fuel", (uint)UserConstants.Product.Fuel, Consumption_Fuel);
+		
+		// create any stores.  Is this necessary?  The idea is that most production is emitted and used
+		// or lost.  But a store defines a place where production can be stored and then used later.
+		// A battery for example doesn't produce, but it can store production.
+		//EntityAPI.CreateStore(scriptID, productID, capacity);
+				
+		// crytek cryengine - local spawnParams = {};
+		//spawnParams.class = "BasicEntity";
+		//spawnParams.archetype=props.Archetype;
+		//spawnParams.name = self:GetName().."_spawnedentity_"..self.spawncount;
+		//spawnParams.flags = 0;
+		//spawnParams.orientation = {x=0,y=0,z=0};
+		//spawnParams.position=self:GetPos();
+		//spawnParams.scale = nil;
+		//local spawnedEntity = System.SpawnEntity(spawnParams);
+
+		// if this engine, spawns a "hardpoint" that is a specific entity
+		// and which this engine assigns itself as "owner", 
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+	
+		// Entity FLAGS (as opposed to Component flags) should be set here as they are per entity
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.ExplicitEvents, true);
+		// this can't be here because we often want to check footprint prior to placing the
+		// damn component and so OnAddedToParent never fires until AFTER we need the footprint flag set
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.AutoGenerateFootprint, true);
+		
+		EntityAPI.RegisterProduction(entityID, (uint)UserConstants.Product.Power);
+		
+		// here we do some per Entity modifications such as setting entity flags
+		// since Initialize() is done once per DomainObject instance.
+		// todo: however, sometimes we want flags set on entity before it's been added
+		// to the scene and that cant happen if we have to wait until OnAddedToParent
+			
+		// expose specific events and set a flag to not allow routes
+		// which are free-form wiring of fields.  
+		
+		// EVENTS
+		// normally any field can have a route assigned to it. This includes intrinsic entity fields
+		// but here, we're kind of creating half of one with the source entity and endpoint set
+		// This i think is wrong.  We dont want to create Routes because Routes should in reality be deserialized.
+		// Instead what we want is a way to flag a particular property as being routeable with the rest
+		// locked because we want users to take the engine prefab to only be able to route to the on/off
+		// event
+		
+		// when the "on" custom property changes, route that to any specified target
+		// but question here is, how do we serialize the target?  With "custom properties" we store
+		// values in a string and we restore them after the domain object is added to the entity.
+		// here i suspect we'd need something similar.  for every "event" that exists, we look for 
+		// the existance of a "route".  Perhaps a category "events" and a flag that says only
+		// explicit events allowed, and then saving a 'route' is done such that the list of routes
+		// is inherent entity property we serialize, but which we must check entity flag on explicity events
+		// before we allow the route to be instanced.
+		//EntityAPI.AddRoute (entityID, "on");	
+	}
+	public static void UnInitializeEntity(string entityID)
+	{
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.AutoGenerateFootprint, true);
+		
+		EntityAPI.UnRegisterProduction(entityID, (uint)UserConstants.Product.Power);
+		
+	}
+	
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		object propertyValue = EntityAPI.GetCustomPropertyValue(entityID, "description");
+		string name = null;
+		if (propertyValue != null)
+			name = (string)propertyValue;
+			
+		name = "Fission Reactor";
+			
+		//(string)EntityAPI.GetCustomPropertyValue(mTargetEntityID, "fuel type") + " " +
+							
+		// http://www.antlr.org/wiki/display/ST/Five+minute+Introduction
+		
+		// we can return different layouts depending on the state of the entity
+		// eg. if the entity is currently processing a task specified, we can show it as "working...."  or
+		//     and disable all of the other commands visually and prevent the links from being wired until
+		//     the state goes back to read...
+		
+		// \default\ <-- can be a country localization path? if so that needs to be retreived from API
+		// todo: need API functions for loading layouts\default\
+		// todo: need API functions for templating html
+
+		
+		// todo: if these templates are inside of a zip, i should be trying to load these templates via an API call
+		//       and not directly through file io commands in here.  The reason is, we have to first extractthem
+		//       to a temp dir or something in order to get stringtemplate to load them.
+		
+		string basePath = GameAPI.Path_GetDataPath();
+		// string dir = System.IO.Path.Combine (mHost.DataPath, "\\templates");
+		//NOTE: must use RawGroupDirectory if we just want straight template text with no type definition info required
+		TemplateRawGroupDirectory group = new TemplateRawGroupDirectory(System.IO.Path.Combine(basePath, @"mods\common\layouts\"), System.Text.Encoding.ASCII, '$', '$');
+	//    group.LoadGroupFile(prefix, System.IO.Path.Combine(basePath, @"mods\common\layouts\group_components.stg")); 
+	//    group.LoadTemplateFile(prefix, "component_page.st");
+	//    group.LoadTemplateFile(prefix, "power_gen_body.st");
+	//    group.LoadTemplateFile(prefix, "power_gen_consumers.st");
+	//    group.LoadTemplateFile(prefix, "power_gen_consumers_row.st");
+
+		// note: the problem with TemplateGroup (as opposed to GroupDirectory) is you cannot supply
+		// names to the templates you load.  Names are always based on a filename.
+		//TemplateGroup group = new TemplateGroup('$', '$');
+		//group.LoadGroupFile ("testgroup", System.IO.Path.Combine(basePath, @"mods\common\layouts")); 
+		
+		// these effectively re-read the file everytime and allows runtime modification
+		Template pageST = group.GetInstanceOf("component_page");
+		Template bodyST = group.GetInstanceOf("power_gen_body");
+		Template consumerListST = group.GetInstanceOf("power_gen_consumers");
+
+		// .Add cannot be done on compiled templates.  CompiledTemplates are effectively frozen so it makes sense!
+		bodyST.Add("componenttypename", name);
+		pageST.Add("title", "Component Page");
+		pageST.Add("body", bodyST);
+		
+		ConsumerTest[] consumerArray = null;
+		// get list of consumer device IDs (how do i differentiate between consumption of power
+		// versus consumption of explosion heat/concussion damage when the reactor is destroyed?
+		// well, that type of consumer is never added as a "linked" consumer.  Consumption of damage
+		// and such is done through Simulation and scripted production and consumption methods for those products.
+		object tmp = EntityAPI.GetCustomPropertyValue (entityID, "production");
+		if (tmp != null)
+		{
+			Production[] production = (Production[])tmp;
+			int productCount = production.Length;
+			if (productCount > 0)
+			{ 
+				for (int i = 0; i < productCount; i++)
+				{
+					int deviceCount = 0;
+					if (production[i].DistributionList == null)
+						continue;
+						
+					deviceCount = production[i].DistributionList.Length;
+						
+					consumerArray = new ConsumerTest[deviceCount];	
+					
+					// power consuming devices
+					double totalLoad = 0.0d;
+					for (int j = 0; j < deviceCount; j++)
+					{	
+						ConsumerTest ct = new ConsumerTest();
+     					string consumerID = production[i].DistributionList[j];
+						ct.ID = consumerID;				
+
+						tmp = EntityAPI.GetCustomPropertyValue (consumerID, "power_reqt");
+						ct.Usage = tmp != null ? (double)tmp : 0f;
+						totalLoad+= ct.Usage;
+						// for reactor it regulates reaction, for weapons it regulates the minimum level 
+						// of power before firng again
+						// if value = -1 or null then regulator is N/A for this  device
+						tmp = EntityAPI.GetCustomPropertyValue (consumerID, "regulator");
+						ct.Regulator =  tmp != null ? (float)tmp * 100f : 100f;   
+						//ct.T1 = 						
+						tmp = EntityAPI.GetCustomPropertyValue (consumerID, "breaker");
+						ct.Breaker = tmp != null ? (bool)tmp : true; 
+						consumerArray[j] = ct;
+					}
+					consumerListST.Add("consumers", consumerArray);
+					
+					tmp = EntityAPI.GetCustomPropertyValue (entityID, "output");
+					double powerOutput = (double)tmp;
+					string powerStatus = totalLoad.ToString() + "kW\\" + powerOutput.ToString() + "kW";
+					bodyST.Add("poweruse_over_powergenerated", powerStatus); 
+				}
+			}
+		}
+		
+		
+		bodyST.Add("consumertable", consumerListST);
+		
+		return pageST.Render();		
+	}
+	
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+
+	#region Events
+	private static void Event_ScaleChanged (string entityID)
+	{
+		System.Diagnostics.Debug.WriteLine("Event_ScaleChanged()");
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+	}
+	private static void Event_RotationChanged (string entityID)
+	{
+		System.Diagnostics.Debug.WriteLine("Event_RotationChanged()");
+	}
+	private static void Event_TranslationChanged (string entityID)
+	{
+		System.Diagnostics.Debug.WriteLine("Event_TranslationChanged()");
+	}
+
+	private static void Event_BreakerChanged (string entityID)
+	{
+		System.Diagnostics.Debug.WriteLine("Event_BreakerChanged()");
+	}	
+	
+	
+	#endregion
+	
+	#region Rules // can be private scope because rules are passed as delegates
+	private static bool Rule_ReadOnly (object[] args)
+	{
+		return false; 
+	}
+	
+	private static bool Rule_Description(object[] args)
+	{
+		// we get the value from the args where we know for property rules the value is first and only argument
+		string description = (string)args[0];  
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+	}
+	
+	private static bool Rule_MinimumTL (object[] args)
+	{		
+		// we get the value from the args where we know for property rules the value is first and only argument
+		int techlevel = (int)args[0];
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_MinimumTL'.  Testing value '" + techlevel.ToString() + "'");
+		return techlevel >= 8;
+	}
+	
+	private static bool Rule_MinimumOutput(object[] args)
+	{
+		double thrust = (double)args[0];
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Rule_MinimumOutput'.  Testing value '" + thrust.ToString() + "'");
+		return thrust >= 0.0;
+	}
+	
+	public static bool Validate (string entityID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "breaker":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}
+	#endregion
+
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+
+	}
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}
+		
+	public new static Vector3d[] QueryCellPlacement (string entityID, string celledRegionID, Vector3i tileLocation, byte cellRotation)
+	{
+		return BaseScript.QueryCellPlacement (entityID, celledRegionID, tileLocation, cellRotation);
+	}
+	
+	#endregion
+
+	#region Build statistics
+	
+	// todo: rather than this specific OnCustomPropertyChanged, why not a 
+	//       specific handler for a specific property change? It can be similar to how we handle
+	//       rules validation
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+	
+		
+		// when a build property changes, run BuildUpdate() to recompute statS?
+		// Not exactly.  We instead set a flag that the "stats" are dirty 
+		// this way future property changes dont result in multiple calls to update stats.
+		// 
+		switch (index)
+		{
+			case 9:
+			case 10:
+			case 11:
+			case 12:
+				EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+				break;
+			default:
+				break;
+		}
+	}
+	
+	private static void UpdateStats (string entityID)
+	{
+		const double litersperhour = 3.78541;
+		const double literspersecond = litersperhour / (60 * 60);
+		int tl = (int)EntityAPI.GetCustomPropertyValue (entityID, "tech level");
+				
+		float craftsmanship = UserFunctions.GetCraftsmanshipCoefficient ((string)EntityAPI.GetCustomPropertyValue (entityID, "craftsmanship"));
+		float materialsquality = UserFunctions.GetMaterialsQualityCoefficient((string)EntityAPI.GetCustomPropertyValue (entityID, "materials quality"));
+				
+		//double output = (double)EntityAPI.GetCustomPropertyValue (entityID, "output");
+		//double weight = 0.325 * output + 4000.0;
+		//weight = UserFunctions.CalcComponentModifiedWeight (weight, tl, materialsquality);
+		
+		//double cost = weight * 25.0; 
+		//cost = UserFunctions.CalcComponentModifiedCost (cost, tl, craftsmanship);
+
+		//double volume = UserFunctions.CalcComponentVolume(weight);
+		
+		//----------------------
+		// we are going to compute everything from volume
+		BoundingBox box = (BoundingBox)EntityAPI.GetPropertyValue (entityID, "boundingbox");
+		double volume = UserFunctions.CalcComponentVolume(box, tl, craftsmanship);
+		
+		// we need to reverse compute "weight" based on volume (weight = volume * density)
+		double weight =  volume * 50.0; // UserFunctions.CalcComponentWeight (volume, tl, craftsmanship);
+		
+		// we need to reverse compute "output" based on weight
+		double output = (weight - 4000.0) / 4.0;  // TL8 is earliest Fission Reactor that can provide adequate power output/weight for a spaceship
+		
+		double cost = weight * 200.0; 
+		cost = UserFunctions.CalcComponentModifiedCost (cost, tl, craftsmanship);
+		//----------------------
+		
+		double fuel = 0.5 * output * literspersecond;  
+		fuel = UserFunctions.CalcComponentsModifiedFuelConsumption (fuel, craftsmanship);
+		
+		double surfacearea = UserFunctions.CalcComponentSurfaceArea (volume);
+		int hitpoints = UserFunctions.CalcComponentHitpoints(surfacearea);
+		
+		// todo: condense into a single call
+		EntityAPI.SetCustomPropertyValue (entityID, "output", output);
+		EntityAPI.SetCustomPropertyValue (entityID, "cost", cost);
+		EntityAPI.SetCustomPropertyValue (entityID, "weight", weight);
+		EntityAPI.SetCustomPropertyValue (entityID, "volume", volume);
+		EntityAPI.SetCustomPropertyValue (entityID, "fuel usage", fuel);
+		EntityAPI.SetCustomPropertyValue (entityID, "surfacearea", surfacearea);
+		EntityAPI.SetCustomPropertyValue (entityID, "hitpoints", hitpoints);
+		
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,false);
+	}	
+	#endregion
+	
+	#region Run-time
+	
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// clear previously produced units from last tick
+		// produce
+		// retreive unit produced during previous tick
+		// run the consumer
+		if (EntityAPI.GetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY) == true)
+		{
+			System.Diagnostics.Debug.WriteLine ("Updating Stats");
+			UpdateStats (entityID);
+			System.Diagnostics.Debug.WriteLine ("Updating Stats - COMPLETED.");
+		}
+
+		// https://developer.valvesoftware.com/wiki/List_of_Dota_2_Script_Functions#CEntities
+		// read flag to determine if we have power
+		
+		// read "damage" property
+		//	- damage trumps "breaker" 
+		//  - are we damaged?
+		//		- are we destroyed and need to explode on the inside of the ship?
+		//
+		// read "animation" index to see if we're playing any? how do we deal with that?
+		// property "status" - cooldown
+		// property "animationstatus" - powerup/on/powerdown/none
+		
+		// a single flag can perhaps hold mutlple private state info that just the script needs to track 
+		// read "breaker" property 
+		// if "on"
+		// 	  - are we in process of power-up sequence?
+		//		- continue playing interior warm-up animation
+		//		- continue playing interior warm-up sound
+		//	  - are we in cruise animation
+		//		- continue playing cruise animation
+		//		- can we use the animation property?
+		//
+		//	if "off"
+		//		- are we in process of power-down sequence?
+		//		- stop interior animation
+		//		- continue exterior plume animation cool down
+		
+		
+		
+		
+		// http://www.youtube.com/watch?v=r9Xhjmg3Wf8 <-- really nice rumbly powerful looking / sounding engine thrust plumes
+		// get state of the plume emitter flags so we know whether to continue ramping up
+		// or cool down, register new if just turning on, unregister if plume is now out.
+		// are we damaged and should emit black smoke?
+		// compute's the bbox center and then moves the center.z = center.z - (center.depth / 2);
+		// FXAPI.Register( helper.computeexternalposition(entityID), vector3d offset, length, radius, color, etc);
+		
+		// external plume emitter management
+		// external flare management
+		
+		// register / unregister sound - wait, actually ithink
+		// rather than AudioAPI.Register() for these 3d sounds we implement a sound node that hosts
+		// an audio clip resource and the sound node can track the playback of the sound and the 3d audio
+		// as camera moves.  
+		// AudioAPI.Register(); // todo: like our hexalfares, can we set sound's paths in custom properties?
+		// 	// http://castle-engine.sourceforge.net/x3d_implementation_sound.php
+	//
+		
+				
+	}
+
+	public static Production[] Production_Power (string entityID, double elapsedSeconds)
+	{
+		// TODO: a fission reactor
+		// consumes water, but intially it must be filled with radioactive 
+		// fuel and then regulated with control rods (control rods can be damaged)
+		// - thus a fission rocket consumes internal fuel as well 
+		//		- but i think the idea is that the rocket consumes its internal fuel and when it runs out the entire thing must essentially be refurbished or just replaced.  After 15 years you'll likely
+		// not even want to replace it.  You're better off buying a new engine.
+		// - this internal fuel is needed before the reactor can be turned on.  
+		// - this internal fuel 
+		// or more detailed if/else which allows for some heat
+		// to still be emitted if cooling down
+		
+		// if not installed in a vehicle, no production
+		string vehicleID = EntityAPI.GetParentID (entityID);
+		if (string.IsNullOrEmpty(vehicleID)) return null;
+		
+		// and we have consumed fuel from previous tick, we can produce power
+		bool hasFuel = EntityAPI.GetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_HAS_FUEL);
+		if (hasFuel == false) 
+		{
+			// intitiate shutdown?  
+			// set ON = false.
+			// set THROTTLE = 0.0
+			// unregister plume emitter if it was active (we can use flags for determining this)
+			return null;
+		}
+		// if the reactor is turned off, no production
+		object val = EntityAPI.GetCustomPropertyValue (entityID, "breaker");
+		if (val == null || (bool)val == false) return null;
+		
+		// if throttle is 0.0, no production
+		val = EntityAPI.GetCustomPropertyValue (entityID, "regulator");
+		if (val == null) return null;
+		float throttle = (float)val;
+		if (throttle == 0.0f) return null;
+		
+		// if desired output amount build option == 0.0, no production
+		val = EntityAPI.GetCustomPropertyValue (entityID, "output");
+		if (val == null) return null;
+		double maxoutput = (double)val;
+		if (maxoutput == 0.0) return null;
+		
+		Production[] production = (Production[])EntityAPI.GetCustomPropertyValue (entityID, "production");
+		
+		// modify output by damage above certain threshold
+		double modifiedOutput = maxoutput;
+		
+		// thrust (gets applied to the owner vehicle)
+		production[0].SourceEntityID = entityID;
+		production[0].UnitValue = modifiedOutput;  
+
+		// update the property value after modifications
+		EntityAPI.SetCustomPropertyValue (entityID, "production", production);
+		
+		// TODO: an example involving sensor contacts needs to involve distance tests,
+		//       and skill tests for the sensors and the sensor operator if any,
+		//       because if these filter functions are written here, then using api functions
+		//       will be required and the downside there is, it requires a lookup to get the entity
+		//       each time... although... i think i will optimize our EntityAPI to always cache the
+		//       last used Entity so that any one script only incurs that hit once.
+		// TODO: so lets try to figure out with gravity and a single star
+		//       a way to test our FILTER function.
+		//       Let's disregard what the script needs to contain for now and we'll just return
+		//       TRUE;
+		//
+
+		
+		// light (detectable)
+		
+		// heat (damage for craft that gets too close and infrared detectable based on output level)
+		
+		// blast (damage)
+		
+		
+		return production;
+	}
+	
+	public static bool FilterTest (Production production, string entityID)
+	{
+		return true;
+	}
+	
+	public static Consumption Consumption_Fuel (string entityID, Production production, double elapsedSeconds)
+	{
+		Consumption[] consumption = (Consumption[])EntityAPI.GetCustomPropertyValue (entityID, "consumption");
+
+		// if the reactor is turned off, no consumption
+		object val = EntityAPI.GetCustomPropertyValue (entityID, "breaker");
+		if (val == null || (bool)val == false) return consumption[0];
+	
+		string producerID = production.SourceEntityID;
+	
+		// is there fuel that can be consumed from the production source?
+		
+		// if so, deduct our fuel usage
+		
+		// set flag to indicate whether we have acquired our fuel reqts
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_HAS_FUEL ,true);
+		
+		return consumption[0];
+	}
+	
+	
+	
+	public static void OnRender (string contextID, string entityID, string[] modelIDs, string shaderID, 
+								 Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+	}
+	
+	#endregion
+}

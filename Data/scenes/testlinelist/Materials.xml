@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Material diffuse="0,0,0,1" ambient="0,0,0,1" specular="0,0,0,1" emissive="0,1,1,1" opacity="1" power="12" flags="7" name="MATERIAL" id="emissive_material_-16711681" />
+</root>

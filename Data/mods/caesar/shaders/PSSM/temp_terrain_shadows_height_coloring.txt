@@ -1,0 +1,223 @@
+float4x4 WorldMatrix;
+float4x4 ViewMatrix;
+float4x4 ProjectionMatrix;
+
+float4x4 LightViewMatrix;
+float4x4 LightProjectionMatrix;
+
+float maxHeight;           //maximum height of the terrain
+
+Texture2D heightMap;
+Texture2D shadowMap;
+
+Texture2D sandTexture;
+Texture2D grassTexture;
+Texture2D snowTexture;
+Texture2D rockTexture;
+
+SamplerState pointSampler;
+SamplerState linearSampler;
+SamplerState shadowMapSampler;
+
+struct VS_INPUT
+{
+    float4 Position : SV_POSITION;
+ float2 UV  : TEXCOORD0;
+};
+
+struct VS_OUTPUT
+{
+    float4 Position   : SV_POSITION;
+ float4 Normal   : NORMAL0;
+    float2 UV    : TEXCOORD0;
+ float4 TextureWeights : TEXCOORD1; // Weights used for multitexturing 
+ float  Depth            : TEXCOORD2; // Used for texture LOD
+ float4 LightPosition : TEXCOORD3; // Position in light space
+
+};
+
+struct SHADOW_VS_INPUT
+{
+ float4 Position   : SV_POSITION;
+    float2 UV    : TEXCOORD0;
+};
+
+struct SHADOW_VS_OUTPUT
+{
+ float4 Position : SV_POSITION;
+ float4 Depth    : TEXTURE0;
+};
+
+//--------------------------------------------------------------------------------------
+// Vertex Shader
+//--------------------------------------------------------------------------------------
+VS_OUTPUT VS(VS_INPUT input)
+{
+ float height = heightMap.SampleLevel(pointSampler, input.UV, 0).r;
+ input.Position.y = height * maxHeight;
+
+ float4x4 worldViewProj = mul(mul(WorldMatrix, ViewMatrix), ProjectionMatrix);
+ float4x4 lightWorldViewProj = mul(mul(WorldMatrix, LightViewMatrix), LightProjectionMatrix);
+
+
+ // Height values of adjacent vertices
+ float y = input.Position.y;
+ float N = heightMap.SampleLevel(pointSampler, input.UV, 0, float2(0,-1)).r * maxHeight;
+ float S = heightMap.SampleLevel(pointSampler, input.UV, 0, float2(0,1)).r * maxHeight;
+ float W = heightMap.SampleLevel(pointSampler, input.UV, 0, float2(-1,0)).r * maxHeight;
+ float E = heightMap.SampleLevel(pointSampler, input.UV, 0, float2(1,0)).r * maxHeight;
+ float NE = heightMap.SampleLevel(pointSampler, input.UV, 0, float2(1,-1)).r * maxHeight;
+ float SW = heightMap.SampleLevel(pointSampler, input.UV, 0, float2(-1,1)).r * maxHeight;
+
+ // Vectors joins adjacent vertices
+ float3 vectorN = float3(0, N - y, 1);
+ float3 vectorS = float3(0, S - y, -1);
+ float3 vectorE = float3(1, E - y, 0);
+ float3 vectorW = float3(-1, W - y, 0);
+ float3 vectorNE = float3(1, NE - y, 1);
+ float3 vectorSW = float3(-1, SW - y, -1);
+
+ // Average normal for current vertex
+ float3 normal = normalize(cross(vectorN, vectorNE) + cross(vectorNE, vectorE) + cross(vectorE, vectorS)
+     + cross(vectorS, vectorSW) + cross(vectorSW, vectorW) + cross(vectorW, vectorN));
+
+ VS_OUTPUT output = (VS_OUTPUT)0;
+ output.Position = mul(input.Position, worldViewProj);
+ output.Normal = mul(float4(normal, 1), WorldMatrix);
+
+ float4 texWeights = 0;
+  
+ texWeights.x = saturate(1.0f - height * 3.0f);
+ texWeights.y = saturate(1.0f - abs(height - 0.4f) * 3.0f);
+ texWeights.z = saturate(1.0f - abs(height - 0.9f) * 3.0f);
+ texWeights.w = 1;
+
+ float totalWeight = texWeights.x + texWeights.y + texWeights.z;
+ texWeights.xyz /= totalWeight;
+
+ texWeights.w = 1;
+
+ if (normal.y > 0.81f)
+ {
+  texWeights.w = 0;
+ }
+ else if (normal.y > 0.75)
+ {
+  texWeights.w = normal.y;
+ }
+
+ output.TextureWeights = texWeights;
+ output.UV = input.UV;
+
+ output.Depth = output.Position.z/output.Position.w;
+
+ output.LightPosition = mul(input.Position, lightWorldViewProj);
+ //output.LightPosition /= output.LightPosition.w; 
+
+ return output;
+}
+
+//--------------------------------------------------------------------------------------
+// Pixel Shader
+//--------------------------------------------------------------------------------------
+float4 PS(VS_OUTPUT input) : SV_TARGET
+{
+ float blendDistance = 0.99f;
+ float blendWidth = 0.005f;
+ float blendFactor = clamp((input.Depth - blendDistance) / blendWidth, 0, 1);
+
+ float4 weights = input.TextureWeights;
+
+ float scale = 4;
+ float4 rock = rockTexture.Sample(linearSampler, input.UV * scale);
+ float4 sand  = sandTexture.Sample(linearSampler,  input.UV * scale);
+ float4 grass = grassTexture.Sample(linearSampler, input.UV * scale);
+ float4 snow  = snowTexture.Sample(linearSampler,  input.UV * scale);
+ float4 farColour = rock * weights.w + (1 - weights.w) * (sand * weights.x + grass * weights.y + snow * weights.z);
+
+ scale = 16;
+ rock = rockTexture.Sample(linearSampler, input.UV * scale);
+ sand  = sandTexture.Sample(linearSampler,  input.UV * scale);
+ grass = grassTexture.Sample(linearSampler, input.UV * scale);
+ snow  = snowTexture.Sample(linearSampler,  input.UV * scale);
+ float4 nearColour = rock * weights.w + (1 - weights.w) * (sand * weights.x + grass * weights.y + snow * weights.z);
+
+ float4 colour = lerp(nearColour, farColour, blendFactor);
+
+ //--------------------------------------------------------------------------------------
+ // Shadows
+ //--------------------------------------------------------------------------------------
+
+ input.LightPosition.xyz /= input.LightPosition.w;
+
+ float2 projectedTexCoords;
+    projectedTexCoords[0] = input.LightPosition.x / 2.0f + 0.5f;
+    projectedTexCoords[1] = input.LightPosition.y / -2.0f + 0.5f;
+
+ float shadowMapDepth = shadowMap.Sample(shadowMapSampler, projectedTexCoords).r;
+
+  if (shadowMapDepth < input.LightPosition.z - 0.0007f)
+ {
+  colour *= 0.25;
+ }
+
+ return colour;
+}
+
+//--------------------------------------------------------------------------------------
+// Shadow Vertex Shader
+//--------------------------------------------------------------------------------------
+SHADOW_VS_OUTPUT ShadowMapVS(SHADOW_VS_INPUT input)
+{
+ input.Position.w = 1.0f;
+
+ // Generate terrain height from heightmap
+    float height = heightMap.SampleLevel(pointSampler, input.UV, 0).r;
+ input.Position.y = height * maxHeight;
+
+ //float4x4 lightWorldViewProj = mul(mul(WorldMatrix, LightViewMatrix), LightProjectionMatrix);
+
+ SHADOW_VS_OUTPUT output = (SHADOW_VS_OUTPUT)0;
+ //output.Position = mul(input.Position, lightWorldViewProj);
+
+ output.Position = mul(input.Position,  WorldMatrix);
+    output.Position = mul(output.Position, LightViewMatrix);
+    output.Position = mul(output.Position, LightProjectionMatrix);
+
+ output.Depth = output.Position;
+
+    return output;
+}
+ 
+//--------------------------------------------------------------------------------------
+// Shadow Pixel Shader
+//--------------------------------------------------------------------------------------
+float4 ShadowMapPS(SHADOW_VS_OUTPUT input) : SV_TARGET
+{
+ float zValue = input.Depth.z / input.Depth.w;
+
+ return float4(zValue, zValue, zValue, 1.0f);
+}
+
+//--------------------------------------------------------------------------------------
+// Techniques
+//--------------------------------------------------------------------------------------
+technique ShadowMap
+{
+    pass Pass0
+    {
+  SetVertexShader(CompileShader(vs_4_0, ShadowMapVS()));
+  SetGeometryShader(NULL);
+  SetPixelShader(CompileShader(ps_4_0,  ShadowMapPS()));
+    }
+}
+
+technique Terrain
+{
+    pass Pass0
+    {
+        SetVertexShader(CompileShader(vs_4_0, VS()));
+  SetGeometryShader(NULL);
+  SetPixelShader(CompileShader(ps_4_0,  PS()));
+    }
+}

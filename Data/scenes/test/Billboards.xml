@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Billboard billboardtype="2" axialrotation="True" rotateAtCenter="False" height="1" width="1" meshformat="0" cullmode="1" boundingbox="-0.5,0,-0.5,0.5,1,1" flags="7" name="BILLBOARD" id="pbillboard_2_1_1_False" />
+  <Billboard billboardtype="2" axialrotation="False" rotateAtCenter="True" height="11.31371" width="11.31371" meshformat="0" cullmode="3" boundingbox="0,0,0,0,0,0" flags="7" name="BILLBOARD" id="pbillboard_2_11.31371_11.31371_True" />
+</root>

@@ -1,0 +1,10 @@
+<particle-system>
+  <emitter type="billboard" max-particles="300" id="0" texture="particles\squiggles.dds" size="32" location="0/0/0" direction="0/-0.1/1" directional="True" randomdirectionfactor="0.1/0.1/0.1" power="50" lifetime="2" shape="2" color="0.2,0.5,1,1" speed="10" usegravity="True" gravity="0/-100/0" alphachange="1" alphablending="1" alphatest="True" alpharef="0" alphadepthwrite="False" boxsize="50/5/5" sphereradius="0" looping="True">
+    <particle-keyframes>
+      <keyframe id="0" key="0" size="0/0/0" color="0.2,0.5,1,0" />
+      <keyframe id="1" key="1.5" size="0/0/0" color="0.2,0.5,1,1" />
+      <keyframe id="2" key="2" size="0/0/0" color="0.2,0.5,1,0" />
+    </particle-keyframes>
+  </emitter>
+  <emitter type="billboard" max-particles="100" id="1" texture="particles\squiggles.dds" size="16" location="0/-200/100" direction="0/1/0" directional="True" randomdirectionfactor="0.3/1/0.2" power="70" lifetime="2.5" shape="2" color="0.5,0.7,1,1" speed="25" usegravity="True" gravity="0/-50/0" alphachange="1" alphablending="1" alphatest="False" alpharef="0" alphadepthwrite="False" boxsize="75/1/25" sphereradius="0" looping="True" />
+</particle-system>

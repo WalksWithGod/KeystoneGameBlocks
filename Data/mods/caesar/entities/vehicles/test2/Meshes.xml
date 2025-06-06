@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Mesh3d meshformat="0" cullmode="1" boundingbox="-30.9287567138672,-14.7638072967529,-48.9327964782715,28.1263618469238,14.7638053894043,49.4924011230469" flags="7" name="MESH3D" id="caesar\meshes\vehicles\test_hull.obj" />
+  <Mesh3d meshformat="0" cullmode="1" boundingbox="-21.3761329650879,0.364313006401062,-20.9318580627441,21.443904876709,9.30324172973633,21.2376480102539" flags="7" name="MESH3D" id="caesar\meshes\vehicles\test_turret.obj" />
+  <Mesh3d meshformat="0" cullmode="1" boundingbox="-0.918115973472595,2.45125389099121,0.505568981170654,3.01889204978943,6.32845878601074,66.8320159912109" flags="7" name="MESH3D" id="caesar\meshes\vehicles\test_turret_barrel.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-2.8549530506134,0.104005999863148,-2.74730706214905,2.94725298881531,1.31667494773865,3.0549008846283" flags="7" name="MESH3D" id="caesar\meshes\exterior\sensor.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1,-1,-1,1,1,1" flags="7" name="MESH3D" id="caesar\meshes\propulsion\thruster.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-0.442855000495911,0,-0.445883005857468,0.442386001348495,7.60059976577759,0.439357995986938" flags="7" name="MESH3D" id="caesar\meshes\effects\plumes\Thrust2.obj" />
+</root>

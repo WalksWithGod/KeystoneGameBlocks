@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Vehicle fixedscreensize="0" entityflags="33554654" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\ship_ai_controlled.css" usertypeid="250" boundingbox="-62.4385222774213,-11.7665363299276,66.658476739361,-3.38340371663025,17.7610763562296,165.083674340679" position="-31.5097655635541,2.99727096682528,115.591273217633" scale="1,1,1" rotation="0,5.81311416334772E-17,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VEHICLE" id="6364c82d-0f63-42d3-ba04-d6bf2e14276e">
+    <Model ref="da36c7f2-f420-4d70-ad8a-7b4aa8de5aac" />
+    <Interior ref="22619d00-17cd-458c-942c-03589f34b5cd" />
+    <ModeledEntity ref="81d2713b-dbc5-4a47-b91b-429f792eb28c" />
+    <ModeledEntity ref="b9899568-dec4-4778-ad94-3e7ec80f9db0" />
+    <ModeledEntity ref="3d453a08-a7d2-41d3-8f07-9a89cc8eb974" />
+    <ModeledEntity ref="46b299bc-f0f3-4182-9103-ea69f69f221a" />
+    <ModeledEntity ref="f2852ce3-c705-4640-b5d7-27fe1effffc4" />
+    <ModeledEntity ref="f07b22da-37f0-47c5-bc91-342a66e0bcb5" />
+    <ModeledEntity ref="626a99b8-6f7c-4d63-83c2-5eeb58f34d5e" />
+    <ModeledEntity ref="399f0f06-86aa-4cbb-b06f-eaa35eee71ed" />
+    <ModeledEntity ref="e764de4f-e06f-44e3-8b94-b82bfe3da9a4" />
+    <ModeledEntity ref="cb06bd66-d3fd-4149-98eb-d3f60b41a36b" />
+    <ModeledEntity ref="ce55e2fa-b73a-47b2-960f-843816579396" />
+    <ModeledEntity ref="b1f4af6c-eafd-4796-a9e3-383ce17acd07" />
+    <ModeledEntity ref="1f472dfd-2755-42d0-af9e-4e6b497a562d" />
+    <Sequence ref="caesar\behaviors\vehicle_patrol.kgbbehavior" />
+  </Vehicle>
+  <Vehicle fixedscreensize="0" entityflags="33554654" attachedtoboneid="-1" tilelocation="0,0,0" scriptresource="caesar\scripts_entities\ship_ai_controlled.css" usertypeid="250" boundingbox="200.733153177556,-11.0521610413871,149.35023633694,259.788271738347,18.4754516447702,247.775433938259" position="231.661909891423,3.71164625536585,198.283032815212" scale="1,1,1" rotation="0,5.81311416334772E-17,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" angularforce="0,0,0" angularvelocity="0,0,0" flags="3" name="VEHICLE" id="d26d3c5e-d406-4423-83df-4b9412c1f919">
+    <Model ref="00474f70-1d66-4216-b1cd-5b335fbbe716" />
+    <Interior ref="cf991aa3-28f8-47ff-94f0-c88057379de7" />
+    <ModeledEntity ref="6802c912-eae3-4994-87fc-e7095f349c1a" />
+    <ModeledEntity ref="32330a0d-c01d-40a9-ac94-539d9584ea76" />
+    <ModeledEntity ref="12c84f05-4dd6-4e7d-b3e8-fb163ca7a654" />
+    <ModeledEntity ref="8eaa27d3-c817-4bd4-8706-4cff39f2755b" />
+    <ModeledEntity ref="dc8b0d13-ae5c-4303-ba3a-7e7c0e146588" />
+    <ModeledEntity ref="49159907-8e3c-4231-89c2-3fddc11af549" />
+    <ModeledEntity ref="40ea7c0d-3c1e-4f8a-aff0-b46e360b2755" />
+    <ModeledEntity ref="9f8cb2ef-190b-4cc5-b3ff-d9ca43c07fa6" />
+    <ModeledEntity ref="f91f4741-272c-4f46-8180-41a995a96f97" />
+    <ModeledEntity ref="5c7319a7-f941-4684-bc42-6f6a5093b7c4" />
+    <ModeledEntity ref="b0acfc26-54b8-40a2-924d-4eb8e163966c" />
+    <ModeledEntity ref="a98095a7-aed2-4e46-b5d7-c85e380ec06f" />
+    <ModeledEntity ref="4b474cdf-e8ec-4fdb-b234-9c94dcfb5a77" />
+    <Sequence ref="caesar\behaviors\vehicle_patrol.kgbbehavior" />
+  </Vehicle>
+</root>

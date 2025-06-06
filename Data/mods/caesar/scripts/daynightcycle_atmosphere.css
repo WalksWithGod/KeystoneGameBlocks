@@ -1,0 +1,465 @@
+using System;
+using Game01.GameObjects;
+using KeyCommon.Simulation;
+using KeyCommon.Traversal;
+using Keystone.Types;
+using Keystone.Utilities;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+
+public class DayNightCycle_Atmosphere : BaseScript
+{
+	public static void Initialize(string domainObjectID)
+	{
+		string category = "public properties";
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[18];
+		properties[0] = new PropertySpec("description", typeof(string).Name, category, "day/night cycle atmosphere");
+		properties[1] = new PropertySpec("sunrise", typeof(float).Name, category, (float)(Math.PI * 1d / 12d));
+		properties[2] = new PropertySpec("sunset", typeof(float).Name, category, (float)(Math.PI * 1d / -10d));
+		// orbitalRadius of both Sun and Moon need to be inside atmosphere but outside of cloud layer.
+		// orbitalRadius should scale with atmosphere but that should be done during initial setup
+		// of the Atmosphere, Cloud, Sun, Moon entities
+		properties[3] = new PropertySpec("orbitalradius", typeof(double).Name, category, 1000.0);
+		// latitude in radians (40°N = 0.6981317f, 20°N = 0.22f)
+		properties[4] = new PropertySpec("latitude", typeof(float).Name, category, 0.6981317f);
+		properties[5] = new PropertySpec("dynamic", typeof(bool).Name, category, true);
+		
+		category = "statistics";
+		properties[6] = new PropertySpec("skyradius", typeof(double).Name, category, 1000.0);
+		// Turbity = desnity of atmosphere (range 2.0 - 6.0)        
+		properties[7] = new PropertySpec("turbidity", typeof(float).Name, category, 2.6f);
+		properties[8] = new PropertySpec("zenithcolor", typeof(float[]).Name, category, null);
+        properties[9] = new PropertySpec("distribcoeffs", typeof(float[]).Name, category, null);
+		properties[10] = new PropertySpec("inv_neg_max_lum", typeof(double).Name, category, 0.0);
+		properties[11] = new PropertySpec("sunintensity", typeof(float).Name, category, 0f);
+		properties[12] = new PropertySpec("moonintensity", typeof(float).Name, category, 0f);
+		
+		properties[13] = new PropertySpec("altitude", typeof(float).Name, category, 0.0f);
+		properties[14] = new PropertySpec("azimuth", typeof(float).Name, category, 0.0f);
+		properties[15] = new PropertySpec("sunposition", typeof(Vector3d).Name, category, Vector3d.Zero());
+		properties[16] = new PropertySpec("sundirection", typeof(Vector3d).Name, category, Vector3d.Zero());
+		properties[17] = new PropertySpec("suntheta", typeof(float).Name, category, 0f);
+		
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+		
+	}
+	
+	public static void InitializeEntity(string entityID)
+	{	
+		// set stats flag as dirty so OnUpdate() will call UpdateStats() first time through
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+		// Entity FLAGS (as opposed to Component flags) should be set here as they are per entity
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.ExplicitEvents, true);
+		EntityAPI.SetEntityFlag(entityID, (uint)UserConstants.EF_Dynamic, false);
+	}
+	
+	public static object RegisterChild(string entityID, string childID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegisterChild (string entityID, string childID)
+	{
+
+		return entityID;
+
+	}
+	
+	public static object OnAddedToParent(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object OnRemovedFromParent (string entityID, string parentID)
+	{
+
+		return entityID;
+	}
+	
+	
+	#region GUI // http://www.antlr.org/wiki/display/ST/Examples
+	public static string GUILayout_GetMarkup (string entityID, PickResultsBase pick)
+	{
+		return "<html><body>TODO: ATMOSPHERE</body></html>";
+			
+	}
+	
+	// <summary>
+	// Handler for all link clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_LinkClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_LinkClick() - Unexpected link '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all button clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_ButtonClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_ButtonClick() - Unexpected button '" + name + "'");
+				break;
+		}
+	}
+
+	// <summary>
+	// Handler for all checkbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_CheckBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_CheckBoxClick() - Unexpected checkbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox clicks within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxClick(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxClick() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}
+	
+	// <summary>
+	// Handler for all textbox keypresses within the layout.
+	// </summary>
+	// <param name="entityID"></param>
+	// <param name="name">Name of specific button that triggered the event.</param>
+	public static void GUILayout_TextBoxKeyPress(string entityID, string name)
+	{
+		System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - '" + name + "'");
+
+		switch (name)
+		{
+			default:
+				System.Diagnostics.Debug.WriteLine("GUILayout_TextBoxKeyPress() - Unexpected textbox '" + name + "'");
+				break;
+		}
+	}	
+	#endregion
+	
+	#region Rules
+	private static bool Rule_Description(object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // where know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);		
+	}	
+	#endregion
+
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType() {return (uint)UserConstants.BRUSH_TYPE.BRUSH_SINGLE_DROP;}	
+	#endregion
+	
+	#region Build statistics
+		// todo: rather than this specific OnCustomPropertyChanged, why not a 
+	//       specific handler for a specific property change? It can be similar to how we handle
+	//       rules validation
+	public static void OnCustomPropertyChanged (string entityID, int index)
+	{
+
+		// when a build property changes, run BuildUpdate() to recompute statS?
+		// Not exactly.  We instead set a flag that the "stats" are dirty 
+		// this way future property changes dont result in multiple calls to update stats.
+		// 
+		switch (index)
+		{
+			case 2: // turbidity
+				// set var flag that turbidity has changed so OnRender() can update shader
+				
+				
+
+				EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,true);
+				break;
+			case 11:
+			case 12:
+				
+				break;
+			default:
+				break;
+		}
+	}
+	
+	// Updates the build statistics
+	public static void UpdateStats (string entityID)
+	{
+		// distribution coefficients
+		
+		// stats dirty flag can now be reset to false
+		EntityAPI.SetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY ,false);
+	}	
+	#endregion
+	
+	#region Run-time	
+	public static void OnUpdate (string entityID, double elapsedSeconds)
+	{
+		// NOTE: if simulation is paused, graphics can still render, but this
+		//       OnUpdate() will not be called.
+		// NOTE: If simulation is NOT paused, this OnUpdate() will be called
+		//       as many times per entity to satisfy fixed timestep settings!
+		//       Thus it is important to keep this function optimized!
+		
+		// OnCustomPropertyChanged() will set CF_STATS_DIRTY flag TRUE when a build variable has been changed
+		if (EntityAPI.GetCustomFlagValue (entityID, (uint)UserConstants.CustomFlags.CF_STATS_DIRTY) == true)
+		{
+			System.Diagnostics.Debug.WriteLine ("Updating Stats");
+			UpdateStats (entityID);
+			System.Diagnostics.Debug.WriteLine ("Updating Stats - COMPLETED.");
+		}
+		
+		string sceneID = (string)EntityAPI.GetEntitySceneID (entityID); 
+		// NOTE: timeScaling is in Keystone.Simulation.GameTime.Scale; 
+		//       but I feel like we should be able to have an additional scale for atmosphere
+		//       that is a multiple of overall gamescale defaulting to 1:1
+		double julianDay = (double)GameAPI.GetJulianDay (sceneID);
+		// orbitalRadius of both Sun and Moon need to be inside atmosphere but outside of cloud layer.
+		// orbitalRadius should scale with atmosphere but that should be done during initial setup
+		// of the Atmosphere, Cloud, Sun, Moon entities
+		double orbitalRadius = 0.20d * (double)EntityAPI.GetHeight (entityID);  
+		//double orbitalRadius = (double)EntityAPI.GetCustomPropertyValue(entityID, "orbitalradius");
+		float latitude = (float)EntityAPI.GetCustomPropertyValue(entityID, "latitude");
+		bool  dynamic = (bool)EntityAPI.GetCustomPropertyValue(entityID, "dynamic");
+		
+		// compute new azimuth and altitude if sun's position is not fixed
+		if (dynamic)
+		{
+			float altitude, azimuth;
+			CalculateSunPosition((float)julianDay, latitude, out altitude, out azimuth);
+		
+			// virtual position which we'll later project to a fixed distance from camera
+			Vector3d sunPosition = MathHelper.MoveAroundPoint (Vector3d.Zero(), 
+																orbitalRadius, 
+																azimuth, 
+																-altitude);
+			
+			// todo: when using multiple viewports, the camera position is different so shouldn't 
+			//       at least, the virtual star always be fixed to orbit 0,0,0 and it's position 
+			//       can be any distance and then we just project it to a spot at orbitalRadius from camera?
+			Vector3d lightDirection = -Vector3d.Normalize(sunPosition);	
+			EntityAPI.SetCustomPropertyValue(entityID, "sundirection", lightDirection);
+			
+			float sunIntensity = (float)EntityAPI.GetCustomPropertyValue(entityID, "sunintensity");
+			if (sunIntensity <= 0.49f)
+			{
+				// sun has set, use moon direction for DirectionalLight instead
+				// TODO: can we lerp between the two over the course of say 60 seconds?
+				// 
+				lightDirection = -lightDirection;  
+				
+				// TODO: we should clamp sunIntensity as far as the DirectionalLight color
+				// is concerned
+			}
+
+			// DirectionalLight Entity - set direction
+			string lightEntityID = EntityAPI.GetDescendantOfType (entityID, "DirectionalLight");
+			EntityAPI.SetPropertyValue (lightEntityID, "direction", lightDirection);
+			
+			// this entity - set the updated properties  
+			EntityAPI.SetCustomPropertyValue(entityID, "altitude", altitude);
+			EntityAPI.SetCustomPropertyValue(entityID, "azimuth", azimuth);
+			EntityAPI.SetCustomPropertyValue (entityID, "sunposition", sunPosition);
+		}
+	}
+	
+	public static void OnRender (string contextID, string entityID, string modelID, string shaderID, 
+								Vector3d cameraSpacePosition, Vector3d[] cameraSpaceBoundingBoxVertices, double elapsedSeconds)
+	{
+		// if turbidity has changed, new distributioncoefficients, invGammaCorrection 
+		// and _invPowLumFactor will be calculated in OnCustomPropertyChanged()
+		float turbidity = (float)EntityAPI.GetCustomPropertyValue(entityID, "turbidity");		
+
+		// get new distribution coefficients based on the new turbidity value
+		UserSkyMath.xyYCoeffs distribCoeffs = UserSkyMath.DistributionCoefficients(turbidity);
+
+		// assign x,y,Y distribCoeffs to shader
+		for (int i = 0; i < 5; i++)
+		{	
+			VisualFXAPI.SetShaderParameterFloat (shaderID, "_xDistribCoeffs[" + i + "]", distribCoeffs.x[i]);
+			VisualFXAPI.SetShaderParameterFloat (shaderID, "_yDistribCoeffs[" + i + "]", distribCoeffs.y[i]);
+			VisualFXAPI.SetShaderParameterFloat (shaderID, "_YDistribCoeffs[" + i + "]", distribCoeffs.Y[i]);
+		}
+
+		// save distribution coefficients
+		EntityAPI.SetCustomPropertyValue(entityID, "distribcoeffs", distribCoeffs);
+
+		// TODO: do we use direction from sun or moon based on sun 
+		Vector3d lightDirection = (Vector3d)EntityAPI.GetCustomPropertyValue (entityID, "sundirection");
+
+		// TODO: could we use 2 directional lights if we wanted to and then fade out one as we faded in the other?
+		// No, best bet is to fade shadows out as sun sets (say sunIntensity between 0.45 and 0.49) and then fade shadows
+		// back in from 0.49 - 0.45 moon intensity. And moon intensity should start at last sun intensity! otherwise
+		// there is noticeable switch...
+		
+		// sunTheta is just the altitude which we've already calculated and VectorToTheta() is 
+		// completely unnecessary (besides the fact it's computing a bad value which we really should debug)
+        //float sunTheta = UserSkyMath.VectorToTheta(lightDirection);
+		float sunTheta = (float)EntityAPI.GetCustomPropertyValue(entityID, "altitude");	 // 1.220597f; // 
+		EntityAPI.SetCustomPropertyValue(entityID, "suntheta", sunTheta);
+		VisualFXAPI.SetShaderParameterFloat (shaderID, "_sunTheta", sunTheta);
+        VisualFXAPI.SetShaderParameterVector3(shaderID, "_sunVector", -lightDirection);
+
+		float sunSet = (float)EntityAPI.GetCustomPropertyValue(entityID, "sunset");	
+		float sunRise = (float)EntityAPI.GetCustomPropertyValue(entityID, "sunrise");	
+		
+		// Sun lighting intensity
+		float sunAltitude = (float)EntityAPI.GetCustomPropertyValue(entityID, "altitude");	
+		float sunIntensity = UserSkyMath.Saturate(UserSkyMath.Lerp(sunAltitude, sunSet, sunRise));
+        EntityAPI.SetCustomPropertyValue(entityID, "sunintensity", sunIntensity);
+
+		// Stars and moon opacity since as daylight comes around, stars and moon are less visible (more transparent)
+		// NOTE: MoonIntensity is lightintensity and we can use it to manipulate brightness of sky at night.
+		//       In other words, you can have the sky change colors as sun rises and sets, but you dont necessarily
+		//       have to make things as dark at night.  You can tweak the degree that it's dimmed for an alien world
+		float moonIntensity = UserSkyMath.Saturate(UserSkyMath.Lerp(sunAltitude, 0f, sunSet)) * 0.95f;
+		VisualFXAPI.SetShaderParameterFloat(shaderID, "_starsIntensity", moonIntensity);
+		moonIntensity += 0.05f;  // used for moon material emissive and shader "_nightDarkness" 
+		
+		// A hack to kill the orange tones in the nightsky
+        VisualFXAPI.SetShaderParameterFloat (shaderID, "_nightDarkness", 1f - (moonIntensity - 0.05f));
+			
+		// zenith colors change if either sun position or turbidity has changed
+        float[] xyYzenithColors = UserSkyMath.SkyZenithColor(turbidity, sunTheta);
+
+		Vector3d vecZenithColors = new Vector3d (xyYzenithColors[0], xyYzenithColors[1], xyYzenithColors[2]);
+        VisualFXAPI.SetShaderParameterVector3(shaderID, "_zenithColor", vecZenithColors);
+		// store zenith colors since cloud shader will need it
+		EntityAPI.SetCustomPropertyValue(entityID, "zenithcolor", xyYzenithColors);
+		
+		// set DirectionalLight entity base color
+		string lightEntityID = EntityAPI.GetDescendantOfType (entityID, "DirectionalLight");
+		// TODO: apparently i thought only clouds used the atmoColor, 
+		// but turns out our DirectionalLight is supposed to also
+		float[] atmoCol = UserSkyMath.AtmosphereColor(turbidity, sunTheta, xyYzenithColors, distribCoeffs);
+		
+		// scale DirectionalLight color by intensity, but clamp it's min value
+		float minIntensity = (float)System.Math.Max (sunIntensity, 0.49f);
+		Keystone.Types.Color color = Keystone.Types.Color.Scale(atmoCol[0], atmoCol[1], atmoCol[2], 1.0f, minIntensity);
+		EntityAPI.SetPropertyValue (lightEntityID, "diffuse", color);
+		EntityAPI.SetPropertyValue (lightEntityID, "ambient", color);
+		EntityAPI.SetPropertyValue (lightEntityID, "specular", color);
+		
+		// Fog and background coloring.
+		// _atmo.Fog_SetColor(atmoColVec.x / 2f, atmoColVec.y / 2f, atmoColVec.z / 2f);
+		//GraphicsAPI.SetBackColor (contextID, color );
+		
+		// Fog distance
+		// _atmo.Fog_SetParameters(0f, 0f, (float)(_turbidity / 8500d));
+			
+		// update global ambient
+		float ambientColorRG = -0.05f * (1f - sunIntensity) + 0.21f;
+		VisualFXAPI.SetGlobalAmbient(ambientColorRG, ambientColorRG, 0.2f);
+
+		// Set the adaptative luminance and gamma corrections
+		float gamma = 1f / (1.6f + (turbidity - 2f) * 0.1f);
+		VisualFXAPI.SetShaderParameterFloat (shaderID, "_invGammaCorrection", 1.5f * gamma);
+		VisualFXAPI.SetShaderParameterFloat (shaderID, "_invPowLumFactor", gamma);
+		float invNegMaxLum = -1.25f / UserSkyMath.MaximumLuminance( turbidity, sunTheta, xyYzenithColors, distribCoeffs);
+        VisualFXAPI.SetShaderParameterFloat(shaderID, "_invNegMaxLum", invNegMaxLum);
+		
+		// TODO: modulate shadow color/opacity with sunIntensity/moonIntensity
+		// VisualFXAPI.SetShaderParameterFloat(shaderID, "SHADOW_OPACITY", 0.5f);
+		// VisualFXAPI.SetShaderParameterVector3(shaderID, "SHADOW_COLOR", invNegMaxLum);
+		// TODO: float SHADOW_OPACITY = 0.45f;
+		// TODO: float3 SHADOW_COLOR = float3(1.0f, 1.0f, 1.0f);
+	}
+	
+	
+	/// <summary>
+	/// A simplified algorithm for computing planetary positions.
+	/// How to compute planetary positions, By Paul Schlyter, Stockholm, Sweden
+	/// email: pausch@stjarnhimlen.se or WWW:http://stjarnhimlen.se/english.html 
+	/// swedish - http://stjarnhimlen.se/
+	/// </summary>
+	/// <param name="julianDate"></param>
+	/// <param name="latitude"></param>
+	/// <returns></returns>
+	private static void CalculateSunPosition(float julianDate, float latitude, out float altitudeRadians, out float azimuthRadians)
+	{
+		float gamma = 4.93073839645544f;
+
+		// compute anomaly of elipse
+		float meanAnomaly = 6.2398418f + 0.0172019696455f * julianDate;
+		float eccAnomaly = 2f * (float) Math.Atan(1.016862146d * Math.Tan(meanAnomaly / 2d));
+		eccAnomaly = meanAnomaly + 0.016720f*(float) Math.Sin(eccAnomaly);
+		float trueAnomaly = 2f * (float) Math.Atan(1.016862146d * Math.Tan(eccAnomaly / 2d));
+		float lambda = gamma + trueAnomaly;
+
+		// right accension and declination from the anomaly
+		float dec = (float) Math.Asin(Math.Sin(lambda) * 0.39778375791855d);
+		float ra = (float) Math.Atan(Math.Tan(lambda) * 0.917479d);
+		if (Math.Cos(lambda) < 0d) ra += (float) Math.PI;
+
+		// latitude and longitude from
+		float gha = 1.7457f + 6.300388098526f * julianDate;
+		float latSun = dec;
+		float lonSun = ra - gha;
+
+		// To prevent over-calculation
+		float cosLonSun = (float) Math.Cos(lonSun);
+		float sinLonSun = (float) Math.Sin(lonSun);
+		float cosLatSun = (float) Math.Cos(latSun);
+		float sinLatSun = (float) Math.Sin(latSun);
+		float sinLat = (float) Math.Sin(latitude);
+		float cosLat = (float) Math.Cos(latitude);
+
+		// compute altitude and azimuth
+		altitudeRadians = (float) Math.Asin(sinLat * sinLatSun + cosLat * cosLatSun * cosLonSun);
+		float west = cosLatSun * sinLonSun;
+		float south = -cosLat * sinLatSun + sinLat * cosLatSun * cosLonSun;
+		azimuthRadians = (float) Math.Atan(west / south);
+
+		if (south >= 0f) 
+			azimuthRadians = (float)Math.PI - azimuthRadians;
+		else azimuthRadians = -azimuthRadians;
+		
+		if (azimuthRadians < 0f) 
+			azimuthRadians += (float)MathHelper.TWO_PI;
+	}
+		
+	#endregion
+	
+	
+}

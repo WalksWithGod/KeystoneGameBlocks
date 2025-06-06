@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall00.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall01.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall02.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall03.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall04.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall05.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall06.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall07.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall08.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall09.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall10.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall11.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall12.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall13.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall14.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall15.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall16.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall17.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall18.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall19.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall20.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall21.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall22.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall23.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall24.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall25.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall26.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.40625,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall27.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.40625,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall28.obj" />
+  <Mesh3d meshformat="0" cullmode="3" boundingbox="-1.25,0,-0.15625,1.25,3,0.15625" flags="7" name="MESH3D" id="caesar\entities\structure\walls\wall29.obj" />
+</root>

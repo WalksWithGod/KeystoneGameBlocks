@@ -1,0 +1,10 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl Wood_Floor_Parquet
+Ka 0.000000 0.000000 0.000000
+Kd 0.698039 0.533333 0.376471
+Ks 0.330000 0.330000 0.330000
+map_Kd table_coffee01/Wood_Floor_Parquet.jpg
+

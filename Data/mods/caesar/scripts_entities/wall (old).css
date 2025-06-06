@@ -1,0 +1,373 @@
+using System;
+using Keystone.CSG;
+using Keystone.Types;
+using KeyScript;
+using KeyScript.Interfaces;
+using KeyScript.Delegates;
+using KeyScript.Host;
+using KeyScript.Rules;
+using Settings;
+using UserConstants;
+
+public class Domain_Object_Wall : BaseScript
+{
+	// IMPORTANT REMINDERS:  These scripts are for game creators/modders and are not available for editing at runtime by users.
+	// Mod archive is crc32 checked by server to verify the mod is the same for all users.
+	public static void Initialize(string domainObjectID)
+	{
+		// set flag to indicate this entity when placed by PlacementTool should use the
+		// wall placing algorithm.
+		EntityAPI.SetCustomFlag (UserConstants.CustomFlags.Wall, true);  // these flag value are persisted in Entity.CustomFlags
+		
+		// create the custom properties	
+		Settings.PropertySpec[] properties = new Settings.PropertySpec[6];
+		properties[0] = new PropertySpec("description", typeof(string).Name, (object)"wall");
+		properties[1] = new PropertySpec("weight", typeof(double).Name, 0);
+        properties[2] = new PropertySpec("cost", typeof(double).Name, 0);
+		properties[3] = new PropertySpec("volume", typeof(double).Name, 0);
+		properties[4] = new PropertySpec("surfacearea", typeof(double).Name, 0);
+		properties[5] = new PropertySpec("hitpoints", typeof(int).Name, 0);
+		
+		// assign paths for scripts for handling "crew command execution"
+		// 
+		
+		// structural components (walls, floors, ceilings) properties
+		// frame tech level 
+		// frame strength
+		// material quality
+		// 
+		// specials (living metal, biomechanical, robotic, responsive) <-- THESE CAN USUALLY BE DESCRIBED IN TERMS OF WHAT THEY CONSUME OR PRODUCE
+		//    - for robotic, i think ill be physically plotting any electrical and communications lines that will 
+		//      automatically added weight and cost
+		//		- living metal (nanobot) offers self regenerative bonus)
+		//         and consumes supplies to recover hitpoints (aka: Produces regeneration)
+		//
+		// 		- biomechanical can feel pain but can heal 
+		//        but also can consume pathogens and result in loss of hitpoints
+		// 
+		// add the properties to the entity's domain object
+		EntityAPI.AddCustomProperties(domainObjectID, properties);
+		
+		
+		// create a test rule using a Delegate rule
+		//EntityAPI.AddRule (
+		//	domainObjectID, "description", new SimpleRule("Name cannot be empty.", delegate {return ((string)properties[0].DefaultValue).Length != 0; }));
+			
+		
+		EntityAPI.AddRule (domainObjectID, "description",
+			new SimpleRule("Description cannot be empty.", Rule_Description));
+			
+		// create a test rule that uses the Validate script method below if no delegate Rule exists
+		//EntityAPI.AddRule (); // todo: maybe this version is not necessary?
+		
+		// queryable mods
+		// assign values to specific "mod" properties that the celledregion will query
+		// to determine what modifications this domainobject will have on the parent.
+		// so for a celledregion parent, maybe it modifies the map layer
+		// for some other entity, maybe it modifies a crew members skill level.
+		
+		// so celledRegion can query the layout of this entity
+		// it can query the allowed places it can be set/orientation <-- there's no need to put that in the DomainObject explicitly
+		// 
+		
+		
+		// add consumptions
+		//EntityAPI.AssignConsumption()
+		//	- and consumption is a broad term for any stimulus or product (synonymous i think)
+		//    such as antimatter fuel or kinetic damage consumption
+		//	- radar or other active sensor scan (and may emit a return signal)
+		//  
+		
+		// add production
+		//EntityAPI.AssignProduction();
+		
+		// define any stores
+		//EntityAPI.DefineProductStore();
+	}
+	
+	#region Rules
+	private static bool Rule_Description(object[] args)
+	{
+		// we also get the value from the args
+		string description = (string)args[0];  // whwere know for property rules the value is the first and only arg
+		
+		System.Diagnostics.Debug.WriteLine ("Running rule 'Description'.  Testing value '" + description + "'");
+		return !string.IsNullOrEmpty(description);
+		
+		
+	}
+	#endregion
+
+	public static object Register(string entityID, string parentID)
+	{
+		// make modifications 
+
+		return entityID;
+	}
+	
+	public static object UnRegister (string entityID, string parentID)
+	{
+
+		return entityID;
+
+	}
+	
+	#region PlacementTool related
+	public static uint QueryPlacementBrushType () { return (uint)UserConstants.BRUSH_TYPE.BRUSH_EDGE_SEGMENT;}
+	
+	// returns a 16x16 grid (256 bytes) showing which tile bits are occupied by this entity
+	// NOTE: The footprint flags can contain more info than just the physical location of the component.
+	// It can contain information about whether it mounts to a wall or ceiling or floor.  
+	public static byte[,] QueryCellFootprint ()
+	{
+		return new byte[,] {{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+						   {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
+	}
+		
+	// todo; so perhaps this is QueryBuildPlacement
+	// todo: need to pass in a offset that represents the center of the wall where we are placing
+	// the entity.  
+	public static Vector3d[] QueryCellPlacement (string celledRegionID, uint cellIndex, byte cellOffset, byte cellRotation)
+	{
+		const double TO_DEGREES = 360d / 256d;
+		Vector3d position, scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+		
+		rotation.x = 0;
+		rotation.y = (double)(cellRotation * TO_DEGREES);
+		rotation.z = 0;
+				
+		// // retrieve x,y,z by unflattening the cellIndex
+		// int[] axisIndices = EntityAPI.CellMap_Unflatten (celledRegionID, cellIndex);
+		
+		// // determine the center position of the cell
+		// int[] start = EntityAPI.CellMap_GetStartIndices (celledRegionID);
+		// position.x = (start[0] + axisIndices[0]);
+		// position.y = (start[1] + axisIndices[1]);
+		// position.z = (start[2] + axisIndices[2]);
+		
+		// Vector3d size = EntityAPI.CellMap_GetCellSize (celledRegionID);
+		// position *= size;
+		
+		// // the position of a cell is always the center which we compute by
+		// // adding the origin offset to the above start + dimensions calc
+		// // recall that the sole purpose of the origin offset is to deal 
+		// // with odd or even number cell count on any axis by shifting the center 
+		// // on the even numbered axis
+		// Vector3d originOffset = EntityAPI.CellMap_GetOriginOffset (celledRegionID);
+		// position += originOffset;
+		
+		// // position + originOffset now results in exact center of that cell.
+		// // now we want to transform by the "cellOffset"
+		// // For floor cells, the center offset will be 0,-8,0
+		// // So our offsets should be in cartesian coords? not just a single flattened
+		// // value?  We should know though that our offset should in fact be in proper cartesian
+		// // range
+		uint[] cellPosition = EntityAPI.CellMap_Unflatten(celledRegionID, cellIndex);
+		int[] start = EntityAPI.CellMap_GetStartIndices (celledRegionID);
+		
+		// 
+		position.x = start[0] + cellPosition[0];
+		position.y = start[1] + cellPosition[1];
+		position.z = start[2] + cellPosition[2];
+		
+		Vector3d size = EntityAPI.CellMap_GetCellSize (celledRegionID);
+		position *= size;
+		
+		// translate to center
+		Vector3d originOffset = EntityAPI.CellMap_GetOriginOffset (celledRegionID);
+		position += originOffset;
+		
+		Vector3d halfSize = size * .5;
+			
+		
+		switch (cellRotation)
+		{
+			case 0:
+				//position.x -= size.x;
+				position.z += halfSize.z + size.z / 32d; // half of 1/16th the width
+				break;
+			case 64:  // 90 degrees
+				position.x += halfSize.x + size.x / 32d;
+				break;
+			case 128: // 180 degrees
+				//position.x += size.x / 32; // half cell width
+				position.z -= halfSize.z + size.z / 32d; // half of 1/16th the width
+				break;
+			case 192: // 270 degrees
+				position.x -= halfSize.x + size.x / 32d;
+				break;
+		}
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation}; 
+	}
+	
+	public static Vector3d[] QueryCellPlacement (string celledRegionID, uint primitiveIndex)
+	{
+		Vector3d position, scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+		
+		rotation.x = 0;
+		rotation.y = 0;
+		rotation.z = 0;
+		
+		// our primitive index is an edgeID
+		CellEdge edge = EntityAPI.CellMap_GetEdge (celledRegionID, primitiveIndex);
+		
+		int[] start = EntityAPI.CellMap_GetStartIndices (celledRegionID);
+
+		// position is easily computed from the row and column
+		Vector3d size = EntityAPI.CellMap_GetCellSize (celledRegionID);
+		Vector3d halfSize = size * .5;
+		Vector3d min;
+		min.x = start[0] * size.x;
+		min.y = start[1] * size.y;
+		min.z = start[2] * size.z;
+		
+		// origin offset is just used to determine the center of a cell in region coords
+		// when multiplying by the start indices.  That's it.
+		Vector3d originOffset = EntityAPI.CellMap_GetOriginOffset (celledRegionID);
+
+		position = min;
+		position.x += size.x * edge.Column;
+		position.y += size.y * edge.Layer;
+		position.z += size.z * edge.Row;		
+				
+		if (originOffset.y != 0)
+			position.y += halfSize.y;
+
+		if ((byte)edge.Orientation == 0) // vertical
+		{
+			rotation.y = 90;
+			//position.y = size.y; // + (size.y * layer) actually
+			if (originOffset.x == 0)
+				position.x -= halfSize.x;
+			
+			if (originOffset.z != 0)
+				position.z += halfSize.z;
+			
+		}
+		else if ((byte)edge.Orientation == 1) // horizontal
+		{
+			//position.y = size.y; // + (size.y * layer) 
+			if (originOffset.x != 0)
+				position.x += halfSize.x;
+				
+			if (originOffset.z == 0)
+				position.z -= halfSize.z;		
+		}
+		else if ((byte)edge.Orientation > 1) // diagonal
+			throw new NotImplementedException();
+			
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation}; 
+	}
+
+	
+	public static Vector3d[] QueryPlacement (string parentID, bool parentIsCellMap,  uint primitiveIndex)
+	{
+		Vector3d position, scale, rotation;
+		scale.x = 1;
+		scale.y = 1;
+		scale.z = 1;
+	
+		rotation.x = 0;
+		rotation.y = 0;
+		rotation.z = 0;
+		
+		position.x = 0;
+		position.y = 0;
+		position.z = 0;
+		
+		// return values and dont use EntityAPI to set, since it's a Query and not an Update
+		return new Vector3d[] {position, scale, rotation}; 
+	}
+#endregion
+	
+	// Updates the build statistics
+	public static void BuildUpdate (string domainObjectID)
+	{
+		// configuring the list of proeprty grid is no problem
+		// however what is a problem is configuring the list in some drop down.
+		// This must be client side, but then server side enforced in a rule validation delegate.
+		//
+		// We know that our propertySpec's have room for an event handler and I think that maybe we should 
+		// see if we can't trigger those events and then provide for a way for the Plugin/PropertyGrid
+		// to update a drop down list afterwards....
+		
+		
+	}	
+
+	public static void OnUpdate (string domainObjectID)
+	{
+		// consume hydrogen
+		
+		// produce helium
+		
+		// configure stores
+		
+		// 
+		
+	}
+	
+	public static void OnRender (string contextID, string entityID, string modelID, string shaderID, double elapsedSeconds)
+	{
+
+		
+		
+	}
+	
+	public static bool Validate (string domainObjectID, string propertyName, object value)
+	{
+		switch (propertyName)
+		{
+			// build properties
+			case "quality": // construction & craftsmanship quality (typically user doesn't select this
+			                // it's determined by the stats of the builder and whether the player or the 
+							// builder himself tries to save money
+							// and create a cheaper vehicle.
+							// A particular builder may have a max quality, but that quality can always wind up being less
+							// if the builder thinks he can take advantage of the player and he wont notice.
+							// within reason, some components may not all be up to the highest quality even if the
+							// builder is not intentionally trying to be a crook.  It may be a bad batch of materials
+							// or some automation diagnostics not quite working right.  So maybe there's some margin of error
+							// the player gets to play with and if they want guarantee, it could add 50 - 1000% more to the cost.
+							// (like ordering a ferrari vs an assembly line car)
+				break;
+			case "material":
+				break;
+			case "thickness": // this will replace light, medium, heavy, extra heavy, etc.
+				break;
+				
+			// runtime properties
+			case "turnon":
+				break;
+				
+			default:  // not every property has to have any validation code.  Or it may have been handled by a custom rule object
+				break;
+		}
+		return true;
+	}	
+}
+
+

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Vehicle fixedscreensize="0" entityflags="17486" attachedtoboneid="-1" tilelocation="0,0,0" boundingbox="-51.5648880655851,-48.93869379166,184.698748670266,61.9685744588289,26.5349428355373,419.999575696633" position="5.30161660360433,-6.87246683243147,284.901492200539" scale="1,1,1" rotation="0,0,0,1" inheritscale="True" inheritrotation="True" velocity="0,0,0" acceleration="0,0,0" force="0,0,0" flags="3" name="VEHICLE" id="caesar|meshes\vehicles\yorktown_w_interior.kgbentity">
+    <Model ref="f3a27abc-b7cc-48ce-82cb-9be89c09798b" />
+    <Interior ref="64fcf9cf-f44c-4795-b6ff-08139bab6149" />
+  </Vehicle>
+</root>

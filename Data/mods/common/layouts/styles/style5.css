@@ -1,0 +1,335 @@
+/* CSS Psuedo-classes - selector constraints on match, they do not specify other elements
+ a {}, a:link, a:visited, a:focus, a:hover, a:active should be used in that order including when combined. Mutually exclusive psuedoclasses such as "link" and "visited" cannot be combined because an element can not be both visited and unvisited link
+ * :first-child  Adds a style to an element that’s the first child element of its parent.
+ * :link         Adds a style to an unvisited link
+ * :visited      Adds a style to a visited link
+ * :focus        Adds a style to an element that has keyboard input focus
+ * :hover        Adds a style to an element when you mouse over it
+ * :active       Adds a style to an element that is activated
+ * :lang         Adds a style to an element with a specific lang attribute
+
+ * http://meyerweb.com/eric/css/tests/css2/sec05-11-03.htm
+ */
+ 
+ 
+body
+{
+    border:solid 1px #767676; /* line border around panel */
+    background-color:white;
+    padding: 0px; 
+	font-size:12px;
+	font-family:Arial;
+	font-weight:normal;
+}
+
+
+.hide, .show { display: none;
+			  font-size: 80%; 
+			  vertical-align: middle; 
+}
+ 
+a.hide:focus + .show { display: inline; }
+a.hide:focus { display: none; }
+
+
+#menu {opacity: 1; 
+	height:3em; 
+	margin-top:	0em; 
+	width: auto; 
+	margin-left: -1ex;
+	overflow: hidden; 
+}
+a.hide:focus ~ #menu { opacity: 0; height: 0em; }
+ 
+@media print {
+	.hide, .show { display: none; }
+	#nav { position: static; border: none;
+		width: auto; 
+	}
+	#menu { width: auto; }
+}
+
+
+/* info fields */
+div.columns{
+	margin:0px 0px 0 9px;
+	padding:0;
+	background-color:#FFF;
+}
+#upperbody {
+	background-color:#444444;} 
+#leftcolumn {
+	float:left; 
+	width:128px;
+	margin-right:130px;
+	padding-right:9px;
+	background-color:#FFF;}
+#rightcolumn {
+	margin-left:146px;
+
+	padding-left:9px;
+	background-color:#8eb3e7;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #8eb3e7 ), color-stop(1, #222222) );
+	color:#ffffff;}
+
+#lowerbody { } 
+
+
+/* STAT TITLE & VALUE todo: value */
+span.value{
+    white-space:nowrap;
+    text-align:right;
+    width: 142px;
+    position: absolute;
+    right: 9;
+}
+
+/* TABLE GENERATOR */
+.CSSTableGenerator {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.CSSTableGenerator table{
+    border-collapse: collapse;
+	border-spacing: 0;
+	width:100%;
+	margin:0px;
+	padding:0px;
+}.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}
+.CSSTableGenerator tr:hover td{}
+
+/* header */
+.CSSTableGenerator thead tr:first-child th{	
+	background:url(bg.gif), -o-linear-gradient(bottom, #222222 5%, #8eb3e7 100%);	
+	background:url(bg.gif) right, -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #222222), color-stop(1, #8eb3e7) );
+	background:url(bg.gif), -moz-linear-gradient( center top, #222222 5%, #8eb3e7 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222", endColorstr="#8eb3e7");	
+	background:url(bg.gif), -o-linear-gradient(top,#222222,8eb3e7);
+	background-color:#222222;
+	background-repeat: no-repeat;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+
+/* white row */
+.CSSTableGenerator tbody tr:nth-child(odd){ background-color:#ffffff; height: auto; }
+
+/* colored row */
+.CSSTableGenerator tbody tr:nth-child(even)    { 
+	height: auto;
+	background-color:#8eb3e7; 
+	background:-o-linear-gradient(bottom, #222222 5%, #8eb3e7 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #222222), color-stop(1, #8eb3e7) );
+	background:-moz-linear-gradient( center top, #222222 5%, #8eb3e7 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222", endColorstr="#8eb3e7");	
+	background: -o-linear-gradient(top,#222222,8eb3e7);
+}
+
+.CSSTableGenerator tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.CSSTableGenerator td{
+	background-color:#222222;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}.CSSTableGenerator tbody tr:first-child td{
+	border-width:0px 0px 1px 1px;
+}.CSSTableGenerator tbody tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.CSSTableGenerator tbody tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.CSSTableGenerator tbody tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+
+.CSSTableGenerator tbody tr:hover td{
+	background:-o-linear-gradient(bottom, #222222 5%, #444444 100%);	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #222222), color-stop(1, #444444) );
+	background:-moz-linear-gradient( center top, #222222 5%, #444444 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222", endColorstr="#444444");	
+	background: -o-linear-gradient(top,#222222,#444444);
+	background-color:#222222;
+}
+
+table.tablesorter .headerSortUp {
+	background-image: url(asc.gif);
+	background-repeat: no-repeat;
+}
+table.tablesorter .headerSortDown {
+	background-image: url(desc.gif);
+	background-repeat: no-repeat;
+}
+
+/* PRIORITY */
+table.CSSTableGenerator td.prio {
+	text-align: center;
+}
+table.CSSTableGenerator td.prio span, #vprio span {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #fff;
+	text-align: center;
+	padding: 2px 4px 1px 4px;
+	width: 14px;
+}
+
+span.pr0 {
+	background-color: #bbb;
+}
+span.pr1 {
+	background-color: #c00;
+}
+span.pr2 {
+	background-color: #f60;
+}
+span.pr3 {
+	background-color: #f93;
+}
+span.pr4 {
+	background-color: #9c0;
+}
+span.pr5 {
+	background-color: #393;
+}
+span.pr6 {
+	background-color: #399;
+}
+span.pr7 {
+	background-color: #39c;
+}
+span.pr8 {
+	background-color: #99c;
+}
+span.pr9 {
+	background-color: #999;
+}
+
+/* RADIAL PROGRESS */
+.cprogress { 
+display: inline-block; 
+position: relative; 
+width: 1em; 
+height: 1em; 
+text-align: -webkit-match-parent;
+font-size: 21px; 
+cursor: default;   
+} 
+.cprogress:before { 
+content: ''; 
+display: block; 
+position: absolute; 
+width: 1em; 
+height: 1em; 
+-moz-border-radius: .5em; 
+-webkit-border-radius: .5em; 
+border-radius: .5em; 
+opacity: .5; 
+z-index: 0;
+background: #0088CC;  
+} 
+
+.cprogress:after { 
+content: ''; 
+display: block; 
+position: absolute; 
+top: .1em; 
+left: .1em; 
+width: .8em; 
+height: .8em; 
+-moz-border-radius: .5em; 
+-webkit-border-radius: .5em; 
+border-radius: .5em; 
+z-index: 1; 
+} 
+
+.cprogress>#slice.gt50 { 
+clip: rect(auto,auto,auto,auto); 
+} 
+
+.cprogress>#slice { 
+position: absolute; 
+width: 1em; 
+height: 1em; 
+clip: rect(0px,1em,1em,0.5em); 
+} 
+.cprogress>#slice>.pie { 
+position: absolute; 
+border: .1em solid #004466; 
+width: .8em; 
+height: .8em; 
+clip: rect(0em,0.5em,1em,0em); 
+border-radius: .5em; 
+} 
+
+
+.cprogress>#slice>.pie.fill { 
+-moz-transform: rotate(180deg)!important; 
+-webkit-transform: rotate(180deg)!important; 
+-o-transform: rotate(180deg)!important; 
+transform: rotate(180deg)!important; 
+} 
+
+.percent {
+font-size: 81px;
+position: absolute;
+text-align: center;
+padding: 1em 0.5em 1em 0.5em;
+width: 2.35em;
+top: 0.41em;
+left: 0.41em;
+background: rgb(245, 245, 245);
+border-radius: 2.35em;
+font-weight: normal;
+width:176px;
+}
+
