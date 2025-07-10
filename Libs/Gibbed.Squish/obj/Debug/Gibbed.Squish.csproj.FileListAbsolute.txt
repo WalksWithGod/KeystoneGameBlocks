@@ -34,3 +34,14 @@ C:\Users\Michael\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\bin\Debug\Gibbed
 C:\Users\Michael\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.csprojResolveAssemblyReference.cache
 C:\Users\Michael\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.dll
 C:\Users\Michael\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.pdb
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\bin\Debug\squish_32.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\bin\Debug\squish_64.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\bin\Debug\Gibbed.Squish.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\bin\Debug\Gibbed.Squish.pdb
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\bin\Debug\Gibbed.IO.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\bin\Debug\Gibbed.IO.pdb
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.csproj.CopyComplete
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\Libs\Gibbed.Squish\obj\Debug\Gibbed.Squish.pdb

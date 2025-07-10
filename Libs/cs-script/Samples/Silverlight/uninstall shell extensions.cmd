@@ -1,2 +1,0 @@
-cscs silverlight /u
-pause

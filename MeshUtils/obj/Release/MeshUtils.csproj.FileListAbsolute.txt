@@ -1,34 +1,15 @@
-E:\dev\c#\keystone\MeshUtils\bin\Release\MeshUtils.dll
-E:\dev\c#\keystone\MeshUtils\bin\Release\MeshUtils.pdb
-E:\dev\c#\keystone\MeshUtils\bin\Release\MTV3D65.dll
-E:\dev\c#\keystone\MeshUtils\bin\Release\MTV3D65.xml
-E:\dev\c#\keystone\MeshUtils\obj\Release\ResolveAssemblyReference.cache
-E:\dev\c#\keystone\MeshUtils\obj\Release\MeshUtils.dll
-E:\dev\c#\keystone\MeshUtils\obj\Release\MeshUtils.pdb
-C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.dll
-C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.pdb
-C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.dll
-C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.xml
-C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\ResolveAssemblyReference.cache
-C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.dll
-C:\Documents and Settings\Hypnotron\My Documents\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.pdb
-E:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.dll
-E:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.pdb
-E:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.dll
-E:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.xml
-E:\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.dll
-E:\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.pdb
-E:\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.csprojResolveAssemblyReference.cache
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.dll
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.pdb
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.dll
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.xml
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.csprojResolveAssemblyReference.cache
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.dll
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.pdb
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3D.dll
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3DX.dll
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.dll
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.xml
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3D.xml
-D:\dev\c#\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3DX.xml
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\MeshUtils.pdb
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3D.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3DX.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.xml
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3D.xml
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\Microsoft.DirectX.Direct3DX.xml
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\bin\Release\MTV3D65.xml
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.csprojAssemblyReference.cache
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.csproj.CopyComplete
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.dll
+C:\Users\Michael\Documents\projects\KeystoneGameBlocks\MeshUtils\obj\Release\MeshUtils.pdb

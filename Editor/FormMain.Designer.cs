@@ -205,7 +205,7 @@ namespace KeyEdit
             this.ribbon.MdiSystemItemVisible = false;
             this.ribbon.Name = "ribbon";
             this.ribbon.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ribbon.Size = new System.Drawing.Size(1249, 57);
+            this.ribbon.Size = new System.Drawing.Size(1339, 57);
             this.ribbon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbon.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbon.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -678,9 +678,9 @@ namespace KeyEdit
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(5, 766);
+            this.dockSite4.Location = new System.Drawing.Point(5, 725);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(1249, 0);
+            this.dockSite4.Size = new System.Drawing.Size(1339, 0);
             this.dockSite4.TabIndex = 17;
             this.dockSite4.TabStop = false;
             // 
@@ -690,10 +690,10 @@ namespace KeyEdit
             this.dockSite9.Controls.Add(this.barDocumentDockBar);
             this.dockSite9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dockSite9.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.barDocumentDockBar, 1249, 708)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.barDocumentDockBar, 1339, 667)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.dockSite9.Location = new System.Drawing.Point(5, 58);
             this.dockSite9.Name = "dockSite9";
-            this.dockSite9.Size = new System.Drawing.Size(1249, 708);
+            this.dockSite9.Size = new System.Drawing.Size(1339, 667);
             this.dockSite9.TabIndex = 22;
             this.dockSite9.TabStop = false;
             // 
@@ -724,7 +724,7 @@ namespace KeyEdit
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite1.Location = new System.Drawing.Point(5, 58);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(0, 708);
+            this.dockSite1.Size = new System.Drawing.Size(0, 667);
             this.dockSite1.TabIndex = 14;
             this.dockSite1.TabStop = false;
             // 
@@ -732,9 +732,9 @@ namespace KeyEdit
             // 
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite2.Location = new System.Drawing.Point(1254, 58);
+            this.dockSite2.Location = new System.Drawing.Point(1344, 58);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 708);
+            this.dockSite2.Size = new System.Drawing.Size(0, 667);
             this.dockSite2.TabIndex = 15;
             this.dockSite2.TabStop = false;
             // 
@@ -742,9 +742,9 @@ namespace KeyEdit
             // 
             this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(5, 766);
+            this.dockSite8.Location = new System.Drawing.Point(5, 725);
             this.dockSite8.Name = "dockSite8";
-            this.dockSite8.Size = new System.Drawing.Size(1249, 0);
+            this.dockSite8.Size = new System.Drawing.Size(1339, 0);
             this.dockSite8.TabIndex = 21;
             this.dockSite8.TabStop = false;
             // 
@@ -754,7 +754,7 @@ namespace KeyEdit
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite5.Location = new System.Drawing.Point(5, 1);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 765);
+            this.dockSite5.Size = new System.Drawing.Size(0, 724);
             this.dockSite5.TabIndex = 18;
             this.dockSite5.TabStop = false;
             // 
@@ -762,9 +762,9 @@ namespace KeyEdit
             // 
             this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite6.Location = new System.Drawing.Point(1254, 58);
+            this.dockSite6.Location = new System.Drawing.Point(1344, 58);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 708);
+            this.dockSite6.Size = new System.Drawing.Size(0, 667);
             this.dockSite6.TabIndex = 19;
             this.dockSite6.TabStop = false;
             // 
@@ -774,7 +774,7 @@ namespace KeyEdit
             this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite7.Location = new System.Drawing.Point(5, 58);
             this.dockSite7.Name = "dockSite7";
-            this.dockSite7.Size = new System.Drawing.Size(1249, 0);
+            this.dockSite7.Size = new System.Drawing.Size(1339, 0);
             this.dockSite7.TabIndex = 20;
             this.dockSite7.TabStop = false;
             // 
@@ -786,7 +786,7 @@ namespace KeyEdit
             this.dockSite3.Enabled = false;
             this.dockSite3.Location = new System.Drawing.Point(5, 58);
             this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(1249, 0);
+            this.dockSite3.Size = new System.Drawing.Size(1339, 0);
             this.dockSite3.TabIndex = 16;
             this.dockSite3.TabStop = false;
             // 
@@ -794,7 +794,7 @@ namespace KeyEdit
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 20);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1259, 768);
+            this.ClientSize = new System.Drawing.Size(1349, 727);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.dockSite9);

@@ -89,7 +89,7 @@ namespace Keystone.Elements
         	// March.6.2015 - setting max instance count ONE TIME is ideal.  Having to grow the minimesh
         	// at runtime is not only super expensive and slows loading emmensly, but it seems to cause
         	// random crashes.  We may need to enforce that the max count is set and is never changeable
-        	 _maxInstancesCount = 1024 * 1;
+        	 _maxInstancesCount = 256 * 1;
         }
 
         private MinimeshGeometry(string id, Texture texture)

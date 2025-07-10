@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Keystone.Types;
-using MTV3D65;
 using ManagedStanHull;
+using MTV3D65;
+
 
 namespace Keystone.Culling
 {
@@ -24,7 +25,7 @@ namespace Keystone.Culling
         //it also keeps the one which is ‘furthest away’ from the centroid of the volume.
         public static ConvexHull GetStanHull(TVMesh m)
         {
-
+           
             MHull hullLib = new MHull();
             int count;
             float[] verts;

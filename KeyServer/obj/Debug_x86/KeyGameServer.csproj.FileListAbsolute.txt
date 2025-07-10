@@ -1,1 +1,0 @@
-C:\Users\Michael\projects\KeystoneGameBlocks\KeyServer\obj\Debug_x86\KeyGameServer.csprojResolveAssemblyReference.cache

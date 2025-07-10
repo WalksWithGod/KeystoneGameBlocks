@@ -36,6 +36,24 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -92,10 +110,6 @@
     <ProjectReference Include="..\KeyCommon\KeyCommon.csproj">
       <Project>{6c7bba7f-03f4-4d7d-b1d3-cf8d14e2b939}</Project>
       <Name>KeyCommon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
-      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
-      <Name>KeyStandardLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\KeyPlugins\KeyPlugins.csproj">
       <Project>{403b9486-ca2a-4c11-bff7-af84f8a31f98}</Project>

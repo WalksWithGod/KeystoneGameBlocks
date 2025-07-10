@@ -218,7 +218,7 @@ namespace KeyScript.Host
 				System.Diagnostics.Debug.WriteLine ("KeyScript.HostLoader.LoadUserAssemblies() - ERROR: " + ex.Message);
 			}
 //            // TODO: remove hard coded paths to the following user assemblies and instead  
-//            //       use a single hardpath to a "user_assemblies.ini" that then lists one per line the
+//            //       use a single hardpath to a "mods\\caesar\\scripts\\user_assemblies.txt" that then lists one per line the
 //            //       assemblies i should be loading.  That way adding new user assemblies does not require a recompile of
 //            //       KeyScript.dll, Keystone.dll, or KeyEdit.exe 
 //            UserAssemblies = new CSScript.LoadedScript[4];
@@ -344,7 +344,6 @@ namespace KeyScript.Host
                         // shared assembly so that there is no conflicts between the host and client apps.
                         // allows us to have our scripts in another directory but then create a copy we'll copy over
                         // to the shared directory.  
-                        System.Diagnostics.Debug.WriteLine("KeyScript.Host.Loader.LoadFromFile() - Copying script to temporary file " + assemblyPath);
                         File.Copy(fullPath, sharedSourcePath, true);
                     }
                     catch (Exception ex)
@@ -356,8 +355,11 @@ namespace KeyScript.Host
                         if (referencedAssemblies != null)
                             assembly = CSScript.Load(sharedSourcePath, assemblyPath, true, referencedAssemblies);
                         else
+                        {
+                            System.Diagnostics.Debug.WriteLine("Load Script File = " + sharedSourcePath);
+                            System.Diagnostics.Debug.WriteLine("Load Assembly File = " + assemblyPath);
                             assembly = CSScript.Load(sharedSourcePath, assemblyPath, true);
-                        
+                        }
                         System.Diagnostics.Debug.WriteLine("KeyScript.Host.Loader.LoadFromFile() - SUCCESS: '"+ assemblyPath +"'");
                     }
                     catch (Exception ex)

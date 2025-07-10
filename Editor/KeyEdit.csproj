@@ -48,7 +48,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\x86\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
@@ -73,7 +73,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|x86' ">
-    <OutputPath>bin\x86\Debug_x86\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG;CLIENT</DefineConstants>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
@@ -113,25 +113,33 @@
     <Reference Include="CSScriptLibrary">
       <HintPath>..\Libs\cs-script_3.6.0\Lib\Bin\NET 4.0\CSScriptLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.Instrumentation, Version=12.6.0.7, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.TreeGX, Version=12.6.0.7, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule">
+      <HintPath>..\Libs\DotNetBar\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\Libs\DotNetBar\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\Libs\DotNetBar\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>..\Libs\DotNetBar\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer">
+      <HintPath>..\Libs\HtmlRenderer_bin\HtmlRenderer.dll</HintPath>
+    </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>..\Libs\DotNetZipLib-DevKit-v1.9\DotNetZip-v1.9\Release\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualC" />
-    <Reference Include="MindFusion.Common, Version=1.2.3475.22165, Culture=neutral, PublicKeyToken=7fed53ada5b92263, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\MindFusion\MindFusion.Diagramming for WinForms Trial\VS2008 (.NET 3.5)\MindFusion.Common.dll</HintPath>
+    <Reference Include="MindFusion.Common">
+      <HintPath>..\Libs\MindFusion.Diagramming\MindFusion.Common.dll</HintPath>
     </Reference>
-    <Reference Include="MindFusion.Diagramming, Version=5.3.3.27237, Culture=neutral, PublicKeyToken=21bf4734c13246ea, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\MindFusion\MindFusion.Diagramming for WinForms Trial\VS2008 (.NET 3.5)\MindFusion.Diagramming.dll</HintPath>
+    <Reference Include="MindFusion.Diagramming">
+      <HintPath>..\Libs\MindFusion.Diagramming\MindFusion.Diagramming.dll</HintPath>
     </Reference>
-    <Reference Include="MindFusion.Diagramming.WinForms, Version=5.3.3.27239, Culture=neutral, PublicKeyToken=21bf4734c13246ea, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\MindFusion\MindFusion.Diagramming for WinForms Trial\VS2008 (.NET 3.5)\MindFusion.Diagramming.WinForms.dll</HintPath>
+    <Reference Include="MindFusion.Diagramming.WinForms">
+      <HintPath>..\Libs\MindFusion.Diagramming\MindFusion.Diagramming.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="MTV3D65, Version=6.5.3733.40583, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
@@ -788,10 +796,6 @@
       <Project>{6C7BBA7F-03F4-4D7D-B1D3-CF8D14E2B939}</Project>
       <Name>KeyCommon</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
-      <Project>{427CC8D0-5448-4816-A2ED-59F821D98CFA}</Project>
-      <Name>KeyStandardLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\KeyPlugins\KeyPlugins.csproj">
       <Project>{403B9486-CA2A-4C11-BFF7-AF84F8A31F98}</Project>
       <Name>KeyPlugins</Name>
@@ -799,6 +803,10 @@
     <ProjectReference Include="..\KeyScript\KeyScript.csproj">
       <Project>{017FBBA2-80E6-4982-8451-FEACB1C4CDB8}</Project>
       <Name>KeyScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyStandardLibrary\KeyStandardLibrary.csproj">
+      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
+      <Name>KeyStandardLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\Keystone\Keystone.csproj">
       <Project>{A9B9D19D-DDFB-43C7-8BB6-8F2B08DEC0A3}</Project>
@@ -811,10 +819,6 @@
     <ProjectReference Include="..\Libs\FileExplorerTreeDotNet\FileExplorerTreedotnet.csproj">
       <Project>{8D318D3C-93F0-4458-8E83-52D52ECDBD51}</Project>
       <Name>FileExplorerTreedotnet</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Libs\HtmlRenderer\Source\HtmlRenderer\HtmlRendererNET40.csproj">
-      <Project>{73A762F1-C802-4659-9B3E-2BF6B284E606}</Project>
-      <Name>HtmlRendererNET40</Name>
     </ProjectReference>
     <ProjectReference Include="..\Libs\IgSpinEdit\IgSpinEdit.csproj">
       <Project>{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}</Project>

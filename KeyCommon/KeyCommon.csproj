@@ -86,6 +86,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\Npgsql2.0.8-bin-ms.net3.5sp1\bin\Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="SmartThreadPool">
+      <HintPath>..\Libs\mlabs-pl-stp-7b123d9\SmartThreadPool\bin\x86\Debug\SmartThreadPool.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -215,27 +218,22 @@
     <Compile Include="Simulation\Transmission.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
-      <Project>{427CC8D0-5448-4816-A2ED-59F821D98CFA}</Project>
+    <Content Include="README.TXT" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KeyStandardLibrary\KeyStandardLibrary.csproj">
+      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
       <Name>KeyStandardLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Libs\mlabs-pl-stp-7b123d9\SmartThreadPool\SmartThreadPool.csproj">
-      <Project>{74D4C33F-7CC8-4B2A-A7DF-D8B6E63B6EBD}</Project>
-      <Name>SmartThreadPool</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Lidgren.Network\Lidgren.Network.csproj">
-      <Project>{BA202214-F6F8-4853-BCC9-CA4F13C5F479}</Project>
+      <Project>{ba202214-f6f8-4853-bcc9-ca4f13c5f479}</Project>
       <Name>Lidgren.Network</Name>
     </ProjectReference>
     <ProjectReference Include="..\Settings\Settings.csproj">
-      <Project>{EF75621B-EF64-4EA7-8451-BA53BA9408A9}</Project>
+      <Project>{ef75621b-ef64-4ea7-8451-ba53ba9408a9}</Project>
       <Name>Settings</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="README.TXT" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -69,8 +69,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.Instrumentation, Version=12.6.0.7, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\Libs\DotNetBar\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\Libs\DotNetBar\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -144,13 +148,13 @@
       <Project>{6C7BBA7F-03F4-4D7D-B1D3-CF8D14E2B939}</Project>
       <Name>KeyCommon</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
-      <Project>{427CC8D0-5448-4816-A2ED-59F821D98CFA}</Project>
-      <Name>KeyStandardLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\KeyPlugins\KeyPlugins.csproj">
       <Project>{403B9486-CA2A-4C11-BFF7-AF84F8A31F98}</Project>
       <Name>KeyPlugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyStandardLibrary\KeyStandardLibrary.csproj">
+      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
+      <Name>KeyStandardLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\Libs\IgSpinEdit\IgSpinEdit.csproj">
       <Project>{7BE8EC67-6DD6-4B97-A944-A32D71A7D042}</Project>

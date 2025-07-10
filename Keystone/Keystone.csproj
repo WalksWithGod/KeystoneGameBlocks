@@ -39,6 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_x86|AnyCPU' ">
     <OutputPath>bin\Debug_x86\</OutputPath>
@@ -96,11 +97,11 @@
     <Reference Include="CSScriptLibrary">
       <HintPath>..\Libs\cs-script_3.6.0\Lib\Bin\NET 4.0\CSScriptLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="Ionic.Zip">
       <HintPath>..\Libs\DotNetZipLib-DevKit-v1.9\DotNetZip-v1.9\Release\Ionic.Zip.dll</HintPath>
     </Reference>
-    <Reference Include="MHull">
+    <Reference Include="MHull, Version=1.0.4042.8632, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MHull\Debug\MHull.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
@@ -744,13 +745,13 @@
       <Project>{6c7bba7f-03f4-4d7d-b1d3-cf8d14e2b939}</Project>
       <Name>KeyCommon</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
-      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
-      <Name>KeyStandardLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\KeyScript\KeyScript.csproj">
       <Project>{017FBBA2-80E6-4982-8451-FEACB1C4CDB8}</Project>
       <Name>KeyScript</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyStandardLibrary\KeyStandardLibrary.csproj">
+      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
+      <Name>KeyStandardLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\LibNoise.NET\LibNoise\LibNoise.csproj">
       <Project>{031c8cff-f147-44ea-b7e5-0a5644808a7e}</Project>

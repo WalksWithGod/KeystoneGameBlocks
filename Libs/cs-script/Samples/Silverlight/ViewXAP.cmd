@@ -1,1 +1,0 @@
-cscs silverlight BookPages.xap

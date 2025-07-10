@@ -111,10 +111,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
-      <Project>{427CC8D0-5448-4816-A2ED-59F821D98CFA}</Project>
-      <Name>KeyStandardLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\KeyPlugins\KeyPlugins.csproj">
       <Project>{403B9486-CA2A-4C11-BFF7-AF84F8A31F98}</Project>
       <Name>KeyPlugins</Name>

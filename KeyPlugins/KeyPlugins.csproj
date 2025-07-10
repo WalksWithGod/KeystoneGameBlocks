@@ -76,7 +76,9 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=12.6.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\Libs\DotNetBar\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\DotNetZipLib-DevKit-v1.9\DotNetZip-v1.9\Release\Ionic.Zip.dll</HintPath>
@@ -277,8 +279,8 @@
       <Project>{6C7BBA7F-03F4-4D7D-B1D3-CF8D14E2B939}</Project>
       <Name>KeyCommon</Name>
     </ProjectReference>
-    <ProjectReference Include="..\KeyMath\KeyStandardLibrary.csproj">
-      <Project>{427CC8D0-5448-4816-A2ED-59F821D98CFA}</Project>
+    <ProjectReference Include="..\KeyStandardLibrary\KeyStandardLibrary.csproj">
+      <Project>{427cc8d0-5448-4816-a2ed-59f821d98cfa}</Project>
       <Name>KeyStandardLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="..\Libs\IgSpinEdit\IgSpinEdit.csproj">
